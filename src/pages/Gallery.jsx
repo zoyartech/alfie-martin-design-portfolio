@@ -36,7 +36,7 @@ const galleryItems = [
   {
     id: 5,
     title: "Editorial Layout",
-    category: "Print",
+    category: "Design systems",
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80",
     year: "2023"
   },
@@ -57,7 +57,7 @@ const galleryItems = [
   {
     id: 8,
     title: "Product Photography",
-    category: "Photography",
+    category: "Content strategy",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&q=80",
     year: "2022"
   },
@@ -91,7 +91,7 @@ const galleryItems = [
   }
 ];
 
-const categories = ["All", "Branding", "Art Direction", "UI/UX", "Photography", "Print"];
+const categories = ["All", "Branding", "Art Direction", "UI/UX", "Content strategy", "Design systems"];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
