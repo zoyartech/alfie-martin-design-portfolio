@@ -138,10 +138,10 @@ export default function Gallery() {
             transition={{ duration: 0.6 }}>
 
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">Gallery</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6">Photo Gallery</h1>
-            <p className="text-gray-500 max-w-xl">
-              A curated collection of design work, photography, and creative direction 
-              spanning branding, digital experiences, and visual storytelling.
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Images</h1>
+            <p className="text-gray-500 max-w-xl">A curated collection from some of my favorite projects
+
+
             </p>
           </motion.div>
 
