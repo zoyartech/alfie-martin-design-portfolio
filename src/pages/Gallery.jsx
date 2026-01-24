@@ -114,6 +114,9 @@ export default function Gallery() {
               <Link to={createPageUrl("Home")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 HOME
               </Link>
+              <Link to={createPageUrl("CaseStudies")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                CASE STUDIES
+              </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 VISUAL EYE
               </Link>

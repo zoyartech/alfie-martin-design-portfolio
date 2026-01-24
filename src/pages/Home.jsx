@@ -22,6 +22,9 @@ export default function Home() {
               <Link to={createPageUrl("Home")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 HOME
               </Link>
+              <Link to={createPageUrl("CaseStudies")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                CASE STUDIES
+              </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 VISUAL EYE
               </Link>
@@ -74,6 +77,71 @@ export default function Home() {
           >
             EXPLORE <ArrowDownRight className="w-4 h-4" />
           </motion.button>
+        </div>
+      </section>
+
+      {/* Case Studies Preview */}
+      <section className="py-32 px-6 lg:px-12 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">SELECTED WORK</p>
+              <h2 className="text-3xl md:text-4xl font-light">Featured Case Studies</h2>
+            </div>
+            <Link 
+              to={createPageUrl("CaseStudies")} 
+              className="hidden md:flex items-center gap-2 text-sm hover:text-[#8B7355] transition-colors"
+            >
+              View All <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Lumière Cosmetics",
+                subtitle: "Luxury Beauty Brand Identity",
+                category: "Branding",
+                img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80"
+              },
+              {
+                title: "Haven",
+                subtitle: "Wellness App Experience",
+                category: "UI/UX Design",
+                img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+              }
+            ].map((project, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <Link to={createPageUrl("CaseStudies")} className="group block">
+                  <div className="aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+                    <img 
+                      src={project.img}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                  </div>
+                  <span className="text-xs tracking-[0.2em] text-gray-400">{project.category}</span>
+                  <h3 className="text-2xl font-light mt-2 mb-1 group-hover:text-[#8B7355] transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-500">{project.subtitle}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <Link 
+            to={createPageUrl("CaseStudies")} 
+            className="md:hidden flex items-center justify-center gap-2 text-sm mt-8 hover:text-[#8B7355] transition-colors"
+          >
+            View All Case Studies <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
