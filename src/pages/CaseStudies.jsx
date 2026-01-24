@@ -84,7 +84,7 @@ export default function CaseStudies() {
                 CASE STUDIES
               </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                VISUAL EYE
+                GALLERY
               </Link>
             </div>
           </div>

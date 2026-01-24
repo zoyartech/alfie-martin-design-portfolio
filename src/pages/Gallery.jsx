@@ -118,7 +118,7 @@ export default function Gallery() {
                 CASE STUDIES
               </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
-                VISUAL EYE
+                GALLERY
               </Link>
             </div>
           </div>

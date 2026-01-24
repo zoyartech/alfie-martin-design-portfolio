@@ -1,12 +1,12 @@
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
 import CaseStudies from './pages/CaseStudies';
+import Gallery from './pages/Gallery';
+import Home from './pages/Home';
 
 
 export const PAGES = {
-    "Home": Home,
-    "Gallery": Gallery,
     "CaseStudies": CaseStudies,
+    "Gallery": Gallery,
+    "Home": Home,
 }
 
 export const pagesConfig = {
