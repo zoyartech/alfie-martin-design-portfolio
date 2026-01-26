@@ -23,7 +23,7 @@ export default function Home() {
                 HOME
               </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                VISUAL EYE
+                VISUALS
               </Link>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUAL EYE</p>
+              <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Selected Works</h2>
             </div>
             <Link 
