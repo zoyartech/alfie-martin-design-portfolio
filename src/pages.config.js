@@ -1,14 +1,14 @@
 import CaseStudies from './pages/CaseStudies';
 import Gallery from './pages/Gallery';
-import Home from './pages/Home';
 import GrammarlyProject from './pages/GrammarlyProject';
+import Home from './pages/Home';
 
 
 export const PAGES = {
     "CaseStudies": CaseStudies,
     "Gallery": Gallery,
-    "Home": Home,
     "GrammarlyProject": GrammarlyProject,
+    "Home": Home,
 }
 
 export const pagesConfig = {
