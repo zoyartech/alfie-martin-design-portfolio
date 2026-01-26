@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* Quote Section */}
       <section className="py-32 px-6 lg:px-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-left">
           <motion.blockquote
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-2xl md:text-3xl font-light leading-relaxed text-gray-800"
           >
-            "Great design doesn't just look beautiful—it tells a story that resonates and creates lasting connections."
+            "We need to stop worrying about proving the value of design & just focus on outcomes that provide value." – Denis Weil
           </motion.blockquote>
         </div>
       </section>
