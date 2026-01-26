@@ -99,16 +99,18 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Lumière Cosmetics",
-                subtitle: "Luxury Beauty Brand Identity",
-                category: "Content strategy",
-                img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80"
+                title: "Grammarly",
+                subtitle: "Product Design & Growth Experiments",
+                category: "Product Design",
+                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+                link: "GrammarlyProject"
               },
               {
                 title: "Haven",
                 subtitle: "Wellness App Experience",
                 category: "UI/UX Design",
-                img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+                link: "CaseStudies"
               }
             ].map((project, i) => (
               <motion.div
@@ -118,7 +120,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <Link to={createPageUrl("CaseStudies")} className="group block">
+                <Link to={createPageUrl(project.link)} className="group block">
                   <div className="aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
                     <img 
                       src={project.img}
