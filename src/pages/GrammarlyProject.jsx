@@ -73,7 +73,7 @@ export default function GrammarlyProject() {
       </section>
 
       {/* Content */}
-      <section className="pb-16 px-6 lg:px-12">
+      <section className="pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Project Overview */}
           <motion.div
