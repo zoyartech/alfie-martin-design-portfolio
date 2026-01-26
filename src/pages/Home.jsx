@@ -31,7 +31,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-32">
+      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-40">
         <div className="max-w-7xl mx-auto w-full">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
