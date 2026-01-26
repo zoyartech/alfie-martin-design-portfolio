@@ -64,7 +64,7 @@ export default function GrammarlyProject() {
             className="aspect-video overflow-hidden bg-gray-100 mb-16"
           >
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/bb85e69a3_67544f22504122347b62847a1332262d-1.png"
               alt="Grammarly Product Design"
               className="w-full h-full object-cover"
             />
