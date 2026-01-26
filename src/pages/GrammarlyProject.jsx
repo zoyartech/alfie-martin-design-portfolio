@@ -164,7 +164,7 @@ export default function GrammarlyProject() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="aspect-video overflow-hidden bg-gray-100"
+            className="aspect-video overflow-hidden bg-gray-100 -mx-6 lg:-mx-12 scale-[1.33]"
           >
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/5d1a53b65_grammarlymobileui.png"
