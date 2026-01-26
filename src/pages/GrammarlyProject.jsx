@@ -219,22 +219,13 @@ export default function GrammarlyProject() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-2 gap-4"
+            className="w-full overflow-hidden bg-gray-100"
           >
-            <div className="aspect-square overflow-hidden bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
-                alt="Grammarly Design Process"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80"
-                alt="Grammarly Interface Details"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1c97fd041_webgram.png"
+              alt="Grammarly Web Interface"
+              className="w-full h-auto object-cover"
+            />
           </motion.div>
 
           {/* Tools & Technologies */}
