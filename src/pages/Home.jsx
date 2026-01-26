@@ -101,7 +101,7 @@ export default function Home() {
               {
                 title: "Lumière Cosmetics",
                 subtitle: "Luxury Beauty Brand Identity",
-                category: "Branding",
+                category: "Content strategy",
                 img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80"
               },
               {
