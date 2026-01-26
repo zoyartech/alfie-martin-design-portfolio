@@ -167,9 +167,9 @@ export default function GrammarlyProject() {
             className="aspect-video overflow-hidden bg-gray-100"
           >
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/5d1a53b65_grammarlymobileui.png"
               alt="Grammarly Mobile Interface"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 
