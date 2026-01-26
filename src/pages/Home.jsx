@@ -173,7 +173,7 @@ export default function Home() {
                 <img 
                   src={img} 
                   alt={`Work ${i + 1}`}
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </motion.div>
             ))}
