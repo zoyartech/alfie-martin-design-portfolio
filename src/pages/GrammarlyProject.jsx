@@ -30,7 +30,7 @@ export default function GrammarlyProject() {
       </nav>
 
       {/* Header */}
-      <section className="pt-32 pb-16 px-6 lg:px-12">
+      <section className="pt-32 pb-16 px-6 lg:px-12" style={{ backgroundColor: '#edfdf4' }}>
         <div className="max-w-4xl mx-auto">
           <Link 
             to={createPageUrl("Home")}
