@@ -66,7 +66,7 @@ export default function GrammarlyProject() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/bb85e69a3_67544f22504122347b62847a1332262d-1.png"
               alt="Grammarly Product Design"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover shadow-lg"
             />
           </motion.div>
         </div>
