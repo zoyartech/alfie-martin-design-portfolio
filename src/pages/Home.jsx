@@ -22,8 +22,23 @@ export default function Home() {
               <Link to={createPageUrl("Home")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 HOME
               </Link>
+              <Link to={createPageUrl("About")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                ABOUT
+              </Link>
+              <Link to={createPageUrl("Design")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                DESIGN
+              </Link>
+              <Link to={createPageUrl("MixedMedia")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                MIXED MEDIA
+              </Link>
+              <Link to={createPageUrl("PassionProjects")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                PASSION PROJECTS
+              </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 VISUALS
+              </Link>
+              <Link to={createPageUrl("Contact")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+                CONTACT
               </Link>
             </div>
           </div>
