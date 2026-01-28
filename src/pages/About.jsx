@@ -59,27 +59,13 @@ export default function About() {
 
       {/* Bio Section */}
       <section className="py-16 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="aspect-[3/4] bg-gray-100"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
-              alt="Alfie Martin"
-              className="w-full h-full object-cover grayscale"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-6 max-w-4xl"
           >
             <p className="text-lg leading-relaxed text-gray-700">
               I'm a creative designer based in New York City, working at the intersection of 
