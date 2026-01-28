@@ -11,7 +11,7 @@ export default function About() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            <Link to={createPageUrl("Home")} className="text-sm tracking-[0.3em] font-medium">
+            <Link to={createPageUrl("Home")} className="text-sm tracking-[0.3em] font-medium ml-[-20px]">
               ALFIE MARTIN
             </Link>
             <div className="hidden md:flex items-center space-x-10">
