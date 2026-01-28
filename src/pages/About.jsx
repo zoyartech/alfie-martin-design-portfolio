@@ -101,7 +101,7 @@ export default function About() {
               },
               {
                 role: "Senior Designer",
-                company: "Independent Studio",
+                company: "Polaroid",
                 period: "2020 - Present",
                 description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
               },
