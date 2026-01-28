@@ -110,6 +110,19 @@ export default function Home() {
             and visual storytelling. Based in New York City. Focused on creating things that matter.
           </motion.p>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12 max-w-xs"
+          >
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1b5809ebf_measure.png"
+              alt="Design compass"
+              className="w-full h-auto"
+            />
+          </motion.div>
+
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
