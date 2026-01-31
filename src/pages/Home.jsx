@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = React.useState(null);
+
   const scrollToSection = () => {
     document.getElementById('domains')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -226,12 +228,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="aspect-square overflow-hidden"
+                className="aspect-square overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage(selectedImage === i ? null : i)}
               >
-                <img 
+                <motion.img 
                   src={img} 
                   alt={`Work ${i + 1}`}
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  animate={{ scale: selectedImage === i ? 1.2 : 1 }}
+                  transition={{ duration: 0.3 }}
                 />
               </motion.div>
             ))}
