@@ -94,20 +94,19 @@ export default function About() {
           <div className="space-y-12">
             {[
             {
+              role: "AI Consultant",
+              company: "McKinsey & Co",
+              description: "Helped with enablement and strategy for enterprise organizations first implementing LLMs."
+            },
+            {
               role: "Product Growth Designer",
               company: "Grammarly",
               description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
             },
-
             {
               role: "Brand Experience and Marketing Strategist",
               company: "Breakthrough 6 Mental Health",
               description: "Ensured clinical software was usable and conducted contextual inquires in order to determine the accuracy of their artificial intelligence model."
-            },
-            {
-              role: "AI Consultant",
-              company: "McKinsey & Co",
-              description: "Helped with enablement and strategy for enterprise organizations first implementing LLMs."
             },
             {
               role: "Content Strategist",
