@@ -100,7 +100,7 @@ export default function About() {
                 description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
               },
               {
-                role: "Senior Designer",
+                role: "Business Ops",
                 company: "Polaroid",
                 period: "2020 - Present",
                 description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
