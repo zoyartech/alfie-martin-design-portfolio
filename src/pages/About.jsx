@@ -106,8 +106,8 @@ export default function About() {
               description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
             },
             {
-              role: "Brand Designer",
-              company: "Creative Agency NYC",
+              role: "Brand Experience and Marketing Strategist",
+              company: "Breakthrough 6 Mental Health",
               period: "2018 - 2020",
               description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
             }].
