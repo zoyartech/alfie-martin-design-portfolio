@@ -106,7 +106,7 @@ export default function About() {
             {
               role: "Brand Experience and Marketing Strategist",
               company: "Breakthrough 6 Mental Health",
-              description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
+              description: "Ensured clinical software was usable and conducted contextual inquires in order to determine the accuracy of their artificial intelligence model."
             },
             {
               role: "AI Consultant",
