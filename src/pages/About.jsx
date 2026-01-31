@@ -47,11 +47,11 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">ABOUT ME</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-12 max-w-4xl">
-              Multi-disciplinary designer focused on creating meaningful experiences
+            <h1 className="text-4xl md:text-6xl font-light mb-12 max-w-4xl">Multi-disciplinary professional  focused on creating meaningful experiences
+
             </h1>
           </motion.div>
         </div>
@@ -65,8 +65,8 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 max-w-4xl"
-          >
+            className="space-y-6 max-w-4xl">
+
             <p className="text-lg leading-relaxed text-gray-700">
               I'm a creative designer based in New York City, working at the intersection of 
               business strategy, visual design, and brand vision. With over 8 years of experience, 
@@ -93,33 +93,33 @@ export default function About() {
           
           <div className="space-y-12">
             {[
-              {
-                role: "Product Growth Designer",
-                company: "Grammarly",
-                period: "2022 - 2024",
-                description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
-              },
-              {
-                role: "Business Ops",
-                company: "Polaroid",
-                period: "2020 - Present",
-                description: "Analyzes sales data to optimize inventory levels, and streamlined internal processes to support the production and distribution of instant cameras and film."
-              },
-              {
-                role: "Brand Experience and Marketing Strategist",
-                company: "Creative Agency NYC",
-                period: "2018 - 2020",
-                description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
-              }
-            ].map((job, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-t border-gray-200 pt-8"
-              >
+            {
+              role: "Product Growth Designer",
+              company: "Grammarly",
+              period: "2022 - 2024",
+              description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
+            },
+            {
+              role: "Senior Designer",
+              company: "Polaroid",
+              period: "2020 - Present",
+              description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
+            },
+            {
+              role: "Brand Designer",
+              company: "Creative Agency NYC",
+              period: "2018 - 2020",
+              description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
+            }].
+            map((job, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="border-t border-gray-200 pt-8">
+
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-light mb-2">{job.role}</h3>
@@ -131,7 +131,7 @@ export default function About() {
                   {job.description}
                 </p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -143,36 +143,36 @@ export default function About() {
           
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              {
-                title: "Brand Strategy",
-                skills: ["Brand Identity", "Visual Systems", "Brand Guidelines", "Positioning"]
-              },
-              {
-                title: "Digital Design",
-                skills: ["UI/UX Design", "Product Design", "Web Design", "Prototyping"]
-              },
-              {
-                title: "Creative Direction",
-                skills: ["Art Direction", "Photography", "Visual Storytelling", "Content Strategy"]
-              }
-            ].map((category, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-              >
+            {
+              title: "Brand Strategy",
+              skills: ["Brand Identity", "Visual Systems", "Brand Guidelines", "Positioning"]
+            },
+            {
+              title: "Digital Design",
+              skills: ["UI/UX Design", "Product Design", "Web Design", "Prototyping"]
+            },
+            {
+              title: "Creative Direction",
+              skills: ["Art Direction", "Photography", "Visual Storytelling", "Content Strategy"]
+            }].
+            map((category, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}>
+
                 <h3 className="text-xl font-medium mb-6">{category.title}</h3>
                 <ul className="space-y-3">
-                  {category.skills.map((skill, j) => (
-                    <li key={j} className="text-gray-600 text-sm">
+                  {category.skills.map((skill, j) =>
+                <li key={j} className="text-gray-600 text-sm">
                       {skill}
                     </li>
-                  ))}
+                )}
                 </ul>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -181,10 +181,10 @@ export default function About() {
       <section className="py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-8">Let's work together</h2>
-          <Link 
+          <Link
             to={createPageUrl("Contact")}
-            className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300"
-          >
+            className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300">
+
             GET IN TOUCH <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -201,6 +201,6 @@ export default function About() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
