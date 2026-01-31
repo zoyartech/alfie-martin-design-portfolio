@@ -112,6 +112,11 @@ export default function About() {
               role: "AI Consultant",
               company: "McKinsey & Co",
               description: "Helped with enablement and strategy for enterprise organizations first implementing LLMs."
+            },
+            {
+              role: "Content Strategist",
+              company: "Deloitte",
+              description: "Worked in the energy sector, and data centers for enterprise clients to ensure clarity and consistency across digital channels."
             }].
             map((job, i) =>
             <motion.div
