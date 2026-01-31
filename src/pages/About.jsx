@@ -67,20 +67,20 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="space-y-6 max-w-4xl">
 
-            <p className="text-lg leading-relaxed text-gray-700">
-              I'm a creative designer based in New York City, working at the intersection of 
-              business strategy, visual design, and brand vision. With over 8 years of experience, 
-              I help brands tell their stories through thoughtful design.
+            <p className="text-lg leading-relaxed text-gray-700">I'm a multidisciplinary technologist.  based in New York City, working at the intersection of business strategy, brand differentiation, and mass adoption.  With over 8 years of experience, I help brands tell their stories through well executed strategies.
+
+
+
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700">My work spans brand identity, experience design, and business feasibility.. 
+
+
+
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              My work spans brand identity, digital experiences, and art direction. I believe 
-              in design that not only looks beautiful but also solves real problems and creates 
-              lasting impact.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              I've had the privilege of working with companies like Grammarly, leading design 
-              initiatives that have reached millions of users worldwide. Currently, I focus on 
-              helping emerging brands establish their visual identity and strategic positioning.
+
+
+
             </p>
           </motion.div>
         </div>
@@ -94,24 +94,22 @@ export default function About() {
           <div className="space-y-12">
             {[
             {
-              role: "AI Consultant",
-              company: "McKinsey & Co",
-              description: "Helped with enablement and strategy for enterprise organizations first implementing LLMs."
-            },
-            {
               role: "Product Growth Designer",
               company: "Grammarly",
+              period: "2022 - 2024",
               description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
             },
             {
-              role: "Brand Experience and Marketing Strategist",
-              company: "Breakthrough 6 Mental Health",
-              description: "Ensured clinical software was usable and conducted contextual inquires in order to determine the accuracy of their artificial intelligence model."
+              role: "Senior Designer",
+              company: "Polaroid",
+              period: "2020 - Present",
+              description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
             },
             {
-              role: "Content Strategist",
-              company: "Deloitte",
-              description: "Worked in the energy sector, and data centers for enterprise clients to ensure clarity and consistency across digital channels."
+              role: "Brand Designer",
+              company: "Creative Agency NYC",
+              period: "2018 - 2020",
+              description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
             }].
             map((job, i) =>
             <motion.div
@@ -122,9 +120,12 @@ export default function About() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="border-t border-gray-200 pt-8">
 
-                <div className="mb-4">
-                  <h3 className="text-2xl font-light mb-2">{job.role}</h3>
-                  <p className="text-gray-500">{job.company}</p>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-light mb-2">{job.role}</h3>
+                    <p className="text-gray-500">{job.company}</p>
+                  </div>
+                  <span className="text-sm text-gray-400 mt-2 md:mt-0">{job.period}</span>
                 </div>
                 <p className="text-gray-600 leading-relaxed max-w-2xl">
                   {job.description}
