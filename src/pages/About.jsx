@@ -98,11 +98,7 @@ export default function About() {
               company: "Grammarly",
               description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
             },
-            {
-              role: "Senior Designer",
-              company: "Polaroid",
-              description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
-            },
+
             {
               role: "Brand Experience and Marketing Strategist",
               company: "Breakthrough 6 Mental Health",
