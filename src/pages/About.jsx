@@ -106,7 +106,7 @@ export default function About() {
                 description: "Analyzes sales data to optimize inventory levels, and streamlined internal processes to support the production and distribution of instant cameras and film."
               },
               {
-                role: "Brand Designer",
+                role: "Brand Experience and Marketing Strategist",
                 company: "Creative Agency NYC",
                 period: "2018 - 2020",
                 description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
