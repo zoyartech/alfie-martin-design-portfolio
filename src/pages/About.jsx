@@ -107,6 +107,11 @@ export default function About() {
               role: "Brand Experience and Marketing Strategist",
               company: "Breakthrough 6 Mental Health",
               description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
+            },
+            {
+              role: "AI Consultant",
+              company: "McKinsey & Co",
+              description: "Helped with enablement and strategy for enterprise organizations first implementing LLMs."
             }].
             map((job, i) =>
             <motion.div
