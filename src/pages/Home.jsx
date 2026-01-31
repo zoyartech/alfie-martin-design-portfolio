@@ -216,7 +216,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png",
-              "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+              "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png",
               "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?w=600&q=80",
               "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
             ].map((img, i) => (
