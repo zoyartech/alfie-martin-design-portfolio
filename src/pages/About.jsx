@@ -103,7 +103,7 @@ export default function About() {
                 role: "Business Ops",
                 company: "Polaroid",
                 period: "2020 - Present",
-                description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
+                description: "Analyzes sales data to optimize inventory levels, and streamlined internal processes to support the production and distribution of instant cameras and film."
               },
               {
                 role: "Brand Designer",
