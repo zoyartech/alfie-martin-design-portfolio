@@ -89,7 +89,7 @@ export default function About() {
       {/* Experience Section */}
       <section className="py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">EXPERIENCE</p>
+          <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
           
           <div className="space-y-12">
             {[
