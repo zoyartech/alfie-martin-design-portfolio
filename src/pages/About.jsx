@@ -96,19 +96,16 @@ export default function About() {
             {
               role: "Product Growth Designer",
               company: "Grammarly",
-              period: "2022 - 2024",
               description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
             },
             {
               role: "Senior Designer",
               company: "Polaroid",
-              period: "2020 - Present",
               description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
             },
             {
               role: "Brand Experience and Marketing Strategist",
               company: "Breakthrough 6 Mental Health",
-              period: "2018 - 2020",
               description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
             }].
             map((job, i) =>
@@ -120,12 +117,9 @@ export default function About() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="border-t border-gray-200 pt-8">
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-light mb-2">{job.role}</h3>
-                    <p className="text-gray-500">{job.company}</p>
-                  </div>
-                  <span className="text-sm text-gray-400 mt-2 md:mt-0">{job.period}</span>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-light mb-2">{job.role}</h3>
+                  <p className="text-gray-500">{job.company}</p>
                 </div>
                 <p className="text-gray-600 leading-relaxed max-w-2xl">
                   {job.description}
