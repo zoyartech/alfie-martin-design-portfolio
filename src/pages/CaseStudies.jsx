@@ -11,7 +11,7 @@ const caseStudies = [
     subtitle: "Luxury Beauty Brand Identity",
     category: "Branding & Identity",
     year: "2024",
-    heroImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
+    heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d247d328d_PolaroidI-2-13-2584083864.jpg",
     overview: "Lumière Cosmetics approached me to create a complete brand identity that would position them as a premium, sustainable beauty brand in the competitive NYC market. The goal was to appeal to conscious millennials and Gen-Z consumers who value both luxury and environmental responsibility.",
     problem: "The beauty market is oversaturated with brands that either focus on luxury or sustainability, but rarely both. Lumière needed a distinctive visual identity that could communicate premium quality while emphasizing their commitment to clean, sustainable beauty.",
     approach: "I conducted extensive market research and competitor analysis to identify white space in the market. Through stakeholder interviews and mood boarding sessions, we established a visual language that merged minimalist luxury with organic, nature-inspired elements. The design strategy focused on creating timeless sophistication with subtle environmental cues.",
