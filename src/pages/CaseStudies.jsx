@@ -18,9 +18,9 @@ const caseStudies = [
     solution: "The final brand identity featured a custom wordmark with refined serif typography, a color palette of warm neutrals and soft earth tones, and a photographic style emphasizing natural light and raw textures. The packaging design utilized recyclable materials with elegant, minimal graphics. I created comprehensive brand guidelines covering all touchpoints from product packaging to digital presence.",
     results: "The rebrand led to a 145% increase in social media engagement within the first three months. Lumière successfully launched in 12 premium retailers and saw a 200% increase in direct-to-consumer sales. The brand was featured in Vogue, Allure, and received a Dieline Award for packaging design.",
     images: [
-      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=80",
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80",
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80"
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c52538eee_8coIXEDOe9k5b4ncO-lOMB.png",
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/bd28a88a7_8CX5CUVGD0dcn344Lk34Sd.png",
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2069f67e8_8pgwNnHO-I9ddNTGKDK4YH.png"
     ],
     tags: ["Brand Strategy", "Visual Identity", "Packaging Design", "Art Direction"]
   },
