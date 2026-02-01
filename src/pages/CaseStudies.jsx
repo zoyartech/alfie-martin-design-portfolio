@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    title: "polaroid rebrand and market strategy",
+    title: "Breakthrough 6 ^",
     subtitle: "Consumer Products",
     category: "Branding & Identity",
     year: "2021",

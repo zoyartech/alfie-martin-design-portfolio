@@ -47,6 +47,7 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
+import About from './pages/About';
 import CaseStudies from './pages/CaseStudies';
 import Contact from './pages/Contact';
 import Design from './pages/Design';
@@ -55,10 +56,10 @@ import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import MixedMedia from './pages/MixedMedia';
 import PassionProjects from './pages/PassionProjects';
-import About from './pages/About';
 
 
 export const PAGES = {
+    "About": About,
     "CaseStudies": CaseStudies,
     "Contact": Contact,
     "Design": Design,
@@ -67,7 +68,6 @@ export const PAGES = {
     "Home": Home,
     "MixedMedia": MixedMedia,
     "PassionProjects": PassionProjects,
-    "About": About,
 }
 
 export const pagesConfig = {
