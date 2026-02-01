@@ -8,7 +8,7 @@ const caseStudies = [
   {
     id: 1,
     title: "Polaroid rebrand strategy",
-    subtitle: "Luxury Beauty Brand Identity",
+    subtitle: "DTC growth of an iconic brand",
     category: "Branding & Identity",
     year: "2024",
     heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d247d328d_PolaroidI-2-13-2584083864.jpg",
