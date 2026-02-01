@@ -135,7 +135,7 @@ export default function CaseStudies() {
                     <div className={index % 2 === 0 ? "order-1" : "order-1 md:order-2"}>
                       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                         <img
-                          src={study.heroImage}
+                          src={study.id === 1 ? "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/3687cf42b_aW1-UrLkSTRcKQof9MUk8U.png" : study.heroImage}
                           alt={study.title}
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                         />
