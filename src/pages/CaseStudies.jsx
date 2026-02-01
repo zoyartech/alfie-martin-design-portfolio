@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    title: "Lumière Cosmetics",
+    title: "polaroid rebrand and market strategy",
     subtitle: "Luxury Beauty Brand Identity",
     category: "Branding & Identity",
     year: "2021",
