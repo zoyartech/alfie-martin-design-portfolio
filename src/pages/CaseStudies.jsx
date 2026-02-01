@@ -26,7 +26,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: "Breakthrough",
+    title: "Breakthrough 6",
     subtitle: "Wellness App Experience",
     category: "UI/UX Design",
     year: "2023",
