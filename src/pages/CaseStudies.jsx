@@ -10,7 +10,7 @@ const caseStudies = [
     title: "Polaroid rebrand strategy",
     subtitle: "DTC growth of an iconic brand",
     category: "Branding & Identity",
-    year: "2024",
+    year: "2021",
     heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d247d328d_PolaroidI-2-13-2584083864.jpg",
     overview: "Polaroid is an analog photography brand that manufactures instant cameras, film, and printers. The company focuses on capturing the 'beautifully imperfect' moments of real life through physical media, blending its historic legacy with modern technology and creative collaborations to encourage tangible connections in a digital world.",
     problem: "The beauty market is oversaturated with brands that either focus on luxury or sustainability, but rarely both. Lumière needed a distinctive visual identity that could communicate premium quality while emphasizing their commitment to clean, sustainable beauty.",
