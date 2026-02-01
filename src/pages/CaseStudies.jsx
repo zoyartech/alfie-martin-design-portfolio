@@ -11,7 +11,7 @@ const caseStudies = [
     subtitle: "Consumer Products",
     category: "Branding & Identity",
     year: "2021",
-    heroImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
+    heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4d6f15229_9cpn80JLBmF1-HQoED4OvQ.png",
     overview: "Polaroid is an analog photography brand that manufactures instant cameras, film, and printers. The company focuses on capturing the 'beautifully imperfect' moments of real life through physical media, blending its historic legacy with modern technology and creative collaborations to encourage tangible connections in a digital world.",
     problem: "The beauty market is oversaturated with brands that either focus on luxury or sustainability, but rarely both. Lumière needed a distinctive visual identity that could communicate premium quality while emphasizing their commitment to clean, sustainable beauty.",
     approach: "I conducted extensive market research and competitor analysis to identify white space in the market. Through stakeholder interviews and mood boarding sessions, we established a visual language that merged minimalist luxury with organic, nature-inspired elements. The design strategy focused on creating timeless sophistication with subtle environmental cues.",
