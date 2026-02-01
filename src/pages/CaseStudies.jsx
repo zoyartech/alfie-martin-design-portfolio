@@ -8,7 +8,7 @@ const caseStudies = [
   {
     id: 1,
     title: "polaroid rebrand and market strategy",
-    subtitle: "Luxury Beauty Brand Identity",
+    subtitle: "Consumer Products",
     category: "Branding & Identity",
     year: "2021",
     heroImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
