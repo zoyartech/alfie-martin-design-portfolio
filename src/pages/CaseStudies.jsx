@@ -7,42 +7,20 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    title: "Polaroid rebrand strategy",
-    subtitle: "DTC growth of an iconic brand",
+    title: "Lumière Cosmetics",
+    subtitle: "Luxury Beauty Brand Identity",
     category: "Branding & Identity",
-    year: "2021",
-    heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d247d328d_PolaroidI-2-13-2584083864.jpg",
-    overview: "Polaroid is an analog photography brand that manufactures instant cameras, film, and printers. The company focuses on capturing the 'beautifully imperfect' moments of real life through physical media, blending its historic legacy with modern technology and creative collaborations to encourage tangible connections in a digital world.",
-    problem: "After a tumultuous history dating back to 1937, and even disappearing from the market, polaroid found itself with new challenges once it started creating film and manufacturing cameras again. The landscape had changes in the few years it had stopped operations",
+    year: "2024",
+    heroImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
+    overview: "Lumière Cosmetics approached me to create a complete brand identity that would position them as a premium, sustainable beauty brand in the competitive NYC market. The goal was to appeal to conscious millennials and Gen-Z consumers who value both luxury and environmental responsibility.",
+    problem: "The beauty market is oversaturated with brands that either focus on luxury or sustainability, but rarely both. Lumière needed a distinctive visual identity that could communicate premium quality while emphasizing their commitment to clean, sustainable beauty.",
     approach: "I conducted extensive market research and competitor analysis to identify white space in the market. Through stakeholder interviews and mood boarding sessions, we established a visual language that merged minimalist luxury with organic, nature-inspired elements. The design strategy focused on creating timeless sophistication with subtle environmental cues.",
     solution: "The final brand identity featured a custom wordmark with refined serif typography, a color palette of warm neutrals and soft earth tones, and a photographic style emphasizing natural light and raw textures. The packaging design utilized recyclable materials with elegant, minimal graphics. I created comprehensive brand guidelines covering all touchpoints from product packaging to digital presence.",
     results: "The rebrand led to a 145% increase in social media engagement within the first three months. Lumière successfully launched in 12 premium retailers and saw a 200% increase in direct-to-consumer sales. The brand was featured in Vogue, Allure, and received a Dieline Award for packaging design.",
     images: [
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2fc391947_avSb8lJ6yXF01bl7YT4OHV.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/f59a4cef9_aW1-UrLkSTRcKQof9MUk8U.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/8dc62eb48_9XqNCm3vU3757Ff0FqDOdW.png"
-    ],
-    galleryImages: [
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/675d3a775_Screenshot2026-02-01at32643AM.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/e1a96eea4_Screenshot2026-02-01at32636AM.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2fc391947_avSb8lJ6yXF01bl7YT4OHV.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/f59a4cef9_aW1-UrLkSTRcKQof9MUk8U.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/8dc62eb48_9XqNCm3vU3757Ff0FqDOdW.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/17bdc707b_bzMIeHTjPaDbMjtFgJwO0a.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/e8d0c9e49_arUJxOGeF4T12lSLLfakB8.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/ff68e8394_bBAr7d3Kp8-5ePuKeq2kdH.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a60cb5c63_8coIXEDOe9k5b4ncO-lOMB.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/33c423c68_8CX5CUVGD0dcn344Lk34Sd.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/5513622e2_9LGxrOb0wC1244_ZDdzkrh-1.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1092584cb_9LGxrOb0wC1244_ZDdzkrh.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/132e16744_9cpn80JLBmF1-HQoED4OvQ.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/6cc639e7a_atLtOeP9tRwe3MnWxdU4Yd-1.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/41144735c_9jDplRLRipO6D6pcRtTki0.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/285b2db49_atLtOeP9tRwe3MnWxdU4Yd.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a88c9d45a_8NdDGH_M4Pz2JTdF4jjkQk.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/96681fa9c_8pgwNnHO-I9ddNTGKDK4YH.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/37b8fa00c_bypI-Ypgebu6tgjKIYB_U3.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/e6860ca45_beCYthqsKUKec4_0LX5_lT.png"
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=80",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80",
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80"
     ],
     tags: ["Brand Strategy", "Visual Identity", "Packaging Design", "Art Direction"]
   },
@@ -305,36 +283,6 @@ export default function CaseStudies() {
                   <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-6">RESULTS & IMPACT</h2>
                   <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.results}</p>
                 </motion.div>
-
-                {/* Full Gallery Section */}
-                {selectedStudy.galleryImages && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.9 }}
-                    className="mt-16"
-                  >
-                    <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-8">PROJECT GALLERY</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {selectedStudy.galleryImages.map((img, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: i * 0.05 }}
-                          className="aspect-square overflow-hidden bg-gray-100 hover:opacity-90 transition-opacity"
-                        >
-                          <img
-                            src={img}
-                            alt={`${selectedStudy.title} gallery ${i + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
               </div>
 
               {/* Next Project */}
