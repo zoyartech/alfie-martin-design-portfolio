@@ -184,8 +184,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Section */}
+      {/* Process Section */}
       <section className="py-32 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</p>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Discovery",
+                description: "Understanding business goals, user needs, and market landscape"
+              },
+              {
+                step: "02",
+                title: "Strategy",
+                description: "Defining design principles, positioning, and visual direction"
+              },
+              {
+                step: "03",
+                title: "Execution",
+                description: "Creating comprehensive design systems and assets"
+              },
+              {
+                step: "04",
+                title: "Refinement",
+                description: "Testing, iterating, and optimizing based on feedback"
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="border-t border-gray-300 pt-6"
+              >
+                <span className="text-xs text-gray-400 tracking-wider">{item.step}</span>
+                <h3 className="text-xl font-medium mt-4 mb-3">{item.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Section */}
+      <section className="py-32 px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-left">
           <motion.blockquote
             initial={{ opacity: 0, y: 30 }}
