@@ -105,11 +105,11 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">
+            transition={{ duration: 0.6, delay: 0.4 }} className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">Multi-disciplinary designer working across Product, digital experiences, and data informed decisions.. Based in New York City. Focused on creating things that matter.
 
-            Multi-disciplinary designer working across branding, digital experiences, 
-            and visual storytelling. Based in New York City. Focused on creating things that matter.
+
+
+
           </motion.p>
 
           <motion.div
