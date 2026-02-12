@@ -23,7 +23,7 @@ export default function Home() {
 
               ALFIE MARTIN
             </Link>
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-10">
               <Link
                 to={createPageUrl("Home")}
                 className="relative text-xs tracking-[0.15em] font-medium text-black group">
