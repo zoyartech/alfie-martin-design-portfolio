@@ -132,17 +132,17 @@ export default function Home() {
             {[
             {
               num: "01",
-              title: "Brand & Identity",
+              title: "Design Systems",
               desc: "Visual identity systems, logo design, brand strategy and guidelines"
             },
             {
               num: "02",
-              title: "Digital Design",
+              title: "Web apps and internal tools",
               desc: "Web experiences, UI/UX design, interactive prototypes"
             },
             {
               num: "03",
-              title: "Art Direction",
+              title: "Creating simplicity out of complexity",
               desc: "Creative direction, photography styling, visual storytelling"
             }].
             map((domain, i) =>
