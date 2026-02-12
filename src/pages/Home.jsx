@@ -159,9 +159,6 @@ export default function Home() {
                   <h3 className="text-xl font-medium mt-4 mb-3 group-hover:text-[#8B7355] transition-colors">
                     {domain.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    {domain.desc}
-                  </p>
                 </div>
               </motion.div>
             )}
