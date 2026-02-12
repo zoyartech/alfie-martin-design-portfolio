@@ -139,7 +139,7 @@ export default function Home() {
             {[
               {
                 num: "01",
-                title: "Brand & Identity",
+                title: "Design Systems",
                 desc: "Visual identity systems, logo design, brand strategy and guidelines"
               },
               {
