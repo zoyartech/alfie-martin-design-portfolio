@@ -64,12 +64,6 @@ export default function Design() {
               <Link to={createPageUrl("Design")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 DESIGN
               </Link>
-              <Link to={createPageUrl("MixedMedia")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                MIXED MEDIA
-              </Link>
-              <Link to={createPageUrl("PassionProjects")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                PASSION PROJECTS
-              </Link>
               <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 VISUALS
               </Link>
