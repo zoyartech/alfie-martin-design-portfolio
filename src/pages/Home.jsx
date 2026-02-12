@@ -144,7 +144,7 @@ export default function Home() {
               },
               {
                 num: "02", 
-                title: "Digital Design",
+                title: "0-1 work",
                 desc: "Web experiences, UI/UX design, interactive prototypes"
               },
               {
