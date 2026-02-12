@@ -191,57 +191,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Preview */}
-      <section className="py-32 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
-              <h2 className="text-3xl md:text-4xl font-light">Selected Works</h2>
-            </div>
-            <Link 
-              to={createPageUrl("Gallery")} 
-              className="hidden md:flex items-center gap-2 text-sm hover:text-[#8B7355] transition-colors"
-            >
-              View All <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png",
-              "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png",
-              "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/abc94bcb0_263737c32d0e1e076ac84aed6761a15d.png",
-              "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
-            ].map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="aspect-square overflow-hidden cursor-pointer"
-                onClick={() => setSelectedImage(selectedImage === i ? null : i)}
-              >
-                <motion.img 
-                  src={img} 
-                  alt={`Work ${i + 1}`}
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  animate={{ scale: selectedImage === i ? 1.2 : 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.div>
-            ))}
-          </div>
-
-          <Link 
-            to={createPageUrl("Gallery")} 
-            className="md:hidden flex items-center justify-center gap-2 text-sm mt-8 hover:text-[#8B7355] transition-colors"
-          >
-            View All Works <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
 
       {/* Contact CTA */}
       <section className="py-32 px-6 lg:px-12 border-t border-gray-100">
