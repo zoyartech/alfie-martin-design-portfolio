@@ -126,7 +126,6 @@ export default function Home() {
       {/* Domains Section */}
       <section id="domains" className="py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">DOMAINS OF WORK</p>
           <h2 className="text-3xl md:text-4xl font-light mb-20">Three pillars of creation</h2>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
