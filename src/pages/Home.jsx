@@ -46,6 +46,20 @@ export default function Home() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link
+                to={createPageUrl("MixedMedia")}
+                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
+
+                MIXED MEDIA
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link
+                to={createPageUrl("PassionProjects")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">CONTRACTS
+
+
+
+
+              </Link>
+              <Link
                 to={createPageUrl("Gallery")}
                 className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
 
@@ -126,23 +140,24 @@ export default function Home() {
       {/* Domains Section */}
       <section id="domains" className="py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">DOMAINS OF WORK</p>
           <h2 className="text-3xl md:text-4xl font-light mb-20">Three pillars of creation</h2>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {[
             {
               num: "01",
-              title: "Design Systems",
+              title: "Brand & Identity",
               desc: "Visual identity systems, logo design, brand strategy and guidelines"
             },
             {
               num: "02",
-              title: "Web apps and internal tools",
+              title: "Digital Design",
               desc: "Web experiences, UI/UX design, interactive prototypes"
             },
             {
               num: "03",
-              title: "Creating simplicity out of complexity",
+              title: "Art Direction",
               desc: "Creative direction, photography styling, visual storytelling"
             }].
             map((domain, i) =>
@@ -159,6 +174,9 @@ export default function Home() {
                   <h3 className="text-xl font-medium mt-4 mb-3 group-hover:text-[#8B7355] transition-colors">
                     {domain.title}
                   </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {domain.desc}
+                  </p>
                 </div>
               </motion.div>
             )}
