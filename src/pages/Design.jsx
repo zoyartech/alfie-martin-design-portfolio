@@ -40,7 +40,8 @@ export default function Design() {
       title: "TypeForm",
       category: "Product Design",
       image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80",
-      year: "2022"
+      year: "2022",
+      link: "WorkflowOptimizationHVAC"
     }
   ];
 
@@ -110,6 +111,7 @@ export default function Design() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="group cursor-pointer"
+                onClick={() => project.link && (window.location.href = createPageUrl(project.link))}
               >
                 <div className="aspect-[4/3] overflow-hidden bg-gray-100 mb-6">
                   <img
