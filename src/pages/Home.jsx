@@ -149,7 +149,7 @@ export default function Home() {
               },
               {
                 num: "03",
-                title: "Art Direction",
+                title: "b2b web apps, & internal tols",
                 desc: "Creative direction, photography styling, visual storytelling"
               }
             ].map((domain, i) => (
