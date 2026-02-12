@@ -125,7 +125,15 @@ export default function Home() {
 
           </motion.div>
 
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            onClick={scrollToSection}
+            className="absolute bottom-12 right-12 hidden lg:flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
 
+            EXPLORE <ArrowDownRight className="w-4 h-4" />
+          </motion.button>
         </div>
       </section>
 
