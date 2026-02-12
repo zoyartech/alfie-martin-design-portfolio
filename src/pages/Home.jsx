@@ -46,14 +46,14 @@ export default function Home() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link
-                to={createPageUrl("MixedMedia")}
-                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
+                to={createPageUrl("MixedMedia")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
 
-                MIXED MEDIA
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
+
+
+
               </Link>
               <Link
-                to={createPageUrl("PassionProjects")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">CONTRACTS
+                to={createPageUrl("PassionProjects")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
 
 
 
