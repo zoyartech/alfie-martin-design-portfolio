@@ -91,7 +91,7 @@ const galleryItems = [
 }];
 
 
-const categories = ["All", "Branding", "Art Direction", "UI/UX", "Photography", "Print"];
+const categories = ["All", "Branding", "Art Direction", "UI/UX", "Design Systems", "Print"];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
