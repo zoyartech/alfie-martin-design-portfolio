@@ -137,50 +137,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Domains Section */}
-      <section id="domains" className="py-32 px-6 lg:px-12 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {[
-            {
-              num: "01",
-              title: "Brand & Identity",
-              desc: "Visual identity systems, logo design, brand strategy and guidelines"
-            },
-            {
-              num: "02",
-              title: "Digital Design",
-              desc: "Web experiences, UI/UX design, interactive prototypes"
-            },
-            {
-              num: "03",
-              title: "Art Direction",
-              desc: "Creative direction, photography styling, visual storytelling"
-            }].
-            map((domain, i) =>
-            <motion.div
-              key={domain.num}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group cursor-pointer">
-
-                <div className="border-t border-gray-200 pt-8">
-                  <span className="text-xs text-gray-400 tracking-wider">{domain.num}</span>
-                  <h3 className="text-xl font-medium mt-4 mb-3 group-hover:text-[#8B7355] transition-colors">
-                    {domain.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    {domain.desc}
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
