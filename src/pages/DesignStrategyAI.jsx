@@ -67,20 +67,40 @@ export default function DesignStrategyAI() {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="pb-20 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      {/* Process */}
+      <section className="pb-20 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto py-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="aspect-video overflow-hidden bg-gray-100">
-            <img
-              src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&q=80"
-              alt="AI Design Systems"
-              className="w-full h-full object-cover"
-            />
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}>
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">THE PROCESS</p>
+            <h2 className="text-3xl font-light mb-10">How I approach AI design work</h2>
+            <div className="space-y-8">
+              {[
+                {
+                  title: "Capability Mapping",
+                  body: "Translating the technical capabilities of an AI system into meaningful user benefits — understanding what's genuinely possible vs. what's being overpromised."
+                },
+                {
+                  title: "Failure Mode Design",
+                  body: "Designing for when things go wrong. AI systems fail in unpredictable ways. Building graceful, honest error states is as important as the ideal flow."
+                },
+                {
+                  title: "Brand Voice for AI",
+                  body: "Defining how an AI product speaks — the tone, language patterns, and personality — so interactions feel consistent, human, and on-brand."
+                },
+                {
+                  title: "Iterative Prototyping",
+                  body: "Rapidly testing interactions with real users to validate assumptions early, before the model is trained or the system is built."
+                }
+              ].map((item, i) => (
+                <div key={i} className="border-l-2 border-gray-300 pl-6">
+                  <h3 className="text-xl font-medium mb-2">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
