@@ -6,44 +6,44 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Design() {
   const projects = [
-    {
-      title: "Lumière Cosmetics",
-      category: "Brand Identity",
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
-      year: "2024"
-    },
-    {
-      title: "Haven Wellness",
-      category: "UI/UX Design",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80",
-      year: "2023"
-    },
-    {
-      title: "Artisan Collective",
-      category: "E-commerce",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
-      year: "2023"
-    },
-    {
-      title: "Urban Spaces",
-      category: "Brand Identity",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
-      year: "2023"
-    },
-    {
-      title: "Minimal Studio",
-      category: "Web Design",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-      year: "2022"
-    },
-    {
-      title: "TypeForm",
-      category: "Product Design",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80",
-      year: "2022",
-      link: "WorkflowOptimizationHVAC"
-    }
-  ];
+  {
+    title: "Lumière Cosmetics",
+    category: "Brand Identity",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
+    year: "2024"
+  },
+  {
+    title: "Haven Wellness",
+    category: "UI/UX Design",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80",
+    year: "2023"
+  },
+  {
+    title: "Artisan Collective",
+    category: "E-commerce",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
+    year: "2023"
+  },
+  {
+    title: "Urban Spaces",
+    category: "Brand Identity",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+    year: "2023"
+  },
+  {
+    title: "Minimal Studio",
+    category: "Web Design",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    year: "2022"
+  },
+  {
+    title: "TypeForm",
+    category: "Product Design",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80",
+    year: "2022",
+    link: "WorkflowOptimizationHVAC"
+  }];
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -81,13 +81,13 @@ export default function Design() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">DESIGN WORK</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Design Projects</h1>
-            <p className="text-gray-500 max-w-2xl">
-              A collection of brand identities, digital products, and user experiences 
-              designed to solve problems and create meaningful connections.
+            <p className="text-gray-500 max-w-2xl">AI Related Design and building + my favorite examples of my work that show my growth and evolution as a designer
+
+
             </p>
           </motion.div>
         </div>
@@ -97,22 +97,22 @@ export default function Design() {
       <section className="px-6 lg:px-12 pb-32">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-            {projects.map((project, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group cursor-pointer"
-                onClick={() => project.link && (window.location.href = createPageUrl(project.link))}
-              >
+            {projects.map((project, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="group cursor-pointer"
+              onClick={() => project.link && (window.location.href = createPageUrl(project.link))}>
+
                 <div className="aspect-[4/3] overflow-hidden bg-gray-100 mb-6">
                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                  />
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+
                 </div>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs tracking-[0.2em] text-gray-400">{project.category}</span>
@@ -123,7 +123,7 @@ export default function Design() {
                   <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -135,40 +135,40 @@ export default function Design() {
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                step: "01",
-                title: "Discovery",
-                description: "Understanding business goals, user needs, and market landscape"
-              },
-              {
-                step: "02",
-                title: "Strategy",
-                description: "Defining design principles, positioning, and visual direction"
-              },
-              {
-                step: "03",
-                title: "Execution",
-                description: "Creating comprehensive design systems and assets"
-              },
-              {
-                step: "04",
-                title: "Refinement",
-                description: "Testing, iterating, and optimizing based on feedback"
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-t border-gray-300 pt-6"
-              >
+            {
+              step: "01",
+              title: "Discovery",
+              description: "Understanding business goals, user needs, and market landscape"
+            },
+            {
+              step: "02",
+              title: "Strategy",
+              description: "Defining design principles, positioning, and visual direction"
+            },
+            {
+              step: "03",
+              title: "Execution",
+              description: "Creating comprehensive design systems and assets"
+            },
+            {
+              step: "04",
+              title: "Refinement",
+              description: "Testing, iterating, and optimizing based on feedback"
+            }].
+            map((item, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="border-t border-gray-300 pt-6">
+
                 <span className="text-xs text-gray-400 tracking-wider">{item.step}</span>
                 <h3 className="text-xl font-medium mt-4 mb-3">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -184,6 +184,6 @@ export default function Design() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
