@@ -55,6 +55,7 @@ import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
+import DesignStrategyAI from './pages/DesignStrategyAI';
 
 
 export const PAGES = {
@@ -66,6 +67,7 @@ export const PAGES = {
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
     "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
+    "DesignStrategyAI": DesignStrategyAI,
 }
 
 export const pagesConfig = {

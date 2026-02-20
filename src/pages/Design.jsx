@@ -10,7 +10,8 @@ export default function Design() {
     title: "Lumière Cosmetics",
     category: "Brand Identity",
     image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
-    year: "2024"
+    year: "2024",
+    link: "DesignStrategyAI"
   },
   {
     title: "Haven Wellness",
