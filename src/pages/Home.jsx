@@ -104,10 +104,10 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-12 max-w-lg ml-auto">
 
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1b5809ebf_measure.png"
-              alt="Design compass"
-              className="w-full h-auto" />
+            
+
+
+
 
           </motion.div>
 
@@ -130,40 +130,40 @@ export default function Home() {
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                step: "01",
-                title: "Discovery",
-                description: "Understanding business goals, user needs, and market landscape"
-              },
-              {
-                step: "02",
-                title: "Strategy",
-                description: "Defining design principles, positioning, and visual direction"
-              },
-              {
-                step: "03",
-                title: "Execution",
-                description: "Creating comprehensive design systems and assets"
-              },
-              {
-                step: "04",
-                title: "Refinement",
-                description: "Testing, iterating, and optimizing based on feedback"
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-t border-gray-300 pt-6"
-              >
+            {
+              step: "01",
+              title: "Discovery",
+              description: "Understanding business goals, user needs, and market landscape"
+            },
+            {
+              step: "02",
+              title: "Strategy",
+              description: "Defining design principles, positioning, and visual direction"
+            },
+            {
+              step: "03",
+              title: "Execution",
+              description: "Creating comprehensive design systems and assets"
+            },
+            {
+              step: "04",
+              title: "Refinement",
+              description: "Testing, iterating, and optimizing based on feedback"
+            }].
+            map((item, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="border-t border-gray-300 pt-6">
+
                 <span className="text-xs text-gray-400 tracking-wider">{item.step}</span>
                 <h3 className="text-xl font-medium mt-4 mb-3">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
