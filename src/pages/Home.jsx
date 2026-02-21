@@ -129,7 +129,7 @@ export default function Home() {
             className="mt-24 pt-12 border-t border-gray-100">
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">PREVIOUSLY </p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-              {["Grammarly", "Polaroid", "Microsoft", "Adobe", "Figma", "Deloitte"].map((brand, i) =>
+              {["Grammarly", "Polaroid", "Microsoft", "McKinsey & Co", "Rockefeller Capital", "Deloitte"].map((brand, i) =>
                 <div key={i} className="flex items-center justify-center opacity-30 hover:opacity-70 transition-all duration-300">
                   <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{brand}</span>
                 </div>
