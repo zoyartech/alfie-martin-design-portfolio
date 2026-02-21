@@ -146,32 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo Wall */}
-      <section className="py-16 px-6 lg:px-12 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-10">PREVIOUSLY WORKED WITH</p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-            {[
-              { name: "Grammarly", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Grammarly_logo.svg/320px-Grammarly_logo.svg.png" },
-              { name: "Polaroid", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Polaroid_logo.svg/320px-Polaroid_logo.svg.png" },
-              { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png" },
-              { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/320px-Adobe_Systems_logo_and_wordmark.svg.png" },
-              { name: "Figma", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/100px-Figma-logo.svg.png" },
-              { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/320px-Shopify_logo_2018.svg.png" },
-            ].map((brand, i) => (
-              <div key={i} className="flex items-center justify-center h-10 opacity-40 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-300">
-                <img src={brand.logo} alt={brand.name} className="max-h-full max-w-full object-contain" />
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
