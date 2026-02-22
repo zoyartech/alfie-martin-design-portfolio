@@ -8,7 +8,7 @@ const galleryImages = [
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png", caption: "Microsoft — Design Systems" },
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png", caption: "Brand Identity Work" },
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/abc94bcb0_263737c32d0e1e076ac84aed6761a15d.png", caption: "Visual Direction" },
-{ src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80", caption: "Product Design" }];
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c72dd3896_EGP-STKRS.png", caption: "Visual Identity" }];
 
 
 export default function Home() {
