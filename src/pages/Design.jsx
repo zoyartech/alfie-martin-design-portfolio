@@ -73,6 +73,7 @@ export default function Design() {
                 CONTACT
               </Link>
             </div>
+            <MobileNav activePage="Design" />
           </div>
         </div>
       </nav>

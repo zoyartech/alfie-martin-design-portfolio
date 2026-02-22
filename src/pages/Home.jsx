@@ -79,6 +79,7 @@ export default function Home() {
                 CONTACT
               </Link>
             </div>
+            <MobileNav activePage="Home" />
           </div>
         </div>
       </nav>

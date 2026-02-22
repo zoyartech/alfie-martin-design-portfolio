@@ -122,6 +122,7 @@ export default function Gallery() {
                 GALLERY
               </Link>
             </div>
+            <MobileNav activePage="Gallery" />
           </div>
         </div>
       </nav>

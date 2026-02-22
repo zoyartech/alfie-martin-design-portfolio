@@ -47,6 +47,7 @@ export default function Contact() {
                 CONTACT
               </Link>
             </div>
+            <MobileNav activePage="Contact" />
           </div>
         </div>
       </nav>
