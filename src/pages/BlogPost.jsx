@@ -80,7 +80,7 @@ export default function BlogPost() {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="aspect-[16/7] overflow-hidden bg-gray-100">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/35f19e689_5.png" alt={post.title} className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </section>

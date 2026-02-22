@@ -48,6 +48,8 @@
  * The mainPage value must match a key in the PAGES object exactly.
  */
 import About from './pages/About';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import CaseStudies from './pages/CaseStudies';
 import Contact from './pages/Contact';
 import Design from './pages/Design';
@@ -56,12 +58,12 @@ import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
 
 
 export const PAGES = {
     "About": About,
+    "Blog": Blog,
+    "BlogPost": BlogPost,
     "CaseStudies": CaseStudies,
     "Contact": Contact,
     "Design": Design,
@@ -70,8 +72,6 @@ export const PAGES = {
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
     "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
-    "Blog": Blog,
-    "BlogPost": BlogPost,
 }
 
 export const pagesConfig = {
