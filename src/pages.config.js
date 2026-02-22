@@ -53,12 +53,12 @@ import BlogPost from './pages/BlogPost';
 import CaseStudies from './pages/CaseStudies';
 import Contact from './pages/Contact';
 import Design from './pages/Design';
+import DesignMarathon from './pages/DesignMarathon';
 import DesignStrategyAI from './pages/DesignStrategyAI';
 import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
-import DesignMarathon from './pages/DesignMarathon';
 
 
 export const PAGES = {
@@ -68,12 +68,12 @@ export const PAGES = {
     "CaseStudies": CaseStudies,
     "Contact": Contact,
     "Design": Design,
+    "DesignMarathon": DesignMarathon,
     "DesignStrategyAI": DesignStrategyAI,
     "Gallery": Gallery,
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
     "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
-    "DesignMarathon": DesignMarathon,
 }
 
 export const pagesConfig = {
