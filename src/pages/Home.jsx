@@ -129,9 +129,20 @@ export default function Home() {
             className="mt-24 pt-12 border-t border-gray-100">
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">PREVIOUSLY </p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-              {["Grammarly", "Polaroid", "Microsoft", "McKinsey & Co", "Rockefeller Capital", "Deloitte"].map((brand, i) =>
-                <div key={i} className="flex items-center justify-center opacity-30 hover:opacity-70 transition-all duration-300">
-                  <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{brand}</span>
+              {[
+                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
+                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/df08903cb_Group1.png", alt: "Polaroid" },
+                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a8abeb8cd_microsoftlogo.png", alt: "Microsoft" },
+                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/6153e0dca_McKinsey_and_Company_Logo_1logo.png", alt: "McKinsey & Company" },
+                { src: null, alt: "Rockefeller Capital" },
+                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d491508f1_Logo_of_Deloittelogo.png", alt: "Deloitte" },
+              ].map((logo, i) =>
+                <div key={i} className="flex items-center justify-center opacity-40 hover:opacity-80 transition-all duration-300">
+                  {logo.src ? (
+                    <img src={logo.src} alt={logo.alt} className="h-8 w-auto object-contain grayscale" />
+                  ) : (
+                    <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
+                  )}
                 </div>
               )}
             </div>
