@@ -93,7 +93,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">
-              Multi-disciplinary designer working across Product, digital experiences, and data informed decisions.. Based in New York City. Focused on creating things that matter.
+              Multi-disciplinary designer working across Product, digital experiences, building products and making and data informed decisions.. Based in New York City. Focused on creating things that matter. Also I am an artist. I have a point of view. I can draw while working on a brand design book. Create content strategies, and speak developer concerning technical constraints.
             </motion.p>
 
             <motion.button
