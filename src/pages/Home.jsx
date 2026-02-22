@@ -120,7 +120,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto w-full mt-24">
           {/* Logo Wall */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
