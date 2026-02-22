@@ -64,73 +64,60 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-32">
+      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-32 relative">
         <div className="max-w-7xl mx-auto w-full flex flex-row items-start gap-12">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-xs tracking-[0.3em] text-gray-400 mb-8">
-
-            CREATIVE DESIGNER
-          </motion.p>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
-
-            Building at the
-            <br />
-            intersection of business,
-            <br />
-            <span className="text-[#C4B5A0]">design & vision.</span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }} className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">Multi-disciplinary designer working across Product, digital experiences, and data informed decisions.. Based in New York City. Focused on creating things that matter.
-
-
-
-
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-12 max-w-lg ml-auto">
-
+          {/* Left: Text Content */}
+          <div className="flex-1">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xs tracking-[0.3em] text-gray-400 mb-8">
+              CREATIVE DESIGNER
+            </motion.p>
             
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
+              Building at the
+              <br />
+              intersection of business,
+              <br />
+              <span className="text-[#C4B5A0]">design & vision.</span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">
+              Multi-disciplinary designer working across Product, digital experiences, and data informed decisions.. Based in New York City. Focused on creating things that matter.
+            </motion.p>
 
-
-
-
-          </motion.div>
-
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            onClick={scrollToSection}
-            className="absolute bottom-12 right-12 hidden lg:flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-
-            EXPLORE <ArrowDownRight className="w-4 h-4" />
-          </motion.button>
-
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              onClick={scrollToSection}
+              className="absolute bottom-12 right-12 hidden lg:flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+              EXPLORE <ArrowDownRight className="w-4 h-4" />
+            </motion.button>
           </div>
 
-          {/* Carnation Image */}
-          <div className="hidden lg:flex flex-shrink-0 w-80 xl:w-96 items-start justify-center pt-8">
+          {/* Right: Carnation Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:flex flex-shrink-0 w-72 xl:w-96 items-start justify-center">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a2d7e9768_Carnationlinedrawing.png"
               alt="Carnation line drawing"
-              className="w-full opacity-80"
+              className="w-full opacity-75"
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="max-w-7xl mx-auto w-full">
