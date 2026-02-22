@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
+import MobileNav from "@/components/MobileNav";
 
 const galleryImages = [
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png", caption: "Microsoft — Design Systems" },

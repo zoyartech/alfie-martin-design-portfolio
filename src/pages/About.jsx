@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import MobileNav from "@/components/MobileNav";
 
 export default function About() {
   return (
