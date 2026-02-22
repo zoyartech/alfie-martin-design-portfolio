@@ -85,8 +85,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-32 relative">
-        <div className="max-w-7xl mx-auto w-full flex flex-row items-start gap-12">
+      <section className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-28 md:pt-32 relative">
+        <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left: Text Content */}
           <div className="flex-1">
             <motion.p
@@ -172,11 +172,11 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-32 px-6 lg:px-12 bg-gray-50">
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</p>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
             {
               step: "01",
@@ -217,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-32 px-6 lg:px-12 bg-white">
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-left">
           <motion.blockquote
             initial={{ opacity: 0, y: 30 }}
@@ -232,7 +232,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Preview */}
-      <section className="py-32 px-6 lg:px-12">
+      <section className="py-16 md:py-32 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -317,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-32 px-6 lg:px-12 border-t border-gray-100">
+      <section className="py-16 md:py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
           <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
