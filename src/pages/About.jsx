@@ -83,7 +83,7 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-32 px-6 lg:px-12 bg-gray-50">
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
           
@@ -133,11 +133,11 @@ export default function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-32 px-6 lg:px-12">
+      <section className="py-16 md:py-32 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">CAPABILITIES</p>
           
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
             {
               title: "Brand Strategy",
@@ -174,7 +174,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 lg:px-12 border-t border-gray-100">
+      <section className="py-16 md:py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-8">Let's work together</h2>
           <Link

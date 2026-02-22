@@ -132,7 +132,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="hidden lg:flex flex-shrink-0 w-72 xl:w-96 items-start justify-center" style={{ marginLeft: "21%" }}>
+            className="hidden lg:flex flex-shrink-0 w-72 xl:w-96 items-start justify-center lg:ml-[21%]">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/47aaf6d92_Screenshot2026-02-22at100530AM.png"
               alt="Floral figure artwork"

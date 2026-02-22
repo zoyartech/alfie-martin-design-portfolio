@@ -99,7 +99,7 @@ export default function Design() {
       {/* Projects Grid */}
       <section className="px-6 lg:px-12 pb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             {projects.map((project, i) =>
             <motion.div
               key={i}
@@ -132,11 +132,11 @@ export default function Design() {
       </section>
 
       {/* Process Section */}
-      <section className="py-32 px-6 lg:px-12 bg-gray-50">
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</p>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
             {
               step: "01",
