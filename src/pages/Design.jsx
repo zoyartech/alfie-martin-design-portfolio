@@ -8,7 +8,7 @@ import MobileNav from "@/components/MobileNav";
 export default function Design() {
   const projects = [
   {
-    title: "Lumière Cosmetics",
+    title: "The User Experience of AI Products",
     category: "Brand Identity",
     image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
     year: "2024",
