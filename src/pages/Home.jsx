@@ -361,7 +361,7 @@ export default function Home() {
             <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Dribbble</a>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>);
 
 }
