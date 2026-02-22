@@ -134,7 +134,7 @@ export default function Home() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/47aaf6d92_Screenshot2026-02-22at100530AM.png"
               alt="Floral figure artwork"
-              className="w-full opacity-75" />
+              className="w-full" />
 
           </motion.div>
         </div>
