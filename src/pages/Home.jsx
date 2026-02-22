@@ -115,8 +115,8 @@ export default function Home() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a2d7e9768_Carnationlinedrawing.png"
               alt="Carnation line drawing"
-              className="w-full opacity-75"
-            />
+              className="w-full opacity-75" />
+
           </motion.div>
         </div>
 
@@ -130,19 +130,19 @@ export default function Home() {
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">PREVIOUSLY </p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
               {[
-                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
-                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/df08903cb_Group1.png", alt: "Polaroid" },
-                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a8abeb8cd_microsoftlogo.png", alt: "Microsoft" },
-                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/6153e0dca_McKinsey_and_Company_Logo_1logo.png", alt: "McKinsey & Company" },
-                { src: null, alt: "Rockefeller Capital" },
-                { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d491508f1_Logo_of_Deloittelogo.png", alt: "Deloitte" },
-              ].map((logo, i) =>
-                <div key={i} className="flex items-center justify-center opacity-40 hover:opacity-80 transition-all duration-300">
-                  {logo.src ? (
-                    <img src={logo.src} alt={logo.alt} className="h-8 w-auto object-contain grayscale" />
-                  ) : (
-                    <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
-                  )}
+              { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
+              { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/df08903cb_Group1.png", alt: "Polaroid" },
+              { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a8abeb8cd_microsoftlogo.png", alt: "Microsoft" },
+              { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/6153e0dca_McKinsey_and_Company_Logo_1logo.png", alt: "McKinsey & Company" },
+              { src: null, alt: "Rockefeller Capital" },
+              { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d491508f1_Logo_of_Deloittelogo.png", alt: "Deloitte" }].
+              map((logo, i) =>
+              <div key={i} className="flex items-center justify-center opacity-40 hover:opacity-80 transition-all duration-300">
+                  {logo.src ?
+                <img src={logo.src} alt={logo.alt} className="h-8 w-auto object-contain grayscale" /> :
+
+                <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
+                }
                 </div>
               )}
             </div>
@@ -216,7 +216,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-12">
             <div>
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
-              <h2 className="text-3xl md:text-4xl font-light">Selected Works</h2>
+              <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
             </div>
             <Link
               to={createPageUrl("Gallery")}
