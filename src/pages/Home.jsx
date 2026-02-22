@@ -174,7 +174,12 @@ export default function Home() {
       {/* Process Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</p>
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</motion.p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
