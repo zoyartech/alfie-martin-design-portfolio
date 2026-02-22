@@ -240,10 +240,15 @@ export default function Home() {
       <section className="py-16 md:py-32 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
-            </div>
+            </motion.div>
             <Link
               to={createPageUrl("Gallery")}
               className="hidden md:flex items-center gap-2 text-sm hover:text-[#8B7355] transition-colors">
@@ -324,19 +329,30 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-16 md:py-32 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
-          <a
-            href="mailto:hello@alfiemartin.com"
-            className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300">
-
-            GET IN TOUCH <ArrowRight className="w-4 h-4" />
-          </a>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
+            <a
+              href="mailto:hello@alfiemartin.com"
+              className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300">
+              GET IN TOUCH <ArrowRight className="w-4 h-4" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 lg:px-12 border-t border-gray-100">
+      <motion.footer
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="py-8 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
