@@ -121,6 +121,19 @@ export default function Home() {
             EXPLORE <ArrowDownRight className="w-4 h-4" />
           </motion.button>
 
+          </div>
+
+          {/* Carnation Image */}
+          <div className="hidden lg:flex flex-shrink-0 w-80 xl:w-96 items-start justify-center pt-8">
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/a2d7e9768_Carnationlinedrawing.png"
+              alt="Carnation line drawing"
+              className="w-full opacity-80"
+            />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto w-full">
           {/* Logo Wall */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
