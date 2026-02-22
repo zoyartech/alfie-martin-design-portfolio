@@ -1,11 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion } from "framer-motion";
-import { ArrowDownRight, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
+
+const galleryImages = [
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png", caption: "Microsoft — Design Systems" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png", caption: "Brand Identity Work" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/abc94bcb0_263737c32d0e1e076ac84aed6761a15d.png", caption: "Visual Direction" },
+  { src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80", caption: "Product Design" },
+];
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = React.useState(null);
+
+  const openModal = (i) => setSelectedImage(i);
+  const closeModal = () => setSelectedImage(null);
+  const prev = () => setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
+  const next = () => setSelectedImage((selectedImage + 1) % galleryImages.length);
 
   const scrollToSection = () => {
     document.getElementById('domains')?.scrollIntoView({ behavior: 'smooth' });
@@ -227,31 +239,64 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-            "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png",
-            "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png",
-            "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/abc94bcb0_263737c32d0e1e076ac84aed6761a15d.png",
-            "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"].
-            map((img, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="aspect-square overflow-hidden cursor-pointer"
-              onClick={() => setSelectedImage(selectedImage === i ? null : i)}>
-
-                <motion.img
-                src={img}
-                alt={`Work ${i + 1}`}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                animate={{ scale: selectedImage === i ? 1.2 : 1 }}
-                transition={{ duration: 0.3 }} />
-
+            {galleryImages.map((item, i) =>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="aspect-square overflow-hidden cursor-pointer group relative"
+                onClick={() => openModal(i)}>
+                <img
+                  src={item.src}
+                  alt={item.caption}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-end">
+                  <p className="text-white text-xs tracking-wider px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.caption}</p>
+                </div>
               </motion.div>
             )}
           </div>
+
+          {/* Modal */}
+          <AnimatePresence>
+            {selectedImage !== null && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+                onClick={closeModal}>
+                <button onClick={closeModal} className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+                  <X className="w-6 h-6" />
+                </button>
+                <button onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-4 md:left-8 text-white hover:text-gray-300 transition-colors p-2">
+                  <ChevronLeft className="w-8 h-8" />
+                </button>
+                <motion.div
+                  key={selectedImage}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  className="max-w-4xl w-full"
+                  onClick={(e) => e.stopPropagation()}>
+                  <img
+                    src={galleryImages[selectedImage].src}
+                    alt={galleryImages[selectedImage].caption}
+                    className="w-full max-h-[75vh] object-contain" />
+                  <div className="mt-4 text-center">
+                    <p className="text-white text-sm tracking-wider">{galleryImages[selectedImage].caption}</p>
+                    <p className="text-gray-500 text-xs mt-1">{selectedImage + 1} / {galleryImages.length}</p>
+                  </div>
+                </motion.div>
+                <button onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-4 md:right-8 text-white hover:text-gray-300 transition-colors p-2">
+                  <ChevronRight className="w-8 h-8" />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <Link
             to={createPageUrl("Gallery")}
