@@ -62,7 +62,7 @@ export const blogPosts = [
     readTime: "8 min read",
     metaDescription: "A practical guide to creating flexible brand systems that maintain coherence as companies grow from startup to enterprise scale.",
     tags: ["Branding", "Design Systems", "Strategy", "Identity"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/5e93e3b2e_5.png",
     excerpt: "A brand identity that works at Series A looks completely different from one built for enterprise. Here's how to design systems that grow with your company.",
     content: [
       {
