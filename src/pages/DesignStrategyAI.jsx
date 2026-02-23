@@ -220,8 +220,8 @@ export default function DesignStrategyAI() {
             transition={{ duration: 0.7 }}
             className="aspect-[16/7] overflow-hidden bg-gray-100">
             <img
-              src="https://images.unsplash.com/photo-1679403766669-74e9ae749267?w=1600&q=80"
-              alt="Design systems for AI"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/ee3793a4d_Screenshot2026-02-22at71120PM.png"
+              alt="Six principles for chatbot design"
               className="w-full h-full object-cover" />
 
           </motion.div>
