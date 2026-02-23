@@ -138,10 +138,10 @@ export default function DesignStrategyAI() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="aspect-[4/5] overflow-hidden bg-gray-100">
-            <img
-              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
-              alt="AI Interface"
-              className="w-full h-full object-cover" />
+            
+
+
+
 
           </motion.div>
           <motion.div
