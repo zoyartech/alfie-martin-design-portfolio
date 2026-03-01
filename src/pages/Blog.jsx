@@ -65,6 +65,14 @@ export default function Blog() {
 
           {/* Tag Filter */}
           <div className="flex flex-wrap gap-3 mt-12">
+            {bookmarks.length > 0 && (
+              <button onClick={() => setActiveTag("__bookmarks__")}
+                className={`flex items-center gap-1.5 text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
+                  activeTag === "__bookmarks__" ? "border-black bg-black text-white" : "border-gray-200 hover:border-black"
+                }`}>
+                <Bookmark className="w-3 h-3" /> SAVED ({bookmarks.length})
+              </button>
+            )}
             {allTags.map(tag => (
               <button key={tag} onClick={() => setActiveTag(tag)}
                 className={`text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
