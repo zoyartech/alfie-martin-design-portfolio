@@ -137,11 +137,11 @@ export default function DesignStrategyAI() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="aspect-[4/5] overflow-hidden bg-gray-100">
+            className="overflow-hidden bg-gray-100">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/8edefd08c_Screenshot2026-02-28at85822PM.png"
               alt="AI Product Strategy Framework"
-              className="w-full h-full object-cover" />
+              className="w-full h-auto object-contain" />
 
 
           </motion.div>
