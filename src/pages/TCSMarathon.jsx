@@ -40,8 +40,8 @@ export default function TCSMarathon() {
         <img
           src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1600&q=80"
           alt="TCS NYC Marathon"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pb-16 w-full">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -58,16 +58,16 @@ export default function TCSMarathon() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: "ROLE", value: "Lead Designer, Interactive Map & Live Tracking" },
-              { label: "CLIENT", value: "TCS / NYRR" },
-              { label: "CATEGORY", value: "Product Design" },
-              { label: "YEAR", value: "2022" },
-            ].map((item, i) => (
-              <div key={i}>
+            { label: "ROLE", value: "Lead Designer, Interactive Map & Live Tracking" },
+            { label: "CLIENT", value: "TCS / NYRR" },
+            { label: "CATEGORY", value: "Product Design" },
+            { label: "YEAR", value: "2022" }].
+            map((item, i) =>
+            <div key={i}>
                 <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">{item.label}</p>
                 <p className="text-gray-800 text-sm">{item.value}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -95,8 +95,8 @@ export default function TCSMarathon() {
             <img
               src="https://static.readdy.ai/image/1004722815b8cf9b36abe71f66e1ee66/f8e620895d05cdd63c580c0e8082e500.png"
               alt="TCS NYC Marathon route planning and research"
-              className="w-full object-cover"
-            />
+              className="w-full object-cover" />
+
             <p className="text-xs text-gray-400 tracking-wider mt-3">Route planning and early research phase</p>
           </motion.div>
         </div>
@@ -111,16 +111,16 @@ export default function TCSMarathon() {
             <p className="text-gray-600 leading-relaxed text-lg mb-8">The technical constraints were brutal:</p>
             <ul className="space-y-4 mb-8">
               {[
-                "47,839 finishers generating millions of GPS pings",
-                "Spectators tracking 5–10 runners simultaneously on small mobile screens",
-                "Real-time updates needed across unreliable cellular networks",
-                "A 26.2-mile route winding through dense urban environments",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-600">
+              "47,839 finishers generating millions of GPS pings",
+              "Spectators tracking 5–10 runners simultaneously on small mobile screens",
+              "Real-time updates needed across unreliable cellular networks",
+              "A 26.2-mile route winding through dense urban environments"].
+              map((item, i) =>
+              <li key={i} className="flex items-start gap-3 text-gray-600">
                   <span className="text-black font-medium mt-0.5">—</span>
                   <span>{item}</span>
                 </li>
-              ))}
+              )}
             </ul>
             <p className="text-gray-600 leading-relaxed text-lg">
               I needed to design a map that worked when your friend was at Mile 8 in Brooklyn, your mom was approaching Mile 20 in the Bronx, and your colleague just crossed the finish—all at the same time.
@@ -136,8 +136,8 @@ export default function TCSMarathon() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/c6a6a3211_Screenshot2026-02-12at125302AM.png"
               alt="Marathon route map showing facilities and spectator locations"
-              className="w-full object-cover"
-            />
+              className="w-full object-cover" />
+
             <p className="text-xs text-gray-400 tracking-wider mt-3">Mapping runner density and spectator facilities across the 26.2-mile route</p>
           </motion.div>
         </div>
@@ -152,40 +152,40 @@ export default function TCSMarathon() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              {
-                num: "01",
-                title: "Progressive Disclosure on the Map",
-                desc: "I designed the map to intelligently zoom and pan based on your tracked runners' locations. If all your runners were clustered in Manhattan, you'd see detailed street-level context. If they were spread across boroughs, the map pulled back to show the full route with clear proximity indicators.",
-              },
-              {
-                num: "02",
-                title: "Visual Hierarchy for Multi-Runner Tracking",
-                desc: "Each runner got a distinct color-coded pin that persisted throughout the race. The map showed their current pace, estimated arrival times at upcoming mile markers, and—critically—whether you could physically reach the next viewing spot before they arrived.",
-              },
-              {
-                num: "03",
-                title: "Course Camera Integration",
-                desc: "I embedded five live camera feeds directly into the map at strategic points: the start, Mile 8 (Brooklyn), Mile 17 (Manhattan), Mile 20 (Bronx), and the finish. Tapping a camera icon showed you exactly what that section looked like in real-time.",
-              },
-              {
-                num: "04",
-                title: "The Spectator Guide Flow",
-                desc: "This became my favorite feature. The app calculated personalized viewing itineraries based on who you were tracking. The map showed transit routes, walking times, and recommended spots with subway directions overlaid directly on the race route.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-t-2 border-black pt-8"
-              >
+            {
+              num: "01",
+              title: "Progressive Disclosure on the Map",
+              desc: "I designed the map to intelligently zoom and pan based on your tracked runners' locations. If all your runners were clustered in Manhattan, you'd see detailed street-level context. If they were spread across boroughs, the map pulled back to show the full route with clear proximity indicators."
+            },
+            {
+              num: "02",
+              title: "Visual Hierarchy for Multi-Runner Tracking",
+              desc: "Each runner got a distinct color-coded pin that persisted throughout the race. The map showed their current pace, estimated arrival times at upcoming mile markers, and—critically—whether you could physically reach the next viewing spot before they arrived."
+            },
+            {
+              num: "03",
+              title: "Course Camera Integration",
+              desc: "I embedded five live camera feeds directly into the map at strategic points: the start, Mile 8 (Brooklyn), Mile 17 (Manhattan), Mile 20 (Bronx), and the finish. Tapping a camera icon showed you exactly what that section looked like in real-time."
+            },
+            {
+              num: "04",
+              title: "The Spectator Guide Flow",
+              desc: "This became my favorite feature. The app calculated personalized viewing itineraries based on who you were tracking. The map showed transit routes, walking times, and recommended spots with subway directions overlaid directly on the race route."
+            }].
+            map((item, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="border-t-2 border-black pt-8">
+
                 <span className="text-xs text-gray-400 tracking-wider">{item.num}</span>
                 <h3 className="text-xl font-medium mt-4 mb-4">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -197,15 +197,15 @@ export default function TCSMarathon() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/4f4e31cba_Screenshot2026-02-12at120603AM.png"
               alt="Download the Official App of New York Road Runners"
-              className="w-full object-cover"
-            />
+              className="w-full object-cover" />
+
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="flex flex-col justify-center">
             <img
               src="https://static.readdy.ai/image/1004722815b8cf9b36abe71f66e1ee66/775fcd632a1536f806f8597bb6627a8f.png"
               alt="TCS Marathon Map Visualization"
-              className="w-full object-cover"
-            />
+              className="w-full object-cover" />
+
             <p className="text-xs text-gray-400 tracking-wider mt-3">Final map visualization with multi-runner tracking</p>
           </motion.div>
         </div>
@@ -221,8 +221,8 @@ export default function TCSMarathon() {
             transition={{ duration: 0.6 }}
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/29f280118_shadow-overlay-isometric-two-iphone-12-pro-pacific-blue-mockup-template-698e041a51576f15de4f37b3-2x.png"
             alt="TCS Marathon App on iPhone devices"
-            className="w-full max-w-2xl mx-auto"
-          />
+            className="w-full max-w-2xl mx-auto" />
+
         </div>
       </section>
 
@@ -233,23 +233,23 @@ export default function TCSMarathon() {
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-10">THE 2022 LAUNCH RESULTS</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { stat: "4.2M", label: "App Downloads across 150+ countries" },
-                { stat: "1,940,777", label: "Runner Tracking Instances on race day" },
-                { stat: "16", label: "Average Tracks per Finisher" },
-                { stat: "324,668", label: "Course Camera Views" },
-              ].map((r, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="border-t-2 border-black pt-6"
-                >
+              { stat: "4.2M", label: "App Downloads across 150+ countries" },
+              { stat: "1,940,777", label: "Runner Tracking Instances on race day" },
+              { stat: "16", label: "Average Tracks per Finisher" },
+              { stat: "324,668", label: "Course Camera Views" }].
+              map((r, i) =>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="border-t-2 border-black pt-6">
+
                   <p className="text-4xl font-light mb-2">{r.stat}</p>
                   <p className="text-gray-500 text-sm leading-relaxed">{r.label}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </motion.div>
         </div>
@@ -263,8 +263,8 @@ export default function TCSMarathon() {
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/f12fda9cd_Screenshot2026-02-12at121328AM.png"
               alt="The Webby Awards"
-              className="mx-auto max-w-xs"
-            />
+              className="mx-auto max-w-xs" />
+
             <p className="text-gray-500 mt-4 text-sm">People's Choice Winner of a Webby</p>
           </motion.div>
         </div>
@@ -275,12 +275,12 @@ export default function TCSMarathon() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Instagram</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">LinkedIn</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Dribbble</a>
+            
+            
+            
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
