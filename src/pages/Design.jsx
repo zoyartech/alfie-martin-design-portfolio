@@ -4,6 +4,7 @@ import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import MobileNav from "@/components/MobileNav";
+import CaseStudiesSection from "@/components/caseStudies/CaseStudiesSection";
 
 export default function Design() {
   const projects = [
