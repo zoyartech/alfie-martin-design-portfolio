@@ -157,6 +157,37 @@ export default function TCSMarathon() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            {videoUrl ? (
+              <video controls className="w-full rounded-sm shadow-lg">
+                <source src={videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <div
+                onClick={() => fileInputRef.current.click()}
+                className="border-2 border-dashed border-gray-300 rounded-sm flex flex-col items-center justify-center py-20 cursor-pointer hover:border-gray-500 transition-colors"
+              >
+                <Upload className="w-8 h-8 text-gray-400 mb-4" />
+                <p className="text-sm text-gray-500 tracking-wider">
+                  {uploading ? "Uploading..." : "Click to upload video"}
+                </p>
+              </div>
+            )}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="video/*"
+              className="hidden"
+              onChange={handleVideoUpload}
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Design Solutions */}
       <section className="py-20 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
