@@ -22,7 +22,7 @@ export const caseStudies = [
   },
   {
     id: "microsoft-design-systems",
-    title: "AI Design System at Scale",
+    title: "Fluent Design System in E-Commerce",
     description: "Built a scalable AI interaction pattern library for Microsoft product teams — enabling consistent, trustworthy AI experiences across 12+ product surfaces.",
     client: "Microsoft",
     category: "Design Systems",
