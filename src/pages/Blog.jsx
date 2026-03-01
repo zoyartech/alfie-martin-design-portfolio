@@ -4,6 +4,7 @@ import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { blogPosts } from "../components/blog/blogData";
+import AIBlogAssistant from "../components/blog/AIBlogAssistant";
 
 export default function Blog() {
   const [activeTag, setActiveTag] = useState("All");
