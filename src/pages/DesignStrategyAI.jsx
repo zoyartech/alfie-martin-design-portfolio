@@ -310,9 +310,9 @@ export default function DesignStrategyAI() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Instagram</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">LinkedIn</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Dribbble</a>
+            
+            
+            
           </div>
         </div>
       </footer>
