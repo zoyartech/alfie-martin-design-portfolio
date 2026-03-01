@@ -4,6 +4,9 @@ import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { blogPosts } from "../components/blog/blogData";
+import BookmarkButton from "../components/blog/BookmarkButton";
+import ShareButtons from "../components/blog/ShareButtons";
+import CommentsSection from "../components/blog/CommentsSection";
 
 export default function BlogPost() {
   const params = new URLSearchParams(window.location.search);
