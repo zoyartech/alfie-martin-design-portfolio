@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { caseStudies } from "@/components/caseStudies/caseStudiesData";
 import MobileNav from "@/components/MobileNav";
 
