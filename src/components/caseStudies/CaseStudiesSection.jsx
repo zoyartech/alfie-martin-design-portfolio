@@ -30,7 +30,7 @@ export default function CaseStudiesSection() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <Link
-                to={createPageUrl(`CaseStudyDetail?id=${study.id}`)}
+                to={study.externalPage ? createPageUrl(study.externalPage) : createPageUrl(`CaseStudyDetail?id=${study.id}`)}
                 className="group flex flex-col md:flex-row items-start gap-8 py-12 border-t border-gray-100 hover:bg-gray-50 transition-colors duration-300 -mx-6 lg:-mx-12 px-6 lg:px-12"
               >
                 {/* Client Logo */}
