@@ -211,6 +211,24 @@ export default function DesignStrategyAI() {
         </div>
       </section>
 
+      {/* Six Principles Text */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}>
+            <h2 className="text-3xl md:text-4xl font-light mb-4">
+              Six principles to follow in the design of chatbots
+            </h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl">
+              Rather than applying generic chatbot patterns, the team developed a bespoke conversational design framework grounded in cooperative dialogue theory and AI transparency research.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Full Width Image */}
       <section className="py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
