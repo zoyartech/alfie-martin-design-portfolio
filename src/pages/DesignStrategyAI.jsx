@@ -229,6 +229,22 @@ export default function DesignStrategyAI() {
         </div>
       </section>
 
+      {/* Six Principles Cards Image */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}>
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/f23496118_Screenshot2026-02-28at104801PM.png"
+              alt="Six principles for chatbot design"
+              className="w-full h-auto object-contain" />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Full Width Image */}
       <section className="py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
