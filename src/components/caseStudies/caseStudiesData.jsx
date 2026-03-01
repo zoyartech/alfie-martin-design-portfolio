@@ -19,7 +19,8 @@ export const caseStudies = [
       { stat: "1.9M", label: "Runner Tracking Instances on race day" },
       { stat: "16", label: "Average Tracks per Finisher" },
       { stat: "★", label: "Webby Award People's Choice Winner" },
-    ]
+    ],
+    galleryImages: []
   },
   {
     id: "grammarly-ai-ux",
