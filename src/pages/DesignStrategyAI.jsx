@@ -219,11 +219,11 @@ export default function DesignStrategyAI() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="aspect-[16/7] overflow-hidden bg-gray-100">
+            className="overflow-hidden bg-gray-100">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c5fa5897d_Screenshot2026-02-28at94344PM.png"
               alt="Six principles for chatbot design"
-              className="w-full h-full object-cover" />
+              className="w-full h-auto object-contain" />
 
           </motion.div>
         </div>
