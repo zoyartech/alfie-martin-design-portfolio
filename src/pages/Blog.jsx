@@ -14,7 +14,9 @@ export default function Blog() {
 
   const allTags = ["All", ...new Set(blogPosts.flatMap(p => p.tags))];
 
-  const filtered = activeTag === "All"
+  const filtered = activeTag === "__bookmarks__"
+    ? blogPosts.filter(p => bookmarks.includes(p.id))
+    : activeTag === "All"
     ? blogPosts
     : blogPosts.filter(p => p.tags.includes(activeTag));
 
