@@ -8,6 +8,9 @@ import AIBlogAssistant from "../components/blog/AIBlogAssistant";
 
 export default function Blog() {
   const [activeTag, setActiveTag] = useState("All");
+  const [bookmarks, setBookmarks] = useState(() =>
+    JSON.parse(localStorage.getItem("bookmarked_posts") || "[]")
+  );
 
   const allTags = ["All", ...new Set(blogPosts.flatMap(p => p.tags))];
 
