@@ -74,6 +74,13 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* AI Assistant */}
+      <section className="px-6 lg:px-12 pb-4">
+        <div className="max-w-7xl mx-auto">
+          <AIBlogAssistant />
+        </div>
+      </section>
+
       {/* Posts Grid */}
       <section className="px-6 lg:px-12 pb-32">
         <div className="max-w-7xl mx-auto">
