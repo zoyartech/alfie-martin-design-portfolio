@@ -7,6 +7,19 @@ import MobileNav from "@/components/MobileNav";
 import { base44 } from "@/api/base44Client";
 
 export default function TCSMarathon() {
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef(null);
+
+  const handleVideoUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setUploading(true);
+    const { file_url } = await base44.integrations.Core.UploadFile({ file });
+    setVideoUrl(file_url);
+    setUploading(false);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
