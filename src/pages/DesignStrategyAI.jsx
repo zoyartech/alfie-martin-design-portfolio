@@ -221,7 +221,7 @@ export default function DesignStrategyAI() {
             transition={{ duration: 0.7 }}
             className="overflow-hidden bg-gray-100">
             <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c5fa5897d_Screenshot2026-02-28at94344PM.png"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9151f9545_Screenshot2026-02-28at94344PM.png"
               alt="Six principles for chatbot design"
               className="w-full h-auto object-contain" />
 
