@@ -5,7 +5,7 @@ export const caseStudies = [
     description: "Led the interactive map and live tracking system for the TCS NYC Marathon app — helping 500,000 spectators track loved ones across 26.2 miles, five boroughs, and six hours of racing.",
     client: "TCS / NYRR",
     category: "Product Design",
-    year: "2022",
+    year: "2023",
     logo: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/f12fda9cd_Screenshot2026-02-12at121328AM.png",
     heroImage: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80",
     tags: ["Product Design", "Interactive Map", "Mobile"],
