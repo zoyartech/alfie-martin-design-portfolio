@@ -132,6 +132,8 @@ export default function Design() {
         </div>
       </section>
 
+      <CaseStudiesSection />
+
       {/* Process Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
