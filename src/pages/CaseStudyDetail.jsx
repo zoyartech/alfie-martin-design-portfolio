@@ -101,6 +101,64 @@ export default function CaseStudyDetail() {
         </div>
       </section>
 
+      {/* Image Gallery */}
+      {galleryImages.length > 0 && (
+        <section className="px-6 lg:px-12 pb-16">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">GALLERY</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {galleryImages.map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  className="overflow-hidden cursor-pointer group aspect-square bg-gray-100"
+                  onClick={() => setLightboxIndex(i)}
+                >
+                  <img src={img} alt={`Gallery image ${i + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setLightboxIndex(null)}
+          >
+            <button onClick={() => setLightboxIndex(null)} className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+              <X className="w-6 h-6" />
+            </button>
+            <button onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length); }} className="absolute left-4 md:left-8 text-white hover:text-gray-300 p-2">
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+            <motion.img
+              key={lightboxIndex}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              src={galleryImages[lightboxIndex]}
+              alt={`Gallery image ${lightboxIndex + 1}`}
+              className="max-w-4xl w-full max-h-[80vh] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex + 1) % galleryImages.length); }} className="absolute right-4 md:right-8 text-white hover:text-gray-300 p-2">
+              <ChevronRight className="w-8 h-8" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Overview */}
       <section className="py-16 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-4xl mx-auto">
