@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Bookmark } from "lucide-react";
 import { blogPosts } from "../components/blog/blogData";
 import AIBlogAssistant from "../components/blog/AIBlogAssistant";
 
