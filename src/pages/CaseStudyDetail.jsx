@@ -10,6 +10,8 @@ export default function CaseStudyDetail() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
   const study = caseStudies.find((s) => s.id === id);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const galleryImages = study?.galleryImages || [];
 
   if (!study) {
     return (
