@@ -112,6 +112,15 @@ export default function BlogPost() {
               ))}
             </div>
           </div>
+
+          {/* Actions: Bookmark + Share */}
+          <div className="mt-10 pt-8 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
+            <BookmarkButton postId={post.id} postTitle={post.title} />
+            <ShareButtons title={post.title} />
+          </div>
+
+          {/* Comments */}
+          <CommentsSection postId={post.id} />
         </div>
       </section>
 
