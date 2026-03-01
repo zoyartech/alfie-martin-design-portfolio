@@ -81,14 +81,6 @@ export default function Blog() {
                 {tag.toUpperCase()}
               </button>
             ))}
-            {allTags.map(tag => (
-              <button key={tag} onClick={() => setActiveTag(tag)}
-                className={`text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
-                  activeTag === tag ? "border-black bg-black text-white" : "border-gray-200 hover:border-black"
-                }`}>
-                {tag.toUpperCase()}
-              </button>
-            ))}
           </div>
         </div>
       </section>
