@@ -255,35 +255,6 @@ export default function TCSMarathon() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6 lg:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">WHAT SPECTATORS ARE SAYING</p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { quote: "This app completely transformed our marathon experience. We tracked three family members and never missed them once. The estimated arrival times were spot-on!", name: "Sarah Chen", title: "Marathon Spectator, 2023" },
-              { quote: "As someone who's spectated the NYC Marathon for 10 years, this was the first time I felt like I had a real plan. The subway directions were a lifesaver.", name: "Michael Rodriguez", title: "Annual Spectator" },
-              { quote: "The live camera feeds helped me know exactly when to get to each viewing spot. I saw my wife at three different locations thanks to this app.", name: "David Kim", title: "First-Time Spectator" },
-            ].map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border-t border-gray-300 pt-8"
-              >
-                <p className="text-gray-700 leading-relaxed mb-6 text-sm">"{t.quote}"</p>
-                <p className="font-medium text-sm">{t.name}</p>
-                <p className="text-gray-400 text-xs tracking-wider">{t.title}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Webby Recognition */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto text-center">
