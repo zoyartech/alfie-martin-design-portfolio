@@ -27,7 +27,7 @@ export const caseStudies = [
     description: "Transformed how Grammarly surfaces AI-powered suggestions — increasing user trust and feature adoption through clearer explainability patterns and a cohesive visual system.",
     client: "Grammarly",
     category: "UX Content Strategy",
-    year: "2022",
+    year: "2023",
     logo: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png",
     heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
     tags: ["AI Design", "UX Strategy", "Design Systems"],
