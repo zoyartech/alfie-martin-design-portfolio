@@ -67,9 +67,9 @@ export default function Design() {
               <Link to={createPageUrl("Design")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 DESIGN
               </Link>
-              <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                VISUALS
-              </Link>
+              
+
+
               <Link to={createPageUrl("Contact")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 CONTACT
               </Link>
@@ -98,39 +98,39 @@ export default function Design() {
       </section>
 
       {/* Projects Grid */}
-      <section className="px-6 lg:px-12 pb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-            {projects.map((project, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group cursor-pointer"
-              onClick={() => project.link && (window.location.href = createPageUrl(project.link))}>
+      
 
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100 mb-6">
-                  <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
 
-                </div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs tracking-[0.2em] text-gray-400">{project.category}</span>
-                  <span className="text-xs text-gray-400">{project.year}</span>
-                </div>
-                <h3 className="text-2xl font-light group-hover:text-[#8B7355] transition-colors flex items-center gap-2">
-                  {project.title}
-                  <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </h3>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <CaseStudiesSection />
 
