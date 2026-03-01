@@ -51,6 +51,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import CaseStudies from './pages/CaseStudies';
+import CaseStudyDetail from './pages/CaseStudyDetail';
 import Contact from './pages/Contact';
 import Design from './pages/Design';
 import DesignMarathon from './pages/DesignMarathon';
@@ -59,7 +60,7 @@ import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
-import CaseStudyDetail from './pages/CaseStudyDetail';
+import TCSMarathon from './pages/TCSMarathon';
 
 
 export const PAGES = {
@@ -67,6 +68,7 @@ export const PAGES = {
     "Blog": Blog,
     "BlogPost": BlogPost,
     "CaseStudies": CaseStudies,
+    "CaseStudyDetail": CaseStudyDetail,
     "Contact": Contact,
     "Design": Design,
     "DesignMarathon": DesignMarathon,
@@ -75,7 +77,7 @@ export const PAGES = {
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
     "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
-    "CaseStudyDetail": CaseStudyDetail,
+    "TCSMarathon": TCSMarathon,
 }
 
 export const pagesConfig = {

@@ -1,5 +1,27 @@
 export const caseStudies = [
   {
+    id: "tcs-marathon",
+    title: "TCS : NYC Marathon : Product Design",
+    description: "Led the interactive map and live tracking system for the TCS NYC Marathon app — helping 500,000 spectators track loved ones across 26.2 miles, five boroughs, and six hours of racing.",
+    client: "TCS / NYRR",
+    category: "Product Design",
+    year: "2022",
+    logo: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e5adb6017e5371f08300f/f12fda9cd_Screenshot2026-02-12at121328AM.png",
+    heroImage: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80",
+    tags: ["Product Design", "Interactive Map", "Mobile"],
+    externalPage: "TCSMarathon",
+    overview: "Designed the interactive map and live tracking system that transformed how 500,000 spectators experience the NYC Marathon.",
+    problem: "Traditional marathon tracking relied on scattered timing mats and static checkpoints. Families missed their runners and the experience felt fragmented.",
+    approach: "Focused on intelligent map zoom, multi-runner color coding, live camera feeds, and personalized spectator itineraries.",
+    solution: "A real-time map with progressive disclosure, multi-runner tracking, course camera integration, and a smart Spectator Guide flow.",
+    results: [
+      { stat: "4.2M", label: "App Downloads across 150+ countries" },
+      { stat: "1.9M", label: "Runner Tracking Instances on race day" },
+      { stat: "16", label: "Average Tracks per Finisher" },
+      { stat: "★", label: "Webby Award People's Choice Winner" },
+    ]
+  },
+  {
     id: "grammarly-ai-ux",
     title: "Redesigning AI Writing Feedback",
     description: "Transformed how Grammarly surfaces AI-powered suggestions — increasing user trust and feature adoption through clearer explainability patterns and a cohesive visual system.",
