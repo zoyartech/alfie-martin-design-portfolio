@@ -8,45 +8,6 @@ import DesignTestimonials from "@/components/design/DesignTestimonials";
 import ConsultationForm from "@/components/design/ConsultationForm";
 
 export default function Design() {
-  const projects = [
-  {
-    title: "The User Experience of AI Products",
-    category: "Brand Identity",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80",
-    year: "2024",
-    link: "DesignStrategyAI"
-  },
-  {
-    title: "Haven Wellness",
-    category: "UI/UX Design",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80",
-    year: "2023"
-  },
-  {
-    title: "Artisan Collective",
-    category: "E-commerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
-    year: "2023"
-  },
-  {
-    title: "Urban Spaces",
-    category: "Brand Identity",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
-    year: "2023"
-  },
-  {
-    title: "Minimal Studio",
-    category: "Web Design",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-    year: "2022"
-  },
-  {
-    title: "TypeForm",
-    category: "Product Design",
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80",
-    year: "2022",
-    link: "WorkflowOptimizationHVAC"
-  }];
 
 
   return (
