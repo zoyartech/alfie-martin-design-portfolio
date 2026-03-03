@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import MobileNav from "@/components/MobileNav";
-import CaseStudiesSection from "@/components/caseStudies/CaseStudiesSection";
+import FilterableGallery from "@/components/design/FilterableGallery";
+import DesignTestimonials from "@/components/design/DesignTestimonials";
+import ConsultationForm from "@/components/design/ConsultationForm";
 
 export default function Design() {
   const projects = [
