@@ -4,7 +4,18 @@ import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 
+const carouselImages = [
+  { src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80", caption: "AI Interface Design" },
+  { src: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80", caption: "Design Systems" },
+  { src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80", caption: "Human-AI Interaction" },
+  { src: "https://images.unsplash.com/photo-1676277791608-ac54525aa94d?w=1200&q=80", caption: "Product Strategy" },
+];
+
 export default function DesignStrategyAI() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const prev = () => setActiveIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length);
+  const next = () => setActiveIndex((i) => (i + 1) % carouselImages.length);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
