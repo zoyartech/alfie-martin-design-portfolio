@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselImages = [
-  { src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80", caption: "AI Interface Design" },
-  { src: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80", caption: "Design Systems" },
-  { src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80", caption: "Human-AI Interaction" },
-  { src: "https://images.unsplash.com/photo-1676277791608-ac54525aa94d?w=1200&q=80", caption: "Product Strategy" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" },
 ];
 
 export default function DesignStrategyAI() {
