@@ -59,8 +59,8 @@ import DesignStrategyAI from './pages/DesignStrategyAI';
 import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
-import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
 import TCSMarathon from './pages/TCSMarathon';
+import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
 
 
 export const PAGES = {
@@ -76,8 +76,8 @@ export const PAGES = {
     "Gallery": Gallery,
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
-    "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
     "TCSMarathon": TCSMarathon,
+    "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
 }
 
 export const pagesConfig = {
