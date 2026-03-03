@@ -191,7 +191,7 @@ export default function DesignStrategyAI() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full h-[60vh] object-cover"
+              className="w-full h-auto object-contain"
             />
             <div className="absolute inset-0 flex items-center justify-between px-4">
               <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all">
