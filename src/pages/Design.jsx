@@ -133,7 +133,11 @@ export default function Design() {
 
 
 
-      <CaseStudiesSection />
+      <FilterableGallery />
+
+      <DesignTestimonials />
+
+      <ConsultationForm />
 
       {/* Process Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
