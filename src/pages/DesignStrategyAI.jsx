@@ -178,6 +178,42 @@ export default function DesignStrategyAI() {
         </div>
       </section>
 
+      {/* Image Carousel */}
+      <section className="py-16 px-6 lg:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">VISUAL WORK</p>
+          <div className="relative overflow-hidden bg-gray-100">
+            <motion.img
+              key={activeIndex}
+              src={carouselImages[activeIndex].src}
+              alt={carouselImages[activeIndex].caption}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-full h-[60vh] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-between px-4">
+              <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all">
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button onClick={next} className="bg-white/80 hover:bg-white p-2 transition-all">
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+              {carouselImages.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveIndex(i)}
+                  className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`}
+                />
+              ))}
+            </div>
+          </div>
+          <p className="text-sm text-gray-400 mt-4 tracking-wide">{carouselImages[activeIndex].caption}</p>
+        </div>
+      </section>
+
       {/* Pillars */}
       <section className="py-16 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
