@@ -354,6 +354,27 @@ Rather than applying generic chatbot patterns, the team developed a bespoke conv
         </div>
       </section>
 
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightbox(false)}
+        >
+          <button
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+            onClick={() => setLightbox(false)}
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={carouselImages[activeIndex].src}
+            alt={carouselImages[activeIndex].caption}
+            className="max-w-[90vw] max-h-[85vh] object-contain"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
