@@ -181,7 +181,7 @@ Rather than applying generic chatbot patterns, the team developed a bespoke conv
 
       {/* Image Carousel */}
       <section className="py-16 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">VISUAL WORK</p>
           <div className="relative overflow-hidden bg-gray-100">
             <motion.img
