@@ -236,10 +236,10 @@ export default function Gallery() {
             className="max-w-5xl w-full"
             onClick={(e) => e.stopPropagation()}>
 
-              <img
-              src={selectedImage.image}
-              alt={selectedImage.title}
-              className="w-full max-h-[75vh] object-contain" />
+              
+
+
+
 
               <div className="mt-6 text-white">
                 <div className="flex items-center gap-4">
