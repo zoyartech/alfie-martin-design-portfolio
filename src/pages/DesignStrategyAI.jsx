@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselImages = [
-  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
-  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
-  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
-  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
-  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" },
-];
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" }];
+
 
 export default function DesignStrategyAI() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -132,10 +132,10 @@ export default function DesignStrategyAI() {
               and experiences that feel cold or mechanical. The technology is extraordinary — 
               but without thoughtful design and clear strategy, it fails to connect with the humans it's meant to serve.
             </p>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              This body of work explores how design strategy can shape AI systems that feel 
-              intuitive, transparent, and genuinely valuable — from visual identity through 
-              to interaction patterns and communication frameworks.
+            <p className="text-gray-600 leading-relaxed text-lg">This body of work explores how design strategy can shape AI systems that feel intuitive, transparent, and genuinely valuable — from visual identity through to interaction patterns and communication frameworks.
+Six principles to follow in the design of chatbots
+Rather than applying generic chatbot patterns, the team developed a bespoke conversational design framework grounded in cooperative dialogue theory and AI transparency research.
+
             </p>
           </motion.div>
         </div>
@@ -191,8 +191,8 @@ export default function DesignStrategyAI() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full h-auto object-contain"
-            />
+              className="w-full h-auto object-contain" />
+
             <div className="absolute inset-0 flex items-center justify-between px-4">
               <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all">
                 <ChevronLeft className="w-6 h-6" />
@@ -202,13 +202,13 @@ export default function DesignStrategyAI() {
               </button>
             </div>
             <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-              {carouselImages.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`}
-                />
-              ))}
+              {carouselImages.map((_, i) =>
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`} />
+
+              )}
             </div>
           </div>
           <p className="text-sm text-gray-400 mt-4 tracking-wide">{carouselImages[activeIndex].caption}</p>
@@ -260,38 +260,38 @@ export default function DesignStrategyAI() {
       </section>
 
       {/* Six Principles Text */}
-      <section className="py-16 px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-4">
-              Six principles to follow in the design of chatbots
-            </h2>
-            <p className="text-gray-600 leading-relaxed max-w-2xl">
-              Rather than applying generic chatbot patterns, the team developed a bespoke conversational design framework grounded in cooperative dialogue theory and AI transparency research.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Six Principles Cards Image */}
-      <section className="py-16 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}>
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/f23496118_Screenshot2026-02-28at104801PM.png"
-              alt="Six principles for chatbot design"
-              className="w-full h-auto object-contain" />
-          </motion.div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Full Width Image */}
       <section className="py-16 px-6 lg:px-12">
