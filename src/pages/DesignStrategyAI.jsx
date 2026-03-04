@@ -184,7 +184,7 @@ Rather than applying generic chatbot patterns, the team developed a bespoke conv
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-2xl mx-auto">
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">VISUAL WORK</p>
-          <div className="relative overflow-hidden bg-gray-100">
+          <div className="relative overflow-hidden bg-gray-100 cursor-zoom-in" onClick={() => setLightbox(true)}>
             <motion.img
               key={activeIndex}
               src={carouselImages[activeIndex].src}
@@ -194,7 +194,7 @@ Rather than applying generic chatbot patterns, the team developed a bespoke conv
               transition={{ duration: 0.4 }}
               className="w-full h-auto object-contain" />
 
-            <div className="absolute inset-0 flex items-center justify-between px-4">
+            <div className="absolute inset-0 flex items-center justify-between px-4" onClick={e => e.stopPropagation()}>
               <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all">
                 <ChevronLeft className="w-6 h-6" />
               </button>
