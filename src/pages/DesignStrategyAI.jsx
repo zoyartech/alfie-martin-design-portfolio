@@ -14,6 +14,7 @@ const carouselImages = [
 
 export default function DesignStrategyAI() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
   const prev = () => setActiveIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length);
   const next = () => setActiveIndex((i) => (i + 1) % carouselImages.length);
 
