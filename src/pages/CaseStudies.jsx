@@ -281,7 +281,7 @@ function AIDesignContent() {
       <section className="py-16 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           <div className="overflow-hidden bg-gray-100">
-            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/8edefd08c_Screenshot2026-02-28at85822PM.png" alt="AI Product Strategy Framework" className="w-full h-auto object-contain" />
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/148d699aa_IM.png" alt="AI Product Strategy Framework" className="w-full h-auto object-contain" />
           </div>
           <div className="flex flex-col justify-center pl-0 md:pl-8">
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">APPROACH</p>
