@@ -148,7 +148,7 @@ export default function FilterableGallery() {
   );
 }
 
-function ProjectCard({ project, onQuickView }) {
+function ProjectCard({ project }) {
   return (
     <div className="cursor-pointer">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100 relative">
