@@ -10,9 +10,7 @@ export default function MobileNav({ activePage = "" }) {
   const links = [
     { label: "HOME", page: "Home" },
     { label: "ABOUT", page: "About" },
-    { label: "DESIGN", page: "Design" },
-    { label: "AI DESIGN", page: "DesignStrategyAI" },
-    { label: "VISUALS", page: "Gallery" },
+    { label: "CASE STUDIES", page: "CaseStudies" },
     { label: "CONTACT", page: "Contact" },
   ];
 
