@@ -136,7 +136,7 @@ export default function FilterableGallery() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="group"
               >
-                <ProjectCard project={project} onQuickView={() => setQuickView(project)} />
+                <ProjectCard project={project} />
               </motion.div>
             ))}
           </AnimatePresence>
