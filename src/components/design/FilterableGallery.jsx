@@ -98,7 +98,6 @@ const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design
 
 export default function FilterableGallery() {
   const [active, setActive] = useState("All");
-  const [quickView, setQuickView] = useState(null);
 
   const filtered = active === "All" ? projects : projects.filter(p => p.category === active);
 
