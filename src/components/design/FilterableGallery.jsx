@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, X, Eye } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 
 const projects = [
   {
