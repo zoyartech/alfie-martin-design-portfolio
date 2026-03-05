@@ -52,24 +52,10 @@ export default function Home() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link
-                to={createPageUrl("Design")}
+                to={createPageUrl("CaseStudies")}
                 className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
 
-                DESIGN
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link
-                to={createPageUrl("DesignStrategyAI")}
-                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
-
-                AI DESIGN
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link
-                to={createPageUrl("Gallery")}
-                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
-
-                VISUALS
+                CASE STUDIES
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link
