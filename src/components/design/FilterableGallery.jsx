@@ -245,15 +245,9 @@ function ProjectCard({ project, onQuickView }) {
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-        {/* Hover buttons */}
-        <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-          <button
-            onClick={e => { e.preventDefault(); e.stopPropagation(); onQuickView(); }}
-            className="flex items-center gap-1.5 text-xs tracking-[0.15em] bg-white text-black px-4 py-2 hover:bg-gray-100 transition-colors"
-          >
-            <Eye className="w-3.5 h-3.5" /> QUICK VIEW
-          </button>
-          {project.link && (
+        {/* Hover button */}
+        {project.link && (
+          <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
             <Link
               to={createPageUrl(project.link)}
               className="flex items-center gap-1.5 text-xs tracking-[0.15em] bg-black text-white px-4 py-2 hover:bg-gray-800 transition-colors"
@@ -261,8 +255,8 @@ function ProjectCard({ project, onQuickView }) {
             >
               <ArrowUpRight className="w-3.5 h-3.5" /> OPEN
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <div className="pt-4">
         <div className="flex items-center justify-between mb-1">
