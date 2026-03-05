@@ -1,316 +1,196 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
+import MobileNav from "@/components/MobileNav";
+import FilterableGallery from "@/components/design/FilterableGallery";
+import DesignTestimonials from "@/components/design/DesignTestimonials";
+import ConsultationForm from "@/components/design/ConsultationForm";
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "Breakthrough 6 ^",
-    subtitle: "Consumer Products",
-    category: "Branding & Identity",
-    year: "2021",
-    heroImage: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/b6e509280_Screenshot2026-02-01at114552AM.png",
-    overview: "Polaroid is an analog photography brand that manufactures instant cameras, film, and printers. The company focuses on capturing the 'beautifully imperfect' moments of real life through physical media, blending its historic legacy with modern technology and creative collaborations to encourage tangible connections in a digital world.",
-    problem: "Polaroid returned to the market with new challenges and a brand identity that was positioned to \"everyone\" and as famous marketer Seth Godin states \" When marketing to everyone you market to no one \"",
-    approach: "Polaroid had a few problems. Fujifilm had dominated the instant film market. With cheaper, and easier to use film cameras. Polaroid was ignoring the market segment that made them an iconic brand to begin with artists, and early adopters. We decided to partner with artists foundations like the Keith Herring foundation and fashion houses to offer new styles in the camera and in the film itself",
-    solution: "The final brand identity featured a custom wordmark with refined serif typography, a color palette of warm neutrals and soft earth tones, and a photographic style emphasizing natural light and raw textures. The packaging design utilized recyclable materials with elegant, minimal graphics. I created comprehensive brand guidelines covering all touchpoints from product packaging to digital presence.",
-    results: "The rebrand led to a 145% increase in social media engagement within the first three months. Lumière successfully launched in 12 premium retailers and saw a 200% increase in direct-to-consumer sales. The brand was featured in Vogue, Allure, and received a Dieline Award for packaging design.",
-    images: [
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c52538eee_8coIXEDOe9k5b4ncO-lOMB.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/bd28a88a7_8CX5CUVGD0dcn344Lk34Sd.png",
-      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2069f67e8_8pgwNnHO-I9ddNTGKDK4YH.png"
-    ],
-    tags: ["Brand Strategy", "Visual Identity", "Packaging Design", "Art Direction"]
-  },
-  {
-    id: 2,
-    title: "Breakthrough 6",
-    subtitle: "Wellness App Experience",
-    category: "UI/UX Design",
-    year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80",
-    overview: "Haven is a mental wellness app designed to help users manage stress and anxiety through guided meditation, mood tracking, and personalized wellness plans. I was brought in to redesign the entire user experience and create a calming, intuitive interface.",
-    problem: "The existing app had poor user retention rates and received feedback that it felt clinical and overwhelming. Users found it difficult to navigate and the visual design was contributing to stress rather than alleviating it. The meditation features were buried in complex menus.",
-    approach: "I started with user research, conducting interviews with 25 current and former users to understand pain points. Through user journey mapping and usability testing, I identified key areas for improvement. The design philosophy centered on creating a serene, breathing space within the digital realm.",
-    solution: "I redesigned the entire app with a focus on simplicity and calm. The new interface featured a gentle color palette of soft blues and warm whites, generous white space, and smooth micro-interactions. The home screen was reimagined as a personalized wellness hub with quick access to daily practices. I introduced a daily check-in flow that felt like a conversation rather than a survey.",
-    results: "Post-launch metrics showed a 180% increase in daily active users and user session time increased by 240%. App Store ratings improved from 3.2 to 4.8 stars. The redesign contributed to Haven securing $5M in Series A funding and the app was featured as 'App of the Day' on both iOS and Android platforms.",
-    images: [
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-    ],
-    tags: ["UX Research", "UI Design", "Mobile App", "User Testing"]
-  },
-  {
-    id: 3,
-    title: "Artisan Collective",
-    subtitle: "E-commerce Platform Redesign",
-    category: "Digital Experience",
-    year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80",
-    overview: "Artisan Collective is an online marketplace connecting independent makers with conscious consumers. They needed a complete platform redesign to better showcase their artisans' stories and streamline the shopping experience.",
-    problem: "The existing platform had a 65% cart abandonment rate and low conversion rates. The checkout process was confusing, product discovery was difficult, and the site didn't effectively communicate the unique stories behind each artisan and their work.",
-    approach: "Through analytics review and user testing sessions, I identified friction points throughout the customer journey. I developed a content strategy that put artisan stories at the forefront while simplifying the path to purchase. The design system was built to scale with the growing marketplace.",
-    solution: "The redesigned platform featured immersive artisan profile pages with rich storytelling, an intuitive product filtering system, and a streamlined three-step checkout. I introduced a 'Meet the Maker' video series integration and implemented a wishlist and gift registry feature. The visual design celebrated craftsmanship through high-quality photography and careful typography.",
-    results: "Cart abandonment dropped to 32%, and conversion rates increased by 156%. Average order value grew by 45% due to improved product discovery. The platform won a Webby Award for Best Shopping Website and monthly revenue increased by 220% within six months of launch.",
-    images: [
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=80",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80",
-      "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=800&q=80"
-    ],
-    tags: ["Web Design", "E-commerce", "Content Strategy", "Design Systems"]
-  }
+const galleryItems = [
+  { id: 1, title: "Ethereal Brand Identity", category: "Branding", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", year: "2024" },
+  { id: 2, title: "Minimal Packaging Design", category: "Packaging", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80", year: "2024" },
+  { id: 3, title: "Architectural Photography", category: "Art Direction", image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?w=1200&q=80", year: "2023" },
+  { id: 4, title: "Digital Interface Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80", year: "2023" },
+  { id: 5, title: "Editorial Layout", category: "Print", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80", year: "2023" },
+  { id: 6, title: "Abstract Compositions", category: "Art Direction", image: "https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200&q=80", year: "2023" },
+  { id: 7, title: "Luxury Brand Campaign", category: "Branding", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", year: "2022" },
+  { id: 8, title: "Product Photography", category: "Photography", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&q=80", year: "2022" },
+  { id: 9, title: "Web Experience Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80", year: "2022" },
+  { id: 10, title: "Fashion Editorial", category: "Art Direction", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=80", year: "2022" },
+  { id: 11, title: "Typeface Design", category: "Typography", image: "https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=1200&q=80", year: "2021" },
+  { id: 12, title: "Environmental Graphics", category: "Spatial Design", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80", year: "2021" },
 ];
 
+const visualCategories = ["All", "Branding", "Art Direction", "UI/UX", "Print"];
+
+const tabs = ["Work", "AI Design", "Visuals"];
+
 export default function CaseStudies() {
-  const [selectedStudy, setSelectedStudy] = useState(null);
+  const [activeTab, setActiveTab] = useState("Work");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredItems = activeCategory === "All"
+    ? galleryItems
+    : galleryItems.filter(item => item.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            <Link to={createPageUrl("Home")} className="text-sm tracking-[0.3em] font-medium">
+            <Link to={createPageUrl("Home")} className="text-sm tracking-[0.3em] font-semibold hover:text-[#8B7355] transition-colors duration-300">
               ALFIE MARTIN
             </Link>
-            <div className="hidden md:flex items-center space-x-10">
-              <Link to={createPageUrl("Home")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+            <div className="hidden md:flex items-center gap-10">
+              <Link to={createPageUrl("Home")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
                 HOME
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to={createPageUrl("CaseStudies")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
+              <Link to={createPageUrl("About")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
+                ABOUT
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link to={createPageUrl("CaseStudies")} className="relative text-xs tracking-[0.15em] font-medium text-black group">
                 CASE STUDIES
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black"></span>
               </Link>
-              <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                GALLERY
+              <Link to={createPageUrl("Contact")} className="relative text-xs tracking-[0.15em] font-medium px-6 py-2 border border-black hover:bg-black hover:text-white transition-all duration-300">
+                CONTACT
               </Link>
             </div>
+            <MobileNav activePage="CaseStudies" />
           </div>
         </div>
       </nav>
 
-      {!selectedStudy ? (
-        <>
-          {/* Header */}
-          <section className="pt-32 pb-16 px-6 lg:px-12">
-            <div className="max-w-7xl mx-auto">
-              <Link 
-                to={createPageUrl("Home")} 
-                className="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors mb-8"
-              >
-                <ArrowLeft className="w-4 h-4" /> BACK TO HOME
-              </Link>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">SELECTED WORK</p>
-                <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
-                <p className="text-gray-500 max-w-2xl">
-                  In-depth explorations of recent projects showcasing strategy, process, 
-                  and measurable results across branding, digital design, and creative direction.
-                </p>
-              </motion.div>
-            </div>
-          </section>
+      {/* Header */}
+      <section className="pt-32 pb-8 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">PORTFOLIO</p>
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
+            <p className="text-gray-500 max-w-2xl">
+              Selected work spanning product design, AI strategy, brand identity, and visual direction.
+            </p>
+          </motion.div>
 
-          {/* Case Studies Grid */}
-          <section className="px-6 lg:px-12 pb-32">
-            <div className="max-w-7xl mx-auto space-y-24">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={study.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="group cursor-pointer"
-                  onClick={() => setSelectedStudy(study)}
-                >
-                  <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <div className={index % 2 === 0 ? "order-1" : "order-1 md:order-2"}>
-                      <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img
-                          src={study.id === 1 ? "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/3687cf42b_aW1-UrLkSTRcKQof9MUk8U.png" : study.heroImage}
-                          alt={study.title}
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                        />
-                      </div>
-                    </div>
-                    <div className={index % 2 === 0 ? "order-2" : "order-2 md:order-1"}>
-                      <div className="flex items-center gap-4 mb-4">
-                        <span className="text-xs tracking-[0.2em] text-gray-400">{study.category}</span>
-                        <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                        <span className="text-xs text-gray-400">{study.year}</span>
-                      </div>
-                      <h2 className="text-3xl md:text-4xl font-light mb-3 group-hover:text-[#8B7355] transition-colors">
-                        {study.title}
-                      </h2>
-                      <p className="text-lg text-gray-400 mb-4">{study.subtitle}</p>
-                      <p className="text-gray-600 leading-relaxed mb-6">
-                        {study.overview.substring(0, 200)}...
-                      </p>
-                      <div className="flex items-center gap-2 text-sm group-hover:gap-3 transition-all">
-                        <span>Read Case Study</span>
-                        <ArrowUpRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-        </>
-      ) : (
-        <>
-          {/* Detailed Case Study View */}
-          <section className="pt-32 pb-16 px-6 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <button 
-                onClick={() => setSelectedStudy(null)}
-                className="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors mb-12"
+          {/* Tabs */}
+          <div className="flex gap-0 mt-10 border-b border-gray-200">
+            {tabs.map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`text-xs tracking-[0.2em] px-6 py-3 transition-all duration-200 border-b-2 -mb-[2px] ${
+                  activeTab === tab
+                    ? "border-black text-black font-medium"
+                    : "border-transparent text-gray-400 hover:text-black"
+                }`}
               >
-                <ArrowLeft className="w-4 h-4" /> BACK TO ALL CASE STUDIES
+                {tab.toUpperCase()}
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs tracking-[0.2em] text-gray-400">{selectedStudy.category}</span>
-                  <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                  <span className="text-xs text-gray-400">{selectedStudy.year}</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-light mb-4">{selectedStudy.title}</h1>
-                <p className="text-2xl text-gray-400 mb-12">{selectedStudy.subtitle}</p>
+      {/* Tab Content */}
+      <AnimatePresence mode="wait">
+        {activeTab === "Work" && (
+          <motion.div key="work" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            <FilterableGallery />
+            <DesignTestimonials />
+            <ConsultationForm />
+          </motion.div>
+        )}
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-12">
-                  {selectedStudy.tags.map((tag) => (
-                    <span 
-                      key={tag}
-                      className="text-xs px-3 py-1 border border-gray-200 text-gray-600"
+        {activeTab === "AI Design" && (
+          <motion.div key="ai" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            <AIDesignContent />
+          </motion.div>
+        )}
+
+        {activeTab === "Visuals" && (
+          <motion.div key="visuals" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            {/* Category Filter */}
+            <section className="py-10 px-6 lg:px-12">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex flex-wrap gap-3 mb-10">
+                  {visualCategories.map(cat => (
+                    <button
+                      key={cat}
+                      onClick={() => setActiveCategory(cat)}
+                      className={`text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
+                        activeCategory === cat ? "border-black bg-black text-white" : "border-gray-200 hover:border-black"
+                      }`}
                     >
-                      {tag}
-                    </span>
+                      {cat.toUpperCase()}
+                    </button>
                   ))}
                 </div>
-              </motion.div>
-
-              {/* Hero Image */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="aspect-video overflow-hidden bg-gray-100 mb-16"
-              >
-                <img
-                  src={selectedStudy.heroImage}
-                  alt={selectedStudy.title}
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-
-              {/* Content Sections */}
-              <div className="space-y-16">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-4">OVERVIEW</h2>
-                  <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.overview}</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-4">THE CHALLENGE</h2>
-                  <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.problem}</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                >
-                  <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-4">MY APPROACH</h2>
-                  <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.approach}</p>
-                </motion.div>
-
-                {/* Image Grid */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="grid md:grid-cols-3 gap-4 my-16"
-                >
-                  {selectedStudy.images.map((img, i) => (
-                    <div key={i} className="aspect-square overflow-hidden bg-gray-100">
-                      <img
-                        src={img}
-                        alt={`${selectedStudy.title} detail ${i + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                >
-                  <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-4">THE SOLUTION</h2>
-                  <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.solution}</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  className="bg-gray-50 p-8 md:p-12"
-                >
-                  <h2 className="text-xs tracking-[0.3em] text-gray-400 mb-6">RESULTS & IMPACT</h2>
-                  <p className="text-lg leading-relaxed text-gray-700">{selectedStudy.results}</p>
+                <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  <AnimatePresence mode="popLayout">
+                    {filteredItems.map((item, index) => (
+                      <motion.div
+                        key={item.id}
+                        layout
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.4, delay: index * 0.05 }}
+                        className="group cursor-pointer"
+                        onClick={() => setSelectedImage(item)}
+                      >
+                        <div className="aspect-[4/5] overflow-hidden bg-gray-100">
+                          <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                        </div>
+                        <div className="mt-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs text-gray-400 tracking-wider">{item.category}</span>
+                            <span className="text-xs text-gray-400">{item.year}</span>
+                          </div>
+                          <h3 className="text-lg font-light mt-1 group-hover:text-[#8B7355] transition-colors">{item.title}</h3>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
                 </motion.div>
               </div>
+            </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              {/* Next Project */}
-              <div className="mt-24 pt-12 border-t border-gray-100">
-                <p className="text-xs tracking-[0.2em] text-gray-400 mb-6">NEXT PROJECT</p>
-                {(() => {
-                  const currentIndex = caseStudies.findIndex(s => s.id === selectedStudy.id);
-                  const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length];
-                  return (
-                    <div
-                      onClick={() => setSelectedStudy(nextStudy)}
-                      className="group cursor-pointer flex items-center justify-between"
-                    >
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-light mb-2 group-hover:text-[#8B7355] transition-colors">
-                          {nextStudy.title}
-                        </h3>
-                        <p className="text-gray-500">{nextStudy.subtitle}</p>
-                      </div>
-                      <ArrowUpRight className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </div>
-                  );
-                })()}
+      {/* Visuals Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-12"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button onClick={() => setSelectedImage(null)} className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+              <X className="w-6 h-6" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }} className="max-w-5xl w-full" onClick={e => e.stopPropagation()}
+            >
+              <img src={selectedImage.image} alt={selectedImage.title} className="w-full max-h-[75vh] object-contain" />
+              <div className="mt-6 text-white">
+                <div className="flex items-center gap-4">
+                  <span className="text-xs tracking-[0.2em] text-gray-400">{selectedImage.category.toUpperCase()}</span>
+                  <span className="text-xs text-gray-500">{selectedImage.year}</span>
+                </div>
+                <h2 className="text-2xl font-light mt-2">{selectedImage.title}</h2>
               </div>
-            </div>
-          </section>
-        </>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-100">
@@ -323,6 +203,171 @@ export default function CaseStudies() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function AIDesignContent() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
+
+  const carouselImages = [
+    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
+    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
+    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
+    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
+    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" },
+  ];
+
+  const prev = () => setActiveIndex(i => (i - 1 + carouselImages.length) % carouselImages.length);
+  const next = () => setActiveIndex(i => (i + 1) % carouselImages.length);
+
+  return (
+    <div>
+      {/* Hero */}
+      <section className="pb-16 px-6 lg:px-12 pt-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">BRAND IDENTITY & AI STRATEGY</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 max-w-4xl">Design and Strategy for AI Systems</h2>
+            <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">
+              Bridging the gap between artificial intelligence and human experience — building design frameworks, visual systems, and strategic direction for AI-driven products that people actually trust and want to use.
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
+            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">ROLE</p><p className="text-gray-700">User Experience, UXR</p></div>
+            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">FOCUS</p><p className="text-gray-700">AI Product Design, Brand Systems</p></div>
+            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">YEAR</p><p className="text-gray-700">2024 — Ongoing</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-16 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">THE PROCESS</p>
+          <h2 className="text-3xl font-light mb-10">How I approach AI design work</h2>
+          <div className="space-y-8">
+            {[
+              { title: "Capability Mapping", body: "Translating the technical capabilities of an AI system into meaningful user benefits — understanding what's genuinely possible vs. what's being overpromised." },
+              { title: "Failure Mode Design", body: "Designing for when things go wrong. AI systems fail in unpredictable ways. Building graceful, honest error states is as important as the ideal flow." },
+              { title: "Brand Voice for AI", body: "Defining how an AI product speaks — the tone, language patterns, and personality — so interactions feel consistent, human, and on-brand." },
+              { title: "Iterative Prototyping", body: "Rapidly testing interactions with real users to validate assumptions early, before the model is trained or the system is built." },
+            ].map((item, i) => (
+              <div key={i} className="border-l-2 border-gray-300 pl-6">
+                <h3 className="text-xl font-medium mb-2">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Context */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">THE CONTEXT</p>
+          <h2 className="text-3xl font-light mb-6">AI is moving fast. Design is lagging behind.</h2>
+          <p className="text-gray-600 leading-relaxed text-lg mb-6">
+            Most AI products today suffer from the same problems: opaque interfaces, broken trust, and experiences that feel cold or mechanical. The technology is extraordinary — but without thoughtful design and clear strategy, it fails to connect with the humans it's meant to serve.
+          </p>
+          <p className="text-gray-600 leading-relaxed text-lg">
+            This body of work explores how design strategy can shape AI systems that feel intuitive, transparent, and genuinely valuable — from visual identity through to interaction patterns and communication frameworks.
+          </p>
+        </div>
+      </section>
+
+      {/* Two Column */}
+      <section className="py-16 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="overflow-hidden bg-gray-100">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/8edefd08c_Screenshot2026-02-28at85822PM.png" alt="AI Product Strategy Framework" className="w-full h-auto object-contain" />
+          </div>
+          <div className="flex flex-col justify-center pl-0 md:pl-8">
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">APPROACH</p>
+            <h2 className="text-3xl font-light mb-6">Strategy before pixels</h2>
+            <p className="text-gray-600 leading-relaxed mb-6">Every great AI product starts with a clear answer to one question: <em>what does this actually do for a person?</em> Strategy defines the positioning, the voice, and the design principles before a single screen is ever drawn.</p>
+            <p className="text-gray-600 leading-relaxed">From there, the visual and interaction design work flows naturally — grounded in purpose rather than aesthetic trend.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Carousel */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">VISUAL WORK</p>
+          <div className="relative overflow-hidden bg-gray-100 cursor-zoom-in" onClick={() => setLightbox(true)}>
+            <motion.img
+              key={activeIndex}
+              src={carouselImages[activeIndex].src}
+              alt={carouselImages[activeIndex].caption}
+              initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}
+              className="w-full h-auto object-contain"
+            />
+            <div className="absolute inset-0 flex items-center justify-between px-4" onClick={e => e.stopPropagation()}>
+              <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all"><span className="text-xl">‹</span></button>
+              <button onClick={next} className="bg-white/80 hover:bg-white p-2 transition-all"><span className="text-xl">›</span></button>
+            </div>
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+              {carouselImages.map((_, i) => (
+                <button key={i} onClick={() => setActiveIndex(i)} className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`} />
+              ))}
+            </div>
+          </div>
+          <p className="text-sm text-gray-400 mt-4 tracking-wide">{carouselImages[activeIndex].caption}</p>
+        </div>
+      </section>
+
+      {/* Pillars */}
+      <section className="py-16 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PILLARS</p>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { number: "01", title: "Trust by Design", body: "Designing AI outputs and interactions that are legible, honest, and predictable. Users need to understand what the system is doing and why." },
+              { number: "02", title: "Visual Systems", body: "Building cohesive brand and UI systems that scale across AI touchpoints — from onboarding flows to error states to generative outputs." },
+              { number: "03", title: "Human-Centered Strategy", body: "Embedding user research and behavioral insight into the product strategy from day one, ensuring the AI solves real problems in real contexts." },
+            ].map((pillar, i) => (
+              <div key={i} className="border-t border-gray-300 pt-6">
+                <span className="text-xs text-gray-400 tracking-wider">{pillar.number}</span>
+                <h3 className="text-xl font-medium mt-4 mb-3">{pillar.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{pillar.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes */}
+      <section className="py-16 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">OUTCOMES</p>
+          <h2 className="text-3xl font-light mb-12">What good AI design delivers</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { stat: "3×", label: "Faster user onboarding with clear AI explainability patterns" },
+              { stat: "60%", label: "Reduction in support tickets through better AI error communication" },
+              { stat: "88%", label: "User trust scores after redesigning AI output presentation" },
+              { stat: "2×", label: "Increase in feature adoption with intent-driven UI flows" },
+            ].map((item, i) => (
+              <div key={i} className="border-t-2 border-black pt-6">
+                <p className="text-4xl font-light mb-2">{item.stat}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(false)}>
+          <button className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors" onClick={() => setLightbox(false)}>
+            <X className="w-8 h-8" />
+          </button>
+          <img src={carouselImages[activeIndex].src} alt={carouselImages[activeIndex].caption} className="max-w-[90vw] max-h-[85vh] object-contain" onClick={e => e.stopPropagation()} />
+        </div>
+      )}
     </div>
   );
 }
