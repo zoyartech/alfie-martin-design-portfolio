@@ -1,0 +1,1 @@
+export default function DesignStrategyAI() { return null; }
