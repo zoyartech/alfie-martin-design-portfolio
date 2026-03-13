@@ -9,19 +9,19 @@ import DesignTestimonials from "@/components/design/DesignTestimonials";
 import ConsultationForm from "@/components/design/ConsultationForm";
 
 const galleryItems = [
-  { id: 1, title: "Ethereal Brand Identity", category: "Branding", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", year: "2024" },
-  { id: 2, title: "Minimal Packaging Design", category: "Packaging", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80", year: "2024" },
-  { id: 3, title: "Architectural Photography", category: "Art Direction", image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?w=1200&q=80", year: "2023" },
-  { id: 4, title: "Digital Interface Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80", year: "2023" },
-  { id: 5, title: "Editorial Layout", category: "Print", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80", year: "2023" },
-  { id: 6, title: "Abstract Compositions", category: "Art Direction", image: "https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200&q=80", year: "2023" },
-  { id: 7, title: "Luxury Brand Campaign", category: "Branding", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", year: "2022" },
-  { id: 8, title: "Product Photography", category: "Photography", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&q=80", year: "2022" },
-  { id: 9, title: "Web Experience Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80", year: "2022" },
-  { id: 10, title: "Fashion Editorial", category: "Art Direction", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=80", year: "2022" },
-  { id: 11, title: "Typeface Design", category: "Typography", image: "https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=1200&q=80", year: "2021" },
-  { id: 12, title: "Environmental Graphics", category: "Spatial Design", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80", year: "2021" },
-];
+{ id: 1, title: "Ethereal Brand Identity", category: "Branding", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", year: "2024" },
+{ id: 2, title: "Minimal Packaging Design", category: "Packaging", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80", year: "2024" },
+{ id: 3, title: "Architectural Photography", category: "Art Direction", image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?w=1200&q=80", year: "2023" },
+{ id: 4, title: "Digital Interface Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80", year: "2023" },
+{ id: 5, title: "Editorial Layout", category: "Print", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80", year: "2023" },
+{ id: 6, title: "Abstract Compositions", category: "Art Direction", image: "https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200&q=80", year: "2023" },
+{ id: 7, title: "Luxury Brand Campaign", category: "Branding", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", year: "2022" },
+{ id: 8, title: "Product Photography", category: "Photography", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&q=80", year: "2022" },
+{ id: 9, title: "Web Experience Design", category: "UI/UX", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80", year: "2022" },
+{ id: 10, title: "Fashion Editorial", category: "Art Direction", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=80", year: "2022" },
+{ id: 11, title: "Typeface Design", category: "Typography", image: "https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=1200&q=80", year: "2021" },
+{ id: 12, title: "Environmental Graphics", category: "Spatial Design", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80", year: "2021" }];
+
 
 const visualCategories = ["All", "Branding", "Art Direction", "UI/UX", "Print"];
 
@@ -32,9 +32,9 @@ export default function CaseStudies() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredItems = activeCategory === "All"
-    ? galleryItems
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredItems = activeCategory === "All" ?
+  galleryItems :
+  galleryItems.filter((item) => item.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-white">
@@ -58,10 +58,6 @@ export default function CaseStudies() {
                 CASE STUDIES
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black"></span>
               </Link>
-              <Link to={createPageUrl("Gallery")} className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
-                VISUALS
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-              </Link>
               <Link to={createPageUrl("Contact")} className="relative text-xs tracking-[0.15em] font-medium px-6 py-2 border border-black hover:bg-black hover:text-white transition-all duration-300">
                 CONTACT
               </Link>
@@ -84,70 +80,70 @@ export default function CaseStudies() {
 
           {/* Tabs */}
           <div className="flex gap-0 mt-10 border-b border-gray-200">
-            {tabs.map(tab => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`text-xs tracking-[0.2em] px-6 py-3 transition-all duration-200 border-b-2 -mb-[2px] ${
-                  activeTab === tab
-                    ? "border-black text-black font-medium"
-                    : "border-transparent text-gray-400 hover:text-black"
-                }`}
-              >
+            {tabs.map((tab) =>
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`text-xs tracking-[0.2em] px-6 py-3 transition-all duration-200 border-b-2 -mb-[2px] ${
+              activeTab === tab ?
+              "border-black text-black font-medium" :
+              "border-transparent text-gray-400 hover:text-black"}`
+              }>
+
                 {tab.toUpperCase()}
               </button>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* Tab Content */}
       <AnimatePresence mode="wait">
-        {activeTab === "Work" && (
-          <motion.div key="work" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+        {activeTab === "Work" &&
+        <motion.div key="work" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
             <FilterableGallery />
             <DesignTestimonials />
             <ConsultationForm />
           </motion.div>
-        )}
+        }
 
-        {activeTab === "AI Design" && (
-          <motion.div key="ai" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+        {activeTab === "AI Design" &&
+        <motion.div key="ai" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
             <AIDesignContent />
           </motion.div>
-        )}
+        }
 
-        {activeTab === "Visuals" && (
-          <motion.div key="visuals" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+        {activeTab === "Visuals" &&
+        <motion.div key="visuals" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
             {/* Category Filter */}
             <section className="py-10 px-6 lg:px-12">
               <div className="max-w-7xl mx-auto">
                 <div className="flex flex-wrap gap-3 mb-10">
-                  {visualCategories.map(cat => (
-                    <button
-                      key={cat}
-                      onClick={() => setActiveCategory(cat)}
-                      className={`text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
-                        activeCategory === cat ? "border-black bg-black text-white" : "border-gray-200 hover:border-black"
-                      }`}
-                    >
+                  {visualCategories.map((cat) =>
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`text-xs tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
+                  activeCategory === cat ? "border-black bg-black text-white" : "border-gray-200 hover:border-black"}`
+                  }>
+
                       {cat.toUpperCase()}
                     </button>
-                  ))}
+                )}
                 </div>
                 <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   <AnimatePresence mode="popLayout">
-                    {filteredItems.map((item, index) => (
-                      <motion.div
-                        key={item.id}
-                        layout
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.4, delay: index * 0.05 }}
-                        className="group cursor-pointer"
-                        onClick={() => setSelectedImage(item)}
-                      >
+                    {filteredItems.map((item, index) =>
+                  <motion.div
+                    key={item.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="group cursor-pointer"
+                    onClick={() => setSelectedImage(item)}>
+
                         <div className="aspect-[4/5] overflow-hidden bg-gray-100">
                           <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                         </div>
@@ -159,30 +155,30 @@ export default function CaseStudies() {
                           <h3 className="text-lg font-light mt-1 group-hover:text-[#8B7355] transition-colors">{item.title}</h3>
                         </div>
                       </motion.div>
-                    ))}
+                  )}
                   </AnimatePresence>
                 </motion.div>
               </div>
             </section>
           </motion.div>
-        )}
+        }
       </AnimatePresence>
 
       {/* Visuals Lightbox */}
       <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-12"
-            onClick={() => setSelectedImage(null)}
-          >
+        {selectedImage &&
+        <motion.div
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-12"
+          onClick={() => setSelectedImage(null)}>
+
             <button onClick={() => setSelectedImage(null)} className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
               <X className="w-6 h-6" />
             </button>
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }} className="max-w-5xl w-full" onClick={e => e.stopPropagation()}
-            >
+            initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ duration: 0.3 }} className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+
               <img src={selectedImage.image} alt={selectedImage.title} className="w-full max-h-[75vh] object-contain" />
               <div className="mt-6 text-white">
                 <div className="flex items-center gap-4">
@@ -193,7 +189,7 @@ export default function CaseStudies() {
               </div>
             </motion.div>
           </motion.div>
-        )}
+        }
       </AnimatePresence>
 
       {/* Footer */}
@@ -201,14 +197,14 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Instagram</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">LinkedIn</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Dribbble</a>
+            
+            
+            
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
 
 function AIDesignContent() {
@@ -216,15 +212,15 @@ function AIDesignContent() {
   const [lightbox, setLightbox] = useState(false);
 
   const carouselImages = [
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" },
-  ];
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/44f689f48_Screenshot2026-03-01at33011AM.png", caption: "Lyra AI — Conversational Interface" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/392a37719_Screenshot2026-03-01at33056AM.png", caption: "Before & After: Rewriting the Dialogue" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/9e941d290_Screenshot2026-03-01at33101AM.png", caption: "A UI Built Around the Conversation" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/88b73509d_Screenshot2026-03-01at33109AM.png", caption: "What Changed After the Redesign" },
+  { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/2c12bf53d_Screenshot2026-03-01at33116AM.png", caption: "Key Takeaways — Conversation Design of Chatbots" }];
 
-  const prev = () => setActiveIndex(i => (i - 1 + carouselImages.length) % carouselImages.length);
-  const next = () => setActiveIndex(i => (i + 1) % carouselImages.length);
+
+  const prev = () => setActiveIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length);
+  const next = () => setActiveIndex((i) => (i + 1) % carouselImages.length);
 
   return (
     <div>
@@ -253,16 +249,16 @@ function AIDesignContent() {
           <h2 className="text-3xl font-light mb-10">How I approach AI design work</h2>
           <div className="space-y-8">
             {[
-              { title: "Capability Mapping", body: "Translating the technical capabilities of an AI system into meaningful user benefits — understanding what's genuinely possible vs. what's being overpromised." },
-              { title: "Failure Mode Design", body: "Designing for when things go wrong. AI systems fail in unpredictable ways. Building graceful, honest error states is as important as the ideal flow." },
-              { title: "Brand Voice for AI", body: "Defining how an AI product speaks — the tone, language patterns, and personality — so interactions feel consistent, human, and on-brand." },
-              { title: "Iterative Prototyping", body: "Rapidly testing interactions with real users to validate assumptions early, before the model is trained or the system is built." },
-            ].map((item, i) => (
-              <div key={i} className="border-l-2 border-gray-300 pl-6">
+            { title: "Capability Mapping", body: "Translating the technical capabilities of an AI system into meaningful user benefits — understanding what's genuinely possible vs. what's being overpromised." },
+            { title: "Failure Mode Design", body: "Designing for when things go wrong. AI systems fail in unpredictable ways. Building graceful, honest error states is as important as the ideal flow." },
+            { title: "Brand Voice for AI", body: "Defining how an AI product speaks — the tone, language patterns, and personality — so interactions feel consistent, human, and on-brand." },
+            { title: "Iterative Prototyping", body: "Rapidly testing interactions with real users to validate assumptions early, before the model is trained or the system is built." }].
+            map((item, i) =>
+            <div key={i} className="border-l-2 border-gray-300 pl-6">
                 <h3 className="text-xl font-medium mb-2">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.body}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -306,16 +302,16 @@ function AIDesignContent() {
               src={carouselImages[activeIndex].src}
               alt={carouselImages[activeIndex].caption}
               initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}
-              className="w-full h-auto object-contain"
-            />
-            <div className="absolute inset-0 flex items-center justify-between px-4" onClick={e => e.stopPropagation()}>
+              className="w-full h-auto object-contain" />
+
+            <div className="absolute inset-0 flex items-center justify-between px-4" onClick={(e) => e.stopPropagation()}>
               <button onClick={prev} className="bg-white/80 hover:bg-white p-2 transition-all"><span className="text-xl">‹</span></button>
               <button onClick={next} className="bg-white/80 hover:bg-white p-2 transition-all"><span className="text-xl">›</span></button>
             </div>
             <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-              {carouselImages.map((_, i) => (
-                <button key={i} onClick={() => setActiveIndex(i)} className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`} />
-              ))}
+              {carouselImages.map((_, i) =>
+              <button key={i} onClick={() => setActiveIndex(i)} className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-white scale-125" : "bg-white/50"}`} />
+              )}
             </div>
           </div>
           <p className="text-sm text-gray-400 mt-4 tracking-wide">{carouselImages[activeIndex].caption}</p>
@@ -328,16 +324,16 @@ function AIDesignContent() {
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PILLARS</p>
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { number: "01", title: "Trust by Design", body: "Designing AI outputs and interactions that are legible, honest, and predictable. Users need to understand what the system is doing and why." },
-              { number: "02", title: "Visual Systems", body: "Building cohesive brand and UI systems that scale across AI touchpoints — from onboarding flows to error states to generative outputs." },
-              { number: "03", title: "Human-Centered Strategy", body: "Embedding user research and behavioral insight into the product strategy from day one, ensuring the AI solves real problems in real contexts." },
-            ].map((pillar, i) => (
-              <div key={i} className="border-t border-gray-300 pt-6">
+            { number: "01", title: "Trust by Design", body: "Designing AI outputs and interactions that are legible, honest, and predictable. Users need to understand what the system is doing and why." },
+            { number: "02", title: "Visual Systems", body: "Building cohesive brand and UI systems that scale across AI touchpoints — from onboarding flows to error states to generative outputs." },
+            { number: "03", title: "Human-Centered Strategy", body: "Embedding user research and behavioral insight into the product strategy from day one, ensuring the AI solves real problems in real contexts." }].
+            map((pillar, i) =>
+            <div key={i} className="border-t border-gray-300 pt-6">
                 <span className="text-xs text-gray-400 tracking-wider">{pillar.number}</span>
                 <h3 className="text-xl font-medium mt-4 mb-3">{pillar.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{pillar.body}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -349,29 +345,29 @@ function AIDesignContent() {
           <h2 className="text-3xl font-light mb-12">What good AI design delivers</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { stat: "3×", label: "Faster user onboarding with clear AI explainability patterns" },
-              { stat: "60%", label: "Reduction in support tickets through better AI error communication" },
-              { stat: "88%", label: "User trust scores after redesigning AI output presentation" },
-              { stat: "2×", label: "Increase in feature adoption with intent-driven UI flows" },
-            ].map((item, i) => (
-              <div key={i} className="border-t-2 border-black pt-6">
+            { stat: "3×", label: "Faster user onboarding with clear AI explainability patterns" },
+            { stat: "60%", label: "Reduction in support tickets through better AI error communication" },
+            { stat: "88%", label: "User trust scores after redesigning AI output presentation" },
+            { stat: "2×", label: "Increase in feature adoption with intent-driven UI flows" }].
+            map((item, i) =>
+            <div key={i} className="border-t-2 border-black pt-6">
                 <p className="text-4xl font-light mb-2">{item.stat}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* Lightbox */}
-      {lightbox && (
-        <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(false)}>
+      {lightbox &&
+      <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(false)}>
           <button className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors" onClick={() => setLightbox(false)}>
             <X className="w-8 h-8" />
           </button>
-          <img src={carouselImages[activeIndex].src} alt={carouselImages[activeIndex].caption} className="max-w-[90vw] max-h-[85vh] object-contain" onClick={e => e.stopPropagation()} />
+          <img src={carouselImages[activeIndex].src} alt={carouselImages[activeIndex].caption} className="max-w-[90vw] max-h-[85vh] object-contain" onClick={(e) => e.stopPropagation()} />
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
