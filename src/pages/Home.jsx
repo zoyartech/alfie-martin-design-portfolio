@@ -6,10 +6,10 @@ import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide
 import MobileNav from "@/components/MobileNav";
 
 const galleryImages = [
-{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4f158f252_msft.png", caption: "Microsoft — Design Systems" },
-{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232dbcf99_1ee9e8c17cb91a48c23de9dfea5ce431.png", caption: "Brand Identity Work" },
-{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/abc94bcb0_263737c32d0e1e076ac84aed6761a15d.png", caption: "Visual Direction" },
-{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/c72dd3896_EGP-STKRS.png", caption: "Visual Identity" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png", caption: "Microsoft — Design Systems" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png", caption: "Brand Identity Work" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png", caption: "Visual Direction" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg", caption: "Visual Identity" }];
 
 
 export default function Home() {

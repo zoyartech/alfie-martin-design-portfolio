@@ -1,15 +1,15 @@
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 const projects = [
 {
   title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",
-  image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
@@ -24,7 +24,7 @@ const projects = [
   title: "TCS NYC Marathon App",
   category: "Product Design",
   industry: "Sports & Events",
-  image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d50da56f6_alsharedasketchwithyou2copy.jpg",
   year: "2023",
   link: "TCSMarathon",
   summary: "Redesigned the official TCS NYC Marathon tracking app, improving the real-time runner tracking experience for over 1M spectators and participants.",
@@ -39,7 +39,7 @@ const projects = [
   title: "Grammarly AI Writing Feedback",
   category: "UX Strategy",
   industry: "Technology",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png",
   year: "2023",
   summary: "Redesigned Grammarly's AI suggestion UX to reduce friction and improve writing confidence. Focused on tone, clarity, and progressive disclosure of AI reasoning.",
   stats: [
@@ -53,7 +53,7 @@ const projects = [
   title: "Microsoft Fluent Design System",
   category: "Design Systems",
   industry: "Enterprise",
-  image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/50ae4182a_cold-brew-bottles-on-marble-and-paper-floor-mockup-template-66e0f1b30fa4ecb1a1e6577b-2x1.png",
   year: "2023",
   summary: "Contributed to Microsoft's Fluent Design System, ensuring consistency and accessibility across enterprise products used by millions of users worldwide.",
   stats: [
@@ -67,7 +67,7 @@ const projects = [
   title: "Polaroid Digital Brand Identity",
   category: "Brand Identity",
   industry: "Consumer",
-  image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
   year: "2023",
   summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
   stats: [
@@ -81,7 +81,7 @@ const projects = [
   title: "Workflow Optimization",
   category: "Product Design",
   industry: "Enterprise",
-  image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg",
   year: "2022",
   link: "WorkflowOptimizationHVAC",
   summary: "Streamlined complex HVAC workflow management through a redesigned dashboard and task management system, reducing operational overhead for field teams.",
@@ -91,10 +91,20 @@ const projects = [
   { label: "Adoption Rate", value: "91%" }],
 
   tags: ["Enterprise UX", "Dashboards", "Workflow"]
+},
+{
+  title: "Creative Editorial",
+  category: "Art Direction",
+  industry: "Art",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e12b95661_IMG_0913.jpg",
+  year: "2024",
+  summary: "Exploratory creative direction for editorial campaigns.",
+  stats: [],
+  tags: ["Editorial", "Creative"]
 }];
 
 
-const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy"];
+const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
 
 export default function FilterableGallery() {
   const [active, setActive] = useState("All");
@@ -106,22 +116,8 @@ export default function FilterableGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
-            
             <h2 className="text-3xl font-semibold md:text-4xl">Selected Work</h2>
           </div>
-          
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -135,49 +131,32 @@ export default function FilterableGallery() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="group">
-
                 <ProjectCard project={project} />
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
       </div>
-
-
-    </section>);
-
+    </section>
+  );
 }
 
 function ProjectCard({ project }) {
   return (
-    <div className="cursor-pointer">
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div className="cursor-pointer group">
+      <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+        />
+      </div>
       <div className="pt-4">
         <div className="flex items-center justify-between mb-1">
           <span className="text-xs tracking-[0.15em] text-gray-400">{project.category}</span>
-          
         </div>
         <h3 className="text-base font-medium group-hover:text-gray-600 transition-colors">{project.title}</h3>
       </div>
-    </div>);
-
+    </div>
+  );
 }
