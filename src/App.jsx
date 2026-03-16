@@ -12,6 +12,7 @@ import About from './pages/About';
 import CaseStudies from './pages/CaseStudies';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import TCSMarathon from './pages/TCSMarathon';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
