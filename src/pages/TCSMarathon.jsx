@@ -55,7 +55,7 @@ export default function TCSMarathon() {
         {/* Hero Image */}
         <section className="py-8 px-6 lg:px-12">
             <div className="max-w-7xl mx-auto">
-                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d50da56f6_alsharedasketchwithyou2copy.jpg" alt="TCS Marathon App" className="w-full h-auto object-cover rounded-lg aspect-[21/9]" />
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4ddd293aa_BLUEMAP.png" alt="TCS Marathon App" className="w-full h-auto object-cover rounded-lg aspect-[21/9]" />
             </div>
         </section>
 
@@ -116,6 +116,6 @@ export default function TCSMarathon() {
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
