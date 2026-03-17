@@ -182,18 +182,33 @@ const customCss = `
   .polaroid-scope .stats-bar {
     background: var(--black);
     color: var(--white);
-    padding: 2.5rem 0;
+    padding: 3.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
   }
 
   .polaroid-scope .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 0;
   }
 
   .polaroid-scope .stat-item {
-    padding: 0 2rem;
-    border-right: 1px solid rgba(255,255,255,0.12);
+    padding: 0 2.5rem;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .polaroid-scope .stat-item::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--yellow);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
   }
 
   .polaroid-scope .stat-item:last-child { border-right: none; }
