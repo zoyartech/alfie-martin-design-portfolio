@@ -36,35 +36,6 @@ const projects = [
   tags: ["Mobile Design", "Real-Time Data", "Sports"]
 },
 {
-  title: "Grammarly AI Writing Feedback",
-  category: "UX Strategy",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png",
-  year: "2023",
-  link: "GrammarlyProject",
-  summary: "Redesigned Grammarly's AI suggestion UX to reduce friction and improve writing confidence. Focused on tone, clarity, and progressive disclosure of AI reasoning.",
-  stats: [
-  { label: "Suggestion Accept Rate", value: "+35%" },
-  { label: "Session Length", value: "+22%" },
-  { label: "NPS Improvement", value: "+18pts" }],
-
-  tags: ["AI UX", "Writing Tools", "SaaS"]
-},
-{
-  title: "Microsoft Fluent Design System",
-  category: "Design Systems",
-  industry: "Enterprise",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/50ae4182a_cold-brew-bottles-on-marble-and-paper-floor-mockup-template-66e0f1b30fa4ecb1a1e6577b-2x1.png",
-  year: "2023",
-  summary: "Contributed to Microsoft's Fluent Design System, ensuring consistency and accessibility across enterprise products used by millions of users worldwide.",
-  stats: [
-  { label: "Components Built", value: "120+" },
-  { label: "Products Impacted", value: "30+" },
-  { label: "A11y Compliance", value: "WCAG AA" }],
-
-  tags: ["Design Systems", "Accessibility", "Enterprise"]
-},
-{
   title: "Polaroid Digital Brand Identity",
   category: "Brand Identity",
   industry: "Consumer",
@@ -93,16 +64,7 @@ const projects = [
 
   tags: ["Enterprise UX", "Dashboards", "Workflow"]
 },
-{
-  title: "Creative Editorial",
-  category: "Art Direction",
-  industry: "Art",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e12b95661_IMG_0913.jpg",
-  year: "2024",
-  summary: "Exploratory creative direction for editorial campaigns.",
-  stats: [],
-  tags: ["Editorial", "Creative"]
-}];
+];
 
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
