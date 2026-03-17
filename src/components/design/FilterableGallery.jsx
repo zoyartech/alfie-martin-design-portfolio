@@ -142,7 +142,7 @@ export default function FilterableGallery() {
 }
 
 function ProjectCard({ project }) {
-  return (
+  const content = (
     <div className="cursor-pointer group">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
         <img 
@@ -159,4 +159,10 @@ function ProjectCard({ project }) {
       </div>
     </div>
   );
+
+  if (project.link) {
+    return <Link to={createPageUrl(project.link)}>{content}</Link>;
+  }
+
+  return content;
 }
