@@ -593,7 +593,7 @@ at the intersection of art and science:</p>
         <div class="stat-label">Luxury Collabs Launched</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">∞</div>
+        <div class="stat-number">23</div>
         <div class="stat-label">Instagram Contests Run</div>
       </div>
       <div class="stat-item">
