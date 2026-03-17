@@ -103,21 +103,18 @@ export default function Home() {
               hi my name is alfie, lets build things, research stuff, and keep learning. 
             </motion.h1>
             
-            
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-12 lg:mt-20 w-full"
+            >
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png" 
+                alt="Raven Artwork" 
+                className="w-full max-w-2xl h-auto object-contain mix-blend-multiply" 
+              />
+            </motion.div>
 
           </div>
 
