@@ -99,7 +99,7 @@ export default function About() {
               description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
             },
             {
-              role: "product designer CRO",
+              role: "Product Designer CRO",
               company: "Microsoft",
               period: "2018 - 2020",
               description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
