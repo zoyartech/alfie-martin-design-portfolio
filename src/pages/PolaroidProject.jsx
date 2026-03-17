@@ -557,7 +557,7 @@ const htmlContent = `
   <div class="container">
     <div class="hero-eyebrow">Growth Design &nbsp;·&nbsp; Brand Strategy &nbsp;·&nbsp; Case Study</div>
     <h1>Polaroid<br><em>Reimagined.</em></h1>
-    <p class="hero-sub">How I rebuilt the world's most nostalgic camera brand from the inside out — and turned a comeback into a cultural moment.</p>
+    <p class="hero-sub">How I rebuilt the world's most nostalgic camera brand from the inside out and turned a comeback into a cultural moment.</p>
     <div class="hero-tags">
       <span class="tag">Brand Identity</span>
       <span class="tag">Growth Strategy</span>
@@ -609,8 +609,8 @@ const htmlContent = `
       <div>
         <h2>The <em>Challenge.</em></h2>
         <p>When Polaroid returned to actively selling products after its extended hiatus, the brand faced a paradox that most companies would envy and dread simultaneously: everyone knew the name, and almost no one knew what it stood for anymore.</p>
-        <p>The challenge wasn't recognition — it was relevance. Polaroid had become nostalgia without a body, a feeling without a product. My job was to give that feeling somewhere to live again, and to build a growth strategy that could convert sentiment into sales.</p>
-        <p>I needed to identify the people who had made Polaroid iconic in the first place — the early adopters, the artists, the experimenters — and give them a reason to come back. Not as a retro curiosity. As something that still meant something.</p>
+        <p>The challenge wasn't recognition it was relevance. Polaroid had become nostalgia without a body, a feeling without a product. My job was to give that feeling somewhere to live again, and to build a growth strategy that could convert sentiment into sales.</p>
+        <p>I needed to identify the people who had made Polaroid iconic in the first place the early adopters, the artists, the experimenters and give them a reason to come back. Not as a retro curiosity. As something that still meant something.</p>
       </div>
       <div>
         <div class="polaroid-cluster">
@@ -622,7 +622,7 @@ const htmlContent = `
           </div>
         </div>
         <div class="pullquote">
-          <p>"The brand had become nostalgia without a body — a feeling without a product."</p>
+          <p>"The brand had become nostalgia without a body a feeling without a product."</p>
         </div>
       </div>
     </div>
@@ -632,60 +632,60 @@ const htmlContent = `
 <!-- BRAND IDENTITY -->
 <section>
   <div class="container">
-    <div class="section-label">01 — Brand Identity</div>
+    <div class="section-label">01 Brand Identity</div>
     <h2>Designing for <em>the People<br>Who Invented the Culture.</em></h2>
-    <p>I began by going back to the source. Polaroid's original audience wasn't nostalgic — they were radical. They were artists who wanted immediacy, experimenters who liked happy accidents, and innovators who believed a photograph you could hold in your hand, still warm from the camera, was a different thing entirely than one you sent to a lab.</p>
-    <p>I redesigned the brand identity to speak directly to that lineage. The visual language I developed honored the physical and tactile qualities that made Polaroid distinct — the frame, the weight of the paper, the specific color quality of instant film — while stripping away the layer of kitschy nostalgia that had accumulated over the hiatus years.</p>
+    <p>I began by going back to the source. Polaroid's original audience wasn't nostalgic they were radical. They were artists who wanted immediacy, experimenters who liked happy accidents, and innovators who believed a photograph you could hold in your hand, still warm from the camera, was a different thing entirely than one you sent to a lab.</p>
+    <p>I redesigned the brand identity to speak directly to that lineage. The visual language I developed honored the physical and tactile qualities that made Polaroid distinct the frame, the weight of the paper, the specific color quality of instant film while stripping away the layer of kitschy nostalgia that had accumulated over the hiatus years.</p>
 
     <div class="card-strip">
       <div class="card-cell">
         <div class="card-cell-label">Principle 01</div>
         <div class="card-cell-title">Tactile Over Digital</div>
-        <p>I centered the identity on physicality — the frame, the texture, the immediacy of a print in hand. Every design decision was anchored in what makes an instant photograph irreplaceable.</p>
+        <p>I centered the identity on physicality the frame, the texture, the immediacy of a print in hand. Every design decision was anchored in what makes an instant photograph irreplaceable.</p>
       </div>
       <div class="card-cell">
         <div class="card-cell-label">Principle 02</div>
         <div class="card-cell-title">Innovators, Not Nostalgists</div>
-        <p>I positioned the brand not as a relic but as a living creative tool. The identity spoke to makers and early adopters — the community that built the brand's original cultural gravity.</p>
+        <p>I positioned the brand not as a relic but as a living creative tool. The identity spoke to makers and early adopters the community that built the brand's original cultural gravity.</p>
       </div>
       <div class="card-cell accent">
         <div class="card-cell-label">Principle 03</div>
         <div class="card-cell-title">Sentimental With Intent</div>
-        <p>Sentimentality was a lever, not a crutch. I built it into the content design and strategy as a purposeful emotional mechanism — not a default aesthetic.</p>
+        <p>Sentimentality was a lever, not a crutch. I built it into the content design and strategy as a purposeful emotional mechanism not a default aesthetic.</p>
       </div>
     </div>
 
-    <p>I infused the content design with a deliberate sentimentality — not the soft-focus, sepia-toned kind, but something more honest. The kind of feeling you get when you find an old photograph in a drawer. The brand voice I developed was warm without being saccharine, and specific without being niche.</p>
+    <p>I infused the content design with a deliberate sentimentality not the soft-focus, sepia-toned kind, but something more honest. The kind of feeling you get when you find an old photograph in a drawer. The brand voice I developed was warm without being saccharine, and specific without being niche.</p>
   </div>
 </section>
 
 <!-- CONTENT STRATEGY -->
 <section>
   <div class="container">
-    <div class="section-label">02 — Content Strategy</div>
+    <div class="section-label">02 Content Strategy</div>
     <div class="two-col">
       <div>
         <h2>Sentimentality as <em>Strategy.</em></h2>
-        <p>I approached content strategy as an emotional architecture problem. The question wasn't what to post — it was what to make people feel, and in what sequence, so that purchasing film felt like a natural extension of that feeling.</p>
+        <p>I approached content strategy as an emotional architecture problem. The question wasn't what to post it was what to make people feel, and in what sequence, so that purchasing film felt like a natural extension of that feeling.</p>
         <p>I built a content system anchored in specific emotional beats: the moment before a photo is taken, the wait while it develops, the ritual of sharing a physical print with someone. These beats became the rhythm of our content calendar and the framework for how we approached every touchpoint.</p>
-        <p>By mapping content to emotional states rather than product features, I was able to connect the brand to something more durable than trend cycles — the fundamental human desire to hold a moment still.</p>
+        <p>By mapping content to emotional states rather than product features, I was able to connect the brand to something more durable than trend cycles the fundamental human desire to hold a moment still.</p>
       </div>
       <div>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-item-label">Phase One</div>
             <h3>Reestablish the Emotional Contract</h3>
-            <p>Content that reminded the audience what Polaroid had always been about — not a camera, but a way of seeing. Archival imagery, artist voices, community memory.</p>
+            <p>Content that reminded the audience what Polaroid had always been about not a camera, but a way of seeing. Archival imagery, artist voices, community memory.</p>
           </div>
           <div class="timeline-item">
             <div class="timeline-item-label">Phase Two</div>
             <h3>Connect Feeling to Product</h3>
-            <p>Introduced film and hardware through the lens of experience — what it feels like, not what it does. Soft product integration through community-submitted content.</p>
+            <p>Introduced film and hardware through the lens of experience what it feels like, not what it does. Soft product integration through community-submitted content.</p>
           </div>
           <div class="timeline-item">
             <div class="timeline-item-label">Phase Three</div>
             <h3>Activate the Purchase Loop</h3>
-            <p>Instagram contests, limited edition collabs, and community challenges created urgency and desire — with film purchase as the price of participation.</p>
+            <p>Instagram contests, limited edition collabs, and community challenges created urgency and desire with film purchase as the price of participation.</p>
           </div>
         </div>
       </div>
@@ -696,20 +696,20 @@ const htmlContent = `
 <!-- INSTAGRAM / SOCIAL -->
 <section>
   <div class="container">
-    <div class="section-label">03 — Social Campaign</div>
+    <div class="section-label">03 Social Campaign</div>
     <h2>Turning Instagram Into <em>a Film Counter.</em></h2>
-    <p>The insight I was working from was simple: Instagram had become the place people went to see photographs, but Polaroid was about making them. The contest structure I designed was built to bridge that gap — to make participating on Instagram inseparable from purchasing and using film.</p>
+    <p>The insight I was working from was simple: Instagram had become the place people went to see photographs, but Polaroid was about making them. The contest structure I designed was built to bridge that gap to make participating on Instagram inseparable from purchasing and using film.</p>
 
     <div class="card-strip">
       <div class="card-cell">
         <div class="card-cell-label">Contest Design</div>
         <div class="card-cell-title">Film First, Caption Second</div>
-        <p>Every contest I designed required participants to shoot on Polaroid film to enter. No filter aesthetics, no digital simulations — entries had to be scans or photos of actual prints. Film purchase became the cost of participation.</p>
+        <p>Every contest I designed required participants to shoot on Polaroid film to enter. No filter aesthetics, no digital simulations entries had to be scans or photos of actual prints. Film purchase became the cost of participation.</p>
       </div>
       <div class="card-cell">
         <div class="card-cell-label">Community Mechanic</div>
         <div class="card-cell-title">Themed, Not Seasonal</div>
-        <p>Rather than tying campaigns to retail calendar moments, I developed thematic prompts — memory, discovery, accident, light — that activated the creative community and generated submissions that functioned as organic brand content.</p>
+        <p>Rather than tying campaigns to retail calendar moments, I developed thematic prompts memory, discovery, accident, light that activated the creative community and generated submissions that functioned as organic brand content.</p>
       </div>
       <div class="card-cell">
         <div class="card-cell-label">Follower Loop</div>
@@ -722,16 +722,16 @@ const htmlContent = `
       <p>"I designed the contests so that using a Polaroid camera was the only way to have a voice in the community we were building."</p>
     </div>
 
-    <p>The contests served a dual purpose: they drove film sales directly, and they generated an enormous volume of authentic, community-created brand content that populated our feed and kept the emotional register of the account exactly where I wanted it — alive, specific, and physical.</p>
+    <p>The contests served a dual purpose: they drove film sales directly, and they generated an enormous volume of authentic, community-created brand content that populated our feed and kept the emotional register of the account exactly where I wanted it alive, specific, and physical.</p>
   </div>
 </section>
 
 <!-- COLLABORATIONS -->
 <section>
   <div class="container">
-    <div class="section-label">04 — Collaborations</div>
+    <div class="section-label">04 Collaborations</div>
     <h2>Partnerships That <em>Meant Something.</em></h2>
-    <p>The collaborations I pursued weren't about borrowed heat — they were about shared DNA. I looked for partners that had their own relationship to the ideas Polaroid stood for: immediacy, craft, cultural specificity, and the handmade. The two most significant partnerships I developed were with the Keith Haring estate and with Fendi.</p>
+    <p>The collaborations I pursued weren't about borrowed heat they were about shared DNA. I looked for partners that had their own relationship to the ideas Polaroid stood for: immediacy, craft, cultural specificity, and the handmade. The two most significant partnerships I developed were with the Keith Haring estate and with Fendi.</p>
 
     <div class="collab-row">
       <div class="collab-badge">Keith Haring</div>
@@ -745,7 +745,7 @@ const htmlContent = `
       <div class="collab-badge">Fendi</div>
       <div class="collab-content">
         <h3>Fendi</h3>
-        <p>The Fendi collaboration was built around a different kind of logic: the luxury of the impermanent. I developed the partnership around the idea that Polaroid and Fendi shared a commitment to craft, to the physical object, and to the idea that what you make with your hands has a value that reproduction can't capture. The collaboration gave Polaroid entry into a luxury lifestyle conversation without compromising its roots — and gave Fendi a way to articulate its own relationship to analog values in an increasingly digital world. The campaign visuals I designed for the partnership lived at the intersection of both brand worlds with deliberate precision.</p>
+        <p>The Fendi collaboration was built around a different kind of logic: the luxury of the impermanent. I developed the partnership around the idea that Polaroid and Fendi shared a commitment to craft, to the physical object, and to the idea that what you make with your hands has a value that reproduction can't capture. The collaboration gave Polaroid entry into a luxury lifestyle conversation without compromising its roots and gave Fendi a way to articulate its own relationship to analog values in an increasingly digital world. The campaign visuals I designed for the partnership lived at the intersection of both brand worlds with deliberate precision.</p>
       </div>
     </div>
 
@@ -758,7 +758,7 @@ const htmlContent = `
       <div class="card-cell accent">
         <div class="card-cell-label">Strategic Outcome</div>
         <div class="card-cell-title">Repositioned in the Cultural Conversation</div>
-        <p>The collaborations moved Polaroid from the nostalgia shelf into the contemporary cultural marketplace — where its strongest potential buyers already lived.</p>
+        <p>The collaborations moved Polaroid from the nostalgia shelf into the contemporary cultural marketplace where its strongest potential buyers already lived.</p>
       </div>
     </div>
   </div>
@@ -771,9 +771,9 @@ const htmlContent = `
     <div class="two-col">
       <div>
         <h2>What I <em>Learned.</em></h2>
-        <p>The Polaroid project taught me that the most complex brand problems are rarely about awareness. People knew Polaroid. The work was about belief — rebuilding the conviction that this thing was still worth caring about, still worth spending money on, still worth getting your hands on.</p>
-        <p>Growth design, in that context, meant something specific: it meant understanding that the path to purchase ran through feeling, and that feeling had to be designed with the same precision you'd apply to a funnel or a conversion rate. The contests, the identity, the collaborations — each one was a designed emotional argument.</p>
-        <p>What I came away with was a sharper understanding of how legacy brands create permission. When you have a brand with real cultural history, you don't invent relevance — you excavate it. You find what was always true about it, strip away what accumulated on top, and hand it back to the people who made it matter in the first place.</p>
+        <p>The Polaroid project taught me that the most complex brand problems are rarely about awareness. People knew Polaroid. The work was about belief rebuilding the conviction that this thing was still worth caring about, still worth spending money on, still worth getting your hands on.</p>
+        <p>Growth design, in that context, meant something specific: it meant understanding that the path to purchase ran through feeling, and that feeling had to be designed with the same precision you'd apply to a funnel or a conversion rate. The contests, the identity, the collaborations each one was a designed emotional argument.</p>
+        <p>What I came away with was a sharper understanding of how legacy brands create permission. When you have a brand with real cultural history, you don't invent relevance you excavate it. You find what was always true about it, strip away what accumulated on top, and hand it back to the people who made it matter in the first place.</p>
       </div>
       <div style="padding-top: 0.5rem;">
         <div class="polaroid rotate-tiny" style="width: 100%;">
@@ -816,7 +816,7 @@ const htmlContent = `
 <!-- FOOTER -->
 <div class="case-footer">
   <div class="container">
-    <div class="footer-label">Case Study — Growth Design</div>
+    <div class="footer-label">Case Study Growth Design</div>
     <div class="footer-name">Polaroid</div>
     <p class="footer-note">Brand Identity &nbsp;·&nbsp; Growth Campaign &nbsp;·&nbsp; Instagram Strategy &nbsp;·&nbsp; Keith Haring Estate &nbsp;·&nbsp; Fendi Collaboration</p>
   </div>
