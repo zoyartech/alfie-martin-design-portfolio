@@ -60,16 +60,16 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="space-y-6 max-w-4xl">
 
-            <p className="text-lg leading-relaxed text-gray-700">I'm a multidisciplinary technologist.  based in New York City, working at the intersection of business strategy, brand differentiation, and mass adoption.  With over 8 years of experience, I help brands tell their stories through well executed strategies.
+            <p className="text-lg leading-relaxed text-gray-700">I'm a multidisciplinary technologist.  based in New York City, working at the intersection of business strategy, brand differentiation, and mass adoption.  With over 8 years of experience, I love working in product design and growth. I am a huge nerd so I am always taking a class on something. I believe in being a life long continuous learner. So you could say I am a forever work in progress.
 
 
 
             </p>
-            <p className="text-lg leading-relaxed text-gray-700">My work spans brand identity, experience design, and business feasibility.. 
+            
 
 
 
-            </p>
+            
             <p className="text-lg leading-relaxed text-gray-700">
 
 
