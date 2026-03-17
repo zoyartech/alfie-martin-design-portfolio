@@ -75,25 +75,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left: Text Content */}
           <div className="flex-1">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }} className="text-rose-600 mb-8 text-xs tracking-[0.3em]">
-
-              CREATIVE DESIGNER
-            </motion.p>
             
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
-              Building at the
-              <br />
-              intersection of business,
-              <br />
-              <span className="text-[#a06bfa]">design & vision.</span>
-            </motion.h1>
+
+
+
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -230,8 +230,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+              transition={{ duration: 0.6 }}>
+
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
             </motion.div>
@@ -319,8 +319,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+            transition={{ duration: 0.7 }}>
+
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
             <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
             <a
