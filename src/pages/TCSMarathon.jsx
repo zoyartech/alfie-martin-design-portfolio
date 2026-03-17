@@ -235,7 +235,7 @@ export default function TCSMarathon() {
         <section className="py-20 px-6 lg:px-12 bg-[#F3F2EC]">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
             <div className="flex-1 w-full flex justify-center">
-               <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a23ccbea0_Screenshot2026-02-13at114049AM.png" alt="Live Map Screen" className="max-h-[700px] object-contain shadow-2xl rounded-3xl" />
+               
             </div>
             <div className="flex-1">
                 <h2 className="text-3xl lg:text-5xl font-medium mb-12 text-[#333]">Key Features Designed</h2>
@@ -351,6 +351,6 @@ export default function TCSMarathon() {
           <p className="text-xs text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
