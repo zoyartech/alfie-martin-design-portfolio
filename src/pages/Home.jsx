@@ -9,7 +9,20 @@ const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png", caption: "Microsoft — Design Systems" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png", caption: "Brand Identity Work" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png", caption: "Visual Direction" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg", caption: "Visual Identity" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg", caption: "Visual Identity" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/66b2b5477_50x70cm-indoor-poster-frame-mockup-template-69b69d83064993c800576d31-2x.png", caption: "Art Direction" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/02667b816_50x70-poster-frame-and-photo-frame-on-room-wall-mockup-template-69b69cff064993c800576cf6-2x.png", caption: "Art Direction" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0fa026090_IMG_34452.jpg", caption: "Editorial" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/907f626a2_IMG_34462.JPG", caption: "Editorial" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/232afe066_IMG_34472.jpg", caption: "Editorial" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2a68ce658_man-holding-a3-poster-flyer-mockup-template-69b69ded064993c800576d83-2x.png", caption: "Art Direction" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4939e8aea_IMG_2415.jpg", caption: "Art Direction" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/97f7483f6_IMG_2555.png", caption: "Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0dffa82fe_Screenshot2024-08-25at94758AM.PNG", caption: "Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fc6d8a5c3_top-view-sunlight-overlay-three-business-cards-mockup-template2x.jpg", caption: "Print Design" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/0c41596e7_three-beer-bottle-mockup-697539e94270b64fd1f22789-2x.png", caption: "Packaging" },
+{ src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4ddbc5527_54.png", caption: "Packaging" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/daee2761e_Untitled-October8202508552.jpg", caption: "Illustration" }];
 
 
 export default function Home() {
