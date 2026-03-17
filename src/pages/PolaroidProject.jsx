@@ -567,7 +567,7 @@ const htmlContent = `
       <span class="tag">Collaborations</span>
     </div>
     <div style="margin-top: 4rem; position: relative; width: 100%; padding-bottom: 56.25%;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" src="https://www.youtube.com/embed/JwJFN61YDaM" title="Polaroid Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" src="https://www.youtube.com/embed/JwJFN61YDaM?si=kuPUZIvNw8XQt6k2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
   <div class="hero-frame-cluster" style="display: none;"><div class="hero-frame-cluster-inner"></div></div>
