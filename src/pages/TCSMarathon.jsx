@@ -40,8 +40,8 @@ export default function TCSMarathon() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">PRODUCT DESIGN</p>
               <h2 className="text-4xl md:text-5xl font-light mb-6 max-w-4xl">TCS NYC Marathon App</h2>
-              <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">
-                Redesigned the official TCS NYC Marathon tracking app, improving the real-time runner tracking experience for over 1M spectators and participants.
+              <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">Overview
+I was brought on to redesign the race-day experience inside the TCS NYC Marathon mobile app — one of the most complex fan and participant experiences in live sports. With 50,000 runners and millions of spectators descending on five boroughs simultaneously, the design challenge wasn't just visual polish. It was real-time data architecture made human.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
