@@ -87,7 +87,7 @@ export default function About() {
           <div className="space-y-12">
             {[
             {
-              role: "UX Content Strategist",
+              role: "Product Growth Designer",
               company: "Grammarly",
               period: "2022 - 2024",
               description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
