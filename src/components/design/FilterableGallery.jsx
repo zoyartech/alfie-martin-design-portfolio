@@ -36,18 +36,19 @@ const projects = [
   tags: ["Mobile Design", "Real-Time Data", "Sports"]
 },
 {
-  title: "Polaroid Digital Brand Identity",
-  category: "Brand Identity",
-  industry: "Consumer",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
-  year: "2023",
-  summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
-  stats: [
-  { label: "Brand Recall", value: "+47%" },
-  { label: "Campaign Reach", value: "2.4M" },
-  { label: "Social Growth", value: "+120%" }],
+title: "Polaroid Digital Brand Identity",
+category: "Brand Identity",
+industry: "Consumer",
+image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
+year: "2023",
+link: "PolaroidProject",
+summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
+stats: [
+{ label: "Brand Recall", value: "+47%" },
+{ label: "Campaign Reach", value: "2.4M" },
+{ label: "Social Growth", value: "+120%" }],
 
-  tags: ["Brand Identity", "Visual Direction", "Consumer"]
+tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
 ];
 

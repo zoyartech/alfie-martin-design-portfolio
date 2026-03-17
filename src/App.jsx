@@ -18,6 +18,7 @@ import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
 import GrammarlyProject from './pages/GrammarlyProject';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import DesignMarathon from './pages/DesignMarathon';
+import PolaroidProject from './pages/PolaroidProject';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -57,6 +58,7 @@ const AuthenticatedApp = () => {
       <Route path="/GrammarlyProject" element={<GrammarlyProject />} />
       <Route path="/CaseStudyDetail" element={<CaseStudyDetail />} />
       <Route path="/DesignMarathon" element={<DesignMarathon />} />
+      <Route path="/PolaroidProject" element={<PolaroidProject />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
