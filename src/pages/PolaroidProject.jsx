@@ -566,7 +566,18 @@ const htmlContent = `
       <span class="tag">Content Strategy</span>
       <span class="tag">Collaborations</span>
     </div>
-    <div style="margin-top: 4rem; position: relative; width: 100%; padding-bottom: 56.25%;">
+    <div style="margin-top: 4rem; margin-bottom: 2rem;">
+      <h3>Narration along with visuals serve as emotional reminders of why polaroid is so special</h3>
+      <p style="white-space: pre-wrap; margin-top: 1rem;">w h a t d o e s i t t a k e t o c a p t u r e a m o m e n t i t t a k e s l i g h t
+t o i l l u m i n a t e t h e m o m e n t ?
+what we see and what we feel it takes chemistry to turn that light into matter
+and passion to continuously evolve our process a Polaroid photograph is a beautifully complex thing where each
+light-sensitive negative is made up of 15 layers thinner than a hair and
+designed to mimic the human eye the image comes to life as the dyes activate painting a photograph from
+right before our eyes it is the magic that happens
+a t  t h e  i n t e r s e c t i o n  o f  a r t  a n d  s c i e n c e:</p>
+    </div>
+    <div style="margin-top: 2rem; position: relative; width: 100%; padding-bottom: 56.25%;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" src="https://www.youtube.com/embed/JwJFN61YDaM?si=kuPUZIvNw8XQt6k2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
