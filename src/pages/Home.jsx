@@ -274,10 +274,8 @@ export default function Home() {
                 <img
                 src={item.src}
                 alt={item.caption}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-end">
-                  <p className="text-white text-xs tracking-wider px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.caption}</p>
-                </div>
+                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
               </motion.div>
             )}
           </div>
