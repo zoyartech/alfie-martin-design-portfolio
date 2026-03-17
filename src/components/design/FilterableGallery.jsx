@@ -41,6 +41,7 @@ const projects = [
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png",
   year: "2023",
+  link: "GrammarlyProject",
   summary: "Redesigned Grammarly's AI suggestion UX to reduce friction and improve writing confidence. Focused on tone, clarity, and progressive disclosure of AI reasoning.",
   stats: [
   { label: "Suggestion Accept Rate", value: "+35%" },
