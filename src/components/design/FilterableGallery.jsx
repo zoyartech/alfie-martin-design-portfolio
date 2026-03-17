@@ -36,7 +36,7 @@ const projects = [
   tags: ["Mobile Design", "Real-Time Data", "Sports"]
 },
 {
-title: "Polaroid Digital Brand Identity",
+title: "Helping an iconic brand make a splash",
 category: "Brand Identity",
 industry: "Consumer",
 image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
