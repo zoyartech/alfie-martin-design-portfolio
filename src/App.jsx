@@ -13,6 +13,11 @@ import CaseStudies from './pages/CaseStudies';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import TCSMarathon from './pages/TCSMarathon';
+import DesignStrategyAI from './pages/DesignStrategyAI';
+import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
+import GrammarlyProject from './pages/GrammarlyProject';
+import CaseStudyDetail from './pages/CaseStudyDetail';
+import DesignMarathon from './pages/DesignMarathon';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
