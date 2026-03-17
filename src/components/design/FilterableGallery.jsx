@@ -49,21 +49,6 @@ const projects = [
 
   tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
-{
-  title: "Workflow Optimization",
-  category: "Product Design",
-  industry: "Enterprise",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg",
-  year: "2022",
-  link: "WorkflowOptimizationHVAC",
-  summary: "Streamlined complex HVAC workflow management through a redesigned dashboard and task management system, reducing operational overhead for field teams.",
-  stats: [
-  { label: "Time Saved", value: "4hrs/day" },
-  { label: "Error Reduction", value: "65%" },
-  { label: "Adoption Rate", value: "91%" }],
-
-  tags: ["Enterprise UX", "Dashboards", "Workflow"]
-},
 ];
 
 
