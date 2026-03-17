@@ -132,8 +132,8 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-24 pt-12 border-t border-gray-100">
+            transition={{ duration: 0.6, delay: 0.8 }} className="mt-24 pt-40 pb-20 border-t border-gray-100">
+
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">PREVIOUSLY </p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
               {[
