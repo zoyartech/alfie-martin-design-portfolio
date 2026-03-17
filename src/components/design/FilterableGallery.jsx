@@ -24,7 +24,7 @@ const projects = [
   title: "TCS NYC Marathon App",
   category: "Product Design",
   industry: "Sports & Events",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d50da56f6_alsharedasketchwithyou2copy.jpg",
+  image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80",
   year: "2023",
   link: "TCSMarathon",
   summary: "Redesigned the official TCS NYC Marathon tracking app, improving the real-time runner tracking experience for over 1M spectators and participants.",
