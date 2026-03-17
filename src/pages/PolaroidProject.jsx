@@ -616,13 +616,8 @@ const htmlContent = `
         <p>I needed to identify the people who had made Polaroid iconic in the first place the early adopters, the artists, the experimenters and give them a reason to come back. Not as a retro curiosity. As something that still meant something.</p>
       </div>
       <div>
-        <div class="polaroid-cluster">
-          <div class="polaroid rotate-left">
-            <div class="polaroid-inner" style="width:180px;height:170px;"></div>
-          </div>
-          <div class="polaroid rotate-right" style="margin-bottom:1rem;">
-            <div class="polaroid-inner" style="width:130px;height:120px;"></div>
-          </div>
+        <div class="polaroid-cluster" style="justify-content: center;">
+          <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/714a7daec_IMG_1931.jpg" alt="Polaroids" style="width: 100%; max-width: 320px; height: auto; transform: rotate(-2deg); box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
         </div>
         <div class="pullquote">
           <p>"The brand had become nostalgia without a body a feeling without a product."</p>
@@ -659,6 +654,7 @@ const htmlContent = `
     </div>
 
     <p>I infused the content design with a deliberate sentimentality not the soft-focus, sepia-toned kind, but something more honest. The kind of feeling you get when you find an old photograph in a drawer. The brand voice I developed was warm without being saccharine, and specific without being niche.</p>
+    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/722c93dac_uuid26B9BE02-044A-4DC8-85FA-1C794DBDAE64code001library1type1mode1loctruecaptrue.png" alt="Polaroid Logo" style="width:100%; height:auto; margin-top: 3rem; mix-blend-mode: multiply;" />
   </div>
 </section>
 
@@ -693,6 +689,7 @@ const htmlContent = `
         </div>
       </div>
     </div>
+    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2624b7a29_IMG_1930.jpg" alt="Content Strategy Polaroids" style="width:100%; height:auto; margin-top: 4rem;" />
   </div>
 </section>
 
@@ -726,6 +723,7 @@ const htmlContent = `
     </div>
 
     <p>The contests served a dual purpose: they drove film sales directly, and they generated an enormous volume of authentic, community-created brand content that populated our feed and kept the emotional register of the account exactly where I wanted it alive, specific, and physical.</p>
+    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/21bb97f0b_two-iphone-ui-design-presentation-mockup-template-69b89b3889b2477e52ba9358-2x.png" alt="Social Campaign UI" style="width:100%; height:auto; margin-top: 4rem;" />
   </div>
 </section>
 
@@ -764,6 +762,7 @@ const htmlContent = `
         <p>The collaborations moved Polaroid from the nostalgia shelf into the contemporary cultural marketplace where its strongest potential buyers already lived.</p>
       </div>
     </div>
+    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5a757ad07_IMG_1932.jpg" alt="Collaboration Polaroid" style="width:100%; height:auto; margin-top: 2rem;" />
   </div>
 </section>
 
