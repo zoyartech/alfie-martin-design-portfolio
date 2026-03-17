@@ -470,27 +470,32 @@ const customCss = `
   }
 
   .polaroid-scope .role-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px;
+    background: var(--black);
     border: 1.5px solid var(--black);
-    margin-bottom: 3rem;
-    overflow: hidden;
+    margin-bottom: 4rem;
   }
 
   .polaroid-scope .role-item {
-    padding: 0.75rem 1.25rem;
-    border-right: 1px solid var(--black);
-    font-family: var(--mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
+    padding: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--black);
     background: var(--white);
   }
 
-  .polaroid-scope .role-item:last-child { border-right: none; }
-  .polaroid-scope .role-item span { color: var(--warm-gray); display: block; margin-bottom: 2px; font-size: 0.5rem; letter-spacing: 0.15em; }
+  .polaroid-scope .role-item span { 
+    color: var(--warm-gray); 
+    display: block; 
+    margin-bottom: 0.4rem; 
+    font-family: var(--mono);
+    font-size: 0.6rem; 
+    letter-spacing: 0.15em; 
+    text-transform: uppercase;
+  }
 
   .polaroid-scope .polaroid-cluster {
     display: flex;
@@ -626,7 +631,7 @@ at the intersection of art and science:</p>
 <!-- ROLE + CONTEXT -->
 <section>
   <div class="container">
-    <div class="section-label">Context</div>
+    <div class="section-label"><strong style="color: var(--black);">Context</strong></div>
     <div class="role-strip">
       <div class="role-item"><span>Role</span>Brand &amp; Growth Designer</div>
       <div class="role-item"><span>Scope</span>Identity · Campaign · Partnership</div>
