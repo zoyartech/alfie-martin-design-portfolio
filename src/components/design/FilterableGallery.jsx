@@ -9,7 +9,7 @@ const projects = [
   title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/96c379a5f_flopatt.png",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
