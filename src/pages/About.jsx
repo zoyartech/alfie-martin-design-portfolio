@@ -25,9 +25,6 @@ export default function About() {
               <Link to={createPageUrl("CaseStudies")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 CASE STUDIES
               </Link>
-              <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                VISUALS
-              </Link>
               <Link to={createPageUrl("Contact")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 CONTACT
               </Link>

@@ -40,9 +40,6 @@ export default function Contact() {
               <Link to={createPageUrl("CaseStudies")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
                 CASE STUDIES
               </Link>
-              <Link to={createPageUrl("Gallery")} className="text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
-                VISUALS
-              </Link>
               <Link to={createPageUrl("Contact")} className="text-xs tracking-[0.2em] text-black border-b border-black pb-1">
                 CONTACT
               </Link>
