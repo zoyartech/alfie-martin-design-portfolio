@@ -557,7 +557,7 @@ const htmlContent = `
   <div class="container">
     <div class="hero-eyebrow">Growth Design &nbsp;·&nbsp; Brand Strategy &nbsp;·&nbsp; Case Study</div>
     <h1>Polaroid<br><em>Reimagined.</em></h1>
-    <p class="hero-sub">How I rebuilt the world's most nostalgic camera brand from the inside out and turned a comeback into a cultural moment.</p>
+    <p class="hero-sub">Seth Godin once said "Marketing to everyone is marketing to no one". That was the overarching root cause of the problems Polaroid was having since they returned to the market:</p>
     <div class="hero-tags">
       <span class="tag">Brand Identity</span>
       <span class="tag">Growth Strategy</span>
