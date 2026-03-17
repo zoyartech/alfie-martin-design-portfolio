@@ -74,8 +74,22 @@ export default function TCSMarathon() {
           </div>
         </section>
 
+        {/* Gallery Images */}
+        <section className="py-16 px-6 lg:px-12 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a23ccbea0_Screenshot2026-02-13at114049AM.png" alt="App Overview" className="w-full h-auto rounded-xl shadow-sm object-cover" />
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c303508d6_2screens.png" alt="App Screens" className="w-full h-auto rounded-xl shadow-sm object-cover" />
+              
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3f043b281_BLUEMAP.png" alt="Map View" className="w-full h-auto rounded-xl shadow-sm object-cover" />
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/28b3bc06e_COIRUCJ.png" alt="TCS Logo" className="w-full h-auto rounded-xl shadow-sm object-cover" />
+              
+            </div>
+          </div>
+        </section>
+
         {/* Outcomes */}
-        <section className="py-16 px-6 lg:px-12">
+        <section className="py-16 px-6 lg:px-12 bg-gray-50">
           <div className="max-w-4xl mx-auto">
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">OUTCOMES</p>
             <h2 className="text-3xl font-light mb-12">Impact & Metrics</h2>
@@ -91,20 +105,6 @@ export default function TCSMarathon() {
                   <p className="text-gray-600 text-sm leading-relaxed">{item.label}</p>
                 </div>
               )}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Images */}
-        <section className="py-16 px-6 lg:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a23ccbea0_Screenshot2026-02-13at114049AM.png" alt="App Overview" className="w-full h-auto rounded-xl shadow-sm object-cover" />
-              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c303508d6_2screens.png" alt="App Screens" className="w-full h-auto rounded-xl shadow-sm object-cover" />
-              
-              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3f043b281_BLUEMAP.png" alt="Map View" className="w-full h-auto rounded-xl shadow-sm object-cover" />
-              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/28b3bc06e_COIRUCJ.png" alt="TCS Logo" className="w-full h-auto rounded-xl shadow-sm object-cover" />
-              
             </div>
           </div>
         </section>
