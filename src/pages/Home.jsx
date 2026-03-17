@@ -103,13 +103,13 @@ export default function Home() {
               hi my name is alfie, lets build things, research stuff, and keep learning. 
             </motion.h1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-gray-500 mt-12 max-w-md text-sm leading-relaxed">
-              My career path has not been a linear one. That is something I am grateful for its allowed me to work with some of the most talented people in the world, and its helped me stay inspired in my career.
-            </motion.p>
+            
+
+
+
+
+
+
 
             
 
