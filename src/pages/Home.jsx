@@ -48,49 +48,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-20">
-            <Link
-              to={createPageUrl("Home")}
-              className="text-sm tracking-[0.3em] font-semibold hover:text-[#8B7355] transition-colors duration-300">
 
-              ALFIE MARTIN
-            </Link>
-            <div className="hidden md:flex items-center gap-10">
-              <Link
-                to={createPageUrl("Home")}
-                className="relative text-xs tracking-[0.15em] font-medium text-black group">
-
-                HOME
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black"></span>
-              </Link>
-              <Link
-                to={createPageUrl("About")}
-                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
-
-                ABOUT
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link
-                to={createPageUrl("CaseStudies")}
-                className="relative text-xs tracking-[0.15em] font-medium text-gray-600 hover:text-black transition-colors group">
-
-                CASE STUDIES
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link
-                to={createPageUrl("Contact")}
-                className="relative text-xs tracking-[0.15em] font-medium px-6 py-2 border border-black hover:bg-black hover:text-white transition-all duration-300">
-
-                CONTACT
-              </Link>
-            </div>
-            <MobileNav activePage="Home" />
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section ref={heroRef} className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-28 md:pt-32 relative">
