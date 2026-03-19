@@ -695,7 +695,7 @@ at the intersection of art and science:</p>
     <div class="section-label">02 Content Strategy</div>
     <div class="two-col">
       <div>
-        <h2>Sentimentality as <em>Strategy.</em></h2>
+        <h2>Sentimentality as <em style="color: #3499db;">Strategy.</em></h2>
         <p>I approached content strategy as an emotional architecture problem. The question wasn't what to post it was what to make people feel, and in what sequence, so that purchasing film felt like a natural extension of that feeling.</p>
         <p>I built a content system anchored in specific emotional beats: the moment before a photo is taken, the wait while it develops, the ritual of sharing a physical print with someone. These beats became the rhythm of our content calendar and the framework for how we approached every touchpoint.</p>
         <p>By mapping content to emotional states rather than product features, I was able to connect the brand to something more durable than trend cycles the fundamental human desire to hold a moment still.</p>
@@ -728,7 +728,7 @@ at the intersection of art and science:</p>
 <section>
   <div class="container">
     <div class="section-label">03 Social Campaign</div>
-    <h2>Turning Instagram Into <em>a Film Counter.</em></h2>
+    <h2>Turning Instagram Into <em style="color: #3499db;">a Film Counter.</em></h2>
     <p>The insight I was working from was simple: Instagram had become the place people went to see photographs, but Polaroid was about making them. The contest structure I designed was built to bridge that gap to make participating on Instagram inseparable from purchasing and using film.</p>
 
     <div class="card-strip">
@@ -762,7 +762,7 @@ at the intersection of art and science:</p>
 <section>
   <div class="container">
     <div class="section-label">04 Collaborations</div>
-    <h2>Partnerships That <em>Meant Something.</em></h2>
+    <h2>Partnerships That <em style="color: #3499db;">Meant Something.</em></h2>
     <p>The collaborations I pursued weren't about borrowed heat they were about shared DNA. I looked for partners that had their own relationship to the ideas Polaroid stood for: immediacy, craft, cultural specificity, and the handmade. The two most significant partnerships I developed were with the Keith Haring estate and with Fendi.</p>
 
     <div class="collab-row">
@@ -803,7 +803,7 @@ at the intersection of art and science:</p>
     <div class="section-label">Reflection</div>
     <div class="two-col">
       <div>
-        <h2>What I <em>Learned.</em></h2>
+        <h2>What I <em style="color: #3499db;">Learned.</em></h2>
         <p>The Polaroid project taught me that the most complex brand problems are rarely about awareness. People knew Polaroid. The work was about belief rebuilding the conviction that this thing was still worth caring about, still worth spending money on, still worth getting your hands on.</p>
         <p>Growth design, in that context, meant something specific: it meant understanding that the path to purchase ran through feeling, and that feeling had to be designed with the same precision you'd apply to a funnel or a conversion rate. The contests, the identity, the collaborations each one was a designed emotional argument.</p>
         <p>What I came away with was a sharper understanding of how legacy brands create permission. When you have a brand with real cultural history, you don't invent relevance you excavate it. You find what was always true about it, strip away what accumulated on top, and hand it back to the people who made it matter in the first place.</p>
