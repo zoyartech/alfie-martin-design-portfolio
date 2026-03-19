@@ -24,7 +24,8 @@ const galleryImages = [
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4ddbc5527_54.png", caption: "Packaging" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/daee2761e_Untitled-October8202508552.jpg", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e60aead83_flowerrrr.png", caption: "Illustration" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7972ab4c8_IMG_61212.jpg", caption: "Illustration" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7972ab4c8_IMG_61212.jpg", caption: "Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" }];
 
 
 export default function Home() {
