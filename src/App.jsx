@@ -19,6 +19,7 @@ import GrammarlyProject from './pages/GrammarlyProject';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import DesignMarathon from './pages/DesignMarathon';
 import PolaroidProject from './pages/PolaroidProject';
+import ArbolCaseStudy from './pages/ArbolCaseStudy';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -59,6 +60,7 @@ const AuthenticatedApp = () => {
       <Route path="/CaseStudyDetail" element={<CaseStudyDetail />} />
       <Route path="/DesignMarathon" element={<DesignMarathon />} />
       <Route path="/PolaroidProject" element={<PolaroidProject />} />
+      <Route path="/ArbolCaseStudy" element={<ArbolCaseStudy />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
