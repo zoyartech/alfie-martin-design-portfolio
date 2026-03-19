@@ -50,6 +50,21 @@ stats: [
 
 tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
+{
+  title: "Designing trust into automated climate risk",
+  category: "Product Design",
+  industry: "Climate Risk",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
+  year: "2023",
+  link: "ArbolCaseStudy",
+  summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
+  stats: [
+    { label: "Broker Support Tickets", value: "↓ 60%" },
+    { label: "Contracts Bound", value: "↑ 3×" },
+    { label: "User Trust", value: "100%" }
+  ],
+  tags: ["AI", "Smart Contracts", "Product Design"]
+},
 ];
 
 
