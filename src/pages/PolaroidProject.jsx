@@ -40,10 +40,10 @@ export default function PolaroidProject() {
 
       <div className="pt-20">
         <style dangerouslySetInnerHTML={{ __html: customCss }} />
-        <div className="polaroid-scope" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        <div className="text-green-950 polaroid-scope" dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 const customCss = `
