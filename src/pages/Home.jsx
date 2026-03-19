@@ -137,10 +137,15 @@ export default function Home() {
               }}
               className="mt-12 lg:mt-20 w-full cursor-pointer">
               
-              <img
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png"
-                alt="Raven Artwork"
-                className="w-full max-w-2xl h-auto object-contain mix-blend-multiply" />
+              <iframe 
+                className="w-full max-w-2xl aspect-video rounded-xl shadow-lg"
+                src="https://www.youtube.com/embed/amPBmeD1QyA?si=Oo3iqL9Nijd11FM2" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              ></iframe>
               
             </motion.div>
 
