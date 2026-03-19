@@ -5,6 +5,15 @@ import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
 
+const carouselImages = [
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg",
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/66b2b5477_50x70cm-indoor-poster-frame-mockup-template-69b69d83064993c800576d31-2x.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0fa026090_IMG_34452.jpg"
+];
+
 export default function WorkflowOptimizationHVAC() {
   return (
     <div className="min-h-screen bg-white">
@@ -53,14 +62,36 @@ export default function WorkflowOptimizationHVAC() {
             </div>
         </section>
 
-        <section className="py-16 px-6 lg:px-12 bg-gray-50">
-          
-
-
-
-
-
-          
+        <section className="py-16 bg-gray-50 overflow-hidden relative">
+          <style>
+            {`
+            @keyframes scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-carousel {
+              animation: scroll 40s linear infinite;
+              display: flex;
+              width: fit-content;
+            }
+            `}
+          </style>
+          <div className="animate-carousel hover:[animation-play-state:paused]">
+            <div className="flex items-center gap-8 pr-8">
+              {carouselImages.map((src, index) => (
+                <div key={index} className="w-[85vw] md:w-[65vw] flex-shrink-0">
+                  <img src={src} alt="Gallery" className="w-full h-auto max-h-[80vh] object-contain rounded-lg" />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-8 pr-8">
+              {carouselImages.map((src, index) => (
+                <div key={`dup-${index}`} className="w-[85vw] md:w-[65vw] flex-shrink-0">
+                  <img src={src} alt="Gallery" className="w-full h-auto max-h-[80vh] object-contain rounded-lg" />
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         
