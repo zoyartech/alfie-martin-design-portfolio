@@ -49,7 +49,7 @@ export default function WorkflowOptimizationHVAC() {
 
         <section className="py-8 px-6 lg:px-12">
             <div className="max-w-7xl mx-auto">
-                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/229315afd_2-ratio-1-outdoor-billboard-mockup-template-69bbedce2b60532d8c62109f-2x.png" alt="Dashboard Design" className="w-full h-auto object-cover rounded-lg aspect-[21/9]" />
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/229315afd_2-ratio-1-outdoor-billboard-mockup-template-69bbedce2b60532d8c62109f-2x.png" alt="Dashboard Design" className="w-full h-auto object-contain rounded-lg" />
             </div>
         </section>
 
