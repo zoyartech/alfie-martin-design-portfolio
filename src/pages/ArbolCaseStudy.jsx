@@ -22,12 +22,12 @@ export default function ArbolCaseStudy() {
     <div className="arbol-case-study">
       <style dangerouslySetInnerHTML={{ __html: `
         .arbol-case-study {
-            --lime: #B3F000;
-            --lime-dim: #8fc200;
+            --lime: #88df72;
+            --lime-dim: #6eb25b;
             --bg: #0a0c08;
             --bg2: #0f120c;
             --bg3: #151a10;
-            --border: rgba(179,240,0,0.15);
+            --border: rgba(136,223,114,0.15);
             --text: #d4dbc8;
             --text-dim: #7a8870;
             --white: #f0f4e8;
@@ -88,7 +88,7 @@ export default function ArbolCaseStudy() {
             position: absolute;
             bottom: 0; right: -10%;
             width: 55vw; height: 55vw;
-            background: radial-gradient(circle, rgba(179,240,0,0.04) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(136,223,114,0.04) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -257,7 +257,7 @@ export default function ArbolCaseStudy() {
         .arbol-case-study .callout {
             border-left: 2px solid var(--lime);
             padding: 1.5rem 2rem;
-            background: rgba(179,240,0,0.03);
+            background: rgba(136,223,114,0.03);
             margin: 2rem 0;
         }
 
@@ -371,7 +371,7 @@ export default function ArbolCaseStudy() {
 
         .arbol-case-study .flow-node.active {
             border-color: var(--lime);
-            background: rgba(179,240,0,0.05);
+            background: rgba(136,223,114,0.05);
         }
 
         .arbol-case-study .flow-node .node-label {
@@ -434,7 +434,7 @@ export default function ArbolCaseStudy() {
         }
 
         .arbol-case-study .decision-table tr:hover td {
-            background: rgba(179,240,0,0.02);
+            background: rgba(136,223,114,0.02);
         }
 
         .arbol-case-study .decision-table td:first-child {
@@ -444,7 +444,7 @@ export default function ArbolCaseStudy() {
         }
 
         .arbol-case-study .outcome-banner {
-            background: rgba(179,240,0,0.05);
+            background: rgba(136,223,114,0.05);
             border: 1px solid var(--lime);
             padding: 3rem 4rem;
             display: grid;
