@@ -9,7 +9,7 @@ export default function ArbolCaseStudy() {
 
     const link2 = document.createElement('link');
     link2.rel = 'stylesheet';
-    link2.href = 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap';
+    link2.href = 'https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap';
     document.head.appendChild(link2);
 
     return () => {
@@ -61,7 +61,7 @@ export default function ArbolCaseStudy() {
         }
 
         .arbol-case-study .logo-mark {
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'Barlow', sans-serif;
             font-size: 0.7rem;
             color: var(--lime);
             letter-spacing: 0.2em;
