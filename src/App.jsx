@@ -19,7 +19,7 @@ import GrammarlyProject from './pages/GrammarlyProject';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import DesignMarathon from './pages/DesignMarathon';
 import PolaroidProject from './pages/PolaroidProject';
-import ArbolCaseStudy from './pages/ArbolCaseStudy';
+import ArbolCaseStudy from './pages/ArbolCaseStudy.jsx';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
