@@ -34,7 +34,7 @@ export default function WorkflowOptimizationHVAC() {
           <div className="max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">ENTERPRISE UX</p>
-              <h2 className="text-4xl md:text-5xl font-light mb-6 max-w-4xl">Workflow Optimization for HVAC</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-6 max-w-4xl">Creative Direction and Visual Design</h2>
               <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">
                 Streamlined complex HVAC workflow management through a redesigned dashboard and task management system, reducing operational overhead for field teams.
               </p>
