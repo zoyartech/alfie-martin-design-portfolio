@@ -641,7 +641,7 @@ at the intersection of art and science:</p>
 
     <div class="two-col">
       <div>
-        <h2>The <em>Challenge.</em></h2>
+        <h2>The <em style="color: #3499db;">Challenge.</em></h2>
         <p>When Polaroid returned to actively selling products after its extended hiatus, the brand faced a paradox that most companies would envy and dread simultaneously: everyone knew the name, and almost no one knew what it stood for anymore.</p>
         <p>The challenge wasn't recognition it was relevance. Polaroid had become nostalgia without a body, a feeling without a product. My job was to give that feeling somewhere to live again, and to build a growth strategy that could convert sentiment into sales.</p>
         <p>I needed to identify the people who had made Polaroid iconic in the first place the early adopters, the artists, the experimenters and give them a reason to come back. Not as a retro curiosity. As something that still meant something.</p>
