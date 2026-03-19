@@ -531,6 +531,7 @@ export default function ArbolCaseStudy() {
         }
       ` }} />
 
+      <div className="pt-20"></div>
       <header>
         <div className="logo-mark">Arbol Inc. — Case Study</div>
         <div className="breadcrumb">

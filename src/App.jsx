@@ -20,6 +20,7 @@ import CaseStudyDetail from './pages/CaseStudyDetail';
 import DesignMarathon from './pages/DesignMarathon';
 import PolaroidProject from './pages/PolaroidProject';
 import ArbolCaseStudy from './pages/ArbolCaseStudy.jsx';
+import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -46,8 +47,10 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/Home" replace />} />
+    <>
+      <GlobalNav />
+      <Routes>
+        <Route path="/" element={<Navigate to="/Home" replace />} />
       <Route path="/Home" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/CaseStudies" element={<CaseStudies />} />
@@ -63,6 +66,7 @@ const AuthenticatedApp = () => {
       <Route path="/ArbolCaseStudy" element={<ArbolCaseStudy />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
+    </>
   );
 };
 
