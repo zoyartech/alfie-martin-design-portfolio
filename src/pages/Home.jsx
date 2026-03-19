@@ -79,8 +79,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ y: yText }} className="text-4xl font-light tracking-tight leading-[1.1] md:text-6xl lg:text-7xl max-w-4xl">
-              
+              style={{ y: yText }}
+              className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
               hi my name is alfie, lets build things, research stuff, and keep learning. 
             </motion.h1>
             
@@ -98,7 +98,7 @@ export default function Home() {
               <img
                 src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png"
                 alt="Raven Artwork"
-                className="w-full max-w-2xl h-auto object-contain mix-blend-multiply" />
+                className="w-[200%] max-w-[84rem] h-auto object-contain mix-blend-multiply -ml-[5%]" />
               
             </motion.div>
 
