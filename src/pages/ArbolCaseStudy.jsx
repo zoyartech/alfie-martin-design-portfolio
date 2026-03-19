@@ -597,9 +597,9 @@ export default function ArbolCaseStudy() {
             <span className="stat-num">$2B+</span>
             <span className="stat-desc">Notional risk transferred through the platform</span>
           </div>
-          <div className="stat-item">
+          <div className="bg-[#ffe9d6] text-slate-950 stat-item">
             <span className="stat-num">15+</span>
-            <span className="stat-desc">Countries utilizing Arbol products</span>
+            <span className="bg-transparent text-slate-950 font-bold stat-desc">COUNTRIES UTILIZING ARBOL PRODUCTS</span>
           </div>
           <div className="stat-item">
             <span className="stat-num">50%</span>
@@ -761,11 +761,11 @@ export default function ArbolCaseStudy() {
         </div>
 
         <div style={{ marginTop: '4rem', marginBottom: '1rem', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/116e668fd_ARBOLUI.png" 
-            alt="Arbol UI Elements" 
-            style={{ width: '100%', height: 'auto', display: 'block' }} 
-          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/116e668fd_ARBOLUI.png"
+            alt="Arbol UI Elements"
+            style={{ width: '100%', height: 'auto', display: 'block' }} />
+          
         </div>
       </section>
 
@@ -791,11 +791,11 @@ export default function ArbolCaseStudy() {
 
       <section>
         <div style={{ marginTop: '2rem', marginBottom: '4rem', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df9ef1f7a_ARBOLUI2.png" 
-            alt="Arbol UI Components" 
-            style={{ width: '100%', height: 'auto', display: 'block' }} 
-          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df9ef1f7a_ARBOLUI2.png"
+            alt="Arbol UI Components"
+            style={{ width: '100%', height: 'auto', display: 'block' }} />
+          
         </div>
 
         <div className="section-number">07 — Outcomes</div>
