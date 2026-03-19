@@ -662,7 +662,7 @@ at the intersection of art and science:</p>
 <section>
   <div class="container">
     <div class="section-label">01 Brand Identity</div>
-    <h2>Designing for <em>the People<br>Who Invented the Culture.</em></h2>
+    <h2>Designing for <em style="color: #3499db;">the People<br>Who Invented the Culture.</em></h2>
     <p>I began by going back to the source. Polaroid's original audience wasn't nostalgic they were radical. They were artists who wanted immediacy, experimenters who liked happy accidents, and innovators who believed a photograph you could hold in your hand, still warm from the camera, was a different thing entirely than one you sent to a lab.</p>
     <p>I redesigned the brand identity to speak directly to that lineage. The visual language I developed honored the physical and tactile qualities that made Polaroid distinct the frame, the weight of the paper, the specific color quality of instant film while stripping away the layer of kitschy nostalgia that had accumulated over the hiatus years.</p>
 
