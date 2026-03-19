@@ -35,14 +35,14 @@ export default function WorkflowOptimizationHVAC() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">ENTERPRISE UX</p>
               <h2 className="text-4xl md:text-5xl font-light mb-6 max-w-4xl">Creative Direction and Visual Design</h2>
-              <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">
-                Streamlined complex HVAC workflow management through a redesigned dashboard and task management system, reducing operational overhead for field teams.
-              </p>
+              
+
+              
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
-              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">ROLE</p><p className="text-gray-700">UX Strategy & Design</p></div>
-              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">INDUSTRY</p><p className="text-gray-700">Enterprise Logistics</p></div>
-              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">YEAR</p><p className="text-gray-700">2022</p></div>
+              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">ROLE</p><p className="text-gray-700">Creative Direction, Brand, Visuals</p></div>
+              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">INDUSTRY</p><p className="text-gray-700">Various</p></div>
+              <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">YEAR</p><p className="text-gray-700">2012-</p></div>
             </div>
           </div>
         </section>
