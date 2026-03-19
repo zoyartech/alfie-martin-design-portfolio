@@ -31,7 +31,7 @@ export default function ArbolCaseStudy() {
             --text: #d4dbc8;
             --text-dim: #7a8870;
             --white: #f0f4e8;
-            background: var(--bg);
+            background: linear-gradient(180deg, #0d1228 0%, #1d3f44 100%);
             color: var(--text);
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
