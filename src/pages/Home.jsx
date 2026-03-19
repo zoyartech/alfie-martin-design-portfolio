@@ -79,8 +79,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ y: yText }}
-              className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
+              style={{ y: yText }} className="text-4xl font-light tracking-tight leading-[1.1] md:text-6xl lg:text-7xl max-w-4xl">
+              
               hi my name is alfie, lets build things, research stuff, and keep learning. 
             </motion.h1>
             
