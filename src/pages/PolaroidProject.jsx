@@ -576,7 +576,7 @@ const htmlContent = `
 <div class="hero">
   <div class="container">
     <div class="hero-eyebrow">Growth Design &nbsp;·&nbsp; Brand Strategy &nbsp;·&nbsp; Case Study</div>
-    <h1>Polaroid<br><em>Reimagined.</em></h1>
+    <h1>Polaroid<br><em style="color: #3499db;">Reimagined.</em></h1>
     <p class="hero-sub">Seth Godin once said "Marketing to everyone is marketing to no one". That was the overarching root cause of the problems Polaroid was having since they returned to the market:</p>
     <div class="hero-tags">
       <span class="tag">Brand Identity</span>
