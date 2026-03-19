@@ -39,7 +39,7 @@ const projects = [
 title: "Helping an iconic brand make a splash",
 category: "Brand Identity",
 industry: "Consumer",
-image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png",
+image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
 year: "2023",
 link: "PolaroidProject",
 summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
@@ -112,7 +112,7 @@ function ProjectCard({ project }) {
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
         />
       </div>
       <div className="pt-4">
