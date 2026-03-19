@@ -664,22 +664,22 @@ export default function ArbolCaseStudy() {
           <div className="process-step">
             <span className="step-num">Challenge 01</span>
             <h3>Explainable AI pricing</h3>
-            <p>How do you surface machine learning pricing logic to a non-technical broker in a way that builds confidence rather than confusion?</p>
+            <p className="text-slate-50 font-semibold">How do you surface machine learning pricing logic to a non-technical broker in a way that builds confidence rather than confusion?</p>
           </div>
           <div className="process-step">
             <span className="step-num">Challenge 02</span>
             <h3>Contract state visibility</h3>
-            <p>How do you give users a live sense of where they stand relative to a weather trigger — without overwhelming them with data they can't act on?</p>
+            <p className="text-slate-50 font-semibold">How do you give users a live sense of where they stand relative to a weather trigger without overwhelming them with data they can't act on?</p>
           </div>
           <div className="process-step">
             <span className="step-num">Challenge 03</span>
             <h3>Smart contract as human event</h3>
-            <p>How do you translate an on-chain execution event into a communication artifact that feels meaningful, auditable, and emotionally complete?</p>
+            <p className="text-slate-50 font-bold">How do you translate an on-chain execution event into a communication artifact that feels meaningful, auditable, and emotionally complete?</p>
           </div>
           <div className="process-step">
             <span className="step-num">Challenge 04</span>
             <h3>Multi-tier user mental models</h3>
-            <p>How do you design a single platform that serves users across a spectrum from commodity trader to subsistence farmer without patronizing either end?</p>
+            <p className="text-slate-50 font-bold">How do you design a single platform that serves users across a spectrum from commodity trader to subsistence farmer without patronizing either end?</p>
           </div>
         </div>
       </section>
@@ -734,12 +734,12 @@ export default function ArbolCaseStudy() {
             </div>
             <div className="flow-arrow"></div>
             <div className="flow-node">
-              <span className="node-label">Step 2</span>
+              <span className="text-zinc-50 font-semibold node-label">STEP 2</span>
               <span className="node-title">Policy Active &amp; Monitored</span>
             </div>
             <div className="flow-arrow"></div>
-            <div className="flow-node active">
-              <span className="node-label">Step 3</span>
+            <div className="bg-slate-900 text-slate-50 flow-node active">
+              <span className="text-[#fafafa] node-label">STEP 3</span>
               <span className="node-title">Threshold Crossed</span>
             </div>
             <div className="flow-arrow"></div>
@@ -749,7 +749,7 @@ export default function ArbolCaseStudy() {
             </div>
             <div className="flow-arrow"></div>
             <div className="flow-node active">
-              <span className="node-label">Step 5</span>
+              <span className="text-[#ffffff] font-bold node-label">STEP 5</span>
               <span className="node-title">Payout Executes On-Chain</span>
             </div>
             <div className="flow-arrow"></div>
@@ -775,7 +775,7 @@ export default function ArbolCaseStudy() {
           <div>
             <h2>Working across <em>hard boundaries</em></h2>
             <p>This project required sustained collaboration with three teams whose professional vocabularies didn't naturally intersect: the data science team building the ML pricing models, the blockchain engineering team maintaining the smart contract infrastructure, and the commercial team selling to brokers and enterprise clients.</p>
-            <p>I ran weekly translation sessions — meetings where I would present back to engineers what I understood their systems to do in plain language, and they would correct me. Those corrections became the source material for interface copy, explanatory UI patterns, and the Settlement Record language.</p>
+            <p>I ran weekly translation sessions  meetings where I would present back to engineers what I understood their systems to do in plain language, and they would correct me. Those corrections became the source material for interface copy, explanatory UI patterns, and the Settlement Record language.</p>
             <p>I also embedded myself in three broker sales calls during the research phase. Watching how the commercial team narrated the product to prospective clients gave me the clearest possible picture of what the interface needed to say on their behalf.</p>
           </div>
           <div>
@@ -789,7 +789,7 @@ export default function ArbolCaseStudy() {
         </div>
       </section>
 
-      <section>
+      <section className="bg-slate-950">
         <div style={{ marginTop: '2rem', marginBottom: '4rem', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df9ef1f7a_ARBOLUI2.png"
@@ -803,13 +803,13 @@ export default function ArbolCaseStudy() {
         <p>The redesigned AI underwriter and smart contract UX rolled out across the broker portal in Q3 2023 and was incrementally extended to the direct client dashboard through Q4. Outcomes were tracked across a mix of quantitative platform metrics and qualitative broker feedback.</p>
 
         <div className="outcome-banner">
-          <div className="outcome-item">
+          <div className="text-[#ffffff] outcome-item">
             <span className="outcome-val">↓ 60%</span>
-            <span className="outcome-desc">Reduction in broker support tickets related to pricing explanation requests after launch of the AI explainability panel</span>
+            <span className="text-[#ffffff] font-semibold outcome-desc">Reduction in broker support tickets related to pricing explanation requests after launch of the AI explainability panel</span>
           </div>
           <div className="outcome-item">
             <span className="outcome-val">↑ 3×</span>
-            <span className="outcome-desc">Increase in contracts bound per broker per month in the twelve months following the contract builder redesign</span>
+            <span className="text-[#ffffff] outcome-desc">Increase in contracts bound per broker per month in the twelve months following the contract builder redesign</span>
           </div>
           <div className="outcome-item">
             <span className="outcome-val">100%</span>
@@ -818,8 +818,8 @@ export default function ArbolCaseStudy() {
         </div>
 
         <div style={{ marginTop: '2.5rem' }}>
-          <p>Beyond metrics, the design work materially changed how Arbol presented itself to new verticals. The map-first contract builder was specifically cited by the commercial team as a pivotal sales tool in expanding into energy derivatives and travel verticals — categories where the risk-to-geography relationship was central to a prospect's ability to imagine the product working for them.</p>
-          <p>The Settlement Record format also became a template used by the commercial team in prospect demonstrations — showing a completed payout document from an actual agricultural client was a more effective sales artifact than any pitch deck slide.</p>
+          <p>Beyond metrics, the design work materially changed how Arbol presented itself to new verticals. The map first contract builder was specifically cited by the commercial team as a pivotal sales tool in expanding into energy derivatives and travel verticals  categories where the risk-to-geography relationship was central to a prospect's ability to imagine the product working for them.</p>
+          <p>The Settlement Record format also became a template used by the commercial team in prospect demonstrations showing a completed payout document from an actual agricultural client was a more effective sales artifact than any pitch deck slide.</p>
         </div>
       </section>
 
@@ -828,9 +828,9 @@ export default function ArbolCaseStudy() {
         <div className="two-col">
           <div>
             <h2>What this project <em>taught me</em></h2>
-            <p>Designing at the intersection of AI and financial automation required me to resist two common failure modes: over-engineering transparency (turning every model weight into a visible knob) and under-engineering it (hiding complexity behind false simplicity).</p>
-            <p>The right level of explainability isn't determined by what's technically possible to surface — it's determined by what users actually need to do next. A broker needs to sell. An enterprise risk manager needs to file. A farmer needs to feel certain. The design challenge was building systems that served all three without treating any of them as the default user.</p>
-            <p>Smart contracts, in particular, presented a design problem I hadn't encountered before: how do you make an event that happened entirely outside human action feel human? The answer, I came to believe, was in the documentation layer — not in making the contract mechanism visible, but in giving the outcome meaning through language, context, and format.</p>
+            <p>Designing at the intersection of AI and financial automation required me to resist two common failure modes: over engineering transparency (turning every model weight into a visible knob) and under engineering it (hiding complexity behind false simplicity).</p>
+            <p>The right level of explainability isn't determined by what's technically possible to surface  it's determined by what users actually need to do next. A broker needs to sell. An enterprise risk manager needs to file. A farmer needs to feel certain. The design challenge was building systems that served all three without treating any of them as the default user.</p>
+            <p>Smart contracts, in particular, presented a design problem I hadn't encountered before: how do you make an event that happened entirely outside human action feel human? The answer, I came to believe, was in the documentation layer  not in making the contract mechanism visible, but in giving the outcome meaning through language, context, and format.</p>
           </div>
           <div>
             <div className="card">
