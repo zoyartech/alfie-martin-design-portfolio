@@ -48,6 +48,7 @@
  * The mainPage value must match a key in the PAGES object exactly.
  */
 import About from './pages/About';
+import ArbolCaseStudy from './pages/ArbolCaseStudy';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import CaseStudies from './pages/CaseStudies';
@@ -59,12 +60,14 @@ import DesignStrategyAI from './pages/DesignStrategyAI';
 import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
+import PolaroidProject from './pages/PolaroidProject';
 import TCSMarathon from './pages/TCSMarathon';
 import WorkflowOptimizationHVAC from './pages/WorkflowOptimizationHVAC';
 
 
 export const PAGES = {
     "About": About,
+    "ArbolCaseStudy": ArbolCaseStudy,
     "Blog": Blog,
     "BlogPost": BlogPost,
     "CaseStudies": CaseStudies,
@@ -76,6 +79,7 @@ export const PAGES = {
     "Gallery": Gallery,
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
+    "PolaroidProject": PolaroidProject,
     "TCSMarathon": TCSMarathon,
     "WorkflowOptimizationHVAC": WorkflowOptimizationHVAC,
 }
