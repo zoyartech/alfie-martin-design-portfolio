@@ -20,7 +20,7 @@ export default function ArbolCaseStudy() {
 
   return (
     <div className="arbol-case-study">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{ __html: `
         .arbol-case-study {
             --lime: #B3F000;
             --lime-dim: #8fc200;
@@ -529,7 +529,7 @@ export default function ArbolCaseStudy() {
             .arbol-case-study .outcome-banner { grid-template-columns: 1fr; padding: 2rem; }
             .arbol-case-study .process-step { border-right: none; border-bottom: 1px solid var(--border); }
         }
-      `}} />
+      ` }} />
 
       <header>
         <div className="logo-mark">Arbol Inc. — Case Study</div>
@@ -614,10 +614,10 @@ export default function ArbolCaseStudy() {
           </div>
           <div>
             <ul className="insight-list">
-              <li><span><strong style={{color: 'var(--white)'}}>Opaque pricing logic.</strong> The AI underwriter output a premium price with no legible rationale — brokers were expected to trust a number that materialized from a black box.</span></li>
-              <li><span><strong style={{color: 'var(--white)'}}>Invisible contract state.</strong> Once a policy was bound, users had no live view of how close weather conditions were to triggering a payout.</span></li>
-              <li><span><strong style={{color: 'var(--white)'}}>Smart contracts without a human narrative.</strong> Blockchain execution was technically verifiable but experientially inert — users received no meaningful confirmation or explanation when payouts executed.</span></li>
-              <li><span><strong style={{color: 'var(--white)'}}>Mismatch in user sophistication.</strong> The same platform served commodity traders and first-generation farmers. Existing UI assumed the former.</span></li>
+              <li><span><strong style={{ color: 'var(--white)' }}>Opaque pricing logic.</strong> The AI underwriter output a premium price with no legible rationale — brokers were expected to trust a number that materialized from a black box.</span></li>
+              <li><span><strong style={{ color: 'var(--white)' }}>Invisible contract state.</strong> Once a policy was bound, users had no live view of how close weather conditions were to triggering a payout.</span></li>
+              <li><span><strong style={{ color: 'var(--white)' }}>Smart contracts without a human narrative.</strong> Blockchain execution was technically verifiable but experientially inert — users received no meaningful confirmation or explanation when payouts executed.</span></li>
+              <li><span><strong style={{ color: 'var(--white)' }}>Mismatch in user sophistication.</strong> The same platform served commodity traders and first-generation farmers. Existing UI assumed the former.</span></li>
             </ul>
           </div>
         </div>
@@ -632,21 +632,21 @@ export default function ArbolCaseStudy() {
           <div className="card">
             <span className="card-tag">Brokers & Agents</span>
             <h3>They needed to sell confidence</h3>
-            <p style={{fontSize: '0.9rem'}}>Brokers weren't just purchasing a product — they were endorsing it to their clients. They needed the platform to give them language and logic they could hand across a table. A premium they couldn't explain was a premium they couldn't sell.</p>
+            <p style={{ fontSize: '0.9rem' }}>Brokers weren't just purchasing a product — they were endorsing it to their clients. They needed the platform to give them language and logic they could hand across a table. A premium they couldn't explain was a premium they couldn't sell.</p>
           </div>
           <div className="card">
             <span className="card-tag">Enterprise Clients</span>
             <h3>They needed audit trails</h3>
-            <p style={{fontSize: '0.9rem'}}>Risk managers at banks and energy firms needed payout documentation that satisfied internal compliance. Blockchain finality was irrelevant to them — what mattered was a paper trail that read like a legitimate insurance settlement.</p>
+            <p style={{ fontSize: '0.9rem' }}>Risk managers at banks and energy firms needed payout documentation that satisfied internal compliance. Blockchain finality was irrelevant to them — what mattered was a paper trail that read like a legitimate insurance settlement.</p>
           </div>
           <div className="card">
             <span className="card-tag">Small Business Clients</span>
             <h3>They needed simplicity and reassurance</h3>
-            <p style={{fontSize: '0.9rem'}}>First-time parametric insurance users — small farmers, co-ops, gin operators — didn't need to understand the mechanism. They needed to feel certain the product would work and that someone would tell them when it did.</p>
+            <p style={{ fontSize: '0.9rem' }}>First-time parametric insurance users — small farmers, co-ops, gin operators — didn't need to understand the mechanism. They needed to feel certain the product would work and that someone would tell them when it did.</p>
           </div>
         </div>
 
-        <div className="callout" style={{marginTop: '2.5rem'}}>
+        <div className="callout" style={{ marginTop: '2.5rem' }}>
           <p>"The insight that reframed everything: users weren't afraid of automation. They were afraid of being invisible inside it — of having no way to know what was happening or whether anyone would tell them."</p>
         </div>
       </section>
@@ -720,8 +720,8 @@ export default function ArbolCaseStudy() {
           </tbody>
         </table>
 
-        <div style={{marginTop: '3rem'}}>
-          <div className="section-number" style={{marginBottom: '1rem', fontSize: '0.6rem'}}>Smart Contract Execution Flow — As Designed</div>
+        <div style={{ marginTop: '3rem' }}>
+          <div className="section-number" style={{ marginBottom: '1rem', fontSize: '0.6rem' }}>Smart Contract Execution Flow — As Designed</div>
           <div className="flow">
             <div className="flow-node">
               <span className="node-label">Step 1</span>
@@ -767,10 +767,10 @@ export default function ArbolCaseStudy() {
           </div>
           <div>
             <ul className="insight-list">
-              <li><span>Ran <strong style={{color: 'var(--white)'}}>15 user interviews</strong> across broker, enterprise, and direct client segments — with sessions conducted remotely and on-location in agricultural contexts.</span></li>
-              <li><span>Delivered <strong style={{color: 'var(--white)'}}>4 rounds of prototype testing</strong>, from low-fidelity concept validation through high-fidelity usability testing with live data.</span></li>
-              <li><span>Produced a <strong style={{color: 'var(--white)'}}>component library</strong> covering data visualization patterns, contract state indicators, and settlement documentation templates.</span></li>
-              <li><span>Authored an <strong style={{color: 'var(--white)'}}>AI explainability content guide</strong> that became the standard for how the data science team communicated model outputs to non-technical stakeholders across the organization.</span></li>
+              <li><span>Ran <strong style={{ color: 'var(--white)' }}>15 user interviews</strong> across broker, enterprise, and direct client segments — with sessions conducted remotely and on-location in agricultural contexts.</span></li>
+              <li><span>Delivered <strong style={{ color: 'var(--white)' }}>4 rounds of prototype testing</strong>, from low-fidelity concept validation through high-fidelity usability testing with live data.</span></li>
+              <li><span>Produced a <strong style={{ color: 'var(--white)' }}>component library</strong> covering data visualization patterns, contract state indicators, and settlement documentation templates.</span></li>
+              <li><span>Authored an <strong style={{ color: 'var(--white)' }}>AI explainability content guide</strong> that became the standard for how the data science team communicated model outputs to non-technical stakeholders across the organization.</span></li>
             </ul>
           </div>
         </div>
@@ -796,7 +796,7 @@ export default function ArbolCaseStudy() {
           </div>
         </div>
 
-        <div style={{marginTop: '2.5rem'}}>
+        <div style={{ marginTop: '2.5rem' }}>
           <p>Beyond metrics, the design work materially changed how Arbol presented itself to new verticals. The map-first contract builder was specifically cited by the commercial team as a pivotal sales tool in expanding into energy derivatives and travel verticals — categories where the risk-to-geography relationship was central to a prospect's ability to imagine the product working for them.</p>
           <p>The Settlement Record format also became a template used by the commercial team in prospect demonstrations — showing a completed payout document from an actual agricultural client was a more effective sales artifact than any pitch deck slide.</p>
         </div>
@@ -815,27 +815,27 @@ export default function ArbolCaseStudy() {
             <div className="card">
               <span className="card-tag">Key Takeaway</span>
               <h3>Algorithmic trust is a design problem</h3>
-              <p style={{fontSize: '0.9rem', marginTop: '0.5rem'}}>When AI makes a consequential decision and a smart contract executes it without human intervention, the design of the surrounding experience — what users see, read, and receive — is the entire trust infrastructure. There is no human adjuster to compensate for an interface that fails to communicate. The design is the relationship.</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>When AI makes a consequential decision and a smart contract executes it without human intervention, the design of the surrounding experience — what users see, read, and receive — is the entire trust infrastructure. There is no human adjuster to compensate for an interface that fails to communicate. The design is the relationship.</p>
             </div>
-            <div className="card" style={{marginTop: '1.5rem'}}>
+            <div className="card" style={{ marginTop: '1.5rem' }}>
               <span className="card-tag">What I'd Do Differently</span>
               <h3>Earlier collaboration with compliance</h3>
-              <p style={{fontSize: '0.9rem', marginTop: '0.5rem'}}>The Settlement Record format went through three revision cycles with the legal and compliance teams after initial design — a friction point that delayed the feature. In retrospect, embedding a compliance review at the research phase rather than the review phase would have saved significant iteration time and likely produced stronger documentation standards from the start.</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>The Settlement Record format went through three revision cycles with the legal and compliance teams after initial design — a friction point that delayed the feature. In retrospect, embedding a compliance review at the research phase rather than the review phase would have saved significant iteration time and likely produced stronger documentation standards from the start.</p>
             </div>
           </div>
         </div>
       </section>
 
       <footer>
-        <div className="footer-note">
-          Product Designer — Arbol Inc. · 2022–2023<br />
-          AI/ML Underwriter &amp; Smart Contract UX
-        </div>
-        <div className="footer-note" style={{textAlign: 'right'}}>
-          arbol.io<br />
-          Case Study 001
-        </div>
+        
+
+
+        
+        
+
+
+        
       </footer>
-    </div>
-  );
+    </div>);
+
 }
