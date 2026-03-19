@@ -759,6 +759,14 @@ export default function ArbolCaseStudy() {
             </div>
           </div>
         </div>
+
+        <div style={{ marginTop: '4rem', marginBottom: '1rem', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/116e668fd_ARBOLUI.png" 
+            alt="Arbol UI Elements" 
+            style={{ width: '100%', height: 'auto', display: 'block' }} 
+          />
+        </div>
       </section>
 
       <section>
