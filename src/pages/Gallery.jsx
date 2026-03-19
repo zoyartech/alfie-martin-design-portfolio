@@ -145,9 +145,9 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
 
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">Visuals</p>
+            <p className="text-gray-400 mb-4 text-xs font-semibold tracking-[0.3em]">Visuals</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Images</h1>
-            <p className="text-gray-500 max-w-xl">A curated collection from some of my favorite projects
+            <p className="text-gray-500 font-semibold max-w-xl">A curated collection from some of my favorite projects
 
 
             </p>
