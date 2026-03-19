@@ -27,7 +27,7 @@ const galleryImages = [
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = React.useState(null);
-  
+
   const heroRef = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -131,17 +131,17 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               style={{ y: yImage1 }}
               whileHover={{ scale: 1.02 }}
-              transition={{ 
+              transition={{
                 default: { duration: 0.8, delay: 0.4 },
                 scale: { duration: 0.3, delay: 0, ease: "easeOut" }
               }}
-              className="mt-12 lg:mt-20 w-full cursor-pointer"
-            >
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png" 
-                alt="Raven Artwork" 
-                className="w-full max-w-2xl h-auto object-contain mix-blend-multiply" 
-              />
+              className="mt-12 lg:mt-20 w-full cursor-pointer">
+              
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png"
+                alt="Raven Artwork"
+                className="w-full max-w-2xl h-auto object-contain mix-blend-multiply" />
+              
             </motion.div>
 
           </div>
@@ -152,16 +152,16 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: yImage2 }}
             whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ 
+            transition={{
               default: { duration: 0.8, delay: 0.4 },
               scale: { duration: 0.3, delay: 0, ease: "easeOut" },
               rotate: { duration: 0.3, delay: 0, ease: "easeOut" }
             }}
             className="hidden lg:flex flex-shrink-0 w-72 xl:w-96 items-start justify-center lg:ml-[21%] cursor-pointer">
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/47aaf6d92_Screenshot2026-02-22at100530AM.png"
-              alt="Floral figure artwork"
-              className="w-full" />
+            
+
+
+            
 
           </motion.div>
         </div>
