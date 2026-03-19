@@ -597,7 +597,7 @@ export default function ArbolCaseStudy() {
             <span className="stat-num">$2B+</span>
             <span className="stat-desc">Notional risk transferred through the platform</span>
           </div>
-          <div className="bg-[#ffe9d6] text-slate-950 stat-item">
+          <div className="bg-transparent text-slate-950 stat-item">
             <span className="stat-num">15+</span>
             <span className="bg-transparent text-slate-950 font-bold stat-desc">COUNTRIES UTILIZING ARBOL PRODUCTS</span>
           </div>
@@ -614,12 +614,12 @@ export default function ArbolCaseStudy() {
           <div>
             <h2>Automated decisions that <em>no one understood</em></h2>
             <p>Arbol's core technical infrastructure was formidable: petabyte-scale climate datasets from NOAA, NASA, and ESA fed into ML pricing models, and Chainlink oracles triggered smart contract payouts on-chain when weather thresholds were crossed. It was genuinely novel technology.</p>
-            <p>But the user experience around it had been designed by engineers, for engineers. Brokers enrolling a cotton gin in West Texas couldn't interpret a pricing curve. Underwriters couldn't explain to a client why a contract was priced the way it was. And no one had a clear mental model of what would actually happen — and when — if a triggering weather event occurred.</p>
+            <p>But the user experience around it had been designed by engineers, for engineers. Brokers enrolling a cotton gin in West Texas couldn't interpret a pricing curve. Underwriters couldn't explain to a client why a contract was priced the way it was. And no one had a clear mental model of what would actually happen  and when if a triggering weather event occurred.</p>
             <p>The result was friction at the point of sale, erosion of trust at the point of payout, and an inability to scale into new verticals without heavy hand-holding from Arbol's internal team.</p>
           </div>
           <div>
             <ul className="insight-list">
-              <li><span><strong style={{ color: 'var(--white)' }}>Opaque pricing logic.</strong> The AI underwriter output a premium price with no legible rationale — brokers were expected to trust a number that materialized from a black box.</span></li>
+              <li><span><strong style={{ color: 'var(--white)' }} className="text-green-500 font-medium">Opaque pricing logic.</strong> The AI underwriter output a premium price with no legible rationale — brokers were expected to trust a number that materialized from a black box.</span></li>
               <li><span><strong style={{ color: 'var(--white)' }}>Invisible contract state.</strong> Once a policy was bound, users had no live view of how close weather conditions were to triggering a payout.</span></li>
               <li><span><strong style={{ color: 'var(--white)' }}>Smart contracts without a human narrative.</strong> Blockchain execution was technically verifiable but experientially inert — users received no meaningful confirmation or explanation when payouts executed.</span></li>
               <li><span><strong style={{ color: 'var(--white)' }}>Mismatch in user sophistication.</strong> The same platform served commodity traders and first-generation farmers. Existing UI assumed the former.</span></li>
@@ -631,7 +631,7 @@ export default function ArbolCaseStudy() {
       <section>
         <div className="section-number">03 — Discovery & Research</div>
         <h2>Listening before designing</h2>
-        <p>Before touching wireframes, I ran three rounds of contextual inquiry and concept testing over eight weeks. I interviewed fifteen brokers and agents, four enterprise risk managers, three of Arbol's internal underwriters, and three clients from the agriculture vertical — including a cotton gin operator in Lamesa, Texas who had already received a payout.</p>
+        <p>Before touching wireframes, I ran three rounds of contextual inquiry and concept testing over eight weeks. I interviewed fifteen brokers and agents, four enterprise risk managers, three of Arbol's internal underwriters, and three clients from the agriculture vertical  including a cotton gin operator in Lamesa, Texas who had already received a payout.</p>
 
         <div className="three-col">
           <div className="card">
@@ -652,7 +652,7 @@ export default function ArbolCaseStudy() {
         </div>
 
         <div className="callout" style={{ marginTop: '2.5rem' }}>
-          <p>"The insight that reframed everything: users weren't afraid of automation. They were afraid of being invisible inside it — of having no way to know what was happening or whether anyone would tell them."</p>
+          <p>"The insight that reframed everything: users weren't afraid of automation. They were afraid of being invisible inside it  of having no way to know what was happening or whether anyone would tell them."</p>
         </div>
       </section>
 
