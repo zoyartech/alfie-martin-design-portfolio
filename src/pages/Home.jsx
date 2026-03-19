@@ -161,8 +161,8 @@ export default function Home() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-xs tracking-[0.3em] text-gray-400 mb-12">DESIGN PROCESS</motion.p>
+            transition={{ duration: 0.5 }} className="text-slate-900 mb-12 text-xs tracking-[0.3em]">
+            DESIGN PROCESS</motion.p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -192,10 +192,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="border-t border-gray-300 pt-6">
+              transition={{ duration: 0.6, delay: i * 0.1 }} className="text-zinc-900 pt-6 border-t border-gray-300">
+              
 
-                <span className="text-xs text-gray-400 tracking-wider">{item.step}</span>
+                <span className="text-gray-400 text-xs font-semibold tracking-wider">{item.step}</span>
                 <h3 className="text-xl font-medium mt-4 mb-3">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
