@@ -54,33 +54,33 @@ export default function WorkflowOptimizationHVAC() {
         </section>
 
         <section className="py-16 px-6 lg:px-12 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">THE CONTEXT</p>
-            <h2 className="text-3xl font-light mb-6">Simplifying complex field operations</h2>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Field technicians and dispatchers were overwhelmed by disjointed tools, leading to errors and delays. By mapping the full service lifecycle, we consolidated tools into an intuitive dashboard focused on priority tasks.
-            </p>
-          </div>
+          
+
+
+
+
+
+          
         </section>
 
-        <section className="py-16 px-6 lg:px-12">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">OUTCOMES</p>
-            <h2 className="text-3xl font-light mb-12">Impact & Metrics</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-              { stat: "4hrs", label: "Saved per day" },
-              { stat: "65%", label: "Error Reduction" },
-              { stat: "91%", label: "Adoption Rate" }].
-              map((item, i) =>
-              <div key={i} className="border-t-2 border-black pt-6">
-                  <p className="text-4xl font-light mb-2">{item.stat}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.label}</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
       </div>
 
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-100">
