@@ -540,6 +540,10 @@ export default function ArbolCaseStudy() {
         </div>
       </header>
 
+      <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
+        <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cdaeed2f6_Screenshot2026-03-18at113953PM.png" alt="Arbol Hero Image" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      </div>
+
       <div className="hero">
         <div className="hero-label">Case Study 001</div>
         <h1>Designing trust into <em>automated</em> climate risk</h1>
