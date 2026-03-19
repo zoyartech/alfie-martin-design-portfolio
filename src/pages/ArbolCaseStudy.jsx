@@ -790,6 +790,14 @@ export default function ArbolCaseStudy() {
       </section>
 
       <section>
+        <div style={{ marginTop: '2rem', marginBottom: '4rem', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df9ef1f7a_ARBOLUI2.png" 
+            alt="Arbol UI Components" 
+            style={{ width: '100%', height: 'auto', display: 'block' }} 
+          />
+        </div>
+
         <div className="section-number">07 — Outcomes</div>
         <h2>What changed after <em>the work shipped</em></h2>
         <p>The redesigned AI underwriter and smart contract UX rolled out across the broker portal in Q3 2023 and was incrementally extended to the direct client dashboard through Q4. Outcomes were tracked across a mix of quantitative platform metrics and qualitative broker feedback.</p>
