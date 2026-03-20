@@ -7,7 +7,7 @@ import MobileNav from "@/components/MobileNav";
 
 const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png", caption: "Microsoft — Design Systems" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e19e1242e_aaaaa.png", caption: "Brand Identity Work" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d5c087b60_2-ratio-1-outdoor-billboard-mockup-template-69bbedce2b60532d8c62109f-2x.png", caption: "CBS Sports HQ" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/774fe444f_event-poster-design-template-66e0f3800fa4ecb1a1e657ce-2x.png", caption: "Visual Direction" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg", caption: "Visual Identity" },
 { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/66b2b5477_50x70cm-indoor-poster-frame-mockup-template-69b69d83064993c800576d31-2x.png", caption: "Art Direction" },
