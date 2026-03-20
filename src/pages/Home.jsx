@@ -105,14 +105,8 @@ export default function Home() {
         </div>
 
         {/* Content Layer */}
-        <div className="relative z-20 flex-1 flex flex-col justify-between pt-32 pointer-events-none">
+        <div className="relative z-20 flex-1 flex flex-col justify-end pt-32 pointer-events-none">
           
-          {/* Middle labels */}
-          <div className="flex-1 flex items-center justify-between px-8 md:px-32">
-             <span className="text-white text-xs tracking-[0.3em] font-medium drop-shadow-md">BRAND DESIGNER</span>
-             <span className="text-white text-xs tracking-[0.3em] font-medium drop-shadow-md">ILLUSTRATOR</span>
-          </div>
-
           {/* Bottom text */}
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1 
