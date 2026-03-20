@@ -101,7 +101,7 @@ export default function Home() {
               <img
                 src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png"
                 alt="Raven Artwork"
-                className="w-[200%] max-w-[84rem] h-auto object-contain mix-blend-multiply -ml-[5%]" />
+                className="w-full max-w-[84rem] h-auto object-contain mix-blend-multiply mx-auto" />
               
             </motion.div>
 
