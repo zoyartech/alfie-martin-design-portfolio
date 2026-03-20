@@ -11,6 +11,7 @@ export default function MobileNav({ activePage = "" }) {
   { label: "HOME", page: "Home" },
   { label: "ABOUT", page: "About" },
   { label: "CASE STUDIES", page: "CaseStudies" },
+  { label: "BLOG", page: "Blog" },
   { label: "CONTACT", page: "Contact" }];
 
 

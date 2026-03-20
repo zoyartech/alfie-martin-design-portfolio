@@ -36,6 +36,12 @@ export default function GlobalNav() {
               <span className={`absolute bottom-0 left-0 h-[2px] bg-black transition-all duration-300 ${path === 'CaseStudies' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
             <Link
+              to={createPageUrl("Blog")}
+              className={`relative text-xs tracking-[0.15em] font-medium transition-colors group ${path === 'Blog' ? 'text-black' : 'text-gray-600 hover:text-black'}`}>
+              BLOG
+              <span className={`absolute bottom-0 left-0 h-[2px] bg-black transition-all duration-300 ${path === 'Blog' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
+            <Link
               to={createPageUrl("Contact")}
               className="relative text-xs tracking-[0.15em] font-medium px-6 py-2 border border-black hover:bg-black hover:text-white transition-all duration-300 text-black">
               CONTACT

@@ -20,6 +20,7 @@ import CaseStudyDetail from './pages/CaseStudyDetail';
 import DesignMarathon from './pages/DesignMarathon';
 import PolaroidProject from './pages/PolaroidProject';
 import ArbolCaseStudy from './pages/ArbolCaseStudy.jsx';
+import Blog from './pages/Blog';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -64,6 +65,7 @@ const AuthenticatedApp = () => {
       <Route path="/DesignMarathon" element={<DesignMarathon />} />
       <Route path="/PolaroidProject" element={<PolaroidProject />} />
       <Route path="/ArbolCaseStudy" element={<ArbolCaseStudy />} />
+      <Route path="/Blog" element={<Blog />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
