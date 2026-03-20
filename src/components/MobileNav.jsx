@@ -4,7 +4,7 @@ import { createPageUrl } from "@/utils";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function MobileNav({ activePage = "" }) {
+export default function MobileNav({ activePage = "", isTransparent = false }) {
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -19,7 +19,7 @@ export default function MobileNav({ activePage = "" }) {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(true)}
-        className="p-2 bg-white rounded-md text-gray-700 hover:text-black transition-colors"
+        className={`p-2 rounded-md transition-colors ${isTransparent ? 'text-white bg-transparent hover:text-white/80' : 'bg-white text-gray-700 hover:text-black'}`}
         aria-label="Open menu">
         
         <Menu className="w-5 h-5" />
