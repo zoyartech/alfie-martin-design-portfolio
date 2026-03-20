@@ -1,39 +1,39 @@
 export const blogPosts = [
   {
     id: "designing-for-ai-trust",
-    title: "Trust Isn't a Feature You Ship",
-    subtitle: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them.",
+    title: "I Don't Trust Your AI Product (And Neither Does Anyone Else)",
+    subtitle: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features.",
     category: "AI Design",
     date: "March 20, 2026",
     readTime: "3 min read",
-    metaDescription: "Trust isn't just a marketing problem; it's an engineering one.",
+    metaDescription: "Trust isn't a feature you ship. It's not a toggle in settings or a reassuring line of microcopy.",
     tags: ["AI", "Trust", "Product Strategy"],
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80",
-    excerpt: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them. And I think I've figured it out: most teams treat trust like a marketing problem instead of an engineering one.",
+    excerpt: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features. Here's what I notice every single time: they lead with the technology instead of the person using it.",
     content: [
       {
         type: "paragraph",
-        text: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them. And I think I've figured it out: most teams treat trust like a marketing problem instead of an engineering one."
+        text: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features. Here's what I notice every single time: they lead with the technology instead of the person using it."
       },
       {
         type: "paragraph",
-        text: "Here's what I mean. I see companies slap \"powered by AI\" on everything, toss in a few reassuring paragraphs about safety, and then act surprised when users are skeptical. You can't just tell people to trust you. That has never worked for anything, and it definitely doesn't work when your product hallucinates answers with total confidence."
+        text: "Trust isn't a feature you ship. It's not a toggle in settings or a reassuring line of microcopy."
       },
       {
         type: "paragraph",
-        text: "I think trust gets built in boring, unsexy ways. It gets built when your product says \"I don't know\" instead of making something up. It gets built when you show your work, when you let users peek behind the curtain and see why a recommendation was made. It gets built when you give people a way out, a manual override, a \"no thanks\" button that actually works."
+        text: "I think about trust as a design material. You build it the same way you build anything worth using: through transparency, consistency, and giving people real control. I want to know what data you're using. I want to understand why I'm seeing this output and not another one. I want an exit ramp when the AI gets it wrong, because it will get it wrong."
       },
       {
         type: "paragraph",
-        text: "I also think the industry has a bad habit of confusing capability with trustworthiness. Just because your model can do something doesn't mean users should feel comfortable letting it. I can do a backflip off a diving board. That doesn't mean you should trust me to do surgery. Context matters. Stakes matter. And too many products ignore both."
+        text: "The companies doing this well right now aren't the ones with the splashiest demos. They're the ones who let me correct the system, who show their work, who treat confidence scores like a responsibility instead of a marketing metric."
       },
       {
         type: "paragraph",
-        text: "The companies that are going to win the long game aren't the ones with the flashiest demos. They're the ones that earn trust through consistency, transparency, and a willingness to be honest about limitations. That's it. No secret formula. Just the same unglamorous principles that have built trust in every other industry for centuries."
+        text: "If you're building an AI product and your trust strategy is \"the model is really accurate,\" you've already lost. Accuracy is table stakes. Trust lives in the moments where things break and your product still respects the person sitting in front of it."
       },
       {
         type: "paragraph",
-        text: "We just have to actually follow them."
+        text: "Start there."
       }
     ]
   },
