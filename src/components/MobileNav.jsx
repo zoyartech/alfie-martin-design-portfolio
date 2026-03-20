@@ -18,10 +18,10 @@ export default function MobileNav({ activePage = "" }) {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(true)}
-        className="p-2 text-gray-700 hover:text-black transition-colors"
+        className="p-2 bg-white rounded-md text-gray-700 hover:text-black transition-colors"
         aria-label="Open menu">
         
-        <Menu className="bg-slate-50 lucide lucide-menu w-5 h-5" />
+        <Menu className="w-5 h-5" />
       </button>
 
       <AnimatePresence>
