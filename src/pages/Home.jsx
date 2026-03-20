@@ -40,7 +40,7 @@ export default function Home() {
       const rect = heroRef.current.getBoundingClientRect();
       setMousePos({
         x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
+        y: e.clientY - rect.top
       });
     }
   };
@@ -59,23 +59,23 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section 
-        ref={heroRef} 
+      <section
+        ref={heroRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setIsMouseIn(false)}
         onMouseEnter={() => setIsMouseIn(true)}
-        className="min-h-screen w-full relative overflow-hidden bg-black flex flex-col justify-between"
-      >
+        className="min-h-screen w-full relative overflow-hidden bg-black flex flex-col justify-between">
+        
         {/* Blurred background layer */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center blur-[12px] scale-110 opacity-80"
-          style={{ backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')` }}
-        />
+          style={{ backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')` }} />
+        
 
         {/* Unblurred square layer (Masked) */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center scale-110 opacity-100 transition-opacity duration-300"
-          style={{ 
+          style={{
             backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')`,
             clipPath: isMouseIn ? `polygon(
               ${mousePos.x - 180}px ${mousePos.y - 180}px, 
@@ -83,11 +83,11 @@ export default function Home() {
               ${mousePos.x + 180}px ${mousePos.y + 180}px, 
               ${mousePos.x - 180}px ${mousePos.y + 180}px
             )` : 'polygon(0 0, 0 0, 0 0, 0 0)'
-          }}
-        />
+          }} />
+        
 
         {/* Square outline tracking cursor */}
-        <div 
+        <div
           className="absolute pointer-events-none border border-white/50 transition-opacity duration-300 z-10"
           style={{
             left: mousePos.x - 180,
@@ -95,8 +95,8 @@ export default function Home() {
             width: 360,
             height: 360,
             opacity: isMouseIn ? 1 : 0
-          }}
-        >
+          }}>
+          
           {/* Center crosshair */}
           <div className="absolute top-1/2 left-1/2 w-3 h-3 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-80">
             <div className="w-[1px] h-full bg-white"></div>
@@ -109,10 +109,10 @@ export default function Home() {
           
           {/* Bottom text */}
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
-             <h1 
-               className="text-white font-light tracking-tighter drop-shadow-lg" 
-               style={{ fontSize: 'clamp(5rem, 18vw, 24rem)', lineHeight: 0.8 }}
-             >
+             <h1
+              className="text-white font-light tracking-tighter drop-shadow-lg"
+              style={{ fontSize: 'clamp(5rem, 18vw, 24rem)', lineHeight: 0.8 }}>
+              
                Alfie Martin
              </h1>
           </div>
@@ -228,12 +228,12 @@ export default function Home() {
               <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
             </motion.div>
-            <Link
-              to={createPageUrl("Gallery")}
-              className="hidden md:flex items-center gap-2 text-sm hover:text-[#8B7355] transition-colors">
+            
 
-              View All <ArrowRight className="w-4 h-4" />
-            </Link>
+
+
+
+            
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
