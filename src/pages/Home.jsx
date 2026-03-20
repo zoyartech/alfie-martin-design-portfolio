@@ -32,13 +32,18 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = React.useState(null);
 
   const heroRef = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  const yText = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const yImage1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
-  const yImage2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
+  const [isMouseIn, setIsMouseIn] = React.useState(false);
+
+  const handleMouseMove = (e) => {
+    if (heroRef.current) {
+      const rect = heroRef.current.getBoundingClientRect();
+      setMousePos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
 
   const openModal = (i) => setSelectedImage(i);
   const closeModal = () => setSelectedImage(null);
