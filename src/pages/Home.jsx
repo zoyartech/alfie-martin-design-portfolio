@@ -59,87 +59,81 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex flex-col justify-start px-6 lg:px-12 pt-28 md:pt-32 relative">
-        <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
-          {/* Left: Text Content */}
-          <div className="flex-1">
-            
+      <section 
+        ref={heroRef} 
+        onMouseMove={handleMouseMove}
+        onMouseLeave={() => setIsMouseIn(false)}
+        onMouseEnter={() => setIsMouseIn(true)}
+        className="min-h-screen w-full relative overflow-hidden bg-black flex flex-col justify-between"
+      >
+        {/* Blurred background layer */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center blur-[12px] scale-110 opacity-80"
+          style={{ backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')` }}
+        />
 
+        {/* Unblurred square layer (Masked) */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center scale-110 opacity-100 transition-opacity duration-300"
+          style={{ 
+            backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')`,
+            clipPath: isMouseIn ? `polygon(
+              ${mousePos.x - 180}px ${mousePos.y - 180}px, 
+              ${mousePos.x + 180}px ${mousePos.y - 180}px, 
+              ${mousePos.x + 180}px ${mousePos.y + 180}px, 
+              ${mousePos.x - 180}px ${mousePos.y + 180}px
+            )` : 'polygon(0 0, 0 0, 0 0, 0 0)'
+          }}
+        />
 
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-            
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ y: yText }}
-              className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-4xl">
-              hi my name is alfie, lets build things, research stuff, and keep learning. 
-            </motion.h1>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              style={{ y: yImage1 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{
-                default: { duration: 0.8, delay: 0.4 },
-                scale: { duration: 0.3, delay: 0, ease: "easeOut" }
-              }}
-              className="mt-12 lg:mt-20 w-full cursor-pointer">
-              
-              <img
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f20bc4fb9_835B8014-AA29-47B4-8C6F-FDA5E64EB595.png"
-                alt="Raven Artwork"
-                className="w-[200%] max-w-[84rem] h-auto object-contain mix-blend-multiply -ml-[5%]" />
-              
-            </motion.div>
-
+        {/* Square outline tracking cursor */}
+        <div 
+          className="absolute pointer-events-none border border-white/50 transition-opacity duration-300 z-10"
+          style={{
+            left: mousePos.x - 180,
+            top: mousePos.y - 180,
+            width: 360,
+            height: 360,
+            opacity: isMouseIn ? 1 : 0
+          }}
+        >
+          {/* Center crosshair */}
+          <div className="absolute top-1/2 left-1/2 w-3 h-3 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-80">
+            <div className="w-[1px] h-full bg-white"></div>
+            <div className="h-[1px] w-full bg-white absolute"></div>
           </div>
-
-          {/* Right: Carnation Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            style={{ y: yImage2 }}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{
-              default: { duration: 0.8, delay: 0.4 },
-              scale: { duration: 0.3, delay: 0, ease: "easeOut" },
-              rotate: { duration: 0.3, delay: 0, ease: "easeOut" }
-            }}
-            className="hidden lg:flex flex-shrink-0 w-72 xl:w-96 items-start justify-center lg:ml-[21%] cursor-pointer">
-            
-
-
-            
-
-          </motion.div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full mt-24">
-          {/* Logo Wall */}
+        {/* Content Layer */}
+        <div className="relative z-20 flex-1 flex flex-col justify-between pt-32 pointer-events-none">
+          
+          {/* Middle labels */}
+          <div className="flex-1 flex items-center justify-between px-8 md:px-32">
+             <span className="text-white text-xs tracking-[0.3em] font-medium drop-shadow-md">BRAND DESIGNER</span>
+             <span className="text-white text-xs tracking-[0.3em] font-medium drop-shadow-md">ILLUSTRATOR</span>
+          </div>
+
+          {/* Bottom text */}
+          <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
+             <h1 
+               className="text-white font-light tracking-tighter drop-shadow-lg" 
+               style={{ fontSize: 'clamp(5rem, 18vw, 24rem)', lineHeight: 0.8 }}
+             >
+               Alfie Martin
+             </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Logo Wall moved right below Hero */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto w-full pt-24 pb-8 px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }} className="mt-24 mb-3 py-24 border-t border-gray-100">
-
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">PREVIOUSLY </p>
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }} className="border-b border-gray-100 pb-16">
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-8 text-center">PREVIOUSLY</p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
               {[
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
