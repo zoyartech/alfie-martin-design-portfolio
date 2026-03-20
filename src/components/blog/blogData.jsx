@@ -1,55 +1,39 @@
 export const blogPosts = [
   {
     id: "designing-for-ai-trust",
-    title: "Designing for Trust in AI Products",
-    subtitle: "Why transparency isn't just a feature — it's the foundation.",
+    title: "Trust Isn't a Feature You Ship",
+    subtitle: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them.",
     category: "AI Design",
-    date: "January 14, 2025",
-    readTime: "6 min read",
-    metaDescription: "Exploring how designers can build trust into AI products through transparency, predictability, and honest communication of system capabilities.",
-    tags: ["AI", "Trust", "UX Design", "Product Strategy"],
+    date: "March 20, 2026",
+    readTime: "3 min read",
+    metaDescription: "Trust isn't just a marketing problem; it's an engineering one.",
+    tags: ["AI", "Trust", "Product Strategy"],
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80",
-    excerpt: "Most AI products fail not because of bad technology, but because they fail to earn the user's trust. Designing for trust means making the invisible visible.",
+    excerpt: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them. And I think I've figured it out: most teams treat trust like a marketing problem instead of an engineering one.",
     content: [
       {
         type: "paragraph",
-        text: "Most AI products fail not because of bad technology, but because they fail to earn the user's trust. When a system makes decisions users don't understand, they disengage — no matter how accurate those decisions are."
-      },
-      {
-        type: "heading",
-        text: "The trust gap"
+        text: "I've been thinking a lot about why so many AI products feel like they're begging you to believe in them. And I think I've figured it out: most teams treat trust like a marketing problem instead of an engineering one."
       },
       {
         type: "paragraph",
-        text: "There's a widening gap between what AI systems can do and what users believe they can do. This isn't a communication problem — it's a design problem. We've been building interfaces that hide the machine, when what users actually need is to see it work."
+        text: "Here's what I mean. I see companies slap \"powered by AI\" on everything, toss in a few reassuring paragraphs about safety, and then act surprised when users are skeptical. You can't just tell people to trust you. That has never worked for anything, and it definitely doesn't work when your product hallucinates answers with total confidence."
       },
       {
         type: "paragraph",
-        text: "Transparency in AI design doesn't mean showing code or model outputs. It means designing moments where the system explains itself in plain language, acknowledges uncertainty, and gives users a sense of control."
-      },
-      {
-        type: "heading",
-        text: "Three principles for trust-first AI design"
+        text: "I think trust gets built in boring, unsexy ways. It gets built when your product says \"I don't know\" instead of making something up. It gets built when you show your work, when you let users peek behind the curtain and see why a recommendation was made. It gets built when you give people a way out, a manual override, a \"no thanks\" button that actually works."
       },
       {
         type: "paragraph",
-        text: "First: make confidence visible. If an AI is 90% sure, show that. If it's guessing, say so. Users can handle nuance — they can't handle false certainty."
+        text: "I also think the industry has a bad habit of confusing capability with trustworthiness. Just because your model can do something doesn't mean users should feel comfortable letting it. I can do a backflip off a diving board. That doesn't mean you should trust me to do surgery. Context matters. Stakes matter. And too many products ignore both."
       },
       {
         type: "paragraph",
-        text: "Second: design for graceful failure. Every AI system will be wrong sometimes. The question is whether the failure is confusing and damaging, or clear and recoverable. Build error states that explain what went wrong and what the user can do next."
+        text: "The companies that are going to win the long game aren't the ones with the flashiest demos. They're the ones that earn trust through consistency, transparency, and a willingness to be honest about limitations. That's it. No secret formula. Just the same unglamorous principles that have built trust in every other industry for centuries."
       },
       {
         type: "paragraph",
-        text: "Third: give users an exit. Trust is built when users feel in control. Always provide a way to override, correct, or ignore the AI's suggestion. The opt-out is as important as the feature itself."
-      },
-      {
-        type: "heading",
-        text: "The bottom line"
-      },
-      {
-        type: "paragraph",
-        text: "Trust is the product. Everything else — the features, the accuracy, the speed — is only valuable if the user believes in the system enough to keep using it. Design trust first, then build around it."
+        text: "We just have to actually follow them."
       }
     ]
   },
