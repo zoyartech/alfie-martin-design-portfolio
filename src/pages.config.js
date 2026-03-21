@@ -57,7 +57,6 @@ import Contact from './pages/Contact';
 import Design from './pages/Design';
 import DesignMarathon from './pages/DesignMarathon';
 import DesignStrategyAI from './pages/DesignStrategyAI';
-import Gallery from './pages/Gallery';
 import GrammarlyProject from './pages/GrammarlyProject';
 import Home from './pages/Home';
 import PolaroidProject from './pages/PolaroidProject';
@@ -76,7 +75,6 @@ export const PAGES = {
     "Design": Design,
     "DesignMarathon": DesignMarathon,
     "DesignStrategyAI": DesignStrategyAI,
-    "Gallery": Gallery,
     "GrammarlyProject": GrammarlyProject,
     "Home": Home,
     "PolaroidProject": PolaroidProject,
