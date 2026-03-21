@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 
-export default function SideQuests() {
+export default function AdinaProject() {
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-slate-900 font-sans selection:bg-pink-100 selection:text-pink-900 pb-0">
+    <div className="min-h-screen bg-[#faf9f6] text-slate-900 font-sans selection:bg-pink-100 selection:text-pink-900 pb-0 pt-20">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
@@ -17,24 +15,6 @@ export default function SideQuests() {
         }
       `}</style>
 
-      {/* Hero */}
-      <div className="pt-32 pb-16 px-6 lg:px-12 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-6 font-sans uppercase">Exploration</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 max-w-4xl font-serif text-slate-900">
-              Side Quests
-            </h1>
-            <p className="text-lg text-gray-500 max-w-2xl font-sans">
-              A collection of personal projects, experiments, and creative explorations.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
       <div className="max-w-5xl mx-auto px-6 py-20">
         
         {/* Project Header */}
@@ -44,12 +24,6 @@ export default function SideQuests() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-24">
-          
-            
-
-
-
-
           
             
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-[#E15A85] tracking-tight font-serif leading-[1.1]">
@@ -298,6 +272,6 @@ export default function SideQuests() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
