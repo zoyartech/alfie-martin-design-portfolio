@@ -66,7 +66,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             01 — Overview
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
             The Problem With Single-Answer Chatbots
           </h2>
           <div className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed space-y-6">
@@ -100,7 +100,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             02 — Research & Discovery
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
             Understanding the Trust Deficit
           </h2>
           
@@ -153,7 +153,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             03 — Design Process
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight leading-[1.15]">
             From Concept to Confidence Ranking
           </h2>
           
@@ -216,7 +216,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             04 — Final Design
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
             The Answer Experience
           </h2>
           
@@ -259,7 +259,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             05 — Model Training & Calibration
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
             Teaching the Model to Rank Honestly
           </h2>
           
@@ -310,7 +310,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             06 — Outcomes
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
             What Shipped, What Changed
           </h2>
           
@@ -363,7 +363,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             07 — Reflection
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
             What I Took Away
           </h2>
           
