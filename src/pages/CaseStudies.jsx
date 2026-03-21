@@ -264,18 +264,18 @@ function AIDesignContent() {
       </section>
 
       {/* Context */}
-      <section className="py-16 px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-6">THE CONTEXT</p>
-          <h2 className="text-3xl font-light mb-6">AI is moving fast. Design is lagging behind.</h2>
-          <p className="text-gray-600 leading-relaxed text-lg mb-6">
-            Most AI products today suffer from the same problems: opaque interfaces, broken trust, and experiences that feel cold or mechanical. The technology is extraordinary — but without thoughtful design and clear strategy, it fails to connect with the humans it's meant to serve.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-lg">
-            This body of work explores how design strategy can shape AI systems that feel intuitive, transparent, and genuinely valuable — from visual identity through to interaction patterns and communication frameworks.
-          </p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+      
 
       {/* Two Column */}
       <section className="py-16 px-6 lg:px-12 bg-gray-50">
