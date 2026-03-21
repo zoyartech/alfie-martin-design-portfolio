@@ -188,6 +188,10 @@ export default function AdinaProject() {
           </p>
         </section>
 
+        <div className="flex justify-center mb-24">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d5b6ec5f8_Screenshot2026-03-21at10226PM.png" alt="Adina UI Profile and Settings" className="w-full max-w-2xl rounded-2xl shadow-sm border border-gray-100" />
+        </div>
+
         {/* Key Design Decisions */}
         <section className="mb-24">
             <h2 className="text-[#E15A85] mb-6 text-xl font-normal md:text-5xl">Key Design Decisions</h2>
