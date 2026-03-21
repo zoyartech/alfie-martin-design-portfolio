@@ -47,11 +47,11 @@ export default function GlobalNav() {
               BLOG
               <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${path === 'Home' ? 'bg-white w-0 group-hover:w-full' : (path === 'Blog' ? 'bg-black w-full' : 'bg-black w-0 group-hover:w-full')}`}></span>
             </Link>
-            <Link
-              to={createPageUrl("Contact")}
+            <a
+              href="mailto:alfie@alfiealfie.com"
               className={`relative text-xs tracking-[0.15em] font-medium px-6 py-2 border transition-all duration-300 ${path === 'Home' ? 'border-white text-white hover:bg-white hover:text-black' : 'border-black text-black hover:bg-black hover:text-white'}`}>
-              CONTACT
-            </Link>
+              alfie@alfiealfie.com
+            </a>
           </div>
           <MobileNav activePage={path} isTransparent={path === 'Home'} />
         </div>
