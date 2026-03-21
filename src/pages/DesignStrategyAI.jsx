@@ -198,15 +198,15 @@ export default function DesignStrategyAI() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Three answers, not two or five</h4>
-              <p className="font-sans text-slate-700 text-base lg:text-lg md:text-xl">Through testing, I found that two answers felt like a coin flip and five felt like a research project. Three gave users a primary recommendation with meaningful alternatives, without triggering decision fatigue. The magic number is real, and it's three.</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">Through testing, I found that two answers felt like a coin flip and five felt like a research project. Three gave users a primary recommendation with meaningful alternatives, without triggering decision fatigue. The magic number is real, and it's three.</p>
             </div>
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Confidence as a visual bar, not just a number</h4>
-              <p className="font-sans text-slate-700 text-base lg:text-lg md:text-xl">Early tests showed that a bare percentage (e.g., "87%") triggered anxiety in some users. They fixated on why it wasn't 100%. A filled bar with a color-coded badge (green, yellow, red) communicated relative confidence more intuitively and reduced that fixation by 40% in follow-up testing. Turns out, humans process "mostly green" faster than they process "eighty-seven percent."</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">Early tests showed that a bare percentage (e.g., "87%") triggered anxiety in some users. They fixated on why it wasn't 100%. A filled bar with a color-coded badge (green, yellow, red) communicated relative confidence more intuitively and reduced that fixation by 40% in follow-up testing. Turns out, humans process "mostly green" faster than they process "eighty-seven percent."</p>
             </div>
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Source citations as anchors, not footnotes</h4>
-              <p className="font-sans text-slate-700 text-base lg:text-lg md:text-xl">I placed the source directly beneath each answer. Not in a collapsible section. Not at the bottom of the page. Not behind a "learn more" link that nobody clicks. The citation needed to be inseparable from the claim. This was the single highest-impact decision for perceived trustworthiness in testing, and also the one that required the least engineering effort. Love when that happens.</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">I placed the source directly beneath each answer. Not in a collapsible section. Not at the bottom of the page. Not behind a "learn more" link that nobody clicks. The citation needed to be inseparable from the claim. This was the single highest-impact decision for perceived trustworthiness in testing, and also the one that required the least engineering effort. Love when that happens.</p>
             </div>
           </div>
         </div>
