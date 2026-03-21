@@ -50,15 +50,15 @@ export default function BlogPost() {
           }
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-light">
-            {post.content.map((block, index) => {
-              if (block.type === 'paragraph') {
-                return null;
-              }
-              if (block.type === 'heading') {
-                return null;
-              }
-              return null;
-            })}
+            <p className="mb-6 text-lg"><strong>Step 1:</strong> Write a real hypothesis. Not "I think the new flow is better." Try: "Reducing onboarding from 5 steps to 3 will increase completion rate by 10%." Specific. Measurable. Falsifiable. If you can't be wrong, you're not testing anything.</p>
+            <p className="mb-6 text-lg"><strong>Step 2:</strong> Pick one variable to change. One. The button copy. The layout. The flow length. Not all three at once. If you change multiple things and metrics move, you won't know which change did it and you'll ship a bundle of assumptions disguised as a "win."</p>
+            <p className="mb-6 text-lg"><strong>Step 3:</strong> Define your success metric before you launch. Decide what "working" looks like in advance. Is it activation rate? Retention at day 7? Revenue per user? Lock this in now, because if you wait until after, you will unconsciously pick whichever metric flatters your design.</p>
+            <p className="mb-6 text-lg"><strong>Step 4:</strong> Set up a proper A/B test with a control. Your control group sees the current experience. Your test group sees the new one. Users are randomly assigned no cherry-picking, no "let's just test it on the engaged cohort." Random assignment is the whole game. Without it, you're measuring who your users already were, not what your design did.</p>
+            <p className="mb-6 text-lg"><strong>Step 5:</strong> Calculate your sample size in advance. Use an online calculator (Evan Miller's is solid). Plug in your current baseline metric, the minimum effect you'd care about, and your desired confidence level (usually 95%). This tells you how many users you need before results mean anything. Running a test on 200 users when you needed 5,000 is just expensive guessing.</p>
+            <p className="mb-6 text-lg"><strong>Step 6:</strong> Let it run. Stop peeking. Set your runtime or sample target and walk away. Checking daily and stopping the moment things look good inflates your false positive rate. You're not watching a horse race —you're collecting data. Let it finish.</p>
+            <p className="mb-6 text-lg"><strong>Step 7:</strong> Analyze what you planned to analyze. Look at your pre-defined metric. Did it move? Is it statistically significant? Great or not great, but either way you learned something. Do not start slicing by random segments hoping to find a win buried in left-handed users who signed up on Thursdays. If you explore, label those findings as hypotheses for the next test, not conclusions from this one.</p>
+            <p className="mb-6 text-lg"><strong>Step 8:</strong> Document and share wins and losses. The experiments that don't work are just as valuable as the ones that do, because they prevent your team from re-testing the same bad idea six months later. A null result isn't a failure; it's one less wrong direction to waste time on.</p>
+            <p className="mb-6 text-lg"><strong>Common traps to avoid:</strong> launching without a control group and just comparing before/after (seasonality and external factors will fool you every time), testing on a biased segment, changing the experiment mid-flight because "it felt off," and treating directional-but-not-significant results as green lights to ship.</p>
           </div>
         </motion.article>
       </main>
