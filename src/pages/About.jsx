@@ -22,6 +22,14 @@ export default function About() {
             <h1 className="text-4xl md:text-6xl font-light mb-12 max-w-4xl">Multi-disciplinary professional  focused on creating meaningful experiences
 
             </h1>
+            
+            <div className="w-full mt-12 mb-8 overflow-hidden rounded-sm">
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f75e609c1_IMG_3538.png"
+                alt="Alfie Martin Portrait"
+                className="w-full h-auto object-cover" 
+              />
+            </div>
           </motion.div>
         </div>
       </section>
