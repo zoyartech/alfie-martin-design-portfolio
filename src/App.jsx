@@ -10,7 +10,6 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from './pages/Home';
 import About from './pages/About';
 import CaseStudies from './pages/CaseStudies';
-import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import TCSMarathon from './pages/TCSMarathon';
 import DesignStrategyAI from './pages/DesignStrategyAI';
@@ -56,7 +55,6 @@ const AuthenticatedApp = () => {
       <Route path="/Home" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/CaseStudies" element={<CaseStudies />} />
-      <Route path="/Gallery" element={<Gallery />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/TCSMarathon" element={<TCSMarathon />} />
       <Route path="/DesignStrategyAI" element={<DesignStrategyAI />} />
