@@ -74,7 +74,8 @@ tags: ["Brand Identity", "Visual Direction", "Consumer"]
   link: "TCSAttrition",
   summary: "A strategic approach to reducing employee attrition rates at Tata Consultancy Services using design thinking and UX research.",
   stats: [],
-  tags: ["UX Strategy", "Employee Experience", "Research"]
+  tags: ["UX Strategy", "Employee Experience", "Research"],
+  imageFit: "object-contain bg-white"
 },
 ];
 
@@ -123,7 +124,7 @@ function ProjectCard({ project }) {
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+          className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} 
         />
       </div>
       <div className="pt-4">
