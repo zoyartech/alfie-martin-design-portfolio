@@ -8,11 +8,7 @@ import FilterableGallery from "@/components/design/FilterableGallery";
 import DesignTestimonials from "@/components/design/DesignTestimonials";
 import ConsultationForm from "@/components/design/ConsultationForm";
 
-const tabs = ["Work", "AI Design"];
-
 export default function CaseStudies() {
-  const [activeTab, setActiveTab] = useState("Work");
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -55,42 +51,16 @@ export default function CaseStudies() {
             </p>
           </motion.div>
 
-          {/* Tabs */}
-          <div className="flex gap-0 mt-10 border-b border-gray-200">
-            {tabs.map((tab) =>
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`text-xs tracking-[0.2em] px-6 py-3 transition-all duration-200 border-b-2 -mb-[2px] ${
-              activeTab === tab ?
-              "border-black text-black font-medium" :
-              "border-transparent text-gray-400 hover:text-black"}`
-              }>
 
-                {tab.toUpperCase()}
-              </button>
-            )}
-          </div>
         </div>
       </section>
 
-      {/* Tab Content */}
-      <AnimatePresence mode="wait">
-        {activeTab === "Work" &&
-        <motion.div key="work" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-            <FilterableGallery />
-            <DesignTestimonials />
-            <ConsultationForm />
-          </motion.div>
-        }
-
-        {activeTab === "AI Design" &&
-        <motion.div key="ai" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-            <AIDesignContent />
-          </motion.div>
-        }
-
-      </AnimatePresence>
+      {/* Content */}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-10">
+        <FilterableGallery />
+        <DesignTestimonials />
+        <ConsultationForm />
+      </motion.div>
 
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-100">
