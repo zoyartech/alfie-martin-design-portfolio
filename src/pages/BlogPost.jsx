@@ -30,13 +30,13 @@ export default function BlogPost() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center gap-4 text-sm text-gray-500 border-b border-gray-100 pb-8">
-              <span>{post.date}</span>
-              <span>•</span>
-              <span>{post.readTime}</span>
-              <span>•</span>
-              <span>{post.category}</span>
-            </div>
+            
+
+
+
+
+
+            
           </header>
 
           {post.image &&
