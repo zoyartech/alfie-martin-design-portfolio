@@ -6,13 +6,24 @@ import MobileNav from "@/components/MobileNav";
 
 export default function DesignStrategyAI() {
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'" }}>
+    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
         .font-serif {
-          font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+          font-family: "PT Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
         .font-sans {
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        p {
+          line-height: 1.7;
+        }
+        
+        strong {
+          font-weight: 700;
+          color: #0f172a;
         }
       `}</style>
       
