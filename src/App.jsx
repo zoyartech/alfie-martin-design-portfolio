@@ -23,6 +23,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import SideQuests from './pages/SideQuests';
 import AdinaProject from './pages/AdinaProject';
+import TCSAttrition from './pages/TCSAttrition.jsx';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -70,6 +71,7 @@ const AuthenticatedApp = () => {
       <Route path="/BlogPost" element={<BlogPost />} />
       <Route path="/SideQuests" element={<SideQuests />} />
       <Route path="/AdinaProject" element={<AdinaProject />} />
+      <Route path="/TCSAttrition" element={<TCSAttrition />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>

@@ -65,6 +65,17 @@ tags: ["Brand Identity", "Visual Direction", "Consumer"]
   ],
   tags: ["AI", "Smart Contracts", "Product Design"]
 },
+{
+  title: "Using Design to lower Attrition Rates at TCS",
+  category: "UX Strategy",
+  industry: "Consulting",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3da751d03_Screenshot2026-03-21at30849PM.png",
+  year: "2024",
+  link: "TCSAttrition",
+  summary: "A strategic approach to reducing employee attrition rates at Tata Consultancy Services using design thinking and UX research.",
+  stats: [],
+  tags: ["UX Strategy", "Employee Experience", "Research"]
+},
 ];
 
 
