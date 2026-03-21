@@ -43,12 +43,12 @@ export default function SideQuests() {
           transition={{ duration: 0.6 }}
           className="mb-24">
           
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 md:p-16 mb-16 flex flex-col items-center justify-center">
-                <div className="text-center">
-                    
-                    
-                </div>
-            </div>
+            
+
+
+
+
+          
             
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-[#E15A85] tracking-tight font-serif leading-[1.1]">
                 Help Without Asking.
