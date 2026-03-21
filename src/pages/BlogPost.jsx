@@ -42,7 +42,7 @@ export default function BlogPost() {
           {post.image && (
             <div className="w-full aspect-video mb-12 overflow-hidden bg-gray-100 rounded-sm">
               <img 
-                src={post.image} 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/50ee6d844_BurgundyandTealModernMusicAlbumInstagramPost-2.png" 
                 alt={post.title} 
                 className="w-full h-full object-cover"
               />
