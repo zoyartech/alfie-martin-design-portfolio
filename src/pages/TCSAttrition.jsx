@@ -12,24 +12,24 @@ export default function TCSAttrition() {
         
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 flex justify-center p-8">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3da751d03_Screenshot2026-03-21at30849PM.png" 
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3da751d03_Screenshot2026-03-21at30849PM.png"
               alt="Using Design to lower Attrition Rates at TCS"
-              className="max-w-full h-auto object-contain shadow-sm rounded-md bg-white"
-            />
+              className="max-w-full h-auto object-contain shadow-sm rounded-md bg-white" />
+            
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 flex flex-col items-center">
             <h2 className="text-2xl font-light mb-6 text-[#333]">Descript Version Case Study</h2>
             <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E5DDF5', backgroundColor: '#f8fafc' }}>
-              <iframe 
-                src="https://share.descript.com/embed/KW7DYW6OXNO" 
-                width="100%" 
-                height="100%" 
-                frameBorder="0" 
-                allowFullScreen
-              ></iframe>
+              <iframe
+              src="https://share.descript.com/embed/KW7DYW6OXNO"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen>
+            </iframe>
             </div>
         </motion.div>
 
@@ -265,25 +265,25 @@ export default function TCSAttrition() {
             <div className="grid md:grid-cols-2 gap-10">
               <div>
                 <h4 className="text-xl font-medium mb-3 flex items-center gap-3">
-                  <span className="text-2xl">&#127891;</span> The content was harder than the product
+                   The content was harder than the product
                 </h4>
                 <p className="text-gray-600">Getting senior designers to record walkthroughs and contribute content was the hardest part — not the interaction design. I underestimated the organizational effort. Next time, I'd allocate dedicated content production time from day one, not run it in parallel.</p>
               </div>
               <div>
                 <h4 className="text-xl font-medium mb-3 flex items-center gap-3">
-                  <span className="text-2xl">&#127918;</span> Removing gamification was the right call
+                   Removing gamification was the right call
                 </h4>
                 <p className="text-gray-600">Badges, streaks, and leaderboards felt condescending to professionals learning their job — not children collecting stickers. The simple completion map and confidence trajectory drove higher engagement because people trusted the platform's intent.</p>
               </div>
               <div>
                 <h4 className="text-xl font-medium mb-3 flex items-center gap-3">
-                  <span className="text-2xl">&#128202;</span> The manager dashboard changed the conversation
+                   The manager dashboard changed the conversation
                 </h4>
                 <p className="text-gray-600">Design leads said visibility into where new hires felt least confident gave them permission — and a framework — for more targeted mentoring. Several described it as "finally having a shared language about readiness."</p>
               </div>
               <div>
                 <h4 className="text-xl font-medium mb-3 flex items-center gap-3">
-                  <span className="text-2xl">&#9881;&#65039;</span> This was a systems design problem disguised as a product problem
+                   This was a systems design problem disguised as a product problem
                 </h4>
                 <p className="text-gray-600">DesignBase was a lever, not a fix. Root causes — billability pressure, absent documentation culture, unclear growth paths — required organizational shifts. I advocated post-launch for protected non-billable learning time, a peer mentorship matching program, and a quarterly content review process. Some happened. Others are still in progress.</p>
               </div>
@@ -291,6 +291,6 @@ export default function TCSAttrition() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
