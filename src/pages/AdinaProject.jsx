@@ -82,6 +82,10 @@ export default function AdinaProject() {
           </p>
         </section>
 
+        <div className="flex justify-center mb-24">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2bde4714f_Screenshot2026-03-21at10216PM.png" alt="Adina Emergency Alert App UI on a phone" className="w-full max-w-2xl rounded-2xl shadow-sm border border-gray-100" />
+        </div>
+
         {/* The Four Steps */}
         <section className="mb-24">
             <h2 className="text-[#E15A85] mb-10 text-2xl font-light md:text-5xl">The Four Steps</h2>
