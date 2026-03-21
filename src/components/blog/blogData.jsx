@@ -39,7 +39,7 @@ export const blogPosts = [
   },
   {
     id: "brand-systems-at-scale",
-    title: "Building Brand Systems That Scale",
+    title: "Lets talk about experiment design",
     subtitle: "From startup identity to enterprise design language.",
     category: "Brand Strategy",
     date: "December 3, 2024",
