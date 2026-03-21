@@ -549,6 +549,10 @@ export default function ArbolCaseStudy() {
         <div className="hero-label">Case Study 001</div>
         <h1>Designing trust into <em>automated</em> climate risk</h1>
 
+        <div style={{ marginTop: '2rem', width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/amPBmeD1QyA?si=VD1w4GcUNNsi8Osg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+
         <div className="hero-meta">
           <div className="meta-item">
             <label>Role</label>
