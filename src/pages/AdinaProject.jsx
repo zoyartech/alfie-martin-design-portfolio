@@ -251,6 +251,12 @@ export default function AdinaProject() {
             </div>
         </section>
 
+        <div className="flex justify-center mb-24">
+            <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E5DDF5' }}>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/d0EHTrD07dQ?si=VVxcFKdgu8qdXiGF" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
+        </div>
+
         {/* What I don't Know Yet */}
         <section className="mb-24">
             <h2 className="text-[#E15A85] mb-12 text-2xl font-normal md:text-5xl">What I don't Know Yet</h2>
