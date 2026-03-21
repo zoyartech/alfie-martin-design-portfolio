@@ -44,10 +44,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="space-y-6 max-w-4xl">
 
-            <p className="text-lg leading-relaxed text-gray-700">I'm a multidisciplinary technologist.  based in New York City, working at the intersection of business strategy, brand differentiation, and mass adoption.  With over 8 years of experience, I love working in product design and growth. I am a huge nerd so I am always taking a class on something. I believe in being a life long continuous learner. So you could say I am a forever work in progress.
-
-
-
+            <p className="text-lg leading-relaxed text-gray-700">HI im a Product designer specializing in growth and AI and I live in NYC. 8+ years making things people use, want, and come back to. Chronic class-taker. Aggressively curious. Forever a work in progress and not even a little sorry about it.
             </p>
             
 
