@@ -41,12 +41,12 @@ export default function SideQuests() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-24"
-        >
+          className="mb-24">
+          
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 md:p-16 mb-16 flex flex-col items-center justify-center">
                 <div className="text-center">
-                    <div className="text-[#E15A85] text-8xl md:text-9xl font-black italic tracking-tighter mb-4 transform -skew-x-12">a</div>
-                    <h3 className="text-3xl md:text-4xl font-black tracking-widest text-slate-900 uppercase">Adina</h3>
+                    
+                    
                 </div>
             </div>
             
@@ -111,19 +111,19 @@ export default function SideQuests() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#E15A85] font-serif mb-10">The Four Steps</h2>
             <div className="grid md:grid-cols-2 gap-6">
                 {[
-                    { title: "Signal Sent", text: "The user presses and holds the central button. A geolocation-anchored alert goes out silently to nearby app users within a set radius." },
-                    { title: "Nearby Users Notified", text: "Community members in range receive a push alert. No personal details are shared — just proximity and the fact that someone nearby needs help." },
-                    { title: "Response Is Visible", text: "This is the core intervention: when a community member responds, that action becomes visible to other nearby users. The bystander loop is broken in real time." },
-                    { title: "Situation Resolved", text: "The person in need can mark the situation resolved, or a timeout clears the alert. No record is kept. No data stored beyond the session." }
-                ].map((step, i) => (
-                    <div key={i} className="border border-[#E5DDF5] rounded-lg overflow-hidden bg-white shadow-sm">
+            { title: "Signal Sent", text: "The user presses and holds the central button. A geolocation-anchored alert goes out silently to nearby app users within a set radius." },
+            { title: "Nearby Users Notified", text: "Community members in range receive a push alert. No personal details are shared — just proximity and the fact that someone nearby needs help." },
+            { title: "Response Is Visible", text: "This is the core intervention: when a community member responds, that action becomes visible to other nearby users. The bystander loop is broken in real time." },
+            { title: "Situation Resolved", text: "The person in need can mark the situation resolved, or a timeout clears the alert. No record is kept. No data stored beyond the session." }].
+            map((step, i) =>
+            <div key={i} className="border border-[#E5DDF5] rounded-lg overflow-hidden bg-white shadow-sm">
                         <div className="bg-[#E5DDF5] text-center py-3 font-serif text-xl font-bold text-[#553696]">{i + 1}</div>
                         <div className="p-8">
                             <h3 className="text-2xl font-bold mb-4 text-slate-900 font-serif">{step.title}</h3>
                             <p className="text-slate-700 font-sans text-lg">{step.text}</p>
                         </div>
                     </div>
-                ))}
+            )}
             </div>
         </section>
 
@@ -220,17 +220,17 @@ export default function SideQuests() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                    { title: "01 — Press & Hold, Not Tap", text: "Accidental activation is a trust-destroying event. I chose press-and-hold as the primary gesture to introduce just enough friction to prevent false alerts without slowing genuine need." },
-                    { title: "02 — No Identity, Only Proximity", text: "Responders do not see who sent the alert. They see that someone nearby needs help. This protects the person in need and lowers the barrier to sending an alert in the first place." },
-                    { title: "03 — Response Count Is Public to Nearby Users", text: "The number of people who have responded is visible to all nearby community members. This is the direct behavioral intervention against the bystander effect and the product's most load-bearing design choice." },
-                    { title: "04 — Session-Only Data", text: "No alert history is stored after a session closes. I made this decision early and it constrained other features — I accepted those trade-offs. Trust is the product's core asset." },
-                    { title: "05 — No Chat, No Instructions", text: "The first version does not include in-app communication between the person in need and responders. I removed it from scope intentionally. The product's job is to put nearby humans in physical proximity — what they do from there is human, not product." }
-                ].map((item, i) => (
-                    <div key={i} className="bg-white border-l-4 border-[#6A42C1] shadow-sm rounded-r-lg p-8 flex flex-col">
+            { title: "01 — Press & Hold, Not Tap", text: "Accidental activation is a trust-destroying event. I chose press-and-hold as the primary gesture to introduce just enough friction to prevent false alerts without slowing genuine need." },
+            { title: "02 — No Identity, Only Proximity", text: "Responders do not see who sent the alert. They see that someone nearby needs help. This protects the person in need and lowers the barrier to sending an alert in the first place." },
+            { title: "03 — Response Count Is Public to Nearby Users", text: "The number of people who have responded is visible to all nearby community members. This is the direct behavioral intervention against the bystander effect and the product's most load-bearing design choice." },
+            { title: "04 — Session-Only Data", text: "No alert history is stored after a session closes. I made this decision early and it constrained other features — I accepted those trade-offs. Trust is the product's core asset." },
+            { title: "05 — No Chat, No Instructions", text: "The first version does not include in-app communication between the person in need and responders. I removed it from scope intentionally. The product's job is to put nearby humans in physical proximity — what they do from there is human, not product." }].
+            map((item, i) =>
+            <div key={i} className="bg-white border-l-4 border-[#6A42C1] shadow-sm rounded-r-lg p-8 flex flex-col">
                         <h3 className="font-serif font-bold text-xl mb-4 text-slate-900">{item.title}</h3>
                         <p className="text-slate-700 font-sans text-lg">{item.text}</p>
                     </div>
-                ))}
+            )}
             </div>
         </section>
 
@@ -296,6 +296,6 @@ export default function SideQuests() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
