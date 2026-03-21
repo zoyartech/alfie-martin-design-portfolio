@@ -34,6 +34,12 @@ export default function AdinaProject() {
           </p>
         </motion.div>
 
+        <div className="flex justify-center mb-24">
+            <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E5DDF5' }}>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fXCXFWn0jCo?si=uPBB_bzc52Z6cegl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
+        </div>
+
         {/* The Problem */}
         <section className="mb-24">
             <h2 className="text-[#E15A85] mb-6 text-base font-serif md:text-5xl">The Problem</h2>
