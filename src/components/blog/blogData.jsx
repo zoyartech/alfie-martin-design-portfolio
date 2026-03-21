@@ -8,7 +8,7 @@ export const blogPosts = [
     readTime: "3 min read",
     metaDescription: "Trust isn't a feature you ship. It's not a toggle in settings or a reassuring line of microcopy.",
     tags: ["AI", "Trust", "Product Strategy"],
-    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80",
+    image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bbddca878_5.png",
     excerpt: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features. Here's what I notice every single time: they lead with the technology instead of the person using it.",
     content: [
       {
