@@ -28,8 +28,8 @@ export default function SideQuests() {
             <h1 className="text-4xl md:text-6xl font-light mb-6 max-w-4xl font-serif text-slate-900">
               Side Quests
             </h1>
-            <p className="text-lg text-gray-500 max-w-2xl font-sans">
-              A collection of personal projects, experiments, and creative explorations.
+            <p className="text-lg text-gray-500 max-w-2xl font-sans">More coming soon!
+
             </p>
           </motion.div>
         </div>
@@ -55,6 +55,6 @@ export default function SideQuests() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
