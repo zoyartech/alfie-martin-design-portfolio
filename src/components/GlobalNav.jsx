@@ -36,6 +36,12 @@ export default function GlobalNav() {
               <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${path === 'Home' ? 'bg-white w-0 group-hover:w-full' : (path === 'CaseStudies' ? 'bg-black w-full' : 'bg-black w-0 group-hover:w-full')}`}></span>
             </Link>
             <Link
+              to={createPageUrl("SideQuests")}
+              className={`relative text-xs tracking-[0.15em] font-medium transition-colors group ${path === 'Home' ? 'text-white hover:text-white/80' : (path === 'SideQuests' ? 'text-black' : 'text-gray-600 hover:text-black')}`}>
+              SIDE QUESTS
+              <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${path === 'Home' ? 'bg-white w-0 group-hover:w-full' : (path === 'SideQuests' ? 'bg-black w-full' : 'bg-black w-0 group-hover:w-full')}`}></span>
+            </Link>
+            <Link
               to={createPageUrl("Blog")}
               className={`relative text-xs tracking-[0.15em] font-medium transition-colors group ${path === 'Home' ? 'text-white hover:text-white/80' : (path === 'Blog' ? 'text-black' : 'text-gray-600 hover:text-black')}`}>
               BLOG
