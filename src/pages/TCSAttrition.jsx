@@ -19,6 +19,18 @@ export default function TCSAttrition() {
             />
           </div>
         </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 flex justify-center">
+            <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E5DDF5', backgroundColor: '#f8fafc' }}>
+              <iframe 
+                src="https://share.descript.com/embed/KW7DYW6OXNO" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                allowFullScreen
+              ></iframe>
+            </div>
+        </motion.div>
       </div>
     </div>
   );
