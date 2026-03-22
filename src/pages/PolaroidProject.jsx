@@ -666,7 +666,7 @@ at the intersection of art and science:"</p>
       </div>
     </div>
 
-    <p style="text-align: center;">I infused the content design with a deliberate sentimentality not the soft-focus, sepia-toned kind, but something more honest. The kind of feeling you get when you find an old photograph in a drawer. The brand voice I developed was warm without being saccharine, and specific without being niche.</p>
+    <p>I infused the content design with a deliberate sentimentality not the soft-focus, sepia-toned kind, but something more honest. The kind of feeling you get when you find an old photograph in a drawer. The brand voice I developed was warm without being saccharine, and specific without being niche.</p>
     <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/722c93dac_uuid26B9BE02-044A-4DC8-85FA-1C794DBDAE64code001library1type1mode1loctruecaptrue.png" alt="Polaroid Logo" style="width:100%; height:auto; margin-top: 3rem; mix-blend-mode: multiply;" />
   </div>
 </section>
