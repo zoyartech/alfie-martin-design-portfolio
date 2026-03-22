@@ -341,27 +341,27 @@ export default function DesignStrategyAI() {
           </div>
 
           <h3 className="font-serif text-3xl font-bold mb-10 text-slate-900">My Contributions to Training</h3>
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
-            <div>
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                Source-grounding taxonomy
+          <div className="space-y-12 mb-16">
+            <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
+              <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
+                <svg className="w-7 h-7 text-[#3b82f6] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <span>Source-grounding taxonomy</span>
               </h4>
-              <p className="font-sans text-slate-700 text-lg md:text-xl">I developed a tiered source classification system that the model used as a training signal. Tier 1: government and official databases. Tier 2: established publications and peer-reviewed sources. Tier 3: community forums, user-generated content, and everything your uncle shares on Facebook. The model learned to weight its confidence scores partly based on the authority tier of its retrieved source, which improved calibration significantly. Shocking that teaching a model to trust the IRS more than Reddit made it more accurate.</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed">I developed a tiered source classification system that the model used as a training signal. Tier 1: government and official databases. Tier 2: established publications and peer-reviewed sources. Tier 3: community forums, user-generated content, and everything your uncle shares on Facebook. The model learned to weight its confidence scores partly based on the authority tier of its retrieved source, which improved calibration significantly. Shocking that teaching a model to trust the IRS more than Reddit made it more accurate.</p>
             </div>
-            <div>
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                Evaluation rubric design
+            <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
+              <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
+                <svg className="w-7 h-7 text-[#3b82f6] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <span>Evaluation rubric design</span>
               </h4>
-              <p className="font-sans text-slate-700 text-lg md:text-xl">I authored the human evaluation rubric used by our annotation team to score answer quality across four dimensions: factual accuracy, source relevance, confidence calibration, and answer completeness. This rubric directly shaped the RLHF reward model. In practice, this meant I spent two weeks arguing about the difference between "partially correct" and "correct but incomplete" until we had a rubric everyone could apply consistently.</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed">I authored the human evaluation rubric used by our annotation team to score answer quality across four dimensions: factual accuracy, source relevance, confidence calibration, and answer completeness. This rubric directly shaped the RLHF reward model. In practice, this meant I spent two weeks arguing about the difference between "partially correct" and "correct but incomplete" until we had a rubric everyone could apply consistently.</p>
             </div>
-            <div>
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 flex items-center gap-3">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Edge-case curation
+            <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
+              <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
+                <svg className="w-7 h-7 text-[#3b82f6] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Edge-case curation</span>
               </h4>
-              <p className="font-sans text-slate-700 text-lg md:text-xl">I identified and curated roughly 200 "hard queries," questions with contested answers, recently-changed facts, or inherently ambiguous phrasing, and used them as a stress-test set for the model's confidence ranking. These queries exposed calibration drift early and became a standing regression suite. They were the trick questions on the exam, and the model needed to learn to say "I'm not sure" instead of guessing confidently.</p>
+              <p className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed">I identified and curated roughly 200 "hard queries," questions with contested answers, recently-changed facts, or inherently ambiguous phrasing, and used them as a stress-test set for the model's confidence ranking. These queries exposed calibration drift early and became a standing regression suite. They were the trick questions on the exam, and the model needed to learn to say "I'm not sure" instead of guessing confidently.</p>
             </div>
           </div>
 
