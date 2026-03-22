@@ -47,7 +47,7 @@ export default function DesignStrategyAI() {
           </h2>
           <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6">
             <p>Most conversational AI products hand you one answer and a silent prayer that you'll believe it. It's <strong>the "trust me, bro" school of product design:</strong> a black box with the confidence of a TED talk speaker and the citation practices of a group chat.</p>
-            <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br/><span className="italic">"How do I know this is right?"</span></p>
+            <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br /><span className="italic">"How do I know this is right?"</span></p>
             <p><strong>Nobody was accusing the chatbot of lying, exactly.</strong> They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
             <p><strong>So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</strong></p>
             <p>I was brought on to redesign the answer experience from scratch.</p>
@@ -194,11 +194,11 @@ export default function DesignStrategyAI() {
           </div>
           
           <div className="w-full flex justify-center mb-12">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f4b23b31b_Screenshot2026-03-22at40100PM.png" 
-              alt="System architecture diagram" 
-              className="max-w-full md:max-w-3xl h-auto object-contain rounded-md" 
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f4b23b31b_Screenshot2026-03-22at40100PM.png"
+              alt="System architecture diagram"
+              className="max-w-full md:max-w-3xl h-auto object-contain rounded-md" />
+            
           </div>
 
           <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
@@ -246,15 +246,15 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="w-full flex justify-center mb-12">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/16785e22c_Screenshot2026-03-22at40742PM.png" 
-              alt="Ranked confidence answers interface" 
-              className="max-w-full md:max-w-3xl h-auto object-contain rounded-md border border-gray-200" 
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/16785e22c_Screenshot2026-03-22at40742PM.png"
+              alt="Ranked confidence answers interface"
+              className="max-w-full md:max-w-3xl h-auto object-contain rounded-md border border-gray-200" />
+            
           </div>
 
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
-            Teaching the Model to Rank Honestly
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">Teaching the Model to Rank Accuracy 
+
           </h2>
           
           <p className="font-sans text-slate-700 text-lg mb-16  ">
@@ -378,6 +378,6 @@ export default function DesignStrategyAI() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
