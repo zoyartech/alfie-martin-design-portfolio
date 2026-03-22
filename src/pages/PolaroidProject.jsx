@@ -574,7 +574,7 @@ designed to mimic the human eye the image comes to life as the dyes activate pai
 right before our eyes it is the magic that happens
 at the intersection of art and science:"</p>
     </div>
-    <h3 style="margin-bottom: 1rem; font-style: normal;">Early Storyboard Concept drawing</h3>
+    <h3 style="margin-bottom: 1rem; font-style: normal; font-weight: bold;">Early Storyboard Concept drawing</h3>
     <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
       <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7f976f40_storyboard.png" alt="Storyboard" style="width: 100%; height: auto;" />
     </div>
