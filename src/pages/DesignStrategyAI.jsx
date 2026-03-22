@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
 
 export default function DesignStrategyAI() {
+  const carouselRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = direction === 'left' ? -carouselRef.current.offsetWidth : carouselRef.current.offsetWidth;
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
       <style>{`
@@ -262,37 +270,59 @@ export default function DesignStrategyAI() {
           </p>
 
           <div className="w-full flex justify-center my-16">
-            <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png" 
-                alt="Details on Training Process & Design Decisions" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png" 
-                alt="Visual Hierarchy" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png" 
-                alt="Confidence bars instead of just numbers" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png" 
-                alt="Each Card is self contained" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png" 
-                alt="Feedback loops close the accuracy cycle" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png" 
-                alt="The question echo at the top" 
-                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
-              />
+            <div className="relative w-full max-w-[85vw] md:max-w-3xl group">
+              <button 
+                onClick={() => scroll('left')}
+                className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+              </button>
+              
+              <div 
+                ref={carouselRef}
+                className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide w-full" 
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png" 
+                  alt="Details on Training Process & Design Decisions" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png" 
+                  alt="Visual Hierarchy" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png" 
+                  alt="Confidence bars instead of just numbers" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png" 
+                  alt="Each Card is self contained" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png" 
+                  alt="Feedback loops close the accuracy cycle" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+                <img 
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png" 
+                  alt="The question echo at the top" 
+                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                />
+              </div>
+
+              <button 
+                onClick={() => scroll('right')}
+                className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+              </button>
             </div>
           </div>
 
