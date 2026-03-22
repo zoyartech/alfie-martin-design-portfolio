@@ -152,8 +152,8 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="font-serif text-2xl md:text-3xl text-slate-900   space-y-6 max-w-4xl">
-            <p className="text-base">These insights gave me a clear directional mandate: the interface needed to shift from declarative (one answer, no context) to deliberative (multiple answers, ranked transparency, verifiable sources).</p>
-            <p className="text-base">In other words, the chatbot needed to stop performing certainty and start communicating honestly.</p>
+            <p className="text-xl">These insights gave me a clear directional mandate: the interface needed to shift from declarative (one answer, no context) to deliberative (multiple answers, ranked transparency, verifiable sources).</p>
+            <p className="text-xl">In other words, the chatbot needed to stop performing certainty and start communicating honestly.</p>
           </div>
         </div>
 
