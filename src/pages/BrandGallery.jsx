@@ -8,14 +8,27 @@ export default function BrandGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png", caption: "Microsoft — Design Systems" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d5c087b60_2-ratio-1-outdoor-billboard-mockup-template-69bbedce2b60532d8c62109f-2x.png", caption: "CBS Sports HQ" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/66b2b5477_50x70cm-indoor-poster-frame-mockup-template-69b69d83064993c800576d31-2x.png", caption: "Art Direction" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fc6d8a5c3_top-view-sunlight-overlay-three-business-cards-mockup-template2x.jpg", caption: "Print Design" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/0c41596e7_three-beer-bottle-mockup-697539e94270b64fd1f22789-2x.png", caption: "Packaging" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93f20ac27_IMG_3318.png", caption: "Visual Identity" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47f6fd98a_IMG_0491.jpg", caption: "Identity Framework" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/4ddbc5527_54.png", caption: "Product Packaging" }
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/404f587ff_1.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b99904fe1_IMG_1078.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/95786e920_IMG_3223.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f84aedc1b_IMG_3235.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/741047eb9_IMG_4340.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e497d297_IMG_5998.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/571e0efd5_IMG_6149.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1340188fd_IMG_3574.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/052990856_IMG_9346.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/297c8305b_interior-wooden-poster-frame-on-the-table-mockup-template-65f9b6afcdeb4752da6fcd74-2x.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87bcdef28_outdoor-sidewalk-street-billboard-poster-mockup-template-65f9b64a492bc9abac15d4e8-2x.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bc38fc16d_Untitled620x1024px-1.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f42b6529_Untitled620x1024px-2.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d3ea16a1f_Untitled-October820250855.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6c4a05b60_Untitled620x1024px-16.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e0350ed7_Untitled620x1024px-19.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0b4739b3_Untitleddesign-1-2.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" }
   ];
 
   const openModal = (i) => setSelectedImage(i);
