@@ -12,7 +12,6 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
   { label: "ABOUT", page: "About" },
   { label: "CASE STUDIES", page: "CaseStudies" },
   { label: "SIDE QUESTS", page: "SideQuests" },
-  { label: "BLOG", page: "Blog" },
   { label: "CONTACT", page: "Contact" }];
 
 
