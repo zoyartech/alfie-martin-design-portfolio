@@ -7,7 +7,7 @@ import MobileNav from "@/components/MobileNav";
 export default function DesignStrategyAI() {
   const carouselRef = useRef(null);
 
-  const scroll = (direction) => {
+  const scrollCarousel = (direction) => {
     if (carouselRef.current) {
       const container = carouselRef.current;
       const firstImage = container.querySelector('img');
@@ -378,7 +378,7 @@ export default function DesignStrategyAI() {
 
           <div className="bg-[#dcf0fb] text-slate-900 p-8 rounded-sm md:p-10 flex items-start gap-4">
             <div className="mt-1 flex-shrink-0">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
             </div>
             <div>
               <h4 className="font-serif text-2xl font-bold mb-4 text-slate-900">Key insight from training:</h4>
@@ -425,7 +425,7 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
-          <p className="text-slate-700 mb-16 text-lg font-sans">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
+          <p className="text-slate-700 mb-16 text-sm font-sans">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
 
           </p>
 
