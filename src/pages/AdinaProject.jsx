@@ -26,10 +26,10 @@ export default function AdinaProject() {
           className="mb-24">
           
             
-            <h2 className="text-[#E15A85] mb-6 text-base font-serif tracking-tight leading-[1.1] md:text-6xl">Help Without Asking.
+            <h2 className="text-[#9a3c5a] mb-6 text-base font-semibold tracking-tight leading-[1.1] md:text-6xl">Help Without Asking.
 
           </h2>
-            <p className="text-slate-700 text-xs font-sans leading-relaxed md:text-2xl max-w-4xl">A community-powered mobile app I'm building for people who need help but aren't ready  or willing  to call the authorities. One button. Real people. No system.
+            <p className="text-neutral-950 text-xs font-light leading-relaxed md:text-2xl max-w-4xl">A community-powered mobile app I'm building for people who need help but aren't ready  or willing  to call the authorities. One button. Real people. No system. Watch Descript Video with audio been below :
 
           </p>
         </motion.div>
