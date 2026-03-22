@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: "designing-for-ai-trust",
-    title: "I Don't Trust Your AI Product (And Neither Does Anyone Else)",
+    title: "Suggestions for Implementing Career Development learning programs in your organization",
     subtitle: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features.",
     category: "AI Design",
     date: "March 20, 2026",
