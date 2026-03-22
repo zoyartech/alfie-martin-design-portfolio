@@ -7,7 +7,7 @@ import MobileNav from "@/components/MobileNav";
 export default function DesignStrategyAI() {
   const carouselRef = useRef(null);
 
-  const scrollCarousel = (direction) => {
+  const scroll = (direction) => {
     if (carouselRef.current) {
       const container = carouselRef.current;
       const firstImage = container.querySelector('img');
@@ -92,13 +92,13 @@ export default function DesignStrategyAI() {
           </div>
           
           <div className="mt-16 bg-[#cde3f5] p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 rounded-lg border border-[#a1cbed]">
-            <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-sm text-[#1e3a8a]">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-            </div>
+            
+
+            
             <div>
               <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
-              <p className="text-slate-900 text-2xl md:text-3xl font-serif leading-snug">
-                How might we make an AI's uncertainty legible and useful, rather than hidden?
+              <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How might we make an AI's uncertainty legible and useful, rather than hidden?
+
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function DesignStrategyAI() {
           <div className="w-full flex justify-center my-16">
             <div className="relative w-full max-w-[85vw] md:max-w-3xl group">
               <button
-                onClick={() => scrollCarousel('left')}
+                onClick={() => scroll('left')}
                 className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
                 aria-label="Previous image">
                 
@@ -342,7 +342,7 @@ export default function DesignStrategyAI() {
               </div>
 
               <button
-                onClick={() => scrollCarousel('right')}
+                onClick={() => scroll('right')}
                 className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
                 aria-label="Next image">
                 
@@ -378,7 +378,7 @@ export default function DesignStrategyAI() {
 
           <div className="bg-[#dcf0fb] text-slate-900 p-8 rounded-sm md:p-10 flex items-start gap-4">
             <div className="mt-1 flex-shrink-0">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
             </div>
             <div>
               <h4 className="font-serif text-2xl font-bold mb-4 text-slate-900">Key insight from training:</h4>
@@ -425,7 +425,7 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
-          <p className="text-slate-700 mb-16 text-sm font-sans">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
+          <p className="text-slate-700 mb-16 text-lg font-sans">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
 
           </p>
 
