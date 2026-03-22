@@ -64,32 +64,43 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             01 — Overview
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1]">
             The Problem With Single-Answer Chatbots
           </h2>
-          <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6">
-            <p>Most conversational AI products hand you one answer and a silent prayer that you'll believe it. It's <strong>the "trust me, bro" school of product design:</strong> a black box with the confidence of a TED talk speaker and the citation practices of a group chat.</p>
-            <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br /><span className="italic">"How do I know this is right?"</span></p>
-            <p><strong className="font-light">Nobody was accusing the chatbot of lying, exactly.</strong> They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
-            <p><strong className="font-normal">So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</strong></p>
-            <p>I was brought on to redesign the answer experience from scratch.</p>
-            <p>The hypothesis wasn't complicated. In fact, it was almost <strong className="font-normal">embarrassingly obvious</strong> once you said it out loud:</p>
-            <p className="text-slate-900 font-normal italic">what if, instead of cosplaying omniscience, the chatbot just showed its work?</p>
-            <p className="text-slate-900 font-normal italic">Surface three candidate answers?</p>
-            <ul className="list-disc pl-8 space-y-2 font-bold text-slate-900">
-              <li>Rank them by confidence.</li>
-              <li>Pin a cited source to each one.</li>
-              <li>Let the user see the model's uncertainty instead of pretending it doesn't exist.</li>
-            </ul>
-            <p className="text-slate-900 pt-2 font-normal italic">The bet was that transparency would do what a thousand "I'm confident in this answer!" microcopy strings never could: actually build trust.</p>
-          </div>
-          <div className="mt-12 bg-[#cde3f5] p-6 md:p-8 flex items-start gap-4 rounded-sm">
-            <div className="mt-1 flex-shrink-0 text-slate-700">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+          <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
+            <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 font-normal">
+              <p>Most conversational AI products hand you one answer and a silent prayer that you'll believe it. It's <strong className="font-semibold text-slate-900">the "trust me, bro" school of product design:</strong> a black box with the confidence of a TED talk speaker and the citation practices of a group chat.</p>
+              <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br /><span className="italic text-slate-900">"How do I know this is right?"</span></p>
+              <p>Nobody was accusing the chatbot of lying, exactly. They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
+              <p>So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</p>
             </div>
-            <p className="text-slate-900 text-xl font-serif">Core design question: How might we make an AI's uncertainty legible and useful, rather than hidden?
-
-            </p>
+            
+            <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 font-normal bg-slate-50 p-8 rounded-lg border border-slate-100">
+              <p>I was brought on to redesign the answer experience from scratch.</p>
+              <p>The hypothesis wasn't complicated. In fact, it was almost embarrassingly obvious once you said it out loud:</p>
+              <p className="text-slate-900 text-2xl font-serif italic mb-4">"What if, instead of cosplaying omniscience, the chatbot just showed its work?"</p>
+              
+              <ul className="space-y-3 font-normal text-slate-700 mb-6">
+                <li className="flex gap-3"><span className="text-[#3b82f6] font-bold">—</span> Surface three candidate answers</li>
+                <li className="flex gap-3"><span className="text-[#3b82f6] font-bold">—</span> Rank them by confidence</li>
+                <li className="flex gap-3"><span className="text-[#3b82f6] font-bold">—</span> Pin a cited source to each one</li>
+                <li className="flex gap-3"><span className="text-[#3b82f6] font-bold">—</span> Let the user see the model's uncertainty instead of pretending it doesn't exist</li>
+              </ul>
+              
+              <p className="text-slate-800 pt-2 font-medium">The bet was that transparency would do what a thousand "I'm confident in this answer!" microcopy strings never could: actually build trust.</p>
+            </div>
+          </div>
+          
+          <div className="mt-16 bg-[#cde3f5] p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 rounded-lg border border-[#a1cbed]">
+            <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-sm text-[#1e3a8a]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </div>
+            <div>
+              <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
+              <p className="text-slate-900 text-2xl md:text-3xl font-serif leading-snug">
+                How might we make an AI's uncertainty legible and useful, rather than hidden?
+              </p>
+            </div>
           </div>
         </div>
 
