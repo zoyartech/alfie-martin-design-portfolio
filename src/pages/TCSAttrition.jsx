@@ -151,6 +151,13 @@ export default function TCSAttrition() {
             </div>
           </div>
 
+          <div className="w-full flex justify-center mb-20">
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png"
+              alt="TCS LMS App"
+              className="max-w-full h-auto object-contain" />
+          </div>
+
           {/* 04. Design Process */}
           <div className="mb-20">
             <span className="inline-block px-3 py-1 bg-pink-50 text-pink-600 text-xs font-semibold tracking-wider rounded-full mb-6">04. DESIGN PROCESS</span>
