@@ -31,8 +31,8 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+            
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">GET IN TOUCH</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Let's Connect</h1>
             <p className="text-gray-500 max-w-2xl">
@@ -53,8 +53,8 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-12"
-            >
+              className="space-y-12">
+              
               <div>
                 <h2 className="text-2xl font-light mb-8">Contact Information</h2>
                 
@@ -63,10 +63,10 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">EMAIL</p>
-                      <a 
-                        href="mailto:hello@alfiemartin.com" 
-                        className="text-lg hover:text-[#8B7355] transition-colors"
-                      >
+                      <a
+                        href="mailto:hello@alfiemartin.com"
+                        className="text-lg hover:text-[#8B7355] transition-colors">
+                        
                         hello@alfiemartin.com
                       </a>
                     </div>
@@ -76,11 +76,11 @@ export default function Contact() {
                     <Linkedin className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">LINKEDIN</p>
-                      <a 
-                        href="#" 
-                        className="text-lg hover:text-[#8B7355] transition-colors"
-                      >
-                        linkedin.com/in/alfiemartin
+                      <a
+                        href="#" className="text-lg hover:text-[#8B7355] transition-colors">linkedin.com/in/alfieisbored
+
+
+
                       </a>
                     </div>
                   </div>
@@ -89,10 +89,10 @@ export default function Contact() {
                     <Instagram className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">INSTAGRAM</p>
-                      <a 
-                        href="#" 
-                        className="text-lg hover:text-[#8B7355] transition-colors"
-                      >
+                      <a
+                        href="#"
+                        className="text-lg hover:text-[#8B7355] transition-colors">
+                        
                         @alfiemartin.design
                       </a>
                     </div>
@@ -122,8 +122,8 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+              transition={{ duration: 0.6, delay: 0.2 }}>
+              
               <h2 className="text-2xl font-light mb-8">Send a Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -134,10 +134,10 @@ export default function Contact() {
                   <Input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full"
-                    required
-                  />
+                    required />
+                  
                 </div>
 
                 <div>
@@ -147,10 +147,10 @@ export default function Contact() {
                   <Input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full"
-                    required
-                  />
+                    required />
+                  
                 </div>
 
                 <div>
@@ -159,16 +159,16 @@ export default function Contact() {
                   </label>
                   <Textarea
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full h-40 resize-none"
-                    required
-                  />
+                    required />
+                  
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
-                  className="w-full bg-black text-white hover:bg-gray-800 h-12 text-xs tracking-[0.15em]"
-                >
+                  className="w-full bg-black text-white hover:bg-gray-800 h-12 text-xs tracking-[0.15em]">
+                  
                   SEND MESSAGE <Send className="w-4 h-4 ml-2" />
                 </Button>
               </form>
@@ -184,35 +184,35 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+            
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">FREQUENTLY ASKED</p>
             <h2 className="text-3xl md:text-4xl font-light mb-12">Common Questions</h2>
             
             <div className="space-y-8">
               {[
-                {
-                  q: "What is your typical project timeline?",
-                  a: "Project timelines vary based on scope and complexity. A typical brand identity project takes 4-6 weeks, while digital product design can range from 6-12 weeks. We'll establish a clear timeline during our initial consultation."
-                },
-                {
-                  q: "What is your design process?",
-                  a: "I follow a collaborative, iterative process: Discovery & Research → Strategy & Concept Development → Design Execution → Refinement & Delivery. Throughout each phase, I maintain open communication and incorporate feedback."
-                },
-                {
-                  q: "Do you work with clients remotely?",
-                  a: "Yes, I work with clients worldwide. I'm based in New York but am fully set up for remote collaboration using modern tools and communication platforms."
-                },
-                {
-                  q: "What types of projects do you take on?",
-                  a: "I focus on brand identity, digital product design, and art direction projects. I'm selective about the projects I take on to ensure I can deliver exceptional results and maintain a manageable workload."
-                }
-              ].map((faq, i) => (
-                <div key={i} className="border-t border-gray-200 pt-6">
+              {
+                q: "What is your typical project timeline?",
+                a: "Project timelines vary based on scope and complexity. A typical brand identity project takes 4-6 weeks, while digital product design can range from 6-12 weeks. We'll establish a clear timeline during our initial consultation."
+              },
+              {
+                q: "What is your design process?",
+                a: "I follow a collaborative, iterative process: Discovery & Research → Strategy & Concept Development → Design Execution → Refinement & Delivery. Throughout each phase, I maintain open communication and incorporate feedback."
+              },
+              {
+                q: "Do you work with clients remotely?",
+                a: "Yes, I work with clients worldwide. I'm based in New York but am fully set up for remote collaboration using modern tools and communication platforms."
+              },
+              {
+                q: "What types of projects do you take on?",
+                a: "I focus on brand identity, digital product design, and art direction projects. I'm selective about the projects I take on to ensure I can deliver exceptional results and maintain a manageable workload."
+              }].
+              map((faq, i) =>
+              <div key={i} className="border-t border-gray-200 pt-6">
                   <h3 className="text-lg font-medium mb-3">{faq.q}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
-              ))}
+              )}
             </div>
           </motion.div>
         </div>
@@ -229,6 +229,6 @@ export default function Contact() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
