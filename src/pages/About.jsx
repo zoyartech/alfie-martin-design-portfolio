@@ -8,7 +8,14 @@ import MobileNav from "@/components/MobileNav";
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alfie Martin",
+        "jobTitle": "Product Designer",
+        "description": "Product Designer specializing in Brand Strategy, Digital Design, and Creative Direction.",
+        "url": "https://alfiealfie.com/About"
+      }) }} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 lg:px-12">
@@ -25,6 +32,7 @@ export default function About() {
             
             <div className="w-full mt-12 mb-8 overflow-hidden rounded-sm">
               <img
+                loading="lazy"
                 src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f75e609c1_IMG_3538.png"
                 alt="Alfie Martin Portrait"
                 className="w-full h-auto object-cover" />

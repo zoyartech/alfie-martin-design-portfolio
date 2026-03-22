@@ -84,6 +84,7 @@ export default function BrandGallery() {
               onClick={() => openModal(i)}
             >
               <img
+                loading="lazy"
                 src={item.src}
                 alt={item.caption}
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -127,6 +128,7 @@ export default function BrandGallery() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
+                  loading="lazy"
                   src={galleryImages[selectedImage].src}
                   alt={galleryImages[selectedImage].caption}
                   className="w-full max-h-[80vh] object-contain rounded-sm shadow-md" 

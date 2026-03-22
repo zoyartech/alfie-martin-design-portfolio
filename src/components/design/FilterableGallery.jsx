@@ -122,6 +122,7 @@ function ProjectCard({ project }) {
     <div className="cursor-pointer group">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
         <img 
+          loading="lazy"
           src={project.image} 
           alt={project.title} 
           className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} 
