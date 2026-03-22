@@ -9,9 +9,14 @@ export default function DesignStrategyAI() {
 
   const scroll = (direction) => {
     if (carouselRef.current) {
-      const gap = 24; // gap-6 is 24px
-      const scrollAmount = direction === 'left' ? -(carouselRef.current.offsetWidth + gap) : (carouselRef.current.offsetWidth + gap);
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      // Find the first image to determine exact scrolling width
+      const firstImage = carouselRef.current.querySelector('img');
+      if (firstImage) {
+        const gap = 24; // gap-6 is 24px
+        const scrollWidth = firstImage.offsetWidth + gap;
+        const scrollAmount = direction === 'left' ? -scrollWidth : scrollWidth;
+        carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
     }
   };
   return (
