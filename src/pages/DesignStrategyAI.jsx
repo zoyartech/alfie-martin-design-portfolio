@@ -213,17 +213,17 @@ export default function DesignStrategyAI() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#f4f3ef] p-6 rounded-sm">
+            <div className="bg-[#c2e7ff] p-6 rounded-sm">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-gray-200 pb-4">Answer 1 · 94% confidence</h4>
               <p className="font-sans text-slate-700 mb-6 text-lg md:text-xl">The maximum contribution limit for a Roth IRA in 2025 is $7,000 for individuals under 50, and $8,000 for individuals 50 and older (with the $1,000 catch-up provision).</p>
               <p className="font-sans text-sm text-gray-600 italic  ">Source: IRS.gov, Retirement Topics: IRA Contribution Limits (2025)</p>
             </div>
-            <div className="bg-[#f4f3ef] p-6 rounded-sm">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-gray-200 pb-4">Answer 2 · 72% confidence</h4>
+            <div className="bg-[#b8d4ff] p-6 rounded-sm">
+              <h4 className="bg-transparent text-slate-900 mb-4 pb-4 text-xl font-bold border-b border-gray-200">Answer 2 · 72% confidence</h4>
               <p className="font-sans text-slate-700 mb-6 text-lg md:text-xl">The 2025 Roth IRA contribution limit is $7,000, though eligibility may phase out for single filers earning above $150,000 (MAGI).</p>
               <p className="font-sans text-sm text-gray-600 italic  ">Source: NerdWallet, Roth IRA Rules and Limits for 2025</p>
             </div>
-            <div className="bg-[#f4f3ef] p-6 rounded-sm">
+            <div className="bg-[#fcbdff] p-6 rounded-sm">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-gray-200 pb-4">Answer 3 · 41% confidence</h4>
               <p className="font-sans text-slate-700 mb-6 text-lg md:text-xl">The contribution limit may remain at $6,500 for 2025, consistent with the 2023 limit, pending further IRS guidance.</p>
               <p className="font-sans text-sm text-gray-600 italic  ">Source: Investopedia, IRA Contribution Limits (2023 Archive)</p>
