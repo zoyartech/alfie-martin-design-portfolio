@@ -342,7 +342,7 @@ export default function DesignStrategyAI() {
               </div>
 
               <button
-                onClick={() => scroll('right')}
+                onClick={() => scrollCarousel('right')}
                 className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
                 aria-label="Next image">
                 
