@@ -574,6 +574,9 @@ designed to mimic the human eye the image comes to life as the dyes activate pai
 right before our eyes it is the magic that happens
 at the intersection of art and science:</p>
     </div>
+    <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+      <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7f976f40_storyboard.png" alt="Storyboard" style="width: 100%; height: auto;" />
+    </div>
     <div style="margin-top: 2rem; position: relative; width: 100%; padding-bottom: 56.25%;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" src="https://www.youtube.com/embed/JwJFN61YDaM?si=kuPUZIvNw8XQt6k2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
