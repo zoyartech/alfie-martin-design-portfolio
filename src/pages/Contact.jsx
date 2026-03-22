@@ -63,11 +63,11 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">EMAIL</p>
-                      <a
-                        href="mailto:hello@alfiemartin.com" className="text-lg hover:text-[#8B7355] transition-colors">alfie@alfiealfie.com
-
-
-
+                      <a 
+                        href="mailto:alfie@alfiealfie.com" 
+                        className="text-lg hover:text-[#8B7355] transition-colors"
+                      >
+                        alfie@alfiealfie.com
                       </a>
                     </div>
                   </div>
@@ -76,11 +76,13 @@ export default function Contact() {
                     <Linkedin className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">LINKEDIN</p>
-                      <a
-                        href="#" className="text-lg hover:text-[#8B7355] transition-colors">linkedin.com/in/alfieisbored
-
-
-
+                      <a 
+                        href="https://linkedin.com/in/alfieisbored" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="text-lg hover:text-[#8B7355] transition-colors"
+                      >
+                        linkedin.com/in/alfieisbored
                       </a>
                     </div>
                   </div>
@@ -89,11 +91,13 @@ export default function Contact() {
                     <Instagram className="w-5 h-5 text-gray-400 mt-1" />
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">INSTAGRAM</p>
-                      <a
-                        href="#" className="text-lg hover:text-[#8B7355] transition-colors">@ideafactorynyc
-
-
-
+                      <a 
+                        href="https://instagram.com/ideafactorynyc" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="text-lg hover:text-[#8B7355] transition-colors"
+                      >
+                        @ideafactorynyc
                       </a>
                     </div>
                   </div>
@@ -102,18 +106,9 @@ export default function Contact() {
 
               <div className="border-t border-gray-200 pt-8">
                 <h3 className="text-xl font-light mb-4">Location</h3>
-                <p className="text-gray-600">Based in New York City, NY
-
-
+                <p className="text-gray-600">
+                  Based in New York City, NY
                 </p>
-              </div>
-
-              <div className="border-t border-gray-200 pt-8">
-                
-                
-
-
-                
               </div>
             </motion.div>
 
