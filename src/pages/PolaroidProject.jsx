@@ -564,15 +564,15 @@ const htmlContent = `
       <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
         <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6663586c6_IMG_3289.PNG" alt="Polaroid App Store screens" style="width: 100%; max-width: 800px; height: auto;" />
       </div>
-      <h3 style="font-style: normal;">Video Narration</h3>
-      <p style="white-space: pre-wrap; margin-top: 1rem;">what does it take to capture a moment it takes light
+      <h3 style="font-style: normal; font-weight: bold;">Video Narration</h3>
+      <p style="white-space: pre-wrap; margin-top: 1rem;">"what does it take to capture a moment it takes light
 to illuminate the moment?
 what we see and what we feel it takes chemistry to turn that light into matter
 and passion to continuously evolve our process a Polaroid photograph is a beautifully complex thing where each
 light-sensitive negative is made up of 15 layers thinner than a hair and
 designed to mimic the human eye the image comes to life as the dyes activate painting a photograph from
 right before our eyes it is the magic that happens
-at the intersection of art and science:</p>
+at the intersection of art and science:"</p>
     </div>
     <h3 style="margin-bottom: 1rem; font-style: normal;">Early Storyboard Concept drawing</h3>
     <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
