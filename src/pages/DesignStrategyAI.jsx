@@ -378,7 +378,7 @@ export default function DesignStrategyAI() {
 
           <div className="bg-[#dcf0fb] text-slate-900 p-8 rounded-sm md:p-10 flex items-start gap-4">
             <div className="mt-1 flex-shrink-0">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
             </div>
             <div>
               <h4 className="font-serif text-2xl font-bold mb-4 text-slate-900">Key insight from training:</h4>
