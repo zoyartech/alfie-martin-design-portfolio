@@ -564,7 +564,7 @@ const htmlContent = `
       <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
         <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6663586c6_IMG_3289.PNG" alt="Polaroid App Store screens" style="width: 100%; max-width: 800px; height: auto;" />
       </div>
-      <h3>Narration along with visuals serve as emotional reminders of why polaroid is so special</h3>
+      <h3 style="font-style: normal;">Video Narration</h3>
       <p style="white-space: pre-wrap; margin-top: 1rem;">what does it take to capture a moment it takes light
 to illuminate the moment?
 what we see and what we feel it takes chemistry to turn that light into matter
