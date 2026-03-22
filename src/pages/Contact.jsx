@@ -90,10 +90,10 @@ export default function Contact() {
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">INSTAGRAM</p>
                       <a
-                        href="#"
-                        className="text-lg hover:text-[#8B7355] transition-colors">
-                        
-                        @alfiemartin.design
+                        href="#" className="text-lg hover:text-[#8B7355] transition-colors">@ideafactorynyc
+
+
+
                       </a>
                     </div>
                   </div>
