@@ -36,7 +36,7 @@ export default function GrammarlyProject() {
 
         <section className="py-8 px-6 lg:px-12">
             <div className="max-w-7xl mx-auto">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80" alt="Grammarly Feedback Project" className="w-full h-auto object-cover rounded-lg aspect-[21/9]" />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80" alt="Grammarly Feedback Project" className="w-full h-auto object-cover rounded-lg aspect-[21/9]" />
             </div>
         </section>
 
