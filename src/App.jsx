@@ -24,6 +24,7 @@ import BlogPost from './pages/BlogPost';
 import SideQuests from './pages/SideQuests';
 import AdinaProject from './pages/AdinaProject';
 import TCSAttrition from './pages/TCSAttrition.jsx';
+import SystemsThinkingPoem from './pages/SystemsThinkingPoem.jsx';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -72,6 +73,7 @@ const AuthenticatedApp = () => {
       <Route path="/SideQuests" element={<SideQuests />} />
       <Route path="/AdinaProject" element={<AdinaProject />} />
       <Route path="/TCSAttrition" element={<TCSAttrition />} />
+      <Route path="/SystemsThinkingPoem" element={<SystemsThinkingPoem />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
