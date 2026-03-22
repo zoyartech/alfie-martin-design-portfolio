@@ -195,10 +195,10 @@ export default function DesignStrategyAI() {
               </div>
             </div>
             <div className="flex flex-col border border-purple-200">
-              <div className="bg-[#dfb9f3] py-3 text-center text-xl font-serif text-slate-900">4</div>
-              <div className="bg-[#faeffd] p-8 flex-grow">
+              <div className="bg-[#b2f1f5] text-slate-900 py-3 text-xl font-serif text-center">4</div>
+              <div className="bg-[#75b1ff] p-8 flex-grow">
                 <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Calibration Design</h4>
-                <p className="font-sans text-slate-700 text-lg md:text-xl">I designed a feedback loop where users could flag incorrect answers, feeding corrections back into the model's confidence calibration. The chatbot could learn from being wrong, which already put it ahead of most people I've worked with.</p>
+                <p className="text-slate-950 text-lg font-sans md:text-xl">I designed a feedback loop where users could flag incorrect answers, feeding corrections back into the model's confidence calibration. The chatbot could learn from being wrong, which already put it ahead of most people I've worked with.</p>
               </div>
             </div>
           </div>
@@ -238,10 +238,10 @@ export default function DesignStrategyAI() {
 
           </h2>
           
-          <p className="text-slate-700 mb-6 text-base font-sans">The core interaction pattern I shipped: the user asks a question and receives three ranked responses, each with a confidence probability and an inline source citation. The highest-confidence answer leads, but the lower-ranked answers remain visible and accessible, not buried.
+          <p className="text-slate-700 mb-6 text-lg font-sans">The core interaction pattern I shipped: the user asks a question and receives three ranked responses, each with a confidence probability and an inline source citation. The highest-confidence answer leads, but the lower-ranked answers remain visible and accessible, not buried.
 
           </p>
-          <p className="text-slate-700 mb-10 text-base font-sans">For example, a user asking "What's the maximum contribution limit for a Roth IRA in 2025?" would see:
+          <p className="text-slate-700 mb-10 text-lg font-sans">For example, a user asking "What's the maximum contribution limit for a Roth IRA in 2025?" would see:
 
           </p>
 
@@ -290,7 +290,7 @@ export default function DesignStrategyAI() {
 
           </h2>
           
-          <p className="text-slate-700 mb-16 text-base font-sans">Designing the UI was half the challenge. The other half was making sure the model's confidence scores weren't just vibes. A "90% confidence" answer needed to actually be correct roughly 90% of the time, or the whole transparency premise would collapse into a more elaborately decorated version of the same trust problem. I embedded directly with the ML team for four weeks to shape this work, which is designer-speak for "I moved my laptop to their side of the office and refused to leave."
+          <p className="text-slate-700 mb-16 text-lg font-sans">Designing the UI was half the challenge. The other half was making sure the model's confidence scores weren't just vibes. A "90% confidence" answer needed to actually be correct roughly 90% of the time, or the whole transparency premise would collapse into a more elaborately decorated version of the same trust problem. I embedded directly with the ML team for four weeks to shape this work, which is designer-speak for "I moved my laptop to their side of the office and refused to leave."
 
           </p>
 
@@ -456,8 +456,8 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="font-sans text-slate-700 text-xl md:text-2xl space-y-8">
-            <p className="text-base">This project solidified a conviction I now carry into every AI-facing design problem: transparency is not a feature. It is the product. The chatbot didn't get smarter when we shipped this. We just stopped hiding how smart (or uncertain) it already was. The trust gains came not from improving the model, but from making its existing behavior legible. Which, if you think about it, is a pretty damning indictment of how most AI products treat their users: capable of handling nuance, but never given the chance.</p>
-            <p className="text-base">I also learned that designing for probabilistic information demands deep, genuine collaboration with ML. I couldn't have designed the confidence UI without understanding calibration curves, and the ML team couldn't have built a well-calibrated model without the human-evaluation rubric I brought from the design side. The best work happened in the overlap, in the room where the designer and the engineer were both slightly outside their comfort zones and too stubborn to admit it.</p>
+            <p className="text-lg">This project solidified a conviction I now carry into every AI-facing design problem: transparency is not a feature. It is the product. The chatbot didn't get smarter when we shipped this. We just stopped hiding how smart (or uncertain) it already was. The trust gains came not from improving the model, but from making its existing behavior legible. Which, if you think about it, is a pretty damning indictment of how most AI products treat their users: capable of handling nuance, but never given the chance.</p>
+            <p className="text-lg">I also learned that designing for probabilistic information demands deep, genuine collaboration with ML. I couldn't have designed the confidence UI without understanding calibration curves, and the ML team couldn't have built a well-calibrated model without the human-evaluation rubric I brought from the design side. The best work happened in the overlap, in the room where the designer and the engineer were both slightly outside their comfort zones and too stubborn to admit it.</p>
           </div>
         </div>
       </div>
