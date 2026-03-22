@@ -261,6 +261,41 @@ export default function DesignStrategyAI() {
             Designing the UI was half the challenge. The other half was making sure the model's confidence scores weren't just vibes. A "90% confidence" answer needed to actually be correct roughly 90% of the time, or the whole transparency premise would collapse into a more elaborately decorated version of the same trust problem. I embedded directly with the ML team for four weeks to shape this work, which is designer-speak for "I moved my laptop to their side of the office and refused to leave."
           </p>
 
+          <div className="w-full flex justify-center my-16">
+            <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png" 
+                alt="Details on Training Process & Design Decisions" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png" 
+                alt="Visual Hierarchy" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png" 
+                alt="Confidence bars instead of just numbers" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png" 
+                alt="Each Card is self contained" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png" 
+                alt="Feedback loops close the accuracy cycle" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png" 
+                alt="The question echo at the top" 
+                className="max-w-[85vw] md:max-w-3xl h-auto object-contain rounded-md snap-center flex-shrink-0" 
+              />
+            </div>
+          </div>
+
           <h3 className="font-serif text-3xl font-bold mb-10 text-slate-900">My Contributions to Training</h3>
           <div className="grid md:grid-cols-3 gap-10 mb-16">
             <div>
