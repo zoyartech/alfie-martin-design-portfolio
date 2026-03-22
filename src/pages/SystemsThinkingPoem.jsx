@@ -18,10 +18,10 @@ export default function SystemsThinkingPoem() {
         }
       `}</style>
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        <Link 
-          to={createPageUrl("SideQuests")} 
-          className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12"
-        >
+        <Link
+          to={createPageUrl("SideQuests")}
+          className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
+          
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Side Quests
         </Link>
@@ -30,40 +30,40 @@ export default function SystemsThinkingPoem() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/30c534b97_Screenshot2026-03-21at93233PM.png" 
-            alt="Systems Thinking" 
-            className="w-full max-w-2xl mx-auto rounded-xl shadow-sm mb-12"
-          />
+          className="text-center">
+          
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/30c534b97_Screenshot2026-03-21at93233PM.png"
+            alt="Systems Thinking"
+            className="w-full max-w-2xl mx-auto rounded-xl shadow-sm mb-12" />
+          
           <p className="text-xs tracking-[0.3em] text-gray-400 mb-6 font-sans uppercase">A Poem</p>
           <h1 className="text-4xl md:text-5xl font-light mb-12 font-serif text-slate-900">
             Systems Thinking
           </h1>
           
           <div className="prose prose-lg prose-slate mx-auto font-serif md:text-center text-slate-700 leading-relaxed space-y-6">
-            <p>
-              A node, a line, a tangled web we weave,<br/>
-              Where every action has a consequence.<br/>
-              The whole is greater than the parts we leave,<br/>
-              In isolation, lacking common sense.
-            </p>
-            <p>
-              Feedback loops that spiral out of sight,<br/>
-              Delays that mask the truth of what we've done.<br/>
-              We try to fix, we try to make it right,<br/>
-              But often find the battle has just begun.
-            </p>
-            <p>
-              To see the system is to see the flow,<br/>
-              The hidden structures guiding what we do.<br/>
-              With broader vision, we begin to know,<br/>
-              How everything connects to me and you.
-            </p>
+            
+
+
+
+
+            
+            
+
+
+
+
+            
+            <p>I refuse to inherit your assumptions. ...When everyone else is busy rearranging the furniture
+Me? well... I'm in the basement asking whether we need a house at all & then immediately wondering what happens to Ikea if nobody builds houses anymore, and then what happens to the suburbs, and then what kind of person I become when I've thought myself so far down this rabbit hole that I'm standing in amazon, (the rain forest) arguing with a theoretical lumber baron about the ontological status of a chair. That's just a Tuesday for me. 
+
+First principles throws a pebble. Second-order thinking watches the ripple hit the other side of the pond. Systems thinking realizes the pond is inside a bigger pond & something upstream changed the pH three months ago and that's why the fish are weird now. 
+
+I am probably annoying at dinner parties BUT I am rarely, surprised.</p>
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
