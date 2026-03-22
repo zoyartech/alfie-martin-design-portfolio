@@ -127,7 +127,7 @@ export default function About() {
             },
             {
               title: "Creative Direction",
-              skills: ["Art Direction", "Photography", "Visual Storytelling", "Content Strategy"]
+              skills: ["Art Direction", "Illustration", "Visual Storytelling", "Content Strategy"]
             }].
             map((category, i) =>
             <motion.div
