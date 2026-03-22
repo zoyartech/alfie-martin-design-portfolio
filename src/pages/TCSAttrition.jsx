@@ -13,6 +13,7 @@ export default function TCSAttrition() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50 flex justify-center p-8">
             <img
+              loading="lazy"
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3da751d03_Screenshot2026-03-21at30849PM.png"
               alt="Using Design to lower Attrition Rates at TCS"
               className="max-w-full h-auto object-contain shadow-sm rounded-md bg-white" />
@@ -153,6 +154,7 @@ export default function TCSAttrition() {
 
           <div className="w-full flex justify-center mb-20">
             <img
+              loading="lazy"
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png"
               alt="TCS LMS App"
               className="max-w-full h-auto object-contain" />

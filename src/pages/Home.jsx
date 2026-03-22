@@ -56,7 +56,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alfie Martin",
+        "jobTitle": "Product Designer",
+        "url": "https://alfiealfie.com"
+      }) }} />
 
       {/* Hero Section */}
       <section
@@ -139,7 +145,7 @@ export default function Home() {
               map((logo, i) =>
               <div key={i} className="flex items-center justify-center opacity-40 hover:opacity-80 transition-all duration-300">
                   {logo.src ?
-                <img src={logo.src} alt={logo.alt} className="h-8 w-auto object-contain grayscale" /> :
+                <img src={logo.src} alt={logo.alt} loading="lazy" className="h-8 w-auto object-contain grayscale" /> :
 
                 <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
                 }
@@ -252,6 +258,7 @@ export default function Home() {
                 <img
                 src={item.src}
                 alt={item.caption}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
               </motion.div>

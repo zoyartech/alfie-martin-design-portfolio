@@ -228,6 +228,7 @@ export default function DesignStrategyAI() {
           
           <div className="w-full flex justify-center mb-12">
             <img
+              loading="lazy"
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f4b23b31b_Screenshot2026-03-22at40100PM.png"
               alt="System architecture diagram"
               className="max-w-full md:max-w-3xl h-auto object-contain rounded-md" />
@@ -268,7 +269,7 @@ export default function DesignStrategyAI() {
           </p>
           
           <div className="w-full">
-            <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/lxvh7y6oa7mijoj/a83d49ade2774492a390acce18b4a363/optimized/tempImageoH8kyt.jpg" alt="Bobot Chat Interface" className="w-full rounded-sm object-contain" />
+            <img loading="lazy" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/lxvh7y6oa7mijoj/a83d49ade2774492a390acce18b4a363/optimized/tempImageoH8kyt.jpg" alt="Bobot Chat Interface" className="w-full rounded-sm object-contain" />
           </div>
         </div>
 
@@ -280,6 +281,7 @@ export default function DesignStrategyAI() {
 
           <div className="w-full flex justify-center mb-12">
             <img
+              loading="lazy"
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/16785e22c_Screenshot2026-03-22at40742PM.png"
               alt="Ranked confidence answers interface"
               className="max-w-full md:max-w-3xl h-auto object-contain rounded-md border border-gray-200" />
