@@ -155,7 +155,7 @@ export default function DesignStrategyAI() {
               </div>
             </div>
             <div className="flex flex-col border border-[#0a3d82]">
-              <div className="bg-[#0a3d82] py-3 text-center text-xl font-serif text-white">3</div>
+              <div className="bg-[#417fb9] text-white py-3 text-xl font-serif text-center">3</div>
               <div className="bg-[#153a70] p-8 flex-grow">
                 <h4 className="font-serif text-xl font-bold mb-4 text-white">Training Collaboration</h4>
                 <p className="font-sans text-white/90 text-lg md:text-xl">I partnered with the ML team to define the training data structure: answer text, confidence float, and source URL per candidate. Getting engineering and design to agree on a schema was, as always, a negotiation disguised as a technical conversation.</p>
@@ -170,7 +170,7 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
-          <h3 className="font-serif text-3xl font-bold mb-8 text-slate-900">Key Design Decisions</h3>
+          <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Three answers, not two or five</h4>
