@@ -316,7 +316,7 @@ export default function Home() {
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
             <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
             <a
-              href="mailto:hello@alfiemartin.com"
+              href="mailto:alfie@alfiealfie.com"
               className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300">
               GET IN TOUCH <ArrowRight className="w-4 h-4" />
             </a>
