@@ -47,7 +47,7 @@ export default function SideQuests() {
                 </div>
             </Link>
             
-            <Link to={createPageUrl("CaseStudies")} className="group block">
+            <Link to={createPageUrl("BrandGallery")} className="group block">
                 <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
                     <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93f20ac27_IMG_3318.png" alt="Brand visual identities" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
                 </div>
