@@ -12,17 +12,17 @@ export default function DesignStrategyAI() {
       const container = carouselRef.current;
       const firstImage = container.querySelector('img');
       if (!firstImage) return;
-      
+
       const gap = 24; // gap-6 is 24px
       const snapPoint = firstImage.offsetWidth + gap;
-      
+
       // Calculate current slide index to prevent getting stuck between slides on rapid clicks
       const currentIndex = Math.round(container.scrollLeft / snapPoint);
       const nextIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
-      
-      container.scrollTo({ 
-        left: nextIndex * snapPoint, 
-        behavior: 'smooth' 
+
+      container.scrollTo({
+        left: nextIndex * snapPoint,
+        behavior: 'smooth'
       });
     }
   };
@@ -284,56 +284,56 @@ export default function DesignStrategyAI() {
 
           <div className="w-full flex justify-center my-16">
             <div className="relative w-full max-w-[85vw] md:max-w-3xl group">
-              <button 
+              <button
                 onClick={() => scroll('left')}
                 className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
-                aria-label="Previous image"
-              >
+                aria-label="Previous image">
+                
                 <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
               </button>
               
-              <div 
+              <div
                 ref={carouselRef}
-                className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide w-full" 
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              >
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png" 
-                  alt="Details on Training Process & Design Decisions" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png" 
-                  alt="Visual Hierarchy" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png" 
-                  alt="Confidence bars instead of just numbers" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png" 
-                  alt="Each Card is self contained" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png" 
-                  alt="Feedback loops close the accuracy cycle" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png" 
-                  alt="The question echo at the top" 
-                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
-                />
+                className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide w-full"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png"
+                  alt="Details on Training Process & Design Decisions"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png"
+                  alt="Visual Hierarchy"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png"
+                  alt="Confidence bars instead of just numbers"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png"
+                  alt="Each Card is self contained"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png"
+                  alt="Feedback loops close the accuracy cycle"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
+                <img
+                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png"
+                  alt="The question echo at the top"
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" />
+                
               </div>
 
-              <button 
+              <button
                 onClick={() => scroll('right')}
                 className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-slate-800 p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
-                aria-label="Next image"
-              >
+                aria-label="Next image">
+                
                 <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
               </button>
             </div>
@@ -444,8 +444,8 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="font-sans text-slate-700 text-xl md:text-2xl space-y-8">
-            <p>This project solidified a conviction I now carry into every AI-facing design problem: transparency is not a feature. It is the product. The chatbot didn't get smarter when we shipped this. We just stopped hiding how smart (or uncertain) it already was. The trust gains came not from improving the model, but from making its existing behavior legible. Which, if you think about it, is a pretty damning indictment of how most AI products treat their users: capable of handling nuance, but never given the chance.</p>
-            <p>I also learned that designing for probabilistic information demands deep, genuine collaboration with ML. I couldn't have designed the confidence UI without understanding calibration curves, and the ML team couldn't have built a well-calibrated model without the human-evaluation rubric I brought from the design side. The best work happened in the overlap, in the room where the designer and the engineer were both slightly outside their comfort zones and too stubborn to admit it.</p>
+            <p className="text-base">This project solidified a conviction I now carry into every AI-facing design problem: transparency is not a feature. It is the product. The chatbot didn't get smarter when we shipped this. We just stopped hiding how smart (or uncertain) it already was. The trust gains came not from improving the model, but from making its existing behavior legible. Which, if you think about it, is a pretty damning indictment of how most AI products treat their users: capable of handling nuance, but never given the chance.</p>
+            <p className="text-base">I also learned that designing for probabilistic information demands deep, genuine collaboration with ML. I couldn't have designed the confidence UI without understanding calibration curves, and the ML team couldn't have built a well-calibrated model without the human-evaluation rubric I brought from the design side. The best work happened in the overlap, in the room where the designer and the engineer were both slightly outside their comfort zones and too stubborn to admit it.</p>
           </div>
         </div>
       </div>
