@@ -75,10 +75,10 @@ export default function DesignStrategyAI() {
               <p>So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</p>
             </div>
             
-            <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 font-normal bg-slate-50 p-8 rounded-lg border border-slate-100">
+            <div className="bg-sky-200 text-slate-700 p-8 text-lg font-normal rounded-lg md:text-xl space-y-6 border border-slate-100">
               <p>I was brought on to redesign the answer experience from scratch.</p>
               <p>The hypothesis wasn't complicated. In fact, it was almost embarrassingly obvious once you said it out loud:</p>
-              <p className="text-slate-900 text-2xl font-serif italic mb-4">"What if, instead of cosplaying omniscience, the chatbot just showed its work?"</p>
+              <p className="text-zinc-950 mb-4 text-xl font-medium italic">"What if, instead of cosplaying omniscience, the chatbot just showed its work?"</p>
               
               <ul className="space-y-3 font-normal text-slate-700 mb-6">
                 <li className="flex gap-3"><span className="text-[#3b82f6] font-bold">—</span> Surface three candidate answers</li>
