@@ -50,7 +50,7 @@ export default function GlobalNav() {
             <a
               href="mailto:alfie@alfiealfie.com"
               className={`relative text-xs tracking-[0.15em] font-medium px-6 py-2 border transition-all duration-300 ${path === 'Home' ? 'border-white text-white hover:bg-white hover:text-black' : 'border-black text-black hover:bg-black hover:text-white'}`}>
-              alfie@alfiealfie.com
+              EMAIL ME
             </a>
           </div>
           <MobileNav activePage={path} isTransparent={path === 'Home'} />
