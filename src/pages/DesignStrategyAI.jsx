@@ -70,25 +70,25 @@ export default function DesignStrategyAI() {
           <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6">
             <p>Most conversational AI products hand you one answer and a silent prayer that you'll believe it. It's <strong>the "trust me, bro" school of product design:</strong> a black box with the confidence of a TED talk speaker and the citation practices of a group chat.</p>
             <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br /><span className="italic">"How do I know this is right?"</span></p>
-            <p><strong>Nobody was accusing the chatbot of lying, exactly.</strong> They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
-            <p><strong>So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</strong></p>
+            <p><strong className="font-light">Nobody was accusing the chatbot of lying, exactly.</strong> They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
+            <p><strong className="font-normal">So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</strong></p>
             <p>I was brought on to redesign the answer experience from scratch.</p>
-            <p>The hypothesis wasn't complicated. In fact, it was almost <strong>embarrassingly obvious</strong> once you said it out loud:</p>
-            <p className="font-bold italic text-slate-900">what if, instead of cosplaying omniscience, the chatbot just showed its work?</p>
-            <p className="font-bold italic text-slate-900">Surface three candidate answers?</p>
+            <p>The hypothesis wasn't complicated. In fact, it was almost <strong className="font-normal">embarrassingly obvious</strong> once you said it out loud:</p>
+            <p className="text-slate-900 font-normal italic">what if, instead of cosplaying omniscience, the chatbot just showed its work?</p>
+            <p className="text-slate-900 font-normal italic">Surface three candidate answers?</p>
             <ul className="list-disc pl-8 space-y-2 font-bold text-slate-900">
               <li>Rank them by confidence.</li>
               <li>Pin a cited source to each one.</li>
               <li>Let the user see the model's uncertainty instead of pretending it doesn't exist.</li>
             </ul>
-            <p className="font-bold italic text-slate-900 pt-2">The bet was that transparency would do what a thousand "I'm confident in this answer!" microcopy strings never could: actually build trust.</p>
+            <p className="text-slate-900 pt-2 font-normal italic">The bet was that transparency would do what a thousand "I'm confident in this answer!" microcopy strings never could: actually build trust.</p>
           </div>
           <div className="mt-12 bg-[#cde3f5] p-6 md:p-8 flex items-start gap-4 rounded-sm">
             <div className="mt-1 flex-shrink-0 text-slate-700">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
             </div>
-            <p className="font-serif text-2xl text-slate-900">
-              <strong>Core design question:</strong> How might we make an AI's uncertainty legible and useful, rather than hidden?
+            <p className="text-slate-900 text-xl font-serif">Core design question: How might we make an AI's uncertainty legible and useful, rather than hidden?
+
             </p>
           </div>
         </div>
