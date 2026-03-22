@@ -5,6 +5,27 @@ import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
 
 export default function DesignStrategyAI() {
+  const carouselRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const container = carouselRef.current;
+      const firstImage = container.querySelector('img');
+      if (!firstImage) return;
+
+      const gap = 24; // gap-6 is 24px
+      const snapPoint = firstImage.offsetWidth + gap;
+
+      // Calculate current slide index to prevent getting stuck between slides on rapid clicks
+      const currentIndex = Math.round(container.scrollLeft / snapPoint);
+      const nextIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
+
+      container.scrollTo({
+        left: nextIndex * snapPoint,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
