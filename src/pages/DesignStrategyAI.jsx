@@ -9,7 +9,8 @@ export default function DesignStrategyAI() {
 
   const scroll = (direction) => {
     if (carouselRef.current) {
-      const scrollAmount = direction === 'left' ? -carouselRef.current.offsetWidth : carouselRef.current.offsetWidth;
+      const gap = 24; // gap-6 is 24px
+      const scrollAmount = direction === 'left' ? -(carouselRef.current.offsetWidth + gap) : (carouselRef.current.offsetWidth + gap);
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
