@@ -87,7 +87,7 @@ export default function DesignStrategyAI() {
                 I conducted 14 moderated usability sessions with existing users across three segments: enterprise knowledge workers, customer support agents, and casual consumers. I also ran a diary study over two weeks with 8 participants to capture verification behaviors in the wild, because nothing reveals product trust issues quite like watching someone narrate their skepticism in real time. Alongside the qualitative work, I partnered with our data team to pull behavioral analytics on answer acceptance rates, session abandonment points, and re-query frequency.
               </p>
             </div>
-            <div className="p-4 md:p-10 flex flex-col justify-center">
+            <div className="bg-slate-300 p-4 md:p-10 flex flex-col justify-center">
               <h3 className="font-serif text-3xl font-bold mb-4 text-slate-900">What I Found</h3>
               <p className="font-sans text-slate-700 text-lg md:text-xl">
                 Three patterns showed up so consistently they might as well have been wearing uniforms. First, 61% of users cross-referenced answers with an external source before acting on them. The chatbot was essentially a first draft that users ran through Google for peer review. Second, abandonment spiked on questions where the model's internal confidence was actually lowest, meaning the product was failing hardest exactly when users needed the most help. Poetic. Third, users overwhelmingly said they wanted "options" or "a second opinion," not a single pronouncement delivered with unearned authority.
@@ -119,8 +119,8 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="font-serif text-2xl md:text-3xl text-slate-900   space-y-6 max-w-4xl">
-            <p>These insights gave me a clear directional mandate: the interface needed to shift from declarative (one answer, no context) to deliberative (multiple answers, ranked transparency, verifiable sources).</p>
-            <p>In other words, the chatbot needed to stop performing certainty and start communicating honestly.</p>
+            <p className="text-base">These insights gave me a clear directional mandate: the interface needed to shift from declarative (one answer, no context) to deliberative (multiple answers, ranked transparency, verifiable sources).</p>
+            <p className="text-base">In other words, the chatbot needed to stop performing certainty and start communicating honestly.</p>
           </div>
         </div>
 
