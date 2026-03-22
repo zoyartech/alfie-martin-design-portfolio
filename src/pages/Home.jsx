@@ -216,6 +216,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Project Section */}
+      <section className="py-16 md:py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <Link to={createPageUrl("CaseStudies")} className="group block cursor-pointer">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="overflow-hidden mb-6"
+            >
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93f20ac27_IMG_3318.png" 
+                alt="Brand creating visual identities" 
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl md:text-2xl font-light text-gray-900"
+            >
+              BRAND creating visual identities 
+            </motion.p>
+          </Link>
+        </div>
+      </section>
+
       {/* Gallery Preview */}
       <section className="py-16 md:py-32 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
