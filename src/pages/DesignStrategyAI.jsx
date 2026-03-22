@@ -300,32 +300,32 @@ export default function DesignStrategyAI() {
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e0530cded_1.png" 
                   alt="Details on Training Process & Design Decisions" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f91b37bce_2.png" 
                   alt="Visual Hierarchy" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/60568ac52_3.png" 
                   alt="Confidence bars instead of just numbers" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/738485c5a_4.png" 
                   alt="Each Card is self contained" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/525d728fb_5.png" 
                   alt="Feedback loops close the accuracy cycle" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
                 <img 
                   src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4fc1a6e31_6.png" 
                   alt="The question echo at the top" 
-                  className="w-full h-auto object-contain rounded-md snap-center flex-shrink-0" 
+                  className="w-full min-w-full h-auto object-contain rounded-md snap-start flex-shrink-0" 
                 />
               </div>
 
