@@ -102,18 +102,18 @@ export default function Contact() {
 
               <div className="border-t border-gray-200 pt-8">
                 <h3 className="text-xl font-light mb-4">Location</h3>
-                <p className="text-gray-600">
-                  Based in New York City, NY<br />
-                  Available for remote projects worldwide
+                <p className="text-gray-600">Based in New York City, NY
+
+
                 </p>
               </div>
 
               <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-light mb-4">Availability</h3>
-                <p className="text-gray-600">
-                  Currently accepting select projects for Q2 2024.<br />
-                  Typical response time: 24-48 hours
-                </p>
+                
+                
+
+
+                
               </div>
             </motion.div>
 
