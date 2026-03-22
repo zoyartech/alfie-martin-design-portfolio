@@ -210,7 +210,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-2xl md:text-3xl font-light leading-relaxed text-gray-800">
 
-            "We need to stop worrying about proving the value of design & just focus on outcomes that provide value." – Denis Weil
+            “The dumbest mistake is viewing design as something you do at the end of the process to ‘tidy up’ the mess, as opposed to understanding it’s a ‘day one’ issue and part of everything.” 
+            <span className="block mt-4 text-xl text-gray-500">― Tom Peterson</span>
           </motion.blockquote>
         </div>
       </section>
