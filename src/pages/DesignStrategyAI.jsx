@@ -9,14 +9,21 @@ export default function DesignStrategyAI() {
 
   const scroll = (direction) => {
     if (carouselRef.current) {
-      // Find the first image to determine exact scrolling width
-      const firstImage = carouselRef.current.querySelector('img');
-      if (firstImage) {
-        const gap = 24; // gap-6 is 24px
-        const scrollWidth = firstImage.offsetWidth + gap;
-        const scrollAmount = direction === 'left' ? -scrollWidth : scrollWidth;
-        carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+      const container = carouselRef.current;
+      const firstImage = container.querySelector('img');
+      if (!firstImage) return;
+      
+      const gap = 24; // gap-6 is 24px
+      const snapPoint = firstImage.offsetWidth + gap;
+      
+      // Calculate current slide index to prevent getting stuck between slides on rapid clicks
+      const currentIndex = Math.round(container.scrollLeft / snapPoint);
+      const nextIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
+      
+      container.scrollTo({ 
+        left: nextIndex * snapPoint, 
+        behavior: 'smooth' 
+      });
     }
   };
   return (
