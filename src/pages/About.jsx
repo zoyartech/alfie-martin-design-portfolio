@@ -107,7 +107,7 @@ export default function About() {
                     <h3 className="text-2xl font-light mb-2">{job.role}</h3>
                     <p className="text-gray-500">{job.company}</p>
                   </div>
-                  <span className="text-sm text-gray-400 mt-2 md:mt-0">{job.period}</span>
+                  
                 </div>
                 <p className="text-gray-600 leading-relaxed max-w-2xl">
                   {job.description}
