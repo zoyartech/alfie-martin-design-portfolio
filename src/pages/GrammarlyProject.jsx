@@ -304,8 +304,14 @@ export default function GrammarlyProject() {
       </section>
 
       {/* Design Principles */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Design Principles
           </div>
@@ -315,36 +321,42 @@ export default function GrammarlyProject() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#eef2f6] p-8 rounded-2xl">
+            <motion.div whileHover={{ y: -5 }} className="bg-[#eef2f6] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 border-2 border-slate-800 rounded-full flex items-center justify-center mb-6">
                 <MinusCircle className="w-8 h-8 text-slate-800" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">Reduce Cognitive Load</h3>
               <p className="text-slate-700 text-lg">Structured starting points, contextual suggestions, and pre-filled prompts that removed the blank-page paralysis before it could take hold in the user's workflow.</p>
-            </div>
+            </motion.div>
             
-            <div className="bg-[#eef2f6] p-8 rounded-2xl">
+            <motion.div whileHover={{ y: -5 }} className="bg-[#eef2f6] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 border-2 border-slate-800 rounded-full flex items-center justify-center mb-6">
                 <Trash2 className="w-8 h-8 text-slate-800" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">Eliminate Unnecessary Friction</h3>
               <p className="text-slate-700 text-lg">Every extra step between a user's intent and the AI's response was a potential exit point. Stripping the flow to its minimum viable friction was non-negotiable.</p>
-            </div>
+            </motion.div>
             
-            <div className="bg-[#eef2f6] p-8 rounded-2xl">
+            <motion.div whileHover={{ y: -5 }} className="bg-[#eef2f6] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 border-2 border-slate-800 rounded-full flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-slate-800" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">Meet the Adjacent User</h3>
               <p className="text-slate-700 text-lg">Designing for the person who saw the value but blanked at the prompt—not the power user, not the skeptic. Getting inside their head defined every nudge, every default, every moment of guidance.</p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Adoption Framework */}
-      <section className="py-24 px-6 lg:px-12 bg-[#1a1c1e] text-white">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="py-24 px-6 lg:px-12 bg-[#1a1c1e] text-white overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto text-center"
+        >
           <div className="inline-block bg-green-900/30 text-green-400 text-xs font-bold tracking-wider px-3 py-1 mb-8 uppercase border border-green-800/50 rounded-sm">
             Adoption Framework
           </div>
@@ -409,7 +421,7 @@ export default function GrammarlyProject() {
 
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
