@@ -178,13 +178,13 @@ export default function GrammarlyProject() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-64 border-l-2 border-b-2 border-slate-200 p-4">
-              <div className="absolute top-0 right-0 text-sm text-slate-500">Feature Use</div>
+            <div className="relative h-64 border-l-2 border-b-2 border-slate-200 p-4 group">
+              <div className="absolute top-0 right-0 text-sm text-slate-500 transition-colors group-hover:text-slate-900">Feature Use</div>
               <div className="absolute bottom-0 left-0 w-full flex justify-between transform translate-y-8 text-sm text-slate-600 font-medium px-4">
-                <span>Awareness</span>
-                <span>First Try</span>
-                <span>Blank Canvas</span>
-                <span>Nudge Added</span>
+                <span className="hover:text-green-700 cursor-default transition-colors">Awareness</span>
+                <span className="hover:text-green-700 cursor-default transition-colors">First Try</span>
+                <span className="text-red-600 font-bold">Blank Canvas</span>
+                <span className="hover:text-green-700 cursor-default transition-colors">Nudge Added</span>
               </div>
               <div className="absolute left-0 top-0 h-full flex flex-col justify-between transform -translate-x-6 text-sm text-slate-500 py-4">
                 <span>4</span>
@@ -194,10 +194,44 @@ export default function GrammarlyProject() {
               </div>
               
               {/* SVG Line Chart */}
-              <svg className="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
-                <path d="M 0 100 L 130 50 L 250 180 L 380 0" fill="none" stroke="#16a34a" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 0 100 L 130 50 L 250 180 L 380 0 L 380 200 L 0 200 Z" fill="#bbf7d0" opacity="0.3" />
+              <svg className="w-full h-full overflow-visible" viewBox="0 0 400 200" preserveAspectRatio="none">
+                {/* Data Points */}
+                <motion.circle cx="0" cy="100" r="4" fill="#16a34a" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} />
+                <motion.circle cx="130" cy="50" r="4" fill="#16a34a" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} />
+                <motion.circle cx="250" cy="180" r="6" fill="#dc2626" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }} />
+                <motion.circle cx="380" cy="0" r="4" fill="#16a34a" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 1.1 }} />
+                
+                {/* The Path */}
+                <motion.path 
+                  d="M 0 100 L 130 50 L 250 180 L 380 0" 
+                  fill="none" 
+                  stroke="#16a34a" 
+                  strokeWidth="4" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                />
+                <motion.path 
+                  d="M 0 100 L 130 50 L 250 180 L 380 0 L 380 200 L 0 200 Z" 
+                  fill="#bbf7d0" 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 0.3 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 1 }}
+                  className="transition-opacity duration-300 group-hover:opacity-50"
+                />
               </svg>
+              
+              {/* Pulse effect on the "drop off" point */}
+              <div className="absolute left-[62.5%] top-[90%] -translate-x-1/2 -translate-y-1/2">
+                <span className="relative flex h-4 w-4">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500"></span>
+                </span>
+              </div>
             </div>
             
             <div className="pl-0 md:pl-12">
