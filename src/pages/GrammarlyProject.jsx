@@ -542,6 +542,40 @@ export default function GrammarlyProject() {
         </motion.div>
       </section>
 
+      {/* Product Experience */}
+      <section className="py-24 px-6 lg:px-12 bg-white overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto flex flex-col items-center text-center"
+        >
+          <div className="inline-block bg-green-100 text-green-800 text-xs font-bold tracking-wider px-3 py-1 mb-12 uppercase rounded-sm">
+            Product Experience
+          </div>
+          
+          <motion.div 
+            whileHover={{ y: -10, shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="w-full max-w-[320px] mx-auto aspect-[9/16] rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-slate-900 relative bg-black mb-12"
+          >
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/SfMobYWRATE?rel=0&autoplay=1&mute=1&loop=1&playlist=SfMobYWRATE" 
+              title="Grammarly Product Experience" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            ></iframe>
+          </motion.div>
+          
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">What the product looked and felt like</h2>
+        </motion.div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 px-6 lg:px-12 border-t border-slate-200 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
