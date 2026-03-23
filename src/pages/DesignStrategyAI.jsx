@@ -203,6 +203,13 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
+          <h3 className="font-serif text-3xl font-bold mb-6 text-slate-900">Raw User Input and Multi-Intent Handling</h3>
+          <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 mb-16">
+            <p>Ambiguity is the biggest threat to your confidence scores. When the query is vague, the retriever returns a broad set of marginally relevant documents, and the candidate generator produces answers that are all plausible but none are strongly grounded. The confidence scoring engine then faces an ugly choice: assign middling scores to everything (which is honest but unhelpful — three 55% answers), or artificially boost the top one (which is dishonest). The best mitigation is to have the system ask a clarifying question instead of generating answers when the input ambiguity score crosses a threshold. That's a design decision your preprocessing layer can enable by outputting an ambiguity flag alongside the structured query.</p>
+            <p>Multi-intent queries are the silent killer. Most chatbots simply answer the first detected intent and ignore the rest, and users learn to ask one thing at a time — which is a terrible user experience. In a ranked-answer system, the failure mode is worse: your three answers might address the same intent from different angles, leaving two user needs completely unaddressed. The fix is a query decomposition step right after intent classification that splits compound queries into independent sub-queries, each of which gets its own three-answer response card.</p>
+            <p>Sarcasm and negation directly poison confidence calibration. If the system misreads sarcastic frustration as genuine satisfaction, it might route to a "glad everything's working!" response with 90% confidence — maximally wrong, maximally confident. Over time this corrupts your feedback loop too, because users who downvote a confident-but-wrong response send a confusing signal to the calibration system. The fix here is usually a sentiment-aware layer (fine-tuned on customer service data specifically, not general sentiment) that flags emotional context as metadata separate from the factual intent.</p>
+          </div>
+
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
