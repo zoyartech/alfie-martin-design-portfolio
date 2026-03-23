@@ -164,7 +164,7 @@ export default function TCSMarathon() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 relative">
                 {/* Visual line connecting boxes could go here, omitting for simplicity/cleanliness */}
                 <div className="border-2 border-[#333] rounded-[30px] p-6 text-center w-full md:w-[18%] bg-transparent z-10 min-h-[160px] flex flex-col justify-center">
-                    <h4 className="font-medium text-lg mb-2">Research</h4>
+                    <h4 className="mb-2 text-lg font-bold">Research</h4>
                     <p className="text-sm text-gray-600">Collect user insights and metrics</p>
                 </div>
                 <div className="border-2 border-[#333] rounded-[30px] p-6 text-center w-full md:w-[18%] bg-transparent z-10 min-h-[160px] flex flex-col justify-center">
