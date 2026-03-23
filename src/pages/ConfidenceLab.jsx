@@ -77,7 +77,7 @@ export default function ConfidenceLab() {
 
       {/* Page Title */}
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-2">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 tracking-tight">CONFIDENCE LAB</h1>
+        <h1 className="text-slate-900 text-4xl font-extrabold text-center capitalize tracking-tight md:text-5xl">CONFIDENCE LAB</h1>
       </div>
 
       <main className="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-[1fr_1.2fr] gap-8">
@@ -86,7 +86,7 @@ export default function ConfidenceLab() {
         <div className="space-y-8">
           
           {/* Query Input */}
-          <div className="bg-red-100 p-6 rounded-lg shadow-sm border border-slate-200">
+          <div className="bg-violet-200 text-slate-950 p-6 rounded-lg shadow-sm border border-slate-200">
             <h2 className="text-slate-950 mb-4 text-sm font-bold uppercase tracking-wider">INPUT METADATA</h2>
             <div className="space-y-4">
               <div>
@@ -145,8 +145,8 @@ export default function ConfidenceLab() {
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-slate-950 text-sm font-bold uppercase tracking-wider">CANDIDATE ANSWERS</h2>
               <button
-                onClick={() => setAnswers(answers.map((a) => ({ ...a, confidence: Math.floor(Math.random() * 100) })))}
-                className="text-xs flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium">
+                onClick={() => setAnswers(answers.map((a) => ({ ...a, confidence: Math.floor(Math.random() * 100) })))} className="text-pink-800 text-xs font-medium flex items-center gap-1 hover:text-blue-800">
+                
                 
                 <RefreshCw className="w-3 h-3" /> Randomize Scores
               </button>
@@ -160,7 +160,7 @@ export default function ConfidenceLab() {
                   <div className="mb-3">
                     <label className="flex items-center justify-between text-xs font-medium text-slate-600 mb-1">
                       Confidence Score
-                      <span className={`font-bold ${getConfidenceStyle(answer.confidence).text.replace('900', '600')}`}>{answer.confidence}%</span>
+                      <span className="text-slate-950 font-bold">{answer.confidence}%</span>
                     </label>
                     <input
                     type="range"
@@ -267,7 +267,7 @@ export default function ConfidenceLab() {
                             </span>
                           </div>
                           {answer.confidence > 90 &&
-                          <CheckCircle className="w-5 h-5 text-blue-600 opacity-50" />
+                          <CheckCircle className="bg-transparent text-slate-950 opacity-50 lucide lucide-circle-check-big w-5 h-5" />
                           }
                           {answer.confidence < 50 &&
                           <AlertTriangle className="w-5 h-5 text-amber-600 opacity-50" />
@@ -285,7 +285,7 @@ export default function ConfidenceLab() {
                            <a href={answer.sourceUrl} target="_blank" rel="noreferrer" className="text-sm text-slate-700 hover:underline flex items-center gap-1 font-medium">
                              {answer.source} <ExternalLink className="w-3 h-3 opacity-50" />
                            </a>
-                           <span className="bg-lime-300 text-slate-950 ml-auto px-2 py-0.5 font-mono rounded border border-slate-900/5">
+                           <span className="bg-slate-500 text-slate-50 ml-auto px-2 py-0.5 font-mono rounded border border-slate-900/5">
                              {answer.sourceTier}
                            </span>
                         </div>
