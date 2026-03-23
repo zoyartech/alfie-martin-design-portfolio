@@ -70,7 +70,7 @@ export default function DesignStrategyAI() {
           <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
             <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 font-normal">
               <p>Most conversational AI products hand you one answer and a silent prayer that you'll believe it. It's <strong className="font-semibold text-slate-900">the "trust me, bro" school of product design:</strong> a black box with the confidence of a TED talk speaker and the citation practices of a group chat.</p>
-              <p>When I joined this project, the user feedback had been saying the same thing for months, just increasingly louder:<br /><span className="italic text-slate-900">"How do I know this is right?"</span></p>
+              <p>When we started this project, the user feedback had been saying the same thing for months, just louder:<br /><span className="italic text-slate-900">"how do I know this is right?"</span></p>
               <p>Nobody was accusing the chatbot of lying, exactly. They just had zero way to evaluate whether it was telling the truth, which, functionally, is the same problem.</p>
               <p>So they'd do what any reasonable person does when a stranger gives them financial advice: copy-paste the answer into Google and quietly verify it behind the chatbot's back.</p>
             </div>
