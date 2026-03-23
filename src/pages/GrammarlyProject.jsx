@@ -434,94 +434,106 @@ export default function GrammarlyProject() {
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="h-full bg-gradient-to-r from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-full"
-              ></motion.div>
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="h-full bg-gradient-to-r from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-full relative"
+              >
+                {/* Moving light pulse on the line */}
+                <motion.div 
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "1000%" }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "linear", repeatDelay: 1 }}
+                  className="absolute top-0 bottom-0 w-32 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                />
+              </motion.div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
               
               {/* Phase 1 */}
               <motion.div 
-                whileHover={{ y: -10 }}
-                className="flex flex-col items-center group cursor-default"
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center group cursor-pointer"
               >
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
+                  whileHover={{ rotate: 15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#16a34a] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(22,163,74,0)] group-hover:shadow-[0_0_30px_rgba(22,163,74,0.3)] z-10"
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#16a34a] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0)] group-hover:shadow-[0_0_40px_rgba(22,163,74,0.6)] z-10"
                 >
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A1 1 0 0 1 10 21H8a1 1 0 0 1-1-1v-4H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V5a1 1 0 0 1 1 1v15z"></path><path d="M14 9h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-4"></path><path d="M19 11v2"></path></svg>
+                  <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A1 1 0 0 1 10 21H8a1 1 0 0 1-1-1v-4H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V5a1 1 0 0 1 1 1v15z"></path><path d="M14 9h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-4"></path><path d="M19 11v2"></path></svg>
                 </motion.div>
-                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
-                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70">01</div>
-                  <h3 className="text-xl font-bold text-white mb-3">Awareness</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Introduce new AI capabilities to users contextually.</p>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#16a34a]/50 transition-all duration-300 transform group-hover:-translate-y-2">
+                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">01</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#4ade80] transition-colors">Awareness</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300">Introduce new AI capabilities to users contextually.</p>
                 </div>
               </motion.div>
 
               {/* Phase 2 */}
               <motion.div 
-                whileHover={{ y: -10 }}
-                className="flex flex-col items-center group cursor-default md:mt-16"
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center group cursor-pointer md:mt-16"
               >
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
+                  whileHover={{ rotate: -15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#4ade80] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(74,222,128,0)] group-hover:shadow-[0_0_30px_rgba(74,222,128,0.3)] z-10"
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#4ade80] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(74,222,128,0)] group-hover:shadow-[0_0_40px_rgba(74,222,128,0.6)] z-10"
                 >
-                  <Lightbulb className="w-7 h-7 text-[#4ade80]" />
+                  <Lightbulb className="w-7 h-7 text-[#4ade80] transition-transform group-hover:scale-110 group-hover:fill-[#4ade80]/20" />
                 </motion.div>
-                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
-                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70">02</div>
-                  <h3 className="text-xl font-bold text-white mb-3">First Prompt</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Reduce blank-canvas friction with proactive nudges.</p>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#4ade80]/50 transition-all duration-300 transform group-hover:-translate-y-2">
+                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">02</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#4ade80] transition-colors">First Prompt</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300">Reduce blank-canvas friction with proactive nudges.</p>
                 </div>
               </motion.div>
 
               {/* Phase 3 */}
               <motion.div 
-                whileHover={{ y: -10 }}
-                className="flex flex-col items-center group cursor-default"
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center group cursor-pointer"
               >
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
+                  whileHover={{ rotate: 15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#86efac] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(134,239,172,0)] group-hover:shadow-[0_0_30px_rgba(134,239,172,0.3)] z-10"
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#86efac] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(134,239,172,0)] group-hover:shadow-[0_0_40px_rgba(134,239,172,0.6)] z-10"
                 >
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#86efac" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                  <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#86efac" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
                 </motion.div>
-                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
-                  <div className="text-[#86efac] font-mono text-sm mb-2 opacity-70">03</div>
-                  <h3 className="text-xl font-bold text-white mb-3">Motivated Use</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Show ROI immediately: inbox zero & sharper writing.</p>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#86efac]/50 transition-all duration-300 transform group-hover:-translate-y-2">
+                  <div className="text-[#86efac] font-mono text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">03</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#86efac] transition-colors">Motivated Use</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300">Show ROI immediately: inbox zero & sharper writing.</p>
                 </div>
               </motion.div>
 
               {/* Phase 4 */}
               <motion.div 
-                whileHover={{ y: -10 }}
-                className="flex flex-col items-center group cursor-default md:mt-16"
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center group cursor-pointer md:mt-16"
               >
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
+                  whileHover={{ rotate: -15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.1, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#bbf7d0] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(187,247,208,0)] group-hover:shadow-[0_0_30px_rgba(187,247,208,0.3)] z-10"
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#bbf7d0] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(187,247,208,0)] group-hover:shadow-[0_0_40px_rgba(187,247,208,0.6)] z-10"
                 >
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                  <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
                 </motion.div>
-                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
-                  <div className="text-[#bbf7d0] font-mono text-sm mb-2 opacity-70">04</div>
-                  <h3 className="text-xl font-bold text-white mb-3">Habitual Use</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Behavior becomes consistent, effortless and aligned.</p>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#bbf7d0]/50 transition-all duration-300 transform group-hover:-translate-y-2">
+                  <div className="text-[#bbf7d0] font-mono text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">04</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#bbf7d0] transition-colors">Habitual Use</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300">Behavior becomes consistent, effortless and aligned.</p>
                 </div>
               </motion.div>
 
