@@ -57,12 +57,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alfie Martin",
-        "jobTitle": "Product Designer",
-        "url": "https://alfiealfie.com"
-      }) }} />
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alfie Martin",
+          "jobTitle": "Product Designer",
+          "url": "https://alfiealfie.com"
+        }) }} />
 
       {/* Hero Section */}
       <section
@@ -304,12 +304,12 @@ export default function Home() {
             }
           </AnimatePresence>
 
-          <Link
-            to={createPageUrl("Gallery")}
-            className="md:hidden flex items-center justify-center gap-2 text-sm mt-8 hover:text-[#8B7355] transition-colors">
+          
 
-            View All Works <ArrowRight className="w-4 h-4" />
-          </Link>
+
+
+
+          
         </div>
       </section>
 
