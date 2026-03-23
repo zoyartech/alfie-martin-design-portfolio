@@ -47,7 +47,7 @@ export default function GrammarlyProject() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="h-6 bg-[#68d391] rounded-full w-1/2"></div>
-                  <span className="text-3xl font-bold text-slate-900">40M</span>
+                  <span className="text-slate-900 text-lg font-bold">40M</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800">Daily Active Users across the platform.</p>
               </div>
@@ -55,7 +55,7 @@ export default function GrammarlyProject() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="h-6 bg-[#276749] rounded-full w-[85%]"></div>
-                  <span className="text-3xl font-bold text-slate-900">500K+</span>
+                  <span className="text-slate-900 text-lg font-bold">500K+</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800">Apps integrated with Grammarly's writing layer.</p>
               </div>
@@ -63,7 +63,7 @@ export default function GrammarlyProject() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="h-6 bg-[#2b6cb0] rounded-full w-full"></div>
-                  <span className="text-3xl font-bold text-slate-900">900k</span>
+                  <span className="text-slate-900 text-lg font-bold">900k</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800">Core perception problem: "the typo catcher."</p>
               </div>
@@ -332,7 +332,7 @@ export default function GrammarlyProject() {
               <div className="flex flex-col items-center">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-green-400 mb-2">Awareness</h3>
-                  <p className="text-slate-300 text-sm">Introduce new AI<br/>capabilities to users</p>
+                  <p className="text-slate-300 text-sm">Introduce new AI<br />capabilities to users</p>
                 </div>
                 <div className="w-16 h-16 bg-[#a7f3d0] text-green-900 rounded-full flex items-center justify-center rounded-br-none rotate-45 transform md:translate-y-8">
                   <div className="-rotate-45">
@@ -349,14 +349,14 @@ export default function GrammarlyProject() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-green-400 mb-2">First Prompt</h3>
-                  <p className="text-slate-300 text-sm">Reduce blank-canvas<br/>friction with nudges</p>
+                  <p className="text-slate-300 text-sm">Reduce blank-canvas<br />friction with nudges</p>
                 </div>
               </div>
 
               <div className="flex flex-col items-center">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-green-400 mb-2">Motivated Use</h3>
-                  <p className="text-slate-300 text-sm">Show ROI: inbox zero<br/>and sharper messages</p>
+                  <p className="text-slate-300 text-sm">Show ROI: inbox zero<br />and sharper messages</p>
                 </div>
                 <div className="w-16 h-16 bg-[#86efac] text-green-900 rounded-full flex items-center justify-center rounded-br-none rotate-45 transform md:-translate-y-4">
                   <div className="-rotate-45">
@@ -373,7 +373,7 @@ export default function GrammarlyProject() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-green-400 mb-2">Habitual Use</h3>
-                  <p className="text-slate-300 text-sm">Behavior becomes<br/>consistent and aligned</p>
+                  <p className="text-slate-300 text-sm">Behavior becomes<br />consistent and aligned</p>
                 </div>
               </div>
 
@@ -388,6 +388,6 @@ export default function GrammarlyProject() {
           <p className="text-sm text-slate-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
