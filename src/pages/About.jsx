@@ -9,13 +9,13 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alfie Martin",
-        "jobTitle": "Product Designer",
-        "description": "Product Designer specializing in Brand Strategy, Digital Design, and Creative Direction.",
-        "url": "https://alfiealfie.com/About"
-      }) }} />
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alfie Martin",
+          "jobTitle": "Product Designer",
+          "description": "Product Designer specializing in Brand Strategy, Digital Design, and Creative Direction.",
+          "url": "https://alfiealfie.com/About"
+        }) }} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 lg:px-12">
@@ -177,9 +177,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Instagram</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">LinkedIn</a>
-            <a href="#" className="text-xs text-gray-400 hover:text-black transition-colors">Dribbble</a>
+            
+            
+            
           </div>
         </div>
       </footer>
