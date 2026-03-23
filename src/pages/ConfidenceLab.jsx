@@ -75,6 +75,11 @@ export default function ConfidenceLab() {
         </div>
       </header>
 
+      {/* Page Title */}
+      <div className="max-w-7xl mx-auto px-6 pt-12 pb-2">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 tracking-tight">CONFIDENCE LAB</h1>
+      </div>
+
       <main className="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-[1fr_1.2fr] gap-8">
         
         {/* Controls Panel */}
