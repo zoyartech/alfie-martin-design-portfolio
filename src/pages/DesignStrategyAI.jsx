@@ -227,6 +227,19 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png" 
+              alt="High severity ambiguity issue example" 
+              className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
+            />
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/db6d57be2_med-severity.png" 
+              alt="Medium severity typo issue example" 
+              className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
+            />
+          </div>
+
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
