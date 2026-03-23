@@ -46,7 +46,7 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <nav className="flex flex-col px-6 pt-10 gap-8">
+            <nav className="bg-slate-50 pt-10 px-6 flex flex-col gap-8">
               {links.map((link) =>
             <Link
               key={link.page}
