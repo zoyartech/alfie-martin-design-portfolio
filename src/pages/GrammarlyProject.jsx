@@ -412,75 +412,118 @@ export default function GrammarlyProject() {
       </section>
 
       {/* Adoption Framework */}
-      <section className="py-24 px-6 lg:px-12 bg-[#1a1c1e] text-white overflow-hidden">
+      <section className="py-24 px-6 lg:px-12 bg-[#0f172a] text-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto text-center"
+          className="max-w-6xl mx-auto"
         >
-          <div className="inline-block bg-green-900/30 text-green-400 text-xs font-bold tracking-wider px-3 py-1 mb-8 uppercase border border-green-800/50 rounded-sm">
-            Adoption Framework
+          <div className="text-center mb-24">
+            <div className="inline-block bg-[#16a34a]/20 text-[#4ade80] text-xs font-bold tracking-wider px-4 py-1.5 mb-6 uppercase border border-[#16a34a]/30 rounded-full">
+              Adoption Framework
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">The Dimmer Switch: <span className="text-[#4ade80]">Adoption Phases</span></h2>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-20 tracking-tight">The Dimmer Switch: <span className="text-green-400">Adoption Phases</span></h2>
 
-          <div className="relative">
-            {/* Visual wavy road */}
-            <svg className="w-full h-40 hidden md:block" viewBox="0 0 1000 150" preserveAspectRatio="none">
-              <path d="M 0 75 Q 250 150 500 75 T 1000 75" fill="none" stroke="#334155" strokeWidth="40" strokeLinecap="round" />
-              <path d="M 0 75 Q 250 150 500 75 T 1000 75" fill="none" stroke="#94a3b8" strokeWidth="4" strokeDasharray="15, 15" strokeLinecap="round" />
-            </svg>
+          <div className="relative pt-12 pb-16">
+            {/* Horizontal connection line */}
+            <div className="hidden md:block absolute top-[88px] left-0 right-0 h-1 bg-slate-800 rounded-full">
+              <motion.div 
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="h-full bg-gradient-to-r from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-full"
+              ></motion.div>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 md:-mt-32">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
               
-              <div className="flex flex-col items-center">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">Awareness</h3>
-                  <p className="text-slate-300 text-sm">Introduce new AI<br />capabilities to users</p>
+              {/* Phase 1 */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="flex flex-col items-center group cursor-default"
+              >
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2, type: "spring" }}
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#16a34a] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(22,163,74,0)] group-hover:shadow-[0_0_30px_rgba(22,163,74,0.3)] z-10"
+                >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A1 1 0 0 1 10 21H8a1 1 0 0 1-1-1v-4H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V5a1 1 0 0 1 1 1v15z"></path><path d="M14 9h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-4"></path><path d="M19 11v2"></path></svg>
+                </motion.div>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
+                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70">01</div>
+                  <h3 className="text-xl font-bold text-white mb-3">Awareness</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Introduce new AI capabilities to users contextually.</p>
                 </div>
-                <div className="w-16 h-16 bg-[#a7f3d0] text-green-900 rounded-full flex items-center justify-center rounded-br-none rotate-45 transform md:translate-y-8">
-                  <div className="-rotate-45">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A1 1 0 0 1 10 21H8a1 1 0 0 1-1-1v-4H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V5a1 1 0 0 1 1 1v15z"></path><path d="M14 9h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-4"></path><path d="M19 11v2"></path></svg>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-center md:translate-y-24">
-                <div className="w-16 h-16 bg-[#bbf7d0] text-green-900 rounded-full flex items-center justify-center rounded-bl-none -rotate-45 transform mb-4">
-                  <div className="rotate-45">
-                    <Lightbulb className="w-6 h-6" />
-                  </div>
+              {/* Phase 2 */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="flex flex-col items-center group cursor-default md:mt-16"
+              >
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5, type: "spring" }}
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#4ade80] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(74,222,128,0)] group-hover:shadow-[0_0_30px_rgba(74,222,128,0.3)] z-10"
+                >
+                  <Lightbulb className="w-7 h-7 text-[#4ade80]" />
+                </motion.div>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
+                  <div className="text-[#4ade80] font-mono text-sm mb-2 opacity-70">02</div>
+                  <h3 className="text-xl font-bold text-white mb-3">First Prompt</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Reduce blank-canvas friction with proactive nudges.</p>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">First Prompt</h3>
-                  <p className="text-slate-300 text-sm">Reduce blank-canvas<br />friction with nudges</p>
-                </div>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-center">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">Motivated Use</h3>
-                  <p className="text-slate-300 text-sm">Show ROI: inbox zero<br />and sharper messages</p>
+              {/* Phase 3 */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="flex flex-col items-center group cursor-default"
+              >
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8, type: "spring" }}
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#86efac] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(134,239,172,0)] group-hover:shadow-[0_0_30px_rgba(134,239,172,0.3)] z-10"
+                >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#86efac" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                </motion.div>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
+                  <div className="text-[#86efac] font-mono text-sm mb-2 opacity-70">03</div>
+                  <h3 className="text-xl font-bold text-white mb-3">Motivated Use</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Show ROI immediately: inbox zero & sharper writing.</p>
                 </div>
-                <div className="w-16 h-16 bg-[#86efac] text-green-900 rounded-full flex items-center justify-center rounded-br-none rotate-45 transform md:-translate-y-4">
-                  <div className="-rotate-45">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col items-center md:translate-y-16">
-                <div className="w-16 h-16 bg-[#4ade80] text-green-900 rounded-full flex items-center justify-center rounded-bl-none -rotate-45 transform mb-4">
-                  <div className="rotate-45">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
-                  </div>
+              {/* Phase 4 */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="flex flex-col items-center group cursor-default md:mt-16"
+              >
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1.1, type: "spring" }}
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#bbf7d0] rounded-full flex items-center justify-center mb-8 transition-colors duration-300 shadow-[0_0_30px_rgba(187,247,208,0)] group-hover:shadow-[0_0_30px_rgba(187,247,208,0.3)] z-10"
+                >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                </motion.div>
+                <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 transition-colors duration-300">
+                  <div className="text-[#bbf7d0] font-mono text-sm mb-2 opacity-70">04</div>
+                  <h3 className="text-xl font-bold text-white mb-3">Habitual Use</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Behavior becomes consistent, effortless and aligned.</p>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">Habitual Use</h3>
-                  <p className="text-slate-300 text-sm">Behavior becomes<br />consistent and aligned</p>
-                </div>
-              </div>
+              </motion.div>
 
             </div>
           </div>
