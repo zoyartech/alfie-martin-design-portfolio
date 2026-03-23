@@ -1,26 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { base44 } from '@/api/base44Client';
 
 export default function TCSAttrition() {
-  const [uploading, setUploading] = useState(false);
-  const [uploadedUrl, setUploadedUrl] = useState(null);
-
-  const handleFileUpload = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-    
-    setUploading(true);
-    try {
-      const response = await base44.integrations.Core.UploadFile({ file });
-      setUploadedUrl(response.file_url);
-    } catch (err) {
-      console.error(err);
-      alert('Upload failed');
-    } finally {
-      setUploading(false);
-    }
-  };
   return (
     <div className="min-h-screen bg-white pt-32 pb-16 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
@@ -234,18 +215,17 @@ export default function TCSAttrition() {
             </div>
           </div>
 
-          {/* TEMPORARY VIDEO UPLOADER */}
-          <div className="mb-20 p-8 border-2 border-dashed border-blue-300 rounded-xl bg-blue-50/50">
-            <h3 className="text-xl font-medium mb-4">Upload Video for this section</h3>
-            <p className="text-gray-600 mb-4">Select your video file here. Once it finishes uploading, copy the URL and paste it back into our chat so I can embed it permanently!</p>
-            <input type="file" accept="video/*" onChange={handleFileUpload} disabled={uploading} className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer mb-4" />
-            {uploading && <p className="text-blue-600 font-medium animate-pulse mt-4">Uploading... this might take a minute depending on the file size.</p>}
-            {uploadedUrl && (
-              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 font-medium mb-2">Upload successful! Copy this URL and paste it in our chat:</p>
-                <code className="block p-3 bg-white border border-green-100 rounded text-sm break-all select-all text-gray-800">{uploadedUrl}</code>
-              </div>
-            )}
+          <div className="mb-20">
+            <div className="w-full rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-black">
+              <video 
+                src="https://base44.app/api/apps/6974e154f708f4918a2b8d02/files/mp/public/6974e154f708f4918a2b8d02/15be67358_UX-micro-learning-lms.mov"
+                controls
+                className="w-full h-auto"
+                poster="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
           {/* 05. Key Design Decisions */}
