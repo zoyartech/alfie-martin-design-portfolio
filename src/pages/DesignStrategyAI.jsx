@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
 
 export default function DesignStrategyAI() {
+  const [selectedImage, setSelectedImage] = useState(null);
   const carouselRef = useRef(null);
 
   const scroll = (direction) => {
@@ -228,17 +229,34 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-20">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png" 
-              alt="High severity ambiguity issue example" 
-              className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
-            />
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png" 
-              alt="Medium severity typo issue example" 
-              className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
-            />
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png")}>
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png" 
+                alt="High severity ambiguity issue example" 
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" 
+              />
+            </div>
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png")}>
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png" 
+                alt="Medium severity typo issue example" 
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" 
+              />
+            </div>
           </div>
+
+          {selectedImage && (
+            <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setSelectedImage(null)}>
+              <button className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+                <X className="w-8 h-8" />
+              </button>
+              <img 
+                src={selectedImage} 
+                alt="Full size view" 
+                className="max-w-[95vw] max-h-[95vh] object-contain rounded-sm" 
+              />
+            </div>
+          )}
 
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
