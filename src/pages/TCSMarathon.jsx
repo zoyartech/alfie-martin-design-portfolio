@@ -306,7 +306,7 @@ export default function TCSMarathon() {
         <section className="py-20 px-6 lg:px-12 bg-[#F3F2EC]">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
             <div className="flex-1">
-                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3f043b281_BLUEMAP.png" alt="App Screens Detail" className="w-full max-h-[600px] object-contain drop-shadow-xl rounded-xl" />
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e8c9201a_tcsui2.png" alt="App Screens Detail" className="w-full max-h-[600px] object-contain drop-shadow-xl rounded-xl" />
             </div>
             <div className="flex-1">
                 <h2 className="text-3xl lg:text-5xl font-medium mb-8 text-[#333]">The Last 5%</h2>
