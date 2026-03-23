@@ -50,29 +50,47 @@ export default function GrammarlyProject() {
           
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-12">
-              <div>
+              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="h-6 bg-[#68d391] rounded-full w-1/2"></div>
+                  <motion.div 
+                    initial={{ width: 0 }} 
+                    whileInView={{ width: "50%" }} 
+                    viewport={{ once: true }} 
+                    transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
+                    className="h-6 bg-[#68d391] rounded-full group-hover:brightness-110"
+                  ></motion.div>
                   <span className="text-slate-900 text-lg font-bold">40M</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800">Daily Active Users across the platform.</p>
-              </div>
+                <p className="text-xl font-bold text-slate-800 group-hover:text-[#68d391] transition-colors duration-300">Daily Active Users across the platform.</p>
+              </motion.div>
               
-              <div>
+              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="h-6 bg-[#276749] rounded-full w-[85%]"></div>
+                  <motion.div 
+                    initial={{ width: 0 }} 
+                    whileInView={{ width: "85%" }} 
+                    viewport={{ once: true }} 
+                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                    className="h-6 bg-[#276749] rounded-full group-hover:brightness-110"
+                  ></motion.div>
                   <span className="text-slate-900 text-lg font-bold">500K+</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800">Apps integrated with Grammarly's writing layer.</p>
-              </div>
+                <p className="text-xl font-bold text-slate-800 group-hover:text-[#276749] transition-colors duration-300">Apps integrated with Grammarly's writing layer.</p>
+              </motion.div>
 
-              <div>
+              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="h-6 bg-[#2b6cb0] rounded-full w-full"></div>
+                  <motion.div 
+                    initial={{ width: 0 }} 
+                    whileInView={{ width: "100%" }} 
+                    viewport={{ once: true }} 
+                    transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                    className="h-6 bg-[#2b6cb0] rounded-full group-hover:brightness-110"
+                  ></motion.div>
                   <span className="text-slate-900 text-lg font-bold">900k</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800">Core perception problem: "the typo catcher."</p>
-              </div>
+                <p className="text-xl font-bold text-slate-800 group-hover:text-[#2b6cb0] transition-colors duration-300">Core perception problem: "the typo catcher."</p>
+              </motion.div>
             </div>
             
             <div className="space-y-10">
