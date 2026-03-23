@@ -201,7 +201,7 @@ export default function TCSMarathon() {
                         I restructured the information architecture from a feature list into two explicit modes. Onboarding asked users to identify themselves up front — spectator or participant — and the app adapted accordingly. This single change <strong>reduced navigational errors by over 60%</strong> in usability testing.
                     </p>
                 </div>
-                <div className="p-8 md:p-12 border border-gray-200 bg-[#F9F9F9]">
+                <div className="bg-[#85d8ff] p-8 md:p-12 border border-gray-200">
                     <h3 className="text-2xl font-medium mb-4 text-[#333]">The Prototype</h3>
                     <p className="text-lg text-gray-700 leading-relaxed">
                         I built a mid-fidelity prototype in Figma focused entirely on the spectator tracking flow and ran five hallway tests in the NYRR offices. Three rounds of iteration later, I had a map interaction model that surfaced runner position, projected arrival, and a one-tap "I'm here" pin — all above the fold, no navigation required.
