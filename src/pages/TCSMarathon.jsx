@@ -216,45 +216,43 @@ export default function TCSMarathon() {
         </section>
 
         {/* Key Features Designed */}
-        <section className="bg-[#bfcbd4] text-slate-950 px-6 py-20 lg:px-12">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-            <div className="flex-1 w-full flex justify-center">
-               
+        <section className="bg-[#bfcbd4] text-slate-950 px-6 py-24 lg:px-12">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <h2 className="text-3xl lg:text-5xl font-medium mb-6 text-[#333]">Key Features Designed</h2>
+                <p className="text-lg text-slate-800">Building for the chaotic environment of race day meant focusing on immediacy, clarity, and emotional resonance.</p>
             </div>
-            <div className="flex-1">
-                <h2 className="text-3xl lg:text-5xl font-medium mb-12 text-[#333]">Key Features Designed</h2>
+            
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="bg-white/60 p-4 rounded-2xl shadow-sm text-slate-900 shrink-0"><Map className="w-8 h-8" strokeWidth={1.5} /></div>
+                    <div>
+                        <h4 className="text-2xl font-medium mb-3 text-[#333]">Live Runner Map</h4>
+                        <p className="text-slate-800 text-lg leading-relaxed">Redesigned map experience with projected arrival windows and "meet here" spectator pins — optimized for single-hand use in a crowd.</p>
+                    </div>
+                </div>
                 
-                <div className="space-y-10">
-                    <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Map className="text-slate-950 lucide lucide-map w-8 h-8" strokeWidth={1.5} /></div>
-                        <div>
-                            <h4 className="text-2xl font-medium mb-2 text-[#333]">Live Runner Map</h4>
-                            <p className="text-gray-600 text-lg leading-relaxed">Redesigned map experience with projected arrival windows and "meet here" spectator pins — optimized for single-hand use in a crowd.</p>
-                        </div>
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="bg-white/60 p-4 rounded-2xl shadow-sm text-slate-900 shrink-0"><Bell className="w-8 h-8" strokeWidth={1.5} /></div>
+                    <div>
+                        <h4 className="text-2xl font-medium mb-3 text-[#333]">Smart Notifications</h4>
+                        <p className="text-slate-800 text-lg leading-relaxed">Predictive push alerts based on pace data — notified spectators <strong>10–12 minutes before runner arrival</strong> at their location.</p>
                     </div>
-                    
-                    <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Bell className="bg-transparent text-zinc-950 lucide lucide-bell w-8 h-8" strokeWidth={1.5} /></div>
-                        <div>
-                            <h4 className="text-2xl font-medium mb-2 text-[#333]">Smart Notifications</h4>
-                            <p className="text-gray-600 text-lg leading-relaxed">Predictive push alerts based on pace data — notified spectators <strong>10–12 minutes before runner arrival</strong> at their location.</p>
-                        </div>
-                    </div>
+                </div>
 
-                    <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Trophy className="text-zinc-950 lucide lucide-trophy w-8 h-8" strokeWidth={1.5} /></div>
-                        <div>
-                            <h4 className="text-2xl font-medium mb-2 text-[#333]">Finish Line Moment</h4>
-                            <p className="text-gray-600 text-lg leading-relaxed">A full-screen celebration state triggered at crossing — personalized with the runner's final time, course map, and shareable graphic.</p>
-                        </div>
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="bg-white/60 p-4 rounded-2xl shadow-sm text-slate-900 shrink-0"><Trophy className="w-8 h-8" strokeWidth={1.5} /></div>
+                    <div>
+                        <h4 className="text-2xl font-medium mb-3 text-[#333]">Finish Line Moment</h4>
+                        <p className="text-slate-800 text-lg leading-relaxed">A full-screen celebration state triggered at crossing — personalized with the runner's final time, course map, and shareable graphic.</p>
                     </div>
+                </div>
 
-                    <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Activity className="text-zinc-950 lucide lucide-activity w-8 h-8" strokeWidth={1.5} /></div>
-                        <div>
-                            <h4 className="text-2xl font-medium mb-2 text-[#333]">Split Dashboard</h4>
-                            <p className="text-gray-600 text-lg leading-relaxed">Runner-facing pace card with confidence indicators — subtle visual cues that communicated GPS lock status without technical language.</p>
-                        </div>
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="bg-white/60 p-4 rounded-2xl shadow-sm text-slate-900 shrink-0"><Activity className="w-8 h-8" strokeWidth={1.5} /></div>
+                    <div>
+                        <h4 className="text-2xl font-medium mb-3 text-[#333]">Split Dashboard</h4>
+                        <p className="text-slate-800 text-lg leading-relaxed">Runner-facing pace card with confidence indicators — subtle visual cues that communicated GPS lock status without technical language.</p>
                     </div>
                 </div>
             </div>
