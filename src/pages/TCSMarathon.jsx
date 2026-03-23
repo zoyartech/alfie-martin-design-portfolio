@@ -59,10 +59,10 @@ export default function TCSMarathon() {
             <div>
                 <h3 className="text-2xl font-medium mb-6 text-[#333]">My Role</h3>
                 <div className="flex flex-wrap gap-4 mb-8">
-                    <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">UX Research</span>
-                    <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">Interaction Design</span>
-                    <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">Prototyping</span>
-                    <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">Stakeholder Presentations</span>
+                    <span className="bg-[#a8ffb0] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">UX Research</span>
+                    <span className="bg-[#bdf2ff] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Interaction Design</span>
+                    <span className="bg-[#f2ff38] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Prototyping</span>
+                    <span className="bg-[#ffc7e4] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Stakeholder Presentations</span>
                     <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">Handoff</span>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed max-w-5xl">
