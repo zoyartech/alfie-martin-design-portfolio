@@ -203,11 +203,28 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
-          <h3 className="font-serif text-3xl font-bold mb-6 text-slate-900">Raw User Input and Multi-Intent Handling</h3>
-          <div className="font-sans text-slate-700 text-lg md:text-xl space-y-6 mb-16">
-            <p>Ambiguity is the biggest threat to your confidence scores. When the query is vague, the retriever returns a broad set of marginally relevant documents, and the candidate generator produces answers that are all plausible but none are strongly grounded. The confidence scoring engine then faces an ugly choice: assign middling scores to everything (which is honest but unhelpful — three 55% answers), or artificially boost the top one (which is dishonest). The best mitigation is to have the system ask a clarifying question instead of generating answers when the input ambiguity score crosses a threshold. That's a design decision your preprocessing layer can enable by outputting an ambiguity flag alongside the structured query.</p>
-            <p>Multi-intent queries are the silent killer. Most chatbots simply answer the first detected intent and ignore the rest, and users learn to ask one thing at a time — which is a terrible user experience. In a ranked-answer system, the failure mode is worse: your three answers might address the same intent from different angles, leaving two user needs completely unaddressed. The fix is a query decomposition step right after intent classification that splits compound queries into independent sub-queries, each of which gets its own three-answer response card.</p>
-            <p>Sarcasm and negation directly poison confidence calibration. If the system misreads sarcastic frustration as genuine satisfaction, it might route to a "glad everything's working!" response with 90% confidence — maximally wrong, maximally confident. Over time this corrupts your feedback loop too, because users who downvote a confident-but-wrong response send a confusing signal to the calibration system. The fix here is usually a sentiment-aware layer (fine-tuned on customer service data specifically, not general sentiment) that flags emotional context as metadata separate from the factual intent.</p>
+          <h3 className="font-serif text-3xl font-bold mb-8 text-slate-900">Raw User Input and Multi-Intent Handling</h3>
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
+              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">The Ambiguity Threat</h4>
+              <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
+                Ambiguity is the biggest threat to confidence scores. Vague queries force the system to either assign unhelpful middling scores or dishonestly boost a top answer. <strong>The mitigation:</strong> have the system ask a clarifying question when the input ambiguity score crosses a threshold, enabled by an ambiguity flag in the preprocessing layer.
+              </p>
+            </div>
+            
+            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
+              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">Multi-Intent Queries</h4>
+              <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
+                Most chatbots answer the first detected intent and ignore the rest. In a ranked system, this leaves multiple user needs unaddressed. <strong>The fix:</strong> introduce a query decomposition step after intent classification that splits compound queries into independent sub-queries, each receiving its own three-answer response card.
+              </p>
+            </div>
+            
+            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
+              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">Sarcasm & Negation</h4>
+              <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
+                Sarcasm poisons confidence calibration. Misreading frustration as satisfaction creates maximally confident, maximally wrong answers that corrupt feedback loops. <strong>The fix:</strong> implement a sentiment-aware layer (fine-tuned on customer service data) that flags emotional context as metadata separate from the factual intent.
+              </p>
+            </div>
           </div>
 
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
