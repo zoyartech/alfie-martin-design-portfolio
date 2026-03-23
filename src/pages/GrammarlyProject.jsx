@@ -310,36 +310,47 @@ export default function GrammarlyProject() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             {/* CSS Donut Chart */}
-            <div className="relative aspect-square max-w-md mx-auto w-full">
-              <div className="absolute inset-0 rounded-full" style={{
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="relative aspect-square max-w-md mx-auto w-full cursor-pointer group"
+            >
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8, rotate: -90 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="absolute inset-0 rounded-full" style={{
                 background: `conic-gradient(
                   #16a34a 0% 33.33%, 
                   #60a5fa 33.33% 66.66%, 
                   #d8b4fe 66.66% 88.88%, 
                   #fca5a5 88.88% 100%
                 )`
-              }}></div>
-              <div className="absolute inset-8 bg-white rounded-full"></div>
-            </div>
+              }}></motion.div>
+              <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center shadow-inner transition-colors duration-300 group-hover:bg-slate-50">
+                <span className="text-slate-400 font-bold tracking-widest uppercase text-sm group-hover:text-slate-600 transition-colors">Fogg Model</span>
+              </div>
+            </motion.div>
 
             <div>
-              <div className="space-y-4 mb-8 bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#16a34a]"></div>
+              <div className="space-y-2 mb-8 bg-slate-50 p-6 rounded-xl border border-slate-100">
+                <motion.div whileHover={{ x: 10 }} className="flex items-center gap-3 cursor-default p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all">
+                  <div className="w-4 h-4 rounded-full bg-[#16a34a] shadow-sm"></div>
                   <span className="font-bold text-slate-800">Empty Prompt · 33.33%</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#60a5fa]"></div>
+                </motion.div>
+                <motion.div whileHover={{ x: 10 }} className="flex items-center gap-3 cursor-default p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all">
+                  <div className="w-4 h-4 rounded-full bg-[#60a5fa] shadow-sm"></div>
                   <span className="font-bold text-slate-800">First Use · 33.33%</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#d8b4fe]"></div>
+                </motion.div>
+                <motion.div whileHover={{ x: 10 }} className="flex items-center gap-3 cursor-default p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all">
+                  <div className="w-4 h-4 rounded-full bg-[#d8b4fe] shadow-sm"></div>
                   <span className="font-bold text-slate-800">Repeat Use · 22.22%</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-[#fca5a5]"></div>
+                </motion.div>
+                <motion.div whileHover={{ x: 10 }} className="flex items-center gap-3 cursor-default p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all">
+                  <div className="w-4 h-4 rounded-full bg-[#fca5a5] shadow-sm"></div>
                   <span className="font-bold text-slate-800">Habit Formed · 11.11%</span>
-                </div>
+                </motion.div>
               </div>
 
               <div className="space-y-6 text-lg text-slate-700">
