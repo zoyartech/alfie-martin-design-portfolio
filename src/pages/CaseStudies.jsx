@@ -19,9 +19,9 @@ export default function CaseStudies() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">PORTFOLIO</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
-            <p className="text-gray-500 max-w-2xl">
-              Selected work spanning product design, AI strategy, brand identity, and visual direction.
-            </p>
+            
+
+            
           </motion.div>
 
 
