@@ -215,8 +215,8 @@ export default function TCSAttrition() {
             </div>
           </div>
 
-          <div className="mb-20">
-            <div className="w-full rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-black">
+          <div className="mb-20 flex justify-center">
+            <div className="w-full max-w-[60%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-black">
               <video 
                 src="https://base44.app/api/apps/6974e154f708f4918a2b8d02/files/mp/public/6974e154f708f4918a2b8d02/15be67358_UX-micro-learning-lms.mov"
                 controls
