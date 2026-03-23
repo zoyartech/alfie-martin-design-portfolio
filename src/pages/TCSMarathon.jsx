@@ -63,7 +63,7 @@ export default function TCSMarathon() {
                     <span className="bg-[#bdf2ff] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Interaction Design</span>
                     <span className="bg-[#f2ff38] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Prototyping</span>
                     <span className="bg-[#ffc7e4] text-gray-800 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Stakeholder Presentations</span>
-                    <span className="bg-[#E7E5DD] px-6 py-4 rounded font-medium text-gray-800 flex-1 min-w-[200px] text-center">Handoff</span>
+                    <span className="bg-[#8a5664] text-slate-50 px-6 py-4 font-medium text-center rounded flex-1 min-w-[200px]">Handoff</span>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed max-w-5xl">
                     I led the end-to-end design of the interactive runner tracking and race-day dashboard features, working directly with engineers at NYRR and the TCS technology partnership team. I owned the design from discovery through final handoff, presenting iteratively to both product leads and executive stakeholders.
