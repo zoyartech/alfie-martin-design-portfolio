@@ -26,6 +26,7 @@ import AdinaProject from './pages/AdinaProject';
 import TCSAttrition from './pages/TCSAttrition.jsx';
 import SystemsThinkingPoem from './pages/SystemsThinkingPoem.jsx';
 import BrandGallery from './pages/BrandGallery.jsx';
+import ConfidenceLab from './pages/ConfidenceLab';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -76,6 +77,7 @@ const AuthenticatedApp = () => {
       <Route path="/TCSAttrition" element={<TCSAttrition />} />
       <Route path="/SystemsThinkingPoem" element={<SystemsThinkingPoem />} />
       <Route path="/BrandGallery" element={<BrandGallery />} />
+      <Route path="/ConfidenceLab" element={<ConfidenceLab />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
