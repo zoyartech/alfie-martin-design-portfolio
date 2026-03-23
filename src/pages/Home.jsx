@@ -293,7 +293,7 @@ export default function Home() {
                   alt={galleryImages[selectedImage].caption}
                   className="w-full max-h-[75vh] object-contain" />
                   <div className="mt-4 text-center">
-                    <p className="text-white text-sm tracking-wider">{galleryImages[selectedImage].caption}</p>
+                    
                     <p className="text-gray-500 text-xs mt-1">{selectedImage + 1} / {galleryImages.length}</p>
                   </div>
                 </motion.div>
