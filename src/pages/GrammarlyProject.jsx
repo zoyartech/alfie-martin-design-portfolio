@@ -90,12 +90,18 @@ export default function GrammarlyProject() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* The Core Challenge */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             The Core Challenge
           </div>
@@ -105,40 +111,46 @@ export default function GrammarlyProject() {
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+            <motion.div whileHover={{ y: -5 }} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md">
               <div className="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-6">
                 <User className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">The Adjacent User</h3>
               <p className="text-slate-600 leading-relaxed">Someone who saw the value in a writing assistant but blanked the moment they hit an open prompt field. Understanding this user was the key to unlocking adoption.</p>
-            </div>
+            </motion.div>
             
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+            <motion.div whileHover={{ y: -5 }} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md">
               <div className="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-6">
                 <Lightbulb className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">The Mindset Shift</h3>
               <p className="text-slate-600 leading-relaxed">Moving users from "fix my mistakes" to "help me think and create" wasn't a product problem alone—it was a behavioral design challenge that required collaborating with UXR & customer success to gain more knowledge on our users.</p>
-            </div>
+            </motion.div>
             
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+            <motion.div whileHover={{ y: -5 }} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md">
               <div className="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-slate-900">The Design Role</h3>
               <p className="text-slate-600 leading-relaxed">As product growth designer, my work on this experiment revolved around improving activation, not feature-building—making sure the AI capabilities were used, tried, and adopted at scale.</p>
-            </div>
+            </motion.div>
           </div>
           
           <div className="text-center text-2xl font-serif text-slate-800 py-8">
             The challenge was designing for that gradual transition in a way that felt natural and easy.
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Behavioral Psychology */}
-      <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Behavioral Psychology
           </div>
@@ -178,12 +190,18 @@ export default function GrammarlyProject() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Diagnostic Framework */}
-      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Diagnostic Framework
           </div>
@@ -196,36 +214,42 @@ export default function GrammarlyProject() {
             {/* Visual connecting line */}
             <div className="hidden md:block absolute top-12 left-10 right-10 h-0.5 bg-slate-300"></div>
 
-            <div className="relative z-10">
+            <motion.div whileHover={{ y: -5 }} className="relative z-10 p-6 -mx-6 bg-white/0 hover:bg-white rounded-2xl transition-colors hover:shadow-sm">
               <div className="w-20 h-20 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
               </div>
               <h3 className="text-3xl font-bold text-green-700 mb-4 text-center md:text-left">Motivation</h3>
               <p className="text-slate-700 text-lg leading-relaxed">Perceived ROI drove motivation—things like getting to inbox zero faster or feeling like a sharper communicator. Every touchpoint was mapped against whether it reinforced this sense of personal value.</p>
-            </div>
+            </motion.div>
 
-            <div className="relative z-10">
+            <motion.div whileHover={{ y: -5 }} className="relative z-10 p-6 -mx-6 bg-white/0 hover:bg-white rounded-2xl transition-colors hover:shadow-sm">
               <div className="w-20 h-20 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
               </div>
               <h3 className="text-3xl font-bold text-green-700 mb-4 text-center md:text-left">Ability</h3>
               <p className="text-slate-700 text-lg leading-relaxed">If a feature required mental effort to start, users wouldn't start. Reducing friction at the prompt level through structured suggestions, templates, and contextual defaults made ability feel effortless.</p>
-            </div>
+            </motion.div>
 
-            <div className="relative z-10">
+            <motion.div whileHover={{ y: -5 }} className="relative z-10 p-6 -mx-6 bg-white/0 hover:bg-white rounded-2xl transition-colors hover:shadow-sm">
               <div className="w-20 h-20 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
               </div>
               <h3 className="text-3xl font-bold text-green-700 mb-4 text-center md:text-left">Prompt</h3>
               <p className="text-slate-700 text-lg leading-relaxed">The trigger had to arrive at the exact right moment—proactive nudges before users hit the wall, not after. Timing the prompt to precede hesitation was the single highest-leverage design decision.</p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Touchpoint Mapping */}
-      <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Touchpoint Mapping
           </div>
@@ -276,7 +300,7 @@ export default function GrammarlyProject() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Design Principles */}
