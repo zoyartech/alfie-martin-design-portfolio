@@ -70,7 +70,7 @@ export default function ConfidenceLab() {
           </Link>
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-1 rounded uppercase tracking-wider">Prototype</span>
-            <h1 className="text-lg font-bold text-slate-900">Confidence Ranking Lab</h1>
+            <h1 className="text-lg font-bold text-slate-900">Confidence LAB</h1>
           </div>
         </div>
       </header>
