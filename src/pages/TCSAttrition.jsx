@@ -234,6 +234,20 @@ export default function TCSAttrition() {
             </div>
           </div>
 
+          {/* TEMPORARY VIDEO UPLOADER */}
+          <div className="mb-20 p-8 border-2 border-dashed border-blue-300 rounded-xl bg-blue-50/50">
+            <h3 className="text-xl font-medium mb-4">Upload Video for this section</h3>
+            <p className="text-gray-600 mb-4">Select your video file here. Once it finishes uploading, copy the URL and paste it back into our chat so I can embed it permanently!</p>
+            <input type="file" accept="video/*" onChange={handleFileUpload} disabled={uploading} className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer mb-4" />
+            {uploading && <p className="text-blue-600 font-medium animate-pulse mt-4">Uploading... this might take a minute depending on the file size.</p>}
+            {uploadedUrl && (
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 font-medium mb-2">Upload successful! Copy this URL and paste it in our chat:</p>
+                <code className="block p-3 bg-white border border-green-100 rounded text-sm break-all select-all text-gray-800">{uploadedUrl}</code>
+              </div>
+            )}
+          </div>
+
           {/* 05. Key Design Decisions */}
           <div className="mb-20">
             <span className="inline-block px-3 py-1 bg-gray-200 text-gray-700 text-xs font-semibold tracking-wider rounded-full mb-6">05. KEY DESIGN DECISIONS</span>
