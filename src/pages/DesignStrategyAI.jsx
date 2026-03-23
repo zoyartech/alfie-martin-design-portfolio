@@ -234,7 +234,7 @@ export default function DesignStrategyAI() {
               className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
             />
             <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/db6d57be2_med-severity.png" 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png" 
               alt="Medium severity typo issue example" 
               className="w-full h-auto rounded-lg shadow-md border border-slate-100" 
             />
