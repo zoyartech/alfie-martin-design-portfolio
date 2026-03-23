@@ -35,8 +35,14 @@ export default function GrammarlyProject() {
       </section>
 
       {/* Platform Scale */}
-      <section className="py-20 px-6 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-6 lg:px-12 bg-white overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="inline-block bg-green-100 text-green-800 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Platform Scale
           </div>
