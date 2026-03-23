@@ -209,14 +209,14 @@ export default function TCSMarathon() {
                 </div>
             </div>
             
-            <div className="bg-[#F3F2EC] p-8 md:p-16 text-center border border-gray-200 mb-8 rounded-lg overflow-hidden">
+            <div className="bg-[#ffffff] mb-8 p-8 text-center rounded-lg md:p-16 border border-gray-200 overflow-hidden">
                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c303508d6_2screens.png" alt="App Screens Modes" className="mx-auto max-h-[600px] object-contain rounded shadow-sm" />
             </div>
           </div>
         </section>
 
         {/* Key Features Designed */}
-        <section className="py-20 px-6 lg:px-12 bg-[#F3F2EC]">
+        <section className="bg-[#bfcbd4] text-slate-950 px-6 py-20 lg:px-12">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
             <div className="flex-1 w-full flex justify-center">
                
@@ -226,7 +226,7 @@ export default function TCSMarathon() {
                 
                 <div className="space-y-10">
                     <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Map className="w-8 h-8" strokeWidth={1.5} /></div>
+                        <div className="mt-1 text-gray-500"><Map className="text-slate-950 lucide lucide-map w-8 h-8" strokeWidth={1.5} /></div>
                         <div>
                             <h4 className="text-2xl font-medium mb-2 text-[#333]">Live Runner Map</h4>
                             <p className="text-gray-600 text-lg leading-relaxed">Redesigned map experience with projected arrival windows and "meet here" spectator pins — optimized for single-hand use in a crowd.</p>
@@ -234,7 +234,7 @@ export default function TCSMarathon() {
                     </div>
                     
                     <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Bell className="w-8 h-8" strokeWidth={1.5} /></div>
+                        <div className="mt-1 text-gray-500"><Bell className="bg-transparent text-zinc-950 lucide lucide-bell w-8 h-8" strokeWidth={1.5} /></div>
                         <div>
                             <h4 className="text-2xl font-medium mb-2 text-[#333]">Smart Notifications</h4>
                             <p className="text-gray-600 text-lg leading-relaxed">Predictive push alerts based on pace data — notified spectators <strong>10–12 minutes before runner arrival</strong> at their location.</p>
@@ -242,7 +242,7 @@ export default function TCSMarathon() {
                     </div>
 
                     <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Trophy className="w-8 h-8" strokeWidth={1.5} /></div>
+                        <div className="mt-1 text-gray-500"><Trophy className="text-zinc-950 lucide lucide-trophy w-8 h-8" strokeWidth={1.5} /></div>
                         <div>
                             <h4 className="text-2xl font-medium mb-2 text-[#333]">Finish Line Moment</h4>
                             <p className="text-gray-600 text-lg leading-relaxed">A full-screen celebration state triggered at crossing — personalized with the runner's final time, course map, and shareable graphic.</p>
@@ -250,7 +250,7 @@ export default function TCSMarathon() {
                     </div>
 
                     <div className="flex gap-6">
-                        <div className="mt-1 text-gray-500"><Activity className="w-8 h-8" strokeWidth={1.5} /></div>
+                        <div className="mt-1 text-gray-500"><Activity className="text-zinc-950 lucide lucide-activity w-8 h-8" strokeWidth={1.5} /></div>
                         <div>
                             <h4 className="text-2xl font-medium mb-2 text-[#333]">Split Dashboard</h4>
                             <p className="text-gray-600 text-lg leading-relaxed">Runner-facing pace card with confidence indicators — subtle visual cues that communicated GPS lock status without technical language.</p>
@@ -264,42 +264,42 @@ export default function TCSMarathon() {
         {/* Outcome */}
         <section className="py-20 px-6 lg:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-[#333]">Outcome: What Shipped, What Moved</h2>
+            <h2 className="text-[#000000] mb-16 text-3xl font-medium lg:text-4xl">Outcome: What Shipped, What Moved</h2>
             
             <div className="grid md:grid-cols-4 gap-8 mb-16">
                 <div>
-                    <p className="text-5xl font-medium mb-4 text-[#333]">4.4★</p>
+                    <p className="text-[#000000] mb-4 text-5xl font-medium">4.4★</p>
                     <p className="text-lg font-medium text-[#333] mb-2">App Store Rating</p>
                     <p className="text-sm text-gray-600">Up from 2.8 stars following the redesigned race-day release</p>
                 </div>
                 <div>
-                    <p className="text-5xl font-medium mb-4 text-[#333]">+34%</p>
+                    <p className="text-[#000000] mb-4 text-5xl font-medium">+34%</p>
                     <p className="text-lg font-medium text-[#333] mb-2">Session Length</p>
                     <p className="text-sm text-gray-600">Increased on race day — users stayed in the app rather than falling back to mobile browsers</p>
                 </div>
                 <div>
-                    <p className="text-5xl font-medium mb-4 text-[#333]">41%</p>
+                    <p className="text-[#000000] mb-4 text-5xl font-medium">41%</p>
                     <p className="text-lg font-medium text-[#333] mb-2">Finish Line Shares</p>
                     <p className="text-sm text-gray-600">Of finishers used the shareable in year one — an unplanned viral mechanic driving organic reach for NYRR</p>
                 </div>
                 <div>
-                    <p className="text-5xl font-medium mb-4 text-[#333]">-52%</p>
+                    <p className="text-[#000000] mb-4 text-5xl font-medium">-52%</p>
                     <p className="text-lg font-medium text-[#333] mb-2">Support Tickets</p>
                     <p className="text-sm text-gray-600">Tracking-related tickets dropped year-over-year — the largest single-year reduction in NYRR's product history</p>
                 </div>
             </div>
 
             <div className="border-l-4 border-[#333] pl-6 py-2 mb-16">
-                <p className="text-xl text-gray-700 leading-relaxed italic">
-                    The best outcome wasn't a metric. It was watching a woman in Central Park burst into tears when the notification arrived — her daughter was two blocks away.
-                </p>
+                <p className="text-stone-950 text-xl leading-relaxed italic">The best outcome wasn't a metric. It was watching a woman in Central Park burst into tears when the notification arrived — her daughter was two blocks away.
+
+              </p>
             </div>
 
             <div>
-                <h3 className="text-2xl font-medium mb-4 text-[#333]">Reflection</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                    This project taught me that designing for live events is a fundamentally different discipline from designing for static utility. The stakes are emotional, the context is chaotic, and the user's patience is approximately zero. Every interaction had to work on first touch, in a crowd, on a cellular network under catastrophic load, with cold hands.
-                </p>
+                <h3 className="text-[#000000] mb-4 text-2xl font-medium">Reflection</h3>
+                <p className="text-zinc-950 text-lg leading-relaxed">This project taught me that designing for live events is a fundamentally different discipline from designing for static utility. The stakes are emotional, the context is chaotic, and the user's patience is approximately zero. Every interaction had to work on first touch, in a crowd, on a cellular network under catastrophic load, with cold hands.
+
+              </p>
             </div>
           </div>
         </section>
@@ -315,9 +315,9 @@ export default function TCSMarathon() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                     I also learned to design for the moment after the main event. The finish line feature almost didn't make it into scope. I fought for it in three separate stakeholder reviews.
                 </p>
-                <div className="bg-[#E7E5DD] p-8 rounded border border-[#D5D3CA]">
+                <div className="bg-[#cceaff] p-8 rounded border border-[#D5D3CA]">
                     <div className="flex gap-4">
-                        <div className="mt-1"><div className="w-5 h-5 border-2 border-gray-500 rounded-sm"></div></div>
+                        <div className="mt-1"><div className="text-slate-950 rounded-sm w-5 h-5 border-2 border-gray-500"></div></div>
                         <p className="text-lg text-gray-800 leading-relaxed">
                             That last 5% of the experience — the one that happens when everything else is over — turned out to be the thing people remembered most.
                         </p>
