@@ -224,28 +224,6 @@ export default function Home() {
 
 
 
-      {/* Featured Lab Section */}
-      <section className="py-16 md:py-32 px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-8 text-center md:text-left">FEATURED LAB</p>
-            <Link to={createPageUrl("ConfidenceLab")} className="block group overflow-hidden rounded-2xl relative shadow-md">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/675789d5f_IMG_3600.jpg" 
-                alt="Confidence Lab" 
-                className="w-full h-auto md:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500"></div>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Gallery Preview */}
       <section className="py-16 md:py-32 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
