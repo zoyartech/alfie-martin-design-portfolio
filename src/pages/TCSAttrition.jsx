@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { base44 } from '@/api/base44Client';
 
 export default function TCSAttrition() {
+  const [uploading, setUploading] = useState(false);
+  const [uploadedUrl, setUploadedUrl] = useState(null);
+
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    setUploading(true);
+    try {
+      const response = await base44.integrations.Core.UploadFile({ file });
+      setUploadedUrl(response.file_url);
+    } catch (err) {
+      console.error(err);
+      alert('Upload failed');
+    } finally {
+      setUploading(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-white pt-32 pb-16 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
