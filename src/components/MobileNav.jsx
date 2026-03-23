@@ -22,7 +22,7 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
         className={`p-2 rounded-md transition-colors ${isTransparent ? 'text-white bg-transparent hover:text-white/80' : 'bg-white text-gray-700 hover:text-black'}`}
         aria-label="Open menu">
         
-        <Menu className="w-5 h-5" />
+        <Menu className="text-slate-950 lucide lucide-menu w-5 h-5" />
       </button>
 
       <AnimatePresence>
