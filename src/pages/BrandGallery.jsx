@@ -20,7 +20,6 @@ export default function BrandGallery() {
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b99904fe1_IMG_1078.jpg", caption: "Brand Visual" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/95786e920_IMG_3223.PNG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f84aedc1b_IMG_3235.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/741047eb9_IMG_4340.jpg", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e497d297_IMG_5998.JPG", caption: "Brand Visual" },
