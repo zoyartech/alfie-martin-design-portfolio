@@ -342,11 +342,11 @@ export default function Home() {
         className="py-8 px-6 lg:px-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
-          
-
-
-
-
+          <div className="flex items-center gap-6">
+            <Link to={createPageUrl("ConfidenceLab")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+              Confidence Lab
+            </Link>
+          </div>
         </div>
       </motion.footer>
     </div>);
