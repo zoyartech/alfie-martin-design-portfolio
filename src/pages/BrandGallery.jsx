@@ -8,6 +8,14 @@ export default function BrandGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/27cf6047e_IMG_0068.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e67bd1e01_IMG_5941.jpg", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a9be4d8e4_IMG_6368.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/053f35cc5_IMG_6377.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7c57caf1_IMG_7391.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cdd59cbf0_IMG_9682.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b47cab45b_IMG_8274.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7fd5ca4eb_Press.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/404f587ff_1.JPG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
