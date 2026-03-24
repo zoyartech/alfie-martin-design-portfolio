@@ -131,8 +131,8 @@ export default function AdinaProject() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 md:p-10 bg-white rounded-lg border border-red-100 shadow-sm">
-                    <h3 className="text-[#E15A85] mb-6 text-xl font-bold">Without ADINA</h3>
+                <div className="bg-zinc-300 p-8 rounded-lg md:p-10 border border-red-100 shadow-sm">
+                    <h3 className="text-[#000000] mb-6 text-xl font-bold">Without ADINA</h3>
                     <ul className="list-disc pl-6 space-y-4 text-slate-700 font-sans text-lg">
                         <li>5 people see the alert.</li>
                         <li>No one knows who else has seen it.</li>
