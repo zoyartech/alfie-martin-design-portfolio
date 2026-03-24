@@ -230,47 +230,47 @@ export default function DesignStrategyAI() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png")}>
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png" 
-                alt="High severity ambiguity issue example" 
-                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" 
-              />
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png"
+                alt="High severity ambiguity issue example"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
+              
             </div>
             <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png")}>
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png" 
-                alt="Medium severity typo issue example" 
-                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" 
-              />
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png"
+                alt="Medium severity typo issue example"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
+              
             </div>
           </div>
 
-          {selectedImage && (
-            <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setSelectedImage(null)}>
+          {selectedImage &&
+          <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setSelectedImage(null)}>
               <button className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
                 <X className="w-8 h-8" />
               </button>
-              <img 
-                src={selectedImage} 
-                alt="Full size view" 
-                className="max-w-[95vw] max-h-[95vh] object-contain rounded-sm" 
-              />
+              <img
+              src={selectedImage}
+              alt="Full size view"
+              className="max-w-[95vw] max-h-[95vh] object-contain rounded-sm" />
+            
             </div>
-          )}
+          }
 
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Three answers, not two or five</h4>
-              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">Through testing, I found that two answers felt like a coin flip and five felt like a research project. Three gave users a primary recommendation with meaningful alternatives, without triggering decision fatigue. The magic number is real, and it's three.</p>
+              <h4 className="text-slate-900 mb-4 text-xl font-extrabold">Three answers, not two or five</h4>
+              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">Through testing, I found that two answers felt like a coin flip and five felt like a research project. Three provided users with a primary recommendation and meaningful alternatives, without triggering decision fatigue. The magic number is real, and it's three.</p>
             </div>
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Confidence as a visual bar, not just a number</h4>
+              <h4 className="text-slate-900 mb-4 text-xl font-extrabold">Confidence as a visual bar, not just a number</h4>
               <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">Early tests showed that a bare percentage (e.g., "87%") triggered anxiety in some users. They fixated on why it wasn't 100%. A filled bar with a color-coded badge (green, yellow, red) communicated relative confidence more intuitively and reduced that fixation by 40% in follow-up testing. Turns out, humans process "mostly green" faster than they process "eighty-seven percent."</p>
             </div>
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900">Source citations as anchors, not footnotes</h4>
-              <p className="font-sans text-slate-700 text-lg md:text-xl md:text-xl">I placed the source directly beneath each answer. Not in a collapsible section. Not at the bottom of the page. Not behind a "learn more" link that nobody clicks. The citation needed to be inseparable from the claim. This was the single highest-impact decision for perceived trustworthiness in testing, and also the one that required the least engineering effort. Love when that happens.</p>
+              <h4 className="text-slate-900 mb-4 text-xl font-extrabold">Source citations as anchors, not footnotes</h4>
+              <p className="text-slate-700 text-base font-sans md:text-xl">I placed the source directly beneath each answer. Not in a collapsible section. Not at the bottom of the page. Not behind a "learn more" link that nobody clicks. The citation needed to be inseparable from the claim. This was the single highest-impact decision for perceived trustworthiness in testing, and also the one that required the least engineering effort. Love when that happens.</p>
             </div>
           </div>
         </div>
@@ -519,11 +519,11 @@ export default function DesignStrategyAI() {
 
           <div className="mt-20 pt-16 flex justify-center border-t border-gray-100">
             <Link to={createPageUrl("ConfidenceLab")} className="group block max-w-lg w-full text-center">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b994f26ee_IMG_3600.jpg" 
-                alt="Confidence Lab" 
-                className="w-full rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1" 
-              />
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b994f26ee_IMG_3600.jpg"
+                alt="Confidence Lab"
+                className="w-full rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1" />
+              
               <p className="mt-6 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors font-sans">
                 Explore the Confidence Lab
               </p>
