@@ -305,21 +305,21 @@ export default function DesignStrategyAI() {
             <div className="bg-[#c2e7ff] p-6 rounded-sm">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-gray-200 pb-4">Answer 1 · 94% confidence</h4>
               <p className="text-slate-700 mb-6 text-sm font-sans md:text-xl">The maximum contribution limit for a Roth IRA in 2025 is $7,000 for individuals under 50, and $8,000 for individuals 50 and older (with the $1,000 catch-up provision).</p>
-              <p className="font-sans text-sm text-gray-600 italic  ">Source: IRS.gov, Retirement Topics: IRA Contribution Limits (2025)</p>
+              <p className="text-slate-950 text-sm font-sans italic">Source: IRS.gov, Retirement Topics: IRA Contribution Limits (2025)</p>
             </div>
             <div className="bg-[#b8d4ff] p-6 rounded-sm">
               <h4 className="bg-transparent text-slate-900 mb-4 pb-4 text-xl font-bold border-b border-gray-200">Answer 2 · 72% confidence</h4>
               <p className="font-sans text-slate-700 mb-6 text-lg md:text-xl">The 2025 Roth IRA contribution limit is $7,000, though eligibility may phase out for single filers earning above $150,000 (MAGI).</p>
-              <p className="font-sans text-sm text-gray-600 italic  ">Source: NerdWallet, Roth IRA Rules and Limits for 2025</p>
+              <p className="text-slate-950 text-sm font-sans italic">Source: NerdWallet, Roth IRA Rules and Limits for 2025</p>
             </div>
             <div className="bg-[#fcbdff] p-6 rounded-sm">
               <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-gray-200 pb-4">Answer 3 · 41% confidence</h4>
               <p className="font-sans text-slate-700 mb-6 text-lg md:text-xl">The contribution limit may remain at $6,500 for 2025, consistent with the 2023 limit, pending further IRS guidance.</p>
-              <p className="font-sans text-sm text-gray-600 italic  ">Source: Investopedia, IRA Contribution Limits (2023 Archive)</p>
+              <p className="text-slate-950 text-sm font-sans italic">Source: Investopedia, IRA Contribution Limits (2023 Archive)</p>
             </div>
           </div>
 
-          <p className="text-slate-700 mb-16 text-xs font-sans md:text-xl">The design made the model's reasoning transparent at a glance. The top answer was grounded in a primary government source with high confidence. The second offered useful supplementary context at moderate confidence. The third surfaced a plausible but outdated answer that the system was explicitly uncertain about, effectively telling the user "I found this, but I wouldn't bet on it." Users could make an informed judgment in seconds, and the ones who wanted to dig deeper had a source link waiting for them.
+          <p className="text-slate-700 mb-16 text-xs font-sans text-left md:text-xl">The design made the model's reasoning transparent at a glance. The top answer was grounded in a primary government source with high confidence. The second offered useful supplementary context at moderate confidence. The third surfaced a plausible but outdated answer that the system was explicitly uncertain about, effectively telling the user "I found this, but I wouldn't bet on it." Users could make an informed judgment in seconds, and the ones who wanted to dig deeper had a source link waiting for them.
 
           </p>
           
@@ -461,28 +461,28 @@ export default function DesignStrategyAI() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
             <div>
-              <p className="font-serif text-5xl md:text-6xl font-light text-gray-700 mb-4">–47%</p>
+              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">–47%</p>
               <p className="font-serif text-xl font-bold text-slate-900 mb-2">External verification</p>
               <p className="text-gray-600 text-sm font-sans text-center">Reduction in external verification behavior</p>
             </div>
             <div>
-              <p className="font-serif text-5xl md:text-6xl font-light text-gray-700 mb-4">+33%</p>
+              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">+33%</p>
               <p className="font-serif text-xl font-bold text-slate-900 mb-2">Answer acceptance</p>
               <p className="font-sans text-gray-600 text-sm  ">Increase in answer acceptance rate</p>
             </div>
             <div>
-              <p className="font-serif text-5xl md:text-6xl font-light text-gray-700 mb-4">–29%</p>
+              <p className="text-gray-700 mb-4 text-5xl font-semibold md:text-6xl">–29%</p>
               <p className="font-serif text-xl font-bold text-slate-900 mb-2">Session abandonment</p>
               <p className="font-sans text-gray-600 text-sm  ">Drop in session abandonment on ambiguous queries</p>
             </div>
             <div>
-              <p className="font-serif text-5xl md:text-6xl font-light text-gray-700 mb-4">4.7</p>
+              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">4.7</p>
               <p className="font-serif text-xl font-bold text-slate-900 mb-2">Trust score</p>
               <p className="font-sans text-gray-600 text-sm  ">Up from 4.3 on a 5-point Likert scale</p>
             </div>
           </div>
 
-          <p className="text-slate-700 mb-16 text-lg font-sans">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
+          <p className="text-slate-700 mb-16 text-lg font-sans text-left">The qualitative feedback was just as telling. Users described the experience as feeling like "getting a second and third opinion" and said the confidence bars gave them "permission to trust the top answer." Several enterprise users reported that the source citations alone eliminated their need to cross-reference. The product had become the reference, which is the kind of outcome you frame and put on a wall.
 
           </p>
 
