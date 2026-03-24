@@ -127,6 +127,14 @@ export default function RockefellerCapital() {
         </div>
       </div>
 
+      <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
+        <img 
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/23a9861ad_1d9110ee055b0180503864215ead9397.png" 
+          alt="Rockefeller Global Family Office" 
+          className="w-full rounded-xl shadow-sm border border-slate-200"
+        />
+      </div>
+
       {/* Interactive Prototype */}
       <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
         <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Interactive Prototype</h2>
