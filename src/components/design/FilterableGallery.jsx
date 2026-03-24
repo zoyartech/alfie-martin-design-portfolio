@@ -6,6 +6,20 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
+  title: "Rockefeller Capital Management",
+  category: "Product Design",
+  industry: "Finance",
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+  year: "2023",
+  link: "RockefellerCapital",
+  summary: "Practical Solutions To Improving The User Experience Of Digital Products for High Net Worth Individuals.",
+  stats: [
+  { label: "Adoption", value: "Increased" },
+  { label: "MAU / DAU", value: "Lifted" },
+  { label: "Usability", value: "Enhanced" }],
+  tags: ["UX End To End", "Finance", "Mobile App"]
+},
+{
   title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",
