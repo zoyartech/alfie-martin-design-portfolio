@@ -97,7 +97,7 @@ export default function BrandGallery() {
               alt={item.caption}
               className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
             
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+              
             </motion.div>
           )}
         </div>
