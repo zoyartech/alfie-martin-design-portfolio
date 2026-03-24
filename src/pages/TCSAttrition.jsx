@@ -22,7 +22,7 @@ export default function TCSAttrition() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 flex flex-col items-center">
-            <h2 className="text-2xl font-light mb-6 text-[#333]">Descript Version Case Study</h2>
+            <h2 className="text-[#333] mb-6 text-3xl font-black">Descript Version Case Study</h2>
             <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E5DDF5', backgroundColor: '#f8fafc' }}>
               <iframe
               src="https://share.descript.com/embed/KW7DYW6OXNO"
@@ -217,12 +217,12 @@ export default function TCSAttrition() {
 
           <div className="mb-20 flex justify-center">
             <div className="w-full max-w-[60%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-black">
-              <video 
+              <video
                 src="https://base44.app/api/apps/6974e154f708f4918a2b8d02/files/mp/public/6974e154f708f4918a2b8d02/15be67358_UX-micro-learning-lms.mov"
                 controls
                 className="w-full h-auto"
-                poster="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png"
-              >
+                poster="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png">
+                
                 Your browser does not support the video tag.
               </video>
             </div>
