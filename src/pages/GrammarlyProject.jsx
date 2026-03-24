@@ -49,47 +49,59 @@ export default function GrammarlyProject() {
           <h2 className="text-4xl md:text-5xl font-bold mb-16 tracking-tight text-slate-900">Grammarly has always used AI</h2>
           
           <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-12">
-              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
-                <div className="flex items-center justify-between mb-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "50%" }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-                    className="h-6 bg-[#68d391] rounded-full group-hover:brightness-110">
-                  </motion.div>
-                  <span className="text-slate-900 text-lg font-bold">40M</span>
+            <div className="space-y-6">
+              <motion.div whileHover={{ y: -4 }} className="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 transition-all hover:shadow-md">
+                <div className="flex-shrink-0 min-w-[100px]">
+                  <span className="text-slate-900 text-4xl font-bold tracking-tight group-hover:text-[#68d391] transition-colors duration-300">40M</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800 group-hover:text-[#68d391] transition-colors duration-300">Daily Active Users across the platform.</p>
+                <div className="flex-grow">
+                  <p className="text-lg font-medium text-slate-700 mb-3">Daily Active Users across the platform.</p>
+                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "50%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
+                      className="h-full bg-[#68d391] rounded-full">
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
               
-              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
-                <div className="flex items-center justify-between mb-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "85%" }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                    className="h-6 bg-[#276749] rounded-full group-hover:brightness-110">
-                  </motion.div>
-                  <span className="text-slate-900 text-lg font-bold">500K+</span>
+              <motion.div whileHover={{ y: -4 }} className="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 transition-all hover:shadow-md">
+                <div className="flex-shrink-0 min-w-[100px]">
+                  <span className="text-slate-900 text-4xl font-bold tracking-tight group-hover:text-[#276749] transition-colors duration-300">500K+</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800 group-hover:text-[#276749] transition-colors duration-300">Apps integrated with Grammarly's writing layer.</p>
+                <div className="flex-grow">
+                  <p className="text-lg font-medium text-slate-700 mb-3">Apps integrated with Grammarly's writing layer.</p>
+                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "85%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                      className="h-full bg-[#276749] rounded-full">
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
 
-              <motion.div whileHover={{ x: 8 }} className="group cursor-default">
-                <div className="flex items-center justify-between mb-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                    className="h-6 bg-[#2b6cb0] rounded-full group-hover:brightness-110">
-                  </motion.div>
-                  <span className="text-slate-900 text-lg font-bold">900k</span>
+              <motion.div whileHover={{ y: -4 }} className="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 transition-all hover:shadow-md">
+                <div className="flex-shrink-0 min-w-[100px]">
+                  <span className="text-slate-900 text-4xl font-bold tracking-tight group-hover:text-[#2b6cb0] transition-colors duration-300">900k</span>
                 </div>
-                <p className="text-xl font-bold text-slate-800 group-hover:text-[#2b6cb0] transition-colors duration-300">Core perception problem: "the typo catcher."</p>
+                <div className="flex-grow">
+                  <p className="text-lg font-medium text-slate-700 mb-3">Core perception problem: "the typo catcher."</p>
+                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "100%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                      className="h-full bg-[#2b6cb0] rounded-full">
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
             </div>
             
