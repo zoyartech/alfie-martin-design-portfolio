@@ -6,10 +6,10 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
-  title: "Approaching AI Adoption at Grammarly",
+  title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2aa5ab36c_Screenshot2026-03-23at90250PM.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
