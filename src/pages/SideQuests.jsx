@@ -52,7 +52,7 @@ export default function SideQuests() {
                     <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93f20ac27_IMG_3318.png" alt="Brand visual identities" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">BRAND</h3>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Brand and Visuals</h3>
                     <p className="text-slate-600 font-sans">creating visual identities</p>
                 </div>
             </Link>
