@@ -516,6 +516,19 @@ export default function DesignStrategyAI() {
             <p className="text-lg">This project solidified a conviction I now carry into every AI-facing design problem: transparency is not a feature. It is the product. The chatbot didn't get smarter when we shipped this. We just stopped hiding how smart (or uncertain) it already was. The trust gains came not from improving the model, but from making its existing behavior legible. Which, if you think about it, is a pretty damning indictment of how most AI products treat their users: capable of handling nuance, but never given the chance.</p>
             <p className="text-lg">I also learned that designing for probabilistic information demands deep, genuine collaboration with ML. I couldn't have designed the confidence UI without understanding calibration curves, and the ML team couldn't have built a well-calibrated model without the human-evaluation rubric I brought from the design side. The best work happened in the overlap, in the room where the designer and the engineer were both slightly outside their comfort zones and too stubborn to admit it.</p>
           </div>
+
+          <div className="mt-20 pt-16 flex justify-center border-t border-gray-100">
+            <Link to={createPageUrl("ConfidenceLab")} className="group block max-w-lg w-full text-center">
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b994f26ee_IMG_3600.jpg" 
+                alt="Confidence Lab" 
+                className="w-full rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1" 
+              />
+              <p className="mt-6 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors font-sans">
+                Explore the Confidence Lab
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
 
