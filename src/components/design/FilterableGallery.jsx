@@ -36,19 +36,19 @@ const projects = [
   tags: ["Mobile Design", "Real-Time Data", "Sports"]
 },
 {
-title: "Helping an iconic brand make a splash",
-category: "Brand Identity",
-industry: "Consumer",
-image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
-year: "2023",
-link: "PolaroidProject",
-summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
-stats: [
-{ label: "Brand Recall", value: "+47%" },
-{ label: "Campaign Reach", value: "2.4M" },
-{ label: "Social Growth", value: "+120%" }],
+  title: "Helping an iconic brand make a splash",
+  category: "Brand Identity",
+  industry: "Consumer",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
+  year: "2023",
+  link: "PolaroidProject",
+  summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
+  stats: [
+  { label: "Brand Recall", value: "+47%" },
+  { label: "Campaign Reach", value: "2.4M" },
+  { label: "Social Growth", value: "+120%" }],
 
-tags: ["Brand Identity", "Visual Direction", "Consumer"]
+  tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
 {
   title: "Designing trust into automated climate risk",
@@ -59,10 +59,10 @@ tags: ["Brand Identity", "Visual Direction", "Consumer"]
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
   stats: [
-    { label: "Broker Support Tickets", value: "↓ 60%" },
-    { label: "Contracts Bound", value: "↑ 3×" },
-    { label: "User Trust", value: "100%" }
-  ],
+  { label: "Broker Support Tickets", value: "↓ 60%" },
+  { label: "Contracts Bound", value: "↑ 3×" },
+  { label: "User Trust", value: "100%" }],
+
   tags: ["AI", "Smart Contracts", "Product Design"]
 },
 {
@@ -76,8 +76,8 @@ tags: ["Brand Identity", "Visual Direction", "Consumer"]
   stats: [],
   tags: ["UX Strategy", "Employee Experience", "Research"],
   imageFit: "object-contain bg-white"
-},
-];
+}];
+
 
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
@@ -113,29 +113,29 @@ export default function FilterableGallery() {
           </AnimatePresence>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 function ProjectCard({ project }) {
-  const content = (
-    <div className="cursor-pointer group">
+  const content =
+  <div className="cursor-pointer group">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
-        <img 
-          loading="lazy"
-          src={project.image} 
-          alt={project.title} 
-          className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} 
-        />
+        <img
+        loading="lazy"
+        src={project.image}
+        alt={project.title}
+        className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} />
+      
       </div>
       <div className="pt-4">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-xs tracking-[0.15em] text-gray-400">{project.category}</span>
+          
         </div>
         <h3 className="text-base font-medium group-hover:text-gray-600 transition-colors">{project.title}</h3>
       </div>
-    </div>
-  );
+    </div>;
+
 
   if (project.link) {
     return <Link to={createPageUrl(project.link)}>{content}</Link>;
