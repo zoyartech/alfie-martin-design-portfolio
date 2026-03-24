@@ -36,13 +36,13 @@ export default function GrammarlyProject() {
 
       {/* Platform Scale */}
       <section className="py-20 px-6 lg:px-12 bg-white overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-100 text-green-800 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Platform Scale
           </div>
@@ -52,13 +52,13 @@ export default function GrammarlyProject() {
             <div className="space-y-12">
               <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <motion.div 
-                    initial={{ width: 0 }} 
-                    whileInView={{ width: "50%" }} 
-                    viewport={{ once: true }} 
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "50%" }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-                    className="h-6 bg-[#68d391] rounded-full group-hover:brightness-110"
-                  ></motion.div>
+                    className="h-6 bg-[#68d391] rounded-full group-hover:brightness-110">
+                  </motion.div>
                   <span className="text-slate-900 text-lg font-bold">40M</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800 group-hover:text-[#68d391] transition-colors duration-300">Daily Active Users across the platform.</p>
@@ -66,13 +66,13 @@ export default function GrammarlyProject() {
               
               <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <motion.div 
-                    initial={{ width: 0 }} 
-                    whileInView={{ width: "85%" }} 
-                    viewport={{ once: true }} 
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "85%" }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                    className="h-6 bg-[#276749] rounded-full group-hover:brightness-110"
-                  ></motion.div>
+                    className="h-6 bg-[#276749] rounded-full group-hover:brightness-110">
+                  </motion.div>
                   <span className="text-slate-900 text-lg font-bold">500K+</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800 group-hover:text-[#276749] transition-colors duration-300">Apps integrated with Grammarly's writing layer.</p>
@@ -80,13 +80,13 @@ export default function GrammarlyProject() {
 
               <motion.div whileHover={{ x: 8 }} className="group cursor-default">
                 <div className="flex items-center justify-between mb-2">
-                  <motion.div 
-                    initial={{ width: 0 }} 
-                    whileInView={{ width: "100%" }} 
-                    viewport={{ once: true }} 
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                    className="h-6 bg-[#2b6cb0] rounded-full group-hover:brightness-110"
-                  ></motion.div>
+                    className="h-6 bg-[#2b6cb0] rounded-full group-hover:brightness-110">
+                  </motion.div>
                   <span className="text-slate-900 text-lg font-bold">900k</span>
                 </div>
                 <p className="text-xl font-bold text-slate-800 group-hover:text-[#2b6cb0] transition-colors duration-300">Core perception problem: "the typo catcher."</p>
@@ -113,13 +113,13 @@ export default function GrammarlyProject() {
 
       {/* The Core Challenge */}
       <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             The Core Challenge
           </div>
@@ -162,13 +162,13 @@ export default function GrammarlyProject() {
 
       {/* Behavioral Psychology */}
       <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Behavioral Psychology
           </div>
@@ -202,27 +202,27 @@ export default function GrammarlyProject() {
                 <motion.circle cx="380" cy="0" r="4" fill="#16a34a" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 1.1 }} />
                 
                 {/* The Path */}
-                <motion.path 
-                  d="M 0 100 L 130 50 L 250 180 L 380 0" 
-                  fill="none" 
-                  stroke="#16a34a" 
-                  strokeWidth="4" 
-                  strokeLinecap="round" 
+                <motion.path
+                  d="M 0 100 L 130 50 L 250 180 L 380 0"
+                  fill="none"
+                  stroke="#16a34a"
+                  strokeWidth="4"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1.5, ease: "easeInOut" }}
-                />
-                <motion.path 
-                  d="M 0 100 L 130 50 L 250 180 L 380 0 L 380 200 L 0 200 Z" 
-                  fill="#bbf7d0" 
+                  transition={{ duration: 1.5, ease: "easeInOut" }} />
+                
+                <motion.path
+                  d="M 0 100 L 130 50 L 250 180 L 380 0 L 380 200 L 0 200 Z"
+                  fill="#bbf7d0"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 0.3 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 1 }}
-                  className="transition-opacity duration-300 group-hover:opacity-50"
-                />
+                  className="transition-opacity duration-300 group-hover:opacity-50" />
+                
               </svg>
               
               {/* Pulse effect on the "drop off" point */}
@@ -247,13 +247,13 @@ export default function GrammarlyProject() {
 
       {/* Diagnostic Framework */}
       <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Diagnostic Framework
           </div>
@@ -295,13 +295,13 @@ export default function GrammarlyProject() {
 
       {/* Touchpoint Mapping */}
       <section className="py-20 px-6 lg:px-12 bg-white border-t border-slate-200 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Touchpoint Mapping
           </div>
@@ -310,24 +310,24 @@ export default function GrammarlyProject() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             {/* CSS Donut Chart */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative aspect-square max-w-md mx-auto w-full cursor-pointer group"
-            >
-              <motion.div 
+              className="relative aspect-square max-w-md mx-auto w-full cursor-pointer group">
+              
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8, rotate: -90 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="absolute inset-0 rounded-full" style={{
-                background: `conic-gradient(
+                  background: `conic-gradient(
                   #16a34a 0% 33.33%, 
                   #60a5fa 33.33% 66.66%, 
                   #d8b4fe 66.66% 88.88%, 
                   #fca5a5 88.88% 100%
                 )`
-              }}></motion.div>
+                }}></motion.div>
               <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center shadow-inner transition-colors duration-300 group-hover:bg-slate-50">
                 <span className="text-slate-400 font-bold tracking-widest uppercase text-sm group-hover:text-slate-600 transition-colors">Fogg Model</span>
               </div>
@@ -368,13 +368,13 @@ export default function GrammarlyProject() {
 
       {/* Design Principles */}
       <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
+          className="max-w-5xl mx-auto">
+          
           <div className="inline-block bg-green-200 text-green-900 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase">
             Design Principles
           </div>
@@ -413,13 +413,13 @@ export default function GrammarlyProject() {
 
       {/* Adoption Framework */}
       <section className="py-24 px-6 lg:px-12 bg-[#0f172a] text-white overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto"
-        >
+          className="max-w-6xl mx-auto">
+          
           <div className="text-center mb-24">
             <div className="inline-block bg-[#16a34a]/20 text-[#4ade80] text-xs font-bold tracking-wider px-4 py-1.5 mb-6 uppercase border border-[#16a34a]/30 rounded-full">
               Adoption Framework
@@ -430,38 +430,38 @@ export default function GrammarlyProject() {
           <div className="relative pt-12 pb-16">
             {/* Horizontal connection line */}
             <div className="hidden md:block absolute top-[88px] left-0 right-0 h-1 bg-slate-800 rounded-full">
-              <motion.div 
+              <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="h-full bg-gradient-to-r from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-full relative"
-              >
+                className="h-full bg-gradient-to-r from-[#16a34a] via-[#4ade80] to-[#bbf7d0] rounded-full relative">
+                
                 {/* Moving light pulse on the line */}
-                <motion.div 
+                <motion.div
                   initial={{ x: "-100%" }}
                   animate={{ x: "1000%" }}
                   transition={{ repeat: Infinity, duration: 3, ease: "linear", repeatDelay: 1 }}
-                  className="absolute top-0 bottom-0 w-32 bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                />
+                  className="absolute top-0 bottom-0 w-32 bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                
               </motion.div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
               
               {/* Phase 1 */}
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <motion.div 
+                className="flex flex-col items-center group cursor-pointer">
+                
+                <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ rotate: 15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#16a34a] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0)] group-hover:shadow-[0_0_40px_rgba(22,163,74,0.6)] z-10"
-                >
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#16a34a] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0)] group-hover:shadow-[0_0_40px_rgba(22,163,74,0.6)] z-10">
+                  
                   <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A1 1 0 0 1 10 21H8a1 1 0 0 1-1-1v-4H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V5a1 1 0 0 1 1 1v15z"></path><path d="M14 9h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-4"></path><path d="M19 11v2"></path></svg>
                 </motion.div>
                 <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#16a34a]/50 transition-all duration-300 transform group-hover:-translate-y-2">
@@ -472,18 +472,18 @@ export default function GrammarlyProject() {
               </motion.div>
 
               {/* Phase 2 */}
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center group cursor-pointer md:mt-16"
-              >
-                <motion.div 
+                className="flex flex-col items-center group cursor-pointer md:mt-16">
+                
+                <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ rotate: -15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#4ade80] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(74,222,128,0)] group-hover:shadow-[0_0_40px_rgba(74,222,128,0.6)] z-10"
-                >
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#4ade80] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(74,222,128,0)] group-hover:shadow-[0_0_40px_rgba(74,222,128,0.6)] z-10">
+                  
                   <Lightbulb className="w-7 h-7 text-[#4ade80] transition-transform group-hover:scale-110 group-hover:fill-[#4ade80]/20" />
                 </motion.div>
                 <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#4ade80]/50 transition-all duration-300 transform group-hover:-translate-y-2">
@@ -494,18 +494,18 @@ export default function GrammarlyProject() {
               </motion.div>
 
               {/* Phase 3 */}
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <motion.div 
+                className="flex flex-col items-center group cursor-pointer">
+                
+                <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ rotate: 15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#86efac] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(134,239,172,0)] group-hover:shadow-[0_0_40px_rgba(134,239,172,0.6)] z-10"
-                >
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#86efac] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(134,239,172,0)] group-hover:shadow-[0_0_40px_rgba(134,239,172,0.6)] z-10">
+                  
                   <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#86efac" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
                 </motion.div>
                 <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#86efac]/50 transition-all duration-300 transform group-hover:-translate-y-2">
@@ -516,18 +516,18 @@ export default function GrammarlyProject() {
               </motion.div>
 
               {/* Phase 4 */}
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center group cursor-pointer md:mt-16"
-              >
-                <motion.div 
+                className="flex flex-col items-center group cursor-pointer md:mt-16">
+                
+                <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   whileHover={{ rotate: -15 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.1, type: "spring" }}
-                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#bbf7d0] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(187,247,208,0)] group-hover:shadow-[0_0_40px_rgba(187,247,208,0.6)] z-10"
-                >
+                  className="w-20 h-20 bg-slate-900 border-4 border-slate-800 group-hover:border-[#bbf7d0] rounded-full flex items-center justify-center mb-8 transition-all duration-300 shadow-[0_0_30px_rgba(187,247,208,0)] group-hover:shadow-[0_0_40px_rgba(187,247,208,0.6)] z-10">
+                  
                   <svg className="transition-transform group-hover:scale-110" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
                 </motion.div>
                 <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 text-center w-full group-hover:bg-slate-800 group-hover:border-[#bbf7d0]/50 transition-all duration-300 transform group-hover:-translate-y-2">
@@ -543,38 +543,38 @@ export default function GrammarlyProject() {
       </section>
 
       {/* Product Experience */}
-      <section className="py-24 px-6 lg:px-12 bg-white overflow-hidden">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="max-w-5xl mx-auto flex flex-col items-center text-center"
-        >
-          <div className="inline-block bg-green-100 text-green-800 text-xs font-bold tracking-wider px-3 py-1 mb-12 uppercase rounded-sm">
-            Product Experience
-          </div>
-          
-          <motion.div 
-            whileHover={{ y: -10, shadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full max-w-[320px] mx-auto aspect-[9/16] rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-slate-900 relative bg-black mb-12"
-          >
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/SfMobYWRATE?rel=0&autoplay=1&mute=1&loop=1&playlist=SfMobYWRATE" 
-              title="Grammarly Product Experience" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            ></iframe>
-          </motion.div>
-          
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">What the product looked and felt like</h2>
-        </motion.div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       {/* Footer */}
       <footer className="py-12 px-6 lg:px-12 border-t border-slate-200 bg-white">
