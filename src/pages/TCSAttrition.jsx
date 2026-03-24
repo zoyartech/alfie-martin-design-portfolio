@@ -1,7 +1,43 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 export default function TCSAttrition() {
+  const [expandedStep, setExpandedStep] = useState(1);
+
+  const designSteps = [
+    {
+      id: 1,
+      weeks: "Weeks 1–4",
+      title: "Content Architecture",
+      desc: "Built a taxonomy of learnable domains — Research Methods, Deliverable Standards, Stakeholder Communication, Tool Configuration, Project Lifecycle — each subdivided into single-objective modules. Workshopped with 6 senior designers and 2 managers."
+    },
+    {
+      id: 2,
+      weeks: "Weeks 5–7",
+      title: "Interaction Model & Wireframes",
+      desc: "Prototyped three paradigms: linear course-based, choose-your-own-path, and contextual recommendation. Testing with 5 recent hires favored the recommendation model. Landed on a hybrid: a recommended daily path with full browse access."
+    },
+    {
+      id: 3,
+      weeks: "Weeks 8–10",
+      title: "Visual Design & Content Prototyping",
+      desc: "Designed a visual system that broke from TCS's corporate brand — restrained palette with intentional warmth, generous whitespace, and typographic hierarchy prioritizing scannability. Content built around annotated screenshots, short video walkthroughs, and interactive knowledge checks."
+    },
+    {
+      id: 4,
+      weeks: "Weeks 11–12",
+      title: "Usability Testing & Iteration",
+      desc: "Two rounds of moderated testing with 12 participants. Removed badges and streaks (felt patronizing) in favor of a simple completion map. Added playback speed controls and chapter markers to videos. Reframed knowledge checks as reflection prompts."
+    },
+    {
+      id: 5,
+      weeks: "Weeks 13–14",
+      title: "Engineering Handoff & Pilot Launch",
+      desc: "Built detailed annotation documents for every screen. Daily standups during the build sprint. Launched a pilot with the incoming January campus cohort — 32 new designers across four NA offices."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white pt-32 pb-16 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
@@ -167,50 +203,44 @@ export default function TCSAttrition() {
             
             <div className="space-y-12 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-blue-200 before:to-transparent">
               
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                  <div className="mb-1 text-sm font-semibold text-blue-500">Weeks 1–4</div>
-                  <h4 className="text-lg font-medium mb-2">Content Architecture</h4>
-                  <p className="text-gray-600 text-sm">Built a taxonomy of learnable domains — Research Methods, Deliverable Standards, Stakeholder Communication, Tool Configuration, Project Lifecycle — each subdivided into single-objective modules. Workshopped with 6 senior designers and 2 managers.</p>
-                </div>
-              </div>
-
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                  <div className="mb-1 text-sm font-semibold text-blue-500">Weeks 5–7</div>
-                  <h4 className="text-lg font-medium mb-2">Interaction Model & Wireframes</h4>
-                  <p className="text-gray-600 text-sm">Prototyped three paradigms: linear course-based, choose-your-own-path, and contextual recommendation. Testing with 5 recent hires favored the recommendation model. Landed on a hybrid: a recommended daily path with full browse access.</p>
-                </div>
-              </div>
-
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                  <div className="mb-1 text-sm font-semibold text-blue-500">Weeks 8–10</div>
-                  <h4 className="text-lg font-medium mb-2">Visual Design & Content Prototyping</h4>
-                  <p className="text-gray-600 text-sm">Designed a visual system that broke from TCS's corporate brand — restrained palette with intentional warmth, generous whitespace, and typographic hierarchy prioritizing scannability. Content built around annotated screenshots, short video walkthroughs, and interactive knowledge checks.</p>
-                </div>
-              </div>
-
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                  <div className="mb-1 text-sm font-semibold text-blue-500">Weeks 11–12</div>
-                  <h4 className="text-lg font-medium mb-2">Usability Testing & Iteration</h4>
-                  <p className="text-gray-600 text-sm">Two rounds of moderated testing with 12 participants. Removed badges and streaks (felt patronizing) in favor of a simple completion map. Added playback speed controls and chapter markers to videos. Reframed knowledge checks as reflection prompts.</p>
-                </div>
-              </div>
-
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">5</div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                  <div className="mb-1 text-sm font-semibold text-blue-500">Weeks 13–14</div>
-                  <h4 className="text-lg font-medium mb-2">Engineering Handoff & Pilot Launch</h4>
-                  <p className="text-gray-600 text-sm">Built detailed annotation documents for every screen. Daily standups during the build sprint. Launched a pilot with the incoming January campus cohort — 32 new designers across four NA offices.</p>
-                </div>
-              </div>
+              {designSteps.map((step) => (
+                <motion.div 
+                  key={step.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+                >
+                  <div className={`flex items-center justify-center w-12 h-12 rounded-full border-4 border-white ${expandedStep === step.id ? 'bg-blue-600' : 'bg-blue-400'} text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-colors duration-300`}>
+                    {step.id}
+                  </div>
+                  <div 
+                    onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
+                    className={`w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-5 rounded-xl border shadow-sm bg-white cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1 ${expandedStep === step.id ? 'border-blue-200 shadow-md ring-1 ring-blue-50' : 'border-gray-100 hover:border-blue-100'}`}
+                  >
+                    <div className="flex justify-between items-center mb-1">
+                      <div className="text-sm font-semibold text-blue-500">{step.weeks}</div>
+                      <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${expandedStep === step.id ? 'rotate-180 text-blue-500' : ''}`} />
+                    </div>
+                    <h4 className="text-lg font-medium">{step.title}</h4>
+                    
+                    <AnimatePresence>
+                      {expandedStep === step.id && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                          animate={{ height: 'auto', opacity: 1, marginTop: 12 }}
+                          exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              ))}
 
             </div>
           </div>
