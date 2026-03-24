@@ -256,19 +256,19 @@ export default function ConfidenceLab() {
                         {/* Header */}
                         <div className="flex items-center justify-between mb-3 mt-4">
                           <div className="flex items-center gap-3">
-                            <div className="h-2 w-24 bg-white/50 rounded-full overflow-hidden">
-                              <div
-                                className={`h-full ${styles.bar}`}
-                                style={{ width: `${answer.confidence}%` }} />
+                            <div className="bg-slate-50 rounded-full h-2 w-24 overflow-hidden">
+                              <div className="bg-green-800 h-full"
+
+                              style={{ width: `${answer.confidence}%` }} />
                               
                             </div>
                             <span className={`text-sm font-bold ${styles.text}`}>
                               {answer.confidence}% Confidence
                             </span>
                           </div>
-                          {answer.confidence > 90 &&
-                          <CheckCircle className="bg-transparent text-slate-950 opacity-50 lucide lucide-circle-check-big w-5 h-5" />
-                          }
+                          
+
+                          
                           {answer.confidence < 50 &&
                           <AlertTriangle className="w-5 h-5 text-amber-600 opacity-50" />
                           }
