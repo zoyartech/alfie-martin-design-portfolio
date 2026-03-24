@@ -56,30 +56,30 @@ export default function RockefellerCapital() {
       <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
         <h2 className="font-serif text-4xl font-bold mb-12 text-slate-900">Areas of Friction</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <Shield className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">1. Security</h3>
-            <p className="font-sans text-slate-600">Enhancing the overall security measures to ensure the confidentiality and privacy of client information.</p>
+          <div className="bg-sky-900 text-slate-50 p-8 rounded-xl shadow-sm border border-slate-100">
+            <Shield className="text-slate-200 mb-4 lucide lucide-shield w-8 h-8" />
+            <h3 className="text-slate-50 mb-3 text-xl font-bold">1. Security</h3>
+            <p className="text-slate-50 font-sans">Enhancing the overall security measures to ensure the confidentiality and privacy of client information.</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <Smartphone className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">2. Ease of Use</h3>
-            <p className="font-sans text-slate-600">Streamlining the user interface and interactions to make the mobile app more intuitive and user-friendly.</p>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-sm border border-slate-100">
+            <Smartphone className="text-slate-100 mb-4 lucide lucide-smartphone w-8 h-8" />
+            <h3 className="text-slate-200 mb-3 text-xl font-bold">2. Ease of Use</h3>
+            <p className="text-slate-50 font-sans">Streamlining the user interface and interactions to make the mobile app more intuitive and user-friendly.</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <ArrowRightLeft className="w-8 h-8 text-blue-600 mb-4" />
+          <div className="bg-sky-300 p-8 rounded-xl shadow-sm border border-slate-100">
+            <ArrowRightLeft className="text-slate-950 mb-4 lucide lucide-arrow-right-left w-8 h-8" />
             <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">3. Integration</h3>
             <p className="font-sans text-slate-600">Enabling the integration of outside accounts into the current app, providing a comprehensive view of the clients' financial portfolio.</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <PieChart className="w-8 h-8 text-blue-600 mb-4" />
+          <div className="bg-blue-300 p-8 rounded-xl shadow-sm border border-slate-100">
+            <PieChart className="text-zinc-950 mb-4 lucide lucide-chart-pie w-8 h-8" />
             <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">4. Portfolio Visualization</h3>
-            <p className="font-sans text-slate-600">Introducing visual representations that display the clients' entire portfolio, allowing for a holistic understanding of their investments.</p>
+            <p className="text-slate-950 font-sans">Introducing visual representations that display the clients' entire portfolio, allowing for a holistic understanding of their investments.</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <Users className="w-8 h-8 text-blue-600 mb-4" />
+          <div className="bg-sky-200 p-8 rounded-xl shadow-sm border border-slate-100">
+            <Users className="text-slate-950 mb-4 lucide lucide-users w-8 h-8" />
             <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">5. Low Adoption Rate</h3>
-            <p className="font-sans text-slate-600">Currently, only a small percentage of the older client demographic actively use the app. Efforts are needed to encourage wider adoption and usage.</p>
+            <p className="text-zinc-950 font-sans">Currently, only a small percentage of the older client demographic actively uses the app. We need to encourage wider adoption and usage.</p>
           </div>
         </div>
       </div>
@@ -131,13 +131,13 @@ export default function RockefellerCapital() {
       <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
         <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Interactive Prototype</h2>
         <div className="w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white">
-          <iframe 
-            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
-            width="100%" 
-            height="100%" 
-            src="https://embed.figma.com/proto/gKgJCUkjqplxnb43ZiI4Vb/Untitled?page-id=0%3A1&type=design&node-id=1-7066&viewport=289%2C343%2C1&scaling=min-zoom&starting-point-node-id=2%3A26670&embed-host=share" 
-            allowFullScreen
-          ></iframe>
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+            width="100%"
+            height="100%"
+            src="https://embed.figma.com/proto/gKgJCUkjqplxnb43ZiI4Vb/Untitled?page-id=0%3A1&type=design&node-id=1-7066&viewport=289%2C343%2C1&scaling=min-zoom&starting-point-node-id=2%3A26670&embed-host=share"
+            allowFullScreen>
+          </iframe>
         </div>
       </div>
 
@@ -236,7 +236,7 @@ export default function RockefellerCapital() {
           <div className="font-sans text-lg text-slate-700 space-y-6">
             <p>Historically, trust between consumers and their financial institutions is at an all-time low.</p>
             <blockquote className="border-l-4 border-blue-600 pl-6 py-2 text-xl font-medium text-slate-900 italic">
-              "When asked about the most critical factor in choosing a financial services provider, 83 percent of respondents cited a high-quality user experience. Delivering a consistent, reliable experience for customers that's easy to navigate easily represents a key element in fostering trust." <br/><span className="text-sm text-slate-500 font-normal">— Research by Forrester and BAI</span>
+              "When asked about the most critical factor in choosing a financial services provider, 83 percent of respondents cited a high-quality user experience. Delivering a consistent, reliable experience for customers that's easy to navigate easily represents a key element in fostering trust." <br /><span className="text-sm text-slate-500 font-normal">— Research by Forrester and BAI</span>
             </blockquote>
           </div>
           <div className="font-sans text-lg text-slate-700 space-y-6">
@@ -286,6 +286,6 @@ export default function RockefellerCapital() {
         </div>
       </div>
       
-    </div>
-  );
+    </div>);
+
 }
