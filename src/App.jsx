@@ -31,6 +31,7 @@ import ConfidenceLab from './pages/ConfidenceLab';
 import RockefellerCapital from './pages/RockefellerCapital';
 import BillingUsabilityStudy from './pages/BillingUsabilityStudy';
 import IntroToDesigningExperiments from './pages/IntroToDesigningExperiments';
+import ExamplesOfGrowthDesignExperiments from './pages/ExamplesOfGrowthDesignExperiments';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -86,6 +87,7 @@ const AuthenticatedApp = () => {
       <Route path="/RockefellerCapital" element={<RockefellerCapital />} />
       <Route path="/BillingUsabilityStudy" element={<BillingUsabilityStudy />} />
       <Route path="/IntroToDesigningExperiments" element={<IntroToDesigningExperiments />} />
+      <Route path="/ExamplesOfGrowthDesignExperiments" element={<ExamplesOfGrowthDesignExperiments />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>

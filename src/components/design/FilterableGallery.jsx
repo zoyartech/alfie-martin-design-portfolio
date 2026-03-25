@@ -6,6 +6,17 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
+  title: "Examples of Growth Design Experiments",
+  category: "UX Strategy",
+  industry: "SaaS",
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+  year: "2024",
+  link: "ExamplesOfGrowthDesignExperiments",
+  summary: "A comprehensive reference for product and growth designers running experiments across the user lifecycle.",
+  stats: [],
+  tags: ["Growth Design", "Playbook", "Experimentation"]
+},
+{
   title: "Intro to Designing Experiments",
   category: "UX Strategy",
   industry: "SaaS",
