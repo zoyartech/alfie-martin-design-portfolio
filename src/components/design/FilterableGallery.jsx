@@ -9,7 +9,7 @@ const projects = [
   title: "Rockefeller Capital Management",
   category: "Product Design",
   industry: "Finance",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/379a306d9_1.png",
   year: "2023",
   link: "RockefellerCapital",
   summary: "Practical Solutions To Improving The User Experience Of Digital Products for High Net Worth Individuals.",
