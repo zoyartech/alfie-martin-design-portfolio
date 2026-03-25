@@ -44,7 +44,7 @@ export default function RockefellerCapital() {
             </p>
           </div>
           <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
-            <h2 className="font-serif text-3xl font-bold mb-6 text-slate-900">Context</h2>
+            <h2 className="text-slate-900 mb-6 text-3xl font-extrabold">Context</h2>
             <p className="font-sans text-slate-700 text-lg leading-relaxed">
               Over the past 5 years, there has been an increasing need to enhance the user experience of RCM's mobile app. This shift is primarily due to a change in their client base, with a <strong>significant influx of younger HNWI</strong> (High Net Worth Individuals) who have expressed their preference for utilizing a mobile app.
             </p>
@@ -138,16 +138,14 @@ export default function RockefellerCapital() {
       {/* Interactive Prototype */}
       <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
         <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Interactive Prototype</h2>
-        <div className="flex justify-center">
-          <div className="w-[375px] h-[812px] max-w-full rounded-[2rem] overflow-hidden shadow-2xl border-8 border-slate-800 bg-white">
-            <iframe
-              style={{ border: "none" }}
-              width="100%"
-              height="100%"
-              src="https://poised-find-flow-state.base44.app"
-              allowFullScreen>
-            </iframe>
-          </div>
+        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white">
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+            width="100%"
+            height="100%"
+            src="https://embed.figma.com/proto/gKgJCUkjqplxnb43ZiI4Vb/Untitled?page-id=0%3A1&type=design&node-id=1-7066&viewport=289%2C343%2C1&scaling=min-zoom&starting-point-node-id=2%3A26670&embed-host=share"
+            allowFullScreen>
+          </iframe>
         </div>
       </div>
 
