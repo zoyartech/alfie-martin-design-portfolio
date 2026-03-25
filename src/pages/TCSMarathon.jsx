@@ -85,7 +85,7 @@ export default function TCSMarathon() {
                 </p>
             </div>
             <div className="flex-1">
-                <div className="bg-[#182439] text-[#F3F2EC] p-10 md:p-16 h-full flex flex-col justify-center shadow-lg">
+                <div className="bg-[#2A2A2A] text-[#F3F2EC] p-10 md:p-16 h-full flex flex-col justify-center shadow-lg">
                     <p className="text-2xl font-medium mb-8 leading-snug">"Where is my husband? He was supposed to be here twenty minutes ago."</p>
                     <p className="text-lg text-gray-300">That's the user story we were really solving for.</p>
                 </div>
@@ -96,6 +96,7 @@ export default function TCSMarathon() {
         {/* Discovery */}
         <section className="py-20 px-6 lg:px-12">
           <div className="max-w-7xl mx-auto">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad9fd5bd3_IMG_2021.jpg" alt="Research in the Wild" className="w-full h-auto max-h-[600px] object-cover rounded-xl shadow-sm mb-12" />
             <h2 className="text-3xl lg:text-4xl font-medium mb-8 text-[#333]">Discovery: Research in the Wild</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-5xl">
                 I ran a contextual inquiry at the prior year's marathon, stationed at four spectator hotspots along the course — the Queensboro Bridge at mile 15, First Avenue, Central Park South, and the finish line at Tavern on the Green. I watched what people actually did with their phones: screenshots texted to group chats, refreshing Safari when the app lagged, gathering in clusters around someone with a working signal.
