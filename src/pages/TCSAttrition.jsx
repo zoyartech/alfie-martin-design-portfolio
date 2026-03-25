@@ -191,7 +191,7 @@ export default function TCSAttrition() {
           <div className="w-full flex justify-center mb-20">
             <img
               loading="lazy"
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b6f41cae8_aaaaaa-TCS-lms.png"
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/47070fce3_tcaa11111s.png"
               alt="TCS LMS App"
               className="max-w-full h-auto object-contain" />
           </div>
