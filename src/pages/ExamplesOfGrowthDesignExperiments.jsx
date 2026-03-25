@@ -293,16 +293,18 @@ const ExperimentCard = ({ exp }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+    <div className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all scroll-mt-24">
       <div 
-        className="p-5 md:p-6 cursor-pointer flex justify-between items-center gap-4 bg-white hover:bg-slate-50 transition-colors"
+        className="p-4 md:p-6 cursor-pointer flex justify-between items-start md:items-center gap-4 bg-white hover:bg-slate-50 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex gap-4 items-center flex-1">
-          <span className="text-xs font-mono text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full font-medium shrink-0">Exp {exp.id}</span>
-          <h4 className="text-base md:text-lg font-semibold text-slate-900 leading-tight">{exp.title}</h4>
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-start md:items-center flex-1">
+          <span className="text-[10px] md:text-xs font-mono text-blue-700 bg-blue-100/50 px-2.5 py-1 rounded-full font-bold tracking-wider shrink-0 border border-blue-200/50">EXP {exp.id}</span>
+          <h4 className="text-sm md:text-lg font-bold text-slate-900 leading-snug">{exp.title}</h4>
         </div>
-        <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <div className="mt-0.5 md:mt-0 bg-slate-100 p-1.5 rounded-full shrink-0">
+          <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        </div>
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -310,38 +312,38 @@ const ExperimentCard = ({ exp }) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="border-t border-slate-100"
+            className="border-t border-slate-100 bg-slate-50/50"
           >
-            <div className="p-5 md:p-6 space-y-6">
+            <div className="p-4 md:p-6 space-y-6 md:space-y-8">
               <div>
-                <h5 className="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2">Description</h5>
+                <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2">Description</h5>
                 <p className="text-slate-700 leading-relaxed text-sm md:text-base">{exp.description}</p>
               </div>
               
-              <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                <h5 className="text-[11px] font-bold tracking-wider text-blue-800 uppercase mb-2 flex items-center gap-2"><Lightbulb className="w-4 h-4" /> Hypothesis</h5>
+              <div className="bg-blue-50/50 p-4 md:p-5 rounded-xl border border-blue-100 shadow-sm">
+                <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-blue-800 uppercase mb-2 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-blue-600" /> Hypothesis</h5>
                 <p className="text-slate-800 font-medium italic text-sm md:text-base leading-relaxed">"{exp.hypothesis}"</p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                  <h5 className="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><Target className="w-3.5 h-3.5" /> Key Metrics</h5>
-                  <p className="text-slate-600 text-sm leading-relaxed">{exp.metrics}</p>
+                  <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><Target className="w-3.5 h-3.5" /> Key Metrics</h5>
+                  <p className="text-slate-600 text-sm leading-relaxed bg-white p-3 md:p-4 rounded-lg border border-slate-100 shadow-sm h-full">{exp.metrics}</p>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><ArrowRight className="w-3.5 h-3.5" /> Variations</h5>
-                  <p className="text-slate-600 text-sm leading-relaxed">{exp.variations}</p>
+                  <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><ArrowRight className="w-3.5 h-3.5" /> Variations</h5>
+                  <p className="text-slate-600 text-sm leading-relaxed bg-white p-3 md:p-4 rounded-lg border border-slate-100 shadow-sm h-full">{exp.variations}</p>
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 pt-5 border-t border-slate-100">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-5 md:pt-6 border-t border-slate-200">
                 <div>
-                  <h5 className="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><AlertTriangle className="w-3.5 h-3.5" /> Risk Level</h5>
-                  <p className="text-slate-600 text-sm">{exp.risk}</p>
+                  <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1.5 flex items-center gap-2"><AlertTriangle className="w-3.5 h-3.5" /> Risk Level</h5>
+                  <p className="text-slate-700 font-medium text-xs md:text-sm">{exp.risk}</p>
                 </div>
                 <div>
-                  <h5 className="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> Timeframe</h5>
-                  <p className="text-slate-600 text-sm">{exp.timeframe}</p>
+                  <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1.5 flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> Timeframe</h5>
+                  <p className="text-slate-700 font-medium text-xs md:text-sm">{exp.timeframe}</p>
                 </div>
               </div>
             </div>
@@ -353,64 +355,118 @@ const ExperimentCard = ({ exp }) => {
 };
 
 export default function ExamplesOfGrowthDesignExperiments() {
+  const phases = experimentsData.map(d => d.phase);
+  const [activeSection, setActiveSection] = useState(phases[0]);
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-24">
       {/* Navigation Header */}
-      <div className="pt-24 px-6 max-w-5xl mx-auto mb-10">
-        <Link to={createPageUrl("CaseStudies")} className="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-colors uppercase font-medium">
-          <ArrowLeft className="w-4 h-4" /> Back to Case Studies
+      <div className="pt-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto mb-6 md:mb-10">
+        <Link to={createPageUrl("CaseStudies")} className="inline-flex items-center gap-2 text-[10px] md:text-xs tracking-[0.2em] text-slate-500 hover:text-blue-600 transition-colors uppercase font-bold bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-sm border border-slate-200">
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" /> Back to Case Studies
         </Link>
       </div>
 
       {/* Hero Section */}
-      <div className="max-w-5xl mx-auto px-6 mb-16 md:mb-24">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-12 md:mb-20">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="bg-white p-6 md:p-10 lg:p-14 rounded-2xl md:rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden"
         >
-          <p className="text-xs tracking-[0.25em] text-blue-600 mb-5 font-bold uppercase">Growth Design Playbook</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-slate-900 tracking-tight leading-[1.1]">
-            Examples of Different<br />Experiments in Growth Design
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl font-light">
-            A comprehensive reference for product and growth designers running experiments across the user lifecycle—from acquisition through retention, monetization, and resurrection.
-          </p>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+          
+          <div className="relative z-10">
+            <p className="text-[10px] md:text-xs tracking-[0.25em] text-blue-600 mb-4 md:mb-6 font-bold uppercase flex items-center gap-2">
+              <span className="w-6 h-px bg-blue-600"></span> Growth Design Playbook
+            </p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 md:mb-8 text-slate-900 tracking-tight leading-[1.15]">
+              Examples of Different<br className="hidden md:block" /> Experiments in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Growth Design</span>
+            </h1>
+            <p className="text-base md:text-xl text-slate-600 leading-relaxed max-w-3xl font-light">
+              A comprehensive reference for product and growth designers running experiments across the user lifecycle—from acquisition through retention, monetization, and resurrection.
+            </p>
+          </div>
         </motion.div>
       </div>
 
-      {/* Experiments Content */}
-      <div className="max-w-5xl mx-auto px-6 space-y-24">
-        {experimentsData.map((phaseData, idx) => (
-          <motion.section 
-            key={idx}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="scroll-mt-32"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl shadow-md flex items-center justify-center text-white shrink-0">
-                {phaseData.icon}
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">{phaseData.phase} Experiments</h2>
-                <p className="text-slate-600 text-lg max-w-3xl leading-relaxed">{phaseData.description}</p>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              {phaseData.experiments.map(exp => (
-                <ExperimentCard key={exp.id} exp={exp} />
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 lg:gap-12 relative">
+        
+        {/* Mobile/Tablet Sticky Nav */}
+        <div className="lg:hidden sticky top-[72px] md:top-20 z-40 bg-slate-50/95 backdrop-blur-md border-b border-slate-200 -mx-4 md:-mx-6 px-4 md:px-6 py-3 mb-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] shadow-sm">
+          <div className="flex items-center gap-2 w-max">
+            {phases.map((phase) => (
+              <a 
+                key={phase} 
+                href={`#${phase.toLowerCase()}`}
+                onClick={() => setActiveSection(phase)}
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-300 border ${activeSection === phase ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:bg-blue-50'}`}
+              >
+                {phase}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Sidebar Nav */}
+        <div className="hidden lg:block w-64 shrink-0">
+          <div className="sticky top-32 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h3 className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-6 flex items-center gap-2">
+              <Target className="w-3.5 h-3.5" /> Table of Contents
+            </h3>
+            <nav className="flex flex-col gap-1.5">
+              {phases.map((phase) => (
+                <a 
+                  key={phase} 
+                  href={`#${phase.toLowerCase()}`}
+                  onClick={() => setActiveSection(phase)}
+                  className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${activeSection === phase ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+                >
+                  {phase} Experiments
+                </a>
               ))}
-            </div>
-          </motion.section>
-        ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Experiments Content */}
+        <div className="flex-1 space-y-16 md:space-y-24">
+          {experimentsData.map((phaseData, idx) => (
+            <motion.section 
+              key={idx}
+              id={phaseData.phase.toLowerCase()}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              onViewportEnter={() => setActiveSection(phaseData.phase)}
+              className="scroll-mt-32 md:scroll-mt-40"
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-6 md:mb-8">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-lg flex items-center justify-center text-white shrink-0">
+                  {React.cloneElement(phaseData.icon, { className: "w-6 h-6 md:w-8 md:h-8" })}
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-2 md:mb-3">{phaseData.phase} Experiments</h2>
+                  <p className="text-slate-600 text-sm md:text-lg max-w-3xl leading-relaxed">{phaseData.description}</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 md:space-y-6">
+                {phaseData.experiments.map(exp => (
+                  <ExperimentCard key={exp.id} exp={exp} />
+                ))}
+              </div>
+            </motion.section>
+          ))}
+        </div>
       </div>
       
       {/* Footer Meta */}
-      <div className="max-w-5xl mx-auto px-6 mt-32 pt-12 border-t border-slate-200">
-        <p className="text-sm text-slate-500 font-mono text-center">Prepared for growth teams, product designers, and cross-functional stakeholders.</p>
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-24 md:mt-32 pt-8 md:pt-12 border-t border-slate-200">
+        <div className="bg-slate-100 p-6 md:p-8 rounded-2xl text-center">
+          <p className="text-xs md:text-sm text-slate-500 font-mono">Prepared for growth teams, product designers, and cross-functional stakeholders.</p>
+        </div>
       </div>
     </div>
   );
