@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
+import { useInView } from "framer-motion";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+
+function AnimatedChart({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  return <div ref={ref} className="w-full h-full">{isInView && children}</div>;
+}
 
 export default function DesignStrategyAI() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -459,26 +467,64 @@ export default function DesignStrategyAI() {
 
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
-            <div>
-              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">–47%</p>
-              <p className="font-serif text-xl font-bold text-slate-900 mb-2">External verification</p>
-              <p className="text-gray-600 text-sm font-sans text-center">Reduction in external verification behavior</p>
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm">
+                <h3 className="font-serif text-2xl font-bold text-slate-900 mb-2">Behavioral Shifts</h3>
+                <p className="text-slate-600 text-sm mb-6">Percentage change after redesign</p>
+                <div className="h-64">
+                  <AnimatedChart>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={[
+                          { name: 'External Verification', change: -47 },
+                          { name: 'Session Abandonment', change: -29 },
+                          { name: 'Answer Acceptance', change: 33 },
+                        ]} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                            <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                            <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} />
+                            <YAxis dataKey="name" type="category" width={140} tick={{fill: '#475569', fontSize: 13}} />
+                            <Tooltip cursor={{fill: 'rgba(0,0,0,0.05)'}} formatter={(val) => [`${val > 0 ? '+' : ''}${val}%`, 'Change']} />
+                            <ReferenceLine x={0} stroke="#94a3b8" />
+                            <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
+                                {[
+                                  { name: 'External Verification', change: -47 },
+                                  { name: 'Session Abandonment', change: -29 },
+                                  { name: 'Answer Acceptance', change: 33 },
+                                ].map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={entry.change > 0 ? '#10b981' : '#3b82f6'} />
+                                ))}
+                            </Bar>
+                        </BarChart>
+                    </ResponsiveContainer>
+                  </AnimatedChart>
+                </div>
             </div>
-            <div>
-              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">+33%</p>
-              <p className="font-serif text-xl font-bold text-slate-900 mb-2">Answer acceptance</p>
-              <p className="font-sans text-gray-600 text-sm  ">Increase in answer acceptance rate</p>
-            </div>
-            <div>
-              <p className="text-gray-700 mb-4 text-5xl font-semibold md:text-6xl">–29%</p>
-              <p className="font-serif text-xl font-bold text-slate-900 mb-2">Session abandonment</p>
-              <p className="font-sans text-gray-600 text-sm  ">Drop in session abandonment on ambiguous queries</p>
-            </div>
-            <div>
-              <p className="text-gray-700 mb-4 text-5xl font-bold md:text-6xl">4.7</p>
-              <p className="font-serif text-xl font-bold text-slate-900 mb-2">Trust score</p>
-              <p className="font-sans text-gray-600 text-sm  ">Up from 4.3 on a 5-point Likert scale</p>
+            
+            <div className="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm">
+                <h3 className="font-serif text-2xl font-bold text-slate-900 mb-2">Trust Score Evolution</h3>
+                <p className="text-slate-600 text-sm mb-6">Measured on a 5-point Likert scale</p>
+                <div className="h-64">
+                  <AnimatedChart>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={[
+                          { name: 'Before Redesign', score: 4.3 },
+                          { name: 'After Redesign', score: 4.7 }
+                        ]} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                            <XAxis dataKey="name" tick={{fill: '#475569', fontSize: 14}} />
+                            <YAxis domain={[0, 5]} tick={{fill: '#475569'}} />
+                            <Tooltip cursor={{fill: 'rgba(0,0,0,0.05)'}} />
+                            <Bar dataKey="score" fill="#8b5cf6" radius={[6, 6, 0, 0]} animationDuration={1500} label={{ position: 'top', fill: '#1e293b', fontWeight: 'bold', fontSize: 16 }}>
+                                {[
+                                  { name: 'Before Redesign', score: 4.3 },
+                                  { name: 'After Redesign', score: 4.7 }
+                                ].map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#94a3b8' : '#8b5cf6'} />
+                                ))}
+                            </Bar>
+                        </BarChart>
+                    </ResponsiveContainer>
+                  </AnimatedChart>
+                </div>
             </div>
           </div>
 

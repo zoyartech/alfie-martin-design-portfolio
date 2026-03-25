@@ -1,9 +1,16 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Map, Bell, Trophy, Activity } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine, LineChart, Line } from 'recharts';
+
+function AnimatedChart({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  return <div ref={ref} className="w-full h-full">{isInView && children}</div>;
+}
 
 export default function TCSMarathon() {
   return (
@@ -265,26 +272,57 @@ export default function TCSMarathon() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-[#000000] mb-16 text-3xl font-medium lg:text-4xl">Outcome: What Shipped, What Moved</h2>
             
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-                <div>
-                    <p className="text-[#000000] mb-4 text-5xl font-medium">4.4★</p>
-                    <p className="text-lg font-medium text-[#333] mb-2">App Store Rating</p>
-                    <p className="text-sm text-gray-600">Up from 2.8 stars following the redesigned race-day release</p>
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+                <div className="bg-[#E7E5DD]/30 p-8 rounded-2xl border border-gray-200">
+                    <h3 className="text-2xl font-medium text-[#333] mb-2">App Store Rating</h3>
+                    <p className="text-gray-600 text-sm mb-6">Pre-release vs. Post-release</p>
+                    <div className="h-64">
+                      <AnimatedChart>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <LineChart data={[
+                              { version: 'v3 (Legacy)', rating: 2.8 },
+                              { version: 'v4 (Redesign)', rating: 4.4 }
+                            ]} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                                <XAxis dataKey="version" tick={{fill: '#4b5563'}} />
+                                <YAxis domain={[0, 5]} tick={{fill: '#4b5563'}} />
+                                <Tooltip />
+                                <Line type="monotone" dataKey="rating" stroke="#eab308" strokeWidth={4} animationDuration={2000} dot={{ r: 6, fill: '#eab308', strokeWidth: 2 }} activeDot={{ r: 8 }} label={{ position: 'top', fill: '#1f2937', fontWeight: 'bold', fontSize: 16 }} />
+                            </LineChart>
+                        </ResponsiveContainer>
+                      </AnimatedChart>
+                    </div>
                 </div>
-                <div>
-                    <p className="text-[#000000] mb-4 text-5xl font-medium">+34%</p>
-                    <p className="text-lg font-medium text-[#333] mb-2">Session Length</p>
-                    <p className="text-sm text-gray-600">Increased on race day — users stayed in the app rather than falling back to mobile browsers</p>
-                </div>
-                <div>
-                    <p className="text-[#000000] mb-4 text-5xl font-medium">41%</p>
-                    <p className="text-lg font-medium text-[#333] mb-2">Finish Line Shares</p>
-                    <p className="text-sm text-gray-600">Of finishers used the shareable in year one — an unplanned viral mechanic driving organic reach for NYRR</p>
-                </div>
-                <div>
-                    <p className="text-[#000000] mb-4 text-5xl font-medium">-52%</p>
-                    <p className="text-lg font-medium text-[#333] mb-2">Support Tickets</p>
-                    <p className="text-sm text-gray-600">Tracking-related tickets dropped year-over-year — the largest single-year reduction in NYRR's product history</p>
+
+                <div className="bg-[#E7E5DD]/30 p-8 rounded-2xl border border-gray-200">
+                    <h3 className="text-2xl font-medium text-[#333] mb-2">Engagement & Support</h3>
+                    <p className="text-gray-600 text-sm mb-6">Percentage impact on key metrics</p>
+                    <div className="h-64">
+                      <AnimatedChart>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={[
+                              { name: 'Support Tickets', change: -52 },
+                              { name: 'Session Length', change: 34 },
+                              { name: 'Finish Line Shares', change: 41 },
+                            ]} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                                <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} />
+                                <YAxis dataKey="name" type="category" width={120} tick={{fill: '#4b5563', fontSize: 12}} />
+                                <Tooltip formatter={(val) => [`${val > 0 ? '+' : ''}${val}%`, 'Change/Adoption']} cursor={{fill: 'rgba(0,0,0,0.05)'}} />
+                                <ReferenceLine x={0} stroke="#9ca3af" />
+                                <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
+                                    {[
+                                      { name: 'Support Tickets', change: -52 },
+                                      { name: 'Session Length', change: 34 },
+                                      { name: 'Finish Line Shares', change: 41 },
+                                    ].map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={entry.change > 0 ? '#3b82f6' : '#ef4444'} />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </ResponsiveContainer>
+                      </AnimatedChart>
+                    </div>
                 </div>
             </div>
 

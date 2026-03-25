@@ -1,4 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useInView } from "framer-motion";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+
+function AnimatedChart({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  return <div ref={ref} className="w-full h-full">{isInView && children}</div>;
+}
 
 export default function ArbolCaseStudy() {
   useEffect(() => {
@@ -806,19 +814,72 @@ export default function ArbolCaseStudy() {
         <h2>What changed after <em>the work shipped</em></h2>
         <p>The redesigned AI underwriter and smart contract UX rolled out across the broker portal in Q3 2023 and was incrementally extended to the direct client dashboard through Q4. Outcomes were tracked across a mix of quantitative platform metrics and qualitative broker feedback.</p>
 
-        <div className="outcome-banner">
-          <div className="text-[#ffffff] outcome-item">
-            <span className="outcome-val">↓ 60%</span>
-            <span className="text-[#ffffff] font-semibold outcome-desc">Reduction in broker support tickets related to pricing explanation requests after launch of the AI explainability panel</span>
-          </div>
-          <div className="outcome-item">
-            <span className="outcome-val">↑ 3×</span>
-            <span className="text-[#ffffff] outcome-desc">Increase in contracts bound per broker per month in the twelve months following the contract builder redesign</span>
-          </div>
-          <div className="outcome-item">
-            <span className="outcome-val">100%</span>
-            <span className="outcome-desc">Of payout-receiving clients reported understanding why and how they received their settlement — up from less than 40% before Settlement Records</span>
-          </div>
+        <div className="grid lg:grid-cols-2 gap-8 mt-12 mb-8">
+            <div className="bg-[var(--bg2)] p-8 border border-[var(--border)]">
+                <h3 className="font-serif text-xl text-white mb-2">Broker & Client Impact</h3>
+                <p className="text-[var(--text-dim)] text-sm mb-6">Percentage improvements post-launch</p>
+                <div className="h-64">
+                    <AnimatedChart>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={[
+                              { name: 'Support Tickets', change: -60 },
+                              { name: 'Contracts Bound', change: 200 },
+                            ]} layout="vertical" margin={{ top: 5, right: 40, left: 10, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="rgba(255,255,255,0.1)" />
+                                <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} tick={{fill: 'var(--text-dim)'}} />
+                                <YAxis dataKey="name" type="category" width={110} tick={{fill: 'var(--text-dim)', fontSize: 12}} />
+                                <Tooltip 
+                                  contentStyle={{backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)'}} 
+                                  itemStyle={{color: 'var(--lime)'}}
+                                  formatter={(val, name) => [`${val > 0 ? '+' : ''}${val}%`, name]} 
+                                  cursor={{fill: 'rgba(255,255,255,0.05)'}}
+                                />
+                                <ReferenceLine x={0} stroke="rgba(255,255,255,0.2)" />
+                                <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
+                                    {[
+                                      { name: 'Support Tickets', change: -60 },
+                                      { name: 'Contracts Bound', change: 200 },
+                                    ].map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill="var(--lime)" />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </AnimatedChart>
+                </div>
+            </div>
+
+            <div className="bg-[var(--bg2)] p-8 border border-[var(--border)]">
+                <h3 className="font-serif text-xl text-white mb-2">Payout Comprehension</h3>
+                <p className="text-[var(--text-dim)] text-sm mb-6">Clients who understood their settlement logic</p>
+                <div className="h-64">
+                    <AnimatedChart>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={[
+                              { name: 'Before', score: 40 },
+                              { name: 'After', score: 100 }
+                            ]} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.1)" />
+                                <XAxis dataKey="name" tick={{fill: 'var(--text-dim)', fontSize: 12}} />
+                                <YAxis domain={[0, 100]} tickFormatter={(val) => `${val}%`} tick={{fill: 'var(--text-dim)'}} />
+                                <Tooltip 
+                                  contentStyle={{backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)'}} 
+                                  itemStyle={{color: 'var(--lime)'}}
+                                  cursor={{fill: 'rgba(255,255,255,0.05)'}}
+                                />
+                                <Bar dataKey="score" fill="var(--lime)" radius={[4, 4, 0, 0]} animationDuration={1500} label={{ position: 'top', fill: 'var(--white)', formatter: (val) => `${val}%` }}>
+                                    {[
+                                      { name: 'Before', score: 40 },
+                                      { name: 'After', score: 100 }
+                                    ].map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={index === 0 ? 'var(--text-dim)' : 'var(--lime)'} opacity={index === 0 ? 0.5 : 1} />
+                                    ))}
+                                </Bar>
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </AnimatedChart>
+                </div>
+            </div>
         </div>
 
         <div style={{ marginTop: '2.5rem' }}>
