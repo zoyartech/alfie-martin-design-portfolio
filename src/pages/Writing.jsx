@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
-import MobileNav from "@/components/MobileNav";
-import FilterableGallery from "@/components/design/FilterableGallery";
-import DesignTestimonials from "@/components/design/DesignTestimonials";
-import ConsultationForm from "@/components/design/ConsultationForm";
+
+const writingProjects = [
+  {
+    title: "Examples of Growth Design Experiments",
+    category: "UX Strategy",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+    link: "ExamplesOfGrowthDesignExperiments",
+    summary: "A comprehensive reference for product and growth designers running experiments across the user lifecycle.",
+  },
+  {
+    title: "Intro to Designing Experiments",
+    category: "UX Strategy",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
+    link: "IntroToDesigningExperiments",
+    summary: "The DTC SaaS Growth Design Experimentation Playbook. A guide for designers interested in roles on growth teams.",
+  }
+];
 
 export default function Writing() {
   return (
@@ -22,10 +34,37 @@ export default function Writing() {
       </section>
 
       {/* Content */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-10">
-        <FilterableGallery />
-        <DesignTestimonials />
-        <ConsultationForm />
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-10 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {writingProjects.map((project, i) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="group"
+              >
+                <Link to={createPageUrl(project.link)} className="block">
+                  <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-xl mb-4">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <p className="text-xs font-mono tracking-widest text-blue-600 uppercase mb-2">{project.category}</p>
+                  <h3 className="text-xl font-medium text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {project.summary}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
       {/* Footer */}
