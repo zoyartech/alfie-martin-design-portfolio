@@ -64,7 +64,7 @@ const projects = [
   tags: ["Mobile Design", "Real-Time Data", "Sports"]
 },
 {
-  title: "Helping an iconic brand make a splash",
+  title: "Rebrand & Growth : Polaroid Makes a comeback",
   category: "Brand Identity",
   industry: "Consumer",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
