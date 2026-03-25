@@ -32,15 +32,15 @@ export default function RockefellerCapital() {
       </div>
 
       {/* Intro & Context */}
-      <div className="bg-white border-y border-slate-200 py-16 md:py-24">
+      <div className="bg-[#111e41] text-[#d4d4d4] py-16 border-y border-slate-200 md:py-24">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="font-serif text-3xl font-bold mb-6 text-slate-900">Introduction</h2>
-            <p className="font-sans text-slate-700 text-lg mb-6 leading-relaxed">
-              When I was first assigned to Rockefeller Capital Management as lead UX Designer in Mobile Experiences, I took the time to thoroughly research the firm, its digital offerings, and overall brand values, so that I could familiarize myself with the project.
+            <h2 className="text-slate-100 mb-6 text-3xl font-bold">Introduction</h2>
+            <p className="text-slate-100 mb-6 text-lg font-sans leading-relaxed">When I was first assigned to Rockefeller Capital Management as lead UX Designer in Mobile Experiences, I took the time to thoroughly research the firm, its digital offerings, and overall brand values, so that I could familiarize myself with the project.
+
             </p>
-            <p className="font-sans text-slate-700 text-lg leading-relaxed">
-              My manager Lisa Doyle sent me over product metrics and recordings of qualitative interviews with current users of the app. This gave me a strong point to start from prior to my first meeting with the client.
+            <p className="text-slate-100 text-lg font-sans leading-relaxed">My manager Lisa Doyle sent me over product metrics and recordings of qualitative interviews with current users of the app. This gave me a strong point to start from prior to my first meeting with the client.
+
             </p>
           </div>
           <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
@@ -128,11 +128,11 @@ export default function RockefellerCapital() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
-        <img 
-          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/23a9861ad_1d9110ee055b0180503864215ead9397.png" 
-          alt="Rockefeller Global Family Office" 
-          className="w-full rounded-xl shadow-sm border border-slate-200"
-        />
+        <img
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/23a9861ad_1d9110ee055b0180503864215ead9397.png"
+          alt="Rockefeller Global Family Office"
+          className="w-full rounded-xl shadow-sm border border-slate-200" />
+        
       </div>
 
       {/* Interactive Prototype */}
