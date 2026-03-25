@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowLeft, Target, Component, Search, Lightbulb, 
-  PenTool, FileText, ClipboardCheck, Activity, 
-  Presentation, AlertTriangle, ChevronRight, CheckCircle2 
-} from 'lucide-react';
+import {
+  ArrowLeft, Target, Component, Search, Lightbulb,
+  PenTool, FileText, ClipboardCheck, Activity,
+  Presentation, AlertTriangle, ChevronRight, CheckCircle2 } from
+'lucide-react';
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -49,7 +49,7 @@ export default function IntroToDesigningExperiments() {
               Growth Design Playbook
             </motion.div>
             
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
+            <motion.h1 variants={fadeUp} className="text-slate-900 text-base font-medium tracking-tight leading-[1.1] md:text-7xl max-w-4xl">
               The DTC SaaS Growth Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Experimentation Playbook</span>
             </motion.h1>
             
@@ -94,7 +94,7 @@ export default function IntroToDesigningExperiments() {
 
             <motion.div variants={fadeUp} className="md:col-span-7 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200">
               <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-slate-900">
-                <Component className="w-6 h-6 text-purple-600"/> 
+                <Component className="w-6 h-6 text-purple-600" /> 
                 The Design System as a Hypothesis Tool
               </h3>
               <p className="text-lg text-slate-600 mb-8">
@@ -129,37 +129,37 @@ export default function IntroToDesigningExperiments() {
             
             <div className="space-y-10">
               {[
-                {
-                  icon: Search,
-                  title: "Problem Deep-Dive",
-                  subtitle: "Heuristic Analysis",
-                  content: (
-                    <ul className="space-y-3 text-slate-600">
-                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0"/> <span><strong>Review Data:</strong> Identify drop-offs (e.g., 70% between Payment and Active).</span></li>
-                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0"/> <span><strong>Session Recordings:</strong> Watch 10 users. Look for hesitation, rage clicks, or scrolling past CTA.</span></li>
-                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0"/> <span><strong>Heuristic Violations:</strong> Identify broken UX principles (e.g., CTA below the fold).</span></li>
+              {
+                icon: Search,
+                title: "Problem Deep-Dive",
+                subtitle: "Heuristic Analysis",
+                content:
+                <ul className="space-y-3 text-slate-600">
+                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0" /> <span><strong>Review Data:</strong> Identify drop-offs (e.g., 70% between Payment and Active).</span></li>
+                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0" /> <span><strong>Session Recordings:</strong> Watch 10 users. Look for hesitation, rage clicks, or scrolling past CTA.</span></li>
+                      <li className="flex gap-3"><ChevronRight className="w-5 h-5 text-purple-500 shrink-0" /> <span><strong>Heuristic Violations:</strong> Identify broken UX principles (e.g., CTA below the fold).</span></li>
                     </ul>
-                  )
-                },
-                {
-                  icon: Lightbulb,
-                  title: "Hypothesis Framing",
-                  subtitle: "Designer's Lens",
-                  content: (
-                    <div className="space-y-4">
+
+              },
+              {
+                icon: Lightbulb,
+                title: "Hypothesis Framing",
+                subtitle: "Designer's Lens",
+                content:
+                <div className="space-y-4">
                       <p className="text-slate-600">The PM writes the business hypothesis. The Designer writes the behavioral hypothesis.</p>
                       <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 font-mono text-sm leading-relaxed text-slate-700 shadow-inner">
                         "By reducing [Cognitive Load / Visual Clutter] and increasing [Perceived Value / Urgency], we will increase [Target Metric]."
                       </div>
                     </div>
-                  )
-                },
-                {
-                  icon: PenTool,
-                  title: "Ideation & Variant Generation",
-                  subtitle: "Generate 3 Concepts",
-                  content: (
-                    <div className="grid gap-3">
+
+              },
+              {
+                icon: PenTool,
+                title: "Ideation & Variant Generation",
+                subtitle: "Generate 3 Concepts",
+                content:
+                <div className="grid gap-3">
                       <div className="p-4 bg-white border border-slate-100 rounded-xl shadow-sm hover:border-purple-200 transition-colors">
                         <strong className="text-slate-900 block mb-1">Variant A (The Clarity Play)</strong>
                         <span className="text-slate-600 text-sm">Simplify copy. Use bullet points. Reduce jargon.</span>
@@ -173,26 +173,26 @@ export default function IntroToDesigningExperiments() {
                         <span className="text-slate-600 text-sm">Reduce form fields. Switch multi-step to single-step.</span>
                       </div>
                     </div>
-                  )
-                },
-                {
-                  icon: ClipboardCheck,
-                  title: "The 'Thin-Slice' QA",
-                  subtitle: "Pre-launch Checks",
-                  content: (
-                    <div className="flex flex-wrap gap-3">
-                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Pixel-to-Pixel</span>
-                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Flicker Check</span>
-                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Null State Check</span>
+
+              },
+              {
+                icon: ClipboardCheck,
+                title: "The 'Thin-Slice' QA",
+                subtitle: "Pre-launch Checks",
+                content:
+                <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Pixel-to-Pixel</span>
+                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Flicker Check</span>
+                      <span className="px-4 py-2 bg-slate-50 rounded-lg text-sm font-medium text-slate-700 border border-slate-200 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Null State Check</span>
                     </div>
-                  )
-                },
-                {
-                  icon: Presentation,
-                  title: "The Designer's Debrief",
-                  subtitle: "Post-Experiment",
-                  content: (
-                    <div className="bg-purple-50 p-6 rounded-xl border border-purple-100">
+
+              },
+              {
+                icon: Presentation,
+                title: "The Designer's Debrief",
+                subtitle: "Post-Experiment",
+                content:
+                <div className="bg-purple-50 p-6 rounded-xl border border-purple-100">
                       <p className="text-purple-900 font-medium mb-2">Present a visual summary featuring:</p>
                       <ul className="text-purple-800 text-sm space-y-1 list-disc ml-4">
                         <li>Metrics (Lift/Drop)</li>
@@ -200,10 +200,10 @@ export default function IntroToDesigningExperiments() {
                         <li>The "Why" (Behavioral rationale for the win/loss)</li>
                       </ul>
                     </div>
-                  )
-                }
-              ].map((step, index) => (
-                <motion.div key={index} variants={fadeUp} className="relative flex items-start gap-6 md:gap-8 group">
+
+              }].
+              map((step, index) =>
+              <motion.div key={index} variants={fadeUp} className="relative flex items-start gap-6 md:gap-8 group">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-2xl bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center shrink-0 z-10 group-hover:border-purple-400 group-hover:shadow-md transition-all">
                     <step.icon className="w-5 h-5 md:w-8 md:h-8 text-slate-400 group-hover:text-purple-600 transition-colors" />
                   </div>
@@ -215,7 +215,7 @@ export default function IntroToDesigningExperiments() {
                     {step.content}
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </motion.section>
@@ -230,49 +230,49 @@ export default function IntroToDesigningExperiments() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              {
-                title: "The First Impression",
-                stage: "Landing Page / Sign-up",
-                goal: "Reduce bounce rate, increase Click to Sign-up.",
-                points: [
-                  "Test lifestyle imagery vs. UI screenshots (users buy outcomes, not features).",
-                  "Test brand colors vs. high-contrast action colors.",
-                  "Test 'Above the Fold' content density to reduce clutter."
-                ]
-              },
-              {
-                title: "The Aha! Moment",
-                stage: "Onboarding",
-                goal: "Increase activation rate (core action completion).",
-                points: [
-                  "Test a guided checklist (progress) vs. a passive carousel tutorial.",
-                  "Evaluate blank slate design (is it helpful or empty?).",
-                  "Introduce Setup Progress Bars to increase completion."
-                ]
-              },
-              {
-                title: "The Wallet Open",
-                stage: "Pricing Page",
-                goal: "Increase conversion to paid plans.",
-                points: [
-                  "Introduce a 'Decoy' plan to make the target plan look like a steal.",
-                  "Visually compare Annual vs. Monthly savings (e.g. strike-through pricing).",
-                  "Place Trust Badges strategically near payment fields."
-                ]
-              },
-              {
-                title: "Save the User",
-                stage: "Exit Intent / Retention",
-                goal: "Reduce churn during cancellation attempts.",
-                points: [
-                  "Design a 'Loss Aversion' Modal showing what access they will lose.",
-                  "Offer a softer 'Pause' subscription option vs. a hard cancel."
-                ]
-              }
-            ].map((play, i) => (
-              <motion.div key={i} variants={scaleIn} className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+            {
+              title: "The First Impression",
+              stage: "Landing Page / Sign-up",
+              goal: "Reduce bounce rate, increase Click to Sign-up.",
+              points: [
+              "Test lifestyle imagery vs. UI screenshots (users buy outcomes, not features).",
+              "Test brand colors vs. high-contrast action colors.",
+              "Test 'Above the Fold' content density to reduce clutter."]
+
+            },
+            {
+              title: "The Aha! Moment",
+              stage: "Onboarding",
+              goal: "Increase activation rate (core action completion).",
+              points: [
+              "Test a guided checklist (progress) vs. a passive carousel tutorial.",
+              "Evaluate blank slate design (is it helpful or empty?).",
+              "Introduce Setup Progress Bars to increase completion."]
+
+            },
+            {
+              title: "The Wallet Open",
+              stage: "Pricing Page",
+              goal: "Increase conversion to paid plans.",
+              points: [
+              "Introduce a 'Decoy' plan to make the target plan look like a steal.",
+              "Visually compare Annual vs. Monthly savings (e.g. strike-through pricing).",
+              "Place Trust Badges strategically near payment fields."]
+
+            },
+            {
+              title: "Save the User",
+              stage: "Exit Intent / Retention",
+              goal: "Reduce churn during cancellation attempts.",
+              points: [
+              "Design a 'Loss Aversion' Modal showing what access they will lose.",
+              "Offer a softer 'Pause' subscription option vs. a hard cancel."]
+
+            }].
+            map((play, i) =>
+            <motion.div key={i} variants={scaleIn} className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
                 <div className="bg-slate-50 p-8 border-b border-slate-100 group-hover:bg-purple-50 transition-colors">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2 group-hover:text-purple-500">Play 0{i+1} • {play.stage}</span>
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2 group-hover:text-purple-500">Play 0{i + 1} • {play.stage}</span>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{play.title}</h3>
                   <p className="text-sm font-medium text-slate-600 bg-white inline-block px-3 py-1 rounded-md border border-slate-200 shadow-sm">
                     Goal: {play.goal}
@@ -280,16 +280,16 @@ export default function IntroToDesigningExperiments() {
                 </div>
                 <div className="p-8 flex-1">
                   <ul className="space-y-4">
-                    {play.points.map((pt, idx) => (
-                      <li key={idx} className="flex gap-3 text-slate-700 leading-relaxed">
+                    {play.points.map((pt, idx) =>
+                  <li key={idx} className="flex gap-3 text-slate-700 leading-relaxed">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0"></div>
                         {pt}
                       </li>
-                    ))}
+                  )}
                   </ul>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </motion.section>
 
@@ -381,34 +381,34 @@ export default function IntroToDesigningExperiments() {
         {/* Part 5: Traps & Creed */}
         <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="space-y-12">
           <motion.div variants={fadeUp} className="text-center">
-            <AlertTriangle className="w-12 h-12 text-red-500 mx-auto mb-6"/>
+            <AlertTriangle className="w-12 h-12 text-red-500 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Avoiding Common Traps</h2>
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              {
-                title: "The 'My Baby' Syndrome",
-                color: "red",
-                desc: "If the data says it loses, you must kill it. Do not argue with the data. A Growth Designer falls in love with the problem, not the solution."
-              },
-              {
-                title: "Dark Patterns",
-                color: "orange",
-                desc: "Never design a flow that tricks the user. It might win in the short term, but it kills LTV (Lifetime Value) and brand trust completely."
-              },
-              {
-                title: "Vanity Metrics",
-                color: "yellow",
-                desc: "Don't celebrate 'more clicks' if those clicks don't lead to retention. Design for the entire journey, not just the isolated click."
-              }
-            ].map((trap, i) => (
-              <motion.div key={i} variants={scaleIn} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group hover:shadow-lg transition-shadow">
+            {
+              title: "The 'My Baby' Syndrome",
+              color: "red",
+              desc: "If the data says it loses, you must kill it. Do not argue with the data. A Growth Designer falls in love with the problem, not the solution."
+            },
+            {
+              title: "Dark Patterns",
+              color: "orange",
+              desc: "Never design a flow that tricks the user. It might win in the short term, but it kills LTV (Lifetime Value) and brand trust completely."
+            },
+            {
+              title: "Vanity Metrics",
+              color: "yellow",
+              desc: "Don't celebrate 'more clicks' if those clicks don't lead to retention. Design for the entire journey, not just the isolated click."
+            }].
+            map((trap, i) =>
+            <motion.div key={i} variants={scaleIn} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group hover:shadow-lg transition-shadow">
                 <div className={`absolute top-0 left-0 right-0 h-1.5 bg-${trap.color}-400`}></div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 pt-2">{i+1}. {trap.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 pt-2">{i + 1}. {trap.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{trap.desc}</p>
               </motion.div>
-            ))}
+            )}
           </div>
 
           <motion.div variants={fadeUp} className="mt-16 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 p-10 md:p-16 rounded-3xl text-white shadow-2xl relative overflow-hidden text-center">
@@ -416,7 +416,7 @@ export default function IntroToDesigningExperiments() {
             <div className="relative z-10">
               <p className="text-sm font-bold mb-6 text-purple-200 uppercase tracking-widest">The Growth Designer's Creed</p>
               <p className="text-3xl md:text-5xl font-light leading-tight max-w-4xl mx-auto">
-                "Ship behavioral changes that drive retention and revenue. <br className="hidden md:block"/>
+                "Ship behavioral changes that drive retention and revenue. <br className="hidden md:block" />
                 <span className="font-semibold italic">Fall in love with the problem. Trust the data. Design for the full journey.</span>"
               </p>
             </div>
@@ -424,6 +424,6 @@ export default function IntroToDesigningExperiments() {
         </motion.section>
 
       </div>
-    </div>
-  );
+    </div>);
+
 }
