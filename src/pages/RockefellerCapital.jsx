@@ -294,6 +294,14 @@ export default function RockefellerCapital() {
         </div>
       </div>
 
+      {/* Rebrand of RCM Website Video */}
+      <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 border-b border-slate-200">
+        <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Rebrand of RCM Website</h2>
+        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5VQYwxQCrZ8?si=kIEEopLRYIVZ9Acj" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+      </div>
+
       {/* Consistency & Trust */}
       <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
         <h2 className="font-serif text-4xl font-bold mb-10 text-slate-900">Why Does Consistency Result in Trust?</h2>
