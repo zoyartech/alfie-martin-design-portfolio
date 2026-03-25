@@ -85,7 +85,7 @@ export default function TCSMarathon() {
                 </p>
             </div>
             <div className="flex-1">
-                <div className="bg-[#2A2A2A] text-[#F3F2EC] p-10 md:p-16 h-full flex flex-col justify-center shadow-lg">
+                <div className="bg-[#182439] text-[#F3F2EC] p-10 md:p-16 h-full flex flex-col justify-center shadow-lg">
                     <p className="text-2xl font-medium mb-8 leading-snug">"Where is my husband? He was supposed to be here twenty minutes ago."</p>
                     <p className="text-lg text-gray-300">That's the user story we were really solving for.</p>
                 </div>
