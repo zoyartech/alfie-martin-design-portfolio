@@ -6,6 +6,17 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
+  title: "Intro to Designing Experiments",
+  category: "UX Strategy",
+  industry: "SaaS",
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
+  year: "2024",
+  link: "IntroToDesigningExperiments",
+  summary: "The DTC SaaS Growth Design Experimentation Playbook. A guide for designers interested in roles on growth teams.",
+  stats: [],
+  tags: ["Growth Design", "Playbook", "SaaS"]
+},
+{
   title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",

@@ -29,6 +29,7 @@ import BrandGallery from './pages/BrandGallery.jsx';
 import ConfidenceLab from './pages/ConfidenceLab';
 import RockefellerCapital from './pages/RockefellerCapital';
 import BillingUsabilityStudy from './pages/BillingUsabilityStudy';
+import IntroToDesigningExperiments from './pages/IntroToDesigningExperiments';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -82,6 +83,7 @@ const AuthenticatedApp = () => {
       <Route path="/ConfidenceLab" element={<ConfidenceLab />} />
       <Route path="/RockefellerCapital" element={<RockefellerCapital />} />
       <Route path="/BillingUsabilityStudy" element={<BillingUsabilityStudy />} />
+      <Route path="/IntroToDesigningExperiments" element={<IntroToDesigningExperiments />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
