@@ -7,16 +7,16 @@ import { createPageUrl } from "@/utils";
 export default function RockefellerCapital() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const slides = [
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/71c4ef551_2.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/24bf359ae_3.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fb8782b3a_4.png"];
-
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/71c4ef551_2.png",
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/24bf359ae_3.png",
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fb8782b3a_4.png"
+  ];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="bg-[#b6b696] text-slate-800 pt-24 pb-20 font-sans min-h-screen selection:bg-blue-100 selection:text-blue-900">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 pb-20 pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         .font-serif { font-family: "PT Serif", serif; }
@@ -126,34 +126,34 @@ export default function RockefellerCapital() {
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0 w-full h-full object-contain p-4 md:p-8"
-                  alt={`Slide ${currentSlide + 1}`} />
-                
+                  alt={`Slide ${currentSlide + 1}`}
+                />
               </AnimatePresence>
             </div>
             
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-              
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-              
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
               <ChevronRight className="w-6 h-6" />
             </button>
             
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-              {slides.map((_, i) =>
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                currentSlide === i ? "bg-slate-800 scale-110" : "bg-slate-300 hover:bg-slate-400"}`
-                } />
-
-              )}
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    currentSlide === i ? "bg-slate-800 scale-110" : "bg-slate-300 hover:bg-slate-400"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function RockefellerCapital() {
           <div>
             <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">My Role</h2>
             <ul className="space-y-4 font-sans text-lg text-slate-700">
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span> UX End To End</li>
+              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span> End to End Product Design</li>
               <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Lead a Small Team Of Designers</li>
               <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Internal/External Stakeholder Management</li>
               <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Data Analysis</li>
