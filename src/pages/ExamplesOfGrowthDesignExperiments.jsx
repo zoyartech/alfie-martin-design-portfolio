@@ -422,9 +422,9 @@ export default function ExamplesOfGrowthDesignExperiments() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-24">
       {/* Navigation Header */}
       <div className="pt-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto mb-6 md:mb-10">
-        
-
-        
+        <Link to={createPageUrl("Writing")} className="inline-flex items-center gap-2 text-[10px] md:text-xs tracking-[0.2em] text-slate-500 hover:text-blue-600 transition-colors uppercase font-bold bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-sm border border-slate-200">
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" /> Back to Writing
+        </Link>
       </div>
 
       {/* Hero Section */}
