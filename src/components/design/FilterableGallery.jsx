@@ -6,7 +6,7 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
-  title: "Billing & Payments Usability Study",
+  title: "Exelon : Billing & Payments Usability Study",
   category: "UX Strategy",
   industry: "Energy",
   image: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=1200",
