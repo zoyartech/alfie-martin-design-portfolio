@@ -6,18 +6,19 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
-  title: "Exelon : Billing & Payments Usability Study",
-  category: "UX Strategy",
-  industry: "Energy",
-  image: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=1200",
+  title: "The User Experience of AI Products",
+  category: "AI Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
   year: "2024",
-  link: "BillingUsabilityStudy",
-  summary: "Evaluate the usability of the updated 'Bill is Ready' email and the clarity of 'My Bill Insights' page.",
+  link: "DesignStrategyAI",
+  summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
   stats: [
-  { label: "Participants", value: "8" },
-  { label: "Methodology", value: "Unmoderated" },
-  { label: "Avg Session", value: "12 min" }],
-  tags: ["UX Research", "Usability Study", "Energy"]
+  { label: "User Trust Score", value: "88%" },
+  { label: "Faster Onboarding", value: "3×" },
+  { label: "Support Reduction", value: "60%" }],
+
+  tags: ["UX Research", "AI Systems", "Conversation Design"]
 },
 {
   title: "Rockefeller Capital Management",
@@ -34,19 +35,18 @@ const projects = [
   tags: ["UX End To End", "Finance", "Mobile App"]
 },
 {
-  title: "The User Experience of AI Products",
-  category: "AI Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
+  title: "Exelon : Billing & Payments Usability Study",
+  category: "UX Strategy",
+  industry: "Energy",
+  image: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=1200",
   year: "2024",
-  link: "DesignStrategyAI",
-  summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
+  link: "BillingUsabilityStudy",
+  summary: "Evaluate the usability of the updated 'Bill is Ready' email and the clarity of 'My Bill Insights' page.",
   stats: [
-  { label: "User Trust Score", value: "88%" },
-  { label: "Faster Onboarding", value: "3×" },
-  { label: "Support Reduction", value: "60%" }],
-
-  tags: ["UX Research", "AI Systems", "Conversation Design"]
+  { label: "Participants", value: "8" },
+  { label: "Methodology", value: "Unmoderated" },
+  { label: "Avg Session", value: "12 min" }],
+  tags: ["UX Research", "Usability Study", "Energy"]
 },
 {
   title: "TCS NYC Marathon App",
