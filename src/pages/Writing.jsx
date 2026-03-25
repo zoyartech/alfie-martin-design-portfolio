@@ -46,11 +46,11 @@ export default function Writing() {
                 className="group"
               >
                 <Link to={createPageUrl(project.link)} className="block">
-                  <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-xl mb-4">
+                  <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-xl mb-4 flex items-center justify-center p-4">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <p className="text-xs font-mono tracking-widest text-blue-600 uppercase mb-2">{project.category}</p>
