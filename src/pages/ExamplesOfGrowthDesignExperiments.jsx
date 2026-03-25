@@ -289,6 +289,64 @@ const experimentsData = [
 }];
 
 
+const ImpactCalculator = ({ exp }) => {
+  // Try to extract a percentage from the hypothesis text, default to 15 if not found
+  const extractedLift = exp.hypothesis.match(/(\d+)(?:–\d+)?%/);
+  const defaultLift = extractedLift ? parseInt(extractedLift[1], 10) : 15;
+  
+  const [baseline, setBaseline] = useState(1000);
+  const [lift, setLift] = useState(defaultLift);
+  
+  const estimatedOutcome = baseline * (1 + lift / 100);
+  const absoluteImpact = estimatedOutcome - baseline;
+
+  return (
+    <div className="mt-8 bg-white p-5 md:p-6 rounded-xl border border-slate-200 shadow-sm">
+      <h5 className="text-[10px] md:text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-4 flex items-center gap-2">
+        <Activity className="w-3.5 h-3.5" /> Sandbox: Impact Calculator
+      </h5>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-xs font-semibold text-slate-600 mb-2">Baseline Metric (e.g., Traffic, Conversions)</label>
+          <input 
+            type="number" 
+            value={baseline} 
+            onChange={(e) => setBaseline(Number(e.target.value))}
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold text-slate-600 mb-2">Projected Lift (%)</label>
+          <div className="flex items-center gap-4">
+            <input 
+              type="range" 
+              min="-10" 
+              max="100" 
+              value={lift} 
+              onChange={(e) => setLift(Number(e.target.value))}
+              className="w-full accent-blue-600"
+            />
+            <span className="text-sm font-bold text-slate-700 w-12 text-right">{lift}%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div className="mt-6 p-4 md:p-5 bg-gradient-to-br from-blue-50 to-indigo-50/30 rounded-xl border border-blue-100 flex items-center justify-between">
+        <div>
+          <p className="text-[10px] text-blue-600/70 font-bold uppercase tracking-wider mb-1">Estimated Outcome</p>
+          <p className="text-2xl md:text-3xl font-black text-slate-900">{Math.round(estimatedOutcome).toLocaleString()}</p>
+        </div>
+        <div className="text-right">
+          <p className="text-[10px] text-blue-600/70 font-bold uppercase tracking-wider mb-1">Absolute Impact</p>
+          <p className={`text-lg md:text-xl font-bold ${absoluteImpact >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+            {absoluteImpact > 0 ? '+' : ''}{Math.round(absoluteImpact).toLocaleString()}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const ExperimentCard = ({ exp }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -346,6 +404,8 @@ const ExperimentCard = ({ exp }) => {
                   <p className="text-slate-700 font-medium text-xs md:text-sm">{exp.timeframe}</p>
                 </div>
               </div>
+
+              <ImpactCalculator exp={exp} />
             </div>
           </motion.div>
         }
