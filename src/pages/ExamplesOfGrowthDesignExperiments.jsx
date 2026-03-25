@@ -7,7 +7,7 @@ import { createPageUrl } from "@/utils";
 const experimentsData = [
 {
   phase: "Acquisition",
-  icon: <Target className="w-6 h-6" />,
+  icon: null,
   description: "Acquisition experiments focus on the top of the funnel—getting potential users to your product and converting them into sign-ups.",
   experiments: [
   {
@@ -293,10 +293,10 @@ const ImpactCalculator = ({ exp }) => {
   // Try to extract a percentage from the hypothesis text, default to 15 if not found
   const extractedLift = exp.hypothesis.match(/(\d+)(?:–\d+)?%/);
   const defaultLift = extractedLift ? parseInt(extractedLift[1], 10) : 15;
-  
+
   const [baseline, setBaseline] = useState(1000);
   const [lift, setLift] = useState(defaultLift);
-  
+
   const estimatedOutcome = baseline * (1 + lift / 100);
   const absoluteImpact = estimatedOutcome - baseline;
 
@@ -308,24 +308,24 @@ const ImpactCalculator = ({ exp }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-xs font-semibold text-slate-600 mb-2">Baseline Metric (e.g., Traffic, Conversions)</label>
-          <input 
-            type="number" 
-            value={baseline} 
+          <input
+            type="number"
+            value={baseline}
             onChange={(e) => setBaseline(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-          />
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow" />
+          
         </div>
         <div>
           <label className="block text-xs font-semibold text-slate-600 mb-2">Projected Lift (%)</label>
           <div className="flex items-center gap-4">
-            <input 
-              type="range" 
-              min="-10" 
-              max="100" 
-              value={lift} 
+            <input
+              type="range"
+              min="-10"
+              max="100"
+              value={lift}
               onChange={(e) => setLift(Number(e.target.value))}
-              className="w-full accent-blue-600"
-            />
+              className="w-full accent-blue-600" />
+            
             <span className="text-sm font-bold text-slate-700 w-12 text-right">{lift}%</span>
           </div>
         </div>
@@ -343,8 +343,8 @@ const ImpactCalculator = ({ exp }) => {
           </p>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 const ExperimentCard = ({ exp }) => {
@@ -422,9 +422,9 @@ export default function ExamplesOfGrowthDesignExperiments() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-24">
       {/* Navigation Header */}
       <div className="pt-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto mb-6 md:mb-10">
-        <Link to={createPageUrl("CaseStudies")} className="inline-flex items-center gap-2 text-[10px] md:text-xs tracking-[0.2em] text-slate-500 hover:text-blue-600 transition-colors uppercase font-bold bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-sm border border-slate-200">
-          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" /> Back to Case Studies
-        </Link>
+        
+
+        
       </div>
 
       {/* Hero Section */}
@@ -503,9 +503,9 @@ Experiments in Growth Design
             className="scroll-mt-32 md:scroll-mt-40">
             
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-6 md:mb-8">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-lg flex items-center justify-center text-white shrink-0">
-                  {React.cloneElement(phaseData.icon, { className: "w-6 h-6 md:w-8 md:h-8" })}
-                </div>
+                
+
+              
                 <div>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-2 md:mb-3">{phaseData.phase} Experiments</h2>
                   <p className="text-slate-600 text-sm md:text-lg max-w-3xl leading-relaxed">{phaseData.description}</p>
