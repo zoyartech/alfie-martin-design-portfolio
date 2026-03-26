@@ -696,6 +696,10 @@ export default function ArbolCaseStudy() {
         </div>
       </section>
 
+      <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
+        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7d8a6b0dc_macbook-pro-mockup-69c4901fe80e6c1034ee2a90-2x.png" alt="Arbol MacBook Mockup" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      </div>
+
       <section>
         <div className="section-number">05 — Design Decisions</div>
         <h2>What I built, and <em>why</em></h2>
