@@ -17,6 +17,13 @@ const writingProjects = [
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d99a30566_Screenshot2026-03-25at50653PM.png",
   link: "IntroToDesigningExperiments",
   summary: "The DTC SaaS Growth Design Experimentation Playbook. A guide for designers interested in roles on growth teams."
+},
+{
+  title: "Enterprise Content Strategy",
+  category: "Content Strategy",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0fd1ad3d_1.png",
+  link: "EnterpriseContentStrategy",
+  summary: "A UX content strategy case study for the Enterprise Learning Management System at Tata Consultancy."
 }];
 
 
