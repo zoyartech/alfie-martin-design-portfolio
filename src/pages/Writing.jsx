@@ -21,7 +21,7 @@ const writingProjects = [
 {
   title: "Enterprise Content Strategy",
   category: "Content Strategy",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0fd1ad3d_1.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f429527c4_1.png",
   link: "EnterpriseContentStrategy",
   summary: "A UX content strategy case study for the Enterprise Learning Management System at Tata Consultancy."
 }];
