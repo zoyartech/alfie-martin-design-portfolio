@@ -181,6 +181,10 @@ export default function SideQuests() {
               <p className="mt-16 text-sm font-sans text-slate-500 text-center">Staggered Variants<br/>Hover to trigger sequenced children</p>
             </div>
           </div>
+
+          <div className="mt-24 flex justify-center w-full">
+            <iframe className="rounded-2xl shadow-sm border border-gray-100 max-w-full" width="560" height="315" src="https://www.youtube.com/embed/mwp39rSvJ8w?si=A_OgApHHkWvKmvt9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
       
