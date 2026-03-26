@@ -33,6 +33,7 @@ import BillingUsabilityStudy from './pages/BillingUsabilityStudy';
 import IntroToDesigningExperiments from './pages/IntroToDesigningExperiments';
 import ExamplesOfGrowthDesignExperiments from './pages/ExamplesOfGrowthDesignExperiments';
 import EnterpriseContentStrategy from './pages/EnterpriseContentStrategy';
+import ActivationGrammarly from './pages/ActivationGrammarly';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -90,6 +91,7 @@ const AuthenticatedApp = () => {
       <Route path="/IntroToDesigningExperiments" element={<IntroToDesigningExperiments />} />
       <Route path="/ExamplesOfGrowthDesignExperiments" element={<ExamplesOfGrowthDesignExperiments />} />
       <Route path="/EnterpriseContentStrategy" element={<EnterpriseContentStrategy />} />
+      <Route path="/ActivationGrammarly" element={<ActivationGrammarly />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>

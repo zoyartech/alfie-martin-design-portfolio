@@ -24,6 +24,13 @@ const writingProjects = [
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f429527c4_1.png",
   link: "EnterpriseContentStrategy",
   summary: "A UX content strategy case study for the Enterprise Learning Management System at Tata Consultancy."
+},
+{
+  title: "Activation at Grammarly",
+  category: "Growth Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2aa5ab36c_Screenshot2026-03-23at90250PM.png",
+  link: "ActivationGrammarly",
+  summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect."
 }];
 
 
