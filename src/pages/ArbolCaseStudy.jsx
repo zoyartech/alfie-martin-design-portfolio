@@ -621,7 +621,7 @@ export default function ArbolCaseStudy() {
       </section>
 
       <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'center', padding: '2rem 0' }}>
-        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '35%', height: 'auto', display: 'block' }} />
+        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '75%', height: 'auto', display: 'block' }} />
       </div>
 
       <section>
