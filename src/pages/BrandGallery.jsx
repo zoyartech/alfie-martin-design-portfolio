@@ -80,9 +80,9 @@ export default function BrandGallery() {
           <h1 className="text-4xl md:text-6xl font-light mb-6 font-serif text-slate-900">Brand Identities & Illustrations
 
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl font-sans">
-            A collection of visual identities, design systems, and art direction projects.
-          </p>
+          
+
+          
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
