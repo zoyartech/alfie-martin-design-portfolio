@@ -153,6 +153,18 @@ export default function ActivationGrammarly() {
               <p>
                 I focused on reducing friction during keyboard and extension installation. These were high-abandonment steps because they required users to leave the Grammarly environment, navigate system settings, and grant permissions. I simplified the prompts, added clear progress indicators, and introduced encouragement moments at friction points. The screens with the plant illustrations and messages like "We're rooting for you" and "Looks good" were part of a test to see whether emotional reinforcement at technical steps would keep users moving. It did. These small warmth moments reduced drop-off measurably.
               </p>
+
+              <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+                <iframe 
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ef37lPoFoKo?si=ILtt76YUlLujHVay" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen>
+                </iframe>
+              </div>
               <p>
                 For the first writing session, I worked on making sure users encountered a meaningful suggestion early rather than just getting a clean score on a two-word test message. A perfect 100 score on "hello there" felt good but demonstrated nothing. I collaborated with product and content to design guided entry points that surfaced real corrections and rewrites, so the user's first interaction showed them what Grammarly could actually do.
               </p>
