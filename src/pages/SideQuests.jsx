@@ -145,6 +145,41 @@ export default function SideQuests() {
                 </div>
               <p className="mt-auto pt-8 text-sm font-sans text-slate-500 text-center">Drag Constraints<br/>Physics-based dragging within bounds</p>
             </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
+              <motion.div
+                className="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full cursor-pointer shadow-lg flex items-center justify-center overflow-hidden group"
+                whileHover={{ width: 240, borderRadius: "24px" }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                 <span className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fluid Size</span>
+              </motion.div>
+              <p className="mt-12 text-sm font-sans text-slate-500 text-center">Layout Morphing<br/>Fluid width and radius transition</p>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
+              <motion.div
+                className="flex gap-3"
+                initial="hidden"
+                whileHover="visible"
+                variants={{
+                  hidden: { opacity: 1 },
+                  visible: { transition: { staggerChildren: 0.1 } }
+                }}
+              >
+                {[1, 2, 3, 4].map((i) => (
+                  <motion.div
+                    key={i}
+                    className="w-12 h-12 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-full shadow-md"
+                    variants={{
+                      hidden: { y: 0, opacity: 0.5 },
+                      visible: { y: -20, opacity: 1, transition: { repeat: Infinity, repeatType: "mirror", duration: 0.4 } }
+                    }}
+                  />
+                ))}
+              </motion.div>
+              <p className="mt-16 text-sm font-sans text-slate-500 text-center">Staggered Variants<br/>Hover to trigger sequenced children</p>
+            </div>
           </div>
         </div>
       </div>
