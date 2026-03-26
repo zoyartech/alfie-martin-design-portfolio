@@ -24,6 +24,13 @@ const writingProjects = [
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f429527c4_1.png",
   link: "EnterpriseContentStrategy",
   summary: "A UX content strategy case study for the Enterprise Learning Management System at Tata Consultancy."
+},
+{
+  title: "Systems thinking",
+  category: "Poetry",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/30c534b97_Screenshot2026-03-21at93233PM.png",
+  link: "SystemsThinkingPoem",
+  summary: "A poem"
 }];
 
 
