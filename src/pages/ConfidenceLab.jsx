@@ -99,7 +99,7 @@ export default function ConfidenceLab() {
                 
               </div>
               
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-slate-500 mb-1">Ambiguity</label>
                   <select
@@ -182,7 +182,7 @@ export default function ConfidenceLab() {
                   
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div>
                       <label className="block text-xs font-medium text-slate-600 mb-1">Source</label>
                       <input
@@ -212,9 +212,9 @@ export default function ConfidenceLab() {
         </div>
 
         {/* Live Preview Panel */}
-        <div className="sticky top-24 self-start">
+        <div className="static lg:sticky top-24 self-start">
           <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden min-h-[600px] flex flex-col">
-            <div className="bg-blue-200 text-slate-950 p-4 border-b border-slate-200 flex items-center justify-between">
+            <div className="bg-blue-200 text-slate-950 p-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
               <h2 className="text-slate-950 text-sm font-bold">SYSTEM PREVIEW</h2>
               <div className="flex gap-2 text-xs">
                  <span className="px-2 py-1 bg-white border border-slate-200 rounded text-slate-600">
@@ -280,7 +280,7 @@ export default function ConfidenceLab() {
                         </p>
 
                         {/* Source */}
-                        <div className="flex items-center gap-2 pt-4 border-t border-slate-900/5">
+                        <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-900/5">
                            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Source:</span>
                            <a href={answer.sourceUrl} target="_blank" rel="noreferrer" className="text-sm text-slate-700 hover:underline flex items-center gap-1 font-medium">
                              {answer.source} <ExternalLink className="w-3 h-3 opacity-50" />
