@@ -23,9 +23,9 @@ export default function ActivationGrammarly() {
     <div className="min-h-screen bg-[#fafafa] font-sans text-slate-900 pb-32">
       {/* Navigation */}
       <div className="fixed top-24 left-6 z-50">
-        <Link to={createPageUrl("Writing")} className="group inline-flex items-center gap-2 text-xs tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-all uppercase font-bold bg-white/80 backdrop-blur-md px-5 py-3 rounded-full shadow-sm hover:shadow-md border border-slate-200">
+        <Link to={createPageUrl("CaseStudies")} className="group inline-flex items-center gap-2 text-xs tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-all uppercase font-bold bg-white/80 backdrop-blur-md px-5 py-3 rounded-full shadow-sm hover:shadow-md border border-slate-200">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
-          Back to Writing
+          Back to Case Studies
         </Link>
       </div>
 

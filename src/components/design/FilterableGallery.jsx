@@ -91,6 +91,18 @@ const projects = [
   imageFit: "object-contain bg-[#eefaf4]"
 },
 {
+  title: "Activation at Grammarly",
+  category: "Product Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2aa5ab36c_Screenshot2026-03-23at90250PM.png",
+  year: "2024",
+  link: "ActivationGrammarly",
+  summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect.",
+  stats: [],
+  tags: ["Growth Design", "Activation", "UX Strategy"],
+  imageFit: "object-contain bg-[#eefaf4]"
+},
+{
   title: "Designing trust into automated climate risk",
   category: "Product Design",
   industry: "Climate Risk",
