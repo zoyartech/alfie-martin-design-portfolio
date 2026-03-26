@@ -19,11 +19,11 @@ export default function SystemsThinkingPoem() {
       `}</style>
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
         <Link
-          to={createPageUrl("SideQuests")}
+          to={createPageUrl("Writing")}
           className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
           
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Side Quests
+          Back to Writing
         </Link>
 
         <motion.div
