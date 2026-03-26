@@ -177,6 +177,36 @@ export default function ActivationGrammarly() {
             className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
           />
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center">
+          
+            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Impact</h3>
+            
+            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+              <p>
+                The experiments I designed improved activation rates and reduced time-to-value across the funnel. The onboarding redesign increased step completion. The setup encouragement patterns lowered abandonment during keyboard and extension installation. The first-session work correlated with stronger day-one and week-one retention among users in the test cohorts compared to control.
+              </p>
+            </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center">
+          
+            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">What I Took Away</h3>
+            
+            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+              <p>
+                This work shaped how I think about growth design broadly. Activation is not a funnel optimization problem, it is a communication design problem. Every screen in an onboarding sequence is making an argument for why the user should keep going, and the quality of that argument matters more than the visual polish. The most impactful changes I shipped at Grammarly were often the smallest, a rewritten line, a reordered step, a moment of encouragement where the flow previously went cold. They worked because they were grounded in understanding what the user needed to feel and know at that specific moment to take the next action.
+              </p>
+            </div>
+        </motion.div>
       </div>
     </div>);
 
