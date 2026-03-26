@@ -198,7 +198,7 @@ export default function ActivationGrammarly() {
           className="mb-20 text-center"
         >
           <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5dd0ae48c_positive.png" 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f144a5b5c_Screenshot2026-03-25at82845PM.png" 
             alt="Grammarly setup flow screens" 
             className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
           />
