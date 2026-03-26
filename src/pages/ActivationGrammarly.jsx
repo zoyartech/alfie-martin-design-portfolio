@@ -138,6 +138,19 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="mb-20 text-center"
+        >
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5dd0ae48c_positive.png" 
+            alt="Grammarly setup flow screens" 
+            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center">
           
             <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Content Design as a Growth Lever</h3>
