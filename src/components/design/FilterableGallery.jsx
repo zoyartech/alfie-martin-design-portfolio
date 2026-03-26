@@ -89,7 +89,7 @@ const projects = [
   summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect.",
   stats: [],
   tags: ["Growth Design", "Activation", "UX Strategy"],
-  imageFit: "object-contain bg-[#eefaf4]"
+  imageFit: "object-cover"
 },
 {
   title: "Designing trust into automated climate risk",
