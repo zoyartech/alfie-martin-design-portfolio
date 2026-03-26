@@ -78,18 +78,7 @@ const projects = [
 
   tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
-{
-  title: "Approaching AI Adoption at Grammarly",
-  category: "Product Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2aa5ab36c_Screenshot2026-03-23at90250PM.png",
-  year: "2024",
-  link: "GrammarlyProject",
-  summary: "A product growth designer's perspective on shifting 40 million daily active users from 'fix my mistakes' mode to 'help me think and create' mode.",
-  stats: [],
-  tags: ["Growth Design", "AI Systems", "Behavioral Psychology"],
-  imageFit: "object-contain bg-[#eefaf4]"
-},
+
 {
   title: "Activation at Grammarly",
   category: "Product Design",
