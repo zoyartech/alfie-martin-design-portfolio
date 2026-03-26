@@ -6,27 +6,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const impactData = [
-  { metric: 'Activation Rate', Control: 42, Redesign: 58 },
-  { metric: 'W1 Retention', Control: 21, Redesign: 29 },
-];
+{ metric: 'Activation Rate', Control: 42, Redesign: 58 },
+{ metric: 'W1 Retention', Control: 21, Redesign: 29 }];
+
 
 const dropoffData = [
-  { metric: 'Setup Drop-off', Control: 38, Redesign: 22 },
-];
+{ metric: 'Setup Drop-off', Control: 38, Redesign: 22 }];
+
 
 function SelectionCard({ title, subtitle, id, selectedOptions, toggleOption }) {
   const selected = selectedOptions.includes(id);
   return (
-    <div 
+    <div
       onClick={() => toggleOption(id)}
       className={`p-4 rounded-xl border-2 transition-all duration-300 flex items-start gap-3 cursor-pointer ${selected ? 'border-[#15C39A] bg-[#f0fcf9] shadow-sm transform scale-[1.02]' : 'border-slate-200 hover:border-[#15C39A]/40 bg-white hover:bg-slate-50'}`}>
       <div className={`w-5 h-5 mt-0.5 rounded border flex items-center justify-center shrink-0 transition-colors ${selected ? 'bg-[#15C39A] border-[#15C39A]' : 'border-slate-300 bg-white'}`}>
         <AnimatePresence>
-          {selected && (
-            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
+          {selected &&
+          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
               <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
             </motion.div>
-          )}
+          }
         </AnimatePresence>
       </div>
       <div>
@@ -41,8 +41,8 @@ export default function ActivationGrammarly() {
   const [activeChartTab, setActiveChartTab] = useState('activation');
 
   const toggleOption = (id) => {
-    setSelectedOptions(prev => 
-      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
+    setSelectedOptions((prev) =>
+    prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
   return (
@@ -86,7 +86,7 @@ export default function ActivationGrammarly() {
           </div>
           <div>
             <h3 className="font-bold mb-3 text-lg text-slate-900">Impact</h3>
-            <p className="text-slate-600 leading-relaxed">Improved user activation rates and reduced time-to-value.</p>
+            <p className="text-slate-950 leading-relaxed">Improved user activation rates and reduced time-to-value.</p>
           </div>
         </motion.div>
 
@@ -155,14 +155,14 @@ export default function ActivationGrammarly() {
               </p>
 
               <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
-                <iframe 
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/ef37lPoFoKo?si=ILtt76YUlLujHVay" 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
-                  allowFullScreen>
+                <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/ef37lPoFoKo?si=ILtt76YUlLujHVay"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen>
                 </iframe>
               </div>
               <p>
@@ -176,16 +176,16 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
-        >
+          className="mb-12 text-center">
+          
           <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
-            <iframe 
+            <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/e5EWQ-o7VWA?si=Q4RXiTZZhEar0nnL" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
+              src="https://www.youtube.com/embed/e5EWQ-o7VWA?si=Q4RXiTZZhEar0nnL"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen>
             </iframe>
           </div>
@@ -195,13 +195,13 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
-        >
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f144a5b5c_Screenshot2026-03-25at82845PM.png" 
-            alt="Grammarly setup flow screens" 
-            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
-          />
+          className="mb-20 text-center">
+          
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f144a5b5c_Screenshot2026-03-25at82845PM.png"
+            alt="Grammarly setup flow screens"
+            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm" />
+          
         </motion.div>
 
         <motion.div
@@ -217,11 +217,11 @@ export default function ActivationGrammarly() {
                 A consistent thread across all of this work was how much activation depended on copy, not just layout. Grammarly's brand voice was warm and encouraging, but in an activation context the tone had to be carefully calibrated. Too cheerful and it felt patronizing. Too neutral and the experience felt transactional. I tested microcopy variations across every experiment and paid close attention to how small word changes moved completion rates. A single line of copy at a friction point often outperformed a full UI redesign.
               </p>
               <div className="w-full my-12">
-                <img 
-                  src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b39ff471_popup.png" 
-                  alt="Grammarly onboarding personalization prompt" 
-                  className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
-                />
+                <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b39ff471_popup.png"
+                alt="Grammarly onboarding personalization prompt"
+                className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm" />
+              
               </div>
               <p>
                 I also pushed on the problem of context. Users arrived from very different channels with very different expectations. Someone who signed up from an AI writing ad had a different mental model than someone referred by a coworker for grammar checking. The onboarding had to work for both without being so generic it resonated with neither. I advocated for more adaptive paths based on acquisition source and writing-type selection, and tested early versions of that segmentation.
@@ -233,13 +233,13 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
-        >
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/82a5bc136_Screenshot2026-03-25at83700PM.png" 
-            alt="Grammarly landing page showing AI features" 
-            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
-          />
+          className="mb-20 text-center">
+          
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/82a5bc136_Screenshot2026-03-25at83700PM.png"
+            alt="Grammarly landing page showing AI features"
+            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm" />
+          
         </motion.div>
 
         <motion.div
@@ -264,14 +264,14 @@ export default function ActivationGrammarly() {
                   <p className="text-sm text-slate-500 text-left mt-1">Comparing control vs. redesign variations</p>
                 </div>
                 <div className="flex bg-slate-100 p-1 rounded-xl">
-                  <button 
-                    onClick={() => setActiveChartTab('activation')}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'activation' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                  <button
+                  onClick={() => setActiveChartTab('activation')}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'activation' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
                     <TrendingUp className="w-4 h-4" /> Growth
                   </button>
-                  <button 
-                    onClick={() => setActiveChartTab('dropoff')}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'dropoff' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                  <button
+                  onClick={() => setActiveChartTab('dropoff')}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'dropoff' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
                     <Users className="w-4 h-4" /> Friction
                   </button>
                 </div>
@@ -279,55 +279,55 @@ export default function ActivationGrammarly() {
               
               <div className="h-[300px] w-full">
                 <AnimatePresence mode="wait">
-                  {activeChartTab === 'activation' ? (
-                    <motion.div 
-                      key="activation"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="h-full w-full"
-                    >
+                  {activeChartTab === 'activation' ?
+                <motion.div
+                  key="activation"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="h-full w-full">
+                  
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={impactData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} dy={10} />
-                          <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} tickFormatter={(val) => `${val}%`} />
-                          <RechartsTooltip 
-                            cursor={{fill: '#f8fafc'}}
-                            contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
-                            formatter={(value) => [`${value}%`, undefined]}
-                          />
+                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 13 }} dy={10} />
+                          <YAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 13 }} tickFormatter={(val) => `${val}%`} />
+                          <RechartsTooltip
+                        cursor={{ fill: '#f8fafc' }}
+                        contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
+                        formatter={(value) => [`${value}%`, undefined]} />
+                      
                           <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '13px' }} />
                           <Bar dataKey="Control" fill="#cbd5e1" radius={[4, 4, 0, 0]} maxBarSize={60} />
                           <Bar dataKey="Redesign" fill="#15C39A" radius={[4, 4, 0, 0]} maxBarSize={60} />
                         </BarChart>
                       </ResponsiveContainer>
-                    </motion.div>
-                  ) : (
-                    <motion.div 
-                      key="dropoff"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="h-full w-full"
-                    >
+                    </motion.div> :
+
+                <motion.div
+                  key="dropoff"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="h-full w-full">
+                  
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={dropoffData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} dy={10} />
-                          <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} tickFormatter={(val) => `${val}%`} />
-                          <RechartsTooltip 
-                            cursor={{fill: '#f8fafc'}}
-                            contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
-                            formatter={(value) => [`${value}%`, undefined]}
-                          />
+                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 13 }} dy={10} />
+                          <YAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 13 }} tickFormatter={(val) => `${val}%`} />
+                          <RechartsTooltip
+                        cursor={{ fill: '#f8fafc' }}
+                        contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
+                        formatter={(value) => [`${value}%`, undefined]} />
+                      
                           <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '13px' }} />
                           <Bar dataKey="Control" fill="#cbd5e1" radius={[4, 4, 0, 0]} maxBarSize={60} />
                           <Bar dataKey="Redesign" fill="#3b82f6" radius={[4, 4, 0, 0]} maxBarSize={60} />
                         </BarChart>
                       </ResponsiveContainer>
                     </motion.div>
-                  )}
+                }
                 </AnimatePresence>
               </div>
             </div>
