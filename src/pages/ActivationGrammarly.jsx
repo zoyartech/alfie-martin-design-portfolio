@@ -1,24 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Check } from 'lucide-react';
+import { ArrowLeft, Check, TrendingUp, Users } from 'lucide-react';
 import { createPageUrl } from "@/utils";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from 'recharts';
 
-function SelectionCard({ title, subtitle, selected }) {
+const impactData = [
+  { metric: 'Activation Rate', Control: 42, Redesign: 58 },
+  { metric: 'W1 Retention', Control: 21, Redesign: 29 },
+];
+
+const dropoffData = [
+  { metric: 'Setup Drop-off', Control: 38, Redesign: 22 },
+];
+
+function SelectionCard({ title, subtitle, id, selectedOptions, toggleOption }) {
+  const selected = selectedOptions.includes(id);
   return (
-    <div className={`p-4 rounded-xl border-2 transition-all flex items-start gap-3 cursor-pointer ${selected ? 'border-[#15C39A] bg-[#f0fcf9]' : 'border-slate-200 hover:border-slate-300'}`}>
+    <div 
+      onClick={() => toggleOption(id)}
+      className={`p-4 rounded-xl border-2 transition-all duration-300 flex items-start gap-3 cursor-pointer ${selected ? 'border-[#15C39A] bg-[#f0fcf9] shadow-sm transform scale-[1.02]' : 'border-slate-200 hover:border-[#15C39A]/40 bg-white hover:bg-slate-50'}`}>
       <div className={`w-5 h-5 mt-0.5 rounded border flex items-center justify-center shrink-0 transition-colors ${selected ? 'bg-[#15C39A] border-[#15C39A]' : 'border-slate-300 bg-white'}`}>
-        {selected && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+        <AnimatePresence>
+          {selected && (
+            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
+              <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div>
-        <h4 className="font-bold text-slate-900 text-sm text-left">{title}</h4>
+        <h4 className={`font-bold text-sm text-left transition-colors ${selected ? 'text-slate-900' : 'text-slate-700'}`}>{title}</h4>
         {subtitle && <p className="text-slate-500 text-xs mt-0.5 text-left">{subtitle}</p>}
       </div>
     </div>);
-
 }
 
 export default function ActivationGrammarly() {
+  const [selectedOptions, setSelectedOptions] = useState([1, 2, 3, 4, 6, 7]);
+  const [activeChartTab, setActiveChartTab] = useState('activation');
+
+  const toggleOption = (id) => {
+    setSelectedOptions(prev => 
+      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
+    );
+  };
   return (
     <div className="min-h-screen bg-[#fafafa] font-sans text-slate-900 pb-32">
       {/* Navigation */}
@@ -92,15 +118,15 @@ export default function ActivationGrammarly() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12">
-            <SelectionCard title="Personal communications" subtitle="(emails, messages, invitations)" selected={true} />
-            <SelectionCard title="Public posts" subtitle="(social media, blog posts)" selected={true} />
-            <SelectionCard title="Creative content" subtitle="(stories, poetry)" selected={true} />
-            <SelectionCard title="Career documents" subtitle="(résumés, portfolios)" selected={true} />
-            <SelectionCard title="Outreach materials" subtitle="(flyers, newsletters)" selected={false} />
-            <SelectionCard title="Educational materials" subtitle="(notes, worksheets, exercises)" selected={true} />
+            <SelectionCard id={1} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Personal communications" subtitle="(emails, messages, invitations)" />
+            <SelectionCard id={2} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Public posts" subtitle="(social media, blog posts)" />
+            <SelectionCard id={3} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Creative content" subtitle="(stories, poetry)" />
+            <SelectionCard id={4} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Career documents" subtitle="(résumés, portfolios)" />
+            <SelectionCard id={5} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Outreach materials" subtitle="(flyers, newsletters)" />
+            <SelectionCard id={6} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Educational materials" subtitle="(notes, worksheets, exercises)" />
             <div className="md:col-span-2 flex justify-center mt-2">
                 <div className="w-full md:w-1/2">
-                    <SelectionCard title="Other" subtitle="" selected={true} />
+                    <SelectionCard id={7} selectedOptions={selectedOptions} toggleOption={toggleOption} title="Other" subtitle="" />
                 </div>
             </div>
           </div>
@@ -182,14 +208,90 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center">
+          className="text-center mb-24">
           
             <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Impact</h3>
             
-            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-12">
               <p>
                 The experiments I designed improved activation rates and reduced time-to-value across the funnel. The onboarding redesign increased step completion. The setup encouragement patterns lowered abandonment during keyboard and extension installation. The first-session work correlated with stronger day-one and week-one retention among users in the test cohorts compared to control.
               </p>
+            </div>
+
+            {/* Interactive Data Visualization */}
+            <div className="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-sm">
+              <div className="flex flex-wrap items-center justify-between mb-8 gap-4 border-b border-slate-100 pb-6">
+                <div>
+                  <h4 className="text-xl font-bold text-slate-900 text-left">Experiment Results</h4>
+                  <p className="text-sm text-slate-500 text-left mt-1">Comparing control vs. redesign variations</p>
+                </div>
+                <div className="flex bg-slate-100 p-1 rounded-xl">
+                  <button 
+                    onClick={() => setActiveChartTab('activation')}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'activation' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                    <TrendingUp className="w-4 h-4" /> Growth
+                  </button>
+                  <button 
+                    onClick={() => setActiveChartTab('dropoff')}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeChartTab === 'dropoff' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                    <Users className="w-4 h-4" /> Friction
+                  </button>
+                </div>
+              </div>
+              
+              <div className="h-[300px] w-full">
+                <AnimatePresence mode="wait">
+                  {activeChartTab === 'activation' ? (
+                    <motion.div 
+                      key="activation"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="h-full w-full"
+                    >
+                      <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={impactData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} dy={10} />
+                          <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} tickFormatter={(val) => `${val}%`} />
+                          <RechartsTooltip 
+                            cursor={{fill: '#f8fafc'}}
+                            contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
+                            formatter={(value) => [`${value}%`, undefined]}
+                          />
+                          <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '13px' }} />
+                          <Bar dataKey="Control" fill="#cbd5e1" radius={[4, 4, 0, 0]} maxBarSize={60} />
+                          <Bar dataKey="Redesign" fill="#15C39A" radius={[4, 4, 0, 0]} maxBarSize={60} />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </motion.div>
+                  ) : (
+                    <motion.div 
+                      key="dropoff"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="h-full w-full"
+                    >
+                      <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={dropoffData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                          <XAxis dataKey="metric" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} dy={10} />
+                          <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13}} tickFormatter={(val) => `${val}%`} />
+                          <RechartsTooltip 
+                            cursor={{fill: '#f8fafc'}}
+                            contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px 16px', fontWeight: '500' }}
+                            formatter={(value) => [`${value}%`, undefined]}
+                          />
+                          <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '13px' }} />
+                          <Bar dataKey="Control" fill="#cbd5e1" radius={[4, 4, 0, 0]} maxBarSize={60} />
+                          <Bar dataKey="Redesign" fill="#3b82f6" radius={[4, 4, 0, 0]} maxBarSize={60} />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
         </motion.div>
 
