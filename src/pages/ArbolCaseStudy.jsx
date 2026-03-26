@@ -621,7 +621,7 @@ export default function ArbolCaseStudy() {
       </section>
 
       <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
-        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6850361c5_arbolio.png" alt="Arbol Browser Mockup" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '100%', height: 'auto', display: 'block' }} />
       </div>
 
       <section>
@@ -701,7 +701,7 @@ export default function ArbolCaseStudy() {
       </section>
 
       <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
-        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7d8a6b0dc_macbook-pro-mockup-69c4901fe80e6c1034ee2a90-2x.png" alt="Arbol MacBook Mockup" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        
       </div>
 
       <section>
@@ -830,26 +830,26 @@ export default function ArbolCaseStudy() {
                     <AnimatedChart>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={[
-                              { name: 'Support Tickets', change: -60 },
-                              { name: 'Contracts Bound', change: 200 },
-                            ]} layout="vertical" margin={{ top: 5, right: 40, left: 10, bottom: 5 }}>
+                  { name: 'Support Tickets', change: -60 },
+                  { name: 'Contracts Bound', change: 200 }]
+                  } layout="vertical" margin={{ top: 5, right: 40, left: 10, bottom: 5 }}>
                                 <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="rgba(255,255,255,0.1)" />
-                                <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} tick={{fill: 'var(--text-dim)'}} />
-                                <YAxis dataKey="name" type="category" width={110} tick={{fill: 'var(--text-dim)', fontSize: 12}} />
-                                <Tooltip 
-                                  contentStyle={{backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)'}} 
-                                  itemStyle={{color: 'var(--lime)'}}
-                                  formatter={(val, name) => [`${val > 0 ? '+' : ''}${val}%`, name]} 
-                                  cursor={{fill: 'rgba(255,255,255,0.05)'}}
-                                />
+                                <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} tick={{ fill: 'var(--text-dim)' }} />
+                                <YAxis dataKey="name" type="category" width={110} tick={{ fill: 'var(--text-dim)', fontSize: 12 }} />
+                                <Tooltip
+                      contentStyle={{ backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)' }}
+                      itemStyle={{ color: 'var(--lime)' }}
+                      formatter={(val, name) => [`${val > 0 ? '+' : ''}${val}%`, name]}
+                      cursor={{ fill: 'rgba(255,255,255,0.05)' }} />
+                    
                                 <ReferenceLine x={0} stroke="rgba(255,255,255,0.2)" />
                                 <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
                                     {[
-                                      { name: 'Support Tickets', change: -60 },
-                                      { name: 'Contracts Bound', change: 200 },
-                                    ].map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill="var(--lime)" />
-                                    ))}
+                      { name: 'Support Tickets', change: -60 },
+                      { name: 'Contracts Bound', change: 200 }].
+                      map((entry, index) =>
+                      <Cell key={`cell-${index}`} fill="var(--lime)" />
+                      )}
                                 </Bar>
                             </BarChart>
                         </ResponsiveContainer>
@@ -864,24 +864,24 @@ export default function ArbolCaseStudy() {
                     <AnimatedChart>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={[
-                              { name: 'Before', score: 40 },
-                              { name: 'After', score: 100 }
-                            ]} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                  { name: 'Before', score: 40 },
+                  { name: 'After', score: 100 }]
+                  } margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.1)" />
-                                <XAxis dataKey="name" tick={{fill: 'var(--text-dim)', fontSize: 12}} />
-                                <YAxis domain={[0, 100]} tickFormatter={(val) => `${val}%`} tick={{fill: 'var(--text-dim)'}} />
-                                <Tooltip 
-                                  contentStyle={{backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)'}} 
-                                  itemStyle={{color: 'var(--lime)'}}
-                                  cursor={{fill: 'rgba(255,255,255,0.05)'}}
-                                />
+                                <XAxis dataKey="name" tick={{ fill: 'var(--text-dim)', fontSize: 12 }} />
+                                <YAxis domain={[0, 100]} tickFormatter={(val) => `${val}%`} tick={{ fill: 'var(--text-dim)' }} />
+                                <Tooltip
+                      contentStyle={{ backgroundColor: 'var(--bg3)', borderColor: 'var(--border)', color: 'var(--white)' }}
+                      itemStyle={{ color: 'var(--lime)' }}
+                      cursor={{ fill: 'rgba(255,255,255,0.05)' }} />
+                    
                                 <Bar dataKey="score" fill="var(--lime)" radius={[4, 4, 0, 0]} animationDuration={1500} label={{ position: 'top', fill: 'var(--white)', formatter: (val) => `${val}%` }}>
                                     {[
-                                      { name: 'Before', score: 40 },
-                                      { name: 'After', score: 100 }
-                                    ].map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={index === 0 ? 'var(--text-dim)' : 'var(--lime)'} opacity={index === 0 ? 0.5 : 1} />
-                                    ))}
+                      { name: 'Before', score: 40 },
+                      { name: 'After', score: 100 }].
+                      map((entry, index) =>
+                      <Cell key={`cell-${index}`} fill={index === 0 ? 'var(--text-dim)' : 'var(--lime)'} opacity={index === 0 ? 0.5 : 1} />
+                      )}
                                 </Bar>
                             </BarChart>
                         </ResponsiveContainer>
