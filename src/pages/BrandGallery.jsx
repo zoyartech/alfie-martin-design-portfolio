@@ -8,6 +8,12 @@ export default function BrandGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93192b950_aaaaaaa111111.png", caption: "Grammarly Viral Acquisition Loop" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9eb72bd8_IMG_7230.JPG", caption: "3D Abstract Composition" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/088fbd338_IMG_30362.jpg", caption: "Digital Illustration: Mask" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6fa478f50_IMG_3035.jpg", caption: "Digital Illustration: Portrait" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/273a4f491_IMG_0068.png", caption: "Mixed Media: Painted Hands" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/27cf6047e_IMG_0068.png", caption: "Illustration" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e67bd1e01_IMG_5941.jpg", caption: "Illustration" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a9be4d8e4_IMG_6368.png", caption: "Illustration" },
