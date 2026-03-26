@@ -164,6 +164,19 @@ export default function ActivationGrammarly() {
               </p>
             </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20 text-center"
+        >
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/82a5bc136_Screenshot2026-03-25at83700PM.png" 
+            alt="Grammarly landing page showing AI features" 
+            className="w-full h-auto rounded-3xl border border-slate-200 shadow-sm"
+          />
+        </motion.div>
       </div>
     </div>);
 
