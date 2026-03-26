@@ -14,8 +14,8 @@ function SelectionCard({ title, subtitle, selected }) {
         <h4 className="font-bold text-slate-900 text-sm text-left">{title}</h4>
         {subtitle && <p className="text-slate-500 text-xs mt-0.5 text-left">{subtitle}</p>}
       </div>
-    </div>
-  )
+    </div>);
+
 }
 
 export default function ActivationGrammarly() {
@@ -33,30 +33,30 @@ export default function ActivationGrammarly() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-20 text-center"
-        >
+          className="mb-20 text-center">
+          
           <div className="w-16 h-16 bg-[#15C39A] rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
              <span className="text-white font-bold text-3xl">G</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-8">Activation @ Grammarly</h1>
-          <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Content Strategy/Design is a really important skill I continue to improve on beyond my experience, especially in the age of AI, conversational design, and a lack of context as a recurring problem.
-          </p>
+          
+
+          
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 mb-10 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm"
-        >
+          viewport={{ once: true }} className="bg-[#ebffef] mb-10 p-8 rounded-3xl grid md:grid-cols-3 gap-8 border border-slate-200 shadow-sm">
+          
+          
           <div>
             <h3 className="font-bold mb-3 text-lg text-slate-900">Problem</h3>
-            <p className="text-slate-600 leading-relaxed">Improve user activation and time-to-value while maintaining the quality writing experience users expect.</p>
+            <p className="text-slate-950 leading-relaxed">Improve user activation and time-to-value while maintaining the quality writing experience users expect.</p>
           </div>
           <div>
             <h3 className="font-bold mb-3 text-lg text-slate-900">Solution</h3>
-            <p className="text-slate-600 leading-relaxed">Growth experiments focusing on onboarding optimization, feature discovery, & retention mechanics.</p>
+            <p className="text-slate-950 leading-relaxed">Growth experiments focusing on onboarding optimization, feature discovery, & retention mechanics.</p>
           </div>
           <div>
             <h3 className="font-bold mb-3 text-lg text-slate-900">Impact</h3>
@@ -68,8 +68,8 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-lg text-slate-700 leading-relaxed space-y-6"
-        >
+          className="mb-20 text-lg text-slate-700 leading-relaxed space-y-6">
+          
           <p>
             I mapped the full activation funnel against behavioral data to isolate the highest-leverage moments and then ran experiments against each one.
           </p>
@@ -83,8 +83,8 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-16 mb-20 overflow-hidden relative"
-        >
+          className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-16 mb-20 overflow-hidden relative">
+          
           <div className="absolute top-0 left-0 w-full h-2 bg-[#15C39A]"></div>
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold mb-3">I mostly write:</h2>
@@ -119,18 +119,18 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center"
-        >
-            <h3 className="text-xl font-bold mb-6 text-slate-400 uppercase tracking-widest text-sm">Original Deck</h3>
-            <div className="rounded-3xl border border-slate-200 shadow-sm overflow-hidden bg-white p-2">
-                <iframe 
-                    src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/27b711296_activationgrammarly.pdf#toolbar=0" 
-                    className="w-full h-[600px] md:h-[800px] rounded-2xl"
-                    title="Activation at Grammarly PDF"
-                />
-            </div>
+          className="text-center">
+          
+            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">For the setup flow</h3>
+            
+
+
+
+
+
+          
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
