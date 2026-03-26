@@ -12,7 +12,7 @@ export default function GlobalNav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="bg-slate-50 text-slate-950 flex items-center justify-between h-20">
           <Link
-            to={createPageUrl("Home")} className="text-slate-950 text-2xl font-semibold tracking-[0.3em] transition-colors duration-300 hover:text-white/80">
+            to={createPageUrl("Home")} className="text-slate-950 text-2xl font-black tracking-[0.3em] transition-colors duration-300 hover:text-white/80">
             
             ALFIE MARTIN
           </Link>
