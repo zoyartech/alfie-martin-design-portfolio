@@ -75,9 +75,9 @@ export default function SideQuests() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-4">Motion & Animations</h2>
+            className="mb-12">
+            
+            <h2 className="text-slate-900 mb-4 text-4xl font-extrabold md:text-4xl">Motion & Animations</h2>
             <p className="text-slate-600 font-sans max-w-2xl">Exploring UI interactions, micro-interactions, and physics-based animations using Framer Motion.</p>
           </motion.div>
 
@@ -86,9 +86,9 @@ export default function SideQuests() {
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 90 }}
                 whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-                className="w-32 h-32 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-2xl shadow-lg cursor-pointer"
-              />
-              <p className="mt-8 text-sm font-sans text-slate-500 text-center">Hover and Tap<br/>Spring physics & border-radius morphing</p>
+                className="w-32 h-32 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-2xl shadow-lg cursor-pointer" />
+              
+              <p className="mt-8 text-sm font-sans text-slate-500 text-center">Hover and Tap<br />Spring physics & border-radius morphing</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm overflow-hidden">
@@ -105,48 +105,48 @@ export default function SideQuests() {
                   repeat: Infinity,
                   repeatDelay: 1
                 }}
-                className="w-24 h-24 bg-gradient-to-tr from-cyan-500 to-blue-500 shadow-lg"
-              />
-              <p className="mt-16 text-sm font-sans text-slate-500 text-center">Keyframes<br/>Continuous looping animation</p>
+                className="w-24 h-24 bg-gradient-to-tr from-cyan-500 to-blue-500 shadow-lg" />
+              
+              <p className="mt-16 text-sm font-sans text-slate-500 text-center">Keyframes<br />Continuous looping animation</p>
             </div>
             
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-slate-900 text-white rounded-full font-sans font-medium text-lg tracking-wide shadow-xl shadow-slate-900/20"
-              >
+                className="px-8 py-4 bg-slate-900 text-white rounded-full font-sans font-medium text-lg tracking-wide shadow-xl shadow-slate-900/20">
+                
                 Press Me
               </motion.button>
-              <p className="mt-8 text-sm font-sans text-slate-500 text-center">Button Interactions<br/>Scale and shadow transitions</p>
+              <p className="mt-8 text-sm font-sans text-slate-500 text-center">Button Interactions<br />Scale and shadow transitions</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm relative overflow-hidden">
                <motion.div
-                  drag
-                  dragConstraints={{
-                    top: -80,
-                    left: -80,
-                    right: 80,
-                    bottom: 80,
-                  }}
-                  className="w-24 h-24 bg-gradient-to-tr from-amber-400 to-orange-500 rounded-full shadow-lg cursor-grab active:cursor-grabbing z-10"
-                />
+                drag
+                dragConstraints={{
+                  top: -80,
+                  left: -80,
+                  right: 80,
+                  bottom: 80
+                }}
+                className="w-24 h-24 bg-gradient-to-tr from-amber-400 to-orange-500 rounded-full shadow-lg cursor-grab active:cursor-grabbing z-10" />
+              
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
                   <div className="w-[160px] h-[160px] border-2 border-dashed border-slate-900 rounded-2xl" />
                 </div>
-              <p className="mt-auto pt-8 text-sm font-sans text-slate-500 text-center">Drag Constraints<br/>Physics-based dragging within bounds</p>
+              <p className="mt-auto pt-8 text-sm font-sans text-slate-500 text-center">Drag Constraints<br />Physics-based dragging within bounds</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
               <motion.div
                 className="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full cursor-pointer shadow-lg flex items-center justify-center overflow-hidden group"
                 whileHover={{ width: 240, borderRadius: "24px" }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}>
+                
                  <span className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fluid Size</span>
               </motion.div>
-              <p className="mt-12 text-sm font-sans text-slate-500 text-center">Layout Morphing<br/>Fluid width and radius transition</p>
+              <p className="mt-12 text-sm font-sans text-slate-500 text-center">Layout Morphing<br />Fluid width and radius transition</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
@@ -157,20 +157,20 @@ export default function SideQuests() {
                 variants={{
                   hidden: { opacity: 1 },
                   visible: { transition: { staggerChildren: 0.1 } }
-                }}
-              >
-                {[1, 2, 3, 4].map((i) => (
-                  <motion.div
-                    key={i}
-                    className="w-12 h-12 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-full shadow-md"
-                    variants={{
-                      hidden: { y: 0, opacity: 0.5 },
-                      visible: { y: -20, opacity: 1, transition: { repeat: Infinity, repeatType: "mirror", duration: 0.4 } }
-                    }}
-                  />
-                ))}
+                }}>
+                
+                {[1, 2, 3, 4].map((i) =>
+                <motion.div
+                  key={i}
+                  className="w-12 h-12 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-full shadow-md"
+                  variants={{
+                    hidden: { y: 0, opacity: 0.5 },
+                    visible: { y: -20, opacity: 1, transition: { repeat: Infinity, repeatType: "mirror", duration: 0.4 } }
+                  }} />
+
+                )}
               </motion.div>
-              <p className="mt-16 text-sm font-sans text-slate-500 text-center">Staggered Variants<br/>Hover to trigger sequenced children</p>
+              <p className="mt-16 text-sm font-sans text-slate-500 text-center">Staggered Variants<br />Hover to trigger sequenced children</p>
             </div>
           </div>
 
