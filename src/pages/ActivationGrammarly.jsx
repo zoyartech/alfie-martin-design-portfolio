@@ -73,7 +73,7 @@ export default function ActivationGrammarly() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} className="bg-[#ebffef] mb-10 p-8 rounded-3xl grid md:grid-cols-3 gap-8 border border-slate-200 shadow-sm">
+          viewport={{ once: true }} className="bg-[#ebffef] mb-16 p-8 rounded-3xl grid md:grid-cols-3 gap-8 border border-slate-200 shadow-sm max-w-3xl mx-auto">
           
           
           <div>
@@ -94,9 +94,9 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-lg text-slate-700 leading-relaxed space-y-6">
+          className="mb-24 text-[1.125rem] text-slate-600 leading-[1.8] space-y-8 max-w-3xl mx-auto">
           
-          <p>
+          <p className="text-xl md:text-2xl text-slate-800 leading-snug font-medium mb-8">
             I mapped the full activation funnel against behavioral data to isolate the highest-leverage moments and then ran experiments against each one.
           </p>
           <p>
@@ -145,11 +145,11 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center">
+          className="mb-24 max-w-3xl mx-auto">
           
-            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">For the setup flow</h3>
+            <h3 className="text-slate-900 mb-6 text-2xl font-bold">For the setup flow</h3>
             
-            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+            <div className="text-left text-[1.125rem] text-slate-600 leading-[1.8] space-y-8">
               <p>
                 I focused on reducing friction during keyboard and extension installation. These were high-abandonment steps because they required users to leave the Grammarly environment, navigate system settings, and grant permissions. I simplified the prompts, added clear progress indicators, and introduced encouragement moments at friction points. The screens with the plant illustrations and messages like "We're rooting for you" and "Looks good" were part of a test to see whether emotional reinforcement at technical steps would keep users moving. It did. These small warmth moments reduced drop-off measurably.
               </p>
@@ -177,11 +177,11 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center">
+          className="mb-24 max-w-3xl mx-auto">
           
-            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Content Design as a Growth Lever</h3>
+            <h3 className="text-slate-900 mb-6 text-2xl font-bold">Content Design as a Growth Lever</h3>
             
-            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+            <div className="text-left text-[1.125rem] text-slate-600 leading-[1.8] space-y-8">
               <p>
                 A consistent thread across all of this work was how much activation depended on copy, not just layout. Grammarly's brand voice was warm and encouraging, but in an activation context the tone had to be carefully calibrated. Too cheerful and it felt patronizing. Too neutral and the experience felt transactional. I tested microcopy variations across every experiment and paid close attention to how small word changes moved completion rates. A single line of copy at a friction point often outperformed a full UI redesign.
               </p>
@@ -208,11 +208,11 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24">
+          className="mb-24 max-w-3xl mx-auto">
           
-            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Impact</h3>
+            <h3 className="text-slate-900 mb-6 text-2xl font-bold">Impact</h3>
             
-            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-12">
+            <div className="text-left text-[1.125rem] text-slate-600 leading-[1.8] space-y-8 mb-12">
               <p>
                 The experiments I designed improved activation rates and reduced time-to-value across the funnel. The onboarding redesign increased step completion. The setup encouragement patterns lowered abandonment during keyboard and extension installation. The first-session work correlated with stronger day-one and week-one retention among users in the test cohorts compared to control.
               </p>
@@ -299,11 +299,11 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center">
+          className="mb-24 max-w-3xl mx-auto">
           
-            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">What I Took Away</h3>
+            <h3 className="text-slate-900 mb-6 text-2xl font-bold">What I Took Away</h3>
             
-            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+            <div className="text-left text-[1.125rem] text-slate-600 leading-[1.8] space-y-8">
               <p>
                 This work shaped how I think about growth design broadly. Activation is not a funnel optimization problem, it is a communication design problem. Every screen in an onboarding sequence is making an argument for why the user should keep going, and the quality of that argument matters more than the visual polish. The most impactful changes I shipped at Grammarly were often the smallest, a rewritten line, a reordered step, a moment of encouragement where the flow previously went cold. They worked because they were grounded in understanding what the user needed to feel and know at that specific moment to take the next action.
               </p>
