@@ -48,7 +48,7 @@ export default function ActivationGrammarly() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 mb-20 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm"
+          className="grid md:grid-cols-3 gap-8 mb-10 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm"
         >
           <div>
             <h3 className="font-bold mb-3 text-lg text-slate-900">Problem</h3>
@@ -62,6 +62,20 @@ export default function ActivationGrammarly() {
             <h3 className="font-bold mb-3 text-lg text-slate-900">Impact</h3>
             <p className="text-slate-600 leading-relaxed">Improved user activation rates and reduced time-to-value.</p>
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20 text-lg text-slate-700 leading-relaxed space-y-6"
+        >
+          <p>
+            I mapped the full activation funnel against behavioral data to isolate the highest-leverage moments and then ran experiments against each one.
+          </p>
+          <p>
+            For the onboarding questionnaire, I redesigned the multi-select step where users told us what they mostly write. The original version functioned like a survey. Users filled it out dutifully but it felt disconnected from what happened next. I tested variations that reframed the step as personalization, making it feel like the product was shaping itself around the user rather than collecting data. I iterated on copy, visual weight, the number of options, and how selections carried forward into the first session. The goal was to make users feel like their answers mattered immediately.
+          </p>
         </motion.div>
 
         {/* UI Recreation: Onboarding Step */}
