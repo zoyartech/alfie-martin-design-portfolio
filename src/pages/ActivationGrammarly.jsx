@@ -133,6 +133,24 @@ export default function ActivationGrammarly() {
             </div>
           
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center">
+          
+            <h3 className="text-slate-800 mb-6 text-sm font-bold uppercase tracking-widest">Content Design as a Growth Lever</h3>
+            
+            <div className="text-left text-lg text-slate-700 leading-relaxed space-y-6 mb-20">
+              <p>
+                A consistent thread across all of this work was how much activation depended on copy, not just layout. Grammarly's brand voice was warm and encouraging, but in an activation context the tone had to be carefully calibrated. Too cheerful and it felt patronizing. Too neutral and the experience felt transactional. I tested microcopy variations across every experiment and paid close attention to how small word changes moved completion rates. A single line of copy at a friction point often outperformed a full UI redesign.
+              </p>
+              <p>
+                I also pushed on the problem of context. Users arrived from very different channels with very different expectations. Someone who signed up from an AI writing ad had a different mental model than someone referred by a coworker for grammar checking. The onboarding had to work for both without being so generic it resonated with neither. I advocated for more adaptive paths based on acquisition source and writing-type selection, and tested early versions of that segmentation.
+              </p>
+            </div>
+        </motion.div>
       </div>
     </div>);
 
