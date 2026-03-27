@@ -356,7 +356,7 @@ const ExperimentCard = ({ exp }) => {
         className="p-4 md:p-6 cursor-pointer flex justify-between items-start md:items-center gap-4 bg-white hover:bg-slate-50 transition-colors"
         onClick={() => setIsOpen(!isOpen)}>
         
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-start md:items-center flex-1">
+        <div className="flex flex-row gap-6 md:gap-8 items-center flex-1">
           <span className="text-[10px] md:text-xs font-mono text-blue-700 bg-blue-100/50 px-2.5 py-1 rounded-full font-bold tracking-wider shrink-0 border border-blue-200/50">EXP {exp.id}</span>
           <h4 className="text-sm md:text-lg font-bold text-slate-900 leading-snug">{exp.title}</h4>
         </div>
