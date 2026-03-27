@@ -68,6 +68,20 @@ export default function DesignStrategyAI() {
             </Link>
         </div>
 
+        {/* Hero Video */}
+        <div className="max-w-5xl mx-auto px-6 mb-12">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-100">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/mwp39rSvJ8w?si=A_OgApHHkWvKmvt9"
+              title="Hero Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         {/* 01 — OVERVIEW */}
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-20">
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
