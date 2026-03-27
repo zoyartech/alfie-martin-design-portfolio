@@ -683,8 +683,24 @@ Experiments in Growth Design
         }
       </div>
       
+      {/* Analytics Link */}
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-16 flex justify-center">
+        <Link to={createPageUrl("Analytics")} className="block w-full max-w-2xl group relative">
+          <div className="absolute inset-0 bg-blue-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
+          <div className="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm group-hover:shadow-md transition-all overflow-hidden flex flex-col items-center">
+            <div className="flex items-center justify-between w-full mb-6">
+              <h3 className="font-bold text-slate-900 text-lg">View Experiment Analytics</h3>
+              <div className="bg-blue-50 text-blue-600 p-2 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <ArrowRight className="w-5 h-5" />
+              </div>
+            </div>
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/169acaa00_Screenshot2026-03-27at85746AM.png" alt="Conversion Rate Trends" className="w-full h-auto rounded border border-slate-100 shadow-sm group-hover:scale-[1.02] transition-transform duration-500" />
+          </div>
+        </Link>
+      </div>
+
       {/* Footer Meta */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-24 md:mt-32 pt-8 md:pt-12 border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-12 md:mt-16 pt-8 md:pt-12 border-t border-slate-200">
         <div className="bg-slate-100 p-6 md:p-8 rounded-2xl text-center">
           <p className="text-xs md:text-sm text-slate-500 font-mono">Prepared for growth teams, product designers, and cross-functional stakeholders.</p>
         </div>
