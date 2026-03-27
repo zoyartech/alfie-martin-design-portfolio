@@ -26,7 +26,7 @@ export default function SideQuests() {
             transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-6 font-sans uppercase">Exploration</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6 max-w-4xl font-serif text-slate-900">
-              Side Quests
+              Products Ive Built, Brand Visuals, & Animations
             </h1>
             
 
