@@ -621,7 +621,7 @@ export default function ArbolCaseStudy() {
       </section>
 
       <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'center', padding: '2rem 0' }}>
-        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '75%', height: 'auto', display: 'block' }} />
+        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '75%', height: 'auto', display: 'block' }} className="mr-4 pr-64 pl-64" />
       </div>
 
       <section>
@@ -784,7 +784,7 @@ export default function ArbolCaseStudy() {
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/116e668fd_ARBOLUI.png"
             alt="Arbol UI Elements"
-            style={{ width: '100%', height: 'auto', display: 'block' }} />
+            style={{ width: '100%', height: 'auto', display: 'block' }} className="pr-64 pl-64" />
           
         </div>
       </section>
@@ -814,7 +814,7 @@ export default function ArbolCaseStudy() {
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df9ef1f7a_ARBOLUI2.png"
             alt="Arbol UI Components"
-            style={{ width: '100%', height: 'auto', display: 'block' }} />
+            style={{ width: '100%', height: 'auto', display: 'block' }} className="pr-64 pl-64" />
           
         </div>
 
