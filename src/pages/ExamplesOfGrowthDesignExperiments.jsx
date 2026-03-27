@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronDown, Target, Lightbulb, UserCheck, TrendingUp, RefreshCw, DollarSign, Activity, ArrowRight, AlertTriangle, Clock } from "lucide-react";
+import { ArrowLeft, ChevronDown, Target, Lightbulb, UserCheck, TrendingUp, RefreshCw, DollarSign, Activity, ArrowRight, AlertTriangle, Clock, Download } from "lucide-react";
 import { createPageUrl } from "@/utils";
 
 const experimentsData = [
@@ -288,6 +288,23 @@ const experimentsData = [
 
 }];
 
+const downloadCSV = (experiments, filename) => {
+  const headers = ['ID', 'Title', 'Hypothesis', 'Key Metrics', 'Timeframe'];
+  const rows = experiments.map(exp => [
+    exp.id,
+    `"${exp.title.replace(/"/g, '""')}"`,
+    `"${exp.hypothesis.replace(/"/g, '""')}"`,
+    `"${exp.metrics.replace(/"/g, '""')}"`,
+    `"${exp.timeframe.replace(/"/g, '""')}"`
+  ]);
+  
+  const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+};
 
 const ImpactCalculator = ({ exp }) => {
   // Try to extract a percentage from the hypothesis text, default to 15 if not found
@@ -350,6 +367,11 @@ const ImpactCalculator = ({ exp }) => {
 const ExperimentCard = ({ exp }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleExport = (e) => {
+    e.stopPropagation();
+    downloadCSV([exp], `experiment_${exp.id}.csv`);
+  };
+
   return (
     <div className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all scroll-mt-24">
       <div
@@ -360,8 +382,17 @@ const ExperimentCard = ({ exp }) => {
           <span className="text-[10px] md:text-xs font-mono text-blue-700 bg-blue-100/50 px-2.5 py-1 rounded-full font-bold tracking-wider shrink-0 border border-blue-200/50">EXP {exp.id}</span>
           <h4 className="text-sm md:text-lg font-bold text-slate-900 leading-snug">{exp.title}</h4>
         </div>
-        <div className="mt-0.5 md:mt-0 bg-slate-100 p-1.5 rounded-full shrink-0">
-          <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <div className="flex items-center gap-2 shrink-0">
+          <button 
+            onClick={handleExport}
+            className="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
+            title="Export to CSV"
+          >
+            <Download className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+          <div className="bg-slate-100 p-1.5 rounded-full">
+            <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+          </div>
         </div>
       </div>
       <AnimatePresence>
@@ -418,6 +449,11 @@ export default function ExamplesOfGrowthDesignExperiments() {
   const phases = experimentsData.map((d) => d.phase);
   const [activeSection, setActiveSection] = useState(phases[0]);
 
+  const handleGlobalExport = () => {
+    const allExperiments = experimentsData.flatMap(phase => phase.experiments);
+    downloadCSV(allExperiments, 'growth_design_experiments.csv');
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-24">
       {/* Navigation Header */}
@@ -438,9 +474,15 @@ export default function ExamplesOfGrowthDesignExperiments() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
           <div className="relative z-10">
-            <p className="text-blue-600 mb-4 text-lg font-bold uppercase tracking-[0.25em] md:text-xs md:mb-6 flex items-center gap-2">GROWTH DESIGN PLAYBOOK
-
-            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 md:mb-6">
+              <p className="text-blue-600 text-lg font-bold uppercase tracking-[0.25em] md:text-xs flex items-center gap-2">GROWTH DESIGN PLAYBOOK</p>
+              <button 
+                onClick={handleGlobalExport}
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 hover:text-blue-600 transition-colors w-full sm:w-auto"
+              >
+                <Download className="w-4 h-4" /> Export All (CSV)
+              </button>
+            </div>
             <h1 className="text-slate-900 mb-6 text-3xl font-normal tracking-tight leading-[1.15] md:text-5xl lg:text-6xl md:mb-8">Examples of Different
 Experiments in Growth Design
             </h1>
