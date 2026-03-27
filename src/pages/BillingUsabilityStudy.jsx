@@ -42,12 +42,12 @@ export default function BillingUsabilityStudy() {
           <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 mix-blend-multiply pointer-events-none"></div>
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-yellow-100 rounded-full blur-3xl opacity-50 mix-blend-multiply pointer-events-none"></div>
 
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-5xl mx-auto px-6 w-full relative z-10"
-          >
+            className="max-w-5xl mx-auto px-6 w-full relative z-10">
+            
             <motion.h1 variants={fadeUp} className="text-6xl md:text-8xl font-semibold mb-6 tracking-tight text-slate-900">
               Billing & Payments
             </motion.h1>
@@ -65,45 +65,45 @@ export default function BillingUsabilityStudy() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUp}
-            >
+              variants={fadeUp}>
+              
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <div className="bg-cyan-300 rounded-full w-12 h-12 flex items-center justify-center">
                   <Search className="w-6 h-6 text-blue-600" />
                 </div>
                 <h2 className="text-3xl font-bold text-slate-900">Study Objective</h2>
               </div>
-              <p className="text-2xl md:text-3xl leading-relaxed font-light text-slate-700 bg-slate-50 p-8 md:p-12 rounded-2xl border border-slate-100 shadow-sm">
-                Evaluate the usability of the updated <br/>
-                <strong className="text-blue-600 font-medium">'Bill is Ready'</strong> email, <br/>
-                the discoverability of the <br/>
-                <strong className="text-blue-600 font-medium">'My Bill Insights'</strong> page from the email, and <br/>
-                the clarity and usefulness of the information <br/>
-                on the <strong className="text-blue-600 font-medium">'My Bill Insights'</strong> page.
+              <p className="bg-cyan-50 text-slate-700 p-8 text-2xl font-light leading-relaxed rounded-2xl md:text-3xl md:p-12 border border-slate-100 shadow-sm">Evaluate the usability of the updated
+'Bill is Ready' email,
+the discoverability of the
+'My Bill Insights' page from the email, and
+the clarity and usefulness of the information
+on the 'My Bill Insights' page.
+
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Slide 3 - Details */}
-        <section className="bg-[#fbfae1] py-24 md:py-32 border-l border-slate-300">
+        <section className="bg-[#e0f8fb] py-24 md:py-32 border-l border-slate-300">
           <div className="max-w-6xl mx-auto px-6">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-medium mb-16 text-slate-900"
-            >
+              className="text-4xl md:text-5xl font-medium mb-16 text-slate-900">
+              
               Study Details
             </motion.h2>
 
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-8 md:gap-12 items-stretch mb-16"
-            >
+              className="grid md:grid-cols-3 gap-8 md:gap-12 items-stretch mb-16">
+              
               <motion.div variants={fadeUp} className="text-xl pr-8 md:border-r-4 border-slate-900 text-slate-700">
                 <p className="sticky top-32">Users were given the following scenario then asked to complete seven related Tasks :</p>
               </motion.div>
@@ -120,21 +120,21 @@ export default function BillingUsabilityStudy() {
                   <span className="w-8 h-px bg-slate-900"></span> METHODOLOGY
                 </h3>
                 <ul className="space-y-4 text-slate-700">
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5"/> Unmoderated Usability Study via UserZoom</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5"/> Eight Participants</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5"/> Opco Mix</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5"/> Average 12 minutes per session</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5"/> Results include screen recordings, transcript, task success and questionnaire responses</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" /> Unmoderated Usability Study via UserZoom</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" /> Eight Participants</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" /> Opco Mix</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" /> Average 12 minutes per session</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" /> Results include screen recordings, transcript, task success and questionnaire responses</li>
                 </ul>
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-900 text-white p-6 md:p-8 rounded-2xl text-lg md:text-xl text-center shadow-lg"
-            >
+              className="bg-slate-900 text-white p-6 md:p-8 rounded-2xl text-lg md:text-xl text-center shadow-lg">
+              
               The study concluded with a five-part final reflection questionnaire designed to assess users' affinity for the designs presented.
             </motion.div>
           </div>
@@ -147,8 +147,8 @@ export default function BillingUsabilityStudy() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
+              variants={staggerContainer}>
+              
               <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Executive Summary</motion.h2>
               <motion.p variants={fadeUp} className="text-xl mb-8 leading-relaxed text-slate-700 bg-white/50 p-6 rounded-xl border border-white">
                 The usability study validated the appeal, clarity, and discoverability of the authenticated 'My Bill Insights' page and enhanced 'Bill is Ready' email, while also surfacing future opportunities to elevate the post-MVP experience.
@@ -173,23 +173,23 @@ export default function BillingUsabilityStudy() {
               </motion.ul>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-xl relative"
-            >
+              className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-xl relative">
+              
               <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-bl-full -z-10 rounded-tr-3xl"></div>
               <h3 className="text-2xl font-bold mb-8 text-slate-900 flex items-center gap-3">
                 <Lightbulb className="text-yellow-500" /> FUTURE OPPORTUNITIES
               </h3>
               <ul className="space-y-5 text-lg text-slate-700">
-                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1"/> Position link to 'My Bill Insights' page on bill itself</li>
-                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1"/> Include more support options in addition to FAQs</li>
-                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1"/> Explore feasibility of more granular usage chart for customers to see peak usage times (daily or hourly)</li>
-                <li className="mt-8 pt-8 border-t border-slate-100 flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1"/> Separate personalized tips from Home Energy Analysis breakdown, or make more discoverable (QPower)</li>
-                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1"/> Make the Home Energy Analysis breakdown more interactive (ie. Clicking into usage)</li>
+                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1" /> Position link to 'My Bill Insights' page on bill itself</li>
+                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1" /> Include more support options in addition to FAQs</li>
+                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1" /> Explore feasibility of more granular usage chart for customers to see peak usage times (daily or hourly)</li>
+                <li className="mt-8 pt-8 border-t border-slate-100 flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1" /> Separate personalized tips from Home Energy Analysis breakdown, or make more discoverable (QPower)</li>
+                <li className="flex items-start gap-3"><ChevronRight className="w-5 h-5 text-yellow-500 shrink-0 mt-1" /> Make the Home Energy Analysis breakdown more interactive (ie. Clicking into usage)</li>
               </ul>
             </motion.div>
           </div>
@@ -197,12 +197,12 @@ export default function BillingUsabilityStudy() {
 
         {/* Slide 5 - Open Email */}
         <section className="flex flex-col md:flex-row min-h-[70vh] border-l border-slate-300">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#fbfae1] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-300"
-          >
+            className="bg-[#fbfae1] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-300">
+            
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-8 h-8 text-slate-800" />
               <h2 className="text-3xl font-bold text-slate-900">Open Email</h2>
@@ -225,17 +225,17 @@ export default function BillingUsabilityStudy() {
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#f0e6ff] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center"
-          >
+            className="bg-[#f0e6ff] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+            
             <h3 className="text-sm font-bold text-purple-500 mb-2 tracking-widest uppercase flex items-center gap-2">
               <MessageSquare className="w-4 h-4" /> QUESTIONNAIRE
             </h3>
             <p className="text-2xl font-medium text-slate-900 mb-12">
-              What is your first impression of this email?<br/>
+              What is your first impression of this email?<br />
               <span className="text-slate-500 font-light">Please describe what you see.</span>
             </p>
             
@@ -261,8 +261,8 @@ export default function BillingUsabilityStudy() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="grid md:grid-cols-2 gap-16 items-center"
-            >
+              className="grid md:grid-cols-2 gap-16 items-center">
+              
               <motion.div variants={fadeUp}>
                 <div className="flex items-center gap-3 mb-6">
                   <MousePointerClick className="w-8 h-8 text-blue-600" />
@@ -278,7 +278,7 @@ export default function BillingUsabilityStudy() {
 
                 <div className="hidden md:flex justify-end pr-12 animate-pulse">
                   <svg viewBox="0 0 100 50" className="w-32 h-16 drop-shadow-md">
-                    <path d="M0,15 L60,15 L60,0 L100,25 L60,50 L60,35 L0,35 Z" fill="#cf9aff" stroke="#000" strokeWidth="0.5"/>
+                    <path d="M0,15 L60,15 L60,0 L100,25 L60,50 L60,35 L0,35 Z" fill="#cf9aff" stroke="#000" strokeWidth="0.5" />
                   </svg>
                 </div>
               </motion.div>
@@ -308,12 +308,12 @@ export default function BillingUsabilityStudy() {
 
         {/* Slide 7 - First Impressions */}
         <section className="flex flex-col lg:flex-row min-h-[80vh] border-l border-slate-300 bg-slate-900 text-white">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="bg-slate-800 w-full lg:w-1/3 p-12 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-700"
-          >
+            className="bg-slate-800 w-full lg:w-1/3 p-12 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-700">
+            
             <h2 className="text-4xl italic mb-12 font-serif text-yellow-200">First Impressions</h2>
             <div className="bg-slate-900/50 p-8 rounded-2xl border border-slate-700">
               <h3 className="text-sm font-bold text-slate-400 mb-4 tracking-widest uppercase">TASK</h3>
@@ -324,13 +324,13 @@ export default function BillingUsabilityStudy() {
           </motion.div>
 
           <div className="w-full lg:w-2/3 p-8 md:p-16 flex flex-col relative justify-center bg-gradient-to-br from-slate-900 to-slate-800">
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", bounce: 0.4 }}
-              className="bg-blue-600 text-white p-8 md:p-10 rounded-3xl shadow-2xl max-w-xl mx-auto md:ml-12 mb-16 relative transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-pointer"
-            >
+              className="bg-blue-600 text-white p-8 md:p-10 rounded-3xl shadow-2xl max-w-xl mx-auto md:ml-12 mb-16 relative transform -rotate-2 hover:rotate-0 transition-transform duration-500 cursor-pointer">
+              
               <span className="text-7xl text-blue-300 absolute -top-6 -left-4 font-serif leading-none opacity-50">"</span>
               <p className="text-2xl font-bold text-center leading-relaxed relative z-10">
                 This feels like everything I would want to know if I was going to call [my utility company]
@@ -338,33 +338,33 @@ export default function BillingUsabilityStudy() {
               <span className="text-7xl text-blue-300 absolute -bottom-12 -right-4 font-serif leading-none opacity-50">"</span>
             </motion.div>
             
-            <motion.div 
+            <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-white text-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col justify-center relative overflow-hidden"
-            >
+              className="bg-white text-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
+              
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-yellow-500"></div>
               
               <div className="flex flex-col md:flex-row items-center gap-12 relative z-10">
                 <div className="w-48 h-48 shrink-0 relative hover:scale-105 transition-transform duration-500 cursor-pointer">
                   <svg viewBox="0 0 100 100" className="w-full h-full transform -rotate-90 drop-shadow-md">
                     <circle cx="50" cy="50" r="40" fill="transparent" stroke="#f1f5f9" strokeWidth="20" />
-                    <motion.circle 
-                      cx="50" cy="50" r="40" fill="transparent" stroke="#4f46e5" strokeWidth="20" 
-                      strokeDasharray="251.2" 
+                    <motion.circle
+                      cx="50" cy="50" r="40" fill="transparent" stroke="#4f46e5" strokeWidth="20"
+                      strokeDasharray="251.2"
                       initial={{ strokeDashoffset: 251.2 }}
                       whileInView={{ strokeDashoffset: 60 }}
-                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-                    />
+                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }} />
+                    
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-white/80 rounded-full m-8 shadow-inner">
-                    <span className="text-[10px] font-bold text-slate-900 uppercase tracking-wider">Total Amount<br/>Due</span>
+                    <span className="text-[10px] font-bold text-slate-900 uppercase tracking-wider">Total Amount<br />Due</span>
                   </div>
-                  <div className="absolute top-4 -left-8 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><PieChart className="w-3 h-3 text-pink-500"/> Taxes & Fees</div>
-                  <div className="absolute bottom-4 -left-4 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><Monitor className="w-3 h-3 text-blue-500"/> Delivery</div>
-                  <div className="absolute top-1/2 -right-12 -translate-y-1/2 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><Lightbulb className="w-3 h-3 text-yellow-500"/> Supply</div>
+                  <div className="absolute top-4 -left-8 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><PieChart className="w-3 h-3 text-pink-500" /> Taxes & Fees</div>
+                  <div className="absolute bottom-4 -left-4 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><Monitor className="w-3 h-3 text-blue-500" /> Delivery</div>
+                  <div className="absolute top-1/2 -right-12 -translate-y-1/2 bg-white px-2 py-1 rounded-md shadow-md text-[10px] flex items-center gap-1 font-medium"><Lightbulb className="w-3 h-3 text-yellow-500" /> Supply</div>
                 </div>
                 
                 <div>
@@ -405,12 +405,12 @@ export default function BillingUsabilityStudy() {
 
         {/* Slide 8 - Questionnaire Understanding */}
         <section className="flex flex-col md:flex-row min-h-[60vh] border-l border-slate-300">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#f0e6ff] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-300"
-          >
+            className="bg-[#f0e6ff] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-300">
+            
             <div className="flex items-center gap-3 mb-6">
               <HelpCircle className="w-8 h-8 text-purple-600" />
               <h2 className="text-3xl font-bold text-slate-900">Understanding</h2>
@@ -420,24 +420,24 @@ export default function BillingUsabilityStudy() {
             </p>
           </motion.div>
           <div className="bg-[#fbfae1] w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center space-y-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-l-purple-400"
-            >
+              className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-l-purple-400">
+              
               <p className="text-lg italic text-slate-700">
                 "I understand that my bill is higher than this month, mainly due to increased energy costs, a longer billing period and more usage likely caused by the weather conditions, and also the 10% increase."
               </p>
             </motion.div>
             
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-l-red-400 ml-8"
-            >
+              className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-l-red-400 ml-8">
+              
               <p className="text-lg italic text-slate-700 mb-6 pb-6 border-b border-slate-100">
                 "I can see what part of my home I'm using the most electricity like the electronics"
               </p>
@@ -463,8 +463,8 @@ export default function BillingUsabilityStudy() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
+              variants={staggerContainer}>
+              
               <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold mb-8 text-slate-900">Investigating Increases</motion.h2>
               
               <motion.div variants={fadeUp} className="bg-slate-50 p-8 rounded-2xl border border-slate-200 mb-16 shadow-inner">
@@ -535,12 +535,12 @@ export default function BillingUsabilityStudy() {
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-16 items-start">
               
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="space-y-12"
-              >
+                className="space-y-12">
+                
                 <div>
                   <h3 className="text-sm font-bold text-purple-400 mb-4 tracking-widest uppercase">QUESTIONNAIRE</h3>
                   <p className="text-3xl font-medium mb-8 leading-tight">
@@ -564,12 +564,12 @@ export default function BillingUsabilityStudy() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="space-y-12"
-              >
+                className="space-y-12">
+                
                 <h3 className="text-4xl md:text-5xl font-bold text-yellow-300">Where did you look first?</h3>
                 
                 <div className="space-y-6">
@@ -603,12 +603,12 @@ export default function BillingUsabilityStudy() {
             </div>
             
             {/* The illustration from slide 11 */}
-            <motion.div 
+            <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="mt-20 max-w-4xl mx-auto w-full aspect-[21/9] bg-[#4220c5] rounded-3xl relative flex items-end justify-center overflow-hidden border border-white/10 shadow-2xl"
-            >
+              className="mt-20 max-w-4xl mx-auto w-full aspect-[21/9] bg-[#4220c5] rounded-3xl relative flex items-end justify-center overflow-hidden border border-white/10 shadow-2xl">
+              
                <div className="absolute top-6 left-6 bg-white text-slate-900 px-4 py-2 font-mono rounded-lg shadow-lg text-sm font-bold animate-pulse">
                   See a Personalized Tip
                   <div className="absolute -bottom-2 left-6 w-4 h-4 bg-white transform rotate-45"></div>
@@ -650,11 +650,11 @@ export default function BillingUsabilityStudy() {
         {/* Slide 12 - More Info */}
         <section className="bg-white py-24 md:py-32 border-l border-slate-300">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
+              
               <h2 className="text-3xl font-bold mb-6 text-slate-900">More Information</h2>
               <div className="bg-orange-50 p-6 md:p-8 rounded-2xl border border-orange-100 mb-10">
                 <h3 className="text-sm font-bold text-orange-600 mb-4 tracking-widest uppercase">TASK</h3>
@@ -677,12 +677,12 @@ export default function BillingUsabilityStudy() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-100 p-8 md:p-12 rounded-3xl border border-slate-200"
-            >
+              className="bg-slate-100 p-8 md:p-12 rounded-3xl border border-slate-200">
+              
               <h3 className="text-2xl font-bold mb-10 text-slate-900 pb-4 border-b border-slate-300">QUESTIONNAIRE Results</h3>
               <div className="space-y-12">
                 <div>
@@ -717,8 +717,8 @@ export default function BillingUsabilityStudy() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
+              variants={staggerContainer}>
+              
               <motion.div variants={fadeUp} className="mb-24">
                 <h2 className="text-4xl font-bold mb-8 text-slate-900">Follow Up Questionnaire</h2>
                 <p className="text-2xl font-light text-slate-700 mb-10 border-l-4 border-slate-900 pl-6">
@@ -801,6 +801,6 @@ export default function BillingUsabilityStudy() {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>);
+
 }
