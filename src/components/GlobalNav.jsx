@@ -47,12 +47,6 @@ export default function GlobalNav() {
               WRITING
               <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${path === 'Home' ? 'bg-white w-0 group-hover:w-full' : path === 'Writing' ? 'bg-black w-full' : 'bg-black w-0 group-hover:w-full'}`}></span>
             </Link>
-            <Link
-              to={createPageUrl("Analytics")} className="text-slate-950 text-xs font-medium tracking-[0.15em] relative transition-colors group hover:text-white/80">
-              
-              ANALYTICS
-              <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${path === 'Home' ? 'bg-white w-0 group-hover:w-full' : path === 'Analytics' ? 'bg-black w-full' : 'bg-black w-0 group-hover:w-full'}`}></span>
-            </Link>
             <a
               href="mailto:alfie@alfiealfie.com" className="bg-slate-300 text-slate-950 px-6 py-2 text-xs font-medium tracking-[0.15em] relative border transition-all duration-300 border-white hover:bg-white hover:text-black">EMAIL ME
 
