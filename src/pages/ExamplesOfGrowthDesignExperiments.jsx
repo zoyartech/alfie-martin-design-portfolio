@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useDragControls } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronDown, Target, Lightbulb, UserCheck, TrendingUp, RefreshCw, DollarSign, Activity, ArrowRight, AlertTriangle, Clock, Download } from "lucide-react";
+import { ArrowLeft, ChevronDown, Target, Lightbulb, UserCheck, TrendingUp, RefreshCw, DollarSign, Activity, ArrowRight, AlertTriangle, Clock, Download, List, Kanban, GripVertical } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import { useRef } from "react";
 
 const experimentsData = [
 {
@@ -364,7 +365,7 @@ const ImpactCalculator = ({ exp }) => {
 
 };
 
-const ExperimentCard = ({ exp }) => {
+const ExperimentCard = ({ exp, compact = false, dragProps = null }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleExport = (e) => {
@@ -373,27 +374,53 @@ const ExperimentCard = ({ exp }) => {
   };
 
   return (
-    <div className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all scroll-mt-24">
+    <div className={`border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all ${compact ? '' : 'scroll-mt-24'}`}>
       <div
-        className="p-4 md:p-6 cursor-pointer flex justify-between items-start md:items-center gap-4 bg-white hover:bg-slate-50 transition-colors"
+        className={`cursor-pointer flex justify-between bg-white hover:bg-slate-50 transition-colors ${compact ? 'p-4 flex-col gap-3' : 'p-4 md:p-6 items-start md:items-center gap-4'}`}
         onClick={() => setIsOpen(!isOpen)}>
         
-        <div className="flex flex-row gap-6 md:gap-8 items-center flex-1">
-          <span className="text-[10px] md:text-xs font-mono text-blue-700 bg-blue-100/50 px-2.5 py-1 rounded-full font-bold tracking-wider shrink-0 border border-blue-200/50">EXP {exp.id}</span>
-          <h4 className="text-sm md:text-lg font-bold text-slate-900 leading-snug">{exp.title}</h4>
-        </div>
-        <div className="flex items-center gap-2 shrink-0">
-          <button 
-            onClick={handleExport}
-            className="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
-            title="Export to CSV"
-          >
-            <Download className="w-4 h-4 md:w-5 md:h-5" />
-          </button>
-          <div className="bg-slate-100 p-1.5 rounded-full">
-            <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <div className={`flex flex-1 ${compact ? 'flex-col items-start gap-3 w-full' : 'flex-row gap-6 md:gap-8 items-center'}`}>
+          <div className="flex justify-between items-center w-full">
+            <div className="flex items-center gap-2">
+              {dragProps && (
+                <div {...dragProps} className="cursor-grab active:cursor-grabbing p-1 hover:bg-slate-100 rounded text-slate-400">
+                  <GripVertical className="w-4 h-4" />
+                </div>
+              )}
+              <span className="text-[10px] md:text-xs font-mono text-blue-700 bg-blue-100/50 px-2.5 py-1 rounded-full font-bold tracking-wider shrink-0 border border-blue-200/50">EXP {exp.id}</span>
+            </div>
+            {compact && (
+              <div className="flex items-center gap-1 shrink-0">
+                <button 
+                  onClick={handleExport}
+                  className="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
+                  title="Export to CSV"
+                >
+                  <Download className="w-4 h-4" />
+                </button>
+                <div className="bg-slate-100 p-1.5 rounded-full">
+                  <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                </div>
+              </div>
+            )}
           </div>
+          <h4 className={`font-bold text-slate-900 leading-snug ${compact ? 'text-sm' : 'text-sm md:text-lg'}`}>{exp.title}</h4>
         </div>
+        
+        {!compact && (
+          <div className="flex items-center gap-2 shrink-0">
+            <button 
+              onClick={handleExport}
+              className="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
+              title="Export to CSV"
+            >
+              <Download className="w-4 h-4 md:w-5 md:h-5" />
+            </button>
+            <div className="bg-slate-100 p-1.5 rounded-full">
+              <ChevronDown className={`w-4 h-4 md:w-5 md:h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+            </div>
+          </div>
+        )}
       </div>
       <AnimatePresence>
         {isOpen &&
@@ -445,14 +472,66 @@ const ExperimentCard = ({ exp }) => {
 
 };
 
+const KanbanItem = ({ exp, handleDragEnd }) => {
+  const controls = useDragControls();
+  return (
+    <motion.div
+      layout
+      layoutId={exp.id}
+      drag
+      dragControls={controls}
+      dragListener={false}
+      dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      dragElastic={1}
+      dragSnapToOrigin
+      onDragEnd={(e, info) => handleDragEnd(e, info, exp.id)}
+      whileDrag={{ scale: 1.05, zIndex: 50 }}
+      className="relative z-10"
+    >
+      <ExperimentCard exp={exp} compact={true} dragProps={{ onPointerDown: (e) => controls.start(e) }} />
+    </motion.div>
+  );
+};
+
 export default function ExamplesOfGrowthDesignExperiments() {
   const phases = experimentsData.map((d) => d.phase);
   const [activeSection, setActiveSection] = useState(phases[0]);
+  const [viewMode, setViewMode] = useState('list');
+  const [experiments, setExperiments] = useState(() => {
+    return experimentsData.flatMap(phase => 
+      phase.experiments.map(exp => ({...exp, phase: phase.phase, status: 'Planned'}))
+    );
+  });
+
+  const columnRefs = useRef({});
+
+  const handleDragEnd = (event, info, expId) => {
+    const { x, y } = info.point;
+    let targetStage = null;
+    for (const [stage, el] of Object.entries(columnRefs.current)) {
+      if (!el) continue;
+      const rect = el.getBoundingClientRect();
+      if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+        targetStage = stage;
+        break;
+      }
+    }
+    if (targetStage) {
+      setExperiments(prev => prev.map(exp => exp.id === expId ? { ...exp, status: targetStage } : exp));
+    }
+  };
 
   const handleGlobalExport = () => {
-    const allExperiments = experimentsData.flatMap(phase => phase.experiments);
-    downloadCSV(allExperiments, 'growth_design_experiments.csv');
+    downloadCSV(experiments, 'growth_design_experiments.csv');
   };
+
+  const groupedByPhase = phases.map(phase => ({
+    phase,
+    description: experimentsData.find(d => d.phase === phase).description,
+    experiments: experiments.filter(e => e.phase === phase)
+  }));
+
+  const kanbanStages = ['Planned', 'In Progress', 'Analyzing', 'Completed'];
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-24">
@@ -474,14 +553,30 @@ export default function ExamplesOfGrowthDesignExperiments() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
           
           <div className="relative z-10">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 md:mb-6">
-              <p className="text-blue-600 text-lg font-bold uppercase tracking-[0.25em] md:text-xs flex items-center gap-2">GROWTH DESIGN PLAYBOOK</p>
-              <button 
-                onClick={handleGlobalExport}
-                className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 hover:text-blue-600 transition-colors w-full sm:w-auto"
-              >
-                <Download className="w-4 h-4" /> Export All (CSV)
-              </button>
+            <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-4 md:mb-6">
+              <p className="text-blue-600 text-lg font-bold uppercase tracking-[0.25em] md:text-xs flex items-center gap-2 shrink-0">GROWTH DESIGN PLAYBOOK</p>
+              <div className="flex flex-col sm:flex-row gap-2 w-full xl:w-auto overflow-x-auto pb-2 sm:pb-0">
+                <div className="flex bg-slate-100 p-1 rounded-lg border border-slate-200 w-full sm:w-auto shrink-0">
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`flex-1 flex justify-center items-center gap-2 px-3 py-1.5 text-sm font-semibold rounded-md transition-colors ${viewMode === 'list' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    <List className="w-4 h-4" /> List
+                  </button>
+                  <button
+                    onClick={() => setViewMode('kanban')}
+                    className={`flex-1 flex justify-center items-center gap-2 px-3 py-1.5 text-sm font-semibold rounded-md transition-colors ${viewMode === 'kanban' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    <Kanban className="w-4 h-4" /> Kanban
+                  </button>
+                </div>
+                <button 
+                  onClick={handleGlobalExport}
+                  className="inline-flex shrink-0 items-center justify-center gap-2 text-sm font-semibold bg-white border border-slate-200 text-slate-700 px-4 py-1.5 rounded-lg shadow-sm hover:bg-slate-50 hover:text-blue-600 transition-colors w-full sm:w-auto"
+                >
+                  <Download className="w-4 h-4" /> Export All
+                </button>
+              </div>
             </div>
             <h1 className="text-slate-900 mb-6 text-3xl font-normal tracking-tight leading-[1.15] md:text-5xl lg:text-6xl md:mb-8">Examples of Different
 Experiments in Growth Design
@@ -494,74 +589,98 @@ Experiments in Growth Design
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 lg:gap-12 relative">
-        
-        {/* Mobile/Tablet Sticky Nav */}
-        <div className="lg:hidden sticky top-[72px] md:top-20 z-40 bg-slate-50/95 backdrop-blur-md border-b border-slate-200 -mx-4 md:-mx-6 px-4 md:px-6 py-3 mb-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] shadow-sm">
-          <div className="flex items-center gap-2 w-max">
-            {phases.map((phase) =>
-            <a
-              key={phase}
-              href={`#${phase.toLowerCase()}`}
-              onClick={() => setActiveSection(phase)}
-              className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-300 border ${activeSection === phase ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:bg-blue-50'}`}>
-              
-                {phase}
-              </a>
-            )}
-          </div>
-        </div>
+        {viewMode === 'list' ? (
+          <>
+            {/* Mobile/Tablet Sticky Nav */}
+            <div className="lg:hidden sticky top-[72px] md:top-20 z-40 bg-slate-50/95 backdrop-blur-md border-b border-slate-200 -mx-4 md:-mx-6 px-4 md:px-6 py-3 mb-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] shadow-sm">
+              <div className="flex items-center gap-2 w-max">
+                {phases.map((phase) =>
+                <a
+                  key={phase}
+                  href={`#${phase.toLowerCase()}`}
+                  onClick={() => setActiveSection(phase)}
+                  className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-300 border ${activeSection === phase ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:bg-blue-50'}`}>
+                  
+                    {phase}
+                  </a>
+                )}
+              </div>
+            </div>
 
-        {/* Desktop Sidebar Nav */}
-        <div className="hidden lg:block w-64 shrink-0">
-          <div className="sticky top-32 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-            <h3 className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-6 flex items-center gap-2">
-              <Target className="w-3.5 h-3.5" /> Table of Contents
-            </h3>
-            <nav className="flex flex-col gap-1.5">
-              {phases.map((phase) =>
-              <a
-                key={phase}
-                href={`#${phase.toLowerCase()}`}
-                onClick={() => setActiveSection(phase)}
-                className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${activeSection === phase ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}>
+            {/* Desktop Sidebar Nav */}
+            <div className="hidden lg:block w-64 shrink-0">
+              <div className="sticky top-32 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h3 className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-6 flex items-center gap-2">
+                  <Target className="w-3.5 h-3.5" /> Table of Contents
+                </h3>
+                <nav className="flex flex-col gap-1.5">
+                  {phases.map((phase) =>
+                  <a
+                    key={phase}
+                    href={`#${phase.toLowerCase()}`}
+                    onClick={() => setActiveSection(phase)}
+                    className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${activeSection === phase ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}>
+                    
+                      {phase} Experiments
+                    </a>
+                  )}
+                </nav>
+              </div>
+            </div>
+
+            {/* Experiments Content */}
+            <div className="flex-1 space-y-16 md:space-y-24">
+              {groupedByPhase.map((phaseData, idx) =>
+              <motion.section
+                key={idx}
+                id={phaseData.phase.toLowerCase()}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                onViewportEnter={() => setActiveSection(phaseData.phase)}
+                className="scroll-mt-32 md:scroll-mt-40">
                 
-                  {phase} Experiments
-                </a>
+                  <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-6 md:mb-8">
+                    <div>
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-2 md:mb-3">{phaseData.phase} Experiments</h2>
+                      <p className="text-slate-600 text-sm md:text-lg max-w-3xl leading-relaxed">{phaseData.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 md:space-y-6">
+                    {phaseData.experiments.map((exp) =>
+                  <ExperimentCard key={exp.id} exp={exp} />
+                  )}
+                  </div>
+                </motion.section>
               )}
-            </nav>
-          </div>
-        </div>
-
-        {/* Experiments Content */}
-        <div className="flex-1 space-y-16 md:space-y-24">
-          {experimentsData.map((phaseData, idx) =>
-          <motion.section
-            key={idx}
-            id={phaseData.phase.toLowerCase()}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            onViewportEnter={() => setActiveSection(phaseData.phase)}
-            className="scroll-mt-32 md:scroll-mt-40">
-            
-              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-6 md:mb-8">
-                
-
-              
-                <div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-2 md:mb-3">{phaseData.phase} Experiments</h2>
-                  <p className="text-slate-600 text-sm md:text-lg max-w-3xl leading-relaxed">{phaseData.description}</p>
+            </div>
+          </>
+        ) : (
+          <div className="w-full flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scroll-p-4 min-h-[calc(100vh-300px)]">
+            {kanbanStages.map((stage) => (
+              <div 
+                key={stage} 
+                ref={(el) => (columnRefs.current[stage] = el)}
+                className="flex-1 min-w-[300px] max-w-[360px] bg-slate-100/50 rounded-2xl p-4 border border-slate-200 snap-start flex flex-col"
+              >
+                <h3 className="text-sm font-bold text-slate-700 uppercase tracking-wider mb-4 flex items-center justify-between shrink-0">
+                  {stage}
+                  <span className="bg-white border border-slate-200 text-slate-600 px-2 py-0.5 rounded-full text-xs shadow-sm">
+                    {experiments.filter(e => e.status === stage).length}
+                  </span>
+                </h3>
+                <div className="flex flex-col gap-4 h-full relative z-0">
+                  <AnimatePresence>
+                    {experiments.filter(e => e.status === stage).map((exp) => (
+                      <KanbanItem key={exp.id} exp={exp} handleDragEnd={handleDragEnd} />
+                    ))}
+                  </AnimatePresence>
                 </div>
               </div>
-              
-              <div className="space-y-4 md:space-y-6">
-                {phaseData.experiments.map((exp) =>
-              <ExperimentCard key={exp.id} exp={exp} />
-              )}
-              </div>
-            </motion.section>
-          )}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       
       {/* Footer Meta */}
