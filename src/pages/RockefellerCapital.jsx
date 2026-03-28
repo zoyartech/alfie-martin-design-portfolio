@@ -108,6 +108,16 @@ export default function RockefellerCapital() {
               allowFullScreen
             />
           </div>
+          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-12" style={{ height: '80vh' }}>
+            <iframe
+              src="https://savor-deal-73805598.figma.site"
+              width="100%"
+              height="100%"
+              style={{ border: 'none' }}
+              title="RCM Interactive Prototype"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
 
