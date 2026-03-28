@@ -97,28 +97,28 @@ function FindingCard({ finding }) {
             {finding.severity}
           </span>
           <div>
-            <p className="font-semibold text-black text-sm leading-snug">{finding.id}: {finding.title}</p>
+            <p className="text-black text-base font-semibold leading-snug">{finding.id}: {finding.title}</p>
             <p className="text-xs mt-1" style={{ color: '#014388' }}>{finding.participants}</p>
           </div>
         </div>
-        {open
-          ? <ChevronUp className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} />
-          : <ChevronDown className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} />}
+        {open ?
+        <ChevronUp className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} /> :
+        <ChevronDown className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} />}
       </button>
       {open &&
-        <div className="px-6 pb-6 space-y-4 pt-4" style={{ borderTop: '1px solid #a7ecff', backgroundColor: '#f0fbff' }}>
+      <div className="bg-[#adf7ff] pt-4 pb-6 px-6 space-y-4" style={{ borderTop: '1px solid #a7ecff', backgroundColor: '#f0fbff' }}>
           <blockquote className="rounded-lg p-4 text-sm text-black italic leading-relaxed" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
             {finding.quote}
             <footer className="mt-2 text-xs not-italic" style={{ color: '#014388' }}>{finding.attribution}</footer>
           </blockquote>
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: '#014388' }}>Recommendation</p>
+            <p className="mb-1 text-sm font-bold uppercase tracking-widest" style={{ color: '#014388' }}>Recommendation</p>
             <p className="text-sm text-black leading-relaxed">{finding.recommendation}</p>
           </div>
         </div>
       }
-    </div>
-  );
+    </div>);
+
 }
 
 export default function PrincipalFinancial() {
@@ -162,8 +162,8 @@ export default function PrincipalFinancial() {
             className="w-full"
             style={{ height: '100vh', border: 'none' }}
             title="Principal Financial Figma Prototype"
-            allowFullScreen
-          />
+            allowFullScreen />
+          
         </div>
       </section>
 
@@ -243,16 +243,16 @@ export default function PrincipalFinancial() {
                 </thead>
                 <tbody>
                   {participants.map((p, i) =>
-                    <tr key={p.id} style={{ borderBottom: '1px solid #a7ecff33', backgroundColor: i % 2 === 0 ? 'white' : '#f0fbff' }}>
+                  <tr key={p.id} style={{ borderBottom: '1px solid #a7ecff33', backgroundColor: i % 2 === 0 ? 'white' : '#f0fbff' }}>
                       <td className="px-5 py-4 font-bold text-black">{p.id}</td>
                       <td className="px-5 py-4 text-black">{p.role}</td>
                       <td className="px-5 py-4 text-black">{p.experience}</td>
                       <td className="px-5 py-4 text-black">{p.clients}</td>
                       <td className="px-5 py-4">
                         <span className="text-xs px-2.5 py-1 rounded font-medium text-black" style={{
-                          backgroundColor: p.segment === 'Enterprise' ? '#a7ecff' : p.segment === 'Mid-market' ? '#e0f4ff' : '#cdf5ff',
-                          border: '1px solid #08aedb'
-                        }}>{p.segment}</span>
+                        backgroundColor: p.segment === 'Enterprise' ? '#a7ecff' : p.segment === 'Mid-market' ? '#e0f4ff' : '#cdf5ff',
+                        border: '1px solid #08aedb'
+                      }}>{p.segment}</span>
                       </td>
                     </tr>
                   )}
@@ -268,12 +268,12 @@ export default function PrincipalFinancial() {
               <p className="text-xs mb-5" style={{ color: '#014388' }}>68 observations coded across 5 themes from 6 sessions</p>
               <div className="space-y-4">
                 {themes.map((t) =>
-                  <div key={t.label} className="flex items-center gap-4">
+                <div key={t.label} className="flex items-center gap-4">
                     <span className="text-sm font-semibold text-black w-44 shrink-0">{t.label}</span>
                     <div className="flex-1 rounded h-7 relative overflow-hidden" style={{ backgroundColor: '#e0f4ff' }}>
                       <div
-                        className="h-full rounded flex items-center justify-end pr-2"
-                        style={{ width: `${t.count / 23 * 100}%`, backgroundColor: '#014388' }}>
+                      className="h-full rounded flex items-center justify-end pr-2"
+                      style={{ width: `${t.count / 23 * 100}%`, backgroundColor: '#014388' }}>
                         <span className="text-xs font-bold text-white">{t.count}</span>
                       </div>
                     </div>
@@ -286,7 +286,7 @@ export default function PrincipalFinancial() {
 
           {/* Key Findings */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Key Findings</h2>
+            <h2 className="mb-6 pb-2 text-lg font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Key Findings</h2>
             <div className="space-y-3">
               {findings.map((f) => <FindingCard key={f.id} finding={f} />)}
             </div>
@@ -297,11 +297,11 @@ export default function PrincipalFinancial() {
             <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Next Steps</h2>
             <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #a7ecff', backgroundColor: 'white' }}>
               {nextSteps.map((step, i) =>
-                <div key={i} className="flex items-center gap-4 px-6 py-4" style={{ borderBottom: i < nextSteps.length - 1 ? '1px solid #a7ecff' : 'none' }}>
+              <div key={i} className="flex items-center gap-4 px-6 py-4" style={{ borderBottom: i < nextSteps.length - 1 ? '1px solid #a7ecff' : 'none' }}>
                   <span className="text-xs font-semibold px-2.5 py-1 rounded shrink-0 text-black" style={{
-                    backgroundColor: step.status === 'In progress' ? '#a7ecff' : step.status === 'Planned' ? '#e0f4ff' : '#f0fbff',
-                    border: `1px solid ${step.status === 'In progress' ? '#08aedb' : step.status === 'Planned' ? '#014388' : '#a7ecff'}`
-                  }}>{step.status}</span>
+                  backgroundColor: step.status === 'In progress' ? '#a7ecff' : step.status === 'Planned' ? '#e0f4ff' : '#f0fbff',
+                  border: `1px solid ${step.status === 'In progress' ? '#08aedb' : step.status === 'Planned' ? '#014388' : '#a7ecff'}`
+                }}>{step.status}</span>
                   <p className="text-sm text-black">{step.label}</p>
                 </div>
               )}
@@ -317,6 +317,6 @@ export default function PrincipalFinancial() {
           <p className="text-xs" style={{ color: '#a7ecff' }}>© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
