@@ -94,7 +94,7 @@ export default function Home() {
 
         {/* Square outline tracking cursor */}
         <div
-          className="absolute pointer-events-none border border-white/50 transition-opacity duration-300 z-10"
+          className="hidden md:block absolute pointer-events-none border border-white/50 transition-opacity duration-300 z-10"
           style={{
             left: mousePos.x - 180,
             top: mousePos.y - 180,
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1
               className="text-white font-light tracking-tighter drop-shadow-lg"
-              style={{ fontSize: 'clamp(5rem, 18vw, 24rem)', lineHeight: 0.8 }}>
+              style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
               
                Alfie Martin
              </h1>
@@ -134,7 +134,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }} className="border-b border-gray-100 pb-16">
             <p className="text-gray-950 mb-8 text-base font-semibold text-center tracking-[0.3em]">PREVIOUSLY</p>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
               {[
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/df08903cb_Group1.png", alt: "Polaroid" },
@@ -166,7 +166,7 @@ export default function Home() {
             transition={{ duration: 0.5 }} className="text-slate-900 mb-12 text-xs tracking-[0.3em]">
             DESIGN PROCESS</motion.p>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
             {
               step: "01",
