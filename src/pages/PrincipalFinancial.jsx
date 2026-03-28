@@ -50,17 +50,17 @@ The biggest design challenge was density. Advisors wanted everything visible at 
           </motion.div>
           
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-2xl font-semibold mb-4 text-slate-900">Impact</h2>
-            <div className="grid sm:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
-                <div className="text-4xl font-light text-blue-600 mb-2">40%</div>
-                <div className="text-sm font-semibold text-slate-700">Reduction in task completion time</div>
-              </div>
-              <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
-                <div className="text-4xl font-light text-blue-600 mb-2">85%</div>
-                <div className="text-sm font-semibold text-slate-700">Positive user feedback score</div>
-              </div>
-            </div>
+            
+            
+
+
+
+
+
+
+
+
+            
           </motion.div>
         </div>
       </section>
