@@ -6,6 +6,17 @@ import { createPageUrl } from "@/utils";
 
 const projects = [
 {
+  title: "Principal Financial",
+  category: "Product Design",
+  industry: "Finance",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png",
+  year: "2024",
+  link: "PrincipalFinancial",
+  summary: "Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners.",
+  stats: [],
+  tags: ["Enterprise UX", "Advisory Tools", "Product Design"]
+},
+{
   title: "The User Experience of AI Products",
   category: "AI Design",
   industry: "Technology",
