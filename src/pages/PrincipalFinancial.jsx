@@ -37,8 +37,8 @@ export default function PrincipalFinancial() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">Principal: Client Overview Dashboard & SBO Advisory Suite
 </h2>
-            <p className="text-slate-600 leading-relaxed text-lg">
-              Principal Financial needed a comprehensive overhaul of their internal business tools. Employees were struggling with fragmented workflows, legacy interfaces, and inefficient data entry processes that slowed down their ability to serve clients effectively.
+            <p className="text-slate-600 leading-relaxed text-lg">I was lead product designer on Principal's SBO Advisory platform, a suite of web and mobile tools helping financial advisors guide small business owners through retirement, succession planning, and business sales. The flagship piece was the Client Overview dashboard, supported by a mobile companion app for advisors and a client-facing web portal for business owners tracking their own readiness.
+
             </p>
           </motion.div>
 
