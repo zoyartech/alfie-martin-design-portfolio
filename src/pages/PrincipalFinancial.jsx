@@ -35,6 +35,9 @@ export default function PrincipalFinancial() {
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto space-y-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div className="mb-12 rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-gray-50">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f5d23fb02_new-imac-24-inches-mockup-front-view-on-table-template-69c79593e80e6c1034ee2bb0-2x.png" alt="Principal Client Overview Dashboard" className="w-full h-auto object-cover" />
+            </div>
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">Principal: Client Overview Dashboard & SBO Advisory Suite
 </h2>
             <p className="text-slate-600 leading-relaxed text-lg">I was lead product designer on Principal's SBO Advisory platform, a suite of web and mobile tools helping financial advisors guide small business owners through retirement, succession planning, and business sales. The flagship piece was the Client Overview dashboard, supported by a mobile companion app for advisors and a client-facing web portal for business owners tracking their own readiness.
