@@ -94,6 +94,23 @@ export default function RockefellerCapital() {
         </div>
       </div>
 
+      {/* Mobile View */}
+      <div className="bg-white py-16 md:py-24 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-serif text-4xl font-bold mb-8 text-slate-900">Mobile View</h2>
+          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200" style={{ height: '80vh' }}>
+            <iframe
+              src="https://www.figma.com/make/QmUiz9qZpiNqNK2HwVNmsf/Interactive-Wealth-Management-Platform--Copy-?t=kT9vXLdBD8xFuydI-1"
+              width="100%"
+              height="100%"
+              style={{ border: 'none' }}
+              title="RCM Mobile View"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+
       {/* The Business Problem */}
       <div className="bg-slate-900 text-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
