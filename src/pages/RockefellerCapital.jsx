@@ -108,6 +108,9 @@ export default function RockefellerCapital() {
             <p className="p-6 bg-slate-800 rounded-lg text-white border border-slate-700">
               Because the mobile app is not available to the public, I asked the team at RCM to create a test profile login for me so I could audit the current UX, heuristics, user journey, and content.
             </p>
+            <div className="w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-slate-700 mt-8">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5VQYwxQCrZ8?si=FQZl6Qc1o079Bsnr" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
           </div>
         </div>
       </div>
