@@ -44,8 +44,8 @@ export default function PrincipalFinancial() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">The Solution</h2>
-            <p className="text-slate-600 leading-relaxed text-lg">
-              We developed a unified suite of enterprise tools with a modernized design system, focusing on high-density data visualization, streamlined navigation, and task-oriented workflows. This reduced cognitive load and significantly improved operational efficiency.
+            <p className="text-slate-600 leading-relaxed text-lg">The core problem was that advisors had no single view of the full client picture. Business valuation, personal wealth, insurance gaps, compliance flags, succession status, tax strategy, cash runway. All of it lived in different systems. The platform needed to surface the right signal at the right moment so advisors could have better conversations with clients making the biggest financial decision of their lives.
+
             </p>
           </motion.div>
           
