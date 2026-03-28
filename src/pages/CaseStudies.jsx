@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { base44 } from "@/api/base44Client";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
@@ -9,6 +10,13 @@ import DesignTestimonials from "@/components/design/DesignTestimonials";
 import ConsultationForm from "@/components/design/ConsultationForm";
 
 export default function CaseStudies() {
+  useEffect(() => {
+    base44.analytics.track({
+      eventName: "viewed_design_portfolio",
+      properties: { page: "CaseStudies" }
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
 
