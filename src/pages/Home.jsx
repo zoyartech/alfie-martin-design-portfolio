@@ -133,7 +133,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }} className="border-b border-gray-100 pb-16">
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-8 text-center">PREVIOUSLY</p>
+            <p className="text-gray-950 mb-8 text-base font-semibold text-center tracking-[0.3em]">PREVIOUSLY</p>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
               {[
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/1190401ad_grammarlylogo.png", alt: "Grammarly" },
