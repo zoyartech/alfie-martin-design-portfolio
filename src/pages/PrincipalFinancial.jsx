@@ -44,9 +44,9 @@ export default function PrincipalFinancial() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">The Solution</h2>
-            <p className="text-slate-600 leading-relaxed text-lg">The core problem was that advisors had no single view of the full client picture. Business valuation, personal wealth, insurance gaps, compliance flags, succession status, tax strategy, cash runway. All of it lived in different systems. The platform needed to surface the right signal at the right moment so advisors could have better conversations with clients making the biggest financial decision of their lives.
-
-            </p>
+            <p className="text-slate-600 leading-relaxed text-lg">The core problem was that advisors had no single view of the full client picture. Business valuation, personal wealth, insurance gaps, compliance flags, succession status, tax strategy, cash runway. All of it lived in different systems. The platform needed to surface the right signal at the right moment so advisors could have better conversations with clients, making the biggest financial decision of their lives.
+The biggest design challenge was density. Advisors wanted everything visible at once but the data model per client was enormous. I landed on the card-based layout with a persistent detail nav as a compromise. Top row gives a fast situational read, chart row shows trend and performance, bottom row surfaces risk and holdings. The left nav lets advisors drill into any domain without leaving the page.
+</p>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
