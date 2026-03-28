@@ -143,12 +143,16 @@ export default function PrincipalFinancial() {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="py-12 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f5d23fb02_new-imac-24-inches-mockup-front-view-on-table-template-69c79593e80e6c1034ee2bb0-2x.png" alt="Principal Client Overview Dashboard" className="w-full h-auto" />
-          </div>
+      {/* Figma Prototype Embed */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="w-full">
+          <iframe
+            src="https://cough-point-09643712.figma.site"
+            className="w-full"
+            style={{ height: '100vh', border: 'none' }}
+            title="Principal Financial Figma Prototype"
+            allowFullScreen
+          />
         </div>
       </section>
 
