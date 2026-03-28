@@ -35,6 +35,7 @@ import ExamplesOfGrowthDesignExperiments from './pages/ExamplesOfGrowthDesignExp
 import EnterpriseContentStrategy from './pages/EnterpriseContentStrategy';
 import ActivationGrammarly from './pages/ActivationGrammarly';
 import Analytics from './pages/Analytics';
+import PrincipalFinancial from './pages/PrincipalFinancial';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -94,6 +95,7 @@ const AuthenticatedApp = () => {
       <Route path="/EnterpriseContentStrategy" element={<EnterpriseContentStrategy />} />
       <Route path="/ActivationGrammarly" element={<ActivationGrammarly />} />
       <Route path="/Analytics" element={<Analytics />} />
+      <Route path="/PrincipalFinancial" element={<PrincipalFinancial />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
