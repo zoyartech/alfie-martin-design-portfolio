@@ -200,12 +200,12 @@ export default function PrincipalFinancial() {
         <div className="max-w-4xl mx-auto space-y-16">
 
           <div>
-            <h2 className="text-3xl md:text-4xl font-light text-black">UX Research</h2>
+            <h2 className="text-black text-3xl font-semibold md:text-4xl">UX Research</h2>
           </div>
 
           {/* Methodology */}
           <div>
-            <h2 className="mb-6 pb-2 text-lg font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
+            <h2 className="mb-6 pb-2 text-lg font-black uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
             <div className="rounded-xl p-6" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6 pb-6" style={{ borderBottom: '1px solid #a7ecff' }}>
                 <div>
@@ -233,7 +233,7 @@ export default function PrincipalFinancial() {
 
           {/* Participants */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Participants</h2>
+            <h2 className="mb-6 pb-2 text-xl font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Participants</h2>
             <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #a7ecff', backgroundColor: 'white' }}>
               <table className="w-full text-sm">
                 <thead>
