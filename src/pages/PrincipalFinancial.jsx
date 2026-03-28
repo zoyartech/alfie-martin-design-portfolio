@@ -12,14 +12,12 @@ const participants = [
 { id: 'P05', role: 'Lead Advisor', experience: '20 yrs', clients: 71, segment: 'Enterprise' },
 { id: 'P06', role: 'Advisor', experience: '6 yrs', clients: 30, segment: 'Mid-market' }];
 
-
 const themes = [
 { label: 'Data fragmentation', count: 23, pct: 34 },
 { label: 'Compliance anxiety', count: 16, pct: 24 },
 { label: 'Meeting prep burden', count: 12, pct: 18 },
 { label: 'Client emotional state', count: 9, pct: 13 },
 { label: 'Mobile limitations', count: 8, pct: 11 }];
-
 
 const findings = [
 {
@@ -59,29 +57,27 @@ const findings = [
   recommendation: 'Design mobile experience around two modes: pre-meeting briefing (flags, performance snapshot, open items) and post-meeting capture (notes, task updates).'
 }];
 
-
 const nextSteps = [
 { status: 'In progress', label: 'Translate F1 and F2 into dashboard wireframes for Client Overview' },
 { status: 'Planned', label: 'Design mobile pre-meeting and post-meeting flows per F4' },
 { status: 'Planned', label: 'Validate milestone-based framing with 4-6 business owner participants' },
 { status: 'Backlog', label: 'Align notification thresholds with compliance team requirements' }];
 
-
 const segmentColors = {
-  'Mid-market': 'bg-gray-100 text-gray-700',
-  'Enterprise': 'bg-blue-50 text-blue-700',
-  'Emerging': 'bg-green-50 text-green-700'
+  'Mid-market': 'text-black',
+  'Enterprise': 'text-black',
+  'Emerging': 'text-black'
 };
 
 const severityStyles = {
-  Critical: { badge: 'bg-red-50 text-red-600 border border-red-200', bar: 'border-l-4 border-red-400' },
-  High: { badge: 'bg-orange-50 text-orange-500 border border-orange-200', bar: 'border-l-4 border-orange-400' }
+  Critical: { badge: 'text-black border', bar: 'border-l-4', barColor: '#08aedb' },
+  High: { badge: 'text-black border', bar: 'border-l-4', barColor: '#014388' }
 };
 
 const statusStyles = {
-  'In progress': 'bg-orange-50 text-orange-600 border border-orange-200',
-  'Planned': 'bg-blue-50 text-blue-600 border border-blue-200',
-  'Backlog': 'bg-gray-100 text-gray-500'
+  'In progress': 'text-black border',
+  'Planned': 'text-black border',
+  'Backlog': 'text-black'
 };
 
 function FindingCard({ finding }) {
@@ -89,62 +85,77 @@ function FindingCard({ finding }) {
   const styles = severityStyles[finding.severity];
 
   return (
-    <div className={`bg-white rounded-xl border border-gray-200 overflow-hidden ${styles.bar}`}>
+    <div className="rounded-xl overflow-hidden border" style={{ borderLeftWidth: '4px', borderLeftColor: styles.barColor, borderColor: '#a7ecff' }}>
       <button
-        className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
+        className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 transition-colors"
+        style={{ backgroundColor: open ? '#a7ecff22' : 'white' }}
         onClick={() => setOpen(!open)}>
-        
         <div className="flex items-start gap-3">
-          <span className={`text-xs font-semibold px-2 py-0.5 rounded mt-0.5 shrink-0 ${styles.badge}`}>{finding.severity}</span>
+          <span
+            className="text-xs font-semibold px-2 py-0.5 rounded mt-0.5 shrink-0 border"
+            style={{ backgroundColor: finding.severity === 'Critical' ? '#a7ecff' : '#e0f4ff', borderColor: '#08aedb', color: '#002853' }}>
+            {finding.severity}
+          </span>
           <div>
-            <p className="font-semibold text-slate-900 text-sm leading-snug">{finding.id}: {finding.title}</p>
-            <p className="text-xs text-gray-400 mt-1">{finding.participants}</p>
+            <p className="font-semibold text-black text-sm leading-snug">{finding.id}: {finding.title}</p>
+            <p className="text-xs mt-1" style={{ color: '#014388' }}>{finding.participants}</p>
           </div>
         </div>
-        {open ? <ChevronUp className="w-4 h-4 text-gray-400 shrink-0 mt-1" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 mt-1" />}
+        {open
+          ? <ChevronUp className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} />
+          : <ChevronDown className="w-4 h-4 shrink-0 mt-1" style={{ color: '#08aedb' }} />}
       </button>
       {open &&
-      <div className="px-6 pb-6 space-y-4 border-t border-gray-100 pt-4">
-          <blockquote className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-sm text-slate-600 italic leading-relaxed">
+        <div className="px-6 pb-6 space-y-4 pt-4" style={{ borderTop: '1px solid #a7ecff', backgroundColor: '#f0fbff' }}>
+          <blockquote className="rounded-lg p-4 text-sm text-black italic leading-relaxed" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
             {finding.quote}
-            <footer className="mt-2 text-xs text-gray-400 not-italic">{finding.attribution}</footer>
+            <footer className="mt-2 text-xs not-italic" style={{ color: '#014388' }}>{finding.attribution}</footer>
           </blockquote>
           <div>
-            <p className="text-xs font-bold tracking-widest text-emerald-700 uppercase mb-1">Recommendation</p>
-            <p className="text-sm text-slate-600 leading-relaxed">{finding.recommendation}</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: '#014388' }}>Recommendation</p>
+            <p className="text-sm text-black leading-relaxed">{finding.recommendation}</p>
           </div>
         </div>
       }
-    </div>);
-
+    </div>
+  );
 }
 
 export default function PrincipalFinancial() {
   return (
-    <div className="min-h-screen bg-[#f5f4f0]">
+    <div className="min-h-screen" style={{ backgroundColor: '#f0fbff' }}>
       {/* Header */}
-      <section className="pt-32 pb-16 px-6 lg:px-12 bg-white border-b border-gray-200">
+      <section className="pt-32 pb-16 px-6 lg:px-12" style={{ backgroundColor: '#002853', borderBottom: '1px solid #014388' }}>
         <div className="max-w-4xl mx-auto">
-          <Link to={createPageUrl("CaseStudies")} className="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-gray-500 hover:text-black transition-colors uppercase font-bold mb-8">
+          <Link to={createPageUrl("CaseStudies")} className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-bold mb-8 transition-colors" style={{ color: '#a7ecff' }}>
             <ArrowLeft className="w-4 h-4" /> Back to Case Studies
           </Link>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4 uppercase">Case Study</p>
-            <h1 className="text-4xl md:text-5xl font-light mb-6 text-slate-900">Designing Business Tools for Principal Financial</h1>
-            <p className="text-gray-500 max-w-3xl text-lg leading-relaxed">
+            <p className="text-xs tracking-[0.3em] mb-4 uppercase" style={{ color: '#08aedb' }}>Case Study</p>
+            <h1 className="text-4xl md:text-5xl font-light mb-6 text-white">Designing Business Tools for Principal Financial</h1>
+            <p className="max-w-3xl text-lg leading-relaxed" style={{ color: '#a7ecff' }}>
               Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners through retirement, succession, and wealth planning.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
-            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">ROLE</p><p className="text-gray-700">Product Designer</p></div>
-            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">FOCUS</p><p className="text-gray-700">Enterprise UX, Advisory Tools</p></div>
-            <div><p className="text-xs tracking-[0.2em] text-gray-400 mb-2">CLIENT</p><p className="text-gray-700">Principal Financial</p></div>
+          <div className="grid md:grid-cols-3 gap-8 mt-12 pt-12" style={{ borderTop: '1px solid #014388' }}>
+            <div>
+              <p className="text-xs tracking-[0.2em] mb-2" style={{ color: '#08aedb' }}>ROLE</p>
+              <p className="text-white">Product Designer</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.2em] mb-2" style={{ color: '#08aedb' }}>FOCUS</p>
+              <p className="text-white">Enterprise UX, Advisory Tools</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.2em] mb-2" style={{ color: '#08aedb' }}>CLIENT</p>
+              <p className="text-white">Principal Financial</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Figma Prototype Embed */}
-      <section className="bg-white border-b border-gray-200">
+      <section style={{ backgroundColor: 'white', borderBottom: '1px solid #a7ecff' }}>
         <div className="w-full">
           <iframe
             src="https://cough-point-09643712.figma.site"
@@ -157,20 +168,20 @@ export default function PrincipalFinancial() {
       </section>
 
       {/* Overview */}
-      <section className="py-12 px-6 lg:px-12 bg-white border-b border-gray-200">
+      <section className="py-12 px-6 lg:px-12" style={{ backgroundColor: 'white', borderBottom: '1px solid #a7ecff' }}>
         <div className="max-w-4xl mx-auto space-y-8">
           <div>
-            <h2 className="text-xl font-semibold mb-3 text-slate-900">Principal: Client Overview Dashboard & SBO Advisory Suite</h2>
-            <p className="text-slate-600 leading-relaxed">
+            <h2 className="text-xl font-semibold mb-3 text-black">Principal: Client Overview Dashboard & SBO Advisory Suite</h2>
+            <p className="leading-relaxed text-black">
               I was lead product designer on Principal's SBO Advisory platform, a suite of web and mobile tools helping financial advisors guide small business owners through retirement, succession, and wealth planning — and business owners tracking their own readiness.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-slate-900">The Solution</h3>
-            <p className="text-slate-600 leading-relaxed">
+            <h3 className="text-lg font-semibold mb-3 text-black">The Solution</h3>
+            <p className="leading-relaxed text-black">
               The core problem was that advisors had no single view of the full client picture. Business valuation, personal wealth, insurance gaps, compliance flags, succession status, and tax strategy were siloed across multiple tools — leaving advisors to manually aggregate data before every client meeting, often the biggest financial decision of their lives.
             </p>
-            <p className="text-slate-600 leading-relaxed mt-3">
+            <p className="leading-relaxed mt-3 text-black">
               The biggest design challenge was density. Advisors wanted everything visible at once but the data model per client was enormous. I landed on a card-based layout with a persistent detail nav as a compromise. The top row gives a fast situational read; advisors can drill into any domain without leaving the page.
             </p>
           </div>
@@ -178,39 +189,39 @@ export default function PrincipalFinancial() {
       </section>
 
       {/* Mockup Image */}
-      <section className="py-12 px-6 lg:px-12">
+      <section className="py-12 px-6 lg:px-12" style={{ backgroundColor: '#f0fbff' }}>
         <div className="max-w-5xl mx-auto">
           <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b02482119_Screenshot2026-03-28at43334AM.png" alt="Principal Client Overview Dashboard on MacBook" className="w-full h-auto rounded-2xl" />
         </div>
       </section>
 
       {/* Research Content */}
-      <section className="py-12 px-6 lg:px-12">
+      <section className="py-12 px-6 lg:px-12" style={{ backgroundColor: '#f0fbff' }}>
         <div className="max-w-4xl mx-auto space-y-16">
 
           {/* Methodology */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] text-emerald-700 uppercase border-b-2 border-emerald-600 pb-2 mb-6 w-fit">Methodology</h2>
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6 pb-6 border-b border-gray-100">
+            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
+            <div className="rounded-xl p-6" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6 pb-6" style={{ borderBottom: '1px solid #a7ecff' }}>
                 <div>
-                  <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Method</p>
-                  <p className="font-semibold text-slate-900 text-sm">Contextual inquiry</p>
+                  <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#08aedb' }}>Method</p>
+                  <p className="font-semibold text-black text-sm">Contextual inquiry</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Participants</p>
-                  <p className="font-semibold text-slate-900 text-sm">n = 6 advisors</p>
+                  <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#08aedb' }}>Participants</p>
+                  <p className="font-semibold text-black text-sm">n = 6 advisors</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Duration</p>
-                  <p className="font-semibold text-slate-900 text-sm">60 min sessions</p>
+                  <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#08aedb' }}>Duration</p>
+                  <p className="font-semibold text-black text-sm">60 min sessions</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Setting</p>
-                  <p className="font-semibold text-slate-900 text-sm">Remote observation</p>
+                  <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#08aedb' }}>Setting</p>
+                  <p className="font-semibold text-black text-sm">Remote observation</p>
                 </div>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-black leading-relaxed">
                 Each session observed an advisor preparing for a real client meeting, including which tools they opened, what data they sought, how they flagged risks, and what they wished they had. This round supplemented prior McKinsey-led strategic research (n=200+ survey, stakeholder interviews) with hands-on behavioral data to inform interface design decisions.
               </p>
             </div>
@@ -218,27 +229,30 @@ export default function PrincipalFinancial() {
 
           {/* Participants */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] text-emerald-700 uppercase border-b-2 border-emerald-600 pb-2 mb-6 w-fit">Participants</h2>
-            <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Participants</h2>
+            <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #a7ecff', backgroundColor: 'white' }}>
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-gray-100">
-                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest text-gray-400 uppercase">ID</th>
-                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest text-gray-400 uppercase">Role</th>
-                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest text-gray-400 uppercase">Experience</th>
-                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest text-gray-400 uppercase">Active Clients</th>
-                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest text-gray-400 uppercase">Segment</th>
+                  <tr style={{ borderBottom: '1px solid #a7ecff' }}>
+                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest uppercase" style={{ color: '#08aedb' }}>ID</th>
+                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest uppercase" style={{ color: '#08aedb' }}>Role</th>
+                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest uppercase" style={{ color: '#08aedb' }}>Experience</th>
+                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest uppercase" style={{ color: '#08aedb' }}>Active Clients</th>
+                    <th className="text-left px-5 py-3 text-[10px] font-bold tracking-widest uppercase" style={{ color: '#08aedb' }}>Segment</th>
                   </tr>
                 </thead>
                 <tbody>
                   {participants.map((p, i) =>
-                  <tr key={p.id} className={`border-b border-gray-50 ${i % 2 === 0 ? '' : 'bg-gray-50/50'}`}>
-                      <td className="px-5 py-4 font-bold text-slate-900">{p.id}</td>
-                      <td className="px-5 py-4 text-slate-600">{p.role}</td>
-                      <td className="px-5 py-4 text-slate-600">{p.experience}</td>
-                      <td className="px-5 py-4 text-slate-600">{p.clients}</td>
+                    <tr key={p.id} style={{ borderBottom: '1px solid #a7ecff33', backgroundColor: i % 2 === 0 ? 'white' : '#f0fbff' }}>
+                      <td className="px-5 py-4 font-bold text-black">{p.id}</td>
+                      <td className="px-5 py-4 text-black">{p.role}</td>
+                      <td className="px-5 py-4 text-black">{p.experience}</td>
+                      <td className="px-5 py-4 text-black">{p.clients}</td>
                       <td className="px-5 py-4">
-                        <span className={`text-xs px-2.5 py-1 rounded font-medium ${segmentColors[p.segment]}`}>{p.segment}</span>
+                        <span className="text-xs px-2.5 py-1 rounded font-medium text-black" style={{
+                          backgroundColor: p.segment === 'Enterprise' ? '#a7ecff' : p.segment === 'Mid-market' ? '#e0f4ff' : '#cdf5ff',
+                          border: '1px solid #08aedb'
+                        }}>{p.segment}</span>
                       </td>
                     </tr>
                   )}
@@ -249,22 +263,21 @@ export default function PrincipalFinancial() {
 
           {/* Affinity Mapping */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] text-emerald-700 uppercase border-b-2 border-emerald-600 pb-2 mb-6 w-fit">Affinity Mapping — Theme Distribution</h2>
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <p className="text-xs text-gray-400 mb-5">68 observations coded across 5 themes from 6 sessions</p>
+            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Affinity Mapping — Theme Distribution</h2>
+            <div className="rounded-xl p-6" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
+              <p className="text-xs mb-5" style={{ color: '#014388' }}>68 observations coded across 5 themes from 6 sessions</p>
               <div className="space-y-4">
                 {themes.map((t) =>
-                <div key={t.label} className="flex items-center gap-4">
-                    <span className="text-sm font-semibold text-slate-700 w-44 shrink-0">{t.label}</span>
-                    <div className="flex-1 bg-gray-100 rounded h-7 relative overflow-hidden">
+                  <div key={t.label} className="flex items-center gap-4">
+                    <span className="text-sm font-semibold text-black w-44 shrink-0">{t.label}</span>
+                    <div className="flex-1 rounded h-7 relative overflow-hidden" style={{ backgroundColor: '#e0f4ff' }}>
                       <div
-                      className="h-full bg-emerald-600 rounded flex items-center justify-end pr-2"
-                      style={{ width: `${t.count / 23 * 100}%` }}>
-                      
+                        className="h-full rounded flex items-center justify-end pr-2"
+                        style={{ width: `${t.count / 23 * 100}%`, backgroundColor: '#014388' }}>
                         <span className="text-xs font-bold text-white">{t.count}</span>
                       </div>
                     </div>
-                    <span className="text-sm text-gray-500 w-8 text-right">{t.pct}%</span>
+                    <span className="text-sm w-8 text-right text-black">{t.pct}%</span>
                   </div>
                 )}
               </div>
@@ -273,7 +286,7 @@ export default function PrincipalFinancial() {
 
           {/* Key Findings */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] text-emerald-700 uppercase border-b-2 border-emerald-600 pb-2 mb-6 w-fit">Key Findings</h2>
+            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Key Findings</h2>
             <div className="space-y-3">
               {findings.map((f) => <FindingCard key={f.id} finding={f} />)}
             </div>
@@ -281,12 +294,15 @@ export default function PrincipalFinancial() {
 
           {/* Next Steps */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] text-emerald-700 uppercase border-b-2 border-emerald-600 pb-2 mb-6 w-fit">Next Steps</h2>
-            <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Next Steps</h2>
+            <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #a7ecff', backgroundColor: 'white' }}>
               {nextSteps.map((step, i) =>
-              <div key={i} className={`flex items-center gap-4 px-6 py-4 ${i < nextSteps.length - 1 ? 'border-b border-gray-100' : ''}`}>
-                  <span className={`text-xs font-semibold px-2.5 py-1 rounded shrink-0 ${statusStyles[step.status]}`}>{step.status}</span>
-                  <p className="text-sm text-slate-600">{step.label}</p>
+                <div key={i} className="flex items-center gap-4 px-6 py-4" style={{ borderBottom: i < nextSteps.length - 1 ? '1px solid #a7ecff' : 'none' }}>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded shrink-0 text-black" style={{
+                    backgroundColor: step.status === 'In progress' ? '#a7ecff' : step.status === 'Planned' ? '#e0f4ff' : '#f0fbff',
+                    border: `1px solid ${step.status === 'In progress' ? '#08aedb' : step.status === 'Planned' ? '#014388' : '#a7ecff'}`
+                  }}>{step.status}</span>
+                  <p className="text-sm text-black">{step.label}</p>
                 </div>
               )}
             </div>
@@ -296,11 +312,11 @@ export default function PrincipalFinancial() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 lg:px-12 border-t border-gray-200 bg-white mt-16">
+      <footer className="py-8 px-6 lg:px-12 mt-16" style={{ borderTop: '1px solid #014388', backgroundColor: '#002853' }}>
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
+          <p className="text-xs" style={{ color: '#a7ecff' }}>© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
