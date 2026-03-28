@@ -201,7 +201,7 @@ export default function PrincipalFinancial() {
 
           {/* Methodology */}
           <div>
-            <h2 className="text-xs font-bold tracking-[0.25em] uppercase pb-2 mb-6 w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
+            <h2 className="mb-6 pb-2 text-lg font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
             <div className="rounded-xl p-6" style={{ backgroundColor: 'white', border: '1px solid #a7ecff' }}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6 pb-6" style={{ borderBottom: '1px solid #a7ecff' }}>
                 <div>
