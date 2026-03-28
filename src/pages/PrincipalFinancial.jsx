@@ -199,6 +199,10 @@ export default function PrincipalFinancial() {
       <section className="py-12 px-6 lg:px-12" style={{ backgroundColor: '#f0fbff' }}>
         <div className="max-w-4xl mx-auto space-y-16">
 
+          <div>
+            <h2 className="text-3xl md:text-4xl font-light text-black">UX Research</h2>
+          </div>
+
           {/* Methodology */}
           <div>
             <h2 className="mb-6 pb-2 text-lg font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Methodology</h2>
