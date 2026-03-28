@@ -135,9 +135,16 @@ export default function RockefellerCapital() {
             <p className="p-6 bg-slate-800 rounded-lg text-white border border-slate-700">
               Because the mobile app is not available to the public, I asked the team at RCM to create a test profile login for me so I could audit the current UX, heuristics, user journey, and content.
             </p>
-            
-
-            
+          </div>
+          
+          <div className="w-full rounded-xl overflow-hidden shadow-lg border border-slate-700 bg-slate-800 mt-12" style={{ height: '80vh' }}>
+            <iframe
+              src="https://blog-place-18102930.figma.site"
+              width="100%"
+              height="100%"
+              style={{ border: 'none' }}
+              title="Business Problem Findings"
+              allowFullScreen />
           </div>
         </div>
       </div>
