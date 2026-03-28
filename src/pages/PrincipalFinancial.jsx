@@ -35,7 +35,8 @@ export default function PrincipalFinancial() {
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto space-y-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-2xl font-semibold mb-4 text-slate-900">The Challenge</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-slate-900">Principal: Client Overview Dashboard & SBO Advisory Suite
+</h2>
             <p className="text-slate-600 leading-relaxed text-lg">
               Principal Financial needed a comprehensive overhaul of their internal business tools. Employees were struggling with fragmented workflows, legacy interfaces, and inefficient data entry processes that slowed down their ability to serve clients effectively.
             </p>
@@ -70,6 +71,5 @@ export default function PrincipalFinancial() {
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
 }
