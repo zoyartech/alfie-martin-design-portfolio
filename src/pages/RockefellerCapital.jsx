@@ -224,16 +224,16 @@ export default function RockefellerCapital() {
 
       {/* Interactive Prototype */}
       <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
-        <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Interactive Prototype</h2>
-        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white">
-          <iframe
-            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-            width="100%"
-            height="100%"
-            src="https://embed.figma.com/proto/gKgJCUkjqplxnb43ZiI4Vb/Untitled?page-id=0%3A1&type=design&node-id=1-7066&viewport=289%2C343%2C1&scaling=min-zoom&starting-point-node-id=2%3A26670&embed-host=share"
-            allowFullScreen>
-          </iframe>
-        </div>
+        
+        
+
+
+
+
+
+
+
+        
       </div>
 
       {/* Solutions */}
