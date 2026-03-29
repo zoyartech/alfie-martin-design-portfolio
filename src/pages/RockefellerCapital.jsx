@@ -132,8 +132,8 @@ export default function RockefellerCapital() {
             <p>
               It was important to address these challenges in order to improve client engagement, enhance the user experience for all clients, and ensure that RCM's mobile app meets the expectations of their evolving user base.
             </p>
-            <p className="p-6 bg-slate-800 rounded-lg text-white border border-slate-700">
-              Because the mobile app is not available to the public, I asked the team at RCM to create a test profile login for me so I could audit the current UX, heuristics, user journey, and content.
+            <p className="bg-slate-800 text-white p-6 font-light rounded-lg border border-slate-700">Because the mobile app is not available to the public, I asked the team at RCM to create a test profile login for me so I could audit the current UX, heuristics, user journey, and content. Below is an early iteration of the desktop version
+
             </p>
           </div>
           
