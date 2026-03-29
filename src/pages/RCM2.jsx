@@ -13,8 +13,7 @@ export default function RCM2() {
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6473632f7_5.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fc6de0d2e_6.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4ce8d50ab_Screenshot2026-03-29at34750PM.png",
-    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/aabe20d14_top-view-iphone-13-pro-with-an-app-logo-detail-mockup-template-69c98c7c882c70c8e3d349c4-2x.png",
-    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/327038fc5_Screenshot2026-03-29at35314PM.png"
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/aabe20d14_top-view-iphone-13-pro-with-an-app-logo-detail-mockup-template-69c98c7c882c70c8e3d349c4-2x.png"
   ];
 
   const openModal = (i) => setSelectedImage(i);
@@ -31,7 +30,7 @@ export default function RCM2() {
             src={src} 
             alt={`Rockefeller Capital Management Presentation Slide ${index + 1}`} 
             onClick={() => openModal(index)}
-            className={`h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity ${index >= images.length - 2 ? 'w-1/2 mx-auto' : 'w-full'}`}
+            className={`h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity ${index === images.length - 1 ? 'w-1/2 mx-auto' : 'w-full'}`}
           />
         ))}
       </div>
