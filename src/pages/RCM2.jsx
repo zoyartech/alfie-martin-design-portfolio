@@ -71,7 +71,7 @@ export default function RCM2() {
       <img 
         src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/43d04749d_Screenshot2026-03-29at35314PM.png" 
         alt="Rockefeller App Details" 
-        className="w-full max-w-5xl h-auto shadow-2xl mt-8"
+        className="w-[63%] max-w-[645px] h-auto shadow-2xl mt-8"
       />
 
       <AnimatePresence>
