@@ -8,7 +8,7 @@ export default function RCM2() {
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/56a998723_4.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6473632f7_5.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fc6de0d2e_6.png",
-    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b57517603_7.png"
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4ce8d50ab_Screenshot2026-03-29at34750PM.png"
   ];
 
   return (
