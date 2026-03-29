@@ -42,7 +42,7 @@ export default function RCM2() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="w-[48%] h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity"
+              className="w-[66%] h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity"
             />
           </AnimatePresence>
 
