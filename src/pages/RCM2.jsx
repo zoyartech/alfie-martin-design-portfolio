@@ -21,7 +21,7 @@ export default function RCM2() {
             key={index} 
             src={src} 
             alt={`Rockefeller Capital Management Presentation Slide ${index + 1}`} 
-            className="w-full h-auto shadow-2xl"
+            className="w-1/2 h-auto shadow-2xl mx-auto"
           />
         ))}
       </div>
