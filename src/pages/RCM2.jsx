@@ -25,7 +25,12 @@ export default function RCM2() {
   const prevSlide = () => setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
 
   return (
-    <div className="min-h-screen bg-[#e4e3dc] pt-20 pb-12 flex flex-col items-center gap-12 px-4 md:px-8">
+    <div className="min-h-screen bg-[#e4e3dc] pt-24 pb-12 flex flex-col items-center gap-12 px-4 md:px-8">
+      <img 
+        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ea6a25825_VisualIdentityforLuxuryBrands.png" 
+        alt="Visual Identity for Luxury Brands Hero" 
+        className="w-full max-w-5xl h-auto shadow-2xl mb-4"
+      />
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
         <div className="relative w-full flex items-center justify-center group">
           <button onClick={prevSlide} className="absolute left-4 md:left-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-all">
