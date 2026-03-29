@@ -62,6 +62,12 @@ export default function RCM2() {
         </div>
       </div>
 
+      <img 
+        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5f12ad8bf_top-view-iphone-13-pro-with-an-app-logo-detail-mockup-template-69c98c7c882c70c8e3d349c4-2x.png" 
+        alt="Rockefeller App on iPhone" 
+        className="w-full max-w-5xl h-auto shadow-2xl mt-8"
+      />
+
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
