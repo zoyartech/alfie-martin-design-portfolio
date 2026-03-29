@@ -30,7 +30,7 @@ export default function RCM2() {
             src={src} 
             alt={`Rockefeller Capital Management Presentation Slide ${index + 1}`} 
             onClick={() => openModal(index)}
-            className={`h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity ${index === images.length - 1 ? 'w-1/2 mx-auto' : 'w-full'}`}
+            className={`h-auto shadow-2xl mx-auto cursor-pointer hover:opacity-95 transition-opacity ${index === images.length - 1 ? 'w-[31%]' : 'w-[62%]'}`}
           />
         ))}
       </div>
