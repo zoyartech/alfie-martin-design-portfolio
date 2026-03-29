@@ -4,6 +4,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function RCM2() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/df332dcad_1.png",
@@ -12,8 +13,7 @@ export default function RCM2() {
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/56a998723_4.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6473632f7_5.png",
     "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fc6de0d2e_6.png",
-    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4ce8d50ab_Screenshot2026-03-29at34750PM.png",
-    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/aabe20d14_top-view-iphone-13-pro-with-an-app-logo-detail-mockup-template-69c98c7c882c70c8e3d349c4-2x.png"
+    "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4ce8d50ab_Screenshot2026-03-29at34750PM.png"
   ];
 
   const openModal = (i) => setSelectedImage(i);
@@ -21,18 +21,40 @@ export default function RCM2() {
   const prev = () => setSelectedImage((selectedImage - 1 + images.length) % images.length);
   const next = () => setSelectedImage((selectedImage + 1) % images.length);
 
+  const nextSlide = () => setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  const prevSlide = () => setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+
   return (
     <div className="min-h-screen bg-[#e4e3dc] pt-20 pb-12 flex flex-col items-center gap-12 px-4 md:px-8">
-      <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 md:gap-16">
-        {images.map((src, index) => (
-          <img 
-            key={index} 
-            src={src} 
-            alt={`Rockefeller Capital Management Presentation Slide ${index + 1}`} 
-            onClick={() => openModal(index)}
-            className={`h-auto shadow-2xl mx-auto cursor-pointer hover:opacity-95 transition-opacity ${index === images.length - 1 ? 'w-[18%]' : 'w-[36%]'}`}
-          />
-        ))}
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+        <div className="relative w-full flex items-center justify-center group">
+          <button onClick={prevSlide} className="absolute left-4 md:left-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-all">
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          
+          <AnimatePresence mode="wait">
+            <motion.img 
+              key={currentSlide}
+              src={images[currentSlide]}
+              alt={`Rockefeller Capital Management Presentation Slide ${currentSlide + 1}`} 
+              onClick={() => openModal(currentSlide)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-[48%] h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity"
+            />
+          </AnimatePresence>
+
+          <button onClick={nextSlide} className="absolute right-4 md:right-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-all">
+            <ChevronRight className="w-8 h-8" />
+          </button>
+        </div>
+        <div className="flex gap-3 mt-8">
+          {images.map((_, i) => (
+            <button key={i} onClick={() => setCurrentSlide(i)} className={`w-3 h-3 rounded-full transition-colors ${currentSlide === i ? 'bg-black' : 'bg-black/30 hover:bg-black/50'}`} />
+          ))}
+        </div>
       </div>
 
       <AnimatePresence>
