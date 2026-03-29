@@ -122,8 +122,8 @@ export default function RockefellerCapital() {
       </div>
 
       {/* The Business Problem */}
-      <div className="bg-slate-900 text-white py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
+      <div className="bg-slate-900 text-white pt-16 md:pt-24">
+        <div className="max-w-5xl mx-auto px-6 mb-12">
           <h2 className="font-serif text-4xl font-bold mb-8">The Business Problem</h2>
           <div className="font-sans text-lg text-slate-300 space-y-6 max-w-3xl">
             <p>
@@ -136,16 +136,16 @@ export default function RockefellerCapital() {
 
             </p>
           </div>
-          
-          <div className="w-full rounded-xl overflow-hidden shadow-lg border border-slate-700 bg-slate-800 mt-12" style={{ height: '80vh' }}>
-            <iframe
-              src="https://blog-place-18102930.figma.site"
-              width="100%"
-              height="100%"
-              style={{ border: 'none' }}
-              title="Business Problem Findings"
-              allowFullScreen />
-          </div>
+        </div>
+        
+        <div className="w-full border-t border-slate-700 bg-slate-800" style={{ height: '100vh' }}>
+          <iframe
+            src="https://blog-place-18102930.figma.site"
+            width="100%"
+            height="100%"
+            style={{ border: 'none' }}
+            title="Business Problem Findings"
+            allowFullScreen />
         </div>
       </div>
 
