@@ -8,7 +8,7 @@ import {
 } from 'recharts';
 import { 
     ArrowLeft, Eye, Folder, Layers, Target, Bell, Briefcase, MessageSquare, 
-    ChevronDown, ChevronRight, Users, Activity, FileSearch
+    ChevronDown, ChevronRight, Users, Activity, FileSearch, Shield
 } from 'lucide-react';
 
 const FadeIn = ({ children, delay = 0 }) => (
@@ -292,8 +292,27 @@ export default function RCMUXR() {
                 </FadeIn>
             </div>
 
+            {/* New User Journey */}
+            <div className="max-w-5xl mx-auto px-6 pt-12">
+                <FadeIn>
+                    <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
+                      <div className="mb-8">
+                        <Shield className="text-gray-950 mb-6 lucide lucide-shield w-10 h-10" />
+                        <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">New User Journey with Added Security</h3>
+                        <p className="font-sans text-lg text-slate-600 max-w-3xl">
+                          We added extra security measures. In addition to these new features, if the app was dormant for more than 2 minutes it would lock again. In order to change a passcode, a client would have to call their advisor. And in order to register, the same was applicable.
+                        </p>
+                      </div>
+                      <img
+                        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3484767bf_Screenshot2026-03-29at63055PM.png"
+                        alt="User Journey Flow"
+                        className="w-full h-auto rounded-xl shadow-sm border border-slate-200" />
+                    </div>
+                </FadeIn>
+            </div>
+
             {/* Reflection */}
-            <div className="max-w-5xl mx-auto px-6 pt-12 border-t border-slate-200">
+            <div className="max-w-5xl mx-auto px-6 pt-12 mt-12 border-t border-slate-200">
                 <FadeIn>
                     <h2 className="text-2xl font-serif font-bold mb-8 text-slate-900 text-center">Reflection on the Proxy Facilitation Method</h2>
                     <div className="grid md:grid-cols-3 gap-6">
