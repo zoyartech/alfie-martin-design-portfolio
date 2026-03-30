@@ -137,7 +137,7 @@ export default function RockefellerCapital() {
           <div>
             <h2 className="font-serif text-3xl font-bold mb-8 text-slate-900 border-b border-slate-200 pb-4">Constraints</h2>
             <div className="space-y-6 font-sans text-lg text-slate-700">
-              <p><strong>Time:</strong> We only had 2 months to design the app entirely.</p>
+              
               <p><strong>Research Pushback:</strong> RCM's team could not clearly see a distinct link between validation of ideas and research, therefore I anticipated some pushback concerning research.</p>
               <p><strong>Confidentiality:</strong> Clients confidentiality had to be maintained, so any details beyond HNWIs we were not privy to.</p>
             </div>
