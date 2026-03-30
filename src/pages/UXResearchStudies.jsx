@@ -57,6 +57,17 @@ export default function UXResearchStudies() {
             </div>
           </Link>
 
+          <Link to={createPageUrl("BillingUsabilityStudy")} className="group block">
+            <div className="aspect-[4/3] bg-white rounded-xl border border-gray-200 overflow-hidden mb-6 flex items-center justify-center p-0 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-300">
+                <img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=1200" alt="Exelon Usability Study" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div>
+                <div className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-2">Exelon Corporation</div>
+                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Billing & Payments Usability Study</h3>
+                <p className="text-slate-600 font-sans">Evaluate the usability of the updated 'Bill is Ready' email and the clarity of 'My Bill Insights' page.</p>
+            </div>
+          </Link>
+
         </div>
       </section>
 

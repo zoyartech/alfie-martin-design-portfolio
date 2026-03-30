@@ -45,20 +45,7 @@ const projects = [
   { label: "Usability", value: "Enhanced" }],
   tags: ["UX End To End", "Finance", "Mobile App"]
 },
-{
-  title: "Exelon : Billing & Payments Usability Study",
-  category: "UX Strategy",
-  industry: "Energy",
-  image: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=1200",
-  year: "2024",
-  link: "BillingUsabilityStudy",
-  summary: "Evaluate the usability of the updated 'Bill is Ready' email and the clarity of 'My Bill Insights' page.",
-  stats: [
-  { label: "Participants", value: "8" },
-  { label: "Methodology", value: "Unmoderated" },
-  { label: "Avg Session", value: "12 min" }],
-  tags: ["UX Research", "Usability Study", "Energy"]
-},
+
 {
   title: "TCS NYC Marathon App",
   category: "Product Design",
