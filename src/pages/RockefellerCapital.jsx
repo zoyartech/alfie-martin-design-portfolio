@@ -329,6 +329,19 @@ export default function RockefellerCapital() {
           </div>
         </div>
       </div>
+
+      {/* RCM2 Link */}
+      <div className="bg-slate-50 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <Link to={createPageUrl("RCM2")} className="block group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 bg-[#0d2a35]">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/544ab2057_Screenshot2026-03-29at81543PM.png" 
+              alt="Rebrand & Design System Details" 
+              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+          </Link>
+        </div>
+      </div>
       
     </div>);
 
