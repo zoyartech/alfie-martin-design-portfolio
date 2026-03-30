@@ -95,17 +95,17 @@ export default function RockefellerCapital() {
       {/* The Business Problem */}
       <div className="bg-[#002938] text-white pt-16 md:pt-24">
         <div className="max-w-5xl mx-auto px-6 mb-12">
-          <h2 className="font-serif text-4xl font-bold mb-8">The Business Problem</h2>
+          <h2 className="font-serif text-4xl font-bold mb-8">The Advisor Side of the Problem</h2>
           <div className="font-sans text-lg text-slate-300 space-y-6 max-w-3xl">
-            <p>
-              The younger clients, who form a significant portion of RCM's clientele, exhibit less engagement with their accounts. They are less likely to proactively contact their advisors for updates on potential investment opportunities or to add new interests to their portfolios.
-            </p>
-            <p>
-              It was important to address these challenges in order to improve client engagement, enhance the user experience for all clients, and ensure that RCM's mobile app meets the expectations of their evolving user base.
-            </p>
-            <p className="bg-slate-800 text-white p-6 font-light rounded-lg border border-slate-700">Because the mobile app is not available to the public, I asked the team at RCM to create a test profile login for me so I could audit the current UX, heuristics, user journey, and content. Below is an early iteration of the desktop version
+            <p>Advisors were frustrated with fragmented data across numerous programs, and slow legay 
 
             </p>
+            
+
+            
+            
+
+            
           </div>
         </div>
         
