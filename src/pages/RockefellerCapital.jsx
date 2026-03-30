@@ -47,14 +47,14 @@ export default function RockefellerCapital() {
             <p className="text-slate-100 mb-6 text-lg font-sans leading-relaxed">When I was first assigned to Rockefeller Capital Management as lead UX Designer in Mobile Experiences, I took the time to thoroughly research the firm, its digital offerings, and overall brand values, so that I could familiarize myself with the project.
 
             </p>
-            <p className="text-slate-100 text-lg font-sans leading-relaxed">My manager Lisa Doyle sent me over product metrics and recordings of qualitative interviews with current users of the app. This gave me a strong point to start from prior to my first meeting with the client.
+            
 
-            </p>
+            
           </div>
           <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
             <h2 className="text-slate-900 mb-6 text-3xl font-extrabold">Context</h2>
-            <p className="font-sans text-slate-700 text-lg leading-relaxed">
-              I was designing for two sets of users, the advisors and internal employees working at RCM. And the influx of younger HNWI that were used to accessing everything from a digital space.
+            <p className="font-sans text-slate-700 text-lg leading-relaxed">The team and I were designing for two sets of users. The advisors and the members. For this case study we will focus on the advisors.
+
             </p>
           </div>
         </div>
