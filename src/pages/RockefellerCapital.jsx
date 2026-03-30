@@ -58,7 +58,7 @@ export default function RockefellerCapital() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-sky-900 text-slate-50 p-8 rounded-xl shadow-sm border border-slate-100">
             <Shield className="text-slate-200 mb-4 lucide lucide-shield w-8 h-8" />
-            <h3 className="text-slate-50 mb-3 text-xl font-bold">1. Security</h3>
+            <h3 className="text-slate-50 mb-3 text-xl font-bold">1. Trust</h3>
             <p className="text-slate-50 font-sans">In wealth management, trust means accuracy, precision, and professionalism. A rounding error on a portfolio value display isn't a minor bug; it's a relationship-threatening event.</p>
           </div>
           <div className="bg-blue-500 p-8 rounded-xl shadow-sm border border-slate-100">
