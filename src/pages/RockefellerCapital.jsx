@@ -21,7 +21,7 @@ export default function RockefellerCapital() {
 
       <div className="max-w-5xl mx-auto px-6 py-12 md:py-20">
         <div className="inline-block bg-slate-200 text-slate-700 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
-          Lead UX Designer • Mobile Experience
+          Lead Product Designer | Advisor & Member Experience
         </div>
         <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-slate-900 tracking-tight leading-[1.1]">
           Rockefeller Capital Management
