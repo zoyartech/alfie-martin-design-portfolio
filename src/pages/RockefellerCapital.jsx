@@ -23,8 +23,8 @@ export default function RockefellerCapital() {
         <div className="inline-block bg-slate-200 text-slate-700 text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
           Lead Product Designer | Advisor & Member Experience
         </div>
-        <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-slate-900 tracking-tight leading-[1.1]">
-          Rockefeller Capital Management
+        <h1 className="text-slate-900 mb-6 text-sm font-medium tracking-tight leading-[1.1] md:text-7xl">Rockefeller Capital Management
+
         </h1>
         <p className="text-xl md:text-2xl text-slate-600 font-sans max-w-3xl mb-12">
           Practical Solutions To Improving The User Experience Of Digital Products for High Net Worth Individuals.
@@ -97,7 +97,7 @@ export default function RockefellerCapital() {
         <div className="max-w-5xl mx-auto px-6 mb-12">
           <h2 className="font-serif text-4xl font-bold mb-8">The Advisor Side of the Problem</h2>
           <div className="font-sans text-lg text-slate-300 space-y-6 max-w-3xl">
-            <p>Advisors were frustrated with fragmented data across numerous programs, and slow legay 
+            <p>Advisors were frustrated with fragmented data across numerous programs.
 
             </p>
             
