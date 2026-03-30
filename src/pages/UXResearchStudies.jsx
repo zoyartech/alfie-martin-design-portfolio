@@ -31,14 +31,16 @@ export default function UXResearchStudies() {
       <section className="py-12 px-6 lg:px-12 flex-grow">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* Example Item */}
-          <Link to="#" className="group block pointer-events-none">
-            <div className="aspect-[4/3] bg-gray-50 rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
-                <span className="text-gray-400 font-medium tracking-wide text-sm uppercase">Coming Soon</span>
+          <Link to={createPageUrl("ExelonUXR")} className="group block">
+            <div className="aspect-[4/3] bg-[#003B5C] rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                <div className="text-white font-serif text-3xl font-bold text-center leading-tight">
+                    Buy Now, Pay Later<br/><span className="text-blue-200">for Energy Bills</span>
+                </div>
             </div>
             <div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Study Title</h3>
-                <p className="text-slate-600 font-sans">A brief description of the research goals and methodology.</p>
+                <div className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-2">Exelon Corporation</div>
+                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#003B5C] transition-colors">BNPL Feasibility Study</h3>
+                <p className="text-slate-600 font-sans">Customer Attitudes Toward Flexible Payment Options Among Accounts with 3+ Late or Missed Payments.</p>
             </div>
           </Link>
 
