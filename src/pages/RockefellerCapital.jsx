@@ -68,7 +68,7 @@ export default function RockefellerCapital() {
           </div>
           <div className="bg-sky-300 p-8 rounded-xl shadow-sm border border-slate-100">
             <ArrowRightLeft className="text-slate-950 mb-4 lucide lucide-arrow-right-left w-8 h-8" />
-            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">3. Integration</h3>
+            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">3. The actual users</h3>
             <p className="font-sans text-slate-600">Enabling the integration of outside accounts into the current app, providing a comprehensive view of the clients' financial portfolio.</p>
           </div>
           <div className="bg-blue-300 p-8 rounded-xl shadow-sm border border-slate-100">
