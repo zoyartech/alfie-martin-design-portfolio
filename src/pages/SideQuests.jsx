@@ -72,7 +72,7 @@ export default function SideQuests() {
 
         <div className="mt-32 mb-12">
           <h2 className="text-slate-900 mb-4 text-4xl font-extrabold md:text-4xl">Gestalt Principles</h2>
-          <p className="text-slate-600 font-sans max-w-2xl">Interactive examples demonstrating fundamental principles of perception.</p>
+          <p className="text-slate-600 font-sans max-w-2xl">Interactive examples demonstrating fundamental principles of perception. Just swipe!</p>
         </div>
         <div className="w-full h-[80vh] border border-gray-100 rounded-2xl overflow-hidden mb-32 shadow-sm bg-white">
           <iframe
@@ -81,8 +81,8 @@ export default function SideQuests() {
             height="100%"
             style={{ border: "none" }}
             title="Interactive Prototype"
-            allowFullScreen
-          />
+            allowFullScreen />
+          
         </div>
 
         <div className="mt-32">
