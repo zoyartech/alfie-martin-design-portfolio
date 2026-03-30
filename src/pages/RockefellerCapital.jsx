@@ -5,16 +5,6 @@ import { ArrowLeft, Shield, Smartphone, ArrowRightLeft, PieChart, Users, Downloa
 import { createPageUrl } from "@/utils";
 
 export default function RockefellerCapital() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-  const slides = [
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/71c4ef551_2.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/24bf359ae_3.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fb8782b3a_4.png"];
-
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 pb-20 pt-24">
       <style>{`
@@ -146,53 +136,6 @@ export default function RockefellerCapital() {
             style={{ border: 'none' }}
             title="Business Problem Findings"
             allowFullScreen />
-        </div>
-      </div>
-
-      {/* Carousel */}
-      <div className="bg-slate-100 py-16 md:py-24 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white group">
-            <div className="relative aspect-[4/3] md:aspect-[16/10] w-full flex items-center justify-center bg-slate-50">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentSlide}
-                  src={slides[currentSlide]}
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute inset-0 w-full h-full object-contain p-4 md:p-8"
-                  alt={`Slide ${currentSlide + 1}`} />
-                
-              </AnimatePresence>
-            </div>
-            
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-              
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-              
-              <ChevronRight className="w-6 h-6" />
-            </button>
-            
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-              {slides.map((_, i) =>
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                currentSlide === i ? "bg-slate-800 scale-110" : "bg-slate-300 hover:bg-slate-400"}`
-                } />
-
-              )}
-            </div>
-          </div>
         </div>
       </div>
 
