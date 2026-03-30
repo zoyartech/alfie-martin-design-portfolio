@@ -70,7 +70,7 @@ export default function SideQuests() {
             </Link>
         </div>
 
-        <div className="mb-12">
+        <div className="mt-32 mb-12">
           <h2 className="text-slate-900 mb-4 text-4xl font-extrabold md:text-4xl">Gestalt Principles</h2>
           <p className="text-slate-600 font-sans max-w-2xl">Interactive examples demonstrating fundamental principles of perception.</p>
         </div>
