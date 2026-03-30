@@ -225,16 +225,23 @@ export default function ExelonUXR() {
                     <h3 className="text-2xl font-bold mb-6 text-slate-900">A combined <span className="text-emerald-600">78%</span> rated BNPL as helpful.</h3>
                     <p className="text-lg text-slate-600 mb-6">The majority (62%) selected "extremely" or "very" helpful. This signal was consistent across all operating companies.</p>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         {surveyData.map((item, i) => (
-                            <div key={i} className="flex items-center justify-between">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.fill }}></div>
-                                    <span className="font-medium text-slate-700">{item.name}</span>
-                                </div>
+                            <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-md hover:border-slate-200 transition-all duration-300">
                                 <div className="flex items-center gap-4">
-                                    <span className="text-slate-400 text-sm w-12 text-right">{item.count}</span>
-                                    <span className="font-bold text-slate-900 w-12 text-right">{item.value}%</span>
+                                    <div className="w-4 h-4 rounded-full shadow-sm" style={{ backgroundColor: item.fill }}></div>
+                                    <span className="font-semibold text-slate-800">{item.name}</span>
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-0.5">Users</span>
+                                        <span className="text-sm font-medium text-slate-600">{item.count}</span>
+                                    </div>
+                                    <div className="w-px h-8 bg-slate-200"></div>
+                                    <div className="flex flex-col items-end w-16">
+                                        <span className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-0.5">Share</span>
+                                        <span className="font-bold text-slate-900 text-lg leading-none">{item.value}%</span>
+                                    </div>
                                 </div>
                             </div>
                         ))}
