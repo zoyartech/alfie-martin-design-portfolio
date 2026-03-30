@@ -78,7 +78,7 @@ export default function RockefellerCapital() {
           </div>
           <div className="bg-sky-200 p-8 rounded-xl shadow-sm border border-slate-100">
             <Users className="text-slate-950 mb-4 lucide lucide-users w-8 h-8" />
-            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">5. Low Adoption Rate</h3>
+            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">5. Advisor Workflow</h3>
             <p className="text-zinc-950 font-sans">Currently, only a small percentage of the older client demographic actively uses the app. We need to encourage wider adoption and usage.</p>
           </div>
         </div>
