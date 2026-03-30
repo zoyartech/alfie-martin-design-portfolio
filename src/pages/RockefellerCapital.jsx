@@ -31,6 +31,14 @@ export default function RockefellerCapital() {
         </p>
       </div>
 
+      {/* Hero Image */}
+      <div className="max-w-5xl mx-auto px-6 pb-12">
+        <img
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f7c051d25_illustration.png"
+          alt="Office character illustrations"
+          className="w-full h-auto rounded-xl" />
+      </div>
+
       {/* Intro & Context */}
       <div className="bg-[#002938] text-[#d4d4d4] py-16 border-y border-slate-200 md:py-24">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
