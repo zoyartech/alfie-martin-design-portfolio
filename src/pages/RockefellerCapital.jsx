@@ -63,7 +63,7 @@ export default function RockefellerCapital() {
           </div>
           <div className="bg-blue-500 p-8 rounded-xl shadow-sm border border-slate-100">
             <Smartphone className="text-slate-100 mb-4 lucide lucide-smartphone w-8 h-8" />
-            <h3 className="text-slate-200 mb-3 text-xl font-bold">2. Ease of Use</h3>
+            <h3 className="text-slate-200 mb-3 text-xl font-bold">2. Regulatory Constraints</h3>
             <p className="text-slate-50 font-sans">Streamlining the user interface and interactions to make the mobile app more intuitive and user-friendly.</p>
           </div>
           <div className="bg-sky-300 p-8 rounded-xl shadow-sm border border-slate-100">
