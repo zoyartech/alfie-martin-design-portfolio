@@ -21,8 +21,40 @@ export default function RCM2() {
   const prev = () => setSelectedImage((selectedImage - 1 + images.length) % images.length);
   const next = () => setSelectedImage((selectedImage + 1) % images.length);
 
-  const nextSlide = () => setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  const prevSlide = () => setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  const [direction, setDirection] = useState(0);
+
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  };
+  const handleDotClick = (i) => {
+    setDirection(i > currentSlide ? 1 : -1);
+    setCurrentSlide(i);
+  };
+
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 150 : -150,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      scale: 1
+    },
+    exit: (direction) => ({
+      zIndex: 0,
+      x: direction < 0 ? 150 : -150,
+      opacity: 0,
+      scale: 0.95
+    })
+  };
 
   return (
     <div className="min-h-screen bg-[#e4e3dc] pt-24 pb-12 flex flex-col items-center gap-12 px-4 md:px-8">
@@ -32,32 +64,43 @@ export default function RCM2() {
         className="w-full max-w-5xl h-auto shadow-2xl mb-4"
       />
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
-        <div className="relative w-full flex items-center justify-center group">
-          <button onClick={prevSlide} className="absolute left-4 md:left-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-all">
+        <div className="relative w-full flex items-center justify-center group overflow-hidden py-4">
+          <button onClick={prevSlide} className="absolute left-4 md:left-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-20 opacity-0 group-hover:opacity-100 transition-all">
             <ChevronLeft className="w-8 h-8" />
           </button>
           
-          <AnimatePresence mode="wait">
-            <motion.img 
-              key={currentSlide}
-              src={images[currentSlide]}
-              alt={`Rockefeller Capital Management Presentation Slide ${currentSlide + 1}`} 
-              onClick={() => openModal(currentSlide)}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="w-[66%] h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity"
-            />
-          </AnimatePresence>
+          <div className="relative w-[66%] flex items-center justify-center">
+            {/* Invisible spacer to maintain container height */}
+            <img src={images[0]} alt="spacer" className="w-full h-auto opacity-0 pointer-events-none" />
+            
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.img 
+                key={currentSlide}
+                src={images[currentSlide]}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.3 },
+                  scale: { duration: 0.3 }
+                }}
+                alt={`Rockefeller Capital Management Presentation Slide ${currentSlide + 1}`} 
+                onClick={() => openModal(currentSlide)}
+                className="absolute top-0 left-0 w-full h-auto shadow-2xl cursor-pointer hover:opacity-95 transition-opacity"
+              />
+            </AnimatePresence>
+          </div>
 
-          <button onClick={nextSlide} className="absolute right-4 md:right-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-all">
+          <button onClick={nextSlide} className="absolute right-4 md:right-12 p-3 bg-white/50 hover:bg-white text-black rounded-full shadow-lg z-20 opacity-0 group-hover:opacity-100 transition-all">
             <ChevronRight className="w-8 h-8" />
           </button>
         </div>
-        <div className="flex gap-3 mt-8">
+        <div className="flex gap-3 mt-4">
           {images.map((_, i) => (
-            <button key={i} onClick={() => setCurrentSlide(i)} className={`w-3 h-3 rounded-full transition-colors ${currentSlide === i ? 'bg-black' : 'bg-black/30 hover:bg-black/50'}`} />
+            <button key={i} onClick={() => handleDotClick(i)} className={`w-3 h-3 rounded-full transition-colors ${currentSlide === i ? 'bg-black' : 'bg-black/30 hover:bg-black/50'}`} />
           ))}
         </div>
       </div>
