@@ -38,7 +38,7 @@ export default function RCM2() {
 
   const slideVariants = {
     enter: (direction) => ({
-      x: direction > 0 ? 150 : -150,
+      x: direction > 0 ? '50%' : '-50%',
       opacity: 0,
       scale: 0.95
     }),
@@ -50,7 +50,7 @@ export default function RCM2() {
     },
     exit: (direction) => ({
       zIndex: 0,
-      x: direction < 0 ? 150 : -150,
+      x: direction < 0 ? '50%' : '-50%',
       opacity: 0,
       scale: 0.95
     })
@@ -83,9 +83,9 @@ export default function RCM2() {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.3 },
-                  scale: { duration: 0.3 }
+                  x: { type: "tween", ease: [0.25, 1, 0.5, 1], duration: 0.6 },
+                  opacity: { duration: 0.4 },
+                  scale: { type: "tween", ease: [0.25, 1, 0.5, 1], duration: 0.6 }
                 }}
                 alt={`Rockefeller Capital Management Presentation Slide ${currentSlide + 1}`} 
                 onClick={() => openModal(currentSlide)}
