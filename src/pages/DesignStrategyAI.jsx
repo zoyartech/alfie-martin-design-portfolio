@@ -121,7 +121,7 @@ export default function DesignStrategyAI() {
             
             <div>
               <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
-              <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How might we make an AI's uncertainty legible and useful, rather than hidden?
+              <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How do we design for lack of predictability in AI outputs?
 
               </p>
             </div>
