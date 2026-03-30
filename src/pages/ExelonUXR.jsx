@@ -195,7 +195,9 @@ export default function ExelonUXR() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-                <div className="h-[350px] w-full bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <motion.div whileHover={{ y: -4 }} className="h-[400px] w-full bg-white p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-50 rounded-full blur-3xl -mr-10 -mt-10 opacity-60 pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#003B5C]/5 rounded-full blur-3xl -ml-10 -mb-10 opacity-60 pointer-events-none"></div>
                     <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
                             <Pie
@@ -218,7 +220,7 @@ export default function ExelonUXR() {
                             <Legend verticalAlign="bottom" height={36} iconType="circle" />
                         </PieChart>
                     </ResponsiveContainer>
-                </div>
+                </motion.div>
                 <div>
                     <h3 className="text-2xl font-bold mb-6 text-slate-900">A combined <span className="text-emerald-600">78%</span> rated BNPL as helpful.</h3>
                     <p className="text-lg text-slate-600 mb-6">The majority (62%) selected "extremely" or "very" helpful. This signal was consistent across all operating companies.</p>
