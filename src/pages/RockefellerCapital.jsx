@@ -327,15 +327,6 @@ export default function RockefellerCapital() {
               </p>
             </div>
           </div>
-          
-          <div className="mt-16 pt-8 border-t border-slate-700">
-            <h3 className="font-serif text-xl font-bold text-white mb-4">Team & Collaboration</h3>
-            <ul className="space-y-2 font-sans text-slate-400">
-              <li><strong>Moura Mcdaniels</strong> — Usability testing, prototyping</li>
-              <li><strong>Sauruh Hanbey</strong> — Wireframes, usability testing, prototyping</li>
-              <li><strong>Jake Horowitz</strong> — VP of Engineering (Most Frequently Collaborated Directly with)</li>
-            </ul>
-          </div>
         </div>
       </div>
       
