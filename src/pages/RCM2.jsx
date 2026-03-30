@@ -110,6 +110,12 @@ export default function RCM2() {
         alt="Rockefeller App on iPhone" 
         className="w-full max-w-5xl h-auto shadow-2xl mt-8"
       />
+
+      <img 
+        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bcffa6831_Screenshot2026-03-29at80445PM.png" 
+        alt="Early Version of component library" 
+        className="w-full max-w-5xl h-auto shadow-2xl mt-8"
+      />
       
       <img 
         src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/43d04749d_Screenshot2026-03-29at35314PM.png" 
