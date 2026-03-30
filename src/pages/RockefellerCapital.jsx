@@ -193,14 +193,19 @@ export default function RockefellerCapital() {
           
           <div className="space-y-16">
             {/* Security */}
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
-              <div>
+            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
+              <div className="mb-8">
                 <Shield className="w-10 h-10 text-blue-600 mb-6" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">New User Journey with Added Security</h3>
-                <p className="font-sans text-lg text-slate-600">
+                <p className="font-sans text-lg text-slate-600 max-w-3xl">
                   We added extra security measures. In addition to these new features, if the app was dormant for more than 2 minutes it would lock again. In order to change a passcode, a client would have to call their advisor. And in order to register, the same was applicable.
                 </p>
               </div>
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3484767bf_Screenshot2026-03-29at63055PM.png" 
+                alt="User Journey Flow" 
+                className="w-full h-auto rounded-xl shadow-sm border border-slate-200" 
+              />
             </div>
 
             {/* Engagement */}
