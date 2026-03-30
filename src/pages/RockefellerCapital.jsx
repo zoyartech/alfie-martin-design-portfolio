@@ -6,7 +6,7 @@ import { createPageUrl } from "@/utils";
 
 export default function RockefellerCapital() {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 pb-20 pt-24">
+    <div className="min-h-screen bg-white font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 pb-20 pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         .font-serif { font-family: "PT Serif", serif; }
@@ -309,7 +309,7 @@ export default function RockefellerCapital() {
       </div>
 
       {/* RCM2 Link */}
-      <div className="bg-slate-50 py-16 md:py-24">
+      <div className="bg-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <Link to={createPageUrl("RCM2")} className="block group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 bg-[#0d2a35]">
             <img
