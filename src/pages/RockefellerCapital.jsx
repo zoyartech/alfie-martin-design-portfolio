@@ -32,7 +32,7 @@ export default function RockefellerCapital() {
       </div>
 
       {/* Intro & Context */}
-      <div className="bg-[#111e41] text-[#d4d4d4] py-16 border-y border-slate-200 md:py-24">
+      <div className="bg-[#002938] text-[#d4d4d4] py-16 border-y border-slate-200 md:py-24">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-slate-100 mb-6 text-3xl font-bold">Introduction</h2>
@@ -112,7 +112,7 @@ export default function RockefellerCapital() {
       </div>
 
       {/* The Business Problem */}
-      <div className="bg-slate-900 text-white pt-16 md:pt-24">
+      <div className="bg-[#002938] text-white pt-16 md:pt-24">
         <div className="max-w-5xl mx-auto px-6 mb-12">
           <h2 className="font-serif text-4xl font-bold mb-8">The Business Problem</h2>
           <div className="font-sans text-lg text-slate-300 space-y-6 max-w-3xl">
@@ -187,9 +187,9 @@ export default function RockefellerCapital() {
       </div>
 
       {/* Solutions */}
-      <div className="bg-slate-100 py-16 md:py-24 border-y border-slate-200">
+      <div className="bg-[#bba986] py-16 md:py-24 border-y border-slate-200">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-bold mb-16 text-slate-900 text-center">Key Features & Solutions</h2>
+          <h2 className="text-slate-950 mb-16 text-4xl font-bold text-center">Key Features & Solutions</h2>
           
           <div className="space-y-16">
             {/* Security */}
@@ -201,11 +201,11 @@ export default function RockefellerCapital() {
                   We added extra security measures. In addition to these new features, if the app was dormant for more than 2 minutes it would lock again. In order to change a passcode, a client would have to call their advisor. And in order to register, the same was applicable.
                 </p>
               </div>
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3484767bf_Screenshot2026-03-29at63055PM.png" 
-                alt="User Journey Flow" 
-                className="w-full h-auto rounded-xl shadow-sm border border-slate-200" 
-              />
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3484767bf_Screenshot2026-03-29at63055PM.png"
+                alt="User Journey Flow"
+                className="w-full h-auto rounded-xl shadow-sm border border-slate-200" />
+              
             </div>
 
             {/* Engagement */}
@@ -222,12 +222,12 @@ export default function RockefellerCapital() {
             </div>
 
             {/* Reports */}
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
+            <div className="bg-[#002938] text-[#dedede] p-8 rounded-2xl grid md:grid-cols-2 gap-8 items-center md:p-12 shadow-sm border border-slate-200">
               <div>
-                <Download className="w-10 h-10 text-blue-600 mb-6" />
-                <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">Downloadable Reports</h3>
-                <p className="font-sans text-lg text-slate-600 mb-6">
-                  During usability testing, participants noted the previous app was "boring" and visually they didn't want to see all of their account info in such a small screen. To remedy this, we added an option to download the reports in their entirety.
+                <Download className="text-slate-100 mb-6 lucide lucide-download w-10 h-10" />
+                <h3 className="text-slate-100 mb-4 text-2xl font-bold">Downloadable Reports</h3>
+                <p className="text-slate-100 mb-6 text-lg font-sans">During usability testing, participants noted the previous app was "boring" and visually they didn't want to see all of their account info in such a small screen. To remedy this, we added an option to download the reports in their entirety.
+
                 </p>
                 <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-600 italic text-slate-700">
                   "I found being able to download my reports to be useful so that I could later print them out or view them on a larger screen... This feature is perfect, no one wants to look at the equivalent of an excel spreadsheet on their phone."
@@ -309,26 +309,26 @@ export default function RockefellerCapital() {
       </div>
 
       {/* Summary */}
-      <div className="bg-slate-900 text-white py-16 md:py-24">
+      <div className="bg-[#bba986] text-[#000000] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-serif text-4xl font-bold mb-12">In Summary</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 font-sans text-lg text-slate-300">
               <h3 className="text-2xl font-bold text-white">Navigating Frustrations</h3>
-              <p>
-                The client was under a lot of stress in a highly politicized office environment. I knew from the first few meetings that I needed to show that I and the team I was leading could be trusted to get the results that they wanted.
+              <p className="text-[#000000]">The client was under a lot of stress in a highly politicized office environment. I knew from the first few meetings that I needed to show that I and the team I was leading could be trusted to get the results that they wanted.
+
               </p>
-              <p>
-                The best way to do that, and because of my prior experience with working directly for HNWIs, was to bring solutions to the client when we came across problems. Transparency and effective communication with their team and the staff at RCM that was leading this initiative.
+              <p className="text-[#000000]">The best way to do that, and because of my prior experience with working directly for HNWIs, was to bring solutions to the client when we came across problems. Transparency and effective communication with their team and the staff at RCM that was leading this initiative.
+
               </p>
             </div>
             <div className="space-y-6 font-sans text-lg text-slate-300">
               <h3 className="text-2xl font-bold text-white">Outcomes & Process</h3>
-              <p>
-                Prior to meeting with the client, I researched RCM down to the details of the types of roles their employees had. So when we required qualitative research, I remembered they had Qualitative researchers on their staff. I designed and handed off questions that their staff researchers could conduct with their clients and cross-checked their insight reports for any unconscious biases. This, in conjunction with usability testing we conducted, helped us arrive at the solutions we implemented.
+              <p className="text-[#000000]">Prior to meeting with the client, I researched RCM down to the details of the types of roles their employees had. So when we required qualitative research, I remembered they had Qualitative researchers on their staff. I designed and handed off questions that their staff researchers could conduct with their clients and cross-checked their insight reports for any unconscious biases. This, in conjunction with usability testing we conducted, helped us arrive at the solutions we implemented.
+
               </p>
-              <p>
-                The app experience was well received on completion by both Rockefeller Capital Management and their clients. RCM reported <strong>increased adoption, MAU, DAU</strong>, early on the initial relaunch.
+              <p className="text-[#000000]">The app experience was well received on completion by both Rockefeller Capital Management and their clients. RCM reported increased adoption, MAU, DAU, early on the initial relaunch.
+
               </p>
             </div>
           </div>
@@ -339,11 +339,11 @@ export default function RockefellerCapital() {
       <div className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <Link to={createPageUrl("RCM2")} className="block group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 bg-[#0d2a35]">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/544ab2057_Screenshot2026-03-29at81543PM.png" 
-              alt="Rebrand & Design System Details" 
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/544ab2057_Screenshot2026-03-29at81543PM.png"
+              alt="Rebrand & Design System Details"
+              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+            
           </Link>
         </div>
       </div>
