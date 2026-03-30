@@ -73,7 +73,7 @@ export default function RockefellerCapital() {
           </div>
           <div className="bg-blue-300 p-8 rounded-xl shadow-sm border border-slate-100">
             <PieChart className="text-zinc-950 mb-4 lucide lucide-chart-pie w-8 h-8" />
-            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">4. Portfolio Visualization</h3>
+            <h3 className="font-serif text-xl font-bold mb-3 text-slate-900">4. Data Dense Interfaces</h3>
             <p className="text-slate-950 font-sans">Introducing visual representations that display the clients' entire portfolio, allowing for a holistic understanding of their investments.</p>
           </div>
           <div className="bg-sky-200 p-8 rounded-xl shadow-sm border border-slate-100">
