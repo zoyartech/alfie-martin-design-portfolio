@@ -84,33 +84,6 @@ export default function RockefellerCapital() {
         </div>
       </div>
 
-      {/* Mobile View */}
-      <div className="bg-white py-16 md:py-24 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-bold mb-8 text-slate-900">Mobile View</h2>
-          
-
-
-
-
-
-
-
-
-          
-          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-12" style={{ height: '80vh' }}>
-            <iframe
-              src="https://savor-deal-73805598.figma.site"
-              width="100%"
-              height="100%"
-              style={{ border: 'none' }}
-              title="RCM Interactive Prototype"
-              allowFullScreen />
-            
-          </div>
-        </div>
-      </div>
-
       {/* The Business Problem */}
       <div className="bg-[#002938] text-white pt-16 md:pt-24">
         <div className="max-w-5xl mx-auto px-6 mb-12">

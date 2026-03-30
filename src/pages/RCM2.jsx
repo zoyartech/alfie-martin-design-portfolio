@@ -123,6 +123,16 @@ export default function RCM2() {
         className="w-[63%] max-w-[645px] h-auto shadow-2xl mt-8"
       />
 
+      <div className="w-full max-w-5xl h-auto shadow-2xl mt-8 rounded-xl overflow-hidden" style={{ height: '80vh' }}>
+        <iframe
+          src="https://savor-deal-73805598.figma.site"
+          width="100%"
+          height="100%"
+          style={{ border: 'none' }}
+          title="RCM Interactive Prototype"
+          allowFullScreen />
+      </div>
+
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
