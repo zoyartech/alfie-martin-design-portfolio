@@ -54,7 +54,7 @@ export default function RockefellerCapital() {
 
       {/* Problems */}
       <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
-        <h2 className="font-serif text-4xl font-bold mb-12 text-slate-900">Areas of Friction</h2>
+        <h2 className="font-serif text-4xl font-bold mb-12 text-slate-900">Designing for Wealth Management Differs than other areas of finance</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-sky-900 text-slate-50 p-8 rounded-xl shadow-sm border border-slate-100">
             <Shield className="text-slate-200 mb-4 lucide lucide-shield w-8 h-8" />
