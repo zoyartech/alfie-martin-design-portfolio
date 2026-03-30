@@ -132,7 +132,7 @@ export default function FilterableGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
-            <h2 className="text-3xl font-semibold md:text-4xl">Selected Work</h2>
+            <h2 className="text-3xl font-semibold md:text-4xl">Product Design Case Studies </h2>
           </div>
         </div>
 
