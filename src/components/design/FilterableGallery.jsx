@@ -136,6 +136,39 @@ const projects = [
   summary: "A comprehensive library of geometric shapes and patterns for brand collateral.",
   stats: [],
   tags: ["Design System", "Brand Identity"]
+},
+{
+  title: "Abstract Shapes Collection",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a162ec94b_shapes.png",
+  year: "2024",
+  link: "",
+  summary: "A collection of abstract geometric shapes for diverse branding applications.",
+  stats: [],
+  tags: ["Illustration", "Brand Identity"]
+},
+{
+  title: "Office Character Illustrations",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/dae16c46b_illustration.png",
+  year: "2024",
+  link: "",
+  summary: "Flat design character illustrations depicting various office scenarios.",
+  stats: [],
+  tags: ["Illustration", "Characters"]
+},
+{
+  title: "Botanical Illustration Set",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44266cad4_flowers-illustration.png",
+  year: "2024",
+  link: "",
+  summary: "A stylized set of botanical illustrations for brand storytelling.",
+  stats: [],
+  tags: ["Illustration", "Brand Identity"]
 }];
 
 
