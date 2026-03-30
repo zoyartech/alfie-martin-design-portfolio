@@ -46,7 +46,7 @@ export default function RockefellerCapital() {
           <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
             <h2 className="text-slate-900 mb-6 text-3xl font-extrabold">Context</h2>
             <p className="font-sans text-slate-700 text-lg leading-relaxed">
-              Over the past 5 years, there has been an increasing need to enhance the user experience of RCM's mobile app. This shift is primarily due to a change in their client base, with a <strong>significant influx of younger HNWI</strong> (High Net Worth Individuals) who have expressed their preference for utilizing a mobile app.
+              I was designing for two sets of users, the advisors and internal employees working at RCM. And the influx of younger HNWI that were used to accessing everything from a digital space.
             </p>
           </div>
         </div>
