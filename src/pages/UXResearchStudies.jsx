@@ -44,6 +44,19 @@ export default function UXResearchStudies() {
             </div>
           </Link>
 
+          <Link to={createPageUrl("RCMUXR")} className="group block">
+            <div className="aspect-[4/3] bg-[#faf9f6] rounded-xl border border-gray-200 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-300">
+                <div className="text-slate-900 font-serif text-3xl font-bold text-center leading-tight">
+                    Ethnographic<br/><span className="text-[#bba986]">Interview Findings</span>
+                </div>
+            </div>
+            <div>
+                <div className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-2">Rockefeller Capital Management</div>
+                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#bba986] transition-colors">Member Mobile Experience</h3>
+                <p className="text-slate-600 font-sans">Redesigning the Member-Facing Mobile App through proxy-facilitated ethnographic interviews.</p>
+            </div>
+          </Link>
+
         </div>
       </section>
 

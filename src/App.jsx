@@ -39,6 +39,7 @@ import PrincipalFinancial from './pages/PrincipalFinancial';
 import RCM2 from './pages/RCM2';
 import UXResearchStudies from './pages/UXResearchStudies';
 import ExelonUXR from './pages/ExelonUXR';
+import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
@@ -102,6 +103,7 @@ const AuthenticatedApp = () => {
       <Route path="/RCM2" element={<RCM2 />} />
       <Route path="/UXResearchStudies" element={<UXResearchStudies />} />
       <Route path="/ExelonUXR" element={<ExelonUXR />} />
+      <Route path="/RCMUXR" element={<RCMUXR />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </>
