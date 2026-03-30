@@ -168,7 +168,7 @@ export default function RockefellerCapital() {
             {/* Security */}
             <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
               <div className="mb-8">
-                <Shield className="w-10 h-10 text-blue-600 mb-6" />
+                <Shield className="text-gray-950 mb-6 lucide lucide-shield w-10 h-10" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">New User Journey with Added Security</h3>
                 <p className="font-sans text-lg text-slate-600 max-w-3xl">
                   We added extra security measures. In addition to these new features, if the app was dormant for more than 2 minutes it would lock again. In order to change a passcode, a client would have to call their advisor. And in order to register, the same was applicable.
@@ -189,7 +189,7 @@ export default function RockefellerCapital() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <Smartphone className="w-10 h-10 text-blue-600 mb-6" />
+                <Smartphone className="text-slate-950 mb-6 lucide lucide-smartphone w-10 h-10" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">Driving Engagement</h3>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function RockefellerCapital() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <Bell className="w-10 h-10 text-blue-600 mb-6" />
+                <Bell className="text-gray-950 mb-6 lucide lucide-bell w-10 h-10" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">Proactive Notifications</h3>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function RockefellerCapital() {
             {/* Drag & Drop */}
             <div className="grid md:grid-cols-2 gap-8 items-center bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
               <div>
-                <Settings className="w-10 h-10 text-blue-600 mb-6" />
+                <Settings className="text-slate-950 mb-6 lucide lucide-settings w-10 h-10" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">Customizable Visualization</h3>
                 <p className="font-sans text-lg text-slate-600">
                   In contrast to the rest of the app, we created drag and drop designs and let the users choose how to customize their data visuals as far as colors and types of charts, what accounts to include or exclude from their portfolio.
@@ -243,7 +243,7 @@ export default function RockefellerCapital() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <Link2 className="w-10 h-10 text-blue-600 mb-6" />
+                <Link2 className="text-slate-950 mb-6 lucide lucide-link2 w-10 h-10" />
                 <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">External Integrations</h3>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function RockefellerCapital() {
           <h2 className="font-serif text-4xl font-bold mb-12">In Summary</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 font-sans text-lg text-slate-300">
-              <h3 className="text-2xl font-bold text-white">Navigating Frustrations</h3>
+              <h3 className="text-2xl font-bold text-white">Constraints and Stakeholder Management</h3>
               <p className="text-[#000000]">The client was under a lot of stress in a highly politicized office environment. I knew from the first few meetings that I needed to show that I and the team I was leading could be trusted to get the results that they wanted.
 
               </p>
