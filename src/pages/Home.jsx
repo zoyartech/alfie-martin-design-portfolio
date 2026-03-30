@@ -6,6 +6,9 @@ import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide
 import MobileNav from "@/components/MobileNav";
 
 const galleryImages = [
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6cd3367fc_flowers-illustration.png", caption: "Botanical Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/152e91a5e_illustration.png", caption: "Office Characters" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/20e5d49d4_shapes.png", caption: "Abstract Shapes" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bcfe2c17_alsharedasketchwithyou14.png", caption: "Microsoft — Design Systems" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d5c087b60_2-ratio-1-outdoor-billboard-mockup-template-69bbedce2b60532d8c62109f-2x.png", caption: "CBS Sports HQ" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a82561efd_IMG_2990.jpg", caption: "Illustration" },
