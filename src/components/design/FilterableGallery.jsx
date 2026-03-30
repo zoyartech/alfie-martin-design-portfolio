@@ -103,6 +103,39 @@ const projects = [
   { label: "User Trust", value: "100%" }],
 
   tags: ["AI", "Smart Contracts", "Product Design"]
+},
+{
+  title: "Floral Illustration System",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f253d05ab_flowers-illustration.png",
+  year: "2024",
+  link: "",
+  summary: "A vibrant floral illustration system developed for a lifestyle brand.",
+  stats: [],
+  tags: ["Illustration", "Brand Identity"]
+},
+{
+  title: "Character Design Collection",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3eac58057_illustration.png",
+  year: "2024",
+  link: "",
+  summary: "Diverse character illustrations to represent modern workforce personas.",
+  stats: [],
+  tags: ["Illustration", "Characters"]
+},
+{
+  title: "Geometric Shape Library",
+  category: "Brand Identity",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5dbf59141_shapes.png",
+  year: "2024",
+  link: "",
+  summary: "A comprehensive library of geometric shapes and patterns for brand collateral.",
+  stats: [],
+  tags: ["Design System", "Brand Identity"]
 }];
 
 
