@@ -159,54 +159,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }} className="text-slate-900 mb-12 text-xs tracking-[0.3em]">
-            DESIGN PROCESS</motion.p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-            {
-              step: "01",
-              title: "Discovery",
-              description: "Understanding business goals, user needs, and market landscape"
-            },
-            {
-              step: "02",
-              title: "Strategy",
-              description: "Defining design principles, positioning, and visual direction"
-            },
-            {
-              step: "03",
-              title: "Execution",
-              description: "Creating comprehensive design systems and assets"
-            },
-            {
-              step: "04",
-              title: "Refinement",
-              description: "Testing, iterating, and optimizing based on feedback"
-            }].
-            map((item, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }} className="text-zinc-900 pt-6 border-t border-gray-300">
-              
-
-                <span className="text-gray-400 text-xs font-semibold tracking-wider">{item.step}</span>
-                <h3 className="text-xl font-medium mt-4 mb-3">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-              </motion.div>
-            )}
-          </div>
-        </div>
+      {/* Process Section - Embedded Figma */}
+      <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
+        <iframe 
+          src="https://prompt-posts-67362556.figma.site" 
+          title="Figma Prototype"
+          width="100%" 
+          height="100%" 
+          className="w-full h-full border-none"
+          allowFullScreen
+        />
       </section>
 
       {/* Quote Section */}
