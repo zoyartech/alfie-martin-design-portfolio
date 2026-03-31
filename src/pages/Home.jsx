@@ -161,14 +161,14 @@ export default function Home() {
 
       {/* Process Section - Embedded Figma */}
       <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
-        <iframe 
-          src="https://prompt-posts-67362556.figma.site" 
+        <iframe
+          src="https://prompt-posts-67362556.figma.site"
           title="Figma Prototype"
-          width="100%" 
-          height="100%" 
+          width="100%"
+          height="100%"
           className="w-full h-full border-none"
-          allowFullScreen
-        />
+          allowFullScreen />
+        
       </section>
 
       {/* Quote Section */}
@@ -225,7 +225,7 @@ export default function Home() {
                 alt={item.caption}
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
+                
               </motion.div>
             )}
           </div>
