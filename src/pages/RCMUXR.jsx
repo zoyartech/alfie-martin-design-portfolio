@@ -333,7 +333,7 @@ export default function RCMUXR() {
             <div className="max-w-5xl mx-auto px-6 pt-12">
                 <FadeIn>
                     <img
-                        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d0d7ab26b_iphone-and-magazine-scene-69cb27ce96a7463d567f621a-2x.png"
+                        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/07bad35e7_flat-lay-neutral-minimal-style-iphone-12-pro-mockup-template-69cbd00a647f4a242f2ddabc-2x.png"
                         alt="Rockefeller app on desk"
                         className="w-full h-auto rounded-2xl shadow-sm"
                     />
