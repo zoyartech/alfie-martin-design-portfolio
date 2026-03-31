@@ -315,16 +315,16 @@ export default function RCMUXR() {
             <div className="max-w-5xl mx-auto px-6 pt-12">
                 <FadeIn>
                     <div className="grid md:grid-cols-2 gap-8">
-                        <img 
-                            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/177df8908_Screenshot2026-03-29at35314PM.png" 
-                            alt="Rockefeller Mobile App Details"
-                            className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 object-cover"
-                        />
-                        <img 
-                            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b7512c7e2_top-view-iphone-13-pro-with-an-app-logo-detail-mockup-template-69c98c7c882c70c8e3d349c4-2x.png" 
-                            alt="Rockefeller App Icon on Home Screen"
-                            className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 object-cover"
-                        />
+                        
+
+
+            
+            
+                        
+
+
+
+            
                     </div>
                 </FadeIn>
             </div>
