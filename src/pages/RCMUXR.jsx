@@ -329,6 +329,17 @@ export default function RCMUXR() {
                 </FadeIn>
             </div>
 
+            {/* Full Width Image */}
+            <div className="max-w-5xl mx-auto px-6 pt-12">
+                <FadeIn>
+                    <img
+                        src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d0d7ab26b_iphone-and-magazine-scene-69cb27ce96a7463d567f621a-2x.png"
+                        alt="Rockefeller app on desk"
+                        className="w-full h-auto rounded-2xl shadow-sm"
+                    />
+                </FadeIn>
+            </div>
+
             {/* Reflection */}
             <div className="max-w-5xl mx-auto px-6 pt-12 mt-12 border-t border-slate-200">
                 <FadeIn>
