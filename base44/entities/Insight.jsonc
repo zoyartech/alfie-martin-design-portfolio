@@ -1,0 +1,32 @@
+{
+  "name": "Insight",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the insight or blog post"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug for the post (e.g., my-design-process)"
+    },
+    "content": {
+      "type": "string",
+      "description": "The markdown content of the post"
+    },
+    "seo_description": {
+      "type": "string",
+      "description": "Short description for SEO and listing cards"
+    },
+    "cover_image": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the cover image"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "content"
+  ]
+}

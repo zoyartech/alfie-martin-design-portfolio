@@ -23,6 +23,8 @@ import ArbolCaseStudy from './pages/ArbolCaseStudy.jsx';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import SideQuests from './pages/SideQuests';
+import Insights from './pages/Insights';
+import InsightDetail from './pages/InsightDetail';
 import AdinaProject from './pages/AdinaProject';
 import TCSAttrition from './pages/TCSAttrition.jsx';
 import SystemsThinkingPoem from './pages/SystemsThinkingPoem.jsx';
@@ -87,6 +89,8 @@ const AuthenticatedApp = () => {
       <Route path="/Blog" element={<Blog />} />
       <Route path="/BlogPost" element={<BlogPost />} />
       <Route path="/SideQuests" element={<SideQuests />} />
+      <Route path="/Insights" element={<Insights />} />
+      <Route path="/InsightDetail" element={<InsightDetail />} />
       <Route path="/AdinaProject" element={<AdinaProject />} />
       <Route path="/TCSAttrition" element={<TCSAttrition />} />
       <Route path="/SystemsThinkingPoem" element={<SystemsThinkingPoem />} />
