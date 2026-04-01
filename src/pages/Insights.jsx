@@ -23,7 +23,7 @@ export default function Insights() {
             transition={{ duration: 0.6 }}
             className="mb-16">
             
-            <p className="text-slate-950 mb-4 text-xs uppercase tracking-[0.3em]">THOUGHTS & PROCESS</p>
+            <p className="text-slate-950 mb-4 text-xs font-bold uppercase tracking-[0.3em]">THOUGHTS & PROCESS</p>
             <h1 className="text-4xl font-medium md:text-6xl">Blog</h1>
             
 
