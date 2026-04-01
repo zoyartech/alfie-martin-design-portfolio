@@ -119,9 +119,12 @@ export default function FilterableGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
-            <div className="mb-4">
-              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
-                View UX Research Studies <ArrowUpRight className="w-4 h-4" />
+            <div className="mb-6 flex flex-wrap items-center gap-3">
+              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium text-slate-700 hover:border-gray-300 hover:bg-gray-50 transition-all">
+                UX Research Studies <ArrowUpRight className="w-4 h-4 text-slate-400" />
+              </Link>
+              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium text-slate-700 hover:border-gray-300 hover:bg-gray-50 transition-all">
+                Side Quests <ArrowUpRight className="w-4 h-4 text-slate-400" />
               </Link>
             </div>
             <h2 className="text-3xl font-semibold md:text-4xl">Product Design Case Studies </h2>
