@@ -159,18 +159,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section - Embedded Figma */}
-      <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
-        <iframe
-          src="https://prompt-posts-67362556.figma.site"
-          title="Figma Prototype"
-          width="100%"
-          height="100%"
-          className="w-full h-full border-none"
-          allowFullScreen />
-        
-      </section>
-
       {/* Quote Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-left">
@@ -276,6 +264,18 @@ export default function Home() {
 
           
         </div>
+      </section>
+
+      {/* Process Section - Embedded Figma */}
+      <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
+        <iframe
+          src="https://prompt-posts-67362556.figma.site"
+          title="Figma Prototype"
+          width="100%"
+          height="100%"
+          className="w-full h-full border-none"
+          allowFullScreen />
+        
       </section>
 
       {/* Contact CTA */}
