@@ -42,7 +42,8 @@ export default function Writing() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">CONTENT</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6">Different Types of C</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Different Types of Content
+</h1>
           </motion.div>
         </div>
       </section>
@@ -51,20 +52,19 @@ export default function Writing() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-10 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {writingProjects.map((project, i) =>
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group">
+            {writingProjects.map((project, i) => <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="group">
               
                 <Link to={createPageUrl(project.link)} className="block">
                   <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-xl mb-4 flex items-center justify-center p-4">
                     <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                   
                   </div>
                   
