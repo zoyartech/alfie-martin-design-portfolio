@@ -267,27 +267,15 @@ export default function Home() {
       </section>
 
       {/* Process Section - Embedded Figma */}
-      <section className="w-full h-screen flex flex-col bg-gray-50 border-y border-gray-200">
-        <div className="pt-16 pb-8 px-6 lg:px-12 max-w-7xl mx-auto w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4 uppercase">Lead Product Designer</p>
-            <h2 className="text-3xl md:text-4xl font-light">Rockefeller Capital Management</h2>
-            <p className="mt-4 text-gray-600 text-lg">Launched 2 Mobile apps and Rebranded Brand Identity</p>
-          </motion.div>
-        </div>
-        <div className="flex-1 w-full relative">
-          <iframe
-            src="https://prompt-posts-67362556.figma.site"
-            title="Figma Prototype"
-            width="100%"
-            height="100%"
-            className="absolute inset-0 w-full h-full border-none"
-            allowFullScreen />
-        </div>
+      <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
+        <iframe
+          src="https://prompt-posts-67362556.figma.site"
+          title="Figma Prototype"
+          width="100%"
+          height="100%"
+          className="w-full h-full border-none"
+          allowFullScreen />
+        
       </section>
 
       {/* Contact CTA */}
