@@ -31,6 +31,29 @@ const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" }];
 
 
+const GalleryItem = ({ item, index, openModal }) => {
+  const [loaded, setLoaded] = React.useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "50px" }}
+      transition={{ duration: 0.4, delay: (index % 4) * 0.1 }}
+      className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50"
+      onClick={() => openModal(index)}
+    >
+      <img
+        src={item.src}
+        alt={item.caption}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${loaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}
+      />
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+    </motion.div>
+  );
+};
+
 export default function Home() {
   const [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -199,24 +222,9 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((item, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="aspect-square overflow-hidden cursor-pointer group relative"
-              onClick={() => openModal(i)}>
-                <img
-                  src={item.src}
-                  alt={item.caption}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-              </motion.div>
-            )}
+            {galleryImages.map((item, i) => (
+              <GalleryItem key={i} item={item} index={i} openModal={openModal} />
+            ))}
           </div>
 
           {/* Modal */}
