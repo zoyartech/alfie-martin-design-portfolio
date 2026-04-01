@@ -28,7 +28,8 @@ const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/daee2761e_Untitled-October8202508552.jpg", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e60aead83_flowerrrr.png", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7972ab4c8_IMG_61212.jpg", caption: "Illustration" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2ea880f11_flat-lay-neutral-minimal-style-iphone-12-pro-mockup-template-69cbd00a647f4a242f2ddabc-2x.png", caption: "Mobile App Mockup" }];
 
 
 const GalleryItem = ({ item, index, openModal }) => {
