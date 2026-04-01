@@ -42,7 +42,7 @@ export default function Writing() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">CONTENT</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6">Writing</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Different Types of C</h1>
           </motion.div>
         </div>
       </section>
