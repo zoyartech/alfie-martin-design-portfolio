@@ -22,7 +22,7 @@ export default function CaseStudies() {
 
 
       {/* Header */}
-      <section className="pt-32 pb-8 px-6 lg:px-12">
+      <section className="pt-32 pb-0 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">PORTFOLIO</p>
@@ -37,7 +37,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Content */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-10">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} className="pt-0">
         <FilterableGallery />
         <DesignTestimonials />
         <ConsultationForm />

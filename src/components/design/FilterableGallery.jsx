@@ -115,7 +115,7 @@ export default function FilterableGallery() {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section className="pt-2 pb-16 px-6 lg:px-12">
+    <section className="pt-0 pb-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
