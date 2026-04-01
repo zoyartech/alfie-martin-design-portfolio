@@ -208,12 +208,13 @@ export default function Home() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="aspect-square overflow-hidden cursor-pointer group relative"
               onClick={() => openModal(i)}>
-                
-
-
-
-              
-                
+                <img
+                  src={item.src}
+                  alt={item.caption}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </motion.div>
             )}
           </div>
