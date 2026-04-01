@@ -779,6 +779,21 @@ at the intersection of art and science:"</p>
   </div>
 </section>
 
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <div style="display: flex; flex-direction: column; gap: 4rem;">
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c0e67134_Screenshot2026-03-29at64844PM.png" alt="Gallery Image 1" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/938d804ef_Screenshot2026-03-29at64936PM.png" alt="Gallery Image 2" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c13113e9c_Screenshot2026-03-29at64952PM.png" alt="Gallery Image 3" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1af04ac5b_Screenshot2026-03-29at65126PM.png" alt="Gallery Image 4" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f7ed9921a_Screenshot2026-03-29at65207PM.png" alt="Gallery Image 5" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a36577bbd_Screenshot2026-03-29at64917PM.png" alt="Gallery Image 6" style="width: 100%; height: auto; object-fit: contain;" />
+      <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fb3137c4a_Screenshot2026-03-29at64857PM.png" alt="Gallery Image 7" style="width: 100%; height: auto; object-fit: contain;" />
+    </div>
+  </div>
+</section>
+
 <!-- REFLECTION -->
 <section style="border-bottom: none;">
   <div class="container">
