@@ -187,7 +187,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}>
 
-              <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">VISUALS</p>
+              <p className="text-gray-950 mb-4 text-xs font-bold tracking-[0.3em]">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
             </motion.div>
             
