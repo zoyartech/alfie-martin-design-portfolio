@@ -120,10 +120,10 @@ export default function FilterableGallery() {
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3">
-              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
                 UX Research Studies <ArrowUpRight className="w-4 h-4 text-black" />
               </Link>
-              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
                 Side Quests <ArrowUpRight className="w-4 h-4 text-black" />
               </Link>
             </div>
