@@ -115,16 +115,16 @@ export default function FilterableGallery() {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section className="py-16 px-6 lg:px-12">
+    <section className="pt-2 pb-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3">
-              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                UX Research Studies <ArrowUpRight className="w-4 h-4 text-black" />
+              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+                UX Research Studies
               </Link>
-              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                Side Quests <ArrowUpRight className="w-4 h-4 text-black" />
+              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+                Side Quests
               </Link>
             </div>
             <h2 className="text-3xl font-semibold md:text-4xl">Product Design Case Studies </h2>
