@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
 import NavigationTracker from '@/lib/NavigationTracker'
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -46,6 +47,7 @@ import GlobalNav from './components/GlobalNav';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const location = useLocation();
 
   // Show loading spinner while checking app public settings or auth
   if (isLoadingPublicSettings || isLoadingAuth) {
@@ -69,9 +71,18 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <GlobalNav />
-      <Routes>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, filter: 'blur(5px)', y: 10 }}
+          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+          exit={{ opacity: 0, filter: 'blur(5px)', y: -10 }}
+          transition={{ duration: 0.35, ease: 'easeInOut' }}
+          className="flex-1 flex flex-col w-full"
+        >
+          <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Navigate to="/Home" replace />} />
       <Route path="/Home" element={<Home />} />
       <Route path="/About" element={<About />} />
@@ -109,8 +120,10 @@ const AuthenticatedApp = () => {
       <Route path="/ExelonUXR" element={<ExelonUXR />} />
       <Route path="/RCMUXR" element={<RCMUXR />} />
       <Route path="*" element={<PageNotFound />} />
-    </Routes>
-    </>
+          </Routes>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 
