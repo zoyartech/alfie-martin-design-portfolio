@@ -431,7 +431,7 @@ export default function DesignStrategyAI() {
             </div>
           </div>
 
-          <h3 className="font-serif text-3xl font-bold mb-10 text-slate-900">My Contributions to Training</h3>
+          <h3 className="text-slate-900 mb-10 text-4xl font-bold">My Contributions to Training</h3>
           <div className="space-y-12 mb-16">
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
               <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
