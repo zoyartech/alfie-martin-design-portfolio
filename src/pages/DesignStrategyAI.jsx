@@ -366,7 +366,7 @@ export default function DesignStrategyAI() {
             
           </div>
 
-          <h2 className="text-slate-900 mb-8 text-sm font-bold tracking-tight leading-[1.1] md:text-6xl">Teaching the Model to Rank Accuracy
+          <h2 className="text-slate-900 mb-8 text-xs font-bold tracking-tight leading-[1.1] md:text-6xl">Teaching the Model to Rank Accuracy
 
           </h2>
           
