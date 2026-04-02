@@ -78,8 +78,8 @@ export default function DesignStrategyAI() {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+              allowFullScreen>
+            </iframe>
           </div>
         </div>
 
@@ -229,22 +229,22 @@ export default function DesignStrategyAI() {
 
           <h3 className="font-serif text-3xl font-bold mb-8 text-slate-900">Raw User Input and Multi-Intent Handling</h3>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">The Ambiguity Threat</h4>
+            <div className="bg-[#8acc9a] p-6 rounded-lg border border-slate-200 shadow-sm">
+              <h4 className="text-slate-900 mb-4 pb-3 text-xl font-black border-b border-slate-200">The Ambiguity Threat</h4>
               <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
                 Ambiguity is the biggest threat to confidence scores. Vague queries force the system to either assign unhelpful middling scores or dishonestly boost a top answer. <strong>The mitigation:</strong> have the system ask a clarifying question when the input ambiguity score crosses a threshold, enabled by an ambiguity flag in the preprocessing layer.
               </p>
             </div>
             
             <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">Multi-Intent Queries</h4>
+              <h4 className="text-slate-900 mb-4 pb-3 text-xl font-black border-b border-slate-200">Multi-Intent Queries</h4>
               <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
                 Most chatbots answer the first detected intent and ignore the rest. In a ranked system, this leaves multiple user needs unaddressed. <strong>The fix:</strong> introduce a query decomposition step after intent classification that splits compound queries into independent sub-queries, each receiving its own three-answer response card.
               </p>
             </div>
             
             <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
-              <h4 className="font-serif text-xl font-bold mb-4 text-slate-900 border-b border-slate-200 pb-3">Sarcasm & Negation</h4>
+              <h4 className="text-slate-900 mb-4 pb-3 text-xl font-black border-b border-slate-200">Sarcasm & Negation</h4>
               <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
                 Sarcasm poisons confidence calibration. Misreading frustration as satisfaction creates maximally confident, maximally wrong answers that corrupt feedback loops. <strong>The fix:</strong> implement a sentiment-aware layer (fine-tuned on customer service data) that flags emotional context as metadata separate from the factual intent.
               </p>
@@ -490,23 +490,23 @@ export default function DesignStrategyAI() {
                   <AnimatedChart>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={[
-                          { name: 'External Verification', change: -47 },
-                          { name: 'Session Abandonment', change: -29 },
-                          { name: 'Answer Acceptance', change: 33 },
-                        ]} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                    { name: 'External Verification', change: -47 },
+                    { name: 'Session Abandonment', change: -29 },
+                    { name: 'Answer Acceptance', change: 33 }]
+                    } layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" horizontal={false} />
                             <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} />
-                            <YAxis dataKey="name" type="category" width={140} tick={{fill: '#475569', fontSize: 13}} />
-                            <Tooltip cursor={{fill: 'rgba(0,0,0,0.05)'}} formatter={(val) => [`${val > 0 ? '+' : ''}${val}%`, 'Change']} />
+                            <YAxis dataKey="name" type="category" width={140} tick={{ fill: '#475569', fontSize: 13 }} />
+                            <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} formatter={(val) => [`${val > 0 ? '+' : ''}${val}%`, 'Change']} />
                             <ReferenceLine x={0} stroke="#94a3b8" />
                             <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
                                 {[
-                                  { name: 'External Verification', change: -47 },
-                                  { name: 'Session Abandonment', change: -29 },
-                                  { name: 'Answer Acceptance', change: 33 },
-                                ].map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={entry.change > 0 ? '#10b981' : '#3b82f6'} />
-                                ))}
+                        { name: 'External Verification', change: -47 },
+                        { name: 'Session Abandonment', change: -29 },
+                        { name: 'Answer Acceptance', change: 33 }].
+                        map((entry, index) =>
+                        <Cell key={`cell-${index}`} fill={entry.change > 0 ? '#10b981' : '#3b82f6'} />
+                        )}
                             </Bar>
                         </BarChart>
                     </ResponsiveContainer>
@@ -521,20 +521,20 @@ export default function DesignStrategyAI() {
                   <AnimatedChart>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={[
-                          { name: 'Before Redesign', score: 4.3 },
-                          { name: 'After Redesign', score: 4.7 }
-                        ]} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                    { name: 'Before Redesign', score: 4.3 },
+                    { name: 'After Redesign', score: 4.7 }]
+                    } margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                            <XAxis dataKey="name" tick={{fill: '#475569', fontSize: 14}} />
-                            <YAxis domain={[0, 5]} tick={{fill: '#475569'}} />
-                            <Tooltip cursor={{fill: 'rgba(0,0,0,0.05)'}} />
+                            <XAxis dataKey="name" tick={{ fill: '#475569', fontSize: 14 }} />
+                            <YAxis domain={[0, 5]} tick={{ fill: '#475569' }} />
+                            <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
                             <Bar dataKey="score" fill="#8b5cf6" radius={[6, 6, 0, 0]} animationDuration={1500} label={{ position: 'top', fill: '#1e293b', fontWeight: 'bold', fontSize: 16 }}>
                                 {[
-                                  { name: 'Before Redesign', score: 4.3 },
-                                  { name: 'After Redesign', score: 4.7 }
-                                ].map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={index === 0 ? '#94a3b8' : '#8b5cf6'} />
-                                ))}
+                        { name: 'Before Redesign', score: 4.3 },
+                        { name: 'After Redesign', score: 4.7 }].
+                        map((entry, index) =>
+                        <Cell key={`cell-${index}`} fill={index === 0 ? '#94a3b8' : '#8b5cf6'} />
+                        )}
                             </Bar>
                         </BarChart>
                     </ResponsiveContainer>
