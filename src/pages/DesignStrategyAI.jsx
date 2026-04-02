@@ -182,7 +182,7 @@ export default function DesignStrategyAI() {
         </div>
 
         {/* 03 — DESIGN PROCESS */}
-        <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 border-t border-gray-100">
+        <div className="bg-[#fff5f5] mx-auto px-6 py-12 max-w-5xl md:py-20 border-t border-gray-100">
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             03 — Design Process
           </div>
@@ -236,14 +236,14 @@ export default function DesignStrategyAI() {
               </p>
             </div>
             
-            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div className="bg-[#e3f2e8] p-6 rounded-lg border border-slate-200 shadow-sm">
               <h4 className="text-slate-900 mb-4 pb-3 text-xl font-black border-b border-slate-200">Multi-Intent Queries</h4>
               <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
                 Most chatbots answer the first detected intent and ignore the rest. In a ranked system, this leaves multiple user needs unaddressed. <strong>The fix:</strong> introduce a query decomposition step after intent classification that splits compound queries into independent sub-queries, each receiving its own three-answer response card.
               </p>
             </div>
             
-            <div className="bg-[#f8fafc] border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div className="bg-[#e3f2e8] p-6 rounded-lg border border-slate-200 shadow-sm">
               <h4 className="text-slate-900 mb-4 pb-3 text-xl font-black border-b border-slate-200">Sarcasm & Negation</h4>
               <p className="font-sans text-slate-700 text-base md:text-lg leading-relaxed">
                 Sarcasm poisons confidence calibration. Misreading frustration as satisfaction creates maximally confident, maximally wrong answers that corrupt feedback loops. <strong>The fix:</strong> implement a sentiment-aware layer (fine-tuned on customer service data) that flags emotional context as metadata separate from the factual intent.
