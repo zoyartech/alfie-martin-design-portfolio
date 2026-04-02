@@ -436,21 +436,21 @@ export default function DesignStrategyAI() {
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
               <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
                 
-                <span>Source-grounding taxonomy</span>
+                <span className="text-2xl">Source-grounding taxonomy</span>
               </h4>
               <p className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed">I developed a tiered source classification system that the model used as a training signal. Tier 1: government and official databases. Tier 2: established publications and peer-reviewed sources. Tier 3: community forums, user-generated content, and everything your uncle shares on Facebook. The model learned to weight its confidence scores partly based on the authority tier of its retrieved source, which improved calibration significantly. Shocking that teaching a model to trust the IRS more than Reddit made it more accurate.</p>
             </div>
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
               <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
                 
-                <span>Evaluation rubric design</span>
+                <span className="text-2xl">Evaluation rubric design</span>
               </h4>
               <p className="font-sans text-slate-700 text-lg md:text-xl leading-relaxed">I authored the human evaluation rubric used by our annotation team to score answer quality across four dimensions: factual accuracy, source relevance, confidence calibration, and answer completeness. This rubric directly shaped the RLHF reward model. In practice, this meant I spent two weeks arguing about the difference between "partially correct" and "correct but incomplete" until we had a rubric everyone could apply consistently.</p>
             </div>
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
               <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
                 
-                <span>Edge-case curation</span>
+                <span className="font-semibold">Edge-case curation</span>
               </h4>
               <p className="text-slate-700 text-base font-sans leading-relaxed md:text-xl">I identified and curated roughly 200 "hard queries," questions with contested answers, recently-changed facts, or inherently ambiguous phrasing, and used them as a stress-test set for the model's confidence ranking. These queries exposed calibration drift early and became a standing regression suite. They were the trick questions on the exam, and the model needed to learn to say "I'm not sure" instead of guessing confidently.</p>
             </div>
