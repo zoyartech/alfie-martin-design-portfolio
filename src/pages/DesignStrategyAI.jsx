@@ -450,7 +450,7 @@ export default function DesignStrategyAI() {
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 items-start border-t border-gray-200 pt-8">
               <h4 className="font-serif text-2xl font-bold text-slate-900 flex items-start gap-4">
                 
-                <span className="font-semibold">Edge-case curation</span>
+                <span className="text-2xl font-semibold">Edge-case curation</span>
               </h4>
               <p className="text-slate-700 text-base font-sans leading-relaxed md:text-xl">I identified and curated roughly 200 "hard queries," questions with contested answers, recently-changed facts, or inherently ambiguous phrasing, and used them as a stress-test set for the model's confidence ranking. These queries exposed calibration drift early and became a standing regression suite. They were the trick questions on the exam, and the model needed to learn to say "I'm not sure" instead of guessing confidently.</p>
             </div>
