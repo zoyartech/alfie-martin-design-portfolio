@@ -461,7 +461,7 @@ export default function DesignStrategyAI() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
             </div>
             <div>
-              <h4 className="font-serif text-2xl font-bold mb-4 text-slate-900">Key insight from training:</h4>
+              <h4 className="text-slate-900 mb-4 text-xl font-extrabold">Key insight from training:</h4>
               <p className="text-slate-700 text-xs font-sans md:text-xl">The model initially over-indexed on source recency, assigning high confidence to recent but unreliable sources. A blog post from yesterday outranked a government publication from six months ago, which is exactly the kind of logic that makes misinformation spread. I flagged this pattern and worked with ML to add authority weighting alongside recency. That single adjustment improved calibration accuracy by 18 percentage points on our evaluation set.
 
               </p>
