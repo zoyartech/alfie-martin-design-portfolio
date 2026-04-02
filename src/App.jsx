@@ -30,6 +30,7 @@ import AdinaProject from './pages/AdinaProject';
 import TCSAttrition from './pages/TCSAttrition.jsx';
 import SystemsThinkingPoem from './pages/SystemsThinkingPoem.jsx';
 import BrandGallery from './pages/BrandGallery.jsx';
+import BrandConcepts from './pages/BrandConcepts';
 import ConfidenceLab from './pages/ConfidenceLab';
 import RockefellerCapital from './pages/RockefellerCapital';
 import BillingUsabilityStudy from './pages/BillingUsabilityStudy';
@@ -107,6 +108,7 @@ const AuthenticatedApp = () => {
       <Route path="/TCSAttrition" element={<TCSAttrition />} />
       <Route path="/SystemsThinkingPoem" element={<SystemsThinkingPoem />} />
       <Route path="/BrandGallery" element={<BrandGallery />} />
+      <Route path="/BrandConcepts" element={<BrandConcepts />} />
       <Route path="/ConfidenceLab" element={<ConfidenceLab />} />
       <Route path="/RockefellerCapital" element={<RockefellerCapital />} />
       <Route path="/BillingUsabilityStudy" element={<BillingUsabilityStudy />} />
