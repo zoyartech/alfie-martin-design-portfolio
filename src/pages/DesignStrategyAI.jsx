@@ -370,7 +370,7 @@ export default function DesignStrategyAI() {
 
           </h2>
           
-          <p className="text-slate-700 mb-16 text-lg font-sans">Designing the UI was half the challenge. The other half was making sure the model's confidence scores weren't just vibes. A "90% confidence" answer needed to actually be correct roughly 90% of the time, or the whole transparency premise would collapse into a more elaborately decorated version of the same trust problem. I embedded directly with the ML team for four weeks to shape this work, which is designer-speak for "I moved my laptop to their side of the office and refused to leave."
+          <p className="text-slate-700 mb-16 text-base font-sans">Designing the UI was half the challenge. The other half was making sure the model's confidence scores weren't just vibes. A "90% confidence" answer needed to actually be correct roughly 90% of the time, or the whole transparency premise would collapse into a more elaborately decorated version of the same trust problem. I embedded directly with the ML team for four weeks to shape this work, which is designer-speak for "I moved my laptop to their side of the office and refused to leave."
 
           </p>
 
