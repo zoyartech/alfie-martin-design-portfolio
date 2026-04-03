@@ -114,6 +114,17 @@ export default function CodeFlow() {
           </p>
         </Section>
 
+        <div className="w-full h-[80vh] border border-slate-200 rounded-2xl overflow-hidden mb-16 shadow-sm bg-white">
+          <iframe
+            src="https://wand-scale-38470345.figma.site"
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+            title="Figma Prototype"
+            allowFullScreen
+          />
+        </div>
+
         <Section title="5. Core Functional Requirements">
           <div className="space-y-8">
             <div>
