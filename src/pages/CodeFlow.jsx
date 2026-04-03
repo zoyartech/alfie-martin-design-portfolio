@@ -79,19 +79,19 @@ export default function CodeFlow() {
 
         <Section title="3. Target Users and Personas">
           <div className="grid md:grid-cols-2 gap-8 mt-8">
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+            <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">The Feature Developer</h3>
               <p className="text-slate-600">The most common user. They need to quickly prepare changesets, select reviewers, and track sign-off status with minimal context-switching.</p>
             </div>
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+            <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">The Senior Reviewer</h3>
               <p className="text-slate-600">Handling 5–15 reviews per day, they need efficient triage capabilities and rich commenting tools to provide precise, contextual feedback without burnout.</p>
             </div>
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+            <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">The New Hire</h3>
               <p className="text-slate-600">Junior developers who use code review as a learning mechanism to build codebase familiarity and coding standards knowledge.</p>
             </div>
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+            <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Engineering Managers & Security</h3>
               <p className="text-slate-600">Secondary personas needing visibility into review health metrics, team velocity, compliance, and security audit trails.</p>
             </div>
