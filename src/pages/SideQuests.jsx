@@ -70,20 +70,7 @@ export default function SideQuests() {
             </Link>
         </div>
 
-        <div className="mt-32 mb-12">
-          <h2 className="text-slate-900 mb-4 text-4xl font-extrabold md:text-4xl">Gestalt Principles</h2>
-          <p className="text-slate-600 font-sans max-w-2xl">Interactive examples demonstrating fundamental principles of perception. Just swipe!</p>
-        </div>
-        <div className="w-full h-[80vh] border border-gray-100 rounded-2xl overflow-hidden mb-32 shadow-sm bg-white">
-          <iframe
-            src="https://salsa-fresh-62488654.figma.site"
-            width="100%"
-            height="100%"
-            style={{ border: "none" }}
-            title="Interactive Prototype"
-            allowFullScreen />
-          
-        </div>
+
 
         <div className="mt-32">
           <motion.div
