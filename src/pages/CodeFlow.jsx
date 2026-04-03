@@ -113,18 +113,20 @@ export default function CodeFlow() {
             The UI leverages Cascadia Code for diff views and Segoe UI Variable for all chrome and labels. The color system extends Fluent’s semantic tokens with domain-specific tones (e.g., green for additions, red for deletions, amber for modified regions). 
           </p>
         </Section>
+      </div>
 
-        <div className="w-full h-[80vh] border border-slate-200 rounded-2xl overflow-hidden mb-16 shadow-sm bg-white">
-          <iframe
-            src="https://wand-scale-38470345.figma.site"
-            width="100%"
-            height="100%"
-            style={{ border: "none" }}
-            title="Figma Prototype"
-            allowFullScreen
-          />
-        </div>
+      <div className="w-full h-screen border-y border-slate-200 bg-slate-50 mb-16 md:mb-24">
+        <iframe
+          src="https://wand-scale-38470345.figma.site"
+          width="100%"
+          height="100%"
+          style={{ border: "none" }}
+          title="Figma Prototype"
+          allowFullScreen
+        />
+      </div>
 
+      <div className="max-w-4xl mx-auto px-6 lg:px-12 pb-16 md:pb-24">
         <Section title="5. Core Functional Requirements">
           <div className="space-y-8">
             <div>
