@@ -46,6 +46,7 @@ import ExelonUXR from './pages/ExelonUXR';
 import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
 import AdminInsights from './pages/AdminInsights';
+import CodeFlow from './pages/CodeFlow';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -123,6 +124,7 @@ const AuthenticatedApp = () => {
       <Route path="/ExelonUXR" element={<ExelonUXR />} />
       <Route path="/RCMUXR" element={<RCMUXR />} />
       <Route path="/AdminInsights" element={<AdminInsights />} />
+      <Route path="/CodeFlow" element={<CodeFlow />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>
