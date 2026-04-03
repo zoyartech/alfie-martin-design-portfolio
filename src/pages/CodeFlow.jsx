@@ -78,7 +78,7 @@ export default function CodeFlow() {
         </Section>
 
         <Section title="3. Target Users and Personas">
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
+          <div className="grid md:grid-cols-2 gap-8 mt-8 not-prose">
             <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">The Feature Developer</h3>
               <p className="text-slate-600">The most common user. They need to quickly prepare changesets, select reviewers, and track sign-off status with minimal context-switching.</p>
