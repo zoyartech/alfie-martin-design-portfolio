@@ -27,11 +27,11 @@ export default function GlossierStrategy() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-24 text-center">
           
-          <img 
+          <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/880233bb5_Screenshot2026-04-04at55431AM.png"
             alt="Glossier Strategy Cover"
-            className="w-full max-w-4xl mx-auto shadow-2xl mb-12 object-cover border-4 border-white transform hover:scale-[1.02] transition-transform duration-500 rounded-lg"
-          />
+            className="w-full max-w-4xl mx-auto shadow-2xl mb-12 object-cover border-4 border-white transform hover:scale-[1.02] transition-transform duration-500 rounded-lg" />
+          
 
           <h1 className="text-6xl md:text-8xl font-black mb-6 text-white mix-blend-difference tracking-tighter uppercase">
             Glossier
@@ -43,34 +43,34 @@ export default function GlossierStrategy() {
 
         {/* Background & Purpose */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12">
-            <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/34c7a7cdb_Screenshot2026-04-04at60021AM.png"
-                alt="Background and Purpose Cover"
-                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
-            />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12">
+            <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/34c7a7cdb_Screenshot2026-04-04at60021AM.png"
+            alt="Background and Purpose Cover"
+            className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover" />
+          
         </motion.div>
         
         <div className="grid md:grid-cols-2 gap-12 mb-32">
-            <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-sm p-10 rounded-[2rem] border border-white shadow-lg">
+            <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/80 backdrop-blur-sm p-10 rounded-[2rem] border border-white shadow-lg">
                 <h2 className="text-3xl font-bold mb-6 text-slate-900 border-b-4 border-[#FADCE2] pb-2 inline-block">Background</h2>
                 <p className="text-lg leading-relaxed text-slate-700">
                     Glossier is giving voice through beauty as a direct-to-consumer company that leverages the power of personal narrative to own the beauty conversation on the internet.
                 </p>
             </motion.div>
             
-            <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-slate-900 p-10 rounded-[2rem] shadow-xl text-white transform md:translate-y-12">
+            <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-slate-900 p-10 rounded-[2rem] shadow-xl text-white transform md:translate-y-12">
                 <h2 className="text-3xl font-bold mb-6 border-b-4 border-[#FADCE2]/30 pb-2 inline-block">Purpose</h2>
                 <p className="text-lg leading-relaxed text-slate-300">
                     As a brand that puts skin first, Glossier is redefining the beauty industry by fusing the insights of our community with our beauty-editor expertise (rooted in Glossier's successful publication Into The Gloss) to create a line of intuitive, enjoyable products that work hard for you (not the other way around). Together, we're bringing the experience of shopping for (and talking about) beauty into the future.
@@ -79,18 +79,18 @@ export default function GlossierStrategy() {
         </div>
 
         {/* Market & Trends */}
-        <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-32">
             
             <div className="mb-12">
-                <img 
-                    src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/788fdf2bb_Screenshot2026-04-04at60032AM.png"
-                    alt="Market and Trends Analysis Cover"
-                    className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover mb-12"
-                />
+                <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/788fdf2bb_Screenshot2026-04-04at60032AM.png"
+              alt="Market and Trends Analysis Cover"
+              className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover mb-12" />
+            
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Market & Trends Analysis</h2>
@@ -110,78 +110,78 @@ export default function GlossierStrategy() {
         </motion.div>
 
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16">
-            <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0a37a8ba_Screenshot2026-04-04at60054AM.png"
-                alt="Brand Positioning Map"
-                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
-            />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16">
+            <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0a37a8ba_Screenshot2026-04-04at60054AM.png"
+            alt="Brand Positioning Map"
+            className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover" />
+          
         </motion.div>
 
         {/* Strategic Pillars */}
         <div className="grid md:grid-cols-3 gap-6 mb-32">
             {[
-                { icon: Sparkles, title: "Technological Integration" },
-                { icon: Users, title: "Community Driven Product Development" },
-                { icon: Presentation, title: "Omnichannel Strategy" }
-            ].map((trend, i) => (
-                <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="bg-white rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 group border border-white hover:border-[#FFB6C1]">
+          { icon: Sparkles, title: "Technological Integration" },
+          { icon: Users, title: "Community Driven Product Development" },
+          { icon: Presentation, title: "Omnichannel Strategy" }].
+          map((trend, i) =>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="bg-white rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 group border border-white hover:border-[#FFB6C1]">
                     <div className="w-16 h-16 bg-[#FADCE2] rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-12 transition-transform">
                         <trend.icon className="w-8 h-8 text-[#FF6B81]" />
                     </div>
                     <h3 className="font-bold text-xl text-slate-900">{trend.title}</h3>
                 </motion.div>
-            ))}
+          )}
         </div>
 
         {/* Strategic Approach */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12">
-            <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e1dfd5902_Screenshot2026-04-04at60103AM.png"
-                alt="Strategic Approach Cover"
-                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
-            />
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12">
+            <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e1dfd5902_Screenshot2026-04-04at60103AM.png"
+            alt="Strategic Approach Cover"
+            className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover" />
+          
         </motion.div>
 
-        <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="mb-32 flex flex-col md:flex-row items-center gap-12 bg-white/60 backdrop-blur-md rounded-[3rem] p-10 border border-white/50">
-            <div className="flex-1">
-                <h2 className="text-4xl font-bold mb-6 text-slate-900">Strategic Approach</h2>
-                <p className="text-xl leading-relaxed text-slate-700">
-                    As the line between skincare and makeup continues to blur, brands that excel in formulations that offer both cosmetic and treatment benefits will likely see continued growth. This presents an opportunity for Glossier to leverage its "skin-first" philosophy in new product developments.
-                </p>
-            </div>
-            <div className="w-full md:w-1/3 aspect-square bg-gradient-to-tr from-purple-400 via-pink-300 to-blue-400 rounded-full blur-xl opacity-60 mix-blend-multiply animate-pulse"></div>
-        </motion.div>
+        
+
+
+
+
+
+
+
+
+
+
+
+        
 
         {/* Content Vision, Mission & Goals */}
         <div className="mb-32">
             <h2 className="text-4xl md:text-6xl font-black text-center mb-16 uppercase tracking-tighter">
-                Content Vision,<br/>Mission, & Goals
+                Content Vision,<br />Mission, & Goals
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-white p-12 rounded-[2rem] shadow-lg border-t-8 border-slate-900">
+                <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white p-12 rounded-[2rem] shadow-lg border-t-8 border-slate-900">
                     <div className="flex items-center justify-between mb-8">
                         <h3 className="text-3xl font-bold text-slate-900">Mission</h3>
                         <Target className="w-10 h-10 text-[#FF6B81]" />
@@ -193,12 +193,12 @@ export default function GlossierStrategy() {
                     </div>
                 </motion.div>
 
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="bg-white p-12 rounded-[2rem] shadow-lg border-t-8 border-[#FFB6C1]">
+                <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-12 rounded-[2rem] shadow-lg border-t-8 border-[#FFB6C1]">
                     <div className="flex items-center justify-between mb-8">
                         <h3 className="text-3xl font-bold text-slate-900">Vision</h3>
                         <Eye className="w-10 h-10 text-[#FF6B81]" />
@@ -211,11 +211,11 @@ export default function GlossierStrategy() {
             </div>
 
             {/* Tactical Goals */}
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-slate-900 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
+            <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-slate-900 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
                 
                 {/* Abstract graphic */}
                 <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
@@ -269,6 +269,6 @@ export default function GlossierStrategy() {
         </div>
 
       </div>
-    </div>
-  );
+    </div>);
+
 }
