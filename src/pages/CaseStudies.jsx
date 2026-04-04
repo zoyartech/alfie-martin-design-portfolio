@@ -25,7 +25,7 @@ export default function CaseStudies() {
       <section className="pt-32 pb-0 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">PORTFOLIO</p>
+            <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em]">PORTFOLIO</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
             
 
