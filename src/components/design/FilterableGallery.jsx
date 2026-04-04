@@ -150,6 +150,17 @@ export default function FilterableGallery() {
             )}
           </AnimatePresence>
         </motion.div>
+
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-32 mb-10">
+            <h2 className="text-3xl font-semibold md:text-4xl mb-8">TCS LMS Design Video Walkthrough</h2>
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
+                <iframe src="https://share.descript.com/embed/KW7DYW6OXNO" width="100%" height="100%" frameBorder="0" allowFullScreen title="TCS LMS Design"></iframe>
+            </div>
+        </motion.div>
       </div>
     </section>);
 
