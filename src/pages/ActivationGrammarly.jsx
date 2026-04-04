@@ -151,7 +151,7 @@ export default function ActivationGrammarly() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-24 text-center max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">Video Walkthrough</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">Descript Video Walkthrough</h2>
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white">
                 <iframe src="https://share.descript.com/embed/6TxQpSN3WLn" width="100%" height="100%" frameBorder="0" allowFullScreen title="Grammarly Activation Case Study"></iframe>
             </div>
