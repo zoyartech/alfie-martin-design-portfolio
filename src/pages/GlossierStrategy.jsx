@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Eye, Target, Sparkles, UserCheck, BarChart3, Presentation, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Eye, Target, Sparkles, UserCheck, BarChart3, Presentation, RefreshCw, Users } from 'lucide-react';
 import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 
