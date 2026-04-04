@@ -35,7 +35,7 @@ const writingProjects = [
 {
   title: "Glossier Market & Content Strategy",
   category: "Strategy",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/103a0df4b_Screenshot2026-03-25at105912PM.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/880233bb5_Screenshot2026-04-04at55431AM.png",
   link: "GlossierStrategy",
   summary: "An analysis of Glossier's brand positioning, market expansion trends, and content vision centered around their 'Skin First. Makeup Second' philosophy."
 }];

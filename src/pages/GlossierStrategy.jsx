@@ -27,28 +27,18 @@ export default function GlossierStrategy() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-24 text-center">
           
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/880233bb5_Screenshot2026-04-04at55431AM.png"
+            alt="Glossier Strategy Cover"
+            className="w-full max-w-4xl mx-auto shadow-2xl mb-12 object-cover border-4 border-white transform hover:scale-[1.02] transition-transform duration-500 rounded-lg"
+          />
+
           <h1 className="text-6xl md:text-8xl font-black mb-6 text-white mix-blend-difference tracking-tighter uppercase">
             Glossier
           </h1>
           <p className="text-xl md:text-3xl text-slate-800 font-medium max-w-2xl mx-auto tracking-tight">
             Market & Content Strategy
           </p>
-        </motion.div>
-
-        {/* Hero Image Layout */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="relative mb-32 h-[500px] w-full flex items-center justify-center">
-             <div className="absolute inset-0 border-[3px] border-slate-900 transform -skew-y-3 bg-white z-0 overflow-hidden shadow-2xl">
-                 <div className="absolute inset-0 bg-slate-50 opacity-50"></div>
-             </div>
-             <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/103a0df4b_Screenshot2026-03-25at105912PM.png" 
-                alt="Glossier eye pencils" 
-                className="relative z-10 w-3/4 max-w-lg object-contain transform rotate-2 drop-shadow-xl hover:rotate-0 transition-transform duration-500"
-             />
         </motion.div>
 
         {/* Background & Purpose */}
