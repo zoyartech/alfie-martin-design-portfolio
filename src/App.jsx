@@ -47,6 +47,7 @@ import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
 import AdminInsights from './pages/AdminInsights';
 import CodeFlow from './pages/CodeFlow';
+import ChatWidget from './components/chat/ChatWidget';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -140,6 +141,7 @@ function App() {
         <Router>
           <NavigationTracker />
           <AuthenticatedApp />
+          <ChatWidget agentName="chad" />
         </Router>
         <Toaster />
       </QueryClientProvider>
