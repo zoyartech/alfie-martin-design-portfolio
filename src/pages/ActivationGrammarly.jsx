@@ -144,6 +144,19 @@ export default function ActivationGrammarly() {
             className="w-full max-w-5xl mx-auto h-auto rounded-3xl border border-slate-200 shadow-sm" />
           
         </motion.div>
+
+        {/* Video Walkthrough */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-24 text-center max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">Video Walkthrough</h2>
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white">
+                <iframe src="https://share.descript.com/embed/6TxQpSN3WLn" width="100%" height="100%" frameBorder="0" allowFullScreen title="Grammarly Activation Case Study"></iframe>
+            </div>
+        </motion.div>
+
       </div>
     </div>
   );
