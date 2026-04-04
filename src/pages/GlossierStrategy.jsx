@@ -42,6 +42,18 @@ export default function GlossierStrategy() {
         </motion.div>
 
         {/* Background & Purpose */}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12">
+            <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/34c7a7cdb_Screenshot2026-04-04at60021AM.png"
+                alt="Background and Purpose Cover"
+                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
+            />
+        </motion.div>
+        
         <div className="grid md:grid-cols-2 gap-12 mb-32">
             <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -72,6 +84,15 @@ export default function GlossierStrategy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-32">
+            
+            <div className="mb-12">
+                <img 
+                    src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/788fdf2bb_Screenshot2026-04-04at60032AM.png"
+                    alt="Market and Trends Analysis Cover"
+                    className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover mb-12"
+                />
+            </div>
+            
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Market & Trends Analysis</h2>
             
             <div className="bg-white p-12 rounded-[3rem] shadow-xl border-4 border-white relative overflow-hidden">
@@ -86,6 +107,18 @@ export default function GlossierStrategy() {
                     Summer Fridays has successfully expanded from masks to a full skincare line, while Makeup by Mario has moved from color cosmetics to complexion products. Category fluidity has become essential for growth in the competitive beauty market.
                 </p>
             </div>
+        </motion.div>
+
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16">
+            <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0a37a8ba_Screenshot2026-04-04at60054AM.png"
+                alt="Brand Positioning Map"
+                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
+            />
         </motion.div>
 
         {/* Strategic Pillars */}
@@ -111,6 +144,18 @@ export default function GlossierStrategy() {
         </div>
 
         {/* Strategic Approach */}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12">
+            <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e1dfd5902_Screenshot2026-04-04at60103AM.png"
+                alt="Strategic Approach Cover"
+                className="w-full max-w-4xl mx-auto shadow-xl rounded-2xl border-2 border-white object-cover"
+            />
+        </motion.div>
+
         <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
