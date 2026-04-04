@@ -31,6 +31,13 @@ const writingProjects = [
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/30c534b97_Screenshot2026-03-21at93233PM.png",
   link: "SystemsThinkingPoem",
   summary: "A poem"
+},
+{
+  title: "Glossier Market & Content Strategy",
+  category: "Strategy",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/103a0df4b_Screenshot2026-03-25at105912PM.png",
+  link: "GlossierStrategy",
+  summary: "An analysis of Glossier's brand positioning, market expansion trends, and content vision centered around their 'Skin First. Makeup Second' philosophy."
 }];
 
 

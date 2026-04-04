@@ -22,6 +22,7 @@ import DesignMarathon from './pages/DesignMarathon';
 import PolaroidProject from './pages/PolaroidProject';
 import ArbolCaseStudy from './pages/ArbolCaseStudy.jsx';
 import Blog from './pages/Blog';
+import GlossierStrategy from './pages/GlossierStrategy.jsx';
 import BlogPost from './pages/BlogPost';
 import SideQuests from './pages/SideQuests';
 import Insights from './pages/Insights';
@@ -102,6 +103,7 @@ const AuthenticatedApp = () => {
       <Route path="/PolaroidProject" element={<PolaroidProject />} />
       <Route path="/ArbolCaseStudy" element={<ArbolCaseStudy />} />
       <Route path="/Blog" element={<Blog />} />
+      <Route path="/GlossierStrategy" element={<GlossierStrategy />} />
       <Route path="/BlogPost" element={<BlogPost />} />
       <Route path="/SideQuests" element={<SideQuests />} />
       <Route path="/Insights" element={<Insights />} />
