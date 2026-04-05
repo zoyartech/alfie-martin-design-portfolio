@@ -71,7 +71,7 @@ export default function SideQuests() {
 
             <a href="https://creative-lab-copy-7f0d595e.base44.app" target="_blank" rel="noopener noreferrer" className="group block">
                 <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
-                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/eef9125f6_Screenshot2026-04-05at91457AM.png" alt="Alfies Idea Factory" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/eef9125f6_Screenshot2026-04-05at91457AM.png" alt="Alfies Idea Factory" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div>
                     <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Alfies Idea Factory</h3>
