@@ -5,13 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const writingProjects = [
 {
-  title: "Reverse Trial with AI-Guided First Edit",
-  category: "Growth Experiment",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
-  link: "DescriptExperiment",
-  summary: "A data-backed activation and conversion experiment proposal for Descript, focusing on reverse trials and AI onboarding."
-},
-{
   title: "Examples of Growth Design Experiments",
   category: "UX Strategy",
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
