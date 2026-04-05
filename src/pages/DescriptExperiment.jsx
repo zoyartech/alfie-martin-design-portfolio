@@ -91,7 +91,7 @@ export default function DescriptExperiment() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-slate-900/80 mix-blend-multiply z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564" 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6e8355cb9_backkkk.png" 
             alt="Abstract Background" 
             className="w-full h-full object-cover scale-110"
           />
