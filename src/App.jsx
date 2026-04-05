@@ -48,6 +48,7 @@ import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
 import AdminInsights from './pages/AdminInsights';
 import CodeFlow from './pages/CodeFlow';
+import DescriptExperiment from './pages/DescriptExperiment';
 import ChatWidget from './components/chat/ChatWidget';
 
 const AuthenticatedApp = () => {
@@ -128,6 +129,7 @@ const AuthenticatedApp = () => {
       <Route path="/RCMUXR" element={<RCMUXR />} />
       <Route path="/AdminInsights" element={<AdminInsights />} />
       <Route path="/CodeFlow" element={<CodeFlow />} />
+      <Route path="/DescriptExperiment" element={<DescriptExperiment />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>
