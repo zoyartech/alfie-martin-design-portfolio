@@ -198,51 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Idea Factory Section */}
-      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-gray-950 mb-4 text-xs font-bold tracking-[0.3em]">COLLABORATION</p>
-              <h2 className="text-3xl md:text-5xl font-light mb-6">Alfies Idea Factory</h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                A collaborative space for new ideas
-              </p>
-              <a 
-                href="https://creative-lab-copy-7f0d595e.base44.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300"
-              >
-                EXPLORE NOW <ArrowRight className="w-4 h-4" />
-              </a>
-            </motion.div>
-          </div>
-          <div className="flex-1">
-            <motion.a
-              href="https://creative-lab-copy-7f0d595e.base44.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="block overflow-hidden rounded-[10px] shadow-xl group border border-gray-100"
-            >
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/eef9125f6_Screenshot2026-04-05at91457AM.png" 
-                alt="Alfies Idea Factory" 
-                className="w-full h-auto bg-white object-cover transform group-hover:scale-105 transition-transform duration-700"
-              />
-            </motion.a>
-          </div>
-        </div>
-      </section>
+
 
       {/* Gallery Preview */}
       <section className="py-16 md:py-32 px-6 lg:px-12">
