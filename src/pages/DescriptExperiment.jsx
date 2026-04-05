@@ -1,377 +1,388 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowLeft, Beaker, FileText, BarChart, Target, Zap, Shield, Rocket, CheckCircle } from "lucide-react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowLeft, Beaker, FileText, BarChart, Target, Shield, Rocket, CheckCircle, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
-const Section = ({ title, icon: Icon, children }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mb-12 bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
-  >
-    <div className="flex items-center gap-4 mb-8 pb-6 border-b border-slate-100">
-      <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-        <Icon className="w-6 h-6" />
-      </div>
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">{title}</h2>
-    </div>
-    <div className="space-y-6 text-slate-700 leading-relaxed text-lg">
+const StaggerContainer = ({ children, className }) => {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+        },
+      }}
+      className={className}
+    >
       {children}
-    </div>
-  </motion.div>
+    </motion.div>
+  );
+};
+
+const ItemAnim = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { type: "spring", stiffness: 300, damping: 24 }
+  }
+};
+
+const MagazineSection = ({ title, subtitle, icon: Icon, children, align = "left", color = "bg-indigo-600" }) => (
+  <div className={`py-24 ${align === "center" ? "text-center" : ""}`}>
+    <StaggerContainer className="max-w-6xl mx-auto px-6">
+      <motion.div variants={ItemAnim} className={`inline-flex items-center gap-3 mb-6 ${align === "center" ? "mx-auto" : ""}`}>
+        <div className={`w-12 h-12 rounded-2xl ${color} text-white flex items-center justify-center transform rotate-3 shadow-lg`}>
+          <Icon className="w-6 h-6" />
+        </div>
+        <span className="font-black tracking-widest uppercase text-sm text-slate-500">{subtitle}</span>
+      </motion.div>
+      
+      <motion.h2 variants={ItemAnim} className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-12 leading-tight">
+        {title}
+      </motion.h2>
+      
+      <motion.div variants={ItemAnim} className="prose prose-lg md:prose-xl prose-slate max-w-none text-slate-600">
+        {children}
+      </motion.div>
+    </StaggerContainer>
+  </div>
 );
 
 export default function DescriptExperiment() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
   return (
-    <div className="min-h-screen bg-[#fafafa] font-sans text-slate-900 pb-32">
+    <div className="min-h-screen bg-[#F4F4F5] font-sans selection:bg-indigo-200 selection:text-indigo-900 overflow-hidden" ref={containerRef}>
+      
       {/* Navigation */}
-      <div className="fixed top-24 left-6 z-50 hidden lg:block">
-        <Link to={createPageUrl("Writing")} className="group inline-flex items-center gap-2 text-xs tracking-[0.2em] text-slate-500 hover:text-slate-900 transition-all uppercase font-bold bg-white/80 backdrop-blur-md px-5 py-3 rounded-full shadow-sm hover:shadow-md border border-slate-200">
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
+      <motion.div 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30, delay: 0.5 }}
+        className="fixed top-8 left-6 z-50 hidden lg:block"
+      >
+        <Link to={createPageUrl("Writing")} className="group flex items-center gap-3 text-xs tracking-widest text-slate-900 hover:text-indigo-600 transition-colors uppercase font-black bg-white/90 backdrop-blur-xl px-6 py-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.05)] border border-white/20">
+          <motion.div whileHover={{ x: -4 }} transition={{ type: "spring" }}>
+            <ArrowLeft className="w-4 h-4" /> 
+          </motion.div>
           Back to Content
         </Link>
+      </motion.div>
+
+      {/* Hero Section */}
+      <div className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-slate-900">
+        <motion.div 
+          style={{ y: heroY, opacity: heroOpacity }}
+          className="absolute inset-0 z-0"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-slate-900/80 mix-blend-multiply z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564" 
+            alt="Abstract Background" 
+            className="w-full h-full object-cover scale-110"
+          />
+        </motion.div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <StaggerContainer>
+            <motion.div variants={ItemAnim} className="inline-block mb-8">
+              <span className="bg-indigo-500 text-white text-xs font-black tracking-widest uppercase px-4 py-2 rounded-full shadow-[0_0_20px_rgba(99,102,241,0.5)]">
+                Growth Experiment Proposal
+              </span>
+            </motion.div>
+            
+            <motion.h1 variants={ItemAnim} className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-8">
+              REVERSE TRIAL <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+                AI-FIRST EDIT
+              </span>
+            </motion.h1>
+            
+            <motion.p variants={ItemAnim} className="text-2xl md:text-3xl text-slate-300 font-medium max-w-3xl mb-16 leading-tight">
+              A data-backed activation and conversion experiment designed to redefine the onboarding experience at Descript.
+            </motion.p>
+
+            <motion.div variants={ItemAnim} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { label: "Target", value: "Activation" },
+                { label: "Sample", value: "10,000 Users" },
+                { label: "Duration", value: "8 Weeks" },
+                { label: "Expected Lift", value: "+15–25%" },
+              ].map((stat, idx) => (
+                <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl p-6 hover:bg-white/20 transition-colors">
+                  <p className="text-indigo-300 text-xs font-black uppercase tracking-widest mb-2">{stat.label}</p>
+                  <p className="text-white font-bold text-xl md:text-2xl">{stat.value}</p>
+                </div>
+              ))}
+            </motion.div>
+          </StaggerContainer>
+        </div>
       </div>
 
-      <div className="max-w-4xl mx-auto pt-32 md:pt-40 px-6">
-        
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-16"
-        >
-          <p className="text-sm font-bold tracking-[0.2em] text-indigo-600 uppercase mb-4">Growth Experiment Proposal</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight text-slate-900">
-            Reverse Trial with<br/>
-            <span className="text-indigo-600">AI-Guided First Edit</span>
-          </h1>
-          <p className="text-xl text-slate-600 mb-12 max-w-2xl">
-            A data-backed activation and conversion experiment for Descript.
-          </p>
+      {/* 1. Problem Definition */}
+      <MagazineSection title="The Activation Gap" subtitle="01 / The Problem" icon={FileText} color="bg-rose-500">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <p className="text-2xl font-medium leading-relaxed text-slate-800 mb-8">
+              Descript's core value proposition is that editing video is as easy as editing a document. A genuinely novel paradigm, but novelty comes with a cost: <strong>the magic moment is delayed.</strong>
+            </p>
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+              <h4 className="font-bold text-slate-900 text-xl mb-4">The 7-Step Journey</h4>
+              <ul className="space-y-3 font-medium text-slate-600">
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">1</div> Create an account</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">2</div> Navigate the interface</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">3</div> Upload or record media</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">4</div> Wait for transcription</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">5</div> Discover text-based editing</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">6</div> Make a meaningful edit</li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-xs font-bold text-rose-600">7</div> Export or publish</li>
+              </ul>
+            </div>
+          </div>
+          <div className="space-y-8">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="bg-slate-900 text-white p-10 rounded-3xl shadow-xl"
+            >
+              <h3 className="text-3xl font-black mb-4">The Free Tier Paradox</h3>
+              <p className="text-slate-300 font-medium text-lg leading-relaxed">
+                1 media hour and 100 AI credits per month. Too limited to form habits, but too generous to create urgency. Users leave thinking it's "another video editor" instead of an "AI co-editor."
+              </p>
+            </motion.div>
+            
+            <div className="bg-rose-50 border border-rose-100 p-10 rounded-3xl">
+              <Zap className="w-10 h-10 text-rose-500 mb-4" />
+              <h3 className="text-2xl font-black text-rose-900 mb-2">The Opportunity</h3>
+              <p className="text-rose-700 font-medium">
+                At a 12% conversion rate and ~1.5M active users, a 3-percentage-point improvement yields <strong>$10.8M–$18.9M</strong> in incremental ARR.
+              </p>
+            </div>
+          </div>
+        </div>
+      </MagazineSection>
 
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-            <table className="w-full text-left text-sm md:text-base">
-              <tbody className="divide-y divide-slate-100">
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 w-1/3 bg-slate-50">Prepared by</th>
-                  <td className="p-4">Ally Martin · Wexley House</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Date</th>
-                  <td className="p-4">April 2026</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Experiment type</th>
-                  <td className="p-4">A/B test, randomized at signup</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Funnel target</th>
-                  <td className="p-4 font-medium text-indigo-600">Activation → Free-to-Paid Conversion</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Duration</th>
-                  <td className="p-4">8 weeks (2 ramp + 6 measurement)</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Required sample</th>
-                  <td className="p-4">10,000 new signups (5,000 per variant)</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Primary metric</th>
-                  <td className="p-4">Free-to-paid conversion rate (30-day)</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <th className="p-4 font-semibold text-slate-900 bg-slate-50">Expected lift</th>
-                  <td className="p-4 font-bold text-emerald-600">+15–25% relative conversion improvement</td>
-                </tr>
-              </tbody>
-            </table>
+      {/* 2. Data Foundation */}
+      <div className="bg-white py-24 border-y border-slate-200">
+        <StaggerContainer className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <motion.div variants={ItemAnim} className="inline-flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center transform -rotate-3 shadow-lg">
+                <BarChart className="w-6 h-6" />
+              </div>
+              <span className="font-black tracking-widest uppercase text-sm text-slate-500">02 / The Data</span>
+            </motion.div>
+            <motion.h2 variants={ItemAnim} className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter">
+              Grounded in Evidence
+            </motion.h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                stat: "14-21%",
+                title: "Reverse Trial Conversion",
+                desc: "Reverse trials consistently outperform freemium models (3-15%) because users anchor on the premium experience."
+              },
+              {
+                stat: "40.4%",
+                title: "Optimal Trial Length",
+                desc: "Trials of 7 days or fewer yield significantly higher conversion compared to longer trials by creating urgency."
+              },
+              {
+                stat: "10 min",
+                title: "The Value Threshold",
+                desc: "Time-to-value under 10 minutes sees conversions happen 30-40% faster than industry averages."
+              }
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                variants={ItemAnim}
+                whileHover={{ y: -10 }}
+                className="bg-[#F4F4F5] p-10 rounded-3xl"
+              >
+                <div className="text-5xl font-black text-cyan-600 mb-4 tracking-tighter">{item.stat}</div>
+                <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
+                <p className="text-slate-600 font-medium leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </StaggerContainer>
+      </div>
+
+      {/* 3. Hypothesis */}
+      <MagazineSection title="The Master Hypothesis" subtitle="03 / The Logic" icon={Beaker} color="bg-violet-600">
+        <motion.div 
+          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-br from-violet-600 to-indigo-700 p-12 md:p-16 rounded-[3rem] shadow-2xl text-white mb-16"
+        >
+          <h3 className="text-2xl md:text-4xl font-black leading-tight mb-8">
+            "If we give new users a 7-day reverse trial combined with an AI-guided onboarding that delivers exportable video under 10 minutes..."
+          </h3>
+          <div className="flex flex-wrap gap-4">
+            <div className="bg-white/20 backdrop-blur-md px-6 py-4 rounded-2xl">
+              <span className="block text-violet-200 text-sm font-bold uppercase tracking-widest mb-1">Conversion Lift</span>
+              <span className="text-3xl font-black">+15–25%</span>
+            </div>
+            <div className="bg-white/20 backdrop-blur-md px-6 py-4 rounded-2xl">
+              <span className="block text-violet-200 text-sm font-bold uppercase tracking-widest mb-1">7-Day Activation</span>
+              <span className="text-3xl font-black">+30–45%</span>
+            </div>
           </div>
         </motion.div>
 
-        {/* 1. Problem Definition */}
-        <Section title="1. Problem Definition" icon={FileText}>
-          <h3 className="text-xl font-bold text-slate-900 mt-2">1.1 The Activation Gap</h3>
-          <p>
-            Descript's core value proposition is that editing video is as easy as editing a document. 
-            You upload media, it gets transcribed, and then you edit the video by editing the text. 
-            This is a genuinely novel paradigm. But that novelty comes with a cost: the product's 
-            magic moment is structurally delayed behind multiple prerequisite actions.
-          </p>
-          <ul className="list-decimal pl-6 space-y-2 text-slate-600">
-            <li><strong>Create an account</strong> (email, OAuth, or SSO)</li>
-            <li><strong>Navigate the editor interface</strong> (unfamiliar layout for non-editors)</li>
-            <li><strong>Upload or record media</strong> (requires having content ready)</li>
-            <li><strong>Wait for transcription</strong> (creates cognitive interruption)</li>
-            <li><strong>Discover text-based editing</strong> (must realize deleting text deletes video)</li>
-            <li><strong>Make a meaningful edit</strong> (cut filler words, apply Studio Sound)</li>
-            <li><strong>Export or publish</strong> (confirms value was created)</li>
-          </ul>
-          <p>
-            Industry data consistently shows that each additional step in an onboarding flow reduces 
-            completion rates by 15–25%. A seven-step flow with an average 20% drop-off per step would 
-            yield a theoretical completion rate of roughly 21%.
-          </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          {[
+            { title: "Compressed TTV", desc: "Automating steps 2-6 compresses time-to-value from 40 mins to under 10 mins." },
+            { title: "Loss Aversion", desc: "Downgrading from 4K export and Studio Sound after 7 days triggers powerful loss aversion." },
+            { title: "Feature Anchoring", desc: "Users compare full Creator tier against alternatives, not the limited Free tier." },
+            { title: "Output Investment", desc: "Producing a polished output builds workflow muscle memory and switching costs." }
+          ].map((mech, idx) => (
+            <motion.div 
+              key={idx}
+              variants={ItemAnim}
+              className="flex gap-6 items-start"
+            >
+              <div className="w-12 h-12 rounded-full bg-slate-200 text-slate-500 font-black text-xl flex items-center justify-center shrink-0">
+                {idx + 1}
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold text-slate-900 mb-2">{mech.title}</h4>
+                <p className="text-slate-600 font-medium text-lg leading-relaxed">{mech.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </MagazineSection>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">1.2 The Free Tier Constraint</h3>
-          <p>
-            Descript's free plan offers 1 media hour per month and 100 AI credits. This creates a paradox: 
-            the free tier is <strong>too limited to form habits, but too generous to create urgency</strong>. 
-            Users leave with a mental model of Descript as "another video editor" rather than "an AI co-editor 
-            that does the hard parts for me."
-          </p>
+      {/* 4. The Intervention */}
+      <div className="bg-slate-900 py-24 text-white">
+        <StaggerContainer className="max-w-6xl mx-auto px-6">
+          <motion.div variants={ItemAnim} className="inline-flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center transform rotate-6 shadow-lg">
+              <Target className="w-6 h-6" />
+            </div>
+            <span className="font-black tracking-widest uppercase text-sm text-slate-400">04 / The Experience</span>
+          </motion.div>
+          <motion.h2 variants={ItemAnim} className="text-5xl md:text-7xl font-black tracking-tighter mb-16">
+            The Treatment
+          </motion.h2>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">1.3 Quantifying the Opportunity</h3>
-          <p>
-            Descript's estimated free-to-paid conversion rate sits at 12–15%. With ~1.5 million active users, 
-            even a 3-percentage-point improvement in conversion represents significant incremental ARR ($10.8M–$18.9M).
-          </p>
-        </Section>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <motion.div variants={ItemAnim} className="bg-white/10 border border-white/10 p-10 rounded-[2.5rem]">
+              <h3 className="text-3xl font-black mb-6 text-emerald-400">7-Day Reverse Trial</h3>
+              <p className="text-slate-300 text-lg mb-8 font-medium">Upon account creation, the user is immediately placed on the Creator tier ($24/mo value) for 7 days.</p>
+              <ul className="space-y-4">
+                {["30 media hours", "800 AI credits", "4K export", "Full Underlord AI access"].map((feature, i) => (
+                  <li key={i} className="flex items-center gap-4 text-xl font-bold">
+                    <CheckCircle className="w-6 h-6 text-emerald-500" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-        {/* 2. Data Foundation */}
-        <Section title="2. Data Foundation for the Hypothesis" icon={BarChart}>
-          <p>
-            This experiment is not based on intuition. Every element of the hypothesis is grounded 
-            in published research, industry benchmarks, and Descript-specific signals.
-          </p>
-          
-          <h3 className="text-xl font-bold text-slate-900 mt-6">Reverse Trial Conversion Data</h3>
-          <ul className="list-disc pl-6 space-y-3 text-slate-600">
-            <li><strong>OpenView Benchmark:</strong> Reverse trials achieve an average conversion rate of 14–21%, compared to 3–15% for freemium.</li>
-            <li><strong>Elena Verna (Dropbox):</strong> Reports reverse trial strategies increase freemium-to-premium conversion by 10–40%.</li>
-            <li><strong>Recurly Trial-Length Data:</strong> Trials of 7 days or fewer yield 40.4% conversion to paid, versus 30.6% for longer trials. A 7-day reverse trial hits the optimal window.</li>
-          </ul>
-
-          <h3 className="text-xl font-bold text-slate-900 mt-8">Descript-Specific Behavioral Signals</h3>
-          <ul className="list-disc pl-6 space-y-3 text-slate-600">
-            <li><strong>The 10-minute threshold:</strong> Amplitude found that companies with TTV under 10 minutes see conversions happen 30–40% faster.</li>
-            <li><strong>Underlord as a conversion lever:</strong> Descript's AI co-editor is gated behind paid tiers. Users on the free tier never experience the feature that would most motivate them to pay.</li>
-          </ul>
-        </Section>
-
-        {/* 3. Hypothesis */}
-        <Section title="3. Hypothesis" icon={Beaker}>
-          <div className="p-6 bg-indigo-50 border border-indigo-100 rounded-2xl mb-8">
-            <h4 className="text-indigo-900 font-bold text-sm tracking-widest uppercase mb-3">Primary Hypothesis</h4>
-            <p className="text-indigo-950 font-medium text-xl leading-relaxed">
-              If we give new users a 7-day reverse trial of Creator-tier features combined with an AI-guided 
-              onboarding flow that delivers a polished, exportable video output within their first session 
-              (under 10 minutes from signup), we will increase the 30-day free-to-paid conversion rate by 
-              15–25% relative to the current freemium baseline, and increase the 7-day activation rate by 30–45%.
-            </p>
+            <motion.div variants={ItemAnim} className="bg-emerald-500 text-slate-900 p-10 rounded-[2.5rem]">
+              <h3 className="text-3xl font-black mb-6">AI-Guided First Edit</h3>
+              <p className="font-medium text-lg mb-8 opacity-90">Designed to produce a publishable output in under 10 minutes before seeing the standard editor.</p>
+              
+              <div className="space-y-6">
+                {[
+                  { step: "1", title: "Intent Selection", time: "30s" },
+                  { step: "2", title: "Media Input", time: "1-3m" },
+                  { step: "3", title: "AI Auto-Edit", time: "1-2m" },
+                  { step: "4", title: "Review & Refine", time: "2-4m" },
+                ].map((s, i) => (
+                  <div key={i} className="flex items-center gap-6 bg-white/20 p-4 rounded-2xl">
+                    <div className="w-10 h-10 bg-slate-900 text-emerald-500 font-black rounded-xl flex items-center justify-center">
+                      {s.step}
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-bold text-xl">{s.title}</div>
+                    </div>
+                    <div className="font-black opacity-60">{s.time}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
+        </StaggerContainer>
+      </div>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-6">Hypothesis Logic Chain</h3>
-          <div className="space-y-6 mt-4">
-            <div>
-              <strong className="text-slate-900 block mb-1">Mechanism 1: Compressed time-to-value.</strong>
-              <span className="text-slate-600">The AI-guided first edit eliminates steps 2–6 of the current onboarding, compressing TTV from 25–40 minutes to under 10 minutes.</span>
+      {/* 5. Rollout & Risk */}
+      <MagazineSection title="Execution Strategy" subtitle="05 / The Plan" icon={Rocket} color="bg-amber-500">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-3xl font-black text-slate-900 mb-8">Phased Launch</h3>
+            <div className="space-y-6 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+              {[
+                { phase: "Phase 0", title: "Pre-Launch (W1-3)", desc: "Build & QA experiment components" },
+                { phase: "Phase 1", title: "Soft Launch (W4)", desc: "10% allocation to catch edge cases" },
+                { phase: "Phase 2", title: "Full Deploy (W5-8)", desc: "50/50 split, full data collection" },
+                { phase: "Phase 3", title: "Analysis (W9-10)", desc: "Evaluate significance & make decision" }
+              ].map((phase, i) => (
+                <motion.div 
+                  key={i}
+                  variants={ItemAnim}
+                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-amber-500 text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                    {i}
+                  </div>
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-200 ml-4 md:ml-0">
+                    <h4 className="font-black text-slate-900 text-lg mb-1">{phase.title}</h4>
+                    <p className="text-slate-600 font-medium text-sm">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            <div>
-              <strong className="text-slate-900 block mb-1">Mechanism 2: Loss aversion via reverse trial.</strong>
-              <span className="text-slate-600">When users experience 4K export, Studio Sound, and full Underlord for 7 days, the downgrade creates measurable loss aversion.</span>
-            </div>
-            <div>
-              <strong className="text-slate-900 block mb-1">Mechanism 3: Feature anchoring.</strong>
-              <span className="text-slate-600">Users form their mental model of the product around premium capabilities, shifting the competitive frame in Descript's favor.</span>
-            </div>
-            <div>
-              <strong className="text-slate-900 block mb-1">Mechanism 4: Output investment.</strong>
-              <span className="text-slate-600">Producing a polished output in the first session builds workflow muscle memory and switching costs.</span>
-            </div>
-          </div>
-        </Section>
-
-        {/* 4. Experiment Design */}
-        <Section title="4. Experiment Design" icon={Target}>
-          <h3 className="text-xl font-bold text-slate-900 mb-4">Treatment Group: Reverse Trial + AI First Edit</h3>
-          
-          <div className="mb-8">
-            <h4 className="font-bold text-slate-900 text-lg mb-2">Intervention 1: 7-Day Creator Tier Reverse Trial</h4>
-            <p className="mb-3">Upon account creation, the user is immediately placed on the Creator tier for 7 days, with full access to:</p>
-            <ul className="list-disc pl-6 space-y-1 text-slate-600">
-              <li>30 media hours (vs. 1 on Free)</li>
-              <li>800 AI credits (vs. 100 on Free)</li>
-              <li>4K export (vs. 720p on Free)</li>
-              <li>Full Underlord AI co-editor access & All 20+ AI tools</li>
-            </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-slate-900 text-lg mb-2">Intervention 2: AI-Guided First Edit Flow</h4>
-            <p className="mb-4">Designed to produce a publishable output in under 10 minutes:</p>
-            <div className="space-y-4 pl-4 border-l-2 border-indigo-200">
-              <div>
-                <strong className="text-slate-900 block">Step 1 – Intent Selection (30 seconds)</strong>
-                <span className="text-slate-600 text-base">User selects use case (Podcast, YouTube, Marketing, etc.)</span>
-              </div>
-              <div>
-                <strong className="text-slate-900 block">Step 2 – Media Input (1–3 minutes)</strong>
-                <span className="text-slate-600 text-base">Upload, record, paste URL, or use a pre-loaded sample clip.</span>
-              </div>
-              <div>
-                <strong className="text-slate-900 block">Step 3 – AI Auto-Edit (1–2 minutes)</strong>
-                <span className="text-slate-600 text-base">Underlord applies curated edits based on intent while transcribing.</span>
-              </div>
-              <div>
-                <strong className="text-slate-900 block">Step 4 & 5 – Review, Export and Share (3–5 minutes)</strong>
-                <span className="text-slate-600 text-base">Side-by-side comparison, "aha moment", 4K export.</span>
-              </div>
+            <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
+              <Shield className="w-8 h-8 text-slate-400" />
+              Risk Mitigation
+            </h3>
+            <div className="space-y-4">
+              {[
+                { risk: "Low-quality conversions", mit: "D30 paid retention is guardrail metric." },
+                { risk: "Compute cost spike", mit: "Monitor per-user AI credit consumption." },
+                { risk: "Negative sentiment", mit: "Careful UX framing at Day 8 downgrade." }
+              ].map((risk, idx) => (
+                <motion.div 
+                  key={idx}
+                  variants={ItemAnim}
+                  className="bg-slate-100 p-6 rounded-2xl"
+                >
+                  <h4 className="font-bold text-slate-900 text-lg mb-2">{risk.risk}</h4>
+                  <p className="text-slate-600 font-medium">{risk.mit}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </Section>
-
-        {/* 5. Measurement Framework */}
-        <Section title="5. Measurement Framework" icon={BarChart}>
-          <div className="p-5 bg-slate-50 rounded-xl mb-8 border border-slate-200">
-            <h4 className="font-bold text-emerald-700 text-sm tracking-widest uppercase mb-2">Primary Metric</h4>
-            <p className="text-slate-900 font-medium">Free-to-paid conversion rate at 30 days post-signup.</p>
-          </div>
-
-          <h3 className="text-xl font-bold text-slate-900 mb-4">Secondary & Guardrail Metrics</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm md:text-base border border-slate-200 rounded-lg overflow-hidden">
-              <thead className="bg-slate-50">
-                <tr>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200">Metric</th>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200">Control</th>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200">Variant Target</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 bg-white">
-                <tr>
-                  <td className="p-3 font-medium">Activation rate (first export <br/>within 7 days)</td>
-                  <td className="p-3">18–22%</td>
-                  <td className="p-3 text-emerald-600 font-medium">30–40%</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">Time to first meaningful edit</td>
-                  <td className="p-3">25–40 min</td>
-                  <td className="p-3 text-emerald-600 font-medium">6–10 min</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">D7 & D30 Retention</td>
-                  <td className="p-3">15–35%</td>
-                  <td className="p-3 text-emerald-600 font-medium">22–50%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p className="mt-6 text-slate-600 text-sm">
-            <strong>Guardrails:</strong> D30 paid retention, Customer support ticket volume, Average revenue per user (ARPU). 
-            If any guardrail metric shows statistically significant degradation, pause for investigation.
-          </p>
-        </Section>
-
-        {/* 6. Phased Launch Plan */}
-        <Section title="6. Phased Launch Plan" icon={Rocket}>
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0 mt-1">0</div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-xl">Pre-Launch (Weeks 1–3)</h4>
-                <p className="text-slate-600 mt-1">Build and QA all experiment components. Implement reverse trial billing logic, intent selection cards, downgrade transition UX, and set up Amplitude dashboards.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0 mt-1">1</div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-xl">Soft Launch (Week 4)</h4>
-                <p className="text-slate-600 mt-1">Deploy to 10% of new signups. Monitor completion rates and billing errors. Kill switch criteria: billing errors or First Edit flow completion drops below 40%.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0 mt-1">2</div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-xl">Full Deployment (Weeks 5–8)</h4>
-                <p className="text-slate-600 mt-1">50/50 split for all new signups. Mid-experiment health check at week 7.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0 mt-1">3</div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-xl">Analysis (Weeks 9–10)</h4>
-                <p className="text-slate-600 mt-1">Evaluate statistical significance, guardrails, and cohort quality to make a ship/iterate/kill decision.</p>
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        {/* 7. Risk Analysis */}
-        <Section title="7. Risk Analysis and Mitigations" icon={Shield}>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm md:text-base border border-slate-200 rounded-lg overflow-hidden">
-              <thead className="bg-slate-50">
-                <tr>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200">Risk</th>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200">Impact</th>
-                  <th className="p-3 font-semibold text-slate-900 border-b border-slate-200 w-1/2">Mitigation</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 bg-white">
-                <tr>
-                  <td className="p-3 font-medium">Revenue cannibalization (users delay converting)</td>
-                  <td className="p-3">Low</td>
-                  <td className="p-3 text-slate-600">Track time-to-conversion distribution. Shorten trial to 5 days if delaying but not lifting.</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">Low-quality conversions (churn &lt;30 days)</td>
-                  <td className="p-3">High</td>
-                  <td className="p-3 text-slate-600">D30 paid retention is a guardrail metric. Fail quality gate if churn is &gt;2x standard.</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">Negative sentiment at Day 8 downgrade</td>
-                  <td className="p-3">Medium</td>
-                  <td className="p-3 text-slate-600">Careful UX framing ("Unlock what you built" vs "Trial expired"). NPS survey at Day 14.</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">Free users consuming premium AI compute</td>
-                  <td className="p-3">Medium</td>
-                  <td className="p-3 text-slate-600">7-day window caps exposure. Implement a soft cap with an upgrade prompt if per-user consumption exceeds 400 credits.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </Section>
-
-        {/* 8. Success Criteria */}
-        <Section title="8. Success Criteria" icon={CheckCircle}>
-          <div className="space-y-6">
-            <div className="p-6 border-l-4 border-emerald-500 bg-emerald-50 rounded-r-xl">
-              <h4 className="text-emerald-900 font-bold text-lg tracking-widest uppercase mb-2">Ship (Full Rollout)</h4>
-              <p className="text-emerald-800">
-                Primary metric shows statistically significant lift ≥ 15% relative. All guardrail metrics are neutral or positive. Cohort quality (D30 paid retention) is within 10% of control.
-              </p>
-            </div>
-            
-            <div className="p-6 border-l-4 border-amber-500 bg-amber-50 rounded-r-xl">
-              <h4 className="text-amber-900 font-bold text-lg tracking-widest uppercase mb-2">Iterate</h4>
-              <p className="text-amber-800">
-                Directional lift (5–14% relative) without significance, OR significant primary metric but concerning guardrail trends. Identify weakest steps and re-test.
-              </p>
-            </div>
-
-            <div className="p-6 border-l-4 border-rose-500 bg-rose-50 rounded-r-xl">
-              <h4 className="text-rose-900 font-bold text-lg tracking-widest uppercase mb-2">Kill</h4>
-              <p className="text-rose-800">
-                No lift or negative lift, OR significant guardrail degradation (D30 retention drops &gt;15%, support tickets increase &gt;50%). Document learnings and redirect.
-              </p>
-            </div>
-          </div>
-        </Section>
-
-        {/* Footer */}
-        <div className="mt-24 text-center pb-12 border-t border-slate-200 pt-8">
-          <p className="text-slate-500 text-sm">
-            Prepared by Ally Martin, Wexley House. <br/>
-            All benchmark data cited is sourced from published industry reports (OpenView, ChartMogul, Amplitude, etc.).
-          </p>
         </div>
+      </MagazineSection>
 
+      {/* Footer Section */}
+      <div className="bg-slate-950 py-16 text-center">
+        <p className="text-slate-500 font-bold tracking-widest uppercase text-sm">
+          Prepared by Ally Martin · Wexley House
+        </p>
       </div>
+
     </div>
   );
 }
