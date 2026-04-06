@@ -189,8 +189,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl md:text-3xl font-light leading-relaxed text-gray-800">
+            transition={{ duration: 0.8 }} className="text-gray-800 text-lg font-light leading-relaxed md:text-3xl">
+            
 
             “The dumbest mistake is viewing design as something you do at the end of the process to ‘tidy up’ the mess, as opposed to understanding it’s a ‘day one’ issue and part of everything.” 
             <span className="block mt-4 text-xl text-gray-500">― Tom Peterson</span>
@@ -210,7 +210,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}>
 
-              <p className="text-gray-950 mb-4 text-xs font-bold tracking-[0.3em]">VISUALS</p>
+              <p className="text-gray-950 mb-4 text-xs font-black tracking-[0.3em]">VISUALS</p>
               <h2 className="text-3xl md:text-4xl font-light">Gallery</h2>
             </motion.div>
             
