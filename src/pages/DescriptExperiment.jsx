@@ -176,16 +176,16 @@ export default function DescriptExperiment() {
       </MagazineSection>
 
       {/* 2. Data Foundation */}
-      <div className="bg-white py-24 border-y border-slate-200">
+      <div className="bg-fuchsia-100 py-24 border-y border-slate-200">
         <StaggerContainer className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div variants={ItemAnim} className="inline-flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-[10px] bg-cyan-500 text-white flex items-center justify-center transform -rotate-3 shadow-lg">
-                <BarChart className="w-6 h-6" />
-              </div>
-              <span className="font-black tracking-widest uppercase text-sm text-slate-500">02 / The Data</span>
+              
+
+              
+              <span className="text-slate-950 text-sm font-black uppercase tracking-widest">02 / THE DATA</span>
             </motion.div>
-            <motion.h2 variants={ItemAnim} className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter">
+            <motion.h2 variants={ItemAnim} className="text-slate-900 text-5xl font-normal tracking-tighter md:text-7xl">
               Grounded in Evidence
             </motion.h2>
           </div>
@@ -211,12 +211,12 @@ export default function DescriptExperiment() {
             <motion.div
               key={idx}
               variants={ItemAnim}
-              whileHover={{ y: -10 }}
-              className="bg-[#F4F4F5] p-10 rounded-[10px]">
+              whileHover={{ y: -10 }} className="bg-blue-100 p-10 rounded-[10px]">
               
-                <div className="text-5xl font-black text-cyan-600 mb-4 tracking-tighter">{item.stat}</div>
+              
+                <div className="text-fuchsia-600 mb-4 text-5xl font-black tracking-tighter">{item.stat}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
-                <p className="text-slate-600 font-medium leading-relaxed">{item.desc}</p>
+                <p className="text-gray-950 font-medium leading-relaxed">{item.desc}</p>
               </motion.div>
             )}
           </div>
@@ -226,20 +226,20 @@ export default function DescriptExperiment() {
       {/* 3. Hypothesis */}
       <MagazineSection title="The Master Hypothesis" subtitle="03 / The Logic" icon={Beaker} color="bg-violet-600">
         <motion.div
-          whileHover={{ scale: 1.01 }}
-          className="bg-gradient-to-br from-violet-600 to-indigo-700 p-12 md:p-16 rounded-[10px] shadow-2xl text-white mb-16">
+          whileHover={{ scale: 1.01 }} className="bg-pink-300 text-white mb-16 p-12 rounded-[10px] from-violet-600 to-indigo-700 md:p-16 shadow-2xl">
           
-          <h3 className="text-2xl md:text-4xl font-black leading-tight mb-8">
-            "If we give new users a 7-day reverse trial combined with an AI-guided onboarding that delivers exportable video under 10 minutes..."
+          
+          <h3 className="text-slate-950 mb-8 text-lg font-normal leading-tight md:text-4xl">"If we give new users a 7-day reverse trial combined with an AI-guided onboarding that delivers exportable video under 10 minutes..."
+
           </h3>
           <div className="flex flex-wrap gap-4">
             <div className="bg-white/20 backdrop-blur-md px-6 py-4 rounded-[10px]">
-              <span className="block text-violet-200 text-sm font-bold uppercase tracking-widest mb-1">Conversion Lift</span>
-              <span className="text-3xl font-black">+15–25%</span>
+              <span className="text-gray-950 mb-1 text-sm font-bold uppercase tracking-widest block">CONVERSION LIFT</span>
+              <span className="text-slate-950 text-3xl font-black">+15–25%</span>
             </div>
             <div className="bg-white/20 backdrop-blur-md px-6 py-4 rounded-[10px]">
-              <span className="block text-violet-200 text-sm font-bold uppercase tracking-widest mb-1">7-Day Activation</span>
-              <span className="text-3xl font-black">+30–45%</span>
+              <span className="text-gray-950 mb-1 text-sm font-bold uppercase tracking-widest block">7-DAY ACTIVATION</span>
+              <span className="text-slate-950 text-3xl font-black">+30–45%</span>
             </div>
           </div>
         </motion.div>
@@ -269,25 +269,25 @@ export default function DescriptExperiment() {
       </MagazineSection>
 
       {/* 4. The Intervention */}
-      <div className="bg-slate-900 py-24 text-white">
+      <div className="bg-cyan-50 text-white py-24">
         <StaggerContainer className="max-w-6xl mx-auto px-6">
           <motion.div variants={ItemAnim} className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-[10px] bg-emerald-500 text-white flex items-center justify-center transform rotate-6 shadow-lg">
-              <Target className="w-6 h-6" />
-            </div>
+            
+
+            
             <span className="font-black tracking-widest uppercase text-sm text-slate-400">04 / The Experience</span>
           </motion.div>
-          <motion.h2 variants={ItemAnim} className="text-5xl md:text-7xl font-black tracking-tighter mb-16">
+          <motion.h2 variants={ItemAnim} className="text-slate-950 mb-16 text-5xl font-normal tracking-tighter md:text-7xl">
             The Treatment
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <motion.div variants={ItemAnim} className="bg-white/10 border border-white/10 p-10 rounded-[10px]">
-              <h3 className="text-3xl font-black mb-6 text-emerald-400">7-Day Reverse Trial</h3>
-              <p className="text-slate-300 text-lg mb-8 font-medium">Upon account creation, the user is immediately placed on the Creator tier ($24/mo value) for 7 days.</p>
+              <h3 className="text-slate-950 mb-6 text-3xl font-normal">7-Day Reverse Trial</h3>
+              <p className="text-slate-600 mb-8 text-lg font-medium">Upon account creation, the user is immediately placed on the Creator tier ($24/mo value) for 7 days.</p>
               <ul className="space-y-4">
                 {["30 media hours", "800 AI credits", "4K export", "Full Underlord AI access"].map((feature, i) =>
-                <li key={i} className="flex items-center gap-4 text-xl font-bold">
+                <li key={i} className="text-slate-950 text-xl font-bold flex items-center gap-4">
                     <CheckCircle className="w-6 h-6 text-emerald-500" />
                     {feature}
                   </li>
@@ -295,8 +295,8 @@ export default function DescriptExperiment() {
               </ul>
             </motion.div>
 
-            <motion.div variants={ItemAnim} className="bg-emerald-500 text-slate-900 p-10 rounded-[10px]">
-              <h3 className="text-3xl font-black mb-6">AI-Guided First Edit</h3>
+            <motion.div variants={ItemAnim} className="bg-rose-50 text-slate-900 p-10 rounded-[10px]">
+              <h3 className="mb-6 text-3xl font-normal">AI-Guided First Edit</h3>
               <p className="font-medium text-lg mb-8 opacity-90">Designed to produce a publishable output in under 10 minutes before seeing the standard editor.</p>
               
               <div className="space-y-6">
@@ -306,8 +306,8 @@ export default function DescriptExperiment() {
                 { step: "3", title: "AI Auto-Edit", time: "1-2m" },
                 { step: "4", title: "Review & Refine", time: "2-4m" }].
                 map((s, i) =>
-                <div key={i} className="flex items-center gap-6 bg-white/20 p-4 rounded-[10px]">
-                    <div className="w-10 h-10 bg-slate-900 text-emerald-500 font-black rounded-[10px] flex items-center justify-center">
+                <div key={i} className="bg-cyan-100 p-4 rounded-[10px] flex items-center gap-6">
+                    <div className="bg-pink-300 text-slate-50 font-black rounded-[10px] w-10 h-10 flex items-center justify-center">
                       {s.step}
                     </div>
                     <div className="flex-1">
@@ -326,7 +326,7 @@ export default function DescriptExperiment() {
       <MagazineSection title="Execution Strategy" subtitle="05 / The Plan" icon={Rocket} color="bg-amber-500">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-3xl font-black text-slate-900 mb-8">Phased Launch</h3>
+            <h3 className="text-slate-900 mb-8 text-3xl font-normal">Phased Launch</h3>
             <div className="space-y-6 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
               {[
               { phase: "Phase 0", title: "Pre-Launch (W1-3)", desc: "Build & QA experiment components" },
@@ -339,7 +339,7 @@ export default function DescriptExperiment() {
                 variants={ItemAnim}
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-amber-500 text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                  <div className="bg-cyan-200 text-slate-950 font-black rounded-full flex items-center justify-center w-12 h-12 border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                     {i}
                   </div>
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-[10px] shadow-sm border border-slate-200 ml-4 md:ml-0">
@@ -352,9 +352,9 @@ export default function DescriptExperiment() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-slate-400" />
-              Risk Mitigation
+            <h3 className="text-slate-900 mb-8 text-3xl font-normal flex items-center gap-3">Risk Mitigation
+
+
             </h3>
             <div className="space-y-4">
               {[
@@ -364,11 +364,11 @@ export default function DescriptExperiment() {
               map((risk, idx) =>
               <motion.div
                 key={idx}
-                variants={ItemAnim}
-                className="bg-slate-100 p-6 rounded-[10px]">
+                variants={ItemAnim} className="bg-pink-200 p-6 rounded-[10px]">
+                
                 
                   <h4 className="font-bold text-slate-900 text-lg mb-2">{risk.risk}</h4>
-                  <p className="text-slate-600 font-medium">{risk.mit}</p>
+                  <p className="text-slate-950 font-medium">{risk.mit}</p>
                 </motion.div>
               )}
             </div>
@@ -378,9 +378,9 @@ export default function DescriptExperiment() {
 
       {/* Footer Section */}
       <div className="bg-slate-950 py-16 text-center">
-        <p className="text-slate-500 font-bold tracking-widest uppercase text-sm">
-          Prepared by Ally Martin · Wexley House
-        </p>
+        
+
+        
       </div>
 
     </div>);
