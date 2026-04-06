@@ -38,20 +38,20 @@ const GalleryItem = ({ item, index, openModal }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "50px" }}
-      transition={{ duration: 0.4, delay: (index % 4) * 0.1 }}
+      transition={{ duration: 0.4, delay: index % 4 * 0.1 }}
       className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50"
-      onClick={() => openModal(index)}
-    >
+      onClick={() => openModal(index)}>
+      
       <img
         src={item.src}
         alt={item.caption}
         loading="lazy"
         onLoad={() => setLoaded(true)}
-        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${loaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}
-      />
+        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${loaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`} />
+      
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-    </motion.div>
-  );
+    </motion.div>);
+
 };
 
 export default function Home() {
@@ -222,9 +222,9 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((item, i) => (
-              <GalleryItem key={i} item={item} index={i} openModal={openModal} />
-            ))}
+            {galleryImages.map((item, i) =>
+            <GalleryItem key={i} item={item} index={i} openModal={openModal} />
+            )}
           </div>
 
           {/* Modal */}
@@ -276,16 +276,16 @@ export default function Home() {
       </section>
 
       {/* Process Section - Embedded Figma */}
-      <section className="w-full h-screen bg-gray-50 border-y border-gray-200">
-        <iframe
-          src="https://prompt-posts-67362556.figma.site"
-          title="Figma Prototype"
-          width="100%"
-          height="100%"
-          className="w-full h-full border-none"
-          allowFullScreen />
-        
-      </section>
+      
+
+
+
+
+
+
+
+
+      
 
       {/* Contact CTA */}
       <section className="py-16 md:py-32 px-6 lg:px-12 border-t border-gray-100">
