@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import MobileNav from "@/components/MobileNav";
 
@@ -32,17 +32,16 @@ const galleryImages = [
 
 
 const GalleryItem = ({ item, index, openModal }) => {
-  const [loaded, setLoaded] = React.useState(false);
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "50px" }}
-      transition={{ duration: 0.6, delay: (index % 4) * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-      whileHover={{ y: -8 }}
-      className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500"
-      onClick={() => openModal(index)}
-    >
+const [loaded, setLoaded] = React.useState(false);
+return (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "50px" }}
+    transition={{ duration: 0.6, delay: (index % 4) * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+    className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500"
+    onClick={() => openModal(index)}
+  >
       <img
         src={item.src}
         alt={item.caption}
@@ -75,10 +74,6 @@ export default function Home() {
       });
     }
   };
-
-  const { scrollY } = useScroll();
-  const heroTextY = useTransform(scrollY, [0, 1000], [0, 400]);
-  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   const openModal = (i) => setSelectedImage(i);
   const closeModal = () => setSelectedImage(null);
@@ -146,22 +141,21 @@ export default function Home() {
         </div>
 
         {/* Content Layer */}
-        <motion.div 
-          style={{ y: heroTextY, opacity: heroOpacity }}
+        <div 
           className="relative z-20 flex-1 flex flex-col justify-end pt-32 pointer-events-none"
         >
           
           {/* Bottom text */}
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1
-              className="text-white font-light tracking-tighter drop-shadow-lg"
-              style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
-              
-               Alfie Martin
+             className="text-white font-light tracking-tighter drop-shadow-lg"
+             style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
+
+             Alfie Martin
              </h1>
-          </div>
-        </motion.div>
-      </section>
+             </div>
+             </div>
+             </section>
 
       {/* Logo Wall moved right below Hero */}
       <section className="bg-white">
@@ -181,18 +175,16 @@ export default function Home() {
               { src: null, alt: "Rockefeller Capital" },
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d491508f1_Logo_of_Deloittelogo.png", alt: "Deloitte" }].
               map((logo, i) =>
-              <motion.div 
+              <div 
                 key={i} 
-                whileHover={{ scale: 1.1, opacity: 1, filter: "grayscale(0%)" }}
-                transition={{ duration: 0.3 }}
-                className="flex items-center justify-center opacity-40 grayscale transition-all duration-500 cursor-pointer"
+                className="flex items-center justify-center opacity-40 hover:opacity-80 grayscale hover:grayscale-0 transition-all duration-300"
               >
                   {logo.src ?
                 <img src={logo.src} alt={logo.alt} loading="lazy" className="h-8 w-auto object-contain" /> :
 
                 <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
                 }
-                </motion.div>
+                </div>
               )}
             </div>
           </motion.div>
@@ -209,16 +201,14 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <div className="absolute -top-12 -left-8 text-9xl text-gray-100 font-serif opacity-50 pointer-events-none select-none">"</div>
-            <motion.blockquote
+            <blockquote
               className="text-3xl md:text-5xl font-light leading-snug text-gray-900 relative z-10"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
             >
               The dumbest mistake is viewing design as something you do at the end of the process to 'tidy up' the mess, as opposed to understanding it's a 'day one' issue and part of everything.
               <footer className="block mt-8 text-lg md:text-xl text-gray-500 font-medium tracking-wide">
                 ― Tom Peterson
               </footer>
-            </motion.blockquote>
+            </blockquote>
           </motion.div>
         </div>
       </section>
@@ -330,11 +320,9 @@ export default function Home() {
             </motion.p>
             <h2 className="text-5xl md:text-7xl font-light mb-12 tracking-tight text-gray-900">Let's create <span className="italic font-serif text-gray-500">something.</span></h2>
             
-            <motion.a
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+            <a
               href="mailto:alfie@alfiealfie.com"
-              className="group relative inline-flex items-center justify-center gap-3 text-sm tracking-[0.15em] font-medium bg-black text-white px-10 py-5 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-black/20"
+              className="group relative inline-flex items-center justify-center gap-3 text-sm tracking-[0.15em] font-medium bg-black text-white px-10 py-5 rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
             >
               <span className="relative z-10 flex items-center gap-3">
                 GET IN TOUCH 
@@ -345,7 +333,7 @@ export default function Home() {
                 GET IN TOUCH 
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
               </span>
-            </motion.a>
+            </a>
           </motion.div>
         </div>
       </section>
