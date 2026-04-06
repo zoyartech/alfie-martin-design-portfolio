@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const projects = [
 {
@@ -123,9 +124,18 @@ export default function FilterableGallery() {
               <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
                 UX Research Studies
               </Link>
-              <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                Side Quests
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+                      Side Quests
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Products I've built</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
                 Content
               </Link>
