@@ -211,7 +211,7 @@ export default function DescriptExperiment() {
             <motion.div
               key={idx}
               variants={ItemAnim}
-              whileHover={{ y: -10 }} className="bg-blue-100 p-10 rounded-[10px]">
+              whileHover={{ y: -10 }} className="bg-blue-100 p-10 rounded-[10px] border-[0.5px] border-transparent hover:border-slate-700/50 transition-colors">
               
               
                 <div className="text-fuchsia-600 mb-4 text-5xl font-black tracking-tighter">{item.stat}</div>
