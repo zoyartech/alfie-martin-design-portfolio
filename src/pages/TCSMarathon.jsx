@@ -105,10 +105,10 @@ export default function TCSMarathon() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-slate-950 mb-12 text-4xl font-bold text-center">Peoples Choice Winner</h2>
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9d05165a7_Webby-Awards-593208350.png" alt="Research in the Wild" className="w-full h-auto max-h-[600px] object-contain rounded-xl shadow-sm mb-12" />
-            <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-5xl">
+            <p className="text-gray-700 text-center mx-auto text-lg leading-relaxed mb-6 max-w-5xl">
                 I ran a contextual inquiry at the prior year's marathon, stationed at four spectator hotspots along the course — the Queensboro Bridge at mile 15, First Avenue, Central Park South, and the finish line at Tavern on the Green. I watched what people actually did with their phones: screenshots texted to group chats, refreshing Safari when the app lagged, gathering in clusters around someone with a working signal.
             </p>
-            <p className="text-gray-700 text-lg leading-relaxed mb-12 max-w-5xl">
+            <p className="text-gray-700 text-center mx-auto text-lg leading-relaxed mb-12 max-w-5xl">
                 I also interviewed twelve runners in a post-race debrief. The consistent theme: they wanted the app to be a record of what they'd done, not just a broadcast tool for others. They wanted to feel seen.
             </p>
 
