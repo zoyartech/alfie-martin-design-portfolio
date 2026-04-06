@@ -105,7 +105,7 @@ export default function DescriptExperiment() {
               </span>
             </motion.div>
             
-            <motion.h1 variants={ItemAnim} className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-8">
+            <motion.h1 variants={ItemAnim} className="text-pink-200 mb-8 text-6xl font-black tracking-tighter leading-[0.9] md:text-8xl lg:text-9xl">
               REVERSE TRIAL <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
                 AI-FIRST EDIT
@@ -123,9 +123,9 @@ export default function DescriptExperiment() {
               { label: "Duration", value: "8 Weeks" },
               { label: "Expected Lift", value: "+15–25%" }].
               map((stat, idx) =>
-              <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-[10px] p-6 hover:bg-white/20 transition-colors">
-                  <p className="text-indigo-300 text-xs font-black uppercase tracking-widest mb-2">{stat.label}</p>
-                  <p className="text-white font-bold text-xl md:text-2xl">{stat.value}</p>
+              <div key={idx} className="bg-pink-200 p-6 rounded-[10px] backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors">
+                  <p className="text-gray-950 mb-2 text-xs font-black uppercase tracking-widest">{stat.label}</p>
+                  <p className="text-gray-950 text-xl font-bold md:text-2xl">{stat.value}</p>
                 </div>
               )}
             </motion.div>
