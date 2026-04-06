@@ -103,7 +103,8 @@ export default function TCSMarathon() {
         {/* Discovery */}
         <section className="py-20 px-6 lg:px-12">
           <div className="max-w-7xl mx-auto">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad9fd5bd3_IMG_2021.jpg" alt="Research in the Wild" className="w-full h-auto max-h-[600px] object-cover rounded-xl shadow-sm mb-12" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f6897c65f_Webby-Awards-593208350.png" alt="Research in the Wild" className="w-full h-auto max-h-[600px] object-contain rounded-xl shadow-sm mb-4" />
+            <p className="text-center text-gray-500 font-medium mb-12">Peoples Choice Winner</p>
             <h2 className="text-3xl lg:text-4xl font-medium mb-8 text-[#333]">Discovery: Research in the Wild</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-5xl">
                 I ran a contextual inquiry at the prior year's marathon, stationed at four spectator hotspots along the course — the Queensboro Bridge at mile 15, First Avenue, Central Park South, and the finish line at Tavern on the Green. I watched what people actually did with their phones: screenshots texted to group chats, refreshing Safari when the app lagged, gathering in clusters around someone with a working signal.
