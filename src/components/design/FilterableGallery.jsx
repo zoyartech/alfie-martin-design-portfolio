@@ -121,9 +121,18 @@ export default function FilterableGallery() {
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3">
-              <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                UX Research Studies
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+                      UX Research Studies
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Qualitative and Quantitative Research</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
