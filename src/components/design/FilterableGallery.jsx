@@ -149,7 +149,7 @@ export default function FilterableGallery() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                      Content
+                      Content Strategy
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>
