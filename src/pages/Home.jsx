@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import MobileNav from "@/components/MobileNav";
 
@@ -32,28 +32,24 @@ const galleryImages = [
 
 
 const GalleryItem = ({ item, index, openModal }) => {
-const [loaded, setLoaded] = React.useState(false);
-return (
-  <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "50px" }}
-    transition={{ duration: 0.6, delay: (index % 4) * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-    className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500"
-    onClick={() => openModal(index)}
-  >
+  const [loaded, setLoaded] = React.useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "50px" }}
+      transition={{ duration: 0.4, delay: (index % 4) * 0.1 }}
+      className="aspect-square overflow-hidden cursor-pointer group relative bg-gray-50"
+      onClick={() => openModal(index)}
+    >
       <img
         src={item.src}
         alt={item.caption}
         loading="lazy"
         onLoad={() => setLoaded(true)}
-        className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 ${loaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}
+        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${loaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-        <span className="text-white text-sm font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-          View Work
-        </span>
-      </div>
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
     </motion.div>
   );
 };
@@ -141,21 +137,19 @@ export default function Home() {
         </div>
 
         {/* Content Layer */}
-        <div 
-          className="relative z-20 flex-1 flex flex-col justify-end pt-32 pointer-events-none"
-        >
+        <div className="relative z-20 flex-1 flex flex-col justify-end pt-32 pointer-events-none">
           
           {/* Bottom text */}
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1
-             className="text-white font-light tracking-tighter drop-shadow-lg"
-             style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
-
-             Alfie Martin
+              className="text-white font-light tracking-tighter drop-shadow-lg"
+              style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
+              
+               Alfie Martin
              </h1>
-             </div>
-             </div>
-             </section>
+          </div>
+        </div>
+      </section>
 
       {/* Logo Wall moved right below Hero */}
       <section className="bg-white">
@@ -175,12 +169,9 @@ export default function Home() {
               { src: null, alt: "Rockefeller Capital" },
               { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6974e154f708f4918a2b8d02/d491508f1_Logo_of_Deloittelogo.png", alt: "Deloitte" }].
               map((logo, i) =>
-              <div 
-                key={i} 
-                className="flex items-center justify-center opacity-40 hover:opacity-80 grayscale hover:grayscale-0 transition-all duration-300"
-              >
+              <div key={i} className="flex items-center justify-center opacity-40 hover:opacity-80 transition-all duration-300">
                   {logo.src ?
-                <img src={logo.src} alt={logo.alt} loading="lazy" className="h-8 w-auto object-contain" /> :
+                <img src={logo.src} alt={logo.alt} loading="lazy" className="h-8 w-auto object-contain grayscale" /> :
 
                 <span className="text-sm font-semibold tracking-wide text-gray-800 whitespace-nowrap">{logo.alt}</span>
                 }
@@ -192,24 +183,18 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-24 md:py-40 px-6 lg:px-12 bg-white relative overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <div className="absolute -top-12 -left-8 text-9xl text-gray-100 font-serif opacity-50 pointer-events-none select-none">"</div>
-            <blockquote
-              className="text-3xl md:text-5xl font-light leading-snug text-gray-900 relative z-10"
-            >
-              The dumbest mistake is viewing design as something you do at the end of the process to 'tidy up' the mess, as opposed to understanding it's a 'day one' issue and part of everything.
-              <footer className="block mt-8 text-lg md:text-xl text-gray-500 font-medium tracking-wide">
-                ― Tom Peterson
-              </footer>
-            </blockquote>
-          </motion.div>
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto text-left">
+          <motion.blockquote
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl md:text-3xl font-light leading-relaxed text-gray-800">
+
+            “The dumbest mistake is viewing design as something you do at the end of the process to ‘tidy up’ the mess, as opposed to understanding it’s a ‘day one’ issue and part of everything.” 
+            <span className="block mt-4 text-xl text-gray-500">― Tom Peterson</span>
+          </motion.blockquote>
         </div>
       </section>
 
@@ -303,36 +288,20 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="relative py-32 md:py-48 px-6 lg:px-12 border-t border-gray-100 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 bg-grid-slate-200/[0.04] bg-[size:32px_32px]" />
-        <div className="max-w-7xl mx-auto text-center relative z-10">
+      <section className="py-16 md:py-32 px-6 lg:px-12 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}>
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}>
 
-            <motion.p 
-              whileHover={{ scale: 1.05 }}
-              className="inline-block text-xs tracking-[0.3em] text-gray-500 mb-6 font-bold"
-            >
-              READY TO CONNECT?
-            </motion.p>
-            <h2 className="text-5xl md:text-7xl font-light mb-12 tracking-tight text-gray-900">Let's create <span className="italic font-serif text-gray-500">something.</span></h2>
-            
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">READY TO CONNECT?</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-12">Let's create something.</h2>
             <a
               href="mailto:alfie@alfiealfie.com"
-              className="group relative inline-flex items-center justify-center gap-3 text-sm tracking-[0.15em] font-medium bg-black text-white px-10 py-5 rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                GET IN TOUCH 
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
-              <span className="absolute inset-0 z-10 flex items-center justify-center gap-3 text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                GET IN TOUCH 
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
+              className="inline-flex items-center gap-3 text-sm tracking-[0.15em] border border-black px-8 py-4 hover:bg-black hover:text-white transition-all duration-300">
+              GET IN TOUCH <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
