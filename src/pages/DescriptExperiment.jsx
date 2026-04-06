@@ -140,8 +140,8 @@ export default function DescriptExperiment() {
             <p className="text-slate-800 mb-8 text-lg font-medium leading-relaxed">Descript's core value proposition is that editing video is as easy as editing a document. A genuinely novel paradigm, but novelty comes with a cost: the magic moment is delayed.
 
             </p>
-            <div className="bg-white p-8 rounded-[10px] shadow-sm border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-xl mb-4">The 7-Step Journey</h4>
+            <div className="bg-red-100 p-8 rounded-[10px] shadow-sm border border-slate-200">
+              <h4 className="text-slate-900 mb-4 text-xl font-normal">The 7-Step Journey</h4>
               <ul className="space-y-3 font-medium text-slate-600">
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">1</div> Create an account</li>
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">2</div> Navigate the interface</li>
@@ -149,7 +149,7 @@ export default function DescriptExperiment() {
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">4</div> Wait for transcription</li>
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">5</div> Discover text-based editing</li>
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-400">6</div> Make a meaningful edit</li>
-                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-xs font-bold text-rose-600">7</div> Export or publish</li>
+                <li className="flex items-center gap-3"><div className="bg-rose-100 text-gray-950 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">7</div> Export or publish</li>
               </ul>
             </div>
           </div>
