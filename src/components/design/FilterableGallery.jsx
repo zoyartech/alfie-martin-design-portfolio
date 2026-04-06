@@ -145,9 +145,18 @@ export default function FilterableGallery() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                Content
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
+                      Content
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Content Strategy</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
             <h2 className="text-3xl font-semibold md:text-4xl">Product Design Case Studies </h2>
           </div>
