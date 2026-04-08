@@ -127,6 +127,9 @@ export default function B6() {
 
       {/* Patient Journey Image */}
       <section className="px-6 lg:px-12 pb-20">
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-medium text-slate-900">Patient Journey</h2>
+        </div>
         <div className="max-w-7xl mx-auto">
           <img 
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png" 
