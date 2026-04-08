@@ -1,0 +1,157 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowLeft, BrainCircuit, ShieldCheck, Activity, LineChart, Sparkles } from "lucide-react";
+import { createPageUrl } from "@/utils";
+
+export default function B6() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black mb-12 transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
+          </Link>
+          
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold tracking-wider rounded-full">PRODUCT DESIGN</span>
+              <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold tracking-wider rounded-full">AI MED TECH</span>
+              <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold tracking-wider rounded-full">MENTAL HEALTH</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight text-slate-900">
+              Breakthrough 6: AI-Driven Care in Mental Health
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed mb-12">
+              Designing an intelligent, empathetic patient experience for a nationwide network of BRAIN Centers offering FDA-approved, drug-free neurotherapy treatments.
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-gray-200">
+              <div>
+                <p className="text-sm text-gray-500 font-medium mb-1">Role</p>
+                <p className="font-medium text-slate-900">Lead Product Designer</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 font-medium mb-1">Timeline</p>
+                <p className="font-medium text-slate-900">2024</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 font-medium mb-1">Platform</p>
+                <p className="font-medium text-slate-900">Web & Mobile App</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 font-medium mb-1">Client</p>
+                <p className="font-medium text-slate-900">Breakthrough 6</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Overview Image */}
+      <section className="px-6 lg:px-12 -mt-12 mb-20 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <img src="https://static.wixstatic.com/media/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg/v1/fill/w_1905,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-xl" />
+        </div>
+      </section>
+
+      {/* The Challenge */}
+      <section className="py-20 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <h2 className="text-3xl font-medium text-slate-900 sticky top-24">The Challenge</h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+              What if mental health treatment actually worked? That's the question Breakthrough 6 (B6) asked when creating their nationwide network of BRAIN (Breakthroughs in Rapid Acting Interventional Neurotherapy) Centers. They offer drug-free, FDA-approved treatments for depression, PTSD, OCD, and ADHD.
+            </p>
+            <p className="text-xl text-gray-700 leading-relaxed mb-12">
+              The challenge was designing a digital patient experience that felt as revolutionary as their treatments. We needed an AI-driven intake and monitoring system that didn't feel cold or robotic, but deeply empathetic and secure—guiding patients from their first inquiry to post-treatment recovery.
+            </p>
+            
+            <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">Core Objectives</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <ShieldCheck className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Design a HIPAA-compliant, AI-assisted intake flow that reduces cognitive load for patients with severe anxiety or depression.</span>
+                </li>
+                <li className="flex items-start">
+                  <LineChart className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Create intuitive data visualization for clinicians to track patient progress across interventional neurotherapy sessions.</span>
+                </li>
+                <li className="flex items-start">
+                  <BrainCircuit className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Implement an AI symptom tracker that patients actually want to use between clinic visits.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Solution */}
+      <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-5xl font-medium mb-6">Designing for Empathy & Efficacy</h2>
+            <p className="text-xl text-slate-300">
+              Balancing advanced AI diagnostic tools with a warm, supportive interface for vulnerable users.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+              <Sparkles className="w-10 h-10 text-emerald-400 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">AI-Guided Intake</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Traditional intake forms for mental health are exhausting. We designed a conversational AI interface that adapts its questions based on the user's condition (Depression, PTSD, ADHD, or OCD). The UI uses soft transitions, large tap targets, and encouraging micro-copy to reduce abandonment.
+              </p>
+            </div>
+            
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+              <Activity className="w-10 h-10 text-blue-400 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Neurotherapy Progress Dashboard</h3>
+              <p className="text-slate-300 leading-relaxed">
+                Patients receiving Rapid Acting Interventional Neurotherapy needed to see their progress visually. We created a dashboard that correlates their daily self-reported moods (collected via a gentle daily AI check-in) with their clinical treatment milestones, showing clear trajectories of healing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results */}
+      <section className="py-20 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+              <div className="text-5xl font-light text-blue-600 mb-4">40%</div>
+              <p className="text-xl font-medium text-slate-900 mb-2">Increase in Intake Completion</p>
+              <p className="text-gray-600">Compared to the previous static PDF forms.</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+              <div className="text-5xl font-light text-emerald-600 mb-4">85%</div>
+              <p className="text-xl font-medium text-slate-900 mb-2">Daily Check-in Rate</p>
+              <p className="text-gray-600">High engagement with the AI symptom tracker.</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+              <div className="text-5xl font-light text-purple-600 mb-4">3x</div>
+              <p className="text-xl font-medium text-slate-900 mb-2">Faster Triage</p>
+              <p className="text-gray-600">Clinicians received prioritized insights before sessions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-6 lg:px-12 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-500">© 2024 Alfie Martin. Case study for Breakthrough 6.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}

@@ -7,6 +7,20 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
+  title: "Breakthrough 6",
+  category: "AI Design",
+  industry: "Med Tech",
+  image: "https://static.wixstatic.com/media/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg/v1/fill/w_1905,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg",
+  year: "2024",
+  link: "b6",
+  summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
+  stats: [
+    { label: "Intake Completion", value: "+40%" },
+    { label: "Engagement", value: "85%" }
+  ],
+  tags: ["AI in Healthcare", "Product Design", "Mental Health"]
+},
+{
   title: "Principal Financial",
   category: "Product Design",
   industry: "Finance",
