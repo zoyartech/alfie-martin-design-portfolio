@@ -152,12 +152,23 @@ export default function B6() {
           <Carousel className="w-full">
             <CarouselContent>
               {[
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/94906b611_1.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c41c7ba5_2.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b61760e8a_3.png",
                 "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
                 "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
                 "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
                 "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
                 "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png"
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983762958_4.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/69fe50b02_5.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e0810f3_6.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e2c7adc_7.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d790eb025_8.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87434b9f8_9.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f77312539_10.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3175dcee_11.png"
               ].map((src, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
