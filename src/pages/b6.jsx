@@ -129,6 +129,15 @@ export default function B6() {
             Experience the patient journey through our interactive Impact Neuro Flow prototype.
           </p>
         </div>
+        
+        <div className="max-w-6xl mx-auto mb-16">
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png" 
+            alt="What if Mental Health Treatment Worked" 
+            className="w-full h-auto object-contain rounded-2xl shadow-xl" 
+          />
+        </div>
+
         <div className="max-w-6xl mx-auto h-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
           <iframe 
             src="https://impact-neuro-flow.base44.app" 
