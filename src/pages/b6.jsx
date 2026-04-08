@@ -70,11 +70,11 @@ export default function B6() {
               The challenge was designing a digital patient experience that felt as revolutionary as their treatments. We needed an AI-driven intake and monitoring system that didn't feel cold or robotic, but deeply empathetic and secure—guiding patients from their first inquiry to post-treatment recovery.
             </p>
             
-            <div className="mb-12">
+            <div className="mb-12 flex justify-center">
               <img 
                 src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b732dfba2_1.png" 
                 alt="Mental Health Treatment" 
-                className="w-full h-auto object-contain rounded-2xl shadow-lg" 
+                className="mx-auto max-w-full h-auto object-contain rounded-2xl shadow-lg" 
               />
             </div>
             
