@@ -105,8 +105,8 @@ export default function B6() {
             </div>
             
             <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
-              <h3 className="text-xl font-semibold text-blue-900 mb-4">Core Objectives</h3>
-              <ul className="space-y-4">
+              <h3 className="text-xl font-semibold text-blue-900 mb-6 text-center">Core Objectives</h3>
+              <ul className="space-y-4 max-w-xl mx-auto">
                 <li className="flex items-start">
                   <ShieldCheck className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
                   <span className="text-blue-800">Design a HIPAA-compliant, AI-assisted intake flow that reduces cognitive load for patients with severe anxiety or depression.</span>
