@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BrainCircuit, ShieldCheck, Activity, LineChart, Sparkles } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function B6() {
   return (
@@ -136,6 +143,36 @@ export default function B6() {
             alt="Patient Journey" 
             className="w-full h-auto object-contain rounded-2xl shadow-lg" 
           />
+        </div>
+      </section>
+
+      {/* Audience Segments Carousel */}
+      <section className="px-6 lg:px-12 pb-24">
+        <div className="max-w-6xl mx-auto px-12 sm:px-16">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {[
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png"
+              ].map((src, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <img 
+                      src={src} 
+                      alt={`Audience Segment ${index + 1}`} 
+                      className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" 
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
