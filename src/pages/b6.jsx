@@ -125,6 +125,17 @@ export default function B6() {
         </div>
       </section>
 
+      {/* Patient Journey Image */}
+      <section className="px-6 lg:px-12 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png" 
+            alt="Patient Journey" 
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
+          />
+        </div>
+      </section>
+
       {/* The Solution */}
       <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto">
