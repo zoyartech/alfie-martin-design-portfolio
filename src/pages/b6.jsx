@@ -217,6 +217,17 @@ export default function B6() {
         </div>
       </section>
 
+      {/* Billboard Image */}
+      <section className="px-6 lg:px-12 pt-24">
+        <div className="max-w-7xl mx-auto">
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png" 
+            alt="Breakthrough 6 Billboard" 
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
+          />
+        </div>
+      </section>
+
       {/* Results */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto text-center">
