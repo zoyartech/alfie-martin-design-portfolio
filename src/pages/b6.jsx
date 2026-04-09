@@ -57,14 +57,25 @@ export default function B6() {
       </section>
 
       {/* Overview Image */}
-      <section className="px-6 lg:px-12 -mt-12 mb-20 relative z-10">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="px-6 lg:px-12 -mt-12 mb-20 relative z-10"
+      >
         <div className="max-w-7xl mx-auto">
-          <img src="https://static.wixstatic.com/media/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg/v1/fill/w_1905,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-xl" />
+          <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[800px] object-contain bg-[#111823] rounded-2xl shadow-xl" />
         </div>
-      </section>
+      </motion.section>
 
       {/* Live Prototype */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-24 px-6 lg:px-12 bg-white"
+      >
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-slate-900">Live Prototype</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -87,10 +98,16 @@ export default function B6() {
             title="Impact Neuro Flow Prototype"
           />
         </div>
-      </section>
+      </motion.section>
 
       {/* The Challenge */}
-      <section className="py-20 px-6 lg:px-12">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-6 lg:px-12"
+      >
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <h2 className="text-3xl font-medium text-slate-900 sticky top-24">The Challenge</h2>
@@ -130,10 +147,16 @@ export default function B6() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Patient Journey Image */}
-      <section className="px-6 lg:px-12 pb-20">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="px-6 lg:px-12 pb-20"
+      >
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-medium text-slate-900">Patient Journey</h2>
         </div>
@@ -144,10 +167,16 @@ export default function B6() {
             className="w-full h-auto object-contain rounded-2xl shadow-lg" 
           />
         </div>
-      </section>
+      </motion.section>
 
       {/* Audience Segments Carousel */}
-      <section className="px-6 lg:px-12 pb-24">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="px-6 lg:px-12 pb-24"
+      >
         <div className="max-w-6xl mx-auto px-12 sm:px-16">
           <Carousel className="w-full">
             <CarouselContent>
@@ -185,10 +214,16 @@ export default function B6() {
             <CarouselNext />
           </Carousel>
         </div>
-      </section>
+      </motion.section>
 
       {/* The Solution */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-24 px-6 lg:px-12 bg-slate-900 text-white"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-5xl font-medium mb-6">Designing for Empathy & Efficacy</h2>
@@ -215,10 +250,16 @@ export default function B6() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Billboard Image */}
-      <section className="px-6 lg:px-12 pt-24">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="px-6 lg:px-12 pt-24"
+      >
         <div className="max-w-7xl mx-auto">
           <img 
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png" 
@@ -226,10 +267,16 @@ export default function B6() {
             className="w-full h-auto object-contain rounded-2xl shadow-lg" 
           />
         </div>
-      </section>
+      </motion.section>
 
       {/* Results */}
-      <section className="py-20 px-6 lg:px-12">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-6 lg:px-12"
+      >
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</h2>
           
@@ -251,7 +298,7 @@ export default function B6() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-200">
