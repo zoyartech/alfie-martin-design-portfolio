@@ -8,8 +8,8 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CarouselPrevious } from
+"@/components/ui/carousel";
 
 export default function B6() {
   return (
@@ -73,19 +73,19 @@ export default function B6() {
         </div>
         
         <div className="max-w-6xl mx-auto mb-16">
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png" 
-            alt="What if Mental Health Treatment Worked" 
-            className="w-full h-auto object-contain rounded-2xl shadow-xl" 
-          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png"
+            alt="What if Mental Health Treatment Worked"
+            className="w-full h-auto object-contain rounded-2xl shadow-xl" />
+          
         </div>
 
         <div className="max-w-6xl mx-auto h-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-          <iframe 
-            src="https://impact-neuro-flow.base44.app" 
+          <iframe
+            src="https://impact-neuro-flow.base44.app"
             className="w-full h-full border-0"
-            title="Impact Neuro Flow Prototype"
-          />
+            title="Impact Neuro Flow Prototype" />
+          
         </div>
       </section>
 
@@ -104,30 +104,30 @@ export default function B6() {
             </p>
             
             <div className="mb-12 flex justify-center">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b732dfba2_1.png" 
-                alt="Mental Health Treatment" 
-                className="mx-auto max-w-full h-auto object-contain rounded-2xl shadow-lg" 
-              />
+              
+
+
+              
+              
             </div>
             
-            <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
-              <h3 className="text-xl font-semibold text-blue-900 mb-6 text-center">Core Objectives</h3>
-              <ul className="space-y-4 max-w-xl mx-auto">
-                <li className="flex items-start">
-                  <ShieldCheck className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
-                  <span className="text-blue-800">Design a HIPAA-compliant, AI-assisted intake flow that reduces cognitive load for patients with severe anxiety or depression.</span>
-                </li>
-                <li className="flex items-start">
-                  <LineChart className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
-                  <span className="text-blue-800">Create intuitive data visualization for clinicians to track patient progress across interventional neurotherapy sessions.</span>
-                </li>
-                <li className="flex items-start">
-                  <BrainCircuit className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
-                  <span className="text-blue-800">Implement an AI symptom tracker that patients actually want to use between clinic visits.</span>
-                </li>
-              </ul>
-            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
           </div>
         </div>
       </section>
@@ -138,11 +138,11 @@ export default function B6() {
           <h2 className="text-3xl lg:text-4xl font-medium text-slate-900">Patient Journey</h2>
         </div>
         <div className="max-w-7xl mx-auto">
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png" 
-            alt="Patient Journey" 
-            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
-          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png"
+            alt="Patient Journey"
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
+          
         </div>
       </section>
 
@@ -152,34 +152,34 @@ export default function B6() {
           <Carousel className="w-full">
             <CarouselContent>
               {[
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/94906b611_1.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c41c7ba5_2.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b61760e8a_3.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983762958_4.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/69fe50b02_5.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e0810f3_6.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e2c7adc_7.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d790eb025_8.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87434b9f8_9.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f77312539_10.png",
-                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3175dcee_11.png"
-              ].map((src, index) => (
-                <CarouselItem key={index}>
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/94906b611_1.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c41c7ba5_2.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b61760e8a_3.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983762958_4.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/69fe50b02_5.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e0810f3_6.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e2c7adc_7.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d790eb025_8.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87434b9f8_9.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f77312539_10.png",
+              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3175dcee_11.png"].
+              map((src, index) =>
+              <CarouselItem key={index}>
                   <div className="p-1">
-                    <img 
-                      src={src} 
-                      alt={`Audience Segment ${index + 1}`} 
-                      className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" 
-                    />
+                    <img
+                    src={src}
+                    alt={`Audience Segment ${index + 1}`}
+                    className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" />
+                  
                   </div>
                 </CarouselItem>
-              ))}
+              )}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -220,11 +220,11 @@ export default function B6() {
       {/* Billboard Image */}
       <section className="px-6 lg:px-12 pt-24">
         <div className="max-w-7xl mx-auto">
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png" 
-            alt="Breakthrough 6 Billboard" 
-            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
-          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png"
+            alt="Breakthrough 6 Billboard"
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
+          
         </div>
       </section>
 
@@ -259,6 +259,6 @@ export default function B6() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. Case study for Breakthrough 6.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
