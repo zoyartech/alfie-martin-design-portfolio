@@ -27,8 +27,8 @@ export default function B6() {
               <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold tracking-wider rounded-full">AI MED TECH</span>
               <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold tracking-wider rounded-full">MENTAL HEALTH</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight text-slate-900">
-              Breakthrough 6: AI-Driven Care in Mental Health
+            <h1 className="text-slate-900 mb-6 text-4xl font-normal tracking-tight md:text-6xl">Breakthrough 6: AI-Driven Care in Mental Health
+
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed mb-12">
               Designing an intelligent, empathetic patient experience for a nationwide network of BRAIN Centers offering FDA-approved, drug-free neurotherapy treatments.
