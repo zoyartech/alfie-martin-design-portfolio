@@ -234,7 +234,7 @@ export default function B6() {
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-              <Sparkles className="w-10 h-10 text-emerald-400 mb-6" />
+              
               <h3 className="text-2xl font-semibold mb-4">AI-Guided Intake</h3>
               <p className="text-slate-300 leading-relaxed">
                 Traditional intake forms for mental health are exhausting. We designed a conversational AI interface that adapts its questions based on the user's condition (Depression, PTSD, ADHD, or OCD). The UI uses soft transitions, large tap targets, and encouraging micro-copy to reduce abandonment.
@@ -242,7 +242,7 @@ export default function B6() {
             </div>
             
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-              <Activity className="w-10 h-10 text-blue-400 mb-6" />
+              
               <h3 className="text-2xl font-semibold mb-4">Neurotherapy Progress Dashboard</h3>
               <p className="text-slate-300 leading-relaxed">
                 Patients receiving Rapid Acting Interventional Neurotherapy needed to see their progress visually. We created a dashboard that correlates their daily self-reported moods (collected via a gentle daily AI check-in) with their clinical treatment milestones, showing clear trajectories of healing.
