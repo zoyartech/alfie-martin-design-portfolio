@@ -8,8 +8,8 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious } from
-"@/components/ui/carousel";
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function B6() {
   return (
@@ -57,25 +57,14 @@ export default function B6() {
       </section>
 
       {/* Overview Image */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="px-6 lg:px-12 -mt-12 mb-20 relative z-10">
-        
+      <section className="px-6 lg:px-12 -mt-12 mb-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[800px] object-contain bg-[#111823] rounded-2xl shadow-xl" />
+          <img src="https://static.wixstatic.com/media/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg/v1/fill/w_1905,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-xl" />
         </div>
-      </motion.section>
+      </section>
 
       {/* Live Prototype */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="py-24 px-6 lg:px-12 bg-white">
-        
+      <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-slate-900">Live Prototype</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -84,30 +73,24 @@ export default function B6() {
         </div>
         
         <div className="max-w-6xl mx-auto mb-16">
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png"
-            alt="What if Mental Health Treatment Worked"
-            className="w-full h-auto object-contain rounded-2xl shadow-xl" />
-          
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png" 
+            alt="What if Mental Health Treatment Worked" 
+            className="w-full h-auto object-contain rounded-2xl shadow-xl" 
+          />
         </div>
 
         <div className="max-w-6xl mx-auto h-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-          <iframe
-            src="https://impact-neuro-flow.base44.app"
+          <iframe 
+            src="https://impact-neuro-flow.base44.app" 
             className="w-full h-full border-0"
-            title="Impact Neuro Flow Prototype" />
-          
+            title="Impact Neuro Flow Prototype"
+          />
         </div>
-      </motion.section>
+      </section>
 
       {/* The Challenge */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="py-20 px-6 lg:px-12">
-        
+      <section className="py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <h2 className="text-3xl font-medium text-slate-900 sticky top-24">The Challenge</h2>
@@ -121,109 +104,91 @@ export default function B6() {
             </p>
             
             <div className="mb-12 flex justify-center">
-              
-
-
-              
-              
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b732dfba2_1.png" 
+                alt="Mental Health Treatment" 
+                className="mx-auto max-w-full h-auto object-contain rounded-2xl shadow-lg" 
+              />
             </div>
             
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+            <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <h3 className="text-xl font-semibold text-blue-900 mb-6 text-center">Core Objectives</h3>
+              <ul className="space-y-4 max-w-xl mx-auto">
+                <li className="flex items-start">
+                  <ShieldCheck className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Design a HIPAA-compliant, AI-assisted intake flow that reduces cognitive load for patients with severe anxiety or depression.</span>
+                </li>
+                <li className="flex items-start">
+                  <LineChart className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Create intuitive data visualization for clinicians to track patient progress across interventional neurotherapy sessions.</span>
+                </li>
+                <li className="flex items-start">
+                  <BrainCircuit className="w-6 h-6 text-blue-600 mr-3 shrink-0" />
+                  <span className="text-blue-800">Implement an AI symptom tracker that patients actually want to use between clinic visits.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Patient Journey Image */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="px-6 lg:px-12 pb-20">
-        
+      <section className="px-6 lg:px-12 pb-20">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-medium text-slate-900">Patient Journey</h2>
         </div>
         <div className="max-w-7xl mx-auto">
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png"
-            alt="Patient Journey"
-            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
-          
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png" 
+            alt="Patient Journey" 
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
+          />
         </div>
-      </motion.section>
+      </section>
 
       {/* Audience Segments Carousel */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="px-6 lg:px-12 pb-24">
-        
+      <section className="px-6 lg:px-12 pb-24">
         <div className="max-w-6xl mx-auto px-12 sm:px-16">
           <Carousel className="w-full">
             <CarouselContent>
               {[
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/94906b611_1.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c41c7ba5_2.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b61760e8a_3.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983762958_4.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/69fe50b02_5.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e0810f3_6.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e2c7adc_7.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d790eb025_8.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87434b9f8_9.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f77312539_10.png",
-              "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3175dcee_11.png"].
-              map((src, index) =>
-              <CarouselItem key={index}>
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/94906b611_1.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c41c7ba5_2.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b61760e8a_3.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2c317dbd_4.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2f9b4a778_5.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1c9d85991_6.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4f8de4043_7.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/900f93d03_8.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3f6d1bf0_9.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983762958_4.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/69fe50b02_5.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e0810f3_6.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/38e2c7adc_7.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d790eb025_8.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87434b9f8_9.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f77312539_10.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3175dcee_11.png"
+              ].map((src, index) => (
+                <CarouselItem key={index}>
                   <div className="p-1">
-                    <img
-                    src={src}
-                    alt={`Audience Segment ${index + 1}`}
-                    className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" />
-                  
+                    <img 
+                      src={src} 
+                      alt={`Audience Segment ${index + 1}`} 
+                      className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" 
+                    />
                   </div>
                 </CarouselItem>
-              )}
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
         </div>
-      </motion.section>
+      </section>
 
       {/* The Solution */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
-        
+      <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-5xl font-medium mb-6">Designing for Empathy & Efficacy</h2>
@@ -234,7 +199,7 @@ export default function B6() {
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-              
+              <Sparkles className="w-10 h-10 text-emerald-400 mb-6" />
               <h3 className="text-2xl font-semibold mb-4">AI-Guided Intake</h3>
               <p className="text-slate-300 leading-relaxed">
                 Traditional intake forms for mental health are exhausting. We designed a conversational AI interface that adapts its questions based on the user's condition (Depression, PTSD, ADHD, or OCD). The UI uses soft transitions, large tap targets, and encouraging micro-copy to reduce abandonment.
@@ -242,7 +207,7 @@ export default function B6() {
             </div>
             
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-              
+              <Activity className="w-10 h-10 text-blue-400 mb-6" />
               <h3 className="text-2xl font-semibold mb-4">Neurotherapy Progress Dashboard</h3>
               <p className="text-slate-300 leading-relaxed">
                 Patients receiving Rapid Acting Interventional Neurotherapy needed to see their progress visually. We created a dashboard that correlates their daily self-reported moods (collected via a gentle daily AI check-in) with their clinical treatment milestones, showing clear trajectories of healing.
@@ -250,33 +215,21 @@ export default function B6() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Billboard Image */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="px-6 lg:px-12 pt-24">
-        
+      <section className="px-6 lg:px-12 pt-24">
         <div className="max-w-7xl mx-auto">
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png"
-            alt="Breakthrough 6 Billboard"
-            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
-          
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png" 
+            alt="Breakthrough 6 Billboard" 
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" 
+          />
         </div>
-      </motion.section>
+      </section>
 
       {/* Results */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="py-20 px-6 lg:px-12">
-        
+      <section className="py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</h2>
           
@@ -298,7 +251,7 @@ export default function B6() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-gray-200">
@@ -306,6 +259,6 @@ export default function B6() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. Case study for Breakthrough 6.</p>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
