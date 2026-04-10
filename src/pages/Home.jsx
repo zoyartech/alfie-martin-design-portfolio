@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
@@ -28,7 +28,8 @@ const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/daee2761e_Untitled-October8202508552.jpg", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e60aead83_flowerrrr.png", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7972ab4c8_IMG_61212.jpg", caption: "Illustration" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" },
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/82a00e2de_Screenshot2026-04-10at52913AM.png", caption: "Editorial" }];
 
 
 const GalleryItem = ({ item, index, openModal }) => {
