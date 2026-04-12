@@ -10,8 +10,13 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
   const links = [
   { label: "HOME", page: "Home" },
   { label: "ABOUT", page: "About" },
-  { label: "CASE STUDIES", page: "CaseStudies" },
-  { label: "SIDE QUESTS", page: "SideQuests" },
+  { label: "CASE STUDIES", type: "dropdown", items: [
+      { label: "DESIGN", page: "CaseStudies" },
+      { label: "UX RESEARCH", page: "UXResearchStudies" },
+      { label: "PRODUCTS I'VE BUILT", page: "SideQuests" },
+      { label: "CONTENT STRATEGY", page: "Writing" }
+    ]
+  },
   { label: "CONTACT", page: "Contact" }];
 
 
@@ -47,18 +52,41 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
               </button>
             </div>
             <nav className="bg-slate-50 pt-10 px-6 flex flex-col gap-8">
-              {links.map((link) =>
-            <Link
-              key={link.page}
-              to={createPageUrl(link.page)}
-              onClick={() => setOpen(false)}
-              className={`text-lg tracking-[0.2em] font-light transition-colors ${
-              activePage === link.page ? "text-black border-b border-black pb-1 w-fit" : "text-gray-500 hover:text-black"}`
-              }>
-              
-                  {link.label}
-                </Link>
-            )}
+              {links.map((link) => {
+                if (link.type === "dropdown") {
+                  return (
+                    <div key={link.label} className="flex flex-col gap-5">
+                      <div className="text-lg tracking-[0.2em] font-light text-black">
+                        {link.label}
+                      </div>
+                      <div className="flex flex-col gap-5 pl-4 border-l border-gray-200">
+                        {link.items.map((item) => (
+                          <Link
+                            key={item.page}
+                            to={createPageUrl(item.page)}
+                            onClick={() => setOpen(false)}
+                            className={`text-[15px] tracking-[0.2em] font-light transition-colors ${
+                            activePage === item.page ? "text-black border-b border-black pb-1 w-fit" : "text-gray-500 hover:text-black"}`
+                            }>
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                return (
+                  <Link
+                    key={link.page}
+                    to={createPageUrl(link.page)}
+                    onClick={() => setOpen(false)}
+                    className={`text-lg tracking-[0.2em] font-light transition-colors ${
+                    activePage === link.page ? "text-black border-b border-black pb-1 w-fit" : "text-gray-500 hover:text-black"}`
+                    }>
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
           </motion.div>
         }
