@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BrainCircuit, ShieldCheck, Activity, LineChart, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, BrainCircuit, ShieldCheck, Activity, LineChart, Sparkles } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import {
   Carousel,
@@ -17,9 +17,14 @@ export default function B6() {
       {/* Header */}
       <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black mb-12 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
-          </Link>
+          <div className="flex flex-wrap items-center gap-6 mb-12">
+            <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
+            </Link>
+            <Link to={createPageUrl("VoiceUserInterface")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
+              Voice user interface <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
           
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="flex flex-wrap gap-3 mb-6">
