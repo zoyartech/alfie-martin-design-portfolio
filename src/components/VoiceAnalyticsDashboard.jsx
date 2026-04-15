@@ -140,7 +140,7 @@ export default function VoiceAnalyticsDashboard() {
           </div>
           <div className="mt-4 space-y-2">
             {errorData.map((entry, index) =>
-            <div key={entry.name} className="text-slate-100 text-xs flex items-center justify-between">
+            <div key={entry.name} className="flex items-center justify-between text-xs">
                 <div className="flex items-center">
                   <div className="w-2.5 h-2.5 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
                   <span className="text-slate-600">{entry.name}</span>
@@ -152,8 +152,8 @@ export default function VoiceAnalyticsDashboard() {
         </div>
 
         {/* Session Usage */}
-        <div className="lg:col-span-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <h4 className="text-sm font-semibold text-slate-900 mb-6">Weekly Usage Frequency</h4>
+        <div className="bg-slate-950 p-6 rounded-2xl lg:col-span-3 border border-slate-200 shadow-sm">
+          <h4 className="text-slate-50 mb-6 text-sm font-semibold">Weekly Usage Frequency</h4>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={usageData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
