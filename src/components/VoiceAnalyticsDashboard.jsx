@@ -50,7 +50,7 @@ export default function VoiceAnalyticsDashboard() {
         <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Overall Accuracy</div>
-            <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg"><CheckCircle className="w-4 h-4" /></div>
+            <div className="bg-teal-900 text-slate-50 p-2 rounded-lg"><CheckCircle className="w-4 h-4" /></div>
           </div>
           <div className="text-slate-200 mb-1 text-3xl font-light">98.2%</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +2.4% this month</div>
