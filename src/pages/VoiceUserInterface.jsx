@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -248,18 +249,27 @@ export default function VoiceUserInterface() {
       {/* Prototype Link Image */}
       <section className="bg-gray-800 px-6 py-16 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto flex justify-center">
-          <a
-            href="https://salty-rival-46904041.figma.site"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
-            
-            <img
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png"
-              alt="View Interactive Prototype"
-              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" />
-            
-          </a>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://salty-rival-46904041.figma.site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
+                  
+                  <img
+                    src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png"
+                    alt="View Interactive Prototype"
+                    className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" />
+                  
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Click to view interactive prototype</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </section>
 
