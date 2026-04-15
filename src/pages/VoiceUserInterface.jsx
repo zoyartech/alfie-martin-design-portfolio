@@ -378,6 +378,10 @@ export default function VoiceUserInterface() {
       {/* Execution Tiers */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
+          <div className="mb-20 w-full flex justify-center">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f208821f8_Screenshot2026-04-14at95110PM.png" alt="Context engine and input processing layers" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Risk-Proportional Execution</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
