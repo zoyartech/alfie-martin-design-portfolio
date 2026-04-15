@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -317,6 +324,33 @@ export default function VoiceUserInterface() {
 
 
       
+
+      {/* Workflow Gallery Carousel */}
+      <section className="py-16 px-6 lg:px-12 bg-white">
+        <div className="max-w-6xl mx-auto px-12 sm:px-16">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {[
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d7bd0238_Screenshot2026-04-14at113540PM.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8fa1bbab4_Screenshot2026-04-14at114134PM.png",
+                "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d6854218e_Screenshot2026-04-14at114621PM.png"
+              ].map((src, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1 flex justify-center">
+                    <img
+                      src={src}
+                      alt={`Workflow illustration ${index + 1}`}
+                      className="w-full h-auto object-contain rounded-2xl shadow-lg border border-slate-200" 
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </section>
 
       {/* Analytics Dashboard */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
