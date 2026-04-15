@@ -311,7 +311,7 @@ export default function VoiceUserInterface() {
             <h3 className="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight hidden">Six-Layer Architecture</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 hidden">
             <div>
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
