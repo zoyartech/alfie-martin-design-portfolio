@@ -319,7 +319,7 @@ export default function VoiceUserInterface() {
       
 
       {/* Analytics Dashboard */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
+      <section className="bg-slate-900 px-6 py-24 lg:px-12 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <VoiceAnalyticsDashboard />
         </div>

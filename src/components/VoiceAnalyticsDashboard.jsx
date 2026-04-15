@@ -1,39 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
+import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, AreaChart, Area,
-  BarChart, Bar, PieChart, Pie, Cell
-} from "recharts";
+  BarChart, Bar, PieChart, Pie, Cell } from
+"recharts";
 import { Activity, AlertTriangle, CheckCircle, Mic, TrendingUp } from "lucide-react";
 
 // Mock data for analytics
 const accuracyData = [
-  { week: 'W1', accuracy: 82, target: 95 },
-  { week: 'W2', accuracy: 85, target: 95 },
-  { week: 'W3', accuracy: 89, target: 95 },
-  { week: 'W4', accuracy: 92, target: 95 },
-  { week: 'W5', accuracy: 94, target: 95 },
-  { week: 'W6', accuracy: 96, target: 95 },
-  { week: 'W7', accuracy: 97, target: 95 },
-  { week: 'W8', accuracy: 98, target: 95 },
-];
+{ week: 'W1', accuracy: 82, target: 95 },
+{ week: 'W2', accuracy: 85, target: 95 },
+{ week: 'W3', accuracy: 89, target: 95 },
+{ week: 'W4', accuracy: 92, target: 95 },
+{ week: 'W5', accuracy: 94, target: 95 },
+{ week: 'W6', accuracy: 96, target: 95 },
+{ week: 'W7', accuracy: 97, target: 95 },
+{ week: 'W8', accuracy: 98, target: 95 }];
+
 
 const errorData = [
-  { name: 'Background Noise', value: 45 },
-  { name: 'Muffled Speech', value: 25 },
-  { name: 'Complex Med Terms', value: 20 },
-  { name: 'Accent/Dialect', value: 10 },
-];
+{ name: 'Background Noise', value: 45 },
+{ name: 'Muffled Speech', value: 25 },
+{ name: 'Complex Med Terms', value: 20 },
+{ name: 'Accent/Dialect', value: 10 }];
+
 
 const usageData = [
-  { day: 'Mon', sessions: 42, commands: 310 },
-  { day: 'Tue', sessions: 56, commands: 425 },
-  { day: 'Wed', sessions: 51, commands: 380 },
-  { day: 'Thu', sessions: 64, commands: 490 },
-  { day: 'Fri', sessions: 58, commands: 450 },
-  { day: 'Sat', sessions: 12, commands: 85 },
-  { day: 'Sun', sessions: 8, commands: 40 },
-];
+{ day: 'Mon', sessions: 42, commands: 310 },
+{ day: 'Tue', sessions: 56, commands: 425 },
+{ day: 'Wed', sessions: 51, commands: 380 },
+{ day: 'Thu', sessions: 64, commands: 490 },
+{ day: 'Fri', sessions: 58, commands: 450 },
+{ day: 'Sat', sessions: 12, commands: 85 },
+{ day: 'Sun', sessions: 8, commands: 40 }];
+
 
 const COLORS = ['#ef4444', '#f59e0b', '#3b82f6', '#8b5cf6'];
 
@@ -41,8 +41,8 @@ export default function VoiceAnalyticsDashboard() {
   return (
     <div className="w-full font-sans">
       <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-slate-900 mb-2">Model Performance Analytics</h3>
-        <p className="text-slate-600">Real-time monitoring of voice recognition accuracy, error classifications, and clinical usage patterns.</p>
+        <h3 className="text-slate-100 mb-2 text-2xl font-semibold">Model Performance Analytics</h3>
+        <p className="text-slate-100">Real-time monitoring of voice recognition accuracy, error classifications, and clinical usage patterns.</p>
       </div>
 
       {/* KPI Cards */}
@@ -93,18 +93,18 @@ export default function VoiceAnalyticsDashboard() {
               <AreaChart data={accuracyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorAccuracy" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                <XAxis dataKey="week" axisLine={false} tickLine={false} tick={{fontSize: 12, fill: '#64748b'}} dy={10} />
-                <YAxis axisLine={false} tickLine={false} tick={{fontSize: 12, fill: '#64748b'}} domain={[70, 100]} />
-                <RechartsTooltip 
+                <XAxis dataKey="week" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b' }} dy={10} />
+                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b' }} domain={[70, 100]} />
+                <RechartsTooltip
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                   itemStyle={{ fontSize: '13px' }}
-                  labelStyle={{ fontSize: '13px', color: '#64748b', marginBottom: '4px' }}
-                />
+                  labelStyle={{ fontSize: '13px', color: '#64748b', marginBottom: '4px' }} />
+                
                 <Area type="monotone" dataKey="accuracy" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorAccuracy)" name="Accuracy %" />
                 <Line type="monotone" dataKey="target" stroke="#94a3b8" strokeWidth={2} strokeDasharray="4 4" dot={false} name="Target %" />
               </AreaChart>
@@ -125,29 +125,29 @@ export default function VoiceAnalyticsDashboard() {
                   innerRadius={60}
                   outerRadius={80}
                   paddingAngle={2}
-                  dataKey="value"
-                >
-                  {errorData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
+                  dataKey="value">
+                  
+                  {errorData.map((entry, index) =>
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  )}
                 </Pie>
-                <RechartsTooltip 
+                <RechartsTooltip
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                  itemStyle={{ fontSize: '13px' }}
-                />
+                  itemStyle={{ fontSize: '13px' }} />
+                
               </PieChart>
             </ResponsiveContainer>
           </div>
           <div className="mt-4 space-y-2">
-            {errorData.map((entry, index) => (
-              <div key={entry.name} className="flex items-center justify-between text-xs">
+            {errorData.map((entry, index) =>
+            <div key={entry.name} className="flex items-center justify-between text-xs">
                 <div className="flex items-center">
                   <div className="w-2.5 h-2.5 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
                   <span className="text-slate-600">{entry.name}</span>
                 </div>
                 <span className="font-medium text-slate-900">{entry.value}%</span>
               </div>
-            ))}
+            )}
           </div>
         </div>
 
@@ -158,20 +158,20 @@ export default function VoiceAnalyticsDashboard() {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={usageData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{fontSize: 12, fill: '#64748b'}} dy={10} />
-                <YAxis yAxisId="left" axisLine={false} tickLine={false} tick={{fontSize: 12, fill: '#64748b'}} />
-                <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tick={{fontSize: 12, fill: '#64748b'}} />
-                <RechartsTooltip 
+                <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b' }} dy={10} />
+                <YAxis yAxisId="left" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b' }} />
+                <YAxis yAxisId="right" orientation="right" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b' }} />
+                <RechartsTooltip
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                  cursor={{fill: '#f1f5f9'}}
-                />
+                  cursor={{ fill: '#f1f5f9' }} />
+                
                 <Bar yAxisId="left" dataKey="commands" fill="#3b82f6" radius={[4, 4, 0, 0]} name="Voice Commands" maxBarSize={40} />
-                <Line yAxisId="right" type="monotone" dataKey="sessions" stroke="#8b5cf6" strokeWidth={3} dot={{r: 4}} name="Active Sessions" />
+                <Line yAxisId="right" type="monotone" dataKey="sessions" stroke="#8b5cf6" strokeWidth={3} dot={{ r: 4 }} name="Active Sessions" />
               </BarChart>
             </ResponsiveContainer>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
