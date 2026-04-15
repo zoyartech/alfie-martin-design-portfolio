@@ -264,7 +264,9 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Executive Summary & The Problem */}
-      
+      <section className="py-24 px-6 lg:px-12 bg-white hidden">
+        <div className="max-w-5xl mx-auto">
+          
 
 
 
@@ -294,11 +296,9 @@ export default function VoiceUserInterface() {
 
 
 
-
-
-
-
-      
+          
+        </div>
+      </section>
 
       {/* Interactive Prototype Section */}
       
@@ -326,7 +326,7 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* System Architecture */}
-      <section className="py-24 px-6 lg:px-12 bg-white border-y border-slate-100">
+      <section className="py-24 px-6 lg:px-12 bg-white border-y border-slate-100 hidden">
         <div className="max-w-5xl mx-auto">
           <div className="mb-20 w-full flex justify-center">
             
