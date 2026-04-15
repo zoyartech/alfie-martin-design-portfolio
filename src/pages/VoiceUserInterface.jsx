@@ -317,8 +317,8 @@ export default function VoiceUserInterface() {
                   "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/323fa539c_Screenshot2026-04-14at95123PM.png",
                   "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ed650859b_Screenshot2026-04-14at95133PM.png",
                   "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/882965253_Screenshot2026-04-14at95150PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2075f7bf6_Screenshot2026-04-14at95159PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bb6014ecd_Screenshot2026-04-14at95607PM.png"
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bb6014ecd_Screenshot2026-04-14at95607PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2075f7bf6_Screenshot2026-04-14at95159PM.png"
                 ].map((src, index) => (
                   <CarouselItem key={index}>
                     <div className="p-1">
