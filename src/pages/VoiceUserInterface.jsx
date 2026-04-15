@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -302,8 +309,31 @@ export default function VoiceUserInterface() {
       {/* System Architecture */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+          <div className="mb-20 w-full">
+            <Carousel className="w-full max-w-4xl mx-auto">
+              <CarouselContent>
+                {[
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8a0a8c0ab_Screenshot2026-04-14at95110PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/323fa539c_Screenshot2026-04-14at95123PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ed650859b_Screenshot2026-04-14at95133PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/882965253_Screenshot2026-04-14at95150PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2075f7bf6_Screenshot2026-04-14at95159PM.png",
+                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bb6014ecd_Screenshot2026-04-14at95607PM.png"
+                ].map((src, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <img
+                        src={src}
+                        alt={`Architecture Layer ${index + 1}`}
+                        className="w-full h-auto object-contain rounded-2xl shadow-sm border border-slate-200"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
 
           <div className="mb-16">
