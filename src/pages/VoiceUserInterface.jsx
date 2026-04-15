@@ -282,7 +282,7 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Interactive Prototype Section */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-950 text-white overflow-hidden relative">
+      <section className="py-24 px-6 lg:px-12 bg-slate-950 text-white overflow-hidden relative hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -303,7 +303,7 @@ export default function VoiceUserInterface() {
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain hidden" />
           </div>
 
         </div>
