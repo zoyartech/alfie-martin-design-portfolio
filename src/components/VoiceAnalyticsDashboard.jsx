@@ -86,8 +86,8 @@ export default function VoiceAnalyticsDashboard() {
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Accuracy Trend */}
-        <div className="bg-slate-900 p-6 rounded-2xl lg:col-span-2 border border-slate-200 shadow-sm">
-          <h4 className="text-sm font-semibold text-slate-900 mb-6">Recognition Accuracy Trend</h4>
+        <div className="bg-slate-950 p-6 rounded-2xl lg:col-span-2 border border-slate-200 shadow-sm">
+          <h4 className="text-slate-100 mb-6 text-sm font-semibold">Recognition Accuracy Trend</h4>
           <div className="h-[280px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={accuracyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -113,8 +113,8 @@ export default function VoiceAnalyticsDashboard() {
         </div>
 
         {/* Error Breakdown */}
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <h4 className="text-sm font-semibold text-slate-900 mb-6">Error Classification</h4>
+        <div className="bg-slate-950 p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h4 className="text-slate-100 mb-6 text-sm font-semibold">Error Classification</h4>
           <div className="h-[200px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -145,7 +145,7 @@ export default function VoiceAnalyticsDashboard() {
                   <div className="w-2.5 h-2.5 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
                   <span className="text-slate-600">{entry.name}</span>
                 </div>
-                <span className="font-medium text-slate-900">{entry.value}%</span>
+                <span className="text-slate-100 font-medium">{entry.value}%</span>
               </div>
             )}
           </div>
