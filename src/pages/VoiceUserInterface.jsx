@@ -235,7 +235,7 @@ export default function VoiceUserInterface() {
               <span className="px-2.5 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Voice UI</span>
               <span className="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Clinical Tech</span>
             </div>
-            <h1 className="bg-slate-950 text-gray-300 mb-6 text-4xl font-semibold tracking-tight leading-[1.1] md:text-6xl">Voice User Interface for Impact TMS
+            <h1 className="bg-slate-950 text-gray-300 mb-6 text-sm font-normal tracking-tight leading-[1.1] md:text-6xl">Voice User Interface for Impact TMS
 
             </h1>
             
