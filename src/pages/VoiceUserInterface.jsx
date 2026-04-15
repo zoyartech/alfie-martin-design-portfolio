@@ -266,9 +266,6 @@ export default function VoiceUserInterface() {
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xl md:text-2xl text-slate-600 font-light leading-relaxed max-w-3xl mb-12">
-            I designed a voice user interface layer for Breakthrough 6's Impact TMS™ clinical system to let clinicians control key dashboard functions hands-free during active treatment sessions.
-          </p>
           
 
 
