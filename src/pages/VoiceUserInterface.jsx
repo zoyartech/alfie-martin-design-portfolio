@@ -247,63 +247,63 @@ export default function VoiceUserInterface() {
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 aspect-video hidden">
-            <div className="w-full h-full border-0 hidden">
-              <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">The Context</h2>
-              <h3 className="text-3xl font-semibold text-slate-900 leading-tight">Hands-busy, eyes-on-patient.</h3>
-            </div>
-            <div className="space-y-6 text-lg text-slate-700 leading-relaxed font-light">
-              <p>
-                The VUI operates as a multimodal input layer on top of the existing visual dashboard. It does not replace the screen interface. Voice handles speed of input; the screen remains the source of truth, the confirmation surface, and the primary interface for browsing, comparison, and complex decision-making.
-              </p>
-              <p>
-                TMS administration is a demanding procedure. The clinician is simultaneously positioning the magnetic coil, monitoring the patient for adverse reactions, adjusting stimulation parameters, and tracking session progress. The current dashboard requires the clinician to break physical engagement with the patient and device to interact with the screen, creating workflow disruption at precisely the moments when clinical attention is most critical.
-              </p>
+          
 
-              <div className="grid sm:grid-cols-2 gap-6 mt-12 pt-8 border-t border-slate-100">
-                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                  <div className="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-lg mb-4">
-                    <Activity className="w-5 h-5" />
-                  </div>
-                  <h4 className="font-semibold text-slate-900 mb-2">Real-time Logging</h4>
-                  <p className="text-sm text-slate-600">Recording patient responses during stimulation requires one hand on the coil and the other on a keyboard.</p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                  
 
-                  
-                  <h4 className="font-semibold text-slate-900 mb-2">Cognitive Load</h4>
-                  <p className="text-sm text-slate-600">Context-switching between patient observation and screen interaction fragments clinical attention.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </section>
 
       {/* Interactive Prototype Section */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-950 text-white overflow-hidden relative hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-blue-400 uppercase mb-4">Interactive Concept</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight">The VUI Feedback Strip</h3>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light">
-              Try simulating different tiers of voice commands below to see how the system handles confidence, intent, and risk-proportional confirmations.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <VUIPrototype />
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       {/* System Architecture */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain hidden" />
+            
           </div>
 
         </div>
