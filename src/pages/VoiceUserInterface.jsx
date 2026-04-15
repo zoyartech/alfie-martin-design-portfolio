@@ -221,7 +221,7 @@ export default function VoiceUserInterface() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="bg-gray-800 pt-32 pb-16 px-6 lg:px-12 border-b border-slate-100">
+      <section className="bg-slate-950 pt-32 pb-16 px-6 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <Link to={createPageUrl("b6")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
@@ -235,7 +235,7 @@ export default function VoiceUserInterface() {
               <span className="px-2.5 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Voice UI</span>
               <span className="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Clinical Tech</span>
             </div>
-            <h1 className="text-gray-300 mb-6 text-4xl font-semibold tracking-tight leading-[1.1] md:text-6xl">Voice User Interface for Impact TMS
+            <h1 className="bg-slate-950 text-gray-300 mb-6 text-4xl font-semibold tracking-tight leading-[1.1] md:text-6xl">Voice User Interface for Impact TMS
 
             </h1>
             
