@@ -245,9 +245,9 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Figma Embed */}
-      <section className="py-16 px-6 lg:px-12 bg-white border-b border-slate-100">
+      <section className="py-16 px-6 lg:px-12 bg-[#292a2b] border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200" style={{ height: '600px' }}>
+          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 aspect-video">
             <iframe
               src="https://salty-rival-46904041.figma.site"
               className="w-full h-full border-0"
