@@ -140,7 +140,7 @@ export default function VoiceAnalyticsDashboard() {
           </div>
           <div className="mt-4 space-y-2">
             {errorData.map((entry, index) =>
-            <div key={entry.name} className="flex items-center justify-between text-xs">
+            <div key={entry.name} className="text-slate-100 text-xs flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-2.5 h-2.5 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
                   <span className="text-slate-600">{entry.name}</span>
