@@ -375,6 +375,35 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Layer Details */}
+      <section className="py-24 px-6 lg:px-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-8">System Layers Deep Dive</h2>
+            
+            <div className="flex items-center gap-4 mb-3 mt-8">
+              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
+              <h3 className="text-2xl font-medium text-slate-900">Context Engine</h3>
+            </div>
+            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl mb-8">
+              Runs persistently to feed information downstream. Maintains session state (determines available command set), patient context (surfaces protocols and medical history), and clinician profile (preferences and vocabulary).
+            </p>
+
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</div>
+              <h3 className="text-2xl font-medium text-slate-900">Input Processing</h3>
+            </div>
+            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
+              Uses a push-to-talk activation model to avoid false positives. Features a <strong className="text-slate-900 font-medium">TMS Noise Gate</strong> synchronized with magnetic pulse timing to buffer voice input during loud clicks rather than attempting flawed acoustic filtering.
+            </p>
+          </div>
+          
+          <div className="mb-20 w-full flex justify-center">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7ebdd0ee7_Screenshot2026-04-14at95110PM.png" alt="Context engine and input processing layers" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+          </div>
+        </div>
+      </section>
+
       {/* Execution Tiers */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
