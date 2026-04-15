@@ -65,28 +65,28 @@ export default function VoiceAnalyticsDashboard() {
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> -1.2% this month</div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Daily Commands</div>
             <div className="p-2 bg-blue-50 text-blue-600 rounded-lg"><Mic className="w-4 h-4" /></div>
           </div>
-          <div className="text-3xl font-light text-slate-900 mb-1">385</div>
+          <div className="text-slate-200 mb-1 text-3xl font-light">385</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +45 this week</div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Active Sessions</div>
             <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><Activity className="w-4 h-4" /></div>
           </div>
-          <div className="text-3xl font-light text-slate-900 mb-1">54</div>
+          <div className="text-slate-200 mb-1 text-3xl font-light">54</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +12 this week</div>
         </div>
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Accuracy Trend */}
-        <div className="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="bg-slate-900 p-6 rounded-2xl lg:col-span-2 border border-slate-200 shadow-sm">
           <h4 className="text-sm font-semibold text-slate-900 mb-6">Recognition Accuracy Trend</h4>
           <div className="h-[280px] w-full">
             <ResponsiveContainer width="100%" height="100%">
