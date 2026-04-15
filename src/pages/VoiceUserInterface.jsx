@@ -402,6 +402,35 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Design Decisions */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Design Decisions</h2>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
+            I landed on a wake-word-activated command structure rather than continuous listening. Clinicians triggered the system with a short activation phrase, then issued a command from a constrained vocabulary mapped to the actions I had identified in observation. The system confirmed each command with brief audible and visual feedback on the dashboard screen, so the clinician could catch errors without stopping what they were doing.
+          </p>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
+            The constrained vocabulary was a deliberate choice over natural language processing. In a clinical setting, I prioritized reliability over flexibility. A clinician saying "mark response at left prefrontal" needed to work every time, and the cost of a misinterpretation was higher than the cost of learning a small set of specific phrases. I designed a quick-reference card for the command set and built a brief onboarding walkthrough into the first session setup flow.
+          </p>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
+            For the visual feedback layer, I kept it minimal. A small persistent status indicator showed whether voice input was active, and confirmations appeared as transient overlays that didn't obscure the neuronavigation display. The clinician's primary visual attention needed to stay on the patient and the coil positioning, not the screen.
+          </p>
+        </div>
+      </section>
+
+      {/* Outcome */}
+      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Outcome</h2>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
+            The voice layer shipped as part of the [confirm: version/phase] of the Impact TMS™ system. Early feedback from clinicians indicated that mid-session documentation improved noticeably, and several clinicians reported that sessions felt less interrupted. 54.02%
+          </p>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
+            This project reinforced something I think about a lot when designing for specialized professional environments: the best interface is sometimes the one that gets out of the way of the real work. The VUI wasn't flashy. It handled a narrow set of tasks with high reliability in a constrained context. But that narrowness was the design, not a limitation of it. Clinicians didn't need a voice assistant. They needed their hands back.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-slate-100 bg-white mt-12">
         <div className="max-w-5xl mx-auto flex justify-between items-center text-sm text-slate-500">
