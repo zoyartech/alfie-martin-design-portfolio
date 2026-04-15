@@ -307,71 +307,71 @@ export default function VoiceUserInterface() {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 hidden">Under The Hood</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight hidden">Six-Layer Architecture</h3>
+            
+            
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 hidden">
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
-                <h4 className="text-xl font-semibold text-slate-900">Context Engine</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed hidden">
-                Runs persistently to feed information downstream. Maintains session state (determines available command set), patient context (surfaces protocols and medical history), and clinician profile (preferences and vocabulary).
-              </p>
-            </div>
+          
 
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</div>
-                <h4 className="text-xl font-semibold text-slate-900">Input Processing</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed hidden">
-                Uses a push-to-talk activation model to avoid false positives. Features a <strong className="text-slate-900 font-medium">TMS Noise Gate</strong> synchronized with magnetic pulse timing to buffer voice input during loud clicks rather than attempting flawed acoustic filtering.
-              </p>
-            </div>
 
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">3</div>
-                <h4 className="text-xl font-semibold text-slate-900">Intent Resolution</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                Routes commands based on confidence scores. Medium confidence triggers a strict A/B disambiguation flow. The system also generates context-aware predictive suggestions based on clinician history.
-              </p>
-            </div>
 
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">4</div>
-                <h4 className="text-xl font-semibold text-slate-900">Tiered Execution</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed hidden">
-                Commands are classified into three risk tiers. Voice-eligible commands are single-shot tasks with predictable structures, while multi-step workflows stay screen-only.
-              </p>
-            </div>
 
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">5</div>
-                <h4 className="text-xl font-semibold text-slate-900">Failure Handling</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                Five distinct failure modes ensure a graceful degradation. If a value is out of range, the system suggests the nearest valid alternative. If interrupted, the system buffers partial input and asks to complete it.
-              </p>
-            </div>
 
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">6</div>
-                <h4 className="text-xl font-semibold text-slate-900">Personalization</h4>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                Adapts to individual workflows over time. Tracks command frequencies to suggest shortcuts, learns custom vocabulary mappings (e.g., "MT" vs "threshold"), and dynamically tunes confirmation verbosity based on the user's error rate.
-              </p>
-            </div>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </section>
 
