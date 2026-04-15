@@ -264,9 +264,7 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Executive Summary & The Problem */}
-      <section className="py-24 px-6 lg:px-12 bg-white hidden">
-        <div className="max-w-5xl mx-auto">
-          
+      
 
 
 
@@ -296,9 +294,11 @@ export default function VoiceUserInterface() {
 
 
 
-          
-        </div>
-      </section>
+
+
+
+
+      
 
       {/* Interactive Prototype Section */}
       
