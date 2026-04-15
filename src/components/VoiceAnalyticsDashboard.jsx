@@ -50,7 +50,7 @@ export default function VoiceAnalyticsDashboard() {
         <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Overall Accuracy</div>
-            <div className="bg-teal-900 text-slate-50 p-2 rounded-lg"><CheckCircle className="w-4 h-4" /></div>
+            <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg"><CheckCircle className="w-4 h-4" /></div>
           </div>
           <div className="text-slate-200 mb-1 text-3xl font-light">98.2%</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +2.4% this month</div>
@@ -59,7 +59,7 @@ export default function VoiceAnalyticsDashboard() {
         <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Error Rate</div>
-            <div className="p-2 bg-red-50 text-red-600 rounded-lg"><AlertTriangle className="w-4 h-4" /></div>
+            <div className="bg-purple-900 text-slate-100 p-2 rounded-lg"><AlertTriangle className="w-4 h-4" /></div>
           </div>
           <div className="text-slate-100 mb-1 text-3xl font-light">1.8%</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> -1.2% this month</div>
@@ -68,7 +68,7 @@ export default function VoiceAnalyticsDashboard() {
         <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Daily Commands</div>
-            <div className="p-2 bg-blue-50 text-blue-600 rounded-lg"><Mic className="w-4 h-4" /></div>
+            <div className="bg-blue-500 text-blue-600 p-2 rounded-lg"><Mic className="text-slate-100 lucide lucide-mic w-4 h-4" /></div>
           </div>
           <div className="text-slate-200 mb-1 text-3xl font-light">385</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +45 this week</div>
@@ -77,7 +77,7 @@ export default function VoiceAnalyticsDashboard() {
         <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Active Sessions</div>
-            <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><Activity className="w-4 h-4" /></div>
+            <div className="bg-sky-500 text-indigo-600 p-2 rounded-lg"><Activity className="w-4 h-4" /></div>
           </div>
           <div className="text-slate-200 mb-1 text-3xl font-light">54</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +12 this week</div>
@@ -152,8 +152,8 @@ export default function VoiceAnalyticsDashboard() {
         </div>
 
         {/* Session Usage */}
-        <div className="bg-slate-950 p-6 rounded-2xl lg:col-span-3 border border-slate-200 shadow-sm">
-          <h4 className="text-slate-50 mb-6 text-sm font-semibold">Weekly Usage Frequency</h4>
+        <div className="lg:col-span-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h4 className="text-sm font-semibold text-slate-900 mb-6">Weekly Usage Frequency</h4>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={usageData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
