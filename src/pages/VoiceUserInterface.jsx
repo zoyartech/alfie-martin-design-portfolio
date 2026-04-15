@@ -307,8 +307,8 @@ export default function VoiceUserInterface() {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">Under The Hood</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight">Six-Layer Architecture</h3>
+            <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 hidden">Under The Hood</h2>
+            <h3 className="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight hidden">Six-Layer Architecture</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
@@ -317,7 +317,7 @@ export default function VoiceUserInterface() {
                 <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
                 <h4 className="text-xl font-semibold text-slate-900">Context Engine</h4>
               </div>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed hidden">
                 Runs persistently to feed information downstream. Maintains session state (determines available command set), patient context (surfaces protocols and medical history), and clinician profile (preferences and vocabulary).
               </p>
             </div>
@@ -327,7 +327,7 @@ export default function VoiceUserInterface() {
                 <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</div>
                 <h4 className="text-xl font-semibold text-slate-900">Input Processing</h4>
               </div>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed hidden">
                 Uses a push-to-talk activation model to avoid false positives. Features a <strong className="text-slate-900 font-medium">TMS Noise Gate</strong> synchronized with magnetic pulse timing to buffer voice input during loud clicks rather than attempting flawed acoustic filtering.
               </p>
             </div>
@@ -347,7 +347,7 @@ export default function VoiceUserInterface() {
                 <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">4</div>
                 <h4 className="text-xl font-semibold text-slate-900">Tiered Execution</h4>
               </div>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed hidden">
                 Commands are classified into three risk tiers. Voice-eligible commands are single-shot tasks with predictable structures, while multi-step workflows stay screen-only.
               </p>
             </div>
@@ -371,63 +371,6 @@ export default function VoiceUserInterface() {
                 Adapts to individual workflows over time. Tracks command frequencies to suggest shortcuts, learns custom vocabulary mappings (e.g., "MT" vs "threshold"), and dynamically tunes confirmation verbosity based on the user's error rate.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Layer Details */}
-      <section className="py-24 px-6 lg:px-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-8">System Layers Deep Dive</h2>
-            
-            <div className="flex items-center gap-4 mb-3 mt-8">
-              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</div>
-              <h3 className="text-2xl font-medium text-slate-900">Context Engine</h3>
-            </div>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl mb-8">
-              Runs persistently to feed information downstream. Maintains session state (determines available command set), patient context (surfaces protocols and medical history), and clinician profile (preferences and vocabulary).
-            </p>
-
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</div>
-              <h3 className="text-2xl font-medium text-slate-900">Input Processing</h3>
-            </div>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
-              Uses a push-to-talk activation model to avoid false positives. Features a <strong className="text-slate-900 font-medium">TMS Noise Gate</strong> synchronized with magnetic pulse timing to buffer voice input during loud clicks rather than attempting flawed acoustic filtering.
-            </p>
-          </div>
-          
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7ebdd0ee7_Screenshot2026-04-14at95110PM.png" alt="Context engine and input processing layers" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
-          </div>
-
-          <div className="mb-12">
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">3</div>
-              <h3 className="text-2xl font-medium text-slate-900">Intent Resolution</h3>
-            </div>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
-              Routes commands based on confidence scores. Medium confidence triggers a strict A/B disambiguation flow. The system also generates context-aware predictive suggestions based on clinician history.
-            </p>
-          </div>
-          
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f9cbbbd3c_Screenshot2026-04-14at95159PM.png" alt="Intent resolution layer" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
-          </div>
-
-          <div className="mb-12">
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">4</div>
-              <h3 className="text-2xl font-medium text-slate-900">Tiered Execution</h3>
-            </div>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
-              Commands are classified into three risk tiers. Voice-eligible commands are single-shot tasks with predictable structures, while multi-step workflows stay screen-only.
-            </p>
-          </div>
-          
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9cf9bf411_Screenshot2026-04-14at95607PM.png" alt="Failure handling layer" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
           </div>
         </div>
       </section>
