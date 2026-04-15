@@ -266,37 +266,16 @@ export default function VoiceUserInterface() {
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
+          <p className="text-xl md:text-2xl text-slate-600 font-light leading-relaxed max-w-3xl mb-16">
+            I designed a voice user interface layer for Breakthrough 6's Impact TMS™ clinical system to let clinicians control key dashboard functions hands-free during active treatment sessions.
+          </p>
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-6">Context and Problem</h2>
+            <p className="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-3xl">
+              Transcranial magnetic stimulation requires a clinician's sustained physical attention. During a treatment session, the operator is positioning and holding a coil against the patient's head, monitoring patient response, and adjusting placement based on real-time feedback. Their hands are occupied for the duration of the session, which can run from 20-35 minutes.
+            </p>
+          </div>
         </div>
       </section>
 
