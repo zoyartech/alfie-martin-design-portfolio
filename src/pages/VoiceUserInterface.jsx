@@ -265,6 +265,13 @@ export default function VoiceUserInterface() {
 
       {/* Executive Summary & The Problem */}
       <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-6xl mx-auto h-[700px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200 mb-24">
+          <iframe
+            src="https://salty-rival-46904041.figma.site"
+            className="w-full h-full border-0"
+            title="Figma Prototype"
+          />
+        </div>
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl text-slate-800 font-light leading-relaxed mb-20 tracking-wide">
             I designed a voice user interface layer for Breakthrough 6's Impact TMS™ clinical system to let clinicians control key dashboard functions hands-free during active treatment sessions.
