@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -244,6 +245,24 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Prototype Link Image */}
+      <section className="py-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-5xl mx-auto flex justify-center">
+          <a 
+            href="https://salty-rival-46904041.figma.site" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl"
+          >
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png" 
+              alt="View Interactive Prototype" 
+              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" 
+            />
+          </a>
+        </div>
+      </section>
+
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
@@ -299,8 +318,15 @@ export default function VoiceUserInterface() {
 
       
 
-      {/* System Architecture */}
+      {/* Analytics Dashboard */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <VoiceAnalyticsDashboard />
+        </div>
+      </section>
+
+      {/* System Architecture */}
+      <section className="py-24 px-6 lg:px-12 bg-white border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-20 w-full flex justify-center">
             
