@@ -318,6 +318,18 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* The Core Problem Continued */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
+            The clinical dashboard I had designed for Breakthrough 6 gave clinicians access to treatment protocols, neuronavigation data, session documentation, and outcome tracking. It was a significant improvement over the fragmented tools they had been using. But during active treatment, all of that information lived behind a touchscreen that clinicians couldn't reach. The workaround was predictable: clinicians would either pause treatment to tap through the interface, or they would try to remember observations and document everything after the session ended. Both options introduced friction. Pausing disrupted treatment flow and extended session time. Documenting from memory after the fact introduced gaps and errors, especially for clinicians running back-to-back sessions.
+          </p>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
+            The core problem was straightforward. The interface worked well before and after treatment, but it went dark during the most clinically important window.
+          </p>
+        </div>
+      </section>
+
       {/* Analytics Dashboard */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
