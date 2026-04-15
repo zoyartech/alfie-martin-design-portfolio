@@ -269,9 +269,9 @@ export default function VoiceUserInterface() {
                   <p className="text-sm text-slate-600">Recording patient responses during stimulation requires one hand on the coil and the other on a keyboard.</p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                  <div className="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-lg mb-4 hidden">
-                    <BrainCircuit className="w-5 h-5" />
-                  </div>
+                  
+
+                  
                   <h4 className="font-semibold text-slate-900 mb-2">Cognitive Load</h4>
                   <p className="text-sm text-slate-600">Context-switching between patient observation and screen interaction fragments clinical attention.</p>
                 </div>
