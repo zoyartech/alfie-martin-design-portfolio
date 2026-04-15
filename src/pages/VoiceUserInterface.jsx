@@ -256,6 +256,26 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Workflow Map */}
+      <section className="py-24 px-6 lg:px-12 bg-white border-b border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">Workflow Analysis</h2>
+            <h3 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight">Balancing Voice and Screen</h3>
+            <p className="text-slate-600 mt-4 max-w-2xl mx-auto font-light text-lg">
+              Mapping interactions across the entire patient session to determine the optimal modality for each task.
+            </p>
+          </div>
+          <div className="w-full flex justify-center">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3f2f7912b_Screenshot2026-04-14at110224PM.png" 
+              alt="Clinical Workflow Map" 
+              className="w-full rounded-xl shadow-sm border border-slate-200 object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
