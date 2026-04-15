@@ -378,32 +378,6 @@ export default function VoiceUserInterface() {
       {/* Execution Tiers */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-8">Six-Layer Architecture</h2>
-            <h3 className="text-2xl font-medium text-slate-900 mb-3">Context Engine</h3>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
-              Runs persistently to feed information downstream. Maintains session state (determines available command set), patient context (surfaces protocols and medical history), and clinician profile (preferences and vocabulary).
-            </p>
-          </div>
-          
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f208821f8_Screenshot2026-04-14at95110PM.png" alt="Context engine and input processing layers" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
-          </div>
-
-          <div className="mb-12 mt-16">
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">3</div>
-              <h3 className="text-2xl font-medium text-slate-900">Intent Resolution</h3>
-            </div>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
-              Routes commands based on confidence scores. Medium confidence triggers a strict A/B disambiguation flow. The system also generates context-aware predictive suggestions based on clinician history.
-            </p>
-          </div>
-          
-          <div className="mb-20 w-full flex justify-center">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1d22437e9_Screenshot2026-04-14at74930PM.png" alt="Intent resolution layer" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
-          </div>
-
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Risk-Proportional Execution</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
