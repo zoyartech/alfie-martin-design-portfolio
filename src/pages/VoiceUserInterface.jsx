@@ -219,20 +219,8 @@ export default function VoiceUserInterface() {
         .font-sans { font-family: 'Inter', sans-serif; }
       `}</style>
 
-      {/* Live App Embed */}
-      <section className="pt-20 bg-slate-950">
-        <div className="w-full h-[80vh] md:h-[90vh]">
-          <iframe
-            src="https://true-impact-voice-flow.base44.app"
-            className="w-full h-full border-0"
-            title="Impact TMS Live App"
-            allowFullScreen
-          />
-        </div>
-      </section>
-
       {/* Hero Section */}
-      <section className="pt-16 pb-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
+      <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <Link to={createPageUrl("b6")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
@@ -253,6 +241,18 @@ export default function VoiceUserInterface() {
               Reducing workflow friction during transcranial magnetic stimulation (TMS) sessions by allowing clinicians to issue commands and log data without breaking physical engagement.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Live App Embed */}
+      <section className="bg-slate-950">
+        <div className="w-full h-[80vh] md:h-[90vh]">
+          <iframe
+            src="https://true-impact-voice-flow.base44.app"
+            className="w-full h-full border-0"
+            title="Impact TMS Live App"
+            allowFullScreen
+          />
         </div>
       </section>
 
