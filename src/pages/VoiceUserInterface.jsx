@@ -244,6 +244,20 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Figma Embed */}
+      <section className="py-16 px-6 lg:px-12 bg-white border-b border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200" style={{ height: '600px' }}>
+            <iframe
+              src="https://www.figma.com/make/bw1DeVyEgnPErOproVyyee/VUI-tms?fullscreen=1&t=8tIqrzUj0QnyzeP7-1"
+              className="w-full h-full border-0"
+              title="VUI TMS Figma Prototype"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Executive Summary & The Problem */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
