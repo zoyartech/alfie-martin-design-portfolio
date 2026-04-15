@@ -238,9 +238,9 @@ export default function VoiceUserInterface() {
             <h1 className="text-slate-900 mb-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
               Voice User Interface for Impact TMS
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl leading-relaxed mb-8 font-light hidden">
-              Reducing workflow friction during transcranial magnetic stimulation (TMS) sessions by allowing clinicians to issue commands and log data without breaking physical engagement.
-            </p>
+            
+
+            
           </motion.div>
         </div>
       </section>
