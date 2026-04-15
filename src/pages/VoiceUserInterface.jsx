@@ -347,8 +347,21 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Research and Approach */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Research and Approach</h2>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
+            I spent time observing a dozen treatment sessions to map the specific moments clinicians needed to interact with the system mid-session. The interactions fell into a narrow set of categories: logging a clinical observation, adjusting a protocol parameter, confirming a neuronavigation target, and marking timestamps for notable patient responses. These were short, discrete actions, not complex navigation tasks. That distinction mattered because it meant I wasn't designing a conversational AI interface. I was designing a command layer.
+          </p>
+          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
+            I also documented the acoustic environment. TMS devices produce a repetitive clicking sound during pulse delivery, and clinicians often talk to patients throughout the session to check comfort and provide reassurance. Any voice system would need to distinguish intentional commands from ambient speech and conversation, in a room with consistent mechanical noise.
+          </p>
+        </div>
+      </section>
+
       {/* Execution Tiers */}
-      <section className="py-24 px-6 lg:px-12">
+      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Risk-Proportional Execution</h2>
