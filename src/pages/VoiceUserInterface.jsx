@@ -302,6 +302,10 @@ export default function VoiceUserInterface() {
       {/* System Architecture */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
+          <div className="mb-20 w-full flex justify-center">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+          </div>
+
           <div className="mb-16">
             <h2 className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">Under The Hood</h2>
             <h3 className="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight">Six-Layer Architecture</h3>
