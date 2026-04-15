@@ -318,6 +318,27 @@ export default function VoiceUserInterface() {
 
       
 
+      {/* Workflow Process Visuals */}
+      <section className="py-24 px-6 lg:px-12 bg-[#0a0f1e]">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f35694c62_Screenshot2026-04-14at113540PM.png"
+            alt="Workflow Timeline"
+            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
+          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/07b32ba73_Screenshot2026-04-14at114134PM.png"
+            alt="Signal Processing"
+            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
+          />
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5132297cd_Screenshot2026-04-14at114621PM.png"
+            alt="Workflow Comparison"
+            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
+          />
+        </div>
+      </section>
+
       {/* Analytics Dashboard */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
