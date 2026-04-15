@@ -221,7 +221,7 @@ export default function VoiceUserInterface() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
+      <section className="bg-gray-800 pt-32 pb-16 px-6 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <Link to={createPageUrl("b6")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
@@ -235,8 +235,8 @@ export default function VoiceUserInterface() {
               <span className="px-2.5 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Voice UI</span>
               <span className="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Clinical Tech</span>
             </div>
-            <h1 className="text-slate-900 mb-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
-              Voice User Interface for Impact TMS
+            <h1 className="text-gray-300 mb-6 text-4xl font-semibold tracking-tight leading-[1.1] md:text-6xl">Voice User Interface for Impact TMS
+
             </h1>
             
 
@@ -246,7 +246,7 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Prototype Link Image */}
-      <section className="py-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
+      <section className="bg-gray-800 px-6 py-16 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto flex justify-center">
           <a
             href="https://salty-rival-46904041.figma.site"
@@ -264,25 +264,39 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Executive Summary & The Problem */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto h-[700px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200 mb-24">
-          <iframe
-            src="https://salty-rival-46904041.figma.site"
-            className="w-full h-full border-0"
-            title="Figma Prototype"
-          />
-        </div>
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-2xl md:text-3xl text-slate-800 font-light leading-relaxed mb-20 tracking-wide">
-            I designed a voice user interface layer for Breakthrough 6's Impact TMS™ clinical system to let clinicians control key dashboard functions hands-free during active treatment sessions.
-          </p>
+      <section className="py-24 px-6 lg:px-12 bg-white hidden">
+        <div className="max-w-5xl mx-auto">
           
-          <div className="mb-16 flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Context and Problem</h2>
-            <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
-              Transcranial magnetic stimulation requires a clinician's sustained physical attention. During a treatment session, the operator is positioning and holding a coil against the patient's head, monitoring patient response, and adjusting placement based on real-time feedback. Their hands are occupied for the duration of the session, which can run from 20-35 minutes.
-            </p>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </section>
 
@@ -304,39 +318,6 @@ export default function VoiceUserInterface() {
 
       
 
-      {/* Workflow Process Visuals */}
-      <section className="py-24 px-6 lg:px-12 bg-[#0a0f1e]">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f35694c62_Screenshot2026-04-14at113540PM.png"
-            alt="Workflow Timeline"
-            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
-          />
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/07b32ba73_Screenshot2026-04-14at114134PM.png"
-            alt="Signal Processing"
-            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
-          />
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5132297cd_Screenshot2026-04-14at114621PM.png"
-            alt="Workflow Comparison"
-            className="w-full h-auto rounded-2xl shadow-2xl border border-slate-800/50"
-          />
-        </div>
-      </section>
-
-      {/* The Core Problem Continued */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
-            The clinical dashboard I had designed for Breakthrough 6 gave clinicians access to treatment protocols, neuronavigation data, session documentation, and outcome tracking. It was a significant improvement over the fragmented tools they had been using. But during active treatment, all of that information lived behind a touchscreen that clinicians couldn't reach. The workaround was predictable: clinicians would either pause treatment to tap through the interface, or they would try to remember observations and document everything after the session ended. Both options introduced friction. Pausing disrupted treatment flow and extended session time. Documenting from memory after the fact introduced gaps and errors, especially for clinicians running back-to-back sessions.
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
-            The core problem was straightforward. The interface worked well before and after treatment, but it went dark during the most clinically important window.
-          </p>
-        </div>
-      </section>
-
       {/* Analytics Dashboard */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
@@ -354,21 +335,8 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
-      {/* Research and Approach */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Research and Approach</h2>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
-            I spent time observing a dozen treatment sessions to map the specific moments clinicians needed to interact with the system mid-session. The interactions fell into a narrow set of categories: logging a clinical observation, adjusting a protocol parameter, confirming a neuronavigation target, and marking timestamps for notable patient responses. These were short, discrete actions, not complex navigation tasks. That distinction mattered because it meant I wasn't designing a conversational AI interface. I was designing a command layer.
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
-            I also documented the acoustic environment. TMS devices produce a repetitive clicking sound during pulse delivery, and clinicians often talk to patients throughout the session to check comfort and provide reassurance. Any voice system would need to distinguish intentional commands from ambient speech and conversation, in a room with consistent mechanical noise.
-          </p>
-        </div>
-      </section>
-
       {/* Execution Tiers */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
+      <section className="py-24 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Risk-Proportional Execution</h2>
@@ -406,35 +374,6 @@ export default function VoiceUserInterface() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Design Decisions */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Design Decisions</h2>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
-            I landed on a wake-word-activated command structure rather than continuous listening. Clinicians triggered the system with a short activation phrase, then issued a command from a constrained vocabulary mapped to the actions I had identified in observation. The system confirmed each command with brief audible and visual feedback on the dashboard screen, so the clinician could catch errors without stopping what they were doing.
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
-            The constrained vocabulary was a deliberate choice over natural language processing. In a clinical setting, I prioritized reliability over flexibility. A clinician saying "mark response at left prefrontal" needed to work every time, and the cost of a misinterpretation was higher than the cost of learning a small set of specific phrases. I designed a quick-reference card for the command set and built a brief onboarding walkthrough into the first session setup flow.
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
-            For the visual feedback layer, I kept it minimal. A small persistent status indicator showed whether voice input was active, and confirmations appeared as transient overlays that didn't obscure the neuronavigation display. The clinician's primary visual attention needed to stay on the patient and the coil positioning, not the screen.
-          </p>
-        </div>
-      </section>
-
-      {/* Outcome */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-8">Outcome</h2>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center mb-8">
-            The voice layer shipped as part of the [confirm: version/phase] of the Impact TMS™ system. Early feedback from clinicians indicated that mid-session documentation improved noticeably, and several clinicians reported that sessions felt less interrupted. 54.02%
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 font-light leading-loose max-w-3xl text-center">
-            This project reinforced something I think about a lot when designing for specialized professional environments: the best interface is sometimes the one that gets out of the way of the real work. The VUI wasn't flashy. It handled a narrow set of tasks with high reliability in a constrained context. But that narrowness was the design, not a limitation of it. Clinicians didn't need a voice assistant. They needed their hands back.
-          </p>
         </div>
       </section>
 
