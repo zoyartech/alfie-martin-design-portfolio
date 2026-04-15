@@ -238,7 +238,7 @@ export default function VoiceUserInterface() {
             <h1 className="text-slate-900 mb-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
               Voice User Interface for Impact TMS
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl leading-relaxed mb-8 font-light">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl leading-relaxed mb-8 font-light hidden">
               Reducing workflow friction during transcranial magnetic stimulation (TMS) sessions by allowing clinicians to issue commands and log data without breaking physical engagement.
             </p>
           </motion.div>
@@ -248,17 +248,17 @@ export default function VoiceUserInterface() {
       {/* Prototype Link Image */}
       <section className="py-16 px-6 lg:px-12 bg-slate-50 border-b border-slate-100">
         <div className="max-w-5xl mx-auto flex justify-center">
-          <a 
-            href="https://salty-rival-46904041.figma.site" 
-            target="_blank" 
+          <a
+            href="https://salty-rival-46904041.figma.site"
+            target="_blank"
             rel="noopener noreferrer"
-            className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl"
-          >
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png" 
-              alt="View Interactive Prototype" 
-              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" 
-            />
+            className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
+            
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png"
+              alt="View Interactive Prototype"
+              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" />
+            
           </a>
         </div>
       </section>
