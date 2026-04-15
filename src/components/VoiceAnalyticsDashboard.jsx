@@ -47,21 +47,21 @@ export default function VoiceAnalyticsDashboard() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Overall Accuracy</div>
             <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg"><CheckCircle className="w-4 h-4" /></div>
           </div>
-          <div className="text-3xl font-light text-slate-900 mb-1">98.2%</div>
+          <div className="text-slate-200 mb-1 text-3xl font-light">98.2%</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> +2.4% this month</div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+        <div className="bg-slate-950 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">Error Rate</div>
             <div className="p-2 bg-red-50 text-red-600 rounded-lg"><AlertTriangle className="w-4 h-4" /></div>
           </div>
-          <div className="text-3xl font-light text-slate-900 mb-1">1.8%</div>
+          <div className="text-slate-100 mb-1 text-3xl font-light">1.8%</div>
           <div className="text-emerald-500 text-xs font-medium flex items-center"><TrendingUp className="w-3 h-3 mr-1" /> -1.2% this month</div>
         </div>
 
