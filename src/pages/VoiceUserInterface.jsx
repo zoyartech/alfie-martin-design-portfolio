@@ -249,7 +249,7 @@ export default function VoiceUserInterface() {
         <div className="max-w-5xl mx-auto">
           <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200" style={{ height: '600px' }}>
             <iframe
-              src="https://www.figma.com/make/bw1DeVyEgnPErOproVyyee/VUI-tms?fullscreen=1&t=8tIqrzUj0QnyzeP7-1"
+              src="https://salty-rival-46904041.figma.site"
               className="w-full h-full border-0"
               title="VUI TMS Figma Prototype"
               allowFullScreen
@@ -295,6 +295,26 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
+      {/* Visual Context */}
+      <section className="py-16 px-6 lg:px-12 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div className="w-full flex justify-center">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ee6ae8cbb_Screenshot2026-04-14at113540PM.png" 
+              alt="Voice vs Screen timeline" 
+              className="w-full rounded-2xl shadow-xl border border-slate-800 object-contain" 
+            />
+          </div>
+          <div className="w-full flex justify-center">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/940c38c0e_Screenshot2026-04-14at114134PM.png" 
+              alt="TMS pulse train noise gate" 
+              className="w-full rounded-2xl shadow-xl border border-slate-800 object-contain" 
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Prototype Section */}
       <section className="py-24 px-6 lg:px-12 bg-slate-950 text-white overflow-hidden relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
@@ -319,7 +339,19 @@ export default function VoiceUserInterface() {
           <div className="mb-20 w-full flex justify-center">
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
           </div>
+        </div>
+      </section>
 
+      {/* Workflow Comparison */}
+      <section className="py-24 px-6 lg:px-12 bg-slate-950 border-b border-slate-900">
+        <div className="max-w-5xl mx-auto">
+          <div className="w-full flex justify-center">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/01c7a2c0d_Screenshot2026-04-14at114621PM.png" 
+              alt="Workflow Comparison" 
+              className="w-full rounded-2xl shadow-2xl border border-slate-800 object-contain" 
+            />
+          </div>
         </div>
       </section>
 
