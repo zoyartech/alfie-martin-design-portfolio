@@ -3,22 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
   const [lastCommand, setLastCommand] = useState('');
   const [commandStatus, setCommandStatus] = useState(null); // 'confirmed', 'awaiting_voice', 'screen_confirm', 'error'
   const [history, setHistory] = useState([
-    { id: 2, time: '10:45 AM', command: 'Set protocol to standard depression', status: 'screen_confirm' },
-    { id: 1, time: '10:42 AM', command: 'Start session', status: 'confirmed' }
-  ]);
+  { id: 2, time: '10:45 AM', command: 'Set protocol to standard depression', status: 'screen_confirm' },
+  { id: 1, time: '10:42 AM', command: 'Start session', status: 'confirmed' }]
+  );
   const [showHistory, setShowHistory] = useState(false);
   const [suggestion, setSuggestion] = useState('Ready for motor threshold check?');
 
@@ -30,12 +23,12 @@ const VUIPrototype = () => {
 
     setTimeout(() => {
       setMicState('processing');
-      
+
       setTimeout(() => {
         setMicState('idle');
         let newCmd = '';
         let newStatus = '';
-        
+
         if (type === 'tier1') {
           newCmd = 'Log patient reported mild headache';
           newStatus = 'confirmed';
@@ -52,14 +45,14 @@ const VUIPrototype = () => {
 
         setLastCommand(newCmd);
         setCommandStatus(newStatus);
-        
-        setHistory(prev => [{
+
+        setHistory((prev) => [{
           id: Date.now(),
           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           command: newCmd,
           status: newStatus
         }, ...prev]);
-        
+
       }, 1000);
     }, 1500);
   };
@@ -120,103 +113,103 @@ const VUIPrototype = () => {
 
       {/* Command History Overlay */}
       <AnimatePresence>
-        {showHistory && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="bg-slate-800 border-t border-slate-700 overflow-y-auto max-h-48"
-          >
+        {showHistory &&
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          className="bg-slate-800 border-t border-slate-700 overflow-y-auto max-h-48">
+          
             <div className="p-4 space-y-3">
               <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-3 flex items-center">
                 <History className="w-3.5 h-3.5 mr-2" /> Session History
               </h4>
-              {history.map((item, idx) => (
-                <div key={item.id} className="flex items-start md:items-center gap-3 md:gap-4 text-sm py-1">
+              {history.map((item, idx) =>
+            <div key={item.id} className="flex items-start md:items-center gap-3 md:gap-4 text-sm py-1">
                   <span className="text-slate-500 w-16 text-xs whitespace-nowrap pt-0.5 md:pt-0">{item.time}</span>
                   <span className="text-slate-200 flex-1 leading-snug">"{item.command}"</span>
                   <div className="w-32 flex justify-end shrink-0 pt-0.5 md:pt-0">
-                    {item.status === 'confirmed' && <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><Check className="w-3 h-3 mr-1"/> Confirmed</span>}
-                    {item.status === 'awaiting_voice' && <span className="text-amber-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><Volume2 className="w-3 h-3 mr-1"/> Voice Confirm</span>}
-                    {item.status === 'screen_confirm' && <span className="text-blue-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><AlertCircle className="w-3 h-3 mr-1"/> Screen Confirm</span>}
-                    {item.status === 'error' && <span className="text-red-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><AlertCircle className="w-3 h-3 mr-1"/> Error</span>}
+                    {item.status === 'confirmed' && <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><Check className="w-3 h-3 mr-1" /> Confirmed</span>}
+                    {item.status === 'awaiting_voice' && <span className="text-amber-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><Volume2 className="w-3 h-3 mr-1" /> Voice Confirm</span>}
+                    {item.status === 'screen_confirm' && <span className="text-blue-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><AlertCircle className="w-3 h-3 mr-1" /> Screen Confirm</span>}
+                    {item.status === 'error' && <span className="text-red-400 text-[10px] font-bold uppercase tracking-wider flex items-center"><AlertCircle className="w-3 h-3 mr-1" /> Error</span>}
                   </div>
                 </div>
-              ))}
+            )}
             </div>
           </motion.div>
-        )}
+        }
       </AnimatePresence>
 
       {/* VUI Feedback Strip */}
       <div className="bg-slate-950 border-t border-slate-800 p-4 md:px-6 flex items-center gap-4 md:gap-6 shrink-0">
-        <button 
+        <button
           onClick={() => setShowHistory(!showHistory)}
-          className="p-2 -ml-2 text-slate-500 hover:text-white hover:bg-slate-800 rounded-full transition-all"
-        >
+          className="p-2 -ml-2 text-slate-500 hover:text-white hover:bg-slate-800 rounded-full transition-all">
+          
           {showHistory ? <ChevronDown className="w-5 h-5" /> : <ChevronUp className="w-5 h-5" />}
         </button>
 
         <div className="flex items-center gap-3">
           <div className={`w-3 h-3 rounded-full ${
-            micState === 'idle' ? 'bg-slate-600' : 
-            micState === 'listening' ? 'bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 
-            'bg-blue-500 animate-bounce shadow-[0_0_10px_rgba(59,130,246,0.5)]'
-          }`} />
+          micState === 'idle' ? 'bg-slate-600' :
+          micState === 'listening' ? 'bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]' :
+          'bg-blue-500 animate-bounce shadow-[0_0_10px_rgba(59,130,246,0.5)]'}`
+          } />
           <span className="text-slate-400 text-xs md:text-sm font-medium w-16 md:w-20 uppercase tracking-wider">
             {micState === 'idle' ? 'Idle' : micState === 'listening' ? 'Listening' : 'Processing'}
           </span>
         </div>
 
         <div className="flex-1 flex flex-col justify-center min-w-0">
-          {suggestion && micState === 'idle' && !lastCommand ? (
-            <div className="text-amber-500/80 text-sm italic flex items-center gap-2 truncate">
+          {suggestion && micState === 'idle' && !lastCommand ?
+          <div className="text-amber-500/80 text-sm italic flex items-center gap-2 truncate">
               <Sparkles className="w-4 h-4 shrink-0" /> <span className="truncate">Suggestion: {suggestion}</span>
-            </div>
-          ) : (
-            <div className={`text-white text-base md:text-lg font-medium truncate transition-opacity duration-300 ${micState === 'processing' ? 'opacity-50' : 'opacity-100'}`}>
+            </div> :
+
+          <div className={`text-white text-base md:text-lg font-medium truncate transition-opacity duration-300 ${micState === 'processing' ? 'opacity-50' : 'opacity-100'}`}>
               {lastCommand ? `"${lastCommand}"` : ""}
             </div>
-          )}
+          }
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
-          {commandStatus === 'confirmed' && (
-            <div className="px-3 py-1.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
+          {commandStatus === 'confirmed' &&
+          <div className="px-3 py-1.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
               <Check className="w-3.5 h-3.5 mr-1.5" /> <span className="hidden md:inline">CONFIRMED</span>
             </div>
-          )}
-          {commandStatus === 'awaiting_voice' && (
-            <div className="px-3 py-1.5 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
+          }
+          {commandStatus === 'awaiting_voice' &&
+          <div className="px-3 py-1.5 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
               <Volume2 className="w-3.5 h-3.5 mr-1.5" /> <span className="hidden md:inline">AWAITING VOICE</span>
             </div>
-          )}
-          {commandStatus === 'screen_confirm' && (
-            <div className="px-3 py-1.5 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
+          }
+          {commandStatus === 'screen_confirm' &&
+          <div className="px-3 py-1.5 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
               <AlertCircle className="w-3.5 h-3.5 mr-1.5" /> <span className="hidden md:inline">SCREEN CONFIRM</span>
             </div>
-          )}
-          {commandStatus === 'error' && (
-            <div className="px-3 py-1.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
+          }
+          {commandStatus === 'error' &&
+          <div className="px-3 py-1.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
               <AlertCircle className="w-3.5 h-3.5 mr-1.5" /> <span className="hidden md:inline">OUT OF RANGE</span>
             </div>
-          )}
+          }
 
-          {commandStatus === 'screen_confirm' && (
-            <button onClick={() => { 
-                setCommandStatus('confirmed'); 
-                setHistory(h => { const newH = [...h]; newH[0].status = 'confirmed'; return newH; });
-              }} 
-              className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-xs md:text-sm font-semibold transition-colors shadow-lg"
-            >
+          {commandStatus === 'screen_confirm' &&
+          <button onClick={() => {
+            setCommandStatus('confirmed');
+            setHistory((h) => {const newH = [...h];newH[0].status = 'confirmed';return newH;});
+          }}
+          className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-xs md:text-sm font-semibold transition-colors shadow-lg">
+            
               Confirm
             </button>
-          )}
+          }
         </div>
       </div>
-    </div>
-  )
-}
+    </div>);
+
+};
 
 export default function VoiceUserInterface() {
   return (
@@ -276,7 +269,7 @@ export default function VoiceUserInterface() {
                   <p className="text-sm text-slate-600">Recording patient responses during stimulation requires one hand on the coil and the other on a keyboard.</p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                  <div className="w-10 h-10 bg-emerald-100 text-emerald-600 flex items-center justify-center rounded-lg mb-4">
+                  <div className="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-lg mb-4 hidden">
                     <BrainCircuit className="w-5 h-5" />
                   </div>
                   <h4 className="font-semibold text-slate-900 mb-2">Cognitive Load</h4>
@@ -309,31 +302,8 @@ export default function VoiceUserInterface() {
       {/* System Architecture */}
       <section className="py-24 px-6 lg:px-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-20 w-full">
-            <Carousel className="w-full max-w-4xl mx-auto">
-              <CarouselContent>
-                {[
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8a0a8c0ab_Screenshot2026-04-14at95110PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/323fa539c_Screenshot2026-04-14at95123PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ed650859b_Screenshot2026-04-14at95133PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/882965253_Screenshot2026-04-14at95150PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bb6014ecd_Screenshot2026-04-14at95607PM.png",
-                  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2075f7bf6_Screenshot2026-04-14at95159PM.png"
-                ].map((src, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-1">
-                      <img
-                        src={src}
-                        alt={`Architecture Layer ${index + 1}`}
-                        className="w-full h-auto object-contain rounded-2xl shadow-sm border border-slate-200"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
+          <div className="mb-20 w-full flex justify-center">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/00df9af9a_Screenshot2026-04-14at72315PM.png" alt="Visualized decision tree structure" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
           </div>
 
           <div className="mb-16">
@@ -454,6 +424,6 @@ export default function VoiceUserInterface() {
           <Link to={createPageUrl("Home")} className="hover:text-slate-900 transition-colors">Return to Home</Link>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
