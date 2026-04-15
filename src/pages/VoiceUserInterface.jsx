@@ -415,6 +415,20 @@ export default function VoiceUserInterface() {
           <div className="mb-20 w-full flex justify-center">
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f9cbbbd3c_Screenshot2026-04-14at95159PM.png" alt="Intent resolution layer" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
           </div>
+
+          <div className="mb-12">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">4</div>
+              <h3 className="text-2xl font-medium text-slate-900">Tiered Execution</h3>
+            </div>
+            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-4xl">
+              Commands are classified into three risk tiers. Voice-eligible commands are single-shot tasks with predictable structures, while multi-step workflows stay screen-only.
+            </p>
+          </div>
+          
+          <div className="mb-20 w-full flex justify-center">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9cf9bf411_Screenshot2026-04-14at95607PM.png" alt="Failure handling layer" className="w-full max-w-4xl rounded-2xl shadow-sm border border-slate-200 object-contain" />
+          </div>
         </div>
       </section>
 
