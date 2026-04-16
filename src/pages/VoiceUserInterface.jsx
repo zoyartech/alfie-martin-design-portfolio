@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
+import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History, FileText } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import CommandReferenceLibrary from "@/components/CommandReferenceLibrary";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -214,8 +215,11 @@ const VUIPrototype = () => {
 };
 
 export default function VoiceUserInterface() {
+  const [isLibraryOpen, setIsLibraryOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 pb-24">
+      <CommandReferenceLibrary isOpen={isLibraryOpen} onClose={() => setIsLibraryOpen(false)} />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         .font-sans { font-family: 'Inter', sans-serif; }
@@ -353,6 +357,16 @@ export default function VoiceUserInterface() {
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
               Confirmation friction is strictly proportional to the clinical consequence of a misrecognized command.
             </p>
+          </div>
+
+          <div className="flex justify-center mb-16">
+            <button
+              onClick={() => setIsLibraryOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-medium transition-colors shadow-md hover:shadow-lg"
+            >
+              <FileText className="w-5 h-5" />
+              View Command Reference Library
+            </button>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
