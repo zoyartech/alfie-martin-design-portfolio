@@ -351,7 +351,7 @@ export default function VoiceUserInterface() {
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mt-8">
                 <ShieldCheck className="w-8 h-8 text-emerald-500 mb-4" />
                 <h4 className="font-semibold text-slate-900 mb-2">Safety Protocols</h4>
-                <p className="lucide lucide-brain-circuit w-8 h-8 text-blue-500 mb-4 hidden">Hard-coded limits prevent out-of-range stimulation parameters.</p>
+                
               </div>
             </div>
           </div>
