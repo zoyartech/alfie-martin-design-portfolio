@@ -364,14 +364,13 @@ export default function VoiceUserInterface() {
               </div>
             </div>
 
-            <div className="bg-sky-950 text-slate-50 mb-4 text-3xl font-semibold tracking-tight md:text-4xl">Risk-Proportional Execution
-
-
-
-
-
-
-
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
+              <div className="bg-blue-100 text-blue-800 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6">Tier 3</div>
+              <h4 className="text-2xl font-semibold text-slate-900 mb-3">Device Parameter Change</h4>
+              <p className="text-slate-600 mb-8 flex-1">High-risk changes that modify the treatment device. Requires explicit on-screen visual confirmation before execution.</p>
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                <p className="text-sm font-medium text-slate-900">"Update intensity to 120%"</p>
+              </div>
             </div>
           </div>
         </div>
