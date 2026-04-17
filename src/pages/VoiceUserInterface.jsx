@@ -306,29 +306,15 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* Rules Based System */}
+      {/* Decision Tree */}
       <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto flex flex-col mb-24">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-6">What VUI actually is</h2>
-          <p className="text-xl text-slate-600 font-light leading-relaxed max-w-4xl">
-            A voice user interface is any system where the user speaks and the machine responds with action, information, or speech. The mental model that matters: a VUI is not one technology. It's a pipeline of at least three distinct systems working in sequence, and each one introduces its own constraints, latencies, and failure modes. Those three systems are ASR (automatic speech recognition — turning sound into text), NLU (natural language understanding — turning text into intent), and TTS (text-to-speech — turning the system's response back into audio). Every design decision you make in voice maps back to what one of these three systems can and can't do.
-          </p>
-        </div>
-
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/78b88c739_Screenshot2026-04-17at53925PM.png" 
-            alt="Rules Based System" 
-            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100 mb-24" 
-          />
-
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12 text-center">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8b30558ec_Screenshot2026-04-17at55159PM.png" 
-            alt="LLM Based NLU" 
-            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100" 
-          />
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
+            alt="Decision Tree" className="text-xl text-slate-600 font-light leading-relaxed max-w-4xl" />
+          
+          
         </div>
       </section>
 
