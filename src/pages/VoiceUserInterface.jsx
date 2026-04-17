@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
+import CommandReferenceLibrary from "@/components/CommandReferenceLibrary";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -213,6 +214,8 @@ const VUIPrototype = () => {
 };
 
 export default function VoiceUserInterface() {
+  const [isLibraryOpen, setIsLibraryOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 pb-24">
       <style>{`
@@ -301,22 +304,17 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Interactive Prototype Section */}
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+      <section className="px-6 lg:px-12 py-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Interactive Sandbox</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+              Test the voice command system with simulated inputs. Observe how different command tiers trigger different confirmation flows.
+            </p>
+          </div>
+          <VUIPrototype />
+        </div>
+      </section>
 
       {/* Analytics Dashboard */}
       <section className="bg-slate-900 px-6 py-24 lg:px-12 border-y border-slate-100">
@@ -326,14 +324,39 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* System Architecture */}
-      
+      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Command Architecture</h2>
+              <p className="text-lg text-slate-600 font-light mb-6">
+                The Impact TMS Voice UI is powered by a robust library of clinical commands, carefully categorized by risk and required confirmation level.
+              </p>
+              <button 
+                onClick={() => setIsLibraryOpen(true)}
+                className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-medium transition-colors shadow-lg hover:shadow-xl"
+              >
+                <Mic className="w-5 h-5 mr-2" />
+                Open Command Reference Library
+              </button>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <BrainCircuit className="w-8 h-8 text-blue-500 mb-4" />
+                <h4 className="font-semibold text-slate-900 mb-2">NLP Processing</h4>
+                <p className="text-sm text-slate-500">Custom healthcare language model trained on clinical terminology.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mt-8">
+                <ShieldCheck className="w-8 h-8 text-emerald-500 mb-4" />
+                <h4 className="font-semibold text-slate-900 mb-2">Safety Protocols</h4>
+                <p className="text-sm text-slate-500">Hard-coded limits prevent out-of-range stimulation parameters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-
-
-
-
-      
+      <CommandReferenceLibrary isOpen={isLibraryOpen} onClose={() => setIsLibraryOpen(false)} />
 
       {/* Execution Tiers */}
       <section className="py-24 px-6 lg:px-12">
