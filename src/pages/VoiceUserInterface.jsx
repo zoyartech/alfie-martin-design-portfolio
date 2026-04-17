@@ -306,33 +306,15 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* What VUI actually is */}
-      <section className="pt-24 pb-12 px-6 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-6">What VUI actually is</h2>
-          <p className="text-lg text-slate-600 font-light leading-relaxed">
-            A voice user interface is any system where the user speaks and the machine responds with action, information, or speech. The mental model that matters: a VUI is not one technology. It's a pipeline of at least three distinct systems working in sequence, and each one introduces its own constraints, latencies, and failure modes. Those three systems are ASR (automatic speech recognition turning sound into text), NLU (natural language understanding turning text into intent), and TTS (text-to-speech, turning the system's response back into audio). Every design decision you make in voice maps back to what one of these three systems can and can't do.
-          </p>
-        </div>
-      </section>
-
-      {/* Rules Based System */}
-      <section className="py-12 px-6 lg:px-12 bg-white">
+      {/* Decision Tree */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
           <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/181cf4ba3_Screenshot2026-04-17at53925PM.png"
-            alt="Rules Based System" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
-        </div>
-      </section>
-
-      {/* Capabilities */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2ed2c26dd_Screenshot2026-04-17at55159PM.png"
-            alt="Capabilities" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
+            alt="Decision Tree" className="text-slate-600 text-lg font-normal leading-relaxed" />
+          
+          
         </div>
       </section>
 
