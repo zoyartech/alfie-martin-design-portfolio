@@ -332,6 +332,17 @@ export default function VoiceUserInterface() {
 
       
 
+      {/* Decision Tree */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto flex justify-center">
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a310eaab5_decisiontree.png" 
+            alt="Decision tree structure" 
+            className="w-full h-auto rounded-xl" 
+          />
+        </div>
+      </section>
+
       {/* Analytics Dashboard */}
       <section className="bg-slate-900 px-6 py-24 lg:px-12 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
