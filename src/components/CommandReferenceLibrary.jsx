@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, Mic, FileText, Navigation, Stethoscope, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -108,28 +109,25 @@ function CategorySection({ category }) {
 }
 
 export default function CommandReferenceLibrary({ isOpen, onClose }) {
-  return (
+  const content = (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          key="backdrop"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="fixed inset-0 bg-black/40 z-40"
-        />
-      )}
+        <motion.div key="library-overlay" className="fixed inset-0 z-50 flex justify-end pointer-events-none">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="absolute inset-0 bg-black/40 pointer-events-auto"
+          />
 
-      {isOpen && (
-        <motion.div
-          key="panel"
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
-          transition={{ type: "spring", damping: 30, stiffness: 300 }}
-          className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col"
-        >
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+            className="relative h-full w-full max-w-md bg-white shadow-2xl flex flex-col pointer-events-auto"
+          >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
@@ -174,7 +172,11 @@ export default function CommandReferenceLibrary({ isOpen, onClose }) {
               ))}
             </div>
           </motion.div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
+
+  if (typeof document === "undefined") return null;
+  return createPortal(content, document.body);
 }
