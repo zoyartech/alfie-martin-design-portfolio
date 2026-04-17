@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History, FileText } from "lucide-react";
+import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import CommandReferenceLibrary from "@/components/CommandReferenceLibrary";
 
 const VUIPrototype = () => {
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
@@ -215,11 +213,8 @@ const VUIPrototype = () => {
 };
 
 export default function VoiceUserInterface() {
-  const [isLibraryOpen, setIsLibraryOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 pb-24">
-      <CommandReferenceLibrary isOpen={isLibraryOpen} onClose={() => setIsLibraryOpen(false)} />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         .font-sans { font-family: 'Inter', sans-serif; }
@@ -253,27 +248,18 @@ export default function VoiceUserInterface() {
       {/* Prototype Link Image */}
       <section className="bg-gray-800 px-6 py-16 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto flex justify-center">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href="https://beam-pear-41561282.figma.site"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
-                  
-                  <img
-                    src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png"
-                    alt="View Interactive Prototype"
-                    className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" />
-                  
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Click to view interactive prototype</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <a
+            href="https://salty-rival-46904041.figma.site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
+            
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c97b24ad6_ViewInteractivePrototype.png"
+              alt="View Interactive Prototype"
+              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200" />
+            
+          </a>
         </div>
       </section>
 
@@ -332,17 +318,6 @@ export default function VoiceUserInterface() {
 
       
 
-      {/* Decision Tree */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto flex justify-center">
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a310eaab5_decisiontree.png" 
-            alt="Decision tree structure" 
-            className="w-full h-auto rounded-xl" 
-          />
-        </div>
-      </section>
-
       {/* Analytics Dashboard */}
       <section className="bg-slate-900 px-6 py-24 lg:px-12 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
@@ -370,16 +345,6 @@ export default function VoiceUserInterface() {
             </p>
           </div>
 
-          <div className="flex justify-center mb-16">
-            <button
-              onClick={() => setIsLibraryOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-medium transition-colors shadow-md hover:shadow-lg"
-            >
-              <FileText className="w-5 h-5" />
-              View Command Reference Library
-            </button>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
               <div className="bg-slate-100 text-slate-700 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6">Tier 1</div>
@@ -399,14 +364,14 @@ export default function VoiceUserInterface() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 border-slate-200 border shadow-sm flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rounded-bl-full -mr-8 -mt-8"></div>
-              <div className="bg-blue-100 text-blue-700 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6 relative z-10">Tier 3</div>
-              <h4 className="text-2xl font-semibold text-slate-900 mb-3 relative z-10">Safety Critical</h4>
-              <p className="text-slate-600 mb-8 flex-1 relative z-10">Treatment parameters that affect stimulation. Requires explicit physical screen confirmation. Zero error tolerance.</p>
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 relative z-10">
-                <p className="text-sm font-medium text-slate-900">"Update intensity to 120%"</p>
-              </div>
+            <div className="text-slate-50 mb-4 text-3xl font-semibold tracking-tight md:text-4xl">Risk-Proportional Execution
+
+
+
+
+
+
+
             </div>
           </div>
         </div>
