@@ -306,15 +306,23 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* Decision Tree */}
+      {/* Rules Based System */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
           <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
-            alt="Decision Tree" className="text-xl text-slate-600 font-light leading-relaxed max-w-4xl" />
-          
-          
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/181cf4ba3_Screenshot2026-04-17at53925PM.png"
+            alt="Rules Based System" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto flex flex-col items-center">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2ed2c26dd_Screenshot2026-04-17at55159PM.png"
+            alt="Capabilities" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
         </div>
       </section>
 
