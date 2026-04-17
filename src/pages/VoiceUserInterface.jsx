@@ -364,7 +364,7 @@ export default function VoiceUserInterface() {
               </div>
             </div>
 
-            <div className="text-slate-50 mb-4 text-3xl font-semibold tracking-tight md:text-4xl">Risk-Proportional Execution
+            <div className="bg-sky-950 text-slate-50 mb-4 text-3xl font-semibold tracking-tight md:text-4xl">Risk-Proportional Execution
 
 
 
