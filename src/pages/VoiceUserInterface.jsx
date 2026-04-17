@@ -306,22 +306,15 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* Rules Based System */}
+      {/* Decision Tree */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/78b88c739_Screenshot2026-04-17at53925PM.png" 
-            alt="Rules Based System" 
-            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100 mb-24" 
-          />
-
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12 text-center">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
-          <img 
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8b30558ec_Screenshot2026-04-17at55159PM.png" 
-            alt="LLM Based NLU" 
-            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100" 
-          />
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
+            alt="Decision Tree"
+            className="w-full max-w-3xl h-auto" />
+          
         </div>
       </section>
 
@@ -341,10 +334,10 @@ export default function VoiceUserInterface() {
               <p className="text-lg text-slate-600 font-light mb-6">
                 The Impact TMS Voice UI is powered by a robust library of clinical commands, carefully categorized by risk and required confirmation level.
               </p>
-              <button 
+              <button
                 onClick={() => setIsLibraryOpen(true)}
-                className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-medium transition-colors shadow-lg hover:shadow-xl"
-              >
+                className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-medium transition-colors shadow-lg hover:shadow-xl">
+                
                 <Mic className="w-5 h-5 mr-2" />
                 Open Command Reference Library
               </button>
@@ -358,7 +351,7 @@ export default function VoiceUserInterface() {
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mt-8">
                 <ShieldCheck className="w-8 h-8 text-emerald-500 mb-4" />
                 <h4 className="font-semibold text-slate-900 mb-2">Safety Protocols</h4>
-                <p className="text-sm text-slate-500">Hard-coded limits prevent out-of-range stimulation parameters.</p>
+                <p className="lucide lucide-brain-circuit w-8 h-8 text-blue-500 mb-4 hidden">Hard-coded limits prevent out-of-range stimulation parameters.</p>
               </div>
             </div>
           </div>
