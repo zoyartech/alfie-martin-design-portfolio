@@ -85,7 +85,7 @@ export default function B6() {
           
         </div>
 
-        <div className="max-w-6xl mx-auto h-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+        <div className="w-full h-[90vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
           <iframe
             src="https://impact-neuro-flow.base44.app"
             className="w-full h-full border-0"
