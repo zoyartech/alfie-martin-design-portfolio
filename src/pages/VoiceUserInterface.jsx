@@ -252,7 +252,7 @@ export default function VoiceUserInterface() {
       <section className="bg-gray-800 px-6 py-16 lg:px-12 border-b border-slate-100">
         <div className="max-w-5xl mx-auto flex justify-center">
           <a
-            href="https://salty-rival-46904041.figma.site"
+            href="https://beam-pear-41561282.figma.site"
             target="_blank"
             rel="noopener noreferrer"
             className="block hover:opacity-90 hover:scale-[1.01] transition-all duration-300 w-full max-w-3xl">
