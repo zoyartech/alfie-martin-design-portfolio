@@ -306,15 +306,22 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* Decision Tree */}
+      {/* Rules Based System */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
-            alt="Decision Tree"
-            className="w-full max-w-3xl h-auto" />
-          
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/78b88c739_Screenshot2026-04-17at53925PM.png" 
+            alt="Rules Based System" 
+            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100 mb-24" 
+          />
+
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12 text-center">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8b30558ec_Screenshot2026-04-17at55159PM.png" 
+            alt="LLM Based NLU" 
+            className="w-full max-w-3xl h-auto rounded-xl shadow-lg border border-slate-100" 
+          />
         </div>
       </section>
 
