@@ -304,17 +304,7 @@ export default function VoiceUserInterface() {
       </section>
 
       {/* Interactive Prototype Section */}
-      <section className="px-6 lg:px-12 py-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Interactive Sandbox</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              Test the voice command system with simulated inputs. Observe how different command tiers trigger different confirmation flows.
-            </p>
-          </div>
-          <VUIPrototype />
-        </div>
-      </section>
+      
 
       {/* Analytics Dashboard */}
       <section className="bg-slate-900 px-6 py-24 lg:px-12 border-y border-slate-100">
