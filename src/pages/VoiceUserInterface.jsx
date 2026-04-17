@@ -308,9 +308,9 @@ export default function VoiceUserInterface() {
 
       {/* Rules Based System */}
       <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto flex flex-col mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">What VUI actually is</h2>
-          <p className="text-lg text-slate-600 font-light leading-relaxed">
+        <div className="max-w-5xl mx-auto flex flex-col mb-24">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 tracking-tight mb-6">What VUI actually is</h2>
+          <p className="text-xl text-slate-600 font-light leading-relaxed max-w-4xl">
             A voice user interface is any system where the user speaks and the machine responds with action, information, or speech. The mental model that matters: a VUI is not one technology. It's a pipeline of at least three distinct systems working in sequence, and each one introduces its own constraints, latencies, and failure modes. Those three systems are ASR (automatic speech recognition — turning sound into text), NLU (natural language understanding — turning text into intent), and TTS (text-to-speech — turning the system's response back into audio). Every design decision you make in voice maps back to what one of these three systems can and can't do.
           </p>
         </div>
