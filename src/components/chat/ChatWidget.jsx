@@ -50,13 +50,24 @@ export default function ChatWidget({ agentName }) {
         const userMsg = input.trim();
         setInput('');
         
-        try {
-            await base44.agents.addMessage(conversation, {
-                role: 'user',
-                content: userMsg
-            });
-        } catch (error) {
-            console.error("Failed to send message", error);
+        const maxRetries = 3;
+        let attempt = 0;
+        let success = false;
+
+        while (attempt < maxRetries && !success) {
+            try {
+                await base44.agents.addMessage(conversation, {
+                    role: 'user',
+                    content: userMsg
+                });
+                success = true;
+            } catch (error) {
+                attempt++;
+                console.error(`Attempt ${attempt} failed to send message:`, error);
+                if (attempt < maxRetries) {
+                    await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+                }
+            }
         }
     };
 
