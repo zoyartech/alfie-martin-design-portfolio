@@ -20,7 +20,7 @@ export default function SAO() {
             I designed the end-to-end experience and retrieval architecture for an AI-powered search agent, from RAG pipeline tuning to the interaction model that made results trustworthy and actionable.
           </p>
 
-          <div className="w-full mb-12 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+          <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100">
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png" 
               alt="SAO Hero" 
@@ -28,11 +28,11 @@ export default function SAO() {
             />
           </div>
 
-          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
+          <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
             <AISeoDashboard />
           </div>
 
-          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8">
+          <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8">
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png" 
               alt="Brand reputation radar chart" 
