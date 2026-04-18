@@ -15,15 +15,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function AISeoDashboard() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedKeywords, setSelectedKeywords] = useState([]);
-  const [campaigns, setCampaigns] = useState([
-  { id: 1, name: "Q3 AI Overviews", tasks: [
-    { id: 1, keyword: "ai overview optimization", assignee: "Sarah", status: "In Progress" },
-    { id: 2, keyword: "search generative experience", assignee: "David", status: "Pending" }]
-  }]
-  );
-  const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
-  const [newCampaignName, setNewCampaignName] = useState("");
-  const [newCampaignAssignee, setNewCampaignAssignee] = useState("");
   const [competitorInput, setCompetitorInput] = useState("");
   const [activeCompetitor, setActiveCompetitor] = useState("");
   const [isSyncing, setIsSyncing] = useState(false);
@@ -54,21 +45,6 @@ export default function AISeoDashboard() {
     } else {
       setSelectedKeywords([...selectedKeywords, kw.keyword]);
     }
-  };
-
-  const handleCreateCampaign = () => {
-    if (!newCampaignName || selectedKeywords.length === 0) return;
-    const newTasks = selectedKeywords.map((kw, i) => ({
-      id: Date.now() + i,
-      keyword: kw,
-      assignee: newCampaignAssignee || "Unassigned",
-      status: "Pending"
-    }));
-    setCampaigns([{ id: Date.now(), name: newCampaignName, tasks: newTasks }, ...campaigns]);
-    setSelectedKeywords([]);
-    setNewCampaignName("");
-    setNewCampaignAssignee("");
-    setIsCampaignModalOpen(false);
   };
 
   const handleRowClick = (kw) => {
@@ -299,15 +275,6 @@ export default function AISeoDashboard() {
                 Keyword Opportunities
                 <Badge variant="outline" className="ml-2 bg-slate-50 text-slate-500 border-slate-200">AI-Ranked</Badge>
               </CardTitle>
-              {selectedKeywords.length > 0 && (
-                <button 
-                  onClick={() => setIsCampaignModalOpen(true)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors"
-                >
-                  <Plus className="w-4 h-4" />
-                  Create Campaign ({selectedKeywords.length})
-                </button>
-              )}
             </div>
           </CardHeader>
           <CardContent className="overflow-x-auto">
@@ -485,115 +452,6 @@ export default function AISeoDashboard() {
           </CardContent>
         </Card>
       </div>
-
-      {/* Strategy & Campaigns Section */}
-      <div className="mt-8 mb-8">
-        <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <FileText className="w-5 h-5 text-indigo-600" />
-          Strategy & Content Campaigns
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {campaigns.map(campaign => (
-            <Card key={campaign.id} className="bg-white shadow-sm border-slate-200">
-              <CardHeader className="pb-3 border-b border-slate-100">
-                <CardTitle className="text-base font-bold text-slate-900">{campaign.name}</CardTitle>
-                <CardDescription>{campaign.tasks.length} targeted keywords</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <div className="space-y-3">
-                  {campaign.tasks.map(task => (
-                    <div key={task.id} className="flex flex-col gap-1.5 p-3 bg-slate-50 rounded-lg border border-slate-100">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-slate-900">{task.keyword}</span>
-                        <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full ${
-                          task.status === 'Completed' ? 'bg-emerald-100 text-emerald-700' :
-                          task.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
-                          'bg-amber-100 text-amber-700'
-                        }`}>
-                          {task.status}
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-slate-500">
-                        <div className="flex items-center gap-1">
-                          <User className="w-3.5 h-3.5" />
-                          {task.assignee}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Zap className="w-3.5 h-3.5 text-amber-500" />
-                          AI Draft
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-          {campaigns.length === 0 && (
-             <div className="col-span-full p-8 text-center text-slate-500 bg-white rounded-xl border border-slate-200 border-dashed">
-               No campaigns created yet. Select keywords above to start a campaign.
-             </div>
-          )}
-        </div>
-      </div>
-
-      <Dialog open={isCampaignModalOpen} onOpenChange={setIsCampaignModalOpen}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-xl flex items-center gap-2">
-              <FileText className="w-5 h-5 text-indigo-600" />
-              Create Content Campaign
-            </DialogTitle>
-          </DialogHeader>
-          <div className="mt-4 space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Campaign Name</label>
-              <input 
-                type="text" 
-                value={newCampaignName}
-                onChange={(e) => setNewCampaignName(e.target.value)}
-                placeholder="e.g. Q4 Technical SEO Push"
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Assign to Team Member</label>
-              <input 
-                type="text" 
-                value={newCampaignAssignee}
-                onChange={(e) => setNewCampaignAssignee(e.target.value)}
-                placeholder="e.g. Content Team, Sarah"
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
-              <p className="text-sm font-medium text-slate-700 mb-2">Selected Keywords ({selectedKeywords.length})</p>
-              <div className="flex flex-wrap gap-2">
-                {selectedKeywords.map(kw => (
-                  <span key={kw} className="inline-flex items-center px-2 py-1 rounded bg-white border border-slate-200 text-xs font-medium text-slate-600">
-                    {kw}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="pt-4 flex justify-end gap-3">
-              <button 
-                onClick={() => setIsCampaignModalOpen(false)}
-                className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-300 rounded-md hover:bg-slate-50"
-              >
-                Cancel
-              </button>
-              <button 
-                onClick={handleCreateCampaign}
-                disabled={!newCampaignName}
-                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Create & Assign Tasks
-              </button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
 
       {/* Modal View */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
