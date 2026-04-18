@@ -22,7 +22,8 @@ export default function SAO() {
               width="100%" 
               height="800" 
               frameBorder="0" 
-              allow="clipboard-write" 
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
+              allow="clipboard-write; fullscreen" 
               allowFullScreen>
             </iframe>
           </div>
