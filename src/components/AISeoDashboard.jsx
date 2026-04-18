@@ -184,6 +184,14 @@ export default function AISeoDashboard() {
   { name: "Clearscope", overlap: "31%", score: 82, delta: -1 }];
 
 
+  const forecastData = [
+    { name: 'Current', organic: 142, ai: 125, organicForecast: 142, aiForecast: 125 },
+    { name: 'Week 1', organicForecast: 148, aiForecast: 135 },
+    { name: 'Week 2', organicForecast: 155, aiForecast: 150 },
+    { name: 'Week 3', organicForecast: 161, aiForecast: 168 },
+    { name: 'Week 4', organicForecast: 168, aiForecast: 185 },
+  ];
+
   const chartData = gscData && gscData.analytics.length > 0 ?
   gscData.analytics.map((row) => ({
     name: row.keys[0].split('-').slice(1).join('/'),
@@ -377,6 +385,64 @@ export default function AISeoDashboard() {
                   </div>
                 </div>
               ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* 30-Day Forecast Section */}
+      <div className="mb-8">
+        <Card className="bg-white shadow-sm border-slate-200">
+          <CardHeader>
+            <div className="flex justify-between items-center w-full">
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-indigo-500" />
+                  30-Day Traffic Forecast
+                </CardTitle>
+                <CardDescription>Predictive analysis based on current ranking velocity</CardDescription>
+              </div>
+              <Badge className="bg-indigo-50 text-indigo-600 border-indigo-200 hover:bg-indigo-100">+32% Expected Growth</Badge>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="md:col-span-3 h-[250px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={forecastData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <defs>
+                      <linearGradient id="colorOrganicForecast" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.3}/>
+                        <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0}/>
+                      </linearGradient>
+                      <linearGradient id="colorAiForecast" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.3}/>
+                        <stop offset="95%" stopColor="#f59e0b" stopOpacity={0}/>
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                    <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dy={10} />
+                    <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
+                    <Tooltip 
+                      contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                    />
+                    <Area type="monotone" dataKey="organic" name="Current Organic" stroke="#3b82f6" strokeWidth={2} fillOpacity={0} fill="none" />
+                    <Area type="monotone" dataKey="ai" name="Current AI" stroke="#10b981" strokeWidth={2} fillOpacity={0} fill="none" />
+                    <Area type="monotone" dataKey="organicForecast" name="Projected Organic" stroke="#8b5cf6" strokeWidth={2} strokeDasharray="5 5" fillOpacity={1} fill="url(#colorOrganicForecast)" />
+                    <Area type="monotone" dataKey="aiForecast" name="Projected AI" stroke="#f59e0b" strokeWidth={2} strokeDasharray="5 5" fillOpacity={1} fill="url(#colorAiForecast)" />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                  <p className="text-sm font-bold text-indigo-900 mb-1">Growth Opportunity</p>
+                  <p className="text-xs text-indigo-700 leading-relaxed">AI-driven traffic is projected to overtake organic search in Week 3 if current AI Overviews rankings hold.</p>
+                </div>
+                <div className="p-4 bg-amber-50 rounded-xl border border-amber-100">
+                  <p className="text-sm font-bold text-amber-900 mb-1">Action Required</p>
+                  <p className="text-xs text-amber-700 leading-relaxed">Focus on "programmatic seo strategy" to accelerate AI snippet inclusion.</p>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
