@@ -167,7 +167,7 @@ export default function AISeoDashboard() {
       ];
 
   return (
-    <div className="w-full bg-slate-50 p-6 font-sans">
+    <div className="w-full bg-[#9dfff3] bg-opacity-55 p-6 font-sans">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
         <div>
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
