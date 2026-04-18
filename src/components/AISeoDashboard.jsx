@@ -76,16 +76,6 @@ export default function AISeoDashboard() {
     return Math.max(1, base + diff);
   };
 
-  const comparisonKeywords = selectedKeywords.length > 0 
-    ? keywordOpps.filter(kw => selectedKeywords.includes(kw.keyword))
-    : keywordOpps;
-
-  const serpComparisonData = comparisonKeywords.map(kw => ({
-    keyword: kw.keyword.length > 15 ? kw.keyword.substring(0, 15) + '...' : kw.keyword,
-    "Our Rank": parseInt(kw.pos),
-    "Competitor Rank": getMockCompPos(kw, activeCompetitor)
-  }));
-
   const kpiData = [
     { title: "AI Content Score", value: "87/100", trend: "+4.2", positive: true, icon: Sparkles },
     { title: "Organic Sessions", value: "142.8K", trend: "+18.3%", positive: true, icon: Activity },
@@ -101,6 +91,16 @@ export default function AISeoDashboard() {
     { keyword: "ai overview optimization", vol: "9,300", pos: "5", delta: "+3", intent: "Commercial", ai: 91 },
     { keyword: "programmatic seo strategy", vol: "6,700", pos: "9", delta: "-2", intent: "Transactional", ai: 82 },
   ];
+
+  const comparisonKeywords = selectedKeywords.length > 0 
+    ? keywordOpps.filter(kw => selectedKeywords.includes(kw.keyword))
+    : keywordOpps;
+
+  const serpComparisonData = comparisonKeywords.map(kw => ({
+    keyword: kw.keyword.length > 15 ? kw.keyword.substring(0, 15) + '...' : kw.keyword,
+    "Our Rank": parseInt(kw.pos),
+    "Competitor Rank": getMockCompPos(kw, activeCompetitor)
+  }));
 
   const signals = [
     { text: "AI Overview displacement detected on 3 high-traffic pages", time: "2h ago", type: "warning" },
