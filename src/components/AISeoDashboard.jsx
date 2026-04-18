@@ -5,7 +5,7 @@ import {
 'recharts';
 import {
   TrendingUp, TrendingDown, AlertCircle, Sparkles, Activity,
-  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw, Bell } from
+  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw, Bell, Link2 as LinkIcon } from
 "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -182,6 +182,13 @@ export default function AISeoDashboard() {
   { name: "ContentEdge", overlap: "38%", score: 65, delta: 5 },
   { name: "RankSci", overlap: "55%", score: 71, delta: 1 },
   { name: "Clearscope", overlap: "31%", score: 82, delta: -1 }];
+
+  const backlinkData = [
+    { competitor: "SearchPilot", da: 68, referringDomains: "4.2K", topLinks: ["hubspot.com", "moz.com", "searchengineland.com"] },
+    { competitor: "ContentEdge", da: 54, referringDomains: "1.8K", topLinks: ["medium.com", "ahrefs.com"] },
+    { competitor: "RankSci", da: 61, referringDomains: "2.9K", topLinks: ["forbes.com", "techcrunch.com", "searchenginejournal.com"] },
+    { competitor: "Clearscope", da: 72, referringDomains: "8.5K", topLinks: ["wordpress.org", "wikipedia.org", "github.com"] },
+  ];
 
 
   const forecastData = [
@@ -573,6 +580,65 @@ export default function AISeoDashboard() {
             </CardContent>
           </Card>
         </div>
+      </div>
+
+      {/* Backlink Analysis Section */}
+      <div className="mt-8 mb-8">
+        <Card className="rounded-none bg-white shadow-sm border-slate-200">
+          <CardHeader>
+            <div className="flex justify-between items-center w-full">
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <LinkIcon className="w-5 h-5 text-indigo-500" />
+                  Competitor Backlink Analysis
+                </CardTitle>
+                <CardDescription>Domain authority and top referring domains to identify link-building opportunities</CardDescription>
+              </div>
+            </div>
+          </CardHeader>
+          <CardContent className="overflow-x-auto">
+            <table className="w-full text-sm text-left">
+              <thead>
+                <tr className="text-slate-500 font-medium border-b border-slate-200">
+                  <th className="pb-3 px-4">Competitor</th>
+                  <th className="pb-3 px-4 text-center">Domain Authority (DA)</th>
+                  <th className="pb-3 px-4 text-right">Referring Domains</th>
+                  <th className="pb-3 px-4">Top Linking Domains</th>
+                  <th className="pb-3 px-4 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {backlinkData.map((data, idx) => (
+                  <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-slate-900">{data.competitor}</td>
+                    <td className="py-3 px-4 text-center text-slate-900 font-medium">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="w-8 h-8 rounded-full border-2 border-indigo-500 flex items-center justify-center text-xs font-bold text-indigo-700 bg-indigo-50">
+                          {data.da}
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-3 px-4 text-right text-slate-600">{data.referringDomains}</td>
+                    <td className="py-3 px-4">
+                      <div className="flex flex-wrap gap-2">
+                        {data.topLinks.map((link, i) => (
+                          <Badge key={i} variant="outline" className="rounded-none bg-white text-slate-500 border-slate-200 text-xs">
+                            {link}
+                          </Badge>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <button className="px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-none text-xs font-medium transition-colors">
+                        Extract Links
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Advanced SERP Comparison Section */}
