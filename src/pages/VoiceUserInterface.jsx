@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
+import { ArrowLeft, Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, BrainCircuit, ShieldCheck, UserCog, History } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import VoiceAnalyticsDashboard from "@/components/VoiceAnalyticsDashboard";
 import CommandReferenceLibrary from "@/components/CommandReferenceLibrary";
@@ -306,33 +306,15 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
-      {/* What VUI actually is */}
-      <section className="pt-24 pb-12 px-6 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-6">What VUI actually is</h2>
-          <p className="text-lg text-slate-600 font-light leading-relaxed">
-            A voice user interface is any system where the user speaks and the machine responds with action, information, or speech. The mental model that matters: a VUI is not one technology. It's a pipeline of at least three distinct systems working in sequence, and each one introduces its own constraints, latencies, and failure modes. Those three systems are ASR (automatic speech recognition turning sound into text), NLU (natural language understanding turning text into intent), and TTS (text-to-speech, turning the system's response back into audio). Every design decision you make in voice maps back to what one of these three systems can and can't do.
-          </p>
-        </div>
-      </section>
-
-      {/* Rules Based System */}
-      <section className="py-12 px-6 lg:px-12 bg-white">
+      {/* Decision Tree */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">RULES BASED SYSTEM</h2>
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">DECISION TREE</h2>
           <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/181cf4ba3_Screenshot2026-04-17at53925PM.png"
-            alt="Rules Based System" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
-        </div>
-      </section>
-
-      {/* Capabilities */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-12">LLM-BASED NLU: DEFINE CAPABILITIES, NOT PATHS</h2>
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2ed2c26dd_Screenshot2026-04-17at55159PM.png"
-            alt="Capabilities" className="w-full h-auto rounded-2xl shadow-sm border border-slate-200" />
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/68105f043_decisiontree.png"
+            alt="Decision Tree" className="text-slate-600 text-lg font-normal leading-relaxed" />
+          
+          
         </div>
       </section>
 
@@ -419,25 +401,8 @@ export default function VoiceUserInterface() {
         </div>
       </section>
 
-      {/* Next Project Link */}
-      <section className="bg-slate-900 py-16 px-6 lg:px-12 mt-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Experience the Pipeline</h2>
-          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-            Try the high-fidelity interactive simulation to watch how speech is processed through ASR, NLU, and TTS in real-time.
-          </p>
-          <Link 
-            to={createPageUrl("VoiceSimulation")} 
-            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:scale-105"
-          >
-            Launch Voice Simulation
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="py-8 px-6 lg:px-12 border-t border-slate-100 bg-white">
+      <footer className="py-8 px-6 lg:px-12 border-t border-slate-100 bg-white mt-12">
         <div className="max-w-5xl mx-auto flex justify-between items-center text-sm text-slate-500">
           <p>© 2026 Alfie Martin. Impact TMS PRD.</p>
           <Link to={createPageUrl("Home")} className="hover:text-slate-900 transition-colors">Return to Home</Link>
