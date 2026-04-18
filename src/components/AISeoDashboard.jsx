@@ -156,6 +156,15 @@ export default function AISeoDashboard() {
     { name: 'Other LLMs', sessions: '2.8K', percentage: 3, trend: '+2%', color: 'bg-slate-400' },
   ];
 
+  const brandPositioningData = [
+    { subject: 'Brand Reputation', OurBrand: 80, Competitor: 60, fullMark: 100 },
+    { subject: 'Customer Loyalty', OurBrand: 90, Competitor: 70, fullMark: 100 },
+    { subject: 'Customer Service', OurBrand: 85, Competitor: 65, fullMark: 100 },
+    { subject: 'Sustainability', OurBrand: 75, Competitor: 85, fullMark: 100 },
+    { subject: 'Quality Materials', OurBrand: 88, Competitor: 75, fullMark: 100 },
+    { subject: 'Social Responsibility', OurBrand: 70, Competitor: 80, fullMark: 100 },
+  ];
+
   const chartData = gscData && gscData.analytics.length > 0
     ? gscData.analytics.map(row => ({
         name: row.keys[0].split('-').slice(1).join('/'),
@@ -567,6 +576,31 @@ export default function AISeoDashboard() {
                No campaigns created yet. Select keywords above to start a campaign.
              </div>
           )}
+        </div>
+      </div>
+
+      {/* Brand Positioning Section */}
+      <div className="mt-8 mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-start-3 lg:col-span-1">
+          <Card className="bg-white shadow-sm border-slate-200">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">Brand Positioning vs Competitors</CardTitle>
+              <CardDescription>Compare AI Favorability on key topics with competitors.</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-2 flex justify-center">
+              <div className="h-[280px] w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart cx="50%" cy="50%" outerRadius="65%" data={brandPositioningData}>
+                    <PolarGrid stroke="#e2e8f0" />
+                    <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 11 }} />
+                    <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: '#94a3b8', fontSize: 10 }} />
+                    <Radar name="Our Brand" dataKey="OurBrand" stroke="#f97316" strokeWidth={2} fill="#f97316" fillOpacity={0.3} dot={{ r: 4, fill: '#f97316' }} />
+                    <Tooltip />
+                  </RadarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
 
