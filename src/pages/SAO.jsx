@@ -16,9 +16,13 @@ export default function SAO() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <h1 className="text-5xl font-light tracking-tight mb-12">SAO Dashboard</h1>
           
-          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
+          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
             <AISeoDashboard />
           </div>
+          
+          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
+            I designed the end-to-end experience and retrieval architecture for an AI-powered search agent, from RAG pipeline tuning to the interaction model that made results trustworthy and actionable.
+          </p>
         </motion.div>
       </div>
     </div>
