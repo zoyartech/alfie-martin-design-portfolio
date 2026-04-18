@@ -360,47 +360,6 @@ export default function VoiceUserInterface() {
 
       <CommandReferenceLibrary isOpen={isLibraryOpen} onClose={() => setIsLibraryOpen(false)} />
 
-      {/* Execution Tiers */}
-      <section className="py-24 px-6 lg:px-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight mb-4">Risk-Proportional Execution</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              Confirmation friction is strictly proportional to the clinical consequence of a misrecognized command.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
-              <div className="bg-slate-100 text-slate-700 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6">Tier 1</div>
-              <h4 className="text-2xl font-semibold text-slate-900 mb-3">Reversible & Low Risk</h4>
-              <p className="text-slate-600 mb-8 flex-1">Session notes, timestamp markers, and quick data retrieval. Executes immediately with a brief confirmation chime.</p>
-              <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                <p className="text-sm font-medium text-slate-900">"Log patient reported mild headache"</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
-              <div className="bg-amber-100 text-amber-700 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6">Tier 2</div>
-              <h4 className="text-2xl font-semibold text-slate-900 mb-3">Clinical Data Entry</h4>
-              <p className="text-slate-600 mb-8 flex-1">Values entering the patient record. Requires voice confirmation via read-back before committing the data.</p>
-              <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                <p className="text-sm font-medium text-slate-900">"Set motor threshold to 62"</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
-              <div className="bg-blue-100 text-blue-800 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded-full w-fit mb-6">Tier 3</div>
-              <h4 className="text-2xl font-semibold text-slate-900 mb-3">Device Parameter Change</h4>
-              <p className="text-slate-600 mb-8 flex-1">High-risk changes that modify the treatment device. Requires explicit on-screen visual confirmation before execution.</p>
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                <p className="text-sm font-medium text-slate-900">"Update intensity to 120%"</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Next Project Link */}
       <section className="bg-slate-900 py-16 px-6 lg:px-12 mt-12">
         <div className="max-w-5xl mx-auto text-center">
