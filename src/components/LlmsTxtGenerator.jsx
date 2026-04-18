@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Copy, Check, Loader2, Download, Globe } from 'lucide-react';
+import { FileText, Copy, Check, Loader2, Download, Globe, AlertCircle } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
