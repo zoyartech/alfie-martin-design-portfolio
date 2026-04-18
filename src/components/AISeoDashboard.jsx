@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import { 
   TrendingUp, TrendingDown, AlertCircle, Sparkles, Activity, 
-  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw, Bot
+  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -146,23 +146,6 @@ export default function AISeoDashboard() {
     { name: "ContentEdge", overlap: "38%", score: 65, delta: 5 },
     { name: "RankSci", overlap: "55%", score: 71, delta: 1 },
     { name: "Clearscope", overlap: "31%", score: 82, delta: -1 },
-  ];
-
-  const llmSources = [
-    { name: 'ChatGPT (OpenAI)', sessions: '42.5K', percentage: 45, trend: '+12%', color: 'bg-[#10a37f]' },
-    { name: 'Claude (Anthropic)', sessions: '28.3K', percentage: 30, trend: '+18%', color: 'bg-[#d97757]' },
-    { name: 'Gemini (Google)', sessions: '14.1K', percentage: 15, trend: '+5%', color: 'bg-[#4285f4]' },
-    { name: 'Perplexity', sessions: '6.6K', percentage: 7, trend: '+24%', color: 'bg-[#2563eb]' },
-    { name: 'Other LLMs', sessions: '2.8K', percentage: 3, trend: '+2%', color: 'bg-slate-400' },
-  ];
-
-  const brandPositioningData = [
-    { subject: 'Brand Reputation', OurBrand: 80, Competitor: 60, fullMark: 100 },
-    { subject: 'Customer Loyalty', OurBrand: 90, Competitor: 70, fullMark: 100 },
-    { subject: 'Customer Service', OurBrand: 85, Competitor: 65, fullMark: 100 },
-    { subject: 'Sustainability', OurBrand: 75, Competitor: 85, fullMark: 100 },
-    { subject: 'Quality Materials', OurBrand: 88, Competitor: 75, fullMark: 100 },
-    { subject: 'Social Responsibility', OurBrand: 70, Competitor: 80, fullMark: 100 },
   ];
 
   const chartData = gscData && gscData.analytics.length > 0
@@ -385,33 +368,6 @@ export default function AISeoDashboard() {
           <Card className="bg-white shadow-sm border-slate-200">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg flex items-center gap-2">
-                <Bot className="w-5 h-5 text-indigo-500" />
-                LLM Traffic Sources
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {llmSources.map((source, idx) => (
-                  <div key={idx}>
-                    <div className="flex justify-between items-end mb-1.5">
-                      <span className="text-sm font-medium text-slate-700">{source.name}</span>
-                      <div className="text-right">
-                        <span className="text-sm font-bold text-slate-900">{source.sessions}</span>
-                        <span className="text-xs font-medium text-emerald-600 ml-2">{source.trend}</span>
-                      </div>
-                    </div>
-                    <div className="w-full bg-slate-100 rounded-full h-2">
-                      <div className={`${source.color} h-2 rounded-full`} style={{ width: `${source.percentage}%` }}></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white shadow-sm border-slate-200">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-lg flex items-center gap-2">
                 <Eye className="w-5 h-5 text-emerald-500" />
                 SERP Features Owned
               </CardTitle>
@@ -576,31 +532,6 @@ export default function AISeoDashboard() {
                No campaigns created yet. Select keywords above to start a campaign.
              </div>
           )}
-        </div>
-      </div>
-
-      {/* Brand Positioning Section */}
-      <div className="mt-8 mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-start-3 lg:col-span-1">
-          <Card className="bg-white shadow-sm border-slate-200">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-lg">Brand Positioning vs Competitors</CardTitle>
-              <CardDescription>Compare AI Favorability on key topics with competitors.</CardDescription>
-            </CardHeader>
-            <CardContent className="pt-2 flex justify-center">
-              <div className="h-[280px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart cx="50%" cy="50%" outerRadius="65%" data={brandPositioningData}>
-                    <PolarGrid stroke="#e2e8f0" />
-                    <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 11 }} />
-                    <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: '#94a3b8', fontSize: 10 }} />
-                    <Radar name="Our Brand" dataKey="OurBrand" stroke="#f97316" strokeWidth={2} fill="#f97316" fillOpacity={0.3} dot={{ r: 4, fill: '#f97316' }} />
-                    <Tooltip />
-                  </RadarChart>
-                </ResponsiveContainer>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
 
