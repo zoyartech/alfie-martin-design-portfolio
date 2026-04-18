@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import AISeoDashboard from "@/components/AISeoDashboard";
 import JsonLdGenerator from "@/components/JsonLdGenerator";
+import SemanticHealthAnalyzer from "@/components/SemanticHealthAnalyzer";
 
 export default function SAO() {
   return (
@@ -64,6 +65,10 @@ export default function SAO() {
                 <strong>Third, provenance metadata:</strong> timestamps, attributed authors, and version references on every public-facing fact, because AI agents cross-reference sources and content with clear attribution gets treated as more authoritative.
               </li>
             </ol>
+          </div>
+
+          <div className="w-full mb-16">
+            <SemanticHealthAnalyzer />
           </div>
         </motion.div>
       </div>
