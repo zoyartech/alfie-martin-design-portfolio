@@ -306,6 +306,23 @@ export default function VoiceUserInterface() {
       {/* Interactive Prototype Section */}
       
 
+      {/* Experience the Pipeline */}
+      <section className="bg-slate-900 py-16 px-6 lg:px-12 mt-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Experience the Pipeline</h2>
+          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
+            Try the high-fidelity interactive simulation to watch how speech is processed through ASR, NLU, and TTS in real-time.
+          </p>
+          <Link 
+            to={createPageUrl("VoiceSimulation")} 
+            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:scale-105"
+          >
+            Launch Voice Simulation
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </section>
+
       {/* Decision Tree */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
@@ -359,23 +376,6 @@ export default function VoiceUserInterface() {
       </section>
 
       <CommandReferenceLibrary isOpen={isLibraryOpen} onClose={() => setIsLibraryOpen(false)} />
-
-      {/* Next Project Link */}
-      <section className="bg-slate-900 py-16 px-6 lg:px-12 mt-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Experience the Pipeline</h2>
-          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-            Try the high-fidelity interactive simulation to watch how speech is processed through ASR, NLU, and TTS in real-time.
-          </p>
-          <Link 
-            to={createPageUrl("VoiceSimulation")} 
-            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:scale-105"
-          >
-            Launch Voice Simulation
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 lg:px-12 border-t border-slate-100 bg-white">
