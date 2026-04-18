@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import AISeoDashboard from "@/components/AISeoDashboard";
 
 export default function SAO() {
   return (
@@ -16,16 +17,7 @@ export default function SAO() {
           <h1 className="text-5xl font-light tracking-tight mb-12">SAO Dashboard</h1>
           
           <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
-            <iframe 
-              src="https://claude.site/public/artifacts/130bb204-c81d-48b3-a22d-d6406f24ff0a/embed" 
-              title="ai-seo-dashboard.jsx" 
-              width="100%" 
-              height="800" 
-              frameBorder="0" 
-              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
-              allow="clipboard-write; fullscreen" 
-              allowFullScreen>
-            </iframe>
+            <AISeoDashboard />
           </div>
         </motion.div>
       </div>
