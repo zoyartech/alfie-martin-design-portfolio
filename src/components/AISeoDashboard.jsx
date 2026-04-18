@@ -197,7 +197,7 @@ export default function AISeoDashboard() {
       {/* KPIs */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {kpiData.map((kpi, idx) => (
-          <Card key={idx} className="bg-white shadow-sm border-slate-200">
+          <Card key={idx} className="bg-[#eadf87] shadow-sm border-slate-200">
             <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
