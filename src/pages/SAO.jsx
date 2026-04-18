@@ -6,6 +6,7 @@ import { createPageUrl } from "@/utils";
 import AISeoDashboard from "@/components/AISeoDashboard";
 import JsonLdGenerator from "@/components/JsonLdGenerator";
 import SemanticHealthAnalyzer from "@/components/SemanticHealthAnalyzer";
+import LlmsTxtGenerator from "@/components/LlmsTxtGenerator";
 
 export default function SAO() {
   return (
@@ -69,6 +70,10 @@ export default function SAO() {
 
           <div className="w-full mb-16">
             <SemanticHealthAnalyzer />
+          </div>
+
+          <div className="w-full mb-16">
+            <LlmsTxtGenerator />
           </div>
         </motion.div>
       </div>
