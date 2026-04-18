@@ -5,8 +5,9 @@ import {
 } from 'recharts';
 import { 
   TrendingUp, TrendingDown, AlertCircle, Sparkles, Activity, 
-  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check
+  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw
 } from "lucide-react";
+import { base44 } from "@/api/base44Client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -25,6 +26,26 @@ export default function AISeoDashboard() {
   const [newCampaignAssignee, setNewCampaignAssignee] = useState("");
   const [competitorInput, setCompetitorInput] = useState("");
   const [activeCompetitor, setActiveCompetitor] = useState("");
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [gscData, setGscData] = useState(null);
+  const [gscError, setGscError] = useState("");
+
+  const handleSyncGSC = async () => {
+    setIsSyncing(true);
+    setGscError("");
+    try {
+      const res = await base44.functions.invoke('fetchGSCData', {});
+      if (res.data && res.data.analytics) {
+        setGscData(res.data);
+      } else if (res.data && res.data.error) {
+        setGscError(res.data.error);
+      }
+    } catch (e) {
+      console.error(e);
+      setGscError("Failed to fetch Google Search Console data");
+    }
+    setIsSyncing(false);
+  };
 
   const handleKeywordSelect = (e, kw) => {
     e.stopPropagation();
@@ -76,11 +97,14 @@ export default function AISeoDashboard() {
     return Math.max(1, base + diff);
   };
 
+  const totalClicks = gscData ? gscData.analytics.reduce((acc, row) => acc + row.clicks, 0) : 142800;
+  const avgCtr = gscData && gscData.analytics.length > 0 ? ((gscData.analytics.reduce((acc, row) => acc + row.ctr, 0) / gscData.analytics.length) * 100).toFixed(2) + "%" : "3.4%";
+
   const kpiData = [
     { title: "AI Content Score", value: "87/100", trend: "+4.2", positive: true, icon: Sparkles },
-    { title: "Organic Sessions", value: "142.8K", trend: "+18.3%", positive: true, icon: Activity },
+    { title: "Organic Clicks (30d)", value: gscData ? totalClicks.toLocaleString() : "142.8K", trend: gscData ? "" : "+18.3%", positive: true, icon: Activity },
+    { title: "Average CTR", value: avgCtr, trend: gscData ? "" : "+1.2%", positive: true, icon: Target },
     { title: "Ranked Keywords", value: "3,847", trend: "+312", positive: true, icon: Search },
-    { title: "Avg. Position", value: "14.2", trend: "-2.1", positive: true, icon: Target },
   ];
 
   const keywordOpps = [
@@ -124,15 +148,23 @@ export default function AISeoDashboard() {
     { name: "Clearscope", overlap: "31%", score: 82, delta: -1 },
   ];
 
-  const chartData = [
-    { name: 'Jan', organic: 80, ai: 40 },
-    { name: 'Feb', organic: 85, ai: 50 },
-    { name: 'Mar', organic: 90, ai: 55 },
-    { name: 'Apr', organic: 100, ai: 70 },
-    { name: 'May', organic: 110, ai: 80 },
-    { name: 'Jun', organic: 125, ai: 105 },
-    { name: 'Jul', organic: 142, ai: 125 },
-  ];
+  const chartData = gscData && gscData.analytics.length > 0
+    ? gscData.analytics.map(row => ({
+        name: row.keys[0].split('-').slice(1).join('/'),
+        organic: row.clicks,
+        ai: Math.round(row.clicks * 0.4), // Simulated AI traffic estimation based on overall organic volume
+        impressions: row.impressions,
+        ctr: (row.ctr * 100).toFixed(2)
+      }))
+    : [
+        { name: 'Jan', organic: 80, ai: 40 },
+        { name: 'Feb', organic: 85, ai: 50 },
+        { name: 'Mar', organic: 90, ai: 55 },
+        { name: 'Apr', organic: 100, ai: 70 },
+        { name: 'May', organic: 110, ai: 80 },
+        { name: 'Jun', organic: 125, ai: 105 },
+        { name: 'Jul', organic: 142, ai: 125 },
+      ];
 
   return (
     <div className="w-full bg-slate-50 p-6 font-sans">
@@ -144,7 +176,16 @@ export default function AISeoDashboard() {
           </h2>
           <p className="text-slate-500 mt-1">Real-time search visibility and AI content optimization</p>
         </div>
-        <div className="mt-4 md:mt-0 flex gap-3">
+        <div className="mt-4 md:mt-0 flex items-center gap-3">
+          {gscError && <span className="text-sm text-rose-500 font-medium bg-rose-50 px-2 py-1 rounded-md">{gscError}</span>}
+          <button 
+            onClick={handleSyncGSC}
+            disabled={isSyncing}
+            className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors disabled:opacity-50"
+          >
+            <RefreshCw className={`w-4 h-4 ${isSyncing ? "animate-spin" : ""}`} />
+            {isSyncing ? "Syncing..." : gscData ? "Synced with GSC" : "Connect GSC"}
+          </button>
           <Badge variant="outline" className="bg-white px-3 py-1 text-sm border-slate-200">
             Last updated: Just now
           </Badge>
