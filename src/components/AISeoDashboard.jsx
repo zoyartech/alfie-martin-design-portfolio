@@ -486,18 +486,18 @@ export default function AISeoDashboard() {
 
       {/* Strategy & Campaigns Section */}
       <div className="mt-8 mb-8">
-        <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2 hidden">
           <FileText className="w-5 h-5 text-indigo-600" />
           Strategy & Content Campaigns
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {campaigns.map((campaign) =>
           <Card key={campaign.id} className="bg-white shadow-sm border-slate-200">
-              <CardHeader className="pb-3 border-b border-slate-100">
+              <CardHeader className="flex flex-col space-y-1.5 p-6 pb-3 border-b border-slate-100 hidden">
                 <CardTitle className="text-base font-bold text-slate-900">{campaign.name}</CardTitle>
                 <CardDescription>{campaign.tasks.length} targeted keywords</CardDescription>
               </CardHeader>
-              <CardContent className="pt-4">
+              <CardContent className="p-6 pt-4 hidden">
                 <div className="space-y-3">
                   {campaign.tasks.map((task) =>
                 <div key={task.id} className="flex flex-col gap-1.5 p-3 bg-slate-50 rounded-lg border border-slate-100">
