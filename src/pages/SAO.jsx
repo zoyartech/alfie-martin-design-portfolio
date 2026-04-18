@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import AISeoDashboard from "@/components/AISeoDashboard";
+import JsonLdGenerator from "@/components/JsonLdGenerator";
 
 export default function SAO() {
   return (
@@ -24,7 +25,7 @@ export default function SAO() {
             <AISeoDashboard />
           </div>
 
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-2xl font-bold mb-4">SEO vs SAO: What's the difference?</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               The core difference is who you're optimizing for.
@@ -35,6 +36,11 @@ export default function SAO() {
             <p className="text-lg text-slate-700 leading-relaxed">
               <strong>SAO</strong> is about making content understandable and citable by AI agents. Instead of focusing on keywords and backlinks, SAO emphasizes semantic context, natural language patterns, structured data, and direct AI consumption so that AI-powered search systems can accurately interpret and surface your content in synthesized answers.
             </p>
+          </div>
+
+          <div className="w-full mb-8">
+            <h2 className="text-3xl font-light tracking-tight mb-6">Semantic Schema Generator</h2>
+            <JsonLdGenerator />
           </div>
         </motion.div>
       </div>
