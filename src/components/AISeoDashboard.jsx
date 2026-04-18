@@ -221,18 +221,18 @@ export default function AISeoDashboard() {
           <p className="text-slate-500 mt-1">Real-time search visibility and AI content optimization</p>
         </div>
         <div className="mt-4 md:mt-0 flex items-center gap-3">
-          {gscError && <span className="text-sm text-rose-500 font-medium bg-rose-50 px-2 py-1 rounded-md">{gscError}</span>}
-          <div className="rounded-md flex items-center border border-slate-200" style={{ borderWidth: '0.5px' }}>
+          {gscError && <span className="text-sm text-rose-500 font-medium bg-rose-50 px-2 py-1 rounded-none">{gscError}</span>}
+          <div className="rounded-none flex items-center border border-slate-200" style={{ borderWidth: '0.5px' }}>
             <button 
               onClick={handleSyncGSC}
               disabled={isSyncing}
-              className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors disabled:opacity-50 w-full h-full"
+              className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-none text-sm font-medium transition-colors disabled:opacity-50 w-full h-full"
             >
               <RefreshCw className={`w-4 h-4 ${isSyncing ? "animate-spin" : ""}`} />
               {isSyncing ? "Syncing..." : gscData ? "Synced with GSC" : "Connect GSC"}
             </button>
           </div>
-          <Badge variant="outline" className="bg-white px-3 py-1 text-sm border-slate-200">
+          <Badge variant="outline" className="rounded-none bg-white px-3 py-1 text-sm border-slate-200">
             Last updated: Just now
           </Badge>
           
@@ -245,7 +245,7 @@ export default function AISeoDashboard() {
                 )}
               </button>
             </PopoverTrigger>
-            <PopoverContent className="w-80 p-0 mr-6" align="end">
+            <PopoverContent className="rounded-none w-80 p-0 mr-6" align="end">
               <div className="flex items-center justify-between p-4 border-b border-slate-100">
                 <h4 className="font-semibold text-slate-900">Notifications</h4>
                 <button 
@@ -298,14 +298,14 @@ export default function AISeoDashboard() {
       {/* KPIs */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {kpiData.map((kpi, idx) => (
-          <Card key={idx} className="bg-white shadow-sm border-slate-200">
+          <Card key={idx} className="rounded-none bg-white shadow-sm border-slate-200">
             <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-sm font-medium text-slate-500 mb-1">{kpi.title}</p>
                   <h3 className="text-3xl font-bold text-slate-900">{kpi.value}</h3>
                 </div>
-                <div className={`p-2 rounded-lg ${kpi.positive ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'}`}>
+                <div className={`p-2 rounded-none ${kpi.positive ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'}`}>
                   <kpi.icon className="w-5 h-5" />
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function AISeoDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Main Chart */}
-        <Card className="lg:col-span-2 bg-white shadow-sm border-slate-200">
+        <Card className="lg:col-span-2 rounded-none bg-white shadow-sm border-slate-200">
           <CardHeader>
             <CardTitle className="text-lg">Traffic Origins</CardTitle>
             <CardDescription>Organic Search vs AI-Driven Traffic</CardDescription>
@@ -347,7 +347,7 @@ export default function AISeoDashboard() {
                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dy={10} />
                   <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                    contentStyle={{ backgroundColor: '#fff', borderRadius: '0', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                   />
                   <Area type="monotone" dataKey="organic" name="Organic Search" stroke="#3b82f6" strokeWidth={2} fillOpacity={1} fill="url(#colorOrganic)" />
                   <Area type="monotone" dataKey="ai" name="AI Traffic" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#colorAi)" />
@@ -358,14 +358,14 @@ export default function AISeoDashboard() {
         </Card>
 
         {/* Signals */}
-        <Card className="bg-white shadow-sm border-slate-200">
+        <Card className="rounded-none bg-white shadow-sm border-slate-200">
           <CardHeader className="pb-3">
             <div className="flex justify-between items-center">
               <CardTitle className="text-lg flex items-center gap-2">
                 <RadarIcon className="w-5 h-5 text-indigo-500" />
                 Signals
               </CardTitle>
-              <Badge className="bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0">{signals.length}</Badge>
+              <Badge className="rounded-none bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0">{signals.length}</Badge>
             </div>
           </CardHeader>
           <CardContent>
@@ -392,7 +392,7 @@ export default function AISeoDashboard() {
 
       {/* 30-Day Forecast Section */}
       <div className="mb-8">
-        <Card className="bg-white shadow-sm border-slate-200">
+        <Card className="rounded-none bg-white shadow-sm border-slate-200">
           <CardHeader>
             <div className="flex justify-between items-center w-full">
               <div>
@@ -402,7 +402,7 @@ export default function AISeoDashboard() {
                 </CardTitle>
                 <CardDescription>Predictive analysis based on current ranking velocity</CardDescription>
               </div>
-              <Badge className="bg-indigo-50 text-indigo-600 border-indigo-200 hover:bg-indigo-100">+32% Expected Growth</Badge>
+              <Badge className="rounded-none bg-indigo-50 text-indigo-600 border-indigo-200 hover:bg-indigo-100">+32% Expected Growth</Badge>
             </div>
           </CardHeader>
           <CardContent>
@@ -424,7 +424,7 @@ export default function AISeoDashboard() {
                     <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dy={10} />
                     <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
                     <Tooltip 
-                      contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                      contentStyle={{ backgroundColor: '#fff', borderRadius: '0', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                     />
                     <Area type="monotone" dataKey="organic" name="Current Organic" stroke="#3b82f6" strokeWidth={2} fillOpacity={0} fill="none" />
                     <Area type="monotone" dataKey="ai" name="Current AI" stroke="#10b981" strokeWidth={2} fillOpacity={0} fill="none" />
@@ -434,11 +434,11 @@ export default function AISeoDashboard() {
                 </ResponsiveContainer>
               </div>
               <div className="flex flex-col justify-center space-y-4">
-                <div className="p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                <div className="p-4 bg-indigo-50 rounded-none border border-indigo-100">
                   <p className="text-sm font-bold text-indigo-900 mb-1">Growth Opportunity</p>
                   <p className="text-xs text-indigo-700 leading-relaxed">AI-driven traffic is projected to overtake organic search in Week 3 if current AI Overviews rankings hold.</p>
                 </div>
-                <div className="p-4 bg-amber-50 rounded-xl border border-amber-100">
+                <div className="p-4 bg-amber-50 rounded-none border border-amber-100">
                   <p className="text-sm font-bold text-amber-900 mb-1">Action Required</p>
                   <p className="text-xs text-amber-700 leading-relaxed">Focus on "programmatic seo strategy" to accelerate AI snippet inclusion.</p>
                 </div>
@@ -450,13 +450,13 @@ export default function AISeoDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Keywords Table */}
-        <Card className="lg:col-span-2 bg-white shadow-sm border-slate-200">
+        <Card className="lg:col-span-2 rounded-none bg-white shadow-sm border-slate-200">
           <CardHeader>
             <div className="flex justify-between items-center w-full">
               <CardTitle className="text-lg flex items-center gap-2">
                 <Search className="w-5 h-5 text-blue-500" />
                 Keyword Opportunities
-                <Badge variant="outline" className="ml-2 bg-slate-50 text-slate-500 border-slate-200">AI-Ranked</Badge>
+                <Badge variant="outline" className="rounded-none ml-2 bg-slate-50 text-slate-500 border-slate-200">AI-Ranked</Badge>
               </CardTitle>
             </div>
           </CardHeader>
@@ -477,7 +477,7 @@ export default function AISeoDashboard() {
                 {keywordOpps.map((kw, idx) => (
                   <tr key={idx} className={`border-b border-slate-100 hover:bg-slate-50 transition-colors cursor-pointer ${selectedKeywords.includes(kw.keyword) ? 'bg-blue-50/50' : ''}`} onClick={() => handleRowClick(kw)}>
                     <td className="py-3 px-4" onClick={(e) => handleKeywordSelect(e, kw)}>
-                      <div className={`w-4 h-4 rounded border flex items-center justify-center ${selectedKeywords.includes(kw.keyword) ? 'bg-blue-600 border-blue-600' : 'border-slate-300 bg-white'}`}>
+                      <div className={`w-4 h-4 rounded-none border flex items-center justify-center ${selectedKeywords.includes(kw.keyword) ? 'bg-blue-600 border-blue-600' : 'border-slate-300 bg-white'}`}>
                         {selectedKeywords.includes(kw.keyword) && <Check className="w-3 h-3 text-white" />}
                       </div>
                     </td>
@@ -485,7 +485,7 @@ export default function AISeoDashboard() {
                     <td className="py-3 px-4 text-right text-slate-600">{kw.vol}</td>
                     <td className="py-3 px-4 text-center font-medium">{kw.pos}</td>
                     <td className="py-3 px-4 text-center">
-                      <span className={`px-2 py-0.5 rounded-md text-xs font-bold ${
+                      <span className={`px-2 py-0.5 rounded-none text-xs font-bold ${
                         kw.delta.startsWith('+') ? 'bg-emerald-50 text-emerald-600' :
                         kw.delta.startsWith('-') ? 'bg-rose-50 text-rose-600' :
                         'bg-slate-100 text-slate-500'
@@ -494,7 +494,7 @@ export default function AISeoDashboard() {
                       </span>
                     </td>
                     <td className="py-3 px-4 text-slate-600">
-                      <span className={`px-2 py-1 rounded-md text-xs font-medium ${
+                      <span className={`px-2 py-1 rounded-none text-xs font-medium ${
                         kw.intent === 'Informational' ? 'bg-blue-50 text-blue-700' :
                         kw.intent === 'Commercial' ? 'bg-violet-50 text-violet-700' :
                         'bg-amber-50 text-amber-700'
@@ -517,7 +517,7 @@ export default function AISeoDashboard() {
 
         {/* SERP & Competitors */}
         <div className="space-y-6">
-          <Card className="bg-white shadow-sm border-slate-200">
+          <Card className="rounded-none bg-white shadow-sm border-slate-200">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg flex items-center gap-2">
                 <Eye className="w-5 h-5 text-emerald-500" />
@@ -533,7 +533,7 @@ export default function AISeoDashboard() {
                       <span className="text-sm font-bold text-slate-900">{feature.value}</span>
                       {feature.trend === 'up' && <TrendingUp className="w-3.5 h-3.5 text-emerald-500" />}
                       {feature.trend === 'down' && <TrendingDown className="w-3.5 h-3.5 text-rose-500" />}
-                      {feature.trend === 'flat' && <div className="w-3.5 h-0.5 bg-slate-300 rounded" />}
+                      {feature.trend === 'flat' && <div className="w-3.5 h-0.5 bg-slate-300 rounded-none" />}
                     </div>
                   </div>
                 ))}
@@ -541,7 +541,7 @@ export default function AISeoDashboard() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-sm border-slate-200">
+          <Card className="rounded-none bg-white shadow-sm border-slate-200">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg flex items-center gap-2">
                 <Target className="w-5 h-5 text-rose-500" />
@@ -577,7 +577,7 @@ export default function AISeoDashboard() {
 
       {/* Advanced SERP Comparison Section */}
       <div className="mt-8 mb-8">
-        <Card className="bg-white shadow-sm border-slate-200">
+        <Card className="rounded-none bg-white shadow-sm border-slate-200">
           <CardHeader className="pb-3 border-b border-slate-100">
             <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
               <div>
@@ -595,14 +595,14 @@ export default function AISeoDashboard() {
                 <input 
                   type="text"
                   placeholder="Competitor domain (e.g. searchpilot.com)"
-                  className="px-3 py-1.5 border border-slate-300 rounded-md text-sm w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-1.5 border border-slate-300 rounded-none text-sm w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={competitorInput}
                   onChange={e => setCompetitorInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && setActiveCompetitor(competitorInput)}
                 />
                 <button 
                   onClick={() => setActiveCompetitor(competitorInput)}
-                  className="px-4 py-1.5 bg-slate-900 text-white text-sm font-medium rounded-md hover:bg-slate-800"
+                  className="px-4 py-1.5 bg-slate-900 text-white text-sm font-medium rounded-none hover:bg-slate-800"
                 >
                   Compare
                 </button>
@@ -611,7 +611,7 @@ export default function AISeoDashboard() {
           </CardHeader>
           <CardContent className="pt-6">
             {!activeCompetitor ? (
-              <div className="h-[300px] flex items-center justify-center border-2 border-dashed border-slate-200 rounded-xl bg-slate-50 text-slate-500">
+              <div className="h-[300px] flex items-center justify-center border-2 border-dashed border-slate-200 rounded-none bg-slate-50 text-slate-500">
                 Enter a competitor domain above to generate the comparison chart.
               </div>
             ) : (
@@ -622,12 +622,12 @@ export default function AISeoDashboard() {
                     <XAxis dataKey="keyword" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 11}} dy={10} />
                     <YAxis reversed={true} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
                     <Tooltip 
-                      contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                      contentStyle={{ backgroundColor: '#fff', borderRadius: '0', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                       formatter={(value, name) => [`Position ${value}`, name]}
                     />
                     <Legend wrapperStyle={{ paddingTop: '20px' }} />
-                    <Bar dataKey="Our Rank" fill="#3b82f6" radius={[0, 0, 4, 4]} barSize={32} />
-                    <Bar dataKey="Competitor Rank" fill="#f43f5e" radius={[0, 0, 4, 4]} barSize={32} />
+                    <Bar dataKey="Our Rank" fill="#3b82f6" radius={[0, 0, 0, 0]} barSize={32} />
+                    <Bar dataKey="Competitor Rank" fill="#f43f5e" radius={[0, 0, 0, 0]} barSize={32} />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -638,7 +638,7 @@ export default function AISeoDashboard() {
 
       {/* Modal View */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="rounded-none max-w-3xl">
           <DialogHeader>
             <DialogTitle className="text-xl flex items-center gap-2">
               <Activity className="w-5 h-5 text-blue-600" />
@@ -649,26 +649,26 @@ export default function AISeoDashboard() {
             {selectedItem?.type === 'keyword' && (
               <div className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <div className="bg-slate-50 p-4 rounded-none border border-slate-100">
                     <p className="text-sm font-medium text-slate-500 mb-1">Search Volume</p>
                     <p className="text-2xl font-bold text-slate-900">{selectedItem.data.vol}</p>
                   </div>
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <div className="bg-slate-50 p-4 rounded-none border border-slate-100">
                     <p className="text-sm font-medium text-slate-500 mb-1">Position</p>
                     <p className="text-2xl font-bold text-slate-900">{selectedItem.data.pos} <span className="text-sm font-medium text-emerald-600 ml-1">{selectedItem.data.delta}</span></p>
                   </div>
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <div className="bg-slate-50 p-4 rounded-none border border-slate-100">
                     <p className="text-sm font-medium text-slate-500 mb-1">Intent</p>
                     <p className="text-2xl font-bold text-slate-900">{selectedItem.data.intent}</p>
                   </div>
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <div className="bg-slate-50 p-4 rounded-none border border-slate-100">
                     <p className="text-sm font-medium text-slate-500 mb-1">AI Score</p>
                     <p className="text-2xl font-bold text-amber-600 flex items-center gap-1"><Sparkles className="w-4 h-4"/>{selectedItem.data.ai}</p>
                   </div>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-slate-900 mb-4">Historical Trend</h4>
-                  <div className="h-64 w-full bg-slate-50 rounded-xl border border-slate-100 p-4">
+                  <div className="h-64 w-full bg-slate-50 rounded-none border border-slate-100 p-4">
                     <ResponsiveContainer width="100%" height="100%">
                       <LineChart data={[
                         { date: 'Week 1', pos: parseInt(selectedItem.data.pos) + 5 },
@@ -679,7 +679,7 @@ export default function AISeoDashboard() {
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                         <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
                         <YAxis reversed axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
-                        <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0' }} />
+                        <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '0', border: '1px solid #e2e8f0' }} />
                         <Line type="monotone" dataKey="pos" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6'}} />
                       </LineChart>
                     </ResponsiveContainer>
@@ -690,16 +690,16 @@ export default function AISeoDashboard() {
             {selectedItem?.type === 'chart' && (
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                  <div className="bg-blue-50 p-6 rounded-none border border-blue-100">
                     <p className="text-sm font-medium text-blue-600 mb-1">Organic Search Traffic</p>
                     <p className="text-4xl font-bold text-blue-900">{selectedItem.data.organic}k</p>
                   </div>
-                  <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                  <div className="bg-emerald-50 p-6 rounded-none border border-emerald-100">
                     <p className="text-sm font-medium text-emerald-600 mb-1">AI-Driven Traffic</p>
                     <p className="text-4xl font-bold text-emerald-900">{selectedItem.data.ai}k</p>
                   </div>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                <div className="bg-slate-50 p-6 rounded-none border border-slate-100">
                    <h4 className="text-lg font-semibold text-slate-900 mb-2">Month Summary</h4>
                    <p className="text-slate-600">In {selectedItem.data.name}, total traffic reached {(selectedItem.data.organic + selectedItem.data.ai).toLocaleString()}k sessions. AI-driven traffic accounted for {Math.round((selectedItem.data.ai / (selectedItem.data.organic + selectedItem.data.ai)) * 100)}% of the total volume, continuing the upward growth trend.</p>
                 </div>
