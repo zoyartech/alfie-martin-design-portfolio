@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { 
   LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   BarChart, Bar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend
@@ -9,8 +9,29 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 export default function AISeoDashboard() {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleRowClick = (kw) => {
+    setSelectedItem({
+      title: kw.keyword,
+      type: "keyword",
+      data: kw
+    });
+  };
+
+  const handleChartClick = (data) => {
+    if (data && data.activePayload && data.activePayload.length > 0) {
+      setSelectedItem({
+        title: data.activePayload[0].payload.name + " Performance",
+        type: "chart",
+        data: data.activePayload[0].payload
+      });
+    }
+  };
+
   const kpiData = [
     { title: "AI Content Score", value: "87/100", trend: "+4.2", positive: true, icon: Sparkles },
     { title: "Organic Sessions", value: "142.8K", trend: "+18.3%", positive: true, icon: Activity },
@@ -113,7 +134,7 @@ export default function AISeoDashboard() {
           <CardContent>
             <div className="h-[300px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }} onClick={handleChartClick} style={{ cursor: 'pointer' }}>
                   <defs>
                     <linearGradient id="colorOrganic" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
@@ -195,7 +216,7 @@ export default function AISeoDashboard() {
               </thead>
               <tbody>
                 {keywordOpps.map((kw, idx) => (
-                  <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors cursor-pointer" onClick={() => handleRowClick(kw)}>
                     <td className="py-3 px-4 font-medium text-slate-900">{kw.keyword}</td>
                     <td className="py-3 px-4 text-right text-slate-600">{kw.vol}</td>
                     <td className="py-3 px-4 text-center font-medium">{kw.pos}</td>
@@ -289,6 +310,79 @@ export default function AISeoDashboard() {
           </Card>
         </div>
       </div>
+
+      {/* Modal View */}
+      <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
+        <DialogContent className="max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="text-xl flex items-center gap-2">
+              <Activity className="w-5 h-5 text-blue-600" />
+              {selectedItem?.title} Details
+            </DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            {selectedItem?.type === 'keyword' && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p className="text-sm font-medium text-slate-500 mb-1">Search Volume</p>
+                    <p className="text-2xl font-bold text-slate-900">{selectedItem.data.vol}</p>
+                  </div>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p className="text-sm font-medium text-slate-500 mb-1">Position</p>
+                    <p className="text-2xl font-bold text-slate-900">{selectedItem.data.pos} <span className="text-sm font-medium text-emerald-600 ml-1">{selectedItem.data.delta}</span></p>
+                  </div>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p className="text-sm font-medium text-slate-500 mb-1">Intent</p>
+                    <p className="text-2xl font-bold text-slate-900">{selectedItem.data.intent}</p>
+                  </div>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <p className="text-sm font-medium text-slate-500 mb-1">AI Score</p>
+                    <p className="text-2xl font-bold text-amber-600 flex items-center gap-1"><Sparkles className="w-4 h-4"/>{selectedItem.data.ai}</p>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">Historical Trend</h4>
+                  <div className="h-64 w-full bg-slate-50 rounded-xl border border-slate-100 p-4">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={[
+                        { date: 'Week 1', pos: parseInt(selectedItem.data.pos) + 5 },
+                        { date: 'Week 2', pos: parseInt(selectedItem.data.pos) + 3 },
+                        { date: 'Week 3', pos: parseInt(selectedItem.data.pos) + 2 },
+                        { date: 'Week 4', pos: parseInt(selectedItem.data.pos) }
+                      ]}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                        <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
+                        <YAxis reversed axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
+                        <Tooltip contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0' }} />
+                        <Line type="monotone" dataKey="pos" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6'}} />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+              </div>
+            )}
+            {selectedItem?.type === 'chart' && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <p className="text-sm font-medium text-blue-600 mb-1">Organic Search Traffic</p>
+                    <p className="text-4xl font-bold text-blue-900">{selectedItem.data.organic}k</p>
+                  </div>
+                  <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                    <p className="text-sm font-medium text-emerald-600 mb-1">AI-Driven Traffic</p>
+                    <p className="text-4xl font-bold text-emerald-900">{selectedItem.data.ai}k</p>
+                  </div>
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                   <h4 className="text-lg font-semibold text-slate-900 mb-2">Month Summary</h4>
+                   <p className="text-slate-600">In {selectedItem.data.name}, total traffic reached {(selectedItem.data.organic + selectedItem.data.ai).toLocaleString()}k sessions. AI-driven traffic accounted for {Math.round((selectedItem.data.ai / (selectedItem.data.organic + selectedItem.data.ai)) * 100)}% of the total volume, continuing the upward growth trend.</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
