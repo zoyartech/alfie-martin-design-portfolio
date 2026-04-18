@@ -13,10 +13,19 @@ export default function SAO() {
         </Link>
         
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-5xl font-light tracking-tight mb-6">SAO</h1>
-          <p className="text-xl text-slate-600 font-light max-w-2xl">
-            Welcome to the new SAO page.
-          </p>
+          <h1 className="text-5xl font-light tracking-tight mb-12">SAO Dashboard</h1>
+          
+          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
+            <iframe 
+              src="https://claude.site/public/artifacts/130bb204-c81d-48b3-a22d-d6406f24ff0a/embed" 
+              title="ai-seo-dashboard.jsx" 
+              width="100%" 
+              height="800" 
+              frameBorder="0" 
+              allow="clipboard-write" 
+              allowFullScreen>
+            </iframe>
+          </div>
         </motion.div>
       </div>
     </div>
