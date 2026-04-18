@@ -25,7 +25,7 @@ export default function SAO() {
           </div>
           
           <div className="max-w-4xl space-y-6 text-slate-700 pb-12">
-            <h2 className="text-3xl font-medium text-slate-900">seo vs Sao whats the diffference</h2>
+            <h2 className="text-3xl font-bold uppercase text-slate-900">seo vs Sao whats the diffference</h2>
             <p className="text-lg leading-relaxed">
               The core difference is who you're optimizing for.
             </p>
