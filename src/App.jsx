@@ -52,7 +52,6 @@ import DescriptExperiment from './pages/DescriptExperiment';
 import ChatWidget from './components/chat/ChatWidget';
 import B6 from './pages/b6';
 import VoiceUserInterface from './pages/VoiceUserInterface';
-import VoiceSimulation from './pages/VoiceSimulation';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -135,7 +134,6 @@ const AuthenticatedApp = () => {
       <Route path="/DescriptExperiment" element={<DescriptExperiment />} />
       <Route path="/b6" element={<B6 />} />
       <Route path="/VoiceUserInterface" element={<VoiceUserInterface />} />
-      <Route path="/VoiceSimulation" element={<VoiceSimulation />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>
