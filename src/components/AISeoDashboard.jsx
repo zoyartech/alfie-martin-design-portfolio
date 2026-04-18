@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   BarChart, Bar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend } from
 'recharts';
 import {
   TrendingUp, TrendingDown, AlertCircle, Sparkles, Activity,
-  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw } from
+  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw, Bell } from
 "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { toast } from "@/components/ui/use-toast";
 
 export default function AISeoDashboard() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -20,6 +22,64 @@ export default function AISeoDashboard() {
   const [isSyncing, setIsSyncing] = useState(false);
   const [gscData, setGscData] = useState(null);
   const [gscError, setGscError] = useState("");
+  
+  const [notifications, setNotifications] = useState([
+    { id: 1, title: "Ranking Drop Alert", description: "Your tracked keyword 'programmatic seo strategy' dropped by 2 positions.", time: "2 mins ago", read: false, type: 'drop' },
+    { id: 2, title: "Competitor Alert", description: "Competitor ContentEdge just outranked you for 'automated seo tools'.", time: "1 hour ago", read: true, type: 'outrank' }
+  ]);
+
+  useEffect(() => {
+    // Simulate real-time ranking changes
+    const interval = setInterval(() => {
+      const kwList = [
+        "ai content optimization", 
+        "automated seo tools", 
+        "llm generated content ranking", 
+        "search generative experience", 
+        "ai overview optimization", 
+        "programmatic seo strategy"
+      ];
+      const randomKw = kwList[Math.floor(Math.random() * kwList.length)];
+      
+      const events = [
+        {
+          type: "drop",
+          title: "Ranking Drop Alert",
+          description: `Your tracked keyword "${randomKw}" dropped by 3 positions.`,
+        },
+        {
+          type: "outrank",
+          title: "Competitor Alert",
+          description: `Competitor SearchPilot just outranked you for "${randomKw}".`,
+        },
+        {
+          type: "gain",
+          title: "Ranking Increase",
+          description: `Great news! "${randomKw}" moved up to position 1.`,
+        }
+      ];
+      
+      const randomEvent = events[Math.floor(Math.random() * events.length)];
+      const newNotification = {
+        id: Date.now(),
+        ...randomEvent,
+        time: "Just now",
+        read: false
+      };
+      
+      setNotifications(prev => [newNotification, ...prev].slice(0, 10));
+      
+      toast(randomEvent.title, {
+        description: randomEvent.description,
+        icon: randomEvent.type === 'drop' ? <TrendingDown className="w-4 h-4 text-rose-500" /> :
+              randomEvent.type === 'outrank' ? <AlertCircle className="w-4 h-4 text-amber-500" /> :
+              <TrendingUp className="w-4 h-4 text-emerald-500" />
+      });
+      
+    }, 12000); // every 12 seconds for demonstration
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSyncGSC = async () => {
     setIsSyncing(true);
@@ -167,6 +227,63 @@ export default function AISeoDashboard() {
           <Badge variant="outline" className="bg-white px-3 py-1 text-sm border-slate-200">
             Last updated: Just now
           </Badge>
+          
+          <Popover>
+            <PopoverTrigger asChild>
+              <button className="relative p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-600">
+                <Bell className="w-5 h-5" />
+                {notifications.filter(n => !n.read).length > 0 && (
+                  <span className="absolute top-1 right-1 w-2 h-2 bg-rose-500 rounded-full" />
+                )}
+              </button>
+            </PopoverTrigger>
+            <PopoverContent className="w-80 p-0 mr-6" align="end">
+              <div className="flex items-center justify-between p-4 border-b border-slate-100">
+                <h4 className="font-semibold text-slate-900">Notifications</h4>
+                <button 
+                  onClick={() => setNotifications(notifications.map(n => ({...n, read: true})))}
+                  className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Mark all as read
+                </button>
+              </div>
+              <div className="max-h-80 overflow-y-auto">
+                {notifications.length === 0 ? (
+                  <div className="p-8 text-center text-slate-500 text-sm">No notifications yet</div>
+                ) : (
+                  <div className="flex flex-col">
+                    {notifications.map((notif) => (
+                      <div 
+                        key={notif.id} 
+                        className={`p-4 border-b border-slate-100 last:border-0 flex gap-3 ${!notif.read ? 'bg-blue-50/30' : ''}`}
+                        onClick={() => {
+                          setNotifications(notifications.map(n => n.id === notif.id ? {...n, read: true} : n));
+                        }}
+                      >
+                        <div className={`p-1.5 rounded-full shrink-0 h-fit mt-0.5 ${
+                          notif.type === 'drop' ? 'bg-rose-100 text-rose-600' :
+                          notif.type === 'outrank' ? 'bg-amber-100 text-amber-600' :
+                          'bg-emerald-100 text-emerald-600'
+                        }`}>
+                          {notif.type === 'drop' ? <TrendingDown className="w-3.5 h-3.5" /> :
+                           notif.type === 'outrank' ? <AlertCircle className="w-3.5 h-3.5" /> :
+                           <TrendingUp className="w-3.5 h-3.5" />}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900 mb-0.5">{notif.title}</p>
+                          <p className="text-sm text-slate-600 leading-snug mb-1.5">{notif.description}</p>
+                          <p className="text-xs text-slate-400 font-medium">{notif.time}</p>
+                        </div>
+                        {!notif.read && (
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-1.5 ml-auto shrink-0" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
 
