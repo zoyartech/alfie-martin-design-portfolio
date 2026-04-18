@@ -7,6 +7,17 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
+  title: "Search Agent Optimization",
+  category: "Product Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bbc07ee3b_Screenshot2026-04-17at101522PM.png",
+  year: "2024",
+  link: "SAO",
+  summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
+  stats: [],
+  tags: ["SAO", "Semantic Search", "AI Agents"]
+},
+{
   title: "Breakthrough 6",
   category: "AI Design",
   industry: "Med Tech",
