@@ -20,21 +20,8 @@ export default function SAO() {
             I designed the end-to-end experience and retrieval architecture for an AI-powered search agent, from RAG pipeline tuning to the interaction model that made results trustworthy and actionable.
           </p>
 
-          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white mb-16">
+          <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
             <AISeoDashboard />
-          </div>
-          
-          <div className="max-w-4xl space-y-6 text-slate-700 pb-12">
-            <h2 className="text-3xl font-bold uppercase text-slate-900">seo vs Sao whats the diffference</h2>
-            <p className="text-lg leading-relaxed">
-              The core difference is who you're optimizing for.
-            </p>
-            <p className="text-lg leading-relaxed">
-              SEO is about making content rank on search engines like Google. It's built around keywords, backlinks, page speed, mobile usability, and technical health signals. The audience is a crawler that indexes pages and ranks them in a list of blue links. Success means appearing on page one.
-            </p>
-            <p className="text-lg leading-relaxed">
-              SAO is about making content understandable and citable by AI agents. Instead of focusing on keywords and backlinks, SAO emphasizes semantic context, natural language patterns, structured data, and direct AI consumption Vincirufus so that AI-powered search systems can accurately interpret and surface your content in synthesized answers.
-            </p>
           </div>
         </motion.div>
       </div>
