@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import { 
   TrendingUp, TrendingDown, AlertCircle, Sparkles, Activity, 
-  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw
+  Search, FileText, Zap, Radar as RadarIcon, Eye, Target, Plus, User, Check, RefreshCw, Bot
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -146,6 +146,14 @@ export default function AISeoDashboard() {
     { name: "ContentEdge", overlap: "38%", score: 65, delta: 5 },
     { name: "RankSci", overlap: "55%", score: 71, delta: 1 },
     { name: "Clearscope", overlap: "31%", score: 82, delta: -1 },
+  ];
+
+  const llmSources = [
+    { name: 'ChatGPT (OpenAI)', sessions: '42.5K', percentage: 45, trend: '+12%', color: 'bg-[#10a37f]' },
+    { name: 'Claude (Anthropic)', sessions: '28.3K', percentage: 30, trend: '+18%', color: 'bg-[#d97757]' },
+    { name: 'Gemini (Google)', sessions: '14.1K', percentage: 15, trend: '+5%', color: 'bg-[#4285f4]' },
+    { name: 'Perplexity', sessions: '6.6K', percentage: 7, trend: '+24%', color: 'bg-[#2563eb]' },
+    { name: 'Other LLMs', sessions: '2.8K', percentage: 3, trend: '+2%', color: 'bg-slate-400' },
   ];
 
   const chartData = gscData && gscData.analytics.length > 0
@@ -365,6 +373,33 @@ export default function AISeoDashboard() {
 
         {/* SERP & Competitors */}
         <div className="space-y-6">
+          <Card className="bg-white shadow-sm border-slate-200">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Bot className="w-5 h-5 text-indigo-500" />
+                LLM Traffic Sources
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {llmSources.map((source, idx) => (
+                  <div key={idx}>
+                    <div className="flex justify-between items-end mb-1.5">
+                      <span className="text-sm font-medium text-slate-700">{source.name}</span>
+                      <div className="text-right">
+                        <span className="text-sm font-bold text-slate-900">{source.sessions}</span>
+                        <span className="text-xs font-medium text-emerald-600 ml-2">{source.trend}</span>
+                      </div>
+                    </div>
+                    <div className="w-full bg-slate-100 rounded-full h-2">
+                      <div className={`${source.color} h-2 rounded-full`} style={{ width: `${source.percentage}%` }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white shadow-sm border-slate-200">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg flex items-center gap-2">
