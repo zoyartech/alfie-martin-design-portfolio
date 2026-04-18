@@ -20,7 +20,7 @@ export default function SAO() {
             <AISeoDashboard />
           </div>
           
-          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
+          <p className="text-2xl md:text-3xl text-center mx-auto text-slate-600 leading-relaxed max-w-4xl">
             I designed the end-to-end experience and retrieval architecture for an AI-powered search agent, from RAG pipeline tuning to the interaction model that made results trustworthy and actionable.
           </p>
         </motion.div>
