@@ -23,6 +23,8 @@ export default function AISeoDashboard() {
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [newCampaignName, setNewCampaignName] = useState("");
   const [newCampaignAssignee, setNewCampaignAssignee] = useState("");
+  const [competitorInput, setCompetitorInput] = useState("");
+  const [activeCompetitor, setActiveCompetitor] = useState("");
 
   const handleKeywordSelect = (e, kw) => {
     e.stopPropagation();
@@ -65,6 +67,24 @@ export default function AISeoDashboard() {
       });
     }
   };
+
+  const getMockCompPos = (kw, comp) => {
+    if (!comp) return null;
+    const base = parseInt(kw.pos);
+    const hash = comp.length + kw.keyword.length;
+    const diff = (hash % 10) - 4; 
+    return Math.max(1, base + diff);
+  };
+
+  const comparisonKeywords = selectedKeywords.length > 0 
+    ? keywordOpps.filter(kw => selectedKeywords.includes(kw.keyword))
+    : keywordOpps;
+
+  const serpComparisonData = comparisonKeywords.map(kw => ({
+    keyword: kw.keyword.length > 15 ? kw.keyword.substring(0, 15) + '...' : kw.keyword,
+    "Our Rank": parseInt(kw.pos),
+    "Competitor Rank": getMockCompPos(kw, activeCompetitor)
+  }));
 
   const kpiData = [
     { title: "AI Content Score", value: "87/100", trend: "+4.2", positive: true, icon: Sparkles },
@@ -360,6 +380,67 @@ export default function AISeoDashboard() {
             </CardContent>
           </Card>
         </div>
+      </div>
+
+      {/* Advanced SERP Comparison Section */}
+      <div className="mt-8 mb-8">
+        <Card className="bg-white shadow-sm border-slate-200">
+          <CardHeader className="pb-3 border-b border-slate-100">
+            <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Target className="w-5 h-5 text-rose-500" />
+                  Advanced SERP Comparison
+                </CardTitle>
+                <CardDescription>
+                  {selectedKeywords.length > 0 
+                    ? `Comparing ${selectedKeywords.length} selected keywords against competitor.` 
+                    : "Select keywords in the table above to filter this comparison."}
+                </CardDescription>
+              </div>
+              <div className="flex gap-2">
+                <input 
+                  type="text"
+                  placeholder="Competitor domain (e.g. searchpilot.com)"
+                  className="px-3 py-1.5 border border-slate-300 rounded-md text-sm w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={competitorInput}
+                  onChange={e => setCompetitorInput(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && setActiveCompetitor(competitorInput)}
+                />
+                <button 
+                  onClick={() => setActiveCompetitor(competitorInput)}
+                  className="px-4 py-1.5 bg-slate-900 text-white text-sm font-medium rounded-md hover:bg-slate-800"
+                >
+                  Compare
+                </button>
+              </div>
+            </div>
+          </CardHeader>
+          <CardContent className="pt-6">
+            {!activeCompetitor ? (
+              <div className="h-[300px] flex items-center justify-center border-2 border-dashed border-slate-200 rounded-xl bg-slate-50 text-slate-500">
+                Enter a competitor domain above to generate the comparison chart.
+              </div>
+            ) : (
+              <div className="h-[300px] w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={serpComparisonData} margin={{ top: 20, right: 30, left: -20, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                    <XAxis dataKey="keyword" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 11}} dy={10} />
+                    <YAxis reversed={true} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
+                    <Tooltip 
+                      contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                      formatter={(value, name) => [`Position ${value}`, name]}
+                    />
+                    <Legend wrapperStyle={{ paddingTop: '20px' }} />
+                    <Bar dataKey="Our Rank" fill="#3b82f6" radius={[0, 0, 4, 4]} barSize={32} />
+                    <Bar dataKey="Competitor Rank" fill="#f43f5e" radius={[0, 0, 4, 4]} barSize={32} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            )}
+          </CardContent>
+        </Card>
       </div>
 
       {/* Strategy & Campaigns Section */}
