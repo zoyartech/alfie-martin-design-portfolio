@@ -486,45 +486,45 @@ export default function AISeoDashboard() {
 
       {/* Strategy & Campaigns Section */}
       <div className="mt-8 mb-8">
-        <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2 hidden">
-          <FileText className="w-5 h-5 text-indigo-600" />
-          Strategy & Content Campaigns
-        </h3>
+        
+
+
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {campaigns.map((campaign) =>
           <Card key={campaign.id} className="bg-white shadow-sm border-slate-200">
-              <CardHeader className="flex flex-col space-y-1.5 p-6 pb-3 border-b border-slate-100 hidden">
-                <CardTitle className="text-base font-bold text-slate-900">{campaign.name}</CardTitle>
-                <CardDescription>{campaign.tasks.length} targeted keywords</CardDescription>
-              </CardHeader>
-              <CardContent className="p-6 pt-4 hidden">
-                <div className="space-y-3">
-                  {campaign.tasks.map((task) =>
-                <div key={task.id} className="flex flex-col gap-1.5 p-3 bg-slate-50 rounded-lg border border-slate-100">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-slate-900">{task.keyword}</span>
-                        <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full ${
-                    task.status === 'Completed' ? 'bg-emerald-100 text-emerald-700' :
-                    task.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
-                    'bg-amber-100 text-amber-700'}`
-                    }>
-                          {task.status}
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-slate-500">
-                        <div className="flex items-center gap-1">
-                          <User className="w-3.5 h-3.5" />
-                          {task.assignee}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Zap className="w-3.5 h-3.5 text-amber-500" />
-                          AI Draft
-                        </div>
-                      </div>
-                    </div>
-                )}
-                </div>
-              </CardContent>
+              
+
+
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             </Card>
           )}
           {campaigns.length === 0 &&
