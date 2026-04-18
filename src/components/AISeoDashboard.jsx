@@ -178,14 +178,16 @@ export default function AISeoDashboard() {
         </div>
         <div className="mt-4 md:mt-0 flex items-center gap-3">
           {gscError && <span className="text-sm text-rose-500 font-medium bg-rose-50 px-2 py-1 rounded-md">{gscError}</span>}
-          <button 
-            onClick={handleSyncGSC}
-            disabled={isSyncing}
-            className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors disabled:opacity-50"
-          >
-            <RefreshCw className={`w-4 h-4 ${isSyncing ? "animate-spin" : ""}`} />
-            {isSyncing ? "Syncing..." : gscData ? "Synced with GSC" : "Connect GSC"}
-          </button>
+          <div className="p-1 bg-slate-200 rounded-lg flex items-center">
+            <button 
+              onClick={handleSyncGSC}
+              disabled={isSyncing}
+              className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors disabled:opacity-50"
+            >
+              <RefreshCw className={`w-4 h-4 ${isSyncing ? "animate-spin" : ""}`} />
+              {isSyncing ? "Syncing..." : gscData ? "Synced with GSC" : "Connect GSC"}
+            </button>
+          </div>
           <Badge variant="outline" className="bg-white px-3 py-1 text-sm border-slate-200">
             Last updated: Just now
           </Badge>
