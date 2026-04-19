@@ -23,7 +23,7 @@ export default function FluidUI() {
           </div>
 
           <div className="mt-16 max-w-3xl">
-            <h2 className="text-3xl font-serif text-slate-900 mb-6">Project Notes</h2>
+            <h2 className="text-slate-900 mb-6 text-3xl font-medium">Preliminary stages ( work in progress)</h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               Add your notes, findings, and project details here. This area is perfect for explaining the design process, user research, and technical decisions made during the prototyping phase.
             </p>
