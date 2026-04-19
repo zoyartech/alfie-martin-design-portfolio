@@ -14,8 +14,8 @@ export default function FluidUI() {
         <div>
           <h1 className="text-5xl font-light tracking-tight mb-6 font-serif text-slate-900">Fluid UI</h1>
           
-          <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-4xl mb-12">
-            Exploring fluid interfaces.
+          <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-4xl mb-12">Exploring the possibility of fluid interfaces.
+
           </p>
 
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
@@ -30,6 +30,6 @@ export default function FluidUI() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
