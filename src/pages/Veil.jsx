@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Veil() {
   return (
@@ -31,30 +38,42 @@ export default function Veil() {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-16 w-full max-w-5xl">
-            <div className="bg-white p-8 border border-slate-200 shadow-xl">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bf4f833f8_Screenshot2026-04-18at75014PM.png" 
-                alt="Chat View Interface" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
-            
-            <div className="bg-white p-8 border border-slate-200 shadow-xl">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a5ff0c011_Screenshot2026-04-18at75024PM.png" 
-                alt="Contact Verification Flow" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
+          <div className="w-[78%]">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="bg-white p-8 border border-slate-200 shadow-xl">
+                    <img 
+                      src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bf4f833f8_Screenshot2026-04-18at75014PM.png" 
+                      alt="Chat View Interface" 
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem>
+                  <div className="bg-white p-8 border border-slate-200 shadow-xl">
+                    <img 
+                      src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a5ff0c011_Screenshot2026-04-18at75024PM.png" 
+                      alt="Contact Verification Flow" 
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </CarouselItem>
 
-            <div className="bg-white p-8 border border-slate-200 shadow-xl">
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f56eb22ca_Screenshot2026-04-18at75033PM.png" 
-                alt="Privacy and Security Settings" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
+                <CarouselItem>
+                  <div className="bg-white p-8 border border-slate-200 shadow-xl">
+                    <img 
+                      src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f56eb22ca_Screenshot2026-04-18at75033PM.png" 
+                      alt="Privacy and Security Settings" 
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="-left-12 lg:-left-16" />
+              <CarouselNext className="-right-12 lg:-right-16" />
+            </Carousel>
           </div>
 
         </motion.div>
