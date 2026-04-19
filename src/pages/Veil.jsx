@@ -76,6 +76,16 @@ export default function Veil() {
             </Carousel>
           </div>
 
+          <div className="w-full max-w-5xl mt-24">
+            <div className="bg-white p-8 border border-slate-200 shadow-xl">
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/096156e27_1.png" 
+                alt="Competitive Analysis" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
         </motion.div>
       </div>
     </div>
