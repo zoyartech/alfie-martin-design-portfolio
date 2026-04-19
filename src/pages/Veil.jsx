@@ -1,0 +1,29 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { createPageUrl } from "@/utils";
+import { motion } from "framer-motion";
+
+export default function Veil() {
+  return (
+    <div className="min-h-screen bg-[#eafcfa] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans flex flex-col items-center">
+      <div className="max-w-5xl mx-auto w-full">
+        <Link to={createPageUrl("SideQuests")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
+          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Side Quests
+        </Link>
+        
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center">
+          <img 
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d6e7f0e5f_iel.png" 
+            alt="Veil - Privacy First" 
+            className="w-full max-w-3xl h-auto object-cover shadow-xl rounded-none mb-12 border border-slate-200" 
+          />
+          <h1 className="text-5xl font-light tracking-tight mb-4">Veil</h1>
+          <p className="text-2xl text-slate-600 leading-relaxed max-w-2xl text-center">
+            Privacy First.
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
