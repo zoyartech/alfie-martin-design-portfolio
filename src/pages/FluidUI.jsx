@@ -21,6 +21,13 @@ export default function FluidUI() {
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://cinch-hue-81383772.figma.site" title="Figma Prototype" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-3xl font-serif text-slate-900 mb-6">Project Notes</h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Add your notes, findings, and project details here. This area is perfect for explaining the design process, user research, and technical decisions made during the prototyping phase.
+            </p>
+          </div>
         </div>
       </div>
     </div>
