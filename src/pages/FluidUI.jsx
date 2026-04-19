@@ -18,34 +18,34 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 hidden">
-            <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm hidden">
-              <div
-                className="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full cursor-pointer shadow-lg flex items-center justify-center overflow-hidden group">
-                 <span className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fluid Size</span>
-              </div>
-              <p className="mt-12 text-sm font-sans text-slate-500 text-center">Static layout element</p>
-            </div>
+          
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
-              <div
-                className="w-32 h-32 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-2xl shadow-lg cursor-pointer" />
-              
-              <p className="mt-8 text-sm font-sans text-slate-500 text-center">Static visual element</p>
-            </div>
-          </div>
 
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-4 shadow-sm overflow-hidden hidden">
-            <iframe
-              src="https://claude.site/public/artifacts/fa518e5a-0cdf-440e-9036-1312b85888f9/embed"
-              title="vui-onboarding.jsx"
-              width="100%"
-              height="600"
-              frameBorder="0"
-              allow="clipboard-write"
-              allowFullScreen className=" hidden" />
-            
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+
+
+
+
+
+
+
+
+
+          
         </div>
       </div>
     </div>);
