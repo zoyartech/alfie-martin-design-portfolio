@@ -41,9 +41,10 @@ export default function FluidUI() {
               title="vui-onboarding.jsx" 
               width="100%" 
               height="600" 
-              frameBorder="0" 
+              style={{ border: 0 }} 
               allow="clipboard-write" 
               allowFullScreen
+              sandbox="allow-scripts allow-same-origin allow-popups"
             />
           </div>
         </div>
