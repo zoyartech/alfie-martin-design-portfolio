@@ -18,8 +18,8 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-4 shadow-sm overflow-hidden">
-            <iframe src="https://cinch-hue-81383772.figma.site" title="Figma Prototype" width="100%" height="600" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://cinch-hue-81383772.figma.site" title="Figma Prototype" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
           </div>
         </div>
       </div>
