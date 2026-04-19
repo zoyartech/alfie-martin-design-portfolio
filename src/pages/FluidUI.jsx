@@ -36,16 +36,7 @@ export default function FluidUI() {
           </div>
 
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-4 shadow-sm overflow-hidden">
-            <div className="relative w-full aspect-video">
-              <iframe 
-                src="https://cinch-hue-81383772.figma.site" 
-                title="Figma Prototype" 
-                className="absolute top-0 left-0 w-full h-full rounded-xl"
-                frameBorder="0" 
-                allow="clipboard-write" 
-                allowFullScreen
-              ></iframe>
-            </div>
+            <iframe src="https://cinch-hue-81383772.figma.site" title="Figma Prototype" width="100%" height="600" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
           </div>
         </div>
       </div>
