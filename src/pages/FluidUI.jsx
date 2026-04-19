@@ -35,12 +35,14 @@ export default function FluidUI() {
             </div>
           </div>
 
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-4 shadow-sm overflow-hidden relative min-h-[600px] w-full">
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-4 shadow-sm overflow-hidden">
             <iframe 
               src="https://claude.site/public/artifacts/fa518e5a-0cdf-440e-9036-1312b85888f9/embed" 
               title="vui-onboarding.jsx" 
-              className="absolute inset-0 w-full h-full border-0"
-              allow="clipboard-write; microphone; camera" 
+              width="100%" 
+              height="600" 
+              frameBorder="0" 
+              allow="clipboard-write" 
               allowFullScreen
             />
           </div>
