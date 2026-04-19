@@ -19,9 +19,17 @@ export default function Veil() {
             className="w-full max-w-3xl h-auto object-cover shadow-xl rounded-none mb-12 border border-slate-200" 
           />
           <h1 className="text-5xl font-light tracking-tight mb-4">Veil</h1>
-          <p className="text-2xl text-slate-600 leading-relaxed max-w-2xl text-center">
+          <p className="text-2xl text-slate-600 leading-relaxed max-w-2xl text-center mb-12">
             Privacy First.
           </p>
+
+          <div className="w-full w-[1200px] max-w-full h-[80vh] min-h-[800px] border border-slate-200 shadow-xl rounded-none bg-white">
+            <iframe 
+              src="https://drill-greet-57858206.figma.site" 
+              className="w-full h-full border-none"
+              title="Veil Figma Prototype"
+            />
+          </div>
         </motion.div>
       </div>
     </div>
