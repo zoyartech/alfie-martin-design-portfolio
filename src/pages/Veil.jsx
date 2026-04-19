@@ -23,13 +23,40 @@ export default function Veil() {
             Privacy First.
           </p>
 
-          <div className="w-full w-[1200px] max-w-full h-[80vh] min-h-[800px] border border-slate-200 shadow-xl rounded-none bg-white">
+          <div className="w-full w-[1200px] max-w-full h-[80vh] min-h-[800px] border border-slate-200 shadow-xl rounded-none bg-white mb-24">
             <iframe 
               src="https://drill-greet-57858206.figma.site" 
               className="w-full h-full border-none"
               title="Veil Figma Prototype"
             />
           </div>
+
+          <div className="grid grid-cols-1 gap-16 w-full max-w-5xl">
+            <div className="bg-white p-8 border border-slate-200 shadow-xl">
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bf4f833f8_Screenshot2026-04-18at75014PM.png" 
+                alt="Chat View Interface" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            
+            <div className="bg-white p-8 border border-slate-200 shadow-xl">
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a5ff0c011_Screenshot2026-04-18at75024PM.png" 
+                alt="Contact Verification Flow" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <div className="bg-white p-8 border border-slate-200 shadow-xl">
+              <img 
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f56eb22ca_Screenshot2026-04-18at75033PM.png" 
+                alt="Privacy and Security Settings" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
         </motion.div>
       </div>
     </div>
