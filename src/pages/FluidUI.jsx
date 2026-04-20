@@ -35,17 +35,9 @@ export default function FluidUI() {
             
           </div>
 
-          
-
-
-
-
-
-
-
-
-
-          
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://clinical-voice-tms-j9d133e.gamma.site" title="Clinical Voice TMS" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
