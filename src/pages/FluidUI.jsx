@@ -70,6 +70,14 @@ export default function FluidUI() {
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
+          </div>
+          
+          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://embed.figma.com/design/p8qc6zlskwWiQOzCOdSyCA/Multimodal-channel-architecture-%E2%80%94-Impact-TMS?node-id=0-1&embed-host=share" title="Multimodal channel architecture" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
