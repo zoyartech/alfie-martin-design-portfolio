@@ -122,14 +122,14 @@ export default function ChatWidget({ agentName }) {
         }
             </AnimatePresence>
 
-            <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)} className="bg-slate-900 text-white rounded-full p-4 shadow-lg hover:bg-slate-800 transition-colors flex items-center justify-center ml-auto hidden">
+            
 
-        
-                {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
-            </motion.button>
+
+
+
+
+
+      
         </div>);
 
 }
