@@ -78,6 +78,14 @@ export default function FluidUI() {
           <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://embed.figma.com/design/p8qc6zlskwWiQOzCOdSyCA/Multimodal-channel-architecture-%E2%80%94-Impact-TMS?node-id=0-1&embed-host=share" title="Multimodal channel architecture" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
+          </div>
+          
+          <div className="mt-6">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0a274e285_Screenshot2026-04-20at51059AM.png" alt="Intent mapping diagram" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+          </div>
         </div>
       </div>
     </div>);
