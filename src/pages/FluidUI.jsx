@@ -107,6 +107,10 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
+          <div className="w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+            <iframe src="https://beam-pear-41561282.figma.site" className="w-full" style={{ height: "600px" }} title="Fluid UI Prototype" allowFullScreen></iframe>
+          </div>
+
           <div className="mb-12 flex flex-wrap items-center gap-2">
             <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto">
               <button
