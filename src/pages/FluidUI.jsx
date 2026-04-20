@@ -94,8 +94,8 @@ export default function FluidUI() {
   const [activeTab, setActiveTab] = useState("core");
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans flex flex-col xl:flex-row xl:justify-center items-start">
+      <div className="w-full max-w-5xl mx-auto xl:mx-0">
         <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
         </Link>
@@ -234,6 +234,53 @@ export default function FluidUI() {
 
         </div>
       </div>
+
+      {/* Floating Glossary Sidebar */}
+      <div className="w-full xl:w-80 shrink-0 mt-16 xl:mt-0 xl:ml-12 xl:sticky xl:top-32 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 overflow-y-auto xl:max-h-[calc(100vh-160px)] self-start">
+        <h3 className="font-semibold text-slate-900 mb-6 flex items-center gap-2 text-lg">
+          <Info className="w-5 h-5 text-blue-500" />
+          Glossary
+        </h3>
+        <div className="space-y-6">
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Entity</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">A recognized real-world object or concept within user input (e.g., dates, locations, names).</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Confidence Score</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">A probabilistic measure indicating how certain a model is about its classification or generated output.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Latency</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">The time delay between a user's input and the system's response. Critical for conversational interfaces.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Guardrails</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">Hardcoded rules or secondary models designed to constrain AI behavior, preventing unsafe or off-topic outputs.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">RAG (Retrieval-Augmented Generation)</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">Enhancing LLM responses by dynamically retrieving relevant facts from an external knowledge base before generating text.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Recall</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">The fraction of relevant instances that were actually retrieved or identified by the model.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Precision / Recall Tradeoff</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">The balance between being strictly accurate (precision) and capturing all possible positive matches (recall).</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">F1 Score</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">The harmonic mean of precision and recall, often used as a single metric to evaluate overall classification accuracy.</p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">Multimodal</h4>
+            <p className="text-sm text-slate-600 mt-1 leading-relaxed">Systems capable of processing and understanding multiple types of input concurrently, such as text, voice, vision, and touch.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
