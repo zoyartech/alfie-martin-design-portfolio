@@ -148,7 +148,7 @@ export default function FluidUI() {
           {activeTab === "core" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
               <div className="flex justify-center w-full">
-                <iframe src="https://gamma.app/embed/0d2ck2z4k3pg2n4" style={{ width: "700px", maxWidth: "100%", height: "450px" }} allowFullScreen title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
+                <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" style={{ width: "100%", height: "700px" }} title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
               </div>
 
               <div>
