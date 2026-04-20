@@ -46,6 +46,14 @@ export default function FluidUI() {
           <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://embed.figma.com/design/YxIBIAxlKEA5bxNFDDEwVB/Untitled?node-id=0-1&embed-host=share" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-slate-900 mb-6 text-3xl font-medium">degradation flow &mdash; how the system gracefully moves from voice to visual to manual based on confidence and environment.</h2>
+          </div>
+          
+          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
