@@ -37,6 +37,10 @@ export default function FluidUI() {
             <h2 className="text-slate-900 mb-6 text-3xl font-medium">Quick Recap</h2>
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e35565bee_b6-ui.png" alt="B6 UI" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
           </div>
+
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://conversational-playbook-2sl61qw.gamma.site" title="Conversational Playbook" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
