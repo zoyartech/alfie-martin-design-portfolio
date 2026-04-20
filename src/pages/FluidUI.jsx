@@ -101,6 +101,11 @@ export default function FluidUI() {
         </Link>
         
         <div>
+          <div className="grid grid-cols-2 gap-8 mb-12">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c5bd2baed_handbphone.png" alt="Hand holding phone" className="w-full h-auto object-contain max-h-[600px] object-center" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png" alt="Hand interacting with VUI" className="w-full h-auto object-contain max-h-[600px] object-center" />
+          </div>
+
           <h1 className="text-5xl font-light tracking-tight mb-6 font-serif text-slate-900">Fluid UI</h1>
           
           <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-4xl mb-12">
