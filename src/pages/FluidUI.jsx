@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, X, Info } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import FlowDiagram from "@/components/FlowDiagram";
 
 const annotationsData = {
   multimodal: [
@@ -183,16 +184,45 @@ export default function FluidUI() {
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <iframe src="https://embed.figma.com/design/p8qc6zlskwWiQOzCOdSyCA/Multimodal-channel-architecture-%E2%80%94-Impact-TMS?node-id=0-1&embed-host=share" title="Multimodal channel architecture" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'Voice Input' }, position: { x: 150, y: 50 } },
+                      { id: '2', type: 'input', data: { label: 'Text/GUI Input' }, position: { x: 450, y: 50 } },
+                      { id: '3', data: { label: 'Input Processing' }, position: { x: 300, y: 150 } },
+                      { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 250 } },
+                      { id: '5', type: 'output', data: { label: 'System Action' }, position: { x: 300, y: 350 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-3', source: '1', target: '3', animated: true },
+                      { id: 'e2-3', source: '2', target: '3' },
+                      { id: 'e3-4', source: '3', target: '4' },
+                      { id: 'e4-5', source: '4', target: '5' },
+                    ]}
+                  />
                   <AnnotationOverlay annotations={annotationsData.multimodal} />
                 </div>
               </div>
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
-                <div className="">
-                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0a274e285_Screenshot2026-04-20at51059AM.png" alt="Intent mapping diagram" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[600px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'Raw Input String' }, position: { x: 300, y: 50 } },
+                      { id: '2', data: { label: 'NLP Parsing' }, position: { x: 300, y: 150 } },
+                      { id: '3', data: { label: 'Entity Extraction' }, position: { x: 150, y: 250 } },
+                      { id: '4', data: { label: 'Intent Classification' }, position: { x: 450, y: 250 } },
+                      { id: '5', type: 'output', data: { label: 'Structured Payload' }, position: { x: 300, y: 350 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-2', source: '1', target: '2' },
+                      { id: 'e2-3', source: '2', target: '3' },
+                      { id: 'e2-4', source: '2', target: '4' },
+                      { id: 'e3-5', source: '3', target: '5' },
+                      { id: 'e4-5', source: '4', target: '5' },
+                    ]}
+                  />
                 </div>
               </div>
             </div>
@@ -202,8 +232,25 @@ export default function FluidUI() {
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <iframe src="https://embed.figma.com/design/YxIBIAxlKEA5bxNFDDEwVB/Untitled?node-id=0-1&embed-host=share" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'Idle / Standby' }, position: { x: 300, y: 50 } },
+                      { id: '2', data: { label: 'Listening (Voice Wake)' }, position: { x: 300, y: 150 } },
+                      { id: '3', data: { label: 'Processing (ASR & NLU)' }, position: { x: 300, y: 250 } },
+                      { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 350 } },
+                      { id: '5', type: 'output', data: { label: 'Execute Command' }, position: { x: 100, y: 450 } },
+                      { id: '6', type: 'output', data: { label: 'Clarification Prompt' }, position: { x: 500, y: 450 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-2', source: '1', target: '2' },
+                      { id: 'e2-3', source: '2', target: '3', animated: true },
+                      { id: 'e3-4', source: '3', target: '4' },
+                      { id: 'e4-5', source: '4', target: '5', label: 'Confidence > 90%' },
+                      { id: 'e4-6', source: '4', target: '6', label: 'Confidence < 90%' },
+                      { id: 'e6-2', source: '6', target: '2' },
+                    ]}
+                  />
                   <AnnotationOverlay annotations={annotationsData.stateMachine} />
                 </div>
               </div>
@@ -247,8 +294,24 @@ export default function FluidUI() {
                   </div>
                 </div>
 
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'Input Detected' }, position: { x: 300, y: 50 } },
+                      { id: '2', data: { label: 'Environmental SNR Check' }, position: { x: 300, y: 150 } },
+                      { id: '3', data: { label: 'Attention Tracker' }, position: { x: 300, y: 250 } },
+                      { id: '4', type: 'output', data: { label: 'Standard Voice/Visual Flow' }, position: { x: 100, y: 350 } },
+                      { id: '5', type: 'output', data: { label: 'Visual Fallback (No Voice)' }, position: { x: 300, y: 350 } },
+                      { id: '6', type: 'output', data: { label: 'Voice Fallback (No Screen)' }, position: { x: 500, y: 350 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-2', source: '1', target: '2' },
+                      { id: 'e2-3', source: '2', target: '3' },
+                      { id: 'e3-4', source: '3', target: '4', label: 'Good SNR & Attn' },
+                      { id: 'e3-5', source: '3', target: '5', label: 'Poor SNR' },
+                      { id: 'e3-6', source: '3', target: '6', label: 'No Attention' },
+                    ]}
+                  />
                   <AnnotationOverlay annotations={dynamicDegradationAnnotations} />
                 </div>
               </div>
@@ -259,8 +322,22 @@ export default function FluidUI() {
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'Intent Parsed' }, position: { x: 300, y: 50 } },
+                      { id: '2', data: { label: 'Threshold Check' }, position: { x: 300, y: 150 } },
+                      { id: '3', type: 'output', data: { label: 'Direct Execution' }, position: { x: 100, y: 250 } },
+                      { id: '4', data: { label: 'Confirmation Required' }, position: { x: 300, y: 250 } },
+                      { id: '5', type: 'output', data: { label: 'Manual Fallback' }, position: { x: 500, y: 250 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-2', source: '1', target: '2' },
+                      { id: 'e2-3', source: '2', target: '3', label: '> 0.95' },
+                      { id: 'e2-4', source: '2', target: '4', label: '0.80 - 0.95' },
+                      { id: 'e2-5', source: '2', target: '5', label: '< 0.80' },
+                    ]}
+                  />
                   <AnnotationOverlay annotations={annotationsData.confidence} />
                 </div>
                 <div className="mt-8">
@@ -274,8 +351,20 @@ export default function FluidUI() {
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Interaction model for voice commands</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                  <FlowDiagram 
+                    defaultNodes={[
+                      { id: '1', type: 'input', data: { label: 'User Command' }, position: { x: 300, y: 50 } },
+                      { id: '2', data: { label: 'System Listener' }, position: { x: 300, y: 150 } },
+                      { id: '3', data: { label: 'TTS Generator' }, position: { x: 150, y: 250 } },
+                      { id: '4', data: { label: 'GUI Updater' }, position: { x: 450, y: 250 } },
+                    ]}
+                    defaultEdges={[
+                      { id: 'e1-2', source: '1', target: '2' },
+                      { id: 'e2-3', source: '2', target: '3' },
+                      { id: 'e2-4', source: '2', target: '4' },
+                    ]}
+                  />
                   <AnnotationOverlay annotations={annotationsData.interaction} />
                 </div>
               </div>
