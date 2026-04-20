@@ -160,6 +160,11 @@ export default function FluidUI() {
                 <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" style={{ width: "100%", height: "700px" }} title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
               </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/52f3df93e_Screenshot2026-04-20at50320AM.png" alt="Session View Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9d347bfd1_Screenshot2026-04-20at51059AM.png" alt="System Actions Table" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+              </div>
+
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
