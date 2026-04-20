@@ -44,7 +44,7 @@ export default function FluidUI() {
           </div>
           
           <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fonline-whiteboard%2Fcreate-diagram%2F719555db-6ea4-49f3-82b6-3c7ef96c6e12%3Futm_source%3Dclaude%26utm_content%3Dedit_in_figjam%26oai_id%3D%26request_id%3D865dc32a-bbc6-4c35-97ee-56f29871dfba" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+            <iframe src="https://embed.figma.com/design/YxIBIAxlKEA5bxNFDDEwVB/Untitled?node-id=0-1&embed-host=share" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
         </div>
       </div>
