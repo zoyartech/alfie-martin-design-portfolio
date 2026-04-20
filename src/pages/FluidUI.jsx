@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 
 export default function FluidUI() {
-  const [activeTab, setActiveTab] = React.useState("confidence");
+  const [activeTab, setActiveTab] = React.useState("core");
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
@@ -20,107 +20,107 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
+          <div className="mb-12 flex flex-wrap items-center gap-2">
+            <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto">
+              <button
+                onClick={() => setActiveTab("core")}
+                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  activeTab === "core" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-500 hover:text-slate-900"
+                }`}
+              >
+                Core Architecture
+              </button>
+              <button
+                onClick={() => setActiveTab("state")}
+                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  activeTab === "state" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-500 hover:text-slate-900"
+                }`}
+              >
+                State Machines
+              </button>
+              <button
+                onClick={() => setActiveTab("logic")}
+                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  activeTab === "logic" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-500 hover:text-slate-900"
+                }`}
+              >
+                Decision Logic
+              </button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-
-
-
-
-
-            
-
-            
-
-
-
-
-            
           </div>
 
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://clinical-voice-tms-j9d133e.gamma.site" title="Clinical Voice TMS" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
-          </div>
-
-          <div className="mt-16 max-w-3xl">
-            <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
-          </div>
-          
-          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://embed.figma.com/design/YxIBIAxlKEA5bxNFDDEwVB/Untitled?node-id=0-1&embed-host=share" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
-          </div>
-
-          <div className="mt-16 max-w-3xl">
-            <h2 className="text-slate-900 mb-6 text-3xl font-medium">degradation flow &mdash; how the system gracefully moves from voice to visual to manual based on confidence and environment.</h2>
-          </div>
-          
-          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
-          </div>
-
-          <div className="mt-16 flex items-center justify-center">
-            <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200">
-              <button
-                onClick={() => setActiveTab("confidence")}
-                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  activeTab === "confidence" 
-                    ? "bg-white text-slate-900 shadow-sm" 
-                    : "text-slate-500 hover:text-slate-900"
-                }`}
-              >
-                Confidence Threshold
-              </button>
-              <button
-                onClick={() => setActiveTab("interaction")}
-                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  activeTab === "interaction" 
-                    ? "bg-white text-slate-900 shadow-sm" 
-                    : "text-slate-500 hover:text-slate-900"
-                }`}
-              >
-                Interaction Model
-              </button>
-            </div>
-          </div>
-
-          {activeTab === "confidence" ? (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="mt-12 max-w-3xl">
-                <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
-              </div>
-              
-              <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+          {activeTab === "core" && (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <iframe src="https://clinical-voice-tms-j9d133e.gamma.site" title="Clinical Voice TMS" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
               </div>
 
-              <div className="mt-16 max-w-3xl">
-                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <iframe src="https://embed.figma.com/design/p8qc6zlskwWiQOzCOdSyCA/Multimodal-channel-architecture-%E2%80%94-Impact-TMS?node-id=0-1&embed-host=share" title="Multimodal channel architecture" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
+                <div className="">
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0a274e285_Screenshot2026-04-20at51059AM.png" alt="Intent mapping diagram" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+                </div>
               </div>
             </div>
           )}
 
-          <div className="mt-16 max-w-3xl">
-            <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
-          </div>
-          
-          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://embed.figma.com/design/p8qc6zlskwWiQOzCOdSyCA/Multimodal-channel-architecture-%E2%80%94-Impact-TMS?node-id=0-1&embed-host=share" title="Multimodal channel architecture" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
-          </div>
+          {activeTab === "state" && (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <iframe src="https://embed.figma.com/design/YxIBIAxlKEA5bxNFDDEwVB/Untitled?node-id=0-1&embed-host=share" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                </div>
+              </div>
 
-          <div className="mt-16 max-w-3xl">
-            <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
-          </div>
-          
-          <div className="mt-6">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0a274e285_Screenshot2026-04-20at51059AM.png" alt="Intent mapping diagram" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
-          </div>
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">degradation flow &mdash; how the system gracefully moves from voice to visual to manual based on confidence and environment.</h2>
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "logic" && (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                </div>
+                <div className="mt-8">
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">Interaction model for voice commands</h2>
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 }
