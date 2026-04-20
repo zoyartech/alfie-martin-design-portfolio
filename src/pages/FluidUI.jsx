@@ -38,6 +38,14 @@ export default function FluidUI() {
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://clinical-voice-tms-j9d133e.gamma.site" title="Clinical Voice TMS" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
+          </div>
+          
+          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fonline-whiteboard%2Fcreate-diagram%2F719555db-6ea4-49f3-82b6-3c7ef96c6e12%3Futm_source%3Dclaude%26utm_content%3Dedit_in_figjam%26oai_id%3D%26request_id%3D865dc32a-bbc6-4c35-97ee-56f29871dfba" title="VUI state machine diagram" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
