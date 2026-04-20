@@ -161,24 +161,6 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
-          <div className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light space-y-6">
-            <p>
-              In my opinion, conversational design is similar to choreography. You're designing a dance between a human and a machine, where neither one fully controls the music. My job is to make the machine a good enough dance partner that the human never feels stepped on.
-            </p>
-            <p>
-              Every conversational experience, regardless of modality, has the same underlying structure in simple terms:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>The user has intent — they want something done, answered</li>
-              <li>The system must recognize that intent — through voice, text, gesture, or context.</li>
-              <li>The system responds — with words, actions, visuals, or silence.</li>
-              <li>The conversation advances or repairs — the dance continues, or someone stumbles and recovers.</li>
-            </ul>
-            <p>
-              My job is to juxtapose all four of these moments across every path a conversation can take, the happy paths, the confused paths, the frustrated paths, and the paths nobody predicted.
-            </p>
-          </div>
-
           <div className="w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
             <iframe src="https://beam-pear-41561282.figma.site" className="w-full" style={{ height: "600px" }} title="Fluid UI Prototype" allowFullScreen></iframe>
           </div>
