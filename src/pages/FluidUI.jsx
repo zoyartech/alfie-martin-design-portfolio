@@ -92,6 +92,19 @@ const AnnotationOverlay = ({ annotations }) => {
 
 export default function FluidUI() {
   const [activeTab, setActiveTab] = useState("core");
+  const [simEnv, setSimEnv] = useState("quiet");
+  const [simAttention, setSimAttention] = useState("looking");
+
+  const dynamicDegradationAnnotations = [];
+  if (simEnv === "noisy") {
+    dynamicDegradationAnnotations.push({ id: 1, x: 40, y: 40, title: "Voice Degraded", desc: "Noisy environment detected.", reqs: "SNR monitoring service", logic: "Switch to visual confirmation mode." });
+  }
+  if (simAttention === "distracted") {
+    dynamicDegradationAnnotations.push({ id: 2, x: 70, y: 80, title: "Screen Degraded", desc: "User is not looking at the screen.", reqs: "Camera attention tracking (optional)", logic: "Force vocal read-back of actions." });
+  }
+  if (simEnv === "quiet" && simAttention === "looking") {
+    dynamicDegradationAnnotations.push({ id: 3, x: 50, y: 50, title: "Optimal State", desc: "Clear audio and user attention detected.", reqs: "Standard thresholds met", logic: "Execute standard multimodal flow." });
+  }
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans flex flex-col xl:flex-row xl:justify-center items-start">
@@ -197,9 +210,46 @@ export default function FluidUI() {
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">degradation flow &mdash; how the system gracefully moves from voice to visual to manual based on confidence and environment.</h2>
+                
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8">
+                  <h3 className="font-semibold text-slate-900 mb-4">Environment Simulator</h3>
+                  <div className="flex flex-wrap gap-6">
+                    <div>
+                      <label className="text-xs font-medium text-slate-500 uppercase tracking-wider block mb-2">Environment Noise</label>
+                      <div className="flex bg-white border border-slate-200 rounded-lg p-1">
+                        <button onClick={() => setSimEnv("quiet")} className={`px-4 py-1.5 text-sm rounded-md transition-colors ${simEnv === 'quiet' ? 'bg-blue-500 text-white' : 'text-slate-600 hover:bg-slate-50'}`}>Quiet</button>
+                        <button onClick={() => setSimEnv("noisy")} className={`px-4 py-1.5 text-sm rounded-md transition-colors ${simEnv === 'noisy' ? 'bg-blue-500 text-white' : 'text-slate-600 hover:bg-slate-50'}`}>Noisy</button>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-xs font-medium text-slate-500 uppercase tracking-wider block mb-2">User Attention</label>
+                      <div className="flex bg-white border border-slate-200 rounded-lg p-1">
+                        <button onClick={() => setSimAttention("looking")} className={`px-4 py-1.5 text-sm rounded-md transition-colors ${simAttention === 'looking' ? 'bg-blue-500 text-white' : 'text-slate-600 hover:bg-slate-50'}`}>On Screen</button>
+                        <button onClick={() => setSimAttention("distracted")} className={`px-4 py-1.5 text-sm rounded-md transition-colors ${simAttention === 'distracted' ? 'bg-blue-500 text-white' : 'text-slate-600 hover:bg-slate-50'}`}>Distracted</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 pt-6 border-t border-slate-200">
+                    <h4 className="text-sm font-semibold text-slate-900 mb-2">Active Degradation State:</h4>
+                    {simEnv === 'quiet' && simAttention === 'looking' && (
+                      <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-green-500"></span> Optimal Flow: Voice input with visual confirmation.</p>
+                    )}
+                    {simEnv === 'noisy' && simAttention === 'looking' && (
+                      <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Voice Degraded: Switching to tap-to-select GUI inputs.</p>
+                    )}
+                    {simEnv === 'quiet' && simAttention === 'distracted' && (
+                      <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Screen Degraded: Forcing vocal read-back of actions for confirmation.</p>
+                    )}
+                    {simEnv === 'noisy' && simAttention === 'distracted' && (
+                      <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-red-500"></span> Full Degradation: Pausing execution. Asking user to look at screen or move to a quiet area.</p>
+                    )}
+                  </div>
+                </div>
+
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                   <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
-                  <AnnotationOverlay annotations={annotationsData.degradation} />
+                  <AnnotationOverlay annotations={dynamicDegradationAnnotations} />
                 </div>
               </div>
             </div>
