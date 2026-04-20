@@ -216,6 +216,10 @@ export default function FluidUI() {
                 <div className="mt-8">
                   <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
                 </div>
+                <div className="grid grid-cols-2 gap-8 mt-12">
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5375f828d_hand3.png" alt="Hand holding phone 1" className="w-full h-auto object-contain max-h-[600px] object-center" />
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/02a1fb40b_hand5.png" alt="Hand holding phone 2" className="w-full h-auto object-contain max-h-[600px] object-center" />
+                </div>
               </div>
 
               <div>
