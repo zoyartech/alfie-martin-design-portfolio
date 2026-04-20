@@ -116,6 +116,10 @@ export default function FluidUI() {
             <iframe src="https://beam-pear-41561282.figma.site" className="w-full" style={{ height: "600px" }} title="Fluid UI Prototype" allowFullScreen></iframe>
           </div>
 
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
+            My approach is to design for error states first. In conversation, misunderstanding is the norm. Around 30-40% of conversational turns involve some form of repair, clarification, or renegotiation. Designing "The happy path" dialogue is roughly a third of the work. The rest, and most important, is figuring out what happens when the system doesn't understand, when the user changes their mind mid-task, when context shifts, or when confidence is low.
+          </p>
+
           <div className="mb-12 flex flex-wrap items-center gap-2">
             <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto">
               <button
