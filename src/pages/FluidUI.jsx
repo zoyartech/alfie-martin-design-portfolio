@@ -19,13 +19,13 @@ export default function FluidUI() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="w-full block hidden">
-              <div
-                className="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full cursor-pointer shadow-lg flex items-center justify-center overflow-hidden group">
-                 <span className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fluid Size</span>
-              </div>
-              <p className="mt-12 text-sm font-sans text-slate-500 text-center">Static layout element</p>
-            </div>
+            
+
+
+
+
+
+            
 
             <div className="bg-white rounded-2xl border border-gray-100 p-12 flex flex-col items-center justify-center min-h-[400px] shadow-sm">
               <div
