@@ -21,8 +21,8 @@ export default function B6() {
             <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
             </Link>
-            <Link to={createPageUrl("VoiceUserInterface")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
-              Voice user interface <ArrowRight className="w-4 h-4 ml-2" />
+            <Link to={createPageUrl("FluidUI")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
+              Designing VUI <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
           
