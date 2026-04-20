@@ -147,8 +147,8 @@ export default function FluidUI() {
 
           {activeTab === "core" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden relative aspect-[16/9] w-full">
-                <iframe src="https://clinical-voice-tms-j9d133e.gamma.site" title="Clinical Voice TMS" className="absolute inset-0 w-full h-full" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden relative w-full" style={{ paddingTop: '56.25%' }}>
+                <iframe src="https://gamma.app/embed/0d2ck2z4k3pg2n4" title="AI conversational design" className="absolute inset-0 w-full h-full" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
               </div>
 
               <div>
