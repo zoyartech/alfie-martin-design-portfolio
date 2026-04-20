@@ -162,7 +162,7 @@ export default function FluidUI() {
           </p>
 
           <div className="w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
-            <iframe src="https://beam-pear-41561282.figma.site" className="w-full hidden" style={{ height: "600px" }} title="Fluid UI Prototype" allowFullScreen></iframe>
+            
           </div>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
