@@ -100,6 +100,41 @@ export default function FluidUI() {
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
         </Link>
         
+        <div className="mb-12 flex flex-wrap items-center gap-2">
+          <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto">
+            <button
+              onClick={() => setActiveTab("core")}
+              className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                activeTab === "core" 
+                  ? "bg-white text-slate-900 shadow-sm" 
+                  : "text-slate-500 hover:text-slate-900"
+              }`}
+            >
+              Core Architecture
+            </button>
+            <button
+              onClick={() => setActiveTab("state")}
+              className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                activeTab === "state" 
+                  ? "bg-white text-slate-900 shadow-sm" 
+                  : "text-slate-500 hover:text-slate-900"
+              }`}
+            >
+              State Machines
+            </button>
+            <button
+              onClick={() => setActiveTab("logic")}
+              className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                activeTab === "logic" 
+                  ? "bg-white text-slate-900 shadow-sm" 
+                  : "text-slate-500 hover:text-slate-900"
+              }`}
+            >
+              Decision Logic
+            </button>
+          </div>
+        </div>
+
         <div>
           <div className="grid grid-cols-2 gap-8 mb-12">
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c5bd2baed_handbphone.png" alt="Hand holding phone" className="w-full h-auto object-contain max-h-[600px] object-center" />
@@ -120,43 +155,7 @@ export default function FluidUI() {
             My approach is to design for error states first. In conversation, misunderstanding is the norm. Around 30-40% of conversational turns involve some form of repair, clarification, or renegotiation. Designing "The happy path" dialogue is roughly a third of the work. The rest, and most important, is figuring out what happens when the system doesn't understand, when the user changes their mind mid-task, when context shifts, or when confidence is low.
           </p>
 
-          <div className="mb-12 flex flex-wrap items-center gap-2">
-            <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto">
-              <button
-                onClick={() => setActiveTab("core")}
-                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                  activeTab === "core" 
-                    ? "bg-white text-slate-900 shadow-sm" 
-                    : "text-slate-500 hover:text-slate-900"
-                }`}
-              >
-                Core Architecture
-              </button>
-              <button
-                onClick={() => setActiveTab("state")}
-                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                  activeTab === "state" 
-                    ? "bg-white text-slate-900 shadow-sm" 
-                    : "text-slate-500 hover:text-slate-900"
-                }`}
-              >
-                State Machines
-              </button>
-              <button
-                onClick={() => setActiveTab("logic")}
-                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-                  activeTab === "logic" 
-                    ? "bg-white text-slate-900 shadow-sm" 
-                    : "text-slate-500 hover:text-slate-900"
-                }`}
-              >
-                Decision Logic
-              </button>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          </div>
 
           {activeTab === "core" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
