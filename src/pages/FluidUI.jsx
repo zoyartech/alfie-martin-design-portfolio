@@ -161,9 +161,28 @@ export default function FluidUI() {
             Exploring fluid interfaces.
           </p>
 
-          <div className="w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
-            
+          <div className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light space-y-6">
+            <p>
+              In my opinion, conversational design is similar to choreography. You're designing a dance between a human and a machine, where neither one fully controls the music. My job is to make the machine a good enough dance partner that the human never feels stepped on.
+            </p>
+            <p>
+              Every conversational experience, regardless of modality, has the same underlying structure in simple terms:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>The user has intent — they want something done, answered</li>
+              <li>The system must recognize that intent — through voice, text, gesture, or context.</li>
+              <li>The system responds — with words, actions, visuals, or silence.</li>
+              <li>The conversation advances or repairs — the dance continues, or someone stumbles and recovers.</li>
+            </ul>
+            <p>
+              My job is to juxtapose all four of these moments across every path a conversation can take, the happy paths, the confused paths, the frustrated paths, and the paths nobody predicted.
+            </p>
           </div>
+
+          <h2 className="text-slate-900 mb-6 text-3xl font-medium">AI Conversational Design</h2>
+          <a href="https://beam-pear-41561282.figma.site/" target="_blank" rel="noopener noreferrer" className="block w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-[#0F172A] hover:opacity-90 transition-opacity">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b50c5c55e_Screenshot2026-04-20at104552AM.png" alt="View Interactive Prototype" className="w-full h-auto object-contain" />
+          </a>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
             My approach is to design for error states first. In conversation, misunderstanding is the norm. Around 30-40% of conversational turns involve some form of repair, clarification, or renegotiation. Designing "The happy path" dialogue is roughly a third of the work. The rest, and most important, is figuring out what happens when the system doesn't understand, when the user changes their mind mid-task, when context shifts, or when confidence is low.
