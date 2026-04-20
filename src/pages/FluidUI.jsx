@@ -19,7 +19,7 @@ export default function FluidUI() {
           </p>
 
           <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://cinch-hue-81383772.figma.site" title="Figma Prototype" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+            <iframe src="https://corner-verse-00739512.figma.site" title="Figma Prototype" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
           </div>
 
           <div className="mt-16 max-w-3xl">
