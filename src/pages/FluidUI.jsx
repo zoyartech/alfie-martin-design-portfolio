@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 
 export default function FluidUI() {
+  const [activeTab, setActiveTab] = React.useState("confidence");
+
   return (
     <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
       <div className="max-w-5xl mx-auto">
@@ -55,21 +57,52 @@ export default function FluidUI() {
             <iframe src="https://embed.figma.com/design/vZHG0KaF6vsgrq7E6WMzWV/degradation?node-id=0-1&embed-host=share" title="Degradation flow" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
 
-          <div className="mt-16 max-w-3xl">
-            <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
-          </div>
-          
-          <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+          <div className="mt-16 flex items-center justify-center">
+            <div className="inline-flex bg-slate-100/50 p-1 rounded-xl border border-slate-200">
+              <button
+                onClick={() => setActiveTab("confidence")}
+                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  activeTab === "confidence" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-500 hover:text-slate-900"
+                }`}
+              >
+                Confidence Threshold
+              </button>
+              <button
+                onClick={() => setActiveTab("interaction")}
+                className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  activeTab === "interaction" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-500 hover:text-slate-900"
+                }`}
+              >
+                Interaction Model
+              </button>
+            </div>
           </div>
 
-          <div className="mt-16 max-w-3xl">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
-          </div>
+          {activeTab === "confidence" ? (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="mt-12 max-w-3xl">
+                <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
+              </div>
+              
+              <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+              </div>
 
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
-          </div>
+              <div className="mt-16 max-w-3xl">
+                <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+              </div>
+            </div>
+          ) : (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <iframe src="https://embed.figma.com/design/QFU40Z6gtAiW3J9xbPGWPr/interaction-model-for-voice-commands.?node-id=0-1&embed-host=share" title="Interaction model for voice commands" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
+              </div>
+            </div>
+          )}
 
           <div className="mt-16 max-w-3xl">
             <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
