@@ -62,6 +62,10 @@ export default function FluidUI() {
           <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <iframe src="https://embed.figma.com/design/oEHWn6XzCheTpeK9pJKZGj/confidence-threshold?node-id=1-111&embed-host=share" title="Confidence threshold decision tree" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allowFullScreen></iframe>
           </div>
+
+          <div className="mt-16 max-w-3xl">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
+          </div>
         </div>
       </div>
     </div>);
