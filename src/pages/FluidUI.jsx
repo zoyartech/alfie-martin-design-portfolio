@@ -28,6 +28,10 @@ export default function FluidUI() {
               Add your notes, findings, and project details here. This area is perfect for explaining the design process, user research, and technical decisions made during the prototyping phase.
             </p>
           </div>
+
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe src="https://ai-ml-cheatsheet-designe-3nn4k4u.gamma.site" title="AI/ML Cheatsheet" className="w-full block" style={{ height: "calc(100vh - 150px)", minHeight: "800px" }} frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+          </div>
         </div>
       </div>
     </div>);
