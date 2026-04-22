@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SystemFoundation — Monochrome Design System v2.0.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/design-system.css">
+</head>
+<body>
+
+<!-- ============================================================
+     TOP NAV
+     ============================================================ -->
+<header class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">System<span>Foundation</span></div>
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab active" data-page="foundations">Foundations</button>
+      <button class="nav-tab" data-page="components">Components</button>
+      <button class="nav-tab" data-page="layout">Layout &amp; Spacing</button>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="m11 11 3 3"/></svg>
+      <span>Search system...</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ============================================================
+     PAGE 1: FOUNDATIONS
+     ============================================================ -->
+<section class="page active" id="page-foundations">
+  <div class="page-header">
+    <span class="version-chip">Version<b>v2.0.1</b></span>
+    <span class="eyebrow">Foundation Layer</span>
+    <h1 class="page-title">Design System Foundation</h1>
+    <p class="page-lede">A minimalist and clean structural guide establishing the core visual language, focusing on strict monochromatic hierarchy, precise typography, and consistent spatial rules.</p>
+  </div>
+
+  <!-- 1. Color Palette -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">1. Color Palette</h2>
+        <p class="section-sub">Strict monochromatic scale for high contrast and clean interfaces.</p>
+      </div>
+      <span class="section-meta">6 tokens</span>
+    </div>
+    <div class="swatch-grid">
+      <div class="swatch-card">
+        <div class="group-label">Primary &amp; Text</div>
+        <div class="swatch">
+          <div class="chip" style="background:#000000;"></div>
+          <div class="meta"><div class="name">Black</div><div class="hex">#000000</div></div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="group-label">Surface &amp; Background</div>
+        <div class="swatch">
+          <div class="chip" style="background:#FFFFFF;"></div>
+          <div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#F5F5F5;"></div>
+          <div class="meta"><div class="name">Grey 50 (App Bg)</div><div class="hex">#F5F5F5</div></div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="group-label">UI Elements &amp; Borders</div>
+        <div class="swatch">
+          <div class="chip" style="background:#E5E5E5;"></div>
+          <div class="meta"><div class="name">Grey 100 (Lines)</div><div class="hex">#E5E5E5</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#A3A3A3;"></div>
+          <div class="meta"><div class="name">Grey 400 (Muted)</div><div class="hex">#A3A3A3</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#525252;"></div>
+          <div class="meta"><div class="name">Grey 600 (Subtext)</div><div class="hex">#525252</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Typography -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">2. Typography</h2>
+        <p class="section-sub">Clean sans-serif scale mapping logical hierarchy to pixel sizes.</p>
+      </div>
+      <span class="section-meta">Inter · 5 steps</span>
+    </div>
+    <div class="card type-card">
+      <div class="type-row">
+        <div class="type-meta"><div class="name">Heading XL</div>36px / 40px / Bold</div>
+        <div class="type-xl">The quick brown fox</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><div class="name">Heading L</div>24px / 32px / Semibold</div>
+        <div class="type-l">The quick brown fox jumps over</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><div class="name">Heading M</div>18px / 24px / Medium</div>
+        <div class="type-m">The quick brown fox jumps over the lazy dog</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><div class="name">Body Regular</div>14px / 20px / Regular</div>
+        <div class="type-body">The quick brown fox jumps over the lazy dog. This text is used for primary paragraphs, descriptions, and general content areas where readability is paramount.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><div class="name">Body Small</div>12px / 16px / Regular</div>
+        <div class="type-small">The quick brown fox jumps over the lazy dog. Used for meta data, captions, and secondary labels.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Spacing & Radius -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">3. Spacing &amp; Radius</h2>
+        <p class="section-sub">Consistent 6px border-radius rule applied to structural components.</p>
+      </div>
+      <span class="section-meta">radius: 6px</span>
+    </div>
+    <div class="radius-demo">
+      <div class="radius-visual">
+        <div class="radius-square"><div class="pill">6px</div></div>
+        <div class="desc">All cards, buttons, inputs, and structural containers utilize a strict 6px border radius.</div>
+      </div>
+      <div class="card">
+        <div class="applied-example">
+          <div class="title">Applied Example Card</div>
+          <div class="subtitle">Demonstrating radius and spacing</div>
+          <input type="text" class="input" placeholder="Input field (6px radius)">
+          <input type="text" class="input" placeholder="Input field (6px radius)">
+          <button class="btn btn-primary btn-def" style="margin-top: 4px; width: 100%;">Primary Action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 2: COMPONENTS
+     ============================================================ -->
+<section class="page" id="page-components">
+  <div class="page-header">
+    <span class="version-chip">Version<b>v2.0.1</b></span>
+    <span class="eyebrow">Component Library</span>
+    <h1 class="page-title">UI Components</h1>
+    <p class="page-lede">A complete set of interactive building blocks following strict monochrome aesthetics, 6px border radius, and clean typographic hierarchy.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-value">4</div><div class="stat-label">Component Groups</div></div>
+      <div class="stat"><div class="stat-value">6px</div><div class="stat-label">Border Radius</div></div>
+      <div class="stat"><div class="stat-value">3</div><div class="stat-label">Button Variants</div></div>
+      <div class="stat"><div class="stat-value">Mono</div><div class="stat-label">Color Palette</div></div>
+    </div>
+  </div>
+
+  <!-- 1. Buttons -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">1. Buttons</h2>
+        <p class="section-sub">Three interaction-level variants with consistent sizing and 6px radius.</p>
+      </div>
+      <span class="section-meta">border-radius: 6px</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Primary <span class="spec"><b>bg:</b> #000 · <b>text:</b> #FFF</span></div>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-xs">Extra Small</button>
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary btn-def">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+        <button class="btn btn-primary btn-def"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3v10M3 8h10"/></svg>With Icon</button>
+        <button class="btn btn-primary btn-def" disabled>Disabled</button>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Secondary <span class="spec"><b>bg:</b> #FFF · <b>border:</b> #000 · <b>text:</b> #000</span></div>
+      <div class="btn-row">
+        <button class="btn btn-secondary btn-xs">Extra Small</button>
+        <button class="btn btn-secondary btn-sm">Small</button>
+        <button class="btn btn-secondary btn-def">Default</button>
+        <button class="btn btn-secondary btn-lg">Large</button>
+        <button class="btn btn-secondary btn-def"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>With Icon</button>
+        <button class="btn btn-secondary btn-def" disabled>Disabled</button>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Ghost <span class="spec"><b>bg:</b> transparent · no border · <b>text:</b> #000</span></div>
+      <div class="btn-row">
+        <button class="btn btn-ghost btn-xs">Extra Small</button>
+        <button class="btn btn-ghost btn-sm">Small</button>
+        <button class="btn btn-ghost btn-def">Default</button>
+        <button class="btn btn-ghost btn-lg">Large</button>
+        <button class="btn btn-ghost btn-def"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="3" cy="8" r="1.2"/><circle cx="8" cy="8" r="1.2"/><circle cx="13" cy="8" r="1.2"/></svg>With Icon</button>
+        <button class="btn btn-ghost btn-def" disabled>Disabled</button>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Button Anatomy</div>
+      <div class="button-anatomy">
+        <button class="btn btn-primary btn-def"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3v10M3 8h10"/></svg>Create Project</button>
+        <div class="anatomy-specs">
+          <div><b>padding</b> 12px 20px (Default)</div>
+          <div><b>height</b>  40px (Default) · 36px (Sm) · 48px (Lg)</div>
+          <div><b>radius</b>  6px (all variants)</div>
+          <div><b>font</b>    Inter 14px / Medium</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Badges & Tags -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">2. Badges &amp; Tags</h2>
+        <p class="section-sub">Compact labels for status, categories, and metadata. 6px radius throughout.</p>
+      </div>
+      <span class="section-meta">border-radius: 6px</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Status Badges</div>
+      <div class="tag-row">
+        <span class="badge badge-dot badge-active">Active</span>
+        <span class="badge badge-dot badge-inactive">Inactive</span>
+        <span class="badge badge-dot badge-pending">Pending</span>
+        <span class="badge badge-dot badge-live">Live</span>
+        <span class="badge badge-dot badge-archived">Archived</span>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Category Tags</div>
+      <div class="tag-row">
+        <button class="tag" data-tag>Design</button>
+        <button class="tag" data-tag>Development</button>
+        <button class="tag" data-tag>Research</button>
+        <button class="tag" data-tag>Marketing</button>
+        <button class="tag" data-tag>Strategy</button>
+        <button class="tag selected" data-tag>Selected</button>
+        <button class="tag disabled" disabled>Disabled</button>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Dismissible Tags</div>
+      <div class="tag-row" id="dismissible-tags">
+        <button class="tag tag-dismissible" data-dismiss>UI Design <span class="x">×</span></button>
+        <button class="tag tag-dismissible" data-dismiss>Figma <span class="x">×</span></button>
+        <button class="tag tag-dismissible" data-dismiss>Prototype <span class="x">×</span></button>
+        <button class="tag tag-dismissible selected" data-dismiss>System <span class="x">×</span></button>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Count &amp; Notification Badges</div>
+      <div class="tag-row">
+        <span class="count-badge">Messages <span class="num">4</span></span>
+        <span class="count-badge">Notifications <span class="num muted">12</span></span>
+        <span class="count-badge">Updates <span class="num">99+</span></span>
+        <span class="count-badge">Empty <span class="num empty">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Form Inputs -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">3. Form Inputs</h2>
+        <p class="section-sub">Clean text fields, selects, and textareas with consistent 6px radius and subtle borders.</p>
+      </div>
+      <span class="section-meta">border-radius: 6px</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Input States</div>
+      <div class="input-grid">
+        <div class="field">
+          <label class="field-label">Default</label>
+          <input type="text" class="input" placeholder="Placeholder text">
+          <div class="field-help"><span class="mono" style="color:var(--c-grey-400);font-size:10px;">border:</span> #E5E5E5 · <span class="mono" style="color:var(--c-grey-400);font-size:10px;">bg:</span> #FFF</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Filled</label>
+          <input type="text" class="input" value="John Anderson">
+          <div class="field-help"><span class="mono" style="color:var(--c-grey-400);font-size:10px;">text:</span> #000 · <span class="mono" style="color:var(--c-grey-400);font-size:10px;">border:</span> #E5E5E5</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Focused</label>
+          <input type="text" class="input" value="Active input" id="focused-demo">
+          <div class="field-help"><span class="mono" style="color:var(--c-grey-400);font-size:10px;">border:</span> 2px #000 · focused state</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Disabled</label>
+          <input type="text" class="input" placeholder="Disabled field" disabled>
+          <div class="field-help"><span class="mono" style="color:var(--c-grey-400);font-size:10px;">bg:</span> #F5F5F5 · <span class="mono" style="color:var(--c-grey-400);font-size:10px;">opacity:</span> 60%</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Error</label>
+          <input type="text" class="input error" value="invalid@">
+          <div class="field-help is-error">This field contains an error.</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Success</label>
+          <div class="input-group trailing">
+            <input type="text" class="input success" value="jane@example.com">
+            <span class="end-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6L7 10.5 4.5 8 6 6.5l1 1L10 4.5 11.5 6z"/></svg></span>
+          </div>
+          <div class="field-help is-success">Validation passed.</div>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Inputs with Icons &amp; Affixes</div>
+      <div class="input-grid">
+        <div class="field">
+          <label class="field-label">Leading Icon</label>
+          <div class="input-group">
+            <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="m11 11 3 3"/></svg>
+            <input type="text" class="input" placeholder="Search...">
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">Trailing Icon</label>
+          <div class="input-group trailing">
+            <input type="text" class="input" placeholder="Enter email">
+            <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="m2.5 4 5.5 5 5.5-5"/></svg>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">Prefix Text</label>
+          <div class="input-affix">
+            <span class="prefix">https://</span>
+            <input type="text" placeholder="yoursite.com">
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">Suffix Text</label>
+          <div class="input-affix">
+            <input type="text" placeholder="username">
+            <span class="suffix">@domain.io</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Select &amp; Textarea</div>
+      <div class="input-grid">
+        <div class="field">
+          <label class="field-label">Select Dropdown</label>
+          <div class="select">
+            <select>
+              <option>Option One</option>
+              <option>Option Two</option>
+              <option>Option Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">Search Select</label>
+          <div class="input-group trailing">
+            <svg class="icon" style="left:12px;right:auto;" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="m11 11 3 3"/></svg>
+            <input type="text" class="input" placeholder="Searching..." style="padding-left: 36px; padding-right: 36px;">
+            <span class="end-icon" style="color:var(--c-grey-400);cursor:pointer;">×</span>
+          </div>
+        </div>
+        <div class="field input-grid-full">
+          <label class="field-label">Textarea</label>
+          <textarea class="input" placeholder="Write a description..."></textarea>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Composed Form Example</div>
+      <form id="demo-form" onsubmit="event.preventDefault(); this.querySelector('[type=submit]').textContent='Saved ✓'; setTimeout(()=>{this.querySelector('[type=submit]').textContent='Save Changes'},1400);">
+        <div class="form-split">
+          <div class="field">
+            <label class="field-label">First Name <span class="req">*</span></label>
+            <input type="text" class="input" value="Sarah">
+          </div>
+          <div class="field">
+            <label class="field-label">Last Name <span class="req">*</span></label>
+            <input type="text" class="input" value="Chen">
+          </div>
+        </div>
+        <div class="spacer-md"></div>
+        <div class="field">
+          <label class="field-label">Email Address <span class="req">*</span></label>
+          <div class="input-group trailing">
+            <svg class="icon" style="left:12px;right:auto;" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="m2.5 4 5.5 5 5.5-5"/></svg>
+            <input type="text" class="input success" value="sarah.chen@studio.co" style="padding-left: 36px;">
+            <span class="end-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6L7 10.5 4.5 8 6 6.5l1 1L10 4.5 11.5 6z"/></svg></span>
+          </div>
+        </div>
+        <div class="spacer-md"></div>
+        <div class="field">
+          <label class="field-label">Role</label>
+          <div class="select">
+            <select>
+              <option>Product Designer</option>
+              <option>Engineer</option>
+              <option>Researcher</option>
+            </select>
+          </div>
+        </div>
+        <div class="spacer-md"></div>
+        <div class="field">
+          <label class="field-label">Bio</label>
+          <textarea class="input">Design systems and product strategy at Studio Labs.</textarea>
+        </div>
+        <div class="spacer-lg"></div>
+        <div style="display:flex; gap: var(--space-2);">
+          <button type="submit" class="btn btn-primary btn-def">Save Changes</button>
+          <button type="button" class="btn btn-ghost btn-def" onclick="this.form.reset();">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Checkboxes & Radios -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">4. Checkboxes &amp; Radios</h2>
+        <p class="section-sub">Minimal monochrome selection controls with clear visual states.</p>
+      </div>
+      <span class="section-meta">Monochrome Style</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Checkboxes</div>
+      <div class="control-grid">
+        <div class="control-stack">
+          <label class="control">
+            <input type="checkbox">
+            <span class="cbox"></span>
+            <span class="control-label"><span class="primary">Unchecked</span><span class="secondary">Default state</span></span>
+          </label>
+          <label class="control">
+            <input type="checkbox" id="indet-box">
+            <span class="cbox indeterminate"></span>
+            <span class="control-label"><span class="primary">Indeterminate</span><span class="secondary">Partial selection</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="checkbox" disabled>
+            <span class="cbox"></span>
+            <span class="control-label"><span class="primary">Disabled Unchecked</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+        <div class="control-stack">
+          <label class="control">
+            <input type="checkbox" checked>
+            <span class="cbox"></span>
+            <span class="control-label"><span class="primary">Checked</span><span class="secondary">Selected state</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="checkbox" disabled>
+            <span class="cbox"></span>
+            <span class="control-label"><span class="primary">Disabled</span><span class="secondary">Cannot interact</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="checkbox" checked disabled>
+            <span class="cbox"></span>
+            <span class="control-label"><span class="primary">Disabled Checked</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Radio Buttons</div>
+      <div class="control-grid">
+        <div class="control-stack">
+          <label class="control">
+            <input type="radio" name="r1">
+            <span class="radio"></span>
+            <span class="control-label"><span class="primary">Unselected</span><span class="secondary">Default state</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="radio" disabled>
+            <span class="radio"></span>
+            <span class="control-label"><span class="primary">Disabled</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+        <div class="control-stack">
+          <label class="control">
+            <input type="radio" name="r1" checked>
+            <span class="radio"></span>
+            <span class="control-label"><span class="primary">Selected</span><span class="secondary">Active selection</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="radio" checked disabled>
+            <span class="radio"></span>
+            <span class="control-label"><span class="primary">Disabled Selected</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Toggle Switches</div>
+      <div class="control-grid">
+        <div class="control-stack">
+          <label class="control">
+            <input type="checkbox">
+            <span class="toggle"></span>
+            <span class="control-label"><span class="primary">Off</span><span class="secondary">Disabled state</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="checkbox" disabled>
+            <span class="toggle"></span>
+            <span class="control-label"><span class="primary">Disabled Off</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+        <div class="control-stack">
+          <label class="control">
+            <input type="checkbox" checked>
+            <span class="toggle"></span>
+            <span class="control-label"><span class="primary">On</span><span class="secondary">Enabled state</span></span>
+          </label>
+          <label class="control disabled">
+            <input type="checkbox" checked disabled>
+            <span class="toggle"></span>
+            <span class="control-label"><span class="primary">Disabled On</span><span class="secondary">Cannot interact</span></span>
+          </label>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Applied Example — Settings Form</div>
+      <div class="settings-card">
+        <div class="settings-head">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2a3 3 0 013 3v3l1.5 2.5h-9L5 8V5a3 3 0 013-3zM6 12a2 2 0 004 0"/></svg>
+          Notification Preferences
+        </div>
+        <div class="settings-row">
+          <label class="control"><input type="checkbox" checked><span class="cbox"></span><span class="label">Email notifications</span></label>
+          <span class="state">Enabled</span>
+        </div>
+        <div class="settings-row">
+          <label class="control"><input type="checkbox"><span class="cbox"></span><span class="label">Push notifications</span></label>
+          <span class="state">Disabled</span>
+        </div>
+        <div class="settings-row">
+          <label class="control"><input type="checkbox" checked><span class="cbox"></span><span class="label">Weekly digest</span></label>
+          <span class="state">Enabled</span>
+        </div>
+        <div class="settings-freq">
+          <div class="freq-title">Frequency</div>
+          <div class="control-stack">
+            <label class="control"><input type="radio" name="freq" checked><span class="radio"></span><span class="label">Instantly</span></label>
+            <label class="control"><input type="radio" name="freq"><span class="radio"></span><span class="label">Daily digest</span></label>
+            <label class="control"><input type="radio" name="freq"><span class="radio"></span><span class="label">Weekly summary</span></label>
+          </div>
+        </div>
+        <div class="settings-actions">
+          <button class="btn btn-ghost btn-sm">Reset</button>
+          <button class="btn btn-primary btn-sm">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 3: LAYOUT & SPACING
+     ============================================================ -->
+<section class="page" id="page-layout">
+  <div class="page-header">
+    <span class="version-chip">Version<b>v2.0.1</b></span>
+    <span class="eyebrow">Spatial System</span>
+    <h1 class="page-title">Layout &amp; Spacing Guide</h1>
+    <p class="page-lede">Precise spatial rules built on an 8pt grid foundation. Every spacing value, container, and layout decision derives from this system to ensure visual rhythm and consistency.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-value">8pt</div><div class="stat-label">Base Grid Unit</div></div>
+      <div class="stat"><div class="stat-value">7</div><div class="stat-label">Spacing Steps</div></div>
+      <div class="stat"><div class="stat-value">6px</div><div class="stat-label">Border Radius</div></div>
+      <div class="stat"><div class="stat-value">12</div><div class="stat-label">Column Grid</div></div>
+    </div>
+  </div>
+
+  <!-- 1. Grid System -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">1. Grid System</h2>
+        <p class="section-sub">All layout decisions are anchored to an 8pt base grid, with 4pt subdivisions for fine-grained alignment.</p>
+      </div>
+      <span class="section-meta">base unit: 8pt</span>
+    </div>
+    <div class="card">
+      <div class="grid-preview">
+        <div class="grid-preview-head">
+          <div class="name">8PT BASE GRID <span>Primary spacing unit</span></div>
+          <div class="badge-spec">8px cells</div>
+        </div>
+        <div class="grid-8pt">
+          <div class="grid-bar" style="width:12px;height:8px;"><div class="grid-bar-label">8px</div></div>
+          <div class="grid-bar" style="width:16px;height:16px;"><div class="grid-bar-label">16px = 2 units</div></div>
+          <div class="grid-bar" style="width:24px;height:24px;"><div class="grid-bar-label">24px = 3 units</div></div>
+          <div class="grid-bar" style="width:32px;height:32px;"><div class="grid-bar-label">32px = 4 units</div></div>
+          <div class="grid-bar" style="width:40px;height:40px;"><div class="grid-bar-label">40px = 5 units</div></div>
+        </div>
+        <div style="text-align:right; margin-top: 8px;"><span class="badge-spec">grid: 8x8px</span></div>
+      </div>
+
+      <div class="grid-preview">
+        <div class="grid-preview-head">
+          <div class="name">4PT SUBDIVISION <span>Fine-grained alignment for icons, badges, labels</span></div>
+          <div class="badge-spec">4px cells</div>
+        </div>
+        <div class="grid-8pt" style="height: 80px;">
+          <div class="grid-bar" style="width:4px;height:4px;"><div class="grid-bar-label">4px — icon gap, tight padding</div></div>
+          <div class="grid-bar" style="width:8px;height:8px;"><div class="grid-bar-label">8px — default gap unit</div></div>
+          <div class="grid-bar" style="width:12px;height:12px;"><div class="grid-bar-label">12px — label spacing</div></div>
+          <div class="grid-bar" style="width:16px;height:16px;"><div class="grid-bar-label">16px — component padding</div></div>
+        </div>
+        <div style="text-align:right; margin-top: 8px;"><span class="badge-spec">grid: 4x4px</span></div>
+      </div>
+
+      <div class="grid-preview" style="margin-bottom: 0;">
+        <div class="grid-preview-head">
+          <div class="name">12-COLUMN LAYOUT GRID <span>1000px canvas · 24px gutter · 16px margin</span></div>
+        </div>
+        <div class="col-grid">
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+        </div>
+        <div style="text-align:center; margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: var(--c-grey-400);">12 columns · 8px gutter</div>
+        <div class="col-grid-legend">
+          <span class="col-pill">1 col — 64px</span>
+          <span class="col-pill">2 col — 136px</span>
+          <span class="col-pill">4 col — 280px</span>
+          <span class="col-pill filled">6 col — 424px (1/2)</span>
+          <span class="col-pill filled">8 col — 568px (2/3)</span>
+          <span class="col-pill filled">12 col — 856px (full)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Spacing Scale -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">2. Spacing Scale</h2>
+        <p class="section-sub">Seven core spacing values derived from the 8pt grid. Each step doubles or follows a consistent progression.</p>
+      </div>
+      <span class="section-meta">8pt multiples</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Visual Scale — Horizontal Bars</div>
+      <div style="padding: 0 8px;">
+        <div class="scale-row">
+          <div class="scale-token">T-1</div>
+          <div class="scale-value">4px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:4px;"></div>
+            <span class="scale-use">0.5× unit · Icon gap, micro spacing</span>
+          </div>
+          <span class="scale-chip">space-1</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-2</div>
+          <div class="scale-value">8px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:8px;"></div>
+            <span class="scale-use">1× unit · Base grid, tight gaps</span>
+          </div>
+          <span class="scale-chip">space-2</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-3</div>
+          <div class="scale-value">16px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:16px;"></div>
+            <span class="scale-use">2× unit · Component padding, label gap</span>
+          </div>
+          <span class="scale-chip">space-4</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-4</div>
+          <div class="scale-value">24px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:24px;"></div>
+            <span class="scale-use">3× unit · Card padding, section gap</span>
+          </div>
+          <span class="scale-chip">space-6</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-5</div>
+          <div class="scale-value">32px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:32px;"></div>
+            <span class="scale-use">4× unit · Content blocks, inner sections</span>
+          </div>
+          <span class="scale-chip">space-8</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-6</div>
+          <div class="scale-value">48px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:48px;"></div>
+            <span class="scale-use">6× unit · Section breaks, hero padding</span>
+          </div>
+          <span class="scale-chip">space-12</span>
+        </div>
+        <div class="scale-row">
+          <div class="scale-token">T-7</div>
+          <div class="scale-value">64px</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="scale-bar" style="width:64px;"></div>
+            <span class="scale-use">8× unit · Page sections, major layout gaps</span>
+          </div>
+          <span class="scale-chip">space-16</span>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Square Blocks Comparison</div>
+      <div style="display:grid;grid-template-columns:1fr 280px;gap:var(--space-4);align-items:center;">
+        <div class="squares-row">
+          <div class="sq" style="width:4px;height:4px;"></div>
+          <div class="sq" style="width:8px;height:8px;"></div>
+          <div class="sq" style="width:16px;height:16px;"></div>
+          <div class="sq" style="width:24px;height:24px;"></div>
+          <div class="sq" style="width:32px;height:32px;"></div>
+          <div class="sq" style="width:48px;height:48px;"></div>
+          <div class="sq" style="width:64px;height:64px;"></div>
+        </div>
+        <div class="sq-note">Each spacing value is a multiple of the <b style="color:var(--c-black);">8pt base unit</b>. 4px exists as a half-unit for fine micro-spacing only.</div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Spacing in Context — Annotated Card</div>
+      <div class="annotated-demo">
+        <div class="demo-card">
+          <div class="qa">
+            <div class="qa-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.5 5H14l-3.5 2.5L12 13l-4-3-4 3 1.5-4.5L2 6h4.5z"/></svg></div>
+            <div class="qa-text"><div class="t">Quick Actions</div><div class="s">Last updated 2h ago</div></div>
+          </div>
+          <div class="line w70"></div>
+          <div class="line w50"></div>
+          <button class="btn btn-primary btn-sm" style="margin-top: 16px; width: 100%;">View Details</button>
+        </div>
+        <div>
+          <div class="sub-label" style="margin-bottom: var(--space-2);">Spacing Specs</div>
+          <div class="spec-list">
+            <div class="spec-item"><span class="dot"></span>Card padding — 24px (T-4)</div>
+            <div class="spec-item"><span class="dot"></span>Icon-to-text gap — 8px (T-2)</div>
+            <div class="spec-item"><span class="dot"></span>Header-to-body gap — 16px (T-3)</div>
+            <div class="spec-item"><span class="dot"></span>Text line gap — 8px (T-2)</div>
+            <div class="spec-item"><span class="dot"></span>Body-to-action gap — 20px</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Card Examples -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">3. Card Examples</h2>
+        <p class="section-sub">How 6px radius applies to containers, cards, and elevated surfaces across the monochrome palette.</p>
+      </div>
+      <span class="section-meta">radius: 6px</span>
+    </div>
+    <div class="card">
+      <div class="sub-label">Radius Scale Reference</div>
+      <div class="radius-scale">
+        <div class="radius-item">
+          <div class="radius-chip" style="border-radius:0;"></div>
+          <div class="num">0px</div>
+          <div class="sub">Square</div>
+        </div>
+        <div class="radius-item">
+          <div class="radius-chip" style="border-radius:4px;"></div>
+          <div class="num">4px</div>
+          <div class="sub">Subtle</div>
+        </div>
+        <div class="radius-item is-standard">
+          <div class="radius-chip standard" style="border-radius:6px;"></div>
+          <div class="num">6px</div>
+          <div class="sub">Standard</div>
+        </div>
+        <div class="radius-item">
+          <div class="radius-chip" style="border-radius:8px;"></div>
+          <div class="num">8px</div>
+          <div class="sub">Rounded</div>
+        </div>
+        <div class="radius-item">
+          <div class="radius-chip" style="border-radius:12px;"></div>
+          <div class="num">12px</div>
+          <div class="sub">Soft</div>
+        </div>
+        <div class="radius-item">
+          <div class="radius-chip" style="border-radius:50%;"></div>
+          <div class="num">50%</div>
+          <div class="sub">Pill / Avatar</div>
+        </div>
+      </div>
+      <div style="margin-top: var(--space-3); font-size: 12px; color: var(--c-grey-600);">The system standard is <b style="color:var(--c-black);">6px</b> for all structural elements. Pill (50%) is reserved for tags and avatars only.</div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Card Surface Variants — Monochrome Palette</div>
+      <div class="surface-grid">
+        <div class="surface surface-white">
+          <span class="label-pill">Surface White</span>
+          <span class="overflow">···</span>
+          <div class="big">2,841</div>
+          <div class="caption">Active users this week</div>
+          <div class="trend">↑ +12.4% vs last week</div>
+        </div>
+        <div class="surface surface-grey">
+          <span class="label-pill">Surface Grey-50</span>
+          <span class="overflow">···</span>
+          <div class="big">$48,200</div>
+          <div class="caption">Revenue this month</div>
+          <div class="trend">↑ +8.1% vs last month</div>
+        </div>
+        <div class="surface surface-black">
+          <span class="label-pill">Surface Black</span>
+          <span class="overflow">···</span>
+          <div class="big">98.7%</div>
+          <div class="caption">System uptime</div>
+          <div class="trend">● No incidents reported</div>
+        </div>
+      </div>
+
+      <hr class="hr-dim">
+
+      <div class="sub-label">Container Hierarchy</div>
+      <div class="hierarchy">
+        <div class="hierarchy-label">Page Container · bg: #F5F5F5 · no radius</div>
+        <div class="hierarchy-section">
+          <div class="hierarchy-label">Section · bg: white · radius: 6px · shadow-soft</div>
+          <div class="hierarchy-cards">
+            <div class="h-card">
+              <div class="hierarchy-label">Card · radius: 6px</div>
+              <div class="line"></div><div class="line" style="width:60%;"></div>
+            </div>
+            <div class="h-card">
+              <div class="hierarchy-label">Card · radius: 6px</div>
+              <div class="line"></div><div class="line" style="width:60%;"></div>
+            </div>
+            <div class="h-card">
+              <div class="hierarchy-label">Card · radius: 6px</div>
+              <div class="line"></div><div class="line" style="width:60%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Composed Example -->
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">4. Composed Example</h2>
+        <p class="section-sub">A hero content block demonstrating the full system in action — grid, spacing, radius, typography, and components unified.</p>
+      </div>
+      <span class="section-meta">Live composition</span>
+    </div>
+    <div class="hero">
+      <div class="hero-nav">
+        <div class="hero-brand">Studio<span>OS</span></div>
+        <div class="hero-nav-links">
+          <span>Product</span><span>Pricing</span><span>Docs</span><span>Blog</span>
+        </div>
+        <div class="hero-nav-actions">
+          <button class="btn btn-ghost btn-sm">Log in</button>
+          <button class="btn btn-primary btn-sm">Get started</button>
+        </div>
+      </div>
+      <div class="hero-body">
+        <div class="hero-content">
+          <span class="beta-chip">Now in public beta</span>
+          <h2 class="hero-h">Design systems built for scale.</h2>
+          <p class="hero-p">StudioOS gives your team the foundation to ship consistent, beautiful interfaces faster. Built on an 8pt grid with strict monochrome principles.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg">Start for free</button>
+            <button class="btn btn-secondary btn-lg"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l8 5-8 5z"/></svg>Watch demo</button>
+          </div>
+          <div class="hero-trust">
+            <div class="avatar-stack">
+              <div class="avatar avatar-a">SC</div>
+              <div class="avatar avatar-b">JM</div>
+              <div class="avatar avatar-c">RT</div>
+              <div class="avatar avatar-d">+</div>
+            </div>
+            <div class="trust-meta">
+              <div><b>Trusted by 4,200+ designers</b></div>
+              <div><span class="stars">★★★★★</span> 5.0 (640 reviews)</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="feat-card">
+            <div class="feat-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg></div>
+            <div><div class="t">8pt Grid System</div><div class="s">All spacing derived from a single base unit for perfect rhythm.</div></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6"/></svg></div>
+            <div><div class="t">Monochrome Palette</div><div class="s">Strict black-to-white scale for timeless, accessible interfaces.</div></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/></svg></div>
+            <div><div class="t">6px Radius Rule</div><div class="s">Consistent corner rounding across every structural element.</div></div>
+          </div>
+          <div class="feat-metric">
+            <div><div class="m">99.9%</div><div class="c">Design consistency</div></div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-meta">
+      <span><span class="dot"></span>System Foundation · Minimalist Framework</span>
+    </div>
+    <div class="footer-meta">
+      <span id="footer-page-label">Foundations · v2.0.1 · Monochrome Design System</span>
+      <span class="col-pill">6px Radius</span>
+      <span class="col-pill">Inter Font</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/design-system.js"></script>
+
+</body>
+</html>
