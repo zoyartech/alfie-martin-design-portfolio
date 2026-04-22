@@ -312,6 +312,22 @@ export default function PrincipalFinancial() {
             </div>
           </div>
 
+          {/* Design System Embed */}
+          <div>
+            <h2 className="mb-6 pb-2 text-lg font-bold uppercase tracking-[0.25em] w-fit" style={{ color: '#014388', borderBottom: '2px solid #08aedb' }}>Design System Component</h2>
+            <div className="rounded-xl overflow-hidden shadow-sm" style={{ border: '1px solid #a7ecff', backgroundColor: 'white' }}>
+              <iframe 
+                src="https://claude.site/public/artifacts/b8b7d1c4-b50e-474a-9a2c-4f102be723d0/embed" 
+                title="design-system.html" 
+                width="100%" 
+                height="600" 
+                frameBorder="0" 
+                allow="clipboard-write" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
         </div>
       </section>
 
