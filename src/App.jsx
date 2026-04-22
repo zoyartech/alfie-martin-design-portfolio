@@ -56,6 +56,7 @@ import VoiceSimulation from './pages/VoiceSimulation';
 import SAO from './pages/SAO';
 import Veil from './pages/Veil';
 import FluidUI from './pages/FluidUI';
+import DesignSystem from './pages/DesignSystem';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -142,6 +143,7 @@ const AuthenticatedApp = () => {
       <Route path="/SAO" element={<SAO />} />
       <Route path="/Veil" element={<Veil />} />
       <Route path="/FluidUI" element={<FluidUI />} />
+      <Route path="/DesignSystem" element={<DesignSystem />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>
