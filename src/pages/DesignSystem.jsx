@@ -5,7 +5,7 @@ export default function DesignSystem() {
   return (
     <div className="w-full min-h-screen pt-[56px] bg-white">
       <iframe 
-        src="https://claude.site/public/artifacts/b8b7d1c4-b50e-474a-9a2c-4f102be723d0/embed" 
+        src="/design-system.html" 
         title="Design System" 
         className="w-full h-[calc(100vh-56px)] border-0" 
         allow="clipboard-write" 
