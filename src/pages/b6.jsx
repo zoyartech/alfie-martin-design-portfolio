@@ -150,17 +150,17 @@ export default function B6() {
             className="w-full h-auto object-contain rounded-2xl shadow-lg" />
         </div>
         
-        <div className="max-w-7xl mx-auto mt-16">
+        <div className="max-w-7xl mx-auto mt-16 flex justify-center">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8d7eefbd7_Screenshot2026-04-24at75808AM.png"
             alt="Breakthrough 6 text chatbot intent taxonomy"
-            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
+            className="w-2/3 h-auto object-contain rounded-2xl shadow-lg" />
         </div>
       </section>
 
       {/* Chatbot Interface Image */}
       <section className="px-6 lg:px-12 pb-20">
-        <div className="max-w-4xl mx-auto flex justify-center">
+        <div className="max-w-md mx-auto flex justify-center">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9331407d0_Screenshot2026-04-24at81546AM.png"
             alt="Breakthrough 6 chatbot interface"
