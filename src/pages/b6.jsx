@@ -148,7 +148,13 @@ export default function B6() {
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/957bb9c2d_PatientJourney.png"
             alt="Patient Journey"
             className="w-full h-auto object-contain rounded-2xl shadow-lg" />
-          
+        </div>
+        
+        <div className="max-w-7xl mx-auto mt-16">
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/8d7eefbd7_Screenshot2026-04-24at75808AM.png"
+            alt="Breakthrough 6 text chatbot intent taxonomy"
+            className="w-full h-auto object-contain rounded-2xl shadow-lg" />
         </div>
       </section>
 
