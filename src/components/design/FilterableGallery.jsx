@@ -33,15 +33,19 @@ const projects = [
   tags: ["AI in Healthcare", "Product Design", "Mental Health"]
 },
 {
-  title: "Principal Financial",
+  title: "Designing trust into automated climate risk",
   category: "Product Design",
-  industry: "Finance",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png",
-  year: "2024",
-  link: "PrincipalFinancial",
-  summary: "Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners.",
-  stats: [],
-  tags: ["Enterprise UX", "Advisory Tools", "Product Design"]
+  industry: "Climate Risk",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
+  year: "2023",
+  link: "ArbolCaseStudy",
+  summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
+  stats: [
+  { label: "Broker Support Tickets", value: "↓ 60%" },
+  { label: "Contracts Bound", value: "↑ 3×" },
+  { label: "User Trust", value: "100%" }],
+
+  tags: ["AI", "Smart Contracts", "Product Design"]
 },
 {
   title: "The User Experience of AI Products",
@@ -117,19 +121,15 @@ const projects = [
   imageFit: "object-cover"
 },
 {
-  title: "Designing trust into automated climate risk",
+  title: "Principal Financial",
   category: "Product Design",
-  industry: "Climate Risk",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
-  year: "2023",
-  link: "ArbolCaseStudy",
-  summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
-  stats: [
-  { label: "Broker Support Tickets", value: "↓ 60%" },
-  { label: "Contracts Bound", value: "↑ 3×" },
-  { label: "User Trust", value: "100%" }],
-
-  tags: ["AI", "Smart Contracts", "Product Design"]
+  industry: "Finance",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png",
+  year: "2024",
+  link: "PrincipalFinancial",
+  summary: "Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners.",
+  stats: [],
+  tags: ["Enterprise UX", "Advisory Tools", "Product Design"]
 }];
 
 
