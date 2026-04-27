@@ -141,9 +141,11 @@ export default function B6() {
       {/* PDF Embed */}
       <section className="px-6 lg:px-12 pb-20">
         <div className="max-w-7xl mx-auto flex justify-center w-full">
-          <div className="w-full flex items-center justify-center h-[700px] bg-slate-100 rounded-2xl border border-dashed border-slate-300">
-            <p className="text-slate-500">Please provide the PDF URL to embed here.</p>
-          </div>
+          <iframe 
+            src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/5cd5a7ed6_Impact-TMS-Clinical-Dashboard.pdf" 
+            className="w-full h-[700px] rounded-2xl border border-slate-200 shadow-sm"
+            title="Impact TMS Clinical Dashboard PDF"
+          ></iframe>
         </div>
       </section>
 
