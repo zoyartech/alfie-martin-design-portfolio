@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { useInView } from "framer-motion";
+import React, { useState, useEffect, useRef } from 'react';
+import { useInView, AnimatePresence, motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+import { X } from "lucide-react";
 
 function AnimatedChart({ children }) {
   const ref = useRef(null);
@@ -9,6 +10,8 @@ function AnimatedChart({ children }) {
 }
 
 export default function ArbolCaseStudy() {
+  const [lightboxImg, setLightboxImg] = useState(null);
+
   useEffect(() => {
     const link1 = document.createElement('link');
     link1.rel = 'preconnect';
@@ -621,7 +624,14 @@ export default function ArbolCaseStudy() {
       </section>
 
       <div style={{ width: '100%', overflow: 'hidden', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'center', padding: '2rem 0' }}>
-        <img loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" alt="Arbol Browser Mockup" style={{ width: '75%', height: 'auto', display: 'block' }} className="mr-4 pr-64 pl-64" />
+        <img 
+          loading="lazy" 
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png" 
+          alt="Arbol Browser Mockup" 
+          style={{ width: '75%', height: 'auto', display: 'block', cursor: 'zoom-in' }} 
+          className="mr-4 pr-64 pl-64 transition-transform hover:scale-[1.02]" 
+          onClick={() => setLightboxImg("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0d3d1e6d4_chrome-browser-mockup-template-69c49a3fe80e6c1034ee2ab5-2x.png")}
+        />
       </div>
 
       <section>
@@ -930,6 +940,34 @@ export default function ArbolCaseStudy() {
 
         
       </footer>
+
+      <AnimatePresence>
+        {lightboxImg && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightboxImg(null)}
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out"
+          >
+            <button 
+              onClick={() => setLightboxImg(null)} 
+              className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              src={lightboxImg}
+              alt="Lightbox view"
+              className="max-w-[90vw] max-h-[90vh] object-contain shadow-2xl rounded-xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>);
 
 }
