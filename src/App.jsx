@@ -4,6 +4,7 @@ import { queryClientInstance } from '@/lib/query-client'
 import NavigationTracker from '@/lib/NavigationTracker'
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -57,6 +58,7 @@ import SAO from './pages/SAO';
 import Veil from './pages/Veil';
 import FluidUI from './pages/FluidUI';
 import DesignSystem from './pages/DesignSystem';
+import SplashScreen from './components/SplashScreen';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -180,9 +182,19 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
+  const [showSplash, setShowSplash] = useState(() => {
+    return !sessionStorage.getItem('splashShown');
+  });
+
   return (
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
+        {showSplash && (
+          <SplashScreen onComplete={() => {
+            sessionStorage.setItem('splashShown', 'true');
+            setShowSplash(false);
+          }} />
+        )}
         <Router>
           <NavigationTracker />
           <AuthenticatedApp />
