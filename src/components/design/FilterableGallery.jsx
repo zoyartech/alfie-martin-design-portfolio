@@ -19,7 +19,7 @@ const projects = [
   tags: ["VUI", "Voice UI", "Med Tech"]
 },
 {
-  title: "Breakthrough 6",
+  title: "AI driven Med Tech",
   category: "AI Design",
   industry: "Med Tech",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
