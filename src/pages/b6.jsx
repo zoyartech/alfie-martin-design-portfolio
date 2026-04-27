@@ -143,7 +143,7 @@ export default function B6() {
         <div className="max-w-7xl mx-auto flex justify-center w-full">
           <iframe 
             src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/5cd5a7ed6_Impact-TMS-Clinical-Dashboard.pdf" 
-            className="w-full h-[700px] rounded-2xl border border-slate-200 shadow-sm"
+            className="w-full h-[700px] rounded-2xl border border-slate-200 shadow-sm bg-white"
             title="Impact TMS Clinical Dashboard PDF"
           ></iframe>
         </div>
