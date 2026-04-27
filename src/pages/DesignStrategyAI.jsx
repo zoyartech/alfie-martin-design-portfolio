@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+import SystemStatusDemo from "@/components/SystemStatusDemo";
 
 function AnimatedChart({ children }) {
   const ref = useRef(null);
@@ -37,7 +38,13 @@ export default function DesignStrategyAI() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900"
+    >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
@@ -69,18 +76,8 @@ export default function DesignStrategyAI() {
         </div>
 
         {/* Hero Video */}
-        <div className="max-w-5xl mx-auto px-6 mb-12">
-          
-
-
-
-
-
-
-
-
-
-          
+        <div className="max-w-5xl mx-auto px-6 mb-12 flex justify-center py-16 bg-slate-50 rounded-2xl border border-slate-100">
+          <SystemStatusDemo />
         </div>
 
         {/* 01 — OVERVIEW */}
@@ -599,6 +596,6 @@ export default function DesignStrategyAI() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>);
+    </motion.div>);
 
 }
