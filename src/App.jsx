@@ -89,12 +89,39 @@ const AuthenticatedApp = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
-          initial={{ opacity: 0, filter: 'blur(5px)', y: 10 }}
-          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          exit={{ opacity: 0, filter: 'blur(5px)', y: -10 }}
-          transition={{ duration: 0.35, ease: 'easeInOut' }}
-          className="flex-1 flex flex-col w-full"
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="flex-1 flex flex-col w-full relative"
         >
+          {/* Slide-in panel (during exit) */}
+          <motion.div
+            className="fixed inset-0 z-[9999] bg-[#faf9f6] flex items-center justify-center pointer-events-none"
+            variants={{
+              initial: { x: "100%" },
+              animate: { x: "100%", transition: { duration: 0 } },
+              exit: { x: "0%", transition: { duration: 0.3, ease: "easeInOut" } }
+            }}
+          >
+            <span className="text-xs font-bold tracking-[0.4em] text-slate-400 uppercase animate-pulse">
+              Loading
+            </span>
+          </motion.div>
+
+          {/* Slide-out panel (during enter) */}
+          <motion.div
+            className="fixed inset-0 z-[9999] bg-[#faf9f6] flex items-center justify-center pointer-events-none"
+            variants={{
+              initial: { x: "0%" },
+              animate: { x: "-100%", transition: { duration: 0.4, ease: "easeInOut" } },
+              exit: { x: "-100%", transition: { duration: 0 } }
+            }}
+          >
+            <span className="text-xs font-bold tracking-[0.4em] text-slate-400 uppercase animate-pulse">
+              Loading
+            </span>
+          </motion.div>
+
           <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Navigate to="/Home" replace />} />
       <Route path="/Home" element={<Home />} />
