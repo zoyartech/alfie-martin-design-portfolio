@@ -63,36 +63,7 @@ const projects = [
 
   tags: ["UX Research", "AI Systems", "Conversation Design"]
 },
-{
-  title: "Rockefeller Capital Management",
-  category: "Product Design",
-  industry: "Finance",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5b2be1488_Screenshot2026-03-25at92734PM.png",
-  year: "2023",
-  link: "RockefellerCapital",
-  summary: "Practical Solutions To Improving The User Experience Of Digital Products for High Net Worth Individuals.",
-  stats: [
-  { label: "Adoption", value: "Increased" },
-  { label: "MAU / DAU", value: "Lifted" },
-  { label: "Usability", value: "Enhanced" }],
-  tags: ["UX End To End", "Finance", "Mobile App"]
-},
 
-{
-  title: "TCS NYC Marathon App",
-  category: "Product Design",
-  industry: "Sports & Events",
-  image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80",
-  year: "2023",
-  link: "TCSMarathon",
-  summary: "Redesigned the official TCS NYC Marathon tracking app, improving the real-time runner tracking experience for over 1M spectators and participants.",
-  stats: [
-  { label: "App Downloads", value: "1M+" },
-  { label: "Rating Increase", value: "+0.8★" },
-  { label: "Engagement Lift", value: "42%" }],
-
-  tags: ["Mobile Design", "Real-Time Data", "Sports"]
-},
 {
   title: "Rebrand & Growth : Polaroid Makes a comeback",
   category: "Brand Identity",
