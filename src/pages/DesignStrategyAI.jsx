@@ -57,6 +57,9 @@ export default function DesignStrategyAI() {
         
         p {
           line-height: 1.7;
+          font-variant-numeric: oldstyle-nums proportional-nums;
+          font-feature-settings: "liga", "kern";
+          font-variant-ligatures: common-ligatures;
         }
         
         strong {
