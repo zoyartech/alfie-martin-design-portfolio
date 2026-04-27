@@ -252,19 +252,17 @@ export default function DesignStrategyAI() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-20">
-            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png")}>
-              
-
-              
-              
-              
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f325331d9_mediumsev.png")}>
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f325331d9_mediumsev.png"
+                alt="Medium Severity Issue"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
             </div>
-            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png")}>
-              
-
-              
-              
-              
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/436262dff_high-sev.png")}>
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/436262dff_high-sev.png"
+                alt="High Severity Issue"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
             </div>
           </div>
 
