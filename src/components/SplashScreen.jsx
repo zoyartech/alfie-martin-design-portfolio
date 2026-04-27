@@ -78,7 +78,7 @@ export default function SplashScreen({ onComplete }) {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col items-center justify-center text-center"
                 >
-                  <p className="text-slate-900 font-serif text-2xl md:text-3xl italic font-light">
+                  <p className="text-slate-900 font-sans text-2xl md:text-3xl font-normal">
                     Just kidding, a human designed this.
                   </p>
                 </motion.div>
