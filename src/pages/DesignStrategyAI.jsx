@@ -88,7 +88,7 @@ export default function DesignStrategyAI() {
           <div className="text-slate-900 mb-10 text-2xl font-bold tracking-tight leading-[1.1] md:text-6xl">What if, instead of cosplaying omniscience, the chatbot just showed its work?
 
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1] hidden">
             The Problem With Single-Answer Chatbots
           </h2>
           <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
