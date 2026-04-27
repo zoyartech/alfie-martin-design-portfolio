@@ -144,6 +144,7 @@ export default function B6() {
           <iframe 
             src="https://gamma.app/embed/eyaoywuhq5g7quk" 
             style={{ width: "700px", maxWidth: "100%", height: "450px" }} 
+            allow="fullscreen"
             allowFullScreen 
             title="Impact TMS Clinical Dashboard"
           ></iframe>
