@@ -270,9 +270,9 @@ export default function DesignStrategyAI() {
 
           {selectedImage &&
           <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setSelectedImage(null)}>
-              <button className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity hidden">
-                <X className="w-8 h-8" />
-              </button>
+              
+
+            
               <img
               src={selectedImage}
               alt="Full size view"
