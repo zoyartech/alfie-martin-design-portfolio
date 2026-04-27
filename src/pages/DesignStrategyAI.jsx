@@ -70,17 +70,17 @@ export default function DesignStrategyAI() {
 
         {/* Hero Video */}
         <div className="max-w-5xl mx-auto px-6 mb-12">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-100 hidden">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/eqJHgjNT8zE?si=UsSLM9ld8HU1iU0S"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen>
-            </iframe>
-          </div>
+          
+
+
+
+
+
+
+
+
+
+          
         </div>
 
         {/* 01 — OVERVIEW */}
