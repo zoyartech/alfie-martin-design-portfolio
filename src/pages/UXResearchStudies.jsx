@@ -1,39 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { createPageUrl } from "@/utils";
 import { base44 } from "@/api/base44Client";
 
-const titleText = "Research Studies";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-    }
-  }
-};
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20
-    }
-  }
-};
-
 export default function UXResearchStudies() {
-  const { scrollY } = useScroll();
-  const fontWeight = useTransform(scrollY, [0, 300], [400, 600]);
-  const letterSpacing = useTransform(scrollY, [0, 300], ["0em", "-0.05em"]);
-
   useEffect(() => {
     base44.analytics.track({
       eventName: "viewed_ux_research_studies",
@@ -42,52 +13,21 @@ export default function UXResearchStudies() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7] font-sans flex flex-col relative overflow-hidden">
-      {/* Noise Texture */}
-      <div 
-        className="pointer-events-none absolute inset-0 z-0" 
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
-          opacity: 0.04
-        }}
-      ></div>
+    <div className="min-h-screen bg-white font-sans flex flex-col">
+      {/* Header */}
+      <section className="pt-32 pb-8 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-4 uppercase">Portfolio</p>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 font-serif text-slate-900">UX Research Studies</h1>
+            <p className="text-slate-500 max-w-3xl text-lg leading-relaxed">
+              A collection of foundational research, usability testing, and strategic user insights.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-      <div className="relative z-10 flex flex-col flex-grow">
-        {/* Header */}
-        <section className="pt-32 pb-16 px-6 lg:px-12">
-          <div className="max-w-7xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <p className="text-xs tracking-[0.3em] text-gray-400 mb-6 uppercase font-semibold">Portfolio</p>
-              
-              <motion.h1 
-                className="text-5xl md:text-7xl lg:text-8xl mb-8 text-slate-900 flex flex-wrap items-center"
-                style={{ fontWeight, letterSpacing }}
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {titleText.split("").map((char, index) => {
-                  const isSerif = [0, 3, 4, 9, 12].includes(index); // Mixed serif/sans hybrid
-                  return (
-                    <motion.span 
-                      key={index} 
-                      variants={letterVariants}
-                      className={`${char === " " ? "w-4 md:w-8" : "inline-block"} ${isSerif ? "font-serif italic text-slate-800" : "font-sans"}`}
-                    >
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </motion.h1>
-
-              <p className="text-slate-500 max-w-3xl text-xl leading-relaxed">
-                A collection of foundational research, usability testing, and strategic user insights.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Content */}
+      {/* Content */}
       <section className="py-12 px-6 lg:px-12 flex-grow">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
@@ -137,7 +77,6 @@ export default function UXResearchStudies() {
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-      </div>
     </div>
   );
 }
