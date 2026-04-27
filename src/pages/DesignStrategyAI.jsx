@@ -66,6 +66,10 @@ export default function DesignStrategyAI() {
           font-weight: 700;
           color: #0f172a;
         }
+        
+        .fluid-headline {
+          font-size: clamp(2rem, 4vw + 1rem, 6rem);
+        }
       `}</style>
       
 
@@ -98,7 +102,7 @@ export default function DesignStrategyAI() {
           <div className="text-slate-900 mb-10 text-2xl font-bold tracking-tight leading-[1.1] md:text-6xl">What if, instead of cosplaying omniscience, the chatbot just showed its work?
 
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1] hidden">
+          <h2 className="font-serif fluid-headline font-bold mb-10 text-slate-900 tracking-tight leading-[1.1] hidden">
             The Problem With Single-Answer Chatbots
           </h2>
           <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
@@ -146,7 +150,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             02 — Research & Discovery
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="font-serif fluid-headline font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
             Understanding the Trust Deficit
           </h2>
           
@@ -199,7 +203,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             03 — Design Process
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight leading-[1.15]">
+          <h2 className="font-serif fluid-headline font-bold mb-6 text-slate-900 tracking-tight leading-[1.15]">
             From Concept to Confidence Ranking
           </h2>
           
@@ -326,7 +330,7 @@ export default function DesignStrategyAI() {
             
           </div>
 
-          <h2 className="text-slate-900 mb-8 text-base font-bold tracking-tight leading-[1.1] md:text-6xl">The Answer Experience
+          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">The Answer Experience
 
           </h2>
           
@@ -379,7 +383,7 @@ export default function DesignStrategyAI() {
             
           </div>
 
-          <h2 className="text-slate-900 mb-8 text-xs font-bold tracking-tight leading-[1.1] md:text-6xl">Teaching the Model to Rank Accuracy
+          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">Teaching the Model to Rank Accuracy
 
           </h2>
           
@@ -487,7 +491,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             06 — Outcomes
           </div>
-          <h2 className="text-slate-900 mb-8 text-base font-bold tracking-tight leading-[1.1] md:text-6xl">What Shipped, What Changed
+          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">What Shipped, What Changed
 
           </h2>
           
@@ -578,7 +582,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             07 — Reflection
           </div>
-          <h2 className="text-slate-900 mb-12 text-sm font-bold text-left tracking-tight leading-[1.1] md:text-6xl">What I Took Away
+          <h2 className="font-serif text-slate-900 mb-12 fluid-headline font-bold text-left tracking-tight leading-[1.1]">What I Took Away
 
           </h2>
           
