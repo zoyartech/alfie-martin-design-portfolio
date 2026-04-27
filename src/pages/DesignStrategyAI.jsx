@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+import SystemStatusDemo from "@/components/SystemStatusDemo";
 
 function AnimatedChart({ children }) {
   const ref = useRef(null);
@@ -37,7 +38,13 @@ export default function DesignStrategyAI() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900"
+    >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
@@ -119,11 +126,14 @@ export default function DesignStrategyAI() {
             
 
             
-            <div>
-              <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
-              <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How do we design for lack of predictability in AI outputs?
-
-              </p>
+            <div className="w-full flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex-1">
+                <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
+                <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How do we design for lack of predictability in AI outputs?</p>
+              </div>
+              <div className="w-full lg:w-96 flex-shrink-0">
+                <SystemStatusDemo />
+              </div>
             </div>
           </div>
         </div>
@@ -599,6 +609,6 @@ export default function DesignStrategyAI() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>);
+    </motion.div>);
 
 }
