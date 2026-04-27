@@ -172,7 +172,7 @@ export default function B6() {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto mt-16 flex justify-center">
           <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ff5a9262f_Screenshot2026-04-27at25533PM.png"
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6a6f877e3_chatinttent.png"
             alt="Breakthrough 6 text chatbot intent taxonomy"
             className="w-2/3 h-auto object-contain rounded-2xl shadow-lg" />
         </motion.div>
