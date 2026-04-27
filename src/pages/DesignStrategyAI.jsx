@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
-import { useInView, motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
-import SystemStatusDemo from "@/components/SystemStatusDemo";
 
 function AnimatedChart({ children }) {
   const ref = useRef(null);
@@ -38,13 +37,7 @@ export default function DesignStrategyAI() {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900"
-    >
+    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
@@ -57,18 +50,11 @@ export default function DesignStrategyAI() {
         
         p {
           line-height: 1.7;
-          font-variant-numeric: oldstyle-nums proportional-nums;
-          font-feature-settings: "liga", "kern";
-          font-variant-ligatures: common-ligatures;
         }
         
         strong {
           font-weight: 700;
           color: #0f172a;
-        }
-        
-        .fluid-headline {
-          font-size: clamp(2rem, 4vw + 1rem, 6rem);
         }
       `}</style>
       
@@ -102,7 +88,7 @@ export default function DesignStrategyAI() {
           <div className="text-slate-900 mb-10 text-2xl font-bold tracking-tight leading-[1.1] md:text-6xl">What if, instead of cosplaying omniscience, the chatbot just showed its work?
 
           </div>
-          <h2 className="font-serif fluid-headline font-bold mb-10 text-slate-900 tracking-tight leading-[1.1] hidden">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1] hidden">
             The Problem With Single-Answer Chatbots
           </h2>
           <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
@@ -133,14 +119,11 @@ export default function DesignStrategyAI() {
             
 
             
-            <div className="w-full flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex-1">
-                <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
-                <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How do we design for lack of predictability in AI outputs?</p>
-              </div>
-              <div className="w-full lg:w-96 flex-shrink-0">
-                <SystemStatusDemo />
-              </div>
+            <div>
+              <p className="text-[#1e3a8a] text-sm font-bold tracking-widest uppercase mb-2">Core Design Question</p>
+              <p className="text-slate-900 text-lg font-serif leading-snug md:text-3xl">How do we design for lack of predictability in AI outputs?
+
+              </p>
             </div>
           </div>
         </div>
@@ -150,7 +133,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             02 — Research & Discovery
           </div>
-          <h2 className="font-serif fluid-headline font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold mb-12 text-slate-900 tracking-tight leading-[1.1]">
             Understanding the Trust Deficit
           </h2>
           
@@ -203,7 +186,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             03 — Design Process
           </div>
-          <h2 className="font-serif fluid-headline font-bold mb-6 text-slate-900 tracking-tight leading-[1.15]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight leading-[1.15]">
             From Concept to Confidence Ranking
           </h2>
           
@@ -287,7 +270,7 @@ export default function DesignStrategyAI() {
 
           {selectedImage &&
           <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setSelectedImage(null)}>
-              <button className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+              <button className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity hidden">
                 <X className="w-8 h-8" />
               </button>
               <img
@@ -330,7 +313,7 @@ export default function DesignStrategyAI() {
             
           </div>
 
-          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">The Answer Experience
+          <h2 className="text-slate-900 mb-8 text-base font-bold tracking-tight leading-[1.1] md:text-6xl">The Answer Experience
 
           </h2>
           
@@ -383,7 +366,7 @@ export default function DesignStrategyAI() {
             
           </div>
 
-          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">Teaching the Model to Rank Accuracy
+          <h2 className="text-slate-900 mb-8 text-xs font-bold tracking-tight leading-[1.1] md:text-6xl">Teaching the Model to Rank Accuracy
 
           </h2>
           
@@ -491,7 +474,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             06 — Outcomes
           </div>
-          <h2 className="font-serif text-slate-900 mb-8 fluid-headline font-bold tracking-tight leading-[1.1]">What Shipped, What Changed
+          <h2 className="text-slate-900 mb-8 text-base font-bold tracking-tight leading-[1.1] md:text-6xl">What Shipped, What Changed
 
           </h2>
           
@@ -582,7 +565,7 @@ export default function DesignStrategyAI() {
           <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
             07 — Reflection
           </div>
-          <h2 className="font-serif text-slate-900 mb-12 fluid-headline font-bold text-left tracking-tight leading-[1.1]">What I Took Away
+          <h2 className="text-slate-900 mb-12 text-sm font-bold text-left tracking-tight leading-[1.1] md:text-6xl">What I Took Away
 
           </h2>
           
@@ -616,6 +599,6 @@ export default function DesignStrategyAI() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </motion.div>);
+    </div>);
 
 }
