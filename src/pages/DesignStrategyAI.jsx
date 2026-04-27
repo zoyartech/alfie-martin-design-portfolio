@@ -253,16 +253,16 @@ export default function DesignStrategyAI() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png")}>
-              <img
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd0afd8e_highsev.png"
-                alt="High severity ambiguity issue example" className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity hidden" />
+              
+
+              
               
               
             </div>
             <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png")}>
-              <img
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png"
-                alt="Medium severity typo issue example" className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity hidden" />
+              
+
+
               
               
             </div>
