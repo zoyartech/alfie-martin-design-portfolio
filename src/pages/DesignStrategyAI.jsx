@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
-import { useInView, motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
-import SystemStatusDemo from "@/components/SystemStatusDemo";
 
 function AnimatedChart({ children }) {
   const ref = useRef(null);
@@ -38,13 +37,7 @@ export default function DesignStrategyAI() {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900"
-    >
+    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
@@ -76,14 +69,24 @@ export default function DesignStrategyAI() {
         </div>
 
         {/* Hero Video */}
-        <div className="max-w-5xl mx-auto px-6 mb-12 flex justify-center py-16 bg-slate-50 rounded-2xl border border-slate-100">
-          <SystemStatusDemo />
+        <div className="max-w-5xl mx-auto px-6 mb-12">
+          
+
+
+
+
+
+
+
+
+
+          
         </div>
 
         {/* 01 — OVERVIEW */}
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-20">
-          <div className="inline-block bg-[#dbeafe] text-[#1e3a8a] text-xs font-bold tracking-wider px-3 py-1 mb-6 uppercase font-sans">
-            01 — Overview
+          <div className="text-slate-900 mb-10 text-2xl font-bold tracking-tight leading-[1.1] md:text-6xl">What if, instead of cosplaying omniscience, the chatbot just showed its work?
+
           </div>
           <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-slate-900 tracking-tight leading-[1.1]">
             The Problem With Single-Answer Chatbots
@@ -596,6 +599,6 @@ export default function DesignStrategyAI() {
           <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </motion.div>);
+    </div>);
 
 }
