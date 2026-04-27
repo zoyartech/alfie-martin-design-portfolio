@@ -63,41 +63,66 @@ export default function B6() {
 
       {/* Overview Image */}
       <section className="px-6 lg:px-12 -mt-12 mb-20 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-7xl mx-auto">
           <img src="https://static.wixstatic.com/media/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg/v1/fill/w_1905,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25473f_bffdc90eb34f477e8551dd3bc82f87f5~mv2.jpg" alt="Breakthrough 6 Overview" className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-xl" />
-        </div>
+        </motion.div>
       </section>
 
       {/* Live Prototype */}
       <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-slate-900">Live Prototype</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Experience the patient journey through our interactive Impact Neuro Flow prototype.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="max-w-6xl mx-auto mb-16">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-6xl mx-auto mb-16">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png"
             alt="What if Mental Health Treatment Worked"
             className="w-full h-auto object-contain rounded-2xl shadow-xl" />
           
-        </div>
+        </motion.div>
 
-        <div className="w-full h-[1000px] rounded-[9px] overflow-hidden shadow-2xl border border-gray-200">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full h-[1000px] rounded-[9px] overflow-hidden shadow-2xl border border-gray-200">
           <iframe
             src="https://impact-neuro-flow.base44.app"
             className="w-full h-full border-0"
             allowFullScreen
             title="Impact Neuro Flow Prototype" />
           
-        </div>
+        </motion.div>
       </section>
 
       {/* The Challenge */}
-      <section className="py-20 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
+      <section className="py-20 px-6 lg:px-12 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <h2 className="text-3xl font-medium text-slate-900 sticky top-24">The Challenge</h2>
           </div>
@@ -135,42 +160,47 @@ export default function B6() {
 
             
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Patient Journey Image */}
       <section className="px-6 lg:px-12 pb-20">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          
-        </div>
-        <div className="max-w-7xl mx-auto">
-          
-
-          
-          
-        </div>
-        
-        <div className="max-w-7xl mx-auto mt-16 flex justify-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto mt-16 flex justify-center">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ff5a9262f_Screenshot2026-04-27at25533PM.png"
             alt="Breakthrough 6 text chatbot intent taxonomy"
             className="w-2/3 h-auto object-contain rounded-2xl shadow-lg" />
-        </div>
+        </motion.div>
       </section>
 
       {/* Chatbot Interface Image */}
       <section className="px-6 lg:px-12 pb-20">
-        <div className="max-w-md mx-auto flex justify-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-md mx-auto flex justify-center">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9331407d0_Screenshot2026-04-24at81546AM.png"
             alt="Breakthrough 6 chatbot interface"
             className="w-full h-auto object-contain rounded-2xl shadow-lg" />
-        </div>
+        </motion.div>
       </section>
 
       {/* Audience Segments Carousel */}
       <section className="px-6 lg:px-12 pb-24">
-        <div className="max-w-6xl mx-auto px-12 sm:px-16">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto px-12 sm:px-16">
           <Carousel className="w-full">
             <CarouselContent>
               {[
@@ -206,71 +236,127 @@ export default function B6() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
+        </motion.div>
+      </section>
+
+      {/* PDF Embed */}
+      <section className="px-6 lg:px-12 pb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto flex justify-center w-full">
+          <iframe 
+            src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/5cd5a7ed6_Impact-TMS-Clinical-Dashboard.pdf" 
+            className="w-full h-[700px] rounded-2xl border border-slate-200 shadow-sm bg-white"
+            title="Impact TMS Clinical Dashboard PDF"
+          ></iframe>
+        </motion.div>
       </section>
 
       {/* The Solution */}
-      <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
+      <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-5xl font-medium mb-6">Designing for Empathy & Efficacy</h2>
             <p className="text-xl text-slate-300">
               Balancing advanced AI diagnostic tools with a warm, supportive interface for vulnerable users.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               
               <h3 className="text-2xl font-semibold mb-4">AI-Guided Intake</h3>
               <p className="text-slate-300 leading-relaxed">
                 Traditional intake forms for mental health are exhausting. We designed a conversational AI interface that adapts its questions based on the user's condition (Depression, PTSD, ADHD, or OCD). The UI uses soft transitions, large tap targets, and encouraging micro-copy to reduce abandonment.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               
               <h3 className="text-2xl font-semibold mb-4">Neurotherapy Progress Dashboard</h3>
               <p className="text-slate-300 leading-relaxed">
                 Patients receiving Rapid Acting Interventional Neurotherapy needed to see their progress visually. We created a dashboard that correlates their daily self-reported moods (collected via a gentle daily AI check-in) with their clinical treatment milestones, showing clear trajectories of healing.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Billboard Image */}
       <section className="px-6 lg:px-12 pt-24">
-        <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto">
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f6649c37_billboard.png"
             alt="Breakthrough 6 Billboard"
             className="w-full h-auto object-contain rounded-2xl shadow-lg" />
           
-        </div>
+        </motion.div>
       </section>
 
       {/* Results */}
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</h2>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <div className="text-5xl font-light text-blue-600 mb-4">40%</div>
               <p className="text-xl font-medium text-slate-900 mb-2">Increase in Intake Completion</p>
               <p className="text-gray-600">Compared to the previous static PDF forms.</p>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <div className="text-5xl font-light text-emerald-600 mb-4">85%</div>
               <p className="text-xl font-medium text-slate-900 mb-2">Daily Check-in Rate</p>
               <p className="text-gray-600">High engagement with the AI symptom tracker.</p>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <div className="text-5xl font-light text-purple-600 mb-4">3x</div>
               <p className="text-xl font-medium text-slate-900 mb-2">Faster Triage</p>
               <p className="text-gray-600">Clinicians received prioritized insights before sessions.</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
