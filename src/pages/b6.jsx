@@ -138,6 +138,18 @@ export default function B6() {
         </div>
       </section>
 
+      {/* Gamma Embed */}
+      <section className="px-6 lg:px-12 pb-20">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <iframe 
+            src="https://gamma.app/embed/eyaoywuhq5g7quk" 
+            style={{ width: "700px", maxWidth: "100%", height: "450px" }} 
+            allowFullScreen 
+            title="Impact TMS Clinical Dashboard"
+          ></iframe>
+        </div>
+      </section>
+
       {/* Patient Journey Image */}
       <section className="px-6 lg:px-12 pb-20">
         <div className="max-w-7xl mx-auto text-center mb-12">
