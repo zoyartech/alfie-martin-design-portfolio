@@ -12,6 +12,56 @@ function AnimatedChart({ children }) {
   return <div ref={ref} className="w-full h-full">{isInView && children}</div>;
 }
 
+const CustomBehaviorTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    const value = data.change;
+    const isPositive = value > 0;
+    
+    let context = "";
+    if (data.name === 'External Verification') context = "Users leaving to check other sources dropped significantly.";
+    if (data.name === 'Session Abandonment') context = "Fewer users left the chatbot without completing their task.";
+    if (data.name === 'Answer Acceptance') context = "More users accepted the AI's provided answer on the first try.";
+
+    return (
+      <div className="bg-white p-4 rounded-lg shadow-lg border border-slate-200 w-64 z-50">
+        <p className="font-bold text-slate-900 mb-2">{label}</p>
+        <div className="flex items-center gap-2 mb-2">
+          <span className={`font-bold text-lg ${isPositive ? 'text-emerald-500' : 'text-blue-500'}`}>
+            {isPositive ? '+' : ''}{value}%
+          </span>
+          <span className="text-slate-500 text-sm">vs previous design</span>
+        </div>
+        <p className="text-slate-600 text-sm leading-relaxed">{context}</p>
+      </div>
+    );
+  }
+  return null;
+};
+
+const CustomTrustTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    const score = data.score;
+    
+    let context = "";
+    if (data.name === 'Before Redesign') context = "Users struggled to determine if the AI was confident in its answer.";
+    if (data.name === 'After Redesign') context = "Confidence bars and citations gave users permission to trust the output.";
+
+    return (
+      <div className="bg-white p-4 rounded-lg shadow-lg border border-slate-200 w-64 z-50">
+        <p className="font-bold text-slate-900 mb-2">{label}</p>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="font-bold text-lg text-purple-600">{score}</span>
+          <span className="text-slate-500 text-sm">/ 5.0</span>
+        </div>
+        <p className="text-slate-600 text-sm leading-relaxed">{context}</p>
+      </div>
+    );
+  }
+  return null;
+};
+
 export default function DesignStrategyAI() {
   const [selectedImage, setSelectedImage] = useState(null);
   const carouselRef = useRef(null);
@@ -495,7 +545,7 @@ export default function DesignStrategyAI() {
                             <CartesianGrid strokeDasharray="3 3" horizontal={false} />
                             <XAxis type="number" tickFormatter={(val) => `${val > 0 ? '+' : ''}${val}%`} />
                             <YAxis dataKey="name" type="category" width={140} tick={{ fill: '#475569', fontSize: 13 }} />
-                            <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} formatter={(val) => [`${val > 0 ? '+' : ''}${val}%`, 'Change']} />
+                            <Tooltip content={<CustomBehaviorTooltip />} cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
                             <ReferenceLine x={0} stroke="#94a3b8" />
                             <Bar dataKey="change" animationDuration={1500} radius={[0, 4, 4, 0]}>
                                 {[
@@ -525,7 +575,7 @@ export default function DesignStrategyAI() {
                             <CartesianGrid strokeDasharray="3 3" vertical={false} />
                             <XAxis dataKey="name" tick={{ fill: '#475569', fontSize: 14 }} />
                             <YAxis domain={[0, 5]} tick={{ fill: '#475569' }} />
-                            <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
+                            <Tooltip content={<CustomTrustTooltip />} cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
                             <Bar dataKey="score" fill="#8b5cf6" radius={[6, 6, 0, 0]} animationDuration={1500} label={{ position: 'top', fill: '#1e293b', fontWeight: 'bold', fontSize: 16 }}>
                                 {[
                         { name: 'Before Redesign', score: 4.3 },
