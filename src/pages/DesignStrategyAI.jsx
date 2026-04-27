@@ -262,7 +262,7 @@ export default function DesignStrategyAI() {
             <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c39d82ded_med-sev.png")}>
               
 
-
+              
               
               
             </div>
