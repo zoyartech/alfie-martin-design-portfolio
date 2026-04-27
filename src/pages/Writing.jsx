@@ -5,6 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const writingProjects = [
 {
+  title: "Activation at Grammarly",
+  category: "Growth Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0e719488f_growthlever.png",
+  link: "ActivationGrammarly",
+  summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect.",
+  imageFit: "object-cover"
+},
+{
   title: "Examples of Growth Design Experiments",
   category: "UX Strategy",
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
@@ -71,7 +79,7 @@ export default function Writing() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                      className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${project.imageFit || 'object-contain'}`} />
                   
                   </div>
                   

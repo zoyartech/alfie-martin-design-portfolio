@@ -109,18 +109,7 @@ const projects = [
   tags: ["Brand Identity", "Visual Direction", "Consumer"]
 },
 
-{
-  title: "Activation at Grammarly",
-  category: "Product Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0e719488f_growthlever.png",
-  year: "2024",
-  link: "ActivationGrammarly",
-  summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect.",
-  stats: [],
-  tags: ["Growth Design", "Activation", "UX Strategy"],
-  imageFit: "object-cover"
-},
+
 {
   title: "Principal Financial",
   category: "Product Design",
