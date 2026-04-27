@@ -138,16 +138,12 @@ export default function B6() {
         </div>
       </section>
 
-      {/* Gamma Embed */}
+      {/* PDF Embed */}
       <section className="px-6 lg:px-12 pb-20">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <iframe 
-            src="https://gamma.app/embed/eyaoywuhq5g7quk" 
-            style={{ width: "700px", maxWidth: "100%", height: "450px" }} 
-            allow="fullscreen"
-            allowFullScreen 
-            title="Impact TMS Clinical Dashboard"
-          ></iframe>
+        <div className="max-w-7xl mx-auto flex justify-center w-full">
+          <div className="w-full flex items-center justify-center h-[700px] bg-slate-100 rounded-2xl border border-dashed border-slate-300">
+            <p className="text-slate-500">Please provide the PDF URL to embed here.</p>
+          </div>
         </div>
       </section>
 
