@@ -190,8 +190,15 @@ export default function FluidUI() {
 
 
 
+          <AnimatePresence mode="wait">
           {activeTab === "core" &&
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+          <motion.div 
+            key="core"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-16">
               <div className="flex justify-center w-full">
                 <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" style={{ width: "100%", height: "700px" }} title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
               </div>
@@ -244,11 +251,17 @@ export default function FluidUI() {
                 
                 </div>
               </div>
-            </div>
+            </motion.div>
           }
 
           {activeTab === "state" &&
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+          <motion.div 
+            key="state"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
@@ -334,11 +347,17 @@ export default function FluidUI() {
                   <AnnotationOverlay annotations={dynamicDegradationAnnotations} />
                 </div>
               </div>
-            </div>
+            </motion.div>
           }
 
           {activeTab === "logic" &&
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-16">
+          <motion.div 
+            key="logic"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
@@ -387,8 +406,9 @@ export default function FluidUI() {
                   <AnnotationOverlay annotations={annotationsData.interaction} />
                 </div>
               </div>
-            </div>
+            </motion.div>
           }
+          </AnimatePresence>
 
         </div>
       </div>
