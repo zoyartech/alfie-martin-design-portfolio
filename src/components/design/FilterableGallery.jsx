@@ -49,7 +49,7 @@ const projects = [
   tags: ["AI", "Smart Contracts", "Product Design"]
 },
 {
-  title: "The User Experience of AI Products",
+  title: "Confidence Scores in Artifical Intelligence",
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
