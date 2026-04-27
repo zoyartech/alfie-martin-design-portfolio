@@ -281,6 +281,21 @@ export default function DesignStrategyAI() {
             </div>
           }
 
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4c85f8536_mediumsev.png")}>
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4c85f8536_mediumsev.png"
+                alt="Medium Severity Issue"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
+            </div>
+            <div className="cursor-zoom-in" onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2a9109138_high-sev.png")}>
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2a9109138_high-sev.png"
+                alt="High Severity Issue"
+                className="w-full h-auto rounded-lg shadow-md border border-slate-100 hover:opacity-95 transition-opacity" />
+            </div>
+          </div>
+
           <h3 className="text-slate-900 mb-8 text-3xl font-extrabold">Key Design Decisions</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border-l-[6px] border-[#3b82f6] pl-6 py-1">
