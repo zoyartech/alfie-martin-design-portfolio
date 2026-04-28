@@ -64,9 +64,9 @@ const projects = [
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
   stats: [
-    { label: "Intake Completion", value: "+40%" },
-    { label: "Engagement", value: "85%" }
-  ],
+  { label: "Intake Completion", value: "+40%" },
+  { label: "Engagement", value: "85%" }],
+
   tags: ["AI in Healthcare", "Product Design", "Mental Health"]
 },
 
@@ -160,9 +160,9 @@ export default function FilterableGallery() {
 
         <div className="relative w-full mt-16 pb-24">
           <AnimatePresence>
-            {filtered.map((project, i) => (
-              <StickyCard key={project.title} project={project} index={i} total={filtered.length} />
-            ))}
+            {filtered.map((project, i) =>
+            <StickyCard key={project.title} project={project} index={i} total={filtered.length} />
+            )}
           </AnimatePresence>
         </div>
 
@@ -183,7 +183,7 @@ export default function FilterableGallery() {
 
 function StickyCard({ project, index, total }) {
   const ref = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -194,30 +194,30 @@ function StickyCard({ project, index, total }) {
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["16px", "24px"]);
 
   return (
-    <motion.div 
-      ref={ref} 
+    <motion.div
+      ref={ref}
       layout
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.5 }}
       className="sticky top-0 h-[100vh] w-full flex flex-col items-center justify-center py-6 md:py-12"
-      style={{ zIndex: index }}
-    >
-      <motion.div 
+      style={{ zIndex: index }}>
+      
+      <motion.div
         style={{ scale, opacity, borderRadius }}
-        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group"
-      >
+        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
+        
         <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative">
-          <div className="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden bg-gray-50 flex items-center justify-center p-8">
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} 
-            />
+          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
+            <img
+              src={project.image}
+              alt={project.title}
+              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} />
+            
           </div>
 
-          <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 md:p-16 flex flex-col bg-white">
+          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               {project.category && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.category}</span>}
               {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
@@ -225,16 +225,16 @@ function StickyCard({ project, index, total }) {
             <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-4 md:mb-6">{project.title}</h3>
             <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">{project.summary}</p>
             
-            {project.stats && project.stats.length > 0 && (
-              <div className="grid grid-cols-2 gap-6 mt-auto pb-8 border-b border-gray-100 mb-8 hidden md:grid">
-                {project.stats.map(stat => (
-                  <div key={stat.label}>
+            {project.stats && project.stats.length > 0 &&
+            <div className="grid grid-cols-2 gap-6 mt-auto pb-8 border-b border-gray-100 mb-8 hidden md:grid">
+                {project.stats.map((stat) =>
+              <div key={stat.label}>
                     <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">{stat.value}</p>
                     <p className="text-sm text-gray-500 font-medium">{stat.label}</p>
                   </div>
-                ))}
+              )}
               </div>
-            )}
+            }
             
             <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium text-black group-hover:text-blue-600 transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0">
               Read Case Study <ArrowUpRight className="w-5 h-5" />
@@ -242,6 +242,6 @@ function StickyCard({ project, index, total }) {
           </div>
         </Link>
       </motion.div>
-    </motion.div>
-  );
+    </motion.div>);
+
 }
