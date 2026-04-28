@@ -237,7 +237,7 @@ function StickyCard({ project, index, total }) {
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className={`grid grid-cols-2 gap-6 mt-auto pb-8 border-b mb-8 hidden md:grid bg-[#c5dfb1] ${project.theme === 'dark' ? 'border-gray-600/50' : 'border-gray-100'}`}>
+            <div className={`grid grid-cols-2 gap-6 mt-auto pb-8 border-b mb-8 hidden md:grid bg-[#97dc90] ${project.theme === 'dark' ? 'border-gray-600/50' : 'border-gray-100'}`}>
                 {project.stats.map((stat) =>
               <div key={stat.label}>
                     <p className={`text-2xl md:text-3xl font-light mb-1 ${project.theme === 'dark' ? 'text-[#2b5769]' : 'text-gray-900'}`}>{stat.value}</p>
