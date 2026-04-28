@@ -92,7 +92,7 @@ export default function ConversationCraft() {
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
             <div className="space-y-4">
               <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">1. Probability Bar</h4>
-              <ProbabilityBar value={0.82} />
+              <ProbabilityBar value={0.82} label="Diagnosis match" />
               <ProbabilityBar value={0.95} label="Treatment efficacy" />
               <ProbabilityBar value={0.45} label="Symptom correlation" />
             </div>
