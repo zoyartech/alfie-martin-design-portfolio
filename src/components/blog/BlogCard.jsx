@@ -15,9 +15,9 @@ export default function BlogCard({ post }) {
       </div>
       <Link
         to={`${createPageUrl('BlogPost')}?id=${post.id}`}
-        className="inline-flex text-sm tracking-[0.15em] border-b border-black w-fit pb-1 text-black hover:text-gray-600 hover:border-gray-600 transition-colors mt-2">
+        className="inline-flex text-2xl font-light text-black hover:text-gray-600 transition-colors mt-2">
         
-        READ MORE
+        {post.title}
       </Link>
     </div>);
 
