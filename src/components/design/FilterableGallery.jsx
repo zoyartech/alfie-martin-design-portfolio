@@ -214,7 +214,7 @@ function StickyCard({ project, index, total }) {
               src={project.image}
               alt={project.title}
               style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
-              className={`border border-gray-800 group-hover:scale-105 transition-transform duration-700 ${
+              className={`border-2 border-gray-800 group-hover:scale-105 transition-transform duration-700 ${
                 (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-')
                   ? 'max-w-full max-h-full w-auto h-auto object-contain'
                   : `w-full h-full ${project.imageFit || 'object-cover'}`
