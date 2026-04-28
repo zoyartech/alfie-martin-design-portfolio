@@ -213,7 +213,7 @@ function StickyCard({ project, index, total }) {
             <img
               src={project.image}
               alt={project.title}
-              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} />
+              className={`w-full h-full rounded-[30px] ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} />
             
           </div>
 
