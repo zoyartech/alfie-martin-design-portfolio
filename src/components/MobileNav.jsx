@@ -11,7 +11,8 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
     { label: "HOME", page: "Home" },
     { label: "ABOUT", page: "About" },
     { label: "CASE STUDIES", page: "CaseStudies" },
-    { label: "CONTACT", page: "Contact" }
+    { label: "CONTACT", page: "Contact" },
+    { label: "BLOG", url: "https://medium.com/@deadinsidenyc" }
   ];
 
 
@@ -68,6 +69,20 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
                         ))}
                       </div>
                     </div>
+                  );
+                }
+                if (link.url) {
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="text-lg tracking-[0.2em] font-light transition-colors text-gray-500 hover:text-black"
+                    >
+                      {link.label}
+                    </a>
                   );
                 }
                 return (

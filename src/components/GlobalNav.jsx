@@ -43,6 +43,11 @@ export default function GlobalNav() {
               CONTACT
               <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'Contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
+            <a
+              href="https://medium.com/@deadinsidenyc" target="_blank" rel="noopener noreferrer" className="text-foreground text-xs font-bold tracking-[0.15em] relative transition-colors group hover:text-slate-500">
+              BLOG
+              <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground w-0 group-hover:w-full`}></span>
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4 mr-4">
