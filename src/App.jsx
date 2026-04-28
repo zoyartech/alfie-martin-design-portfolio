@@ -5,6 +5,7 @@ import NavigationTracker from '@/lib/NavigationTracker'
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { ThemeProvider } from 'next-themes';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -187,8 +188,9 @@ function App() {
   });
 
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
         {showSplash && (
           <SplashScreen onComplete={() => {
             sessionStorage.setItem('splashShown', 'true');
@@ -202,7 +204,8 @@ function App() {
         </Router>
         <Toaster />
       </QueryClientProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 
