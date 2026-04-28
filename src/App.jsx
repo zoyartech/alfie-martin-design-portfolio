@@ -61,6 +61,7 @@ import Veil from './pages/Veil';
 import FluidUI from './pages/FluidUI';
 import DesignSystem from './pages/DesignSystem';
 import SplashScreen from './components/SplashScreen';
+import ConversationCraft from './pages/ConversationCraft';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -176,6 +177,7 @@ const AuthenticatedApp = () => {
       <Route path="/Veil" element={<Veil />} />
       <Route path="/FluidUI" element={<FluidUI />} />
       <Route path="/DesignSystem" element={<DesignSystem />} />
+      <Route path="/ConversationCraft" element={<ConversationCraft />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>

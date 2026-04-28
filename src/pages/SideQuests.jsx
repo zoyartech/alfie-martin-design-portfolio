@@ -128,6 +128,21 @@ export default function SideQuests() {
                     <p className="text-slate-600 font-sans">A collaborative space for new ideas</p>
                 </div>
             </a>
+
+            <Link to={createPageUrl("ConversationCraft")} className="group block">
+                <div className="aspect-[4/3] bg-[#0f172a] rounded-xl border border-gray-100 overflow-hidden mb-6 flex flex-col items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800" />
+                    <div className="relative z-10 w-full space-y-3 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div className="w-3/4 h-6 bg-slate-800 rounded-lg rounded-tl-sm border border-slate-700/50" />
+                        <div className="w-1/2 h-6 bg-emerald-900/30 rounded-lg rounded-tr-sm ml-auto border border-emerald-800/30" />
+                        <div className="w-full h-10 bg-slate-800 rounded-lg rounded-tl-sm border border-slate-700/50" />
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Conversational Craft</h3>
+                    <p className="text-slate-600 font-sans">Designing trust into AI agents</p>
+                </div>
+            </Link>
         </div>
 
 
