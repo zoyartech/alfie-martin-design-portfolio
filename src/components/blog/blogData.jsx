@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: "designing-for-ai-trust",
-    title: "Suggestions for Implementing Career Development learning programs in your organization",
+    title: "we don't grasp meaning by pointing to referents but by mastering language games",
     subtitle: "I work in product design, and I watch companies trip over themselves trying to get people to trust their AI features.",
     category: "AI Design",
     date: "March 20, 2026",
