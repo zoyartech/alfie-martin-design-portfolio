@@ -109,11 +109,11 @@ export default function FilterableGallery() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-[#d9d9d9] text-sm font-medium text-black transition-all">
-                      Products I've Built
+                      Product Design
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Products I've built</p>
+                    <p>Product Design</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
