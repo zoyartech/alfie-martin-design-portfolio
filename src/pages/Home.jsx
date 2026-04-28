@@ -235,7 +235,7 @@ export default function Home() {
               transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               className="block mt-6 text-xl text-gray-500"
             >
-              ― Alfie Martin
+              ― a poem on first principles and system thinking
             </motion.span>
           </blockquote>
         </div>
