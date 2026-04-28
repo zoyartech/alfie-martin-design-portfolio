@@ -59,7 +59,7 @@ export default function BlogPost() {
             
             
             <div className="space-y-6">
-              <h2 className="text-3xl font-light mb-8 text-gray-900 hidden">Cohort based Programs are far more effective than asynchronous classes</h2>
+              
               <h3 className="text-2xl font-light mb-4 text-gray-900">Designing Learning Programs</h3>
               
               <p className="mb-6 text-lg">Traditional education was created for one type of learning in classrooms led by the same types of exhausted and underpaid staff. High schools in America for the most part do not prepare students for the educational journeys they choose next.</p>
