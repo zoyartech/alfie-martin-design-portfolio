@@ -2,8 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
-import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +12,6 @@ import {
 export default function GlobalNav() {
   const location = useLocation();
   const path = location.pathname.split("/")[1] || "Home";
-  const { theme, setTheme } = useTheme();
 
   return (
     <nav className="bg-background/90 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300 border-b border-border">
@@ -42,14 +39,6 @@ export default function GlobalNav() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-foreground"
-              aria-label="Toggle dark mode"
-            >
-              <Sun className="h-5 w-5 hidden dark:block" />
-              <Moon className="h-5 w-5 block dark:hidden" />
-            </button>
             <MobileNav activePage={path} />
           </div>
         </div>

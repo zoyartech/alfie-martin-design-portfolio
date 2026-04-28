@@ -1,19 +1,31 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, X } from "lucide-react";
+import { ArrowLeft, X, Moon, Sun } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import { useTheme } from "next-themes";
 import AISeoDashboard from "@/components/AISeoDashboard";
 
 export default function SAO() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="min-h-screen bg-white text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
       <div className="max-w-5xl mx-auto">
-        <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-        </Link>
+        <div className="flex justify-between items-center mb-12">
+          <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+          </Link>
+          <button
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-500"
+            aria-label="Toggle dark mode"
+          >
+            <Sun className="h-5 w-5 hidden dark:block" />
+            <Moon className="h-5 w-5 block dark:hidden" />
+          </button>
+        </div>
         
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <h1 className="text-5xl font-light tracking-tight mb-6">SAO Dashboard</h1>
