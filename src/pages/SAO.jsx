@@ -32,11 +32,11 @@ export default function SAO() {
             "Search agent optimization" (sometimes called Agentic Search Optimization, or grouped with Generative Engine Optimization / Answer Engine Optimization) is the practice of making your content discoverable, citable, and actionable by AI agents, ChatGPT, Perplexity, Claude, Gemini, Google's AI Mode; instead of just ranking blue links in Google. It's a distinct layer on top of classic SEO, not a replacement.
           </p>
 
-          <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100 bg-white p-4 md:p-8">
+          <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100 bg-white p-4 md:p-8 flex justify-center">
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png" 
               alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era" 
-              className="w-full h-auto object-contain" 
+              className="w-[28%] h-auto object-contain" 
             />
           </div>
 
