@@ -57,6 +57,36 @@ export default function SideQuests() {
                 </div>
             </Link>
 
+            <Link to={createPageUrl("RockefellerCapital")} className="group block">
+                <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5b2be1488_Screenshot2026-03-25at92734PM.png" alt="Rockefeller Capital Management" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Rockefeller Capital Management</h3>
+                    <p className="text-slate-600 font-sans">Improving the User Experience</p>
+                </div>
+            </Link>
+
+            <Link to={createPageUrl("TCSMarathon")} className="group block">
+                <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80" alt="TCS NYC Marathon App" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">TCS NYC Marathon App</h3>
+                    <p className="text-slate-600 font-sans">Real-time runner tracking experience</p>
+                </div>
+            </Link>
+
+            <Link to={createPageUrl("ActivationGrammarly")} className="group block">
+                <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0e719488f_growthlever.png" alt="Activation at Grammarly" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Activation at Grammarly</h3>
+                    <p className="text-slate-600 font-sans">Improve user activation and time-to-value</p>
+                </div>
+            </Link>
+
             <Link to={createPageUrl("AdinaProject")} className="group block">
                 <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
                     <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd037aeb_Screenshot2026-03-21at124006PM.png" alt="Adina" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
