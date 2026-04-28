@@ -302,7 +302,7 @@ export default function ComponentShowcase() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <h1 className="text-4xl font-light mb-4 text-slate-900 flex items-center gap-3">
-                <Layout className="lucide lucide-panels-top-left w-8 h-8 text-blue-600 hidden" /> Component Showcase
+                 Component Showcase
               </h1>
               <p className="text-lg text-slate-600 max-w-3xl">
                 Drag and drop components to build layouts and preview themes in context. 
