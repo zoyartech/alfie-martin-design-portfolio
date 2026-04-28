@@ -66,11 +66,11 @@ export default function BlogPost() {
 
               </p>
               
-              <p className="mb-6 text-lg font-normal hidden"> Walter Benjamin and Ludwig Wittgenstein never met. They wouldn’t have gotten along. Benjamin wrote sentences that go on for entire pages and feel like they have just punched you in the head.  Wittgenstein wrote in listicles, like a guy trying to debug language itself. They came from opposite land. Benjamin out of German Marxism and the Frankfurt School, Wittgenstein out of the icy logic of Cambridge analytic philosophy. They had almost nothing in common. Exept one topic they both revisted often. They were both trying to name what gets lost when you strip a practice from its surroundings. Wittgenstein called it the form of life or the embodied, historical, biological substrate that language games rest on top of. Benjamin called it aura , the unique presence of a work in its place and time, its embeddedness in tradition and ritual. Different vocabulary. Same shape. And between the two of them, they gave us the cleanest framework anyone has for what is actually missing from a language model.
+              
 
 
 
-              </p>
+              
               
               
               
