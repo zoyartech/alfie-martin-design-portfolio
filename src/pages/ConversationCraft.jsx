@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ShowcaseConversation from "@/components/design/ShowcaseConversation";
+import { ProbabilityBar, HedgedTooltip, SourceCitationChip, LowConfidenceBanner, NumericalScorePopover } from "@/components/design/ConfidenceLibrary";
 
 export default function ConversationCraft() {
   return (
@@ -79,7 +80,53 @@ export default function ConversationCraft() {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed text-sm mt-24">
+        {/* Confidence Library Section */}
+        <div className="max-w-5xl mx-auto mt-32 pt-20 border-t border-slate-100">
+          <div className="mb-16">
+            <h2 className="text-3xl font-light mb-4 font-serif text-slate-900">Confidence Indicator Patterns</h2>
+            <p className="text-slate-600 text-sm max-w-2xl leading-relaxed">
+              Different contexts require different expressions of uncertainty. These patterns treat confidence as a spectrum, utilizing typography, layout, and interaction to guide user trust. Hover over any pattern to see the design rationale.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">1. Probability Bar</h4>
+              <ProbabilityBar value={0.82} />
+              <ProbabilityBar value={0.95} label="Treatment efficacy" />
+              <ProbabilityBar value={0.45} label="Symptom correlation" />
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">2. Hedged Language</h4>
+              <HedgedTooltip />
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">3. Source Citation</h4>
+              <SourceCitationChip />
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">4. Decomposition Score</h4>
+              <div className="bg-white p-6 border border-slate-100 rounded-sm">
+                <div className="flex items-start justify-between">
+                  <p className="text-sm text-slate-700 max-w-[200px]">
+                    Risk assessment complete. Model certainty is moderate.
+                  </p>
+                  <NumericalScorePopover />
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-2 space-y-4">
+              <h4 className="text-xs font-bold tracking-widest text-slate-900 uppercase">5. Low Confidence Banner</h4>
+              <LowConfidenceBanner />
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed text-sm mt-32 pt-20 border-t border-slate-100">
           <p>
             The "only when communicates something useful" clause on confidence badges is doing a lot of work — it stops the model from slapping a percentage on every message, which is what most generic chatbot UI demos look like. You can swap in your own thresholds if you have a POV.
           </p>
