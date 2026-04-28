@@ -14,7 +14,7 @@ const projects = [
   imageFit: "object-contain",
   year: "2024",
   link: "DesignSystemPlayground",
-  summary: "Interactive design system playground and component library.",
+  summary: "Interactive design system playground and component library. Engage with interactive components, preview them in their states by drop and drag, and preview in dark mode.",
   stats: [],
   tags: ["Design Systems"]
 },
