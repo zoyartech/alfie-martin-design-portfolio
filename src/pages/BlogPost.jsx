@@ -28,7 +28,7 @@ export default function BlogPost() {
           
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight">
-              Social Capital that can't be purchased
+              {post.title}
             </h1>
             
 
@@ -62,15 +62,15 @@ export default function BlogPost() {
               
               
               
-              <p className="mb-6 text-xl font-normal">There are forms of social capital that the smallest tax bracketst cannot buy, and the inability frustrates them. They notice it in their staff and in the artists they commission or the housekeeper who moves through the world without performance, the painter who walks into the room already belonging to something the patron will never be admitted to. What they covet most is precisely what their abundance and influence cannot reach: ease, lineage, the unforced confidence of a life that did not have to be assembled. They can hire the people who have it. They cannot become them. The artists with inherited legitimacy is somethng they view with envy and awe. Despite them inheriting nearly everything else. And so the resentment underneath dressed up as taste, dressed up as discernment, dressed up as anything other than what it is that lingers on their face.
+              <p className="mb-6 text-xl font-normal">There are forms of social capital that the smallest tax brackets cannot buy, and the inability frustrates them. They notice it in their staff and in the artists they commission or the housekeeper who moves through the world without performance, the painter who walks into the room already belonging to something the patron will never be admitted to. What they covet most is precisely what their abundance and influence cannot reach: ease, lineage, the unforced confidence of a life that did not have to be assembled. They can hire the people who have it. They cannot become them. The artists with inherited legitimacy is somethng they view with envy and awe. Despite them inheriting nearly everything else. And so the resentment underneath dressed up as taste, dressed up as discernment, dressed up as anything other than what it is that lingers on their face.
 
               </p>
               
-              <p className="mb-6 text-lg font-normal hidden"> Walter Benjamin and Ludwig Wittgenstein never met. They wouldn’t have gotten along. Benjamin wrote sentences that go on for entire pages and feel like they have just punched you in the head.  Wittgenstein wrote in listicles, like a guy trying to debug language itself. They came from opposite land. Benjamin out of German Marxism and the Frankfurt School, Wittgenstein out of the icy logic of Cambridge analytic philosophy. They had almost nothing in common. Exept one topic they both revisted often. They were both trying to name what gets lost when you strip a practice from its surroundings. Wittgenstein called it the form of life or the embodied, historical, biological substrate that language games rest on top of. Benjamin called it aura , the unique presence of a work in its place and time, its embeddedness in tradition and ritual. Different vocabulary. Same shape. And between the two of them, they gave us the cleanest framework anyone has for what is actually missing from a language model.
+              
 
 
 
-              </p>
+              
               
               
               
