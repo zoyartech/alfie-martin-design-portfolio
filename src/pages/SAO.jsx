@@ -36,7 +36,7 @@ export default function SAO() {
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png" 
               alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era" 
-              className="w-[28%] h-auto object-contain" 
+              className="w-[48%] h-auto object-contain" 
             />
           </div>
 
