@@ -37,7 +37,7 @@ export const ProbabilityBar = ({ value = 0.78, label = "Diagnosis match" }) => {
 
   return (
     <Tooltip content="A horizontal probability bar makes confidence scannable without requiring the user to decode a percentage. The fill color maps to the same three-tier system used across all patterns — consistent thresholds, consistent semantics.">
-      <div className="group cursor-default w-full">
+      <div className="group cursor-default w-full mb-6">
         <div className="flex justify-between items-center mb-2">
           <span className="text-xs font-mono text-slate-500 uppercase tracking-wider">{label}</span>
           <span className={`text-xs font-mono font-semibold ${textColor}`}>{pct}%</span>
