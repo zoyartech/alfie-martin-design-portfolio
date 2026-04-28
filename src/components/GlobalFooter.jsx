@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 
 const EMAIL = "alfie@alfiealfie.com";
 
@@ -43,37 +40,11 @@ export default function GlobalFooter() {
         <div className="mb-16">
           <WobblyEmail />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-gray-100">
-          <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-bold tracking-[0.2em] text-gray-900 uppercase">Navigation</h4>
-            <div className="flex flex-col gap-3">
-              <Link to={createPageUrl("Home")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Home</Link>
-              <Link to={createPageUrl("About")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">About</Link>
-              <Link to={createPageUrl("CaseStudies")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Case Studies</Link>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-bold tracking-[0.2em] text-gray-900 uppercase">Practice Areas</h4>
-            <div className="flex flex-col gap-3">
-              <Link to={createPageUrl("SideQuests")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Product Design</Link>
-              <Link to={createPageUrl("Writing")} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Content Strategy</Link>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-6 md:items-end">
-            <div className="flex items-center gap-5">
-              <a href="mailto:alfie@alfiealfie.com" className="text-gray-400 hover:text-gray-900 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/in/alfieisbored/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://www.instagram.com/wexleyhouse" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} Alfie Martin. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-gray-100 pt-8">
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Alfie Martin. All rights reserved.</p>
+          <div className="flex items-center gap-6 text-xs text-gray-400">
+            
+            
           </div>
         </div>
       </div>
