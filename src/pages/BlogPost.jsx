@@ -66,7 +66,7 @@ export default function BlogPost() {
 Walter Benjamin would have said that generative AI is "The Work of Art in the Age of Mechanical Reproduction" basically wrote the viral post thirty years before the technology existed. Pair him with Baudrillard on simulacra: AI output is the limit case of his fourth-order simulation, where signs refer to nothing but other signs. Things like deepfakes, synthetic media, training data eating its own tail like the weird ouraboras symbol.
 </p>
               
-              <p className="mb-6 text-lg">Walter Benjamin would have said that generative AI is "The Work of Art in the Age of Mechanical Reproduction" basically wrote the viral post thirty years before the technology existed. Pair him with Baudrillard on simulacra: AI output is the limit case of his fourth-order simulation, where signs refer to nothing but other signs. Things like deepfakes, synthetic media, training data eating its own tail like the weird ouraboras symbol.
+              <p className="mb-6 text-lg font-normal">Walter Benjamin would have said that generative AI is "The Work of Art in the Age of Mechanical Reproduction" basically wrote the viral post thirty years before the technology existed. Pair him with Baudrillard on simulacra: AI output is the limit case of his fourth-order simulation, where signs refer to nothing but other signs. Things like deepfakes, synthetic media, training data eating its own tail like the weird ouraboras symbol.
 
 Walter Benjamin and Ludwig Wittgenstein never met. They wouldn’t have gotten along. Benjamin wrote sentences that go on for entire pages and feel like they have just punched you in the head.  Wittgenstein wrote in bullet lists, like a guy trying to debug language itself. They came from opposite land. Benjamin out of German Marxism and the Frankfurt School, Wittgenstein out of the icy logic of Cambridge analytic philosophy. They had almost nothing in common.
 Exept one topic they both revisted often.
@@ -90,11 +90,11 @@ They were both trying to name what gets lost when you strip a practice from its 
               
               <p className="mb-6 text-lg hidden">Cohort-based programs are often more successful even though they may be less flexible. Being part of a cohort provides a sense of community, accountability, and support.</p>
               
-              <p className="mb-6 text-lg">In the job market today, high rates of involuntary attrition and low employee retention can be avoided if employers want to keep their best employees, The answers aren't as simple as throwing them a bonus or raise.</p>
+              <p className="mb-6 text-lg hidden">In the job market today, high rates of involuntary attrition and low employee retention can be avoided if employers want to keep their best employees, The answers aren't as simple as throwing them a bonus or raise.</p>
               
-              <p className="mb-6 text-lg">A lot of people left their jobs these past two years due to a lack of career advancement. Encouraging career development and letting your internal employees change positions within your company even if it is bilaterally might be easier said than done. But employee programs are a long-term investment. The cost of replacing employees once they leave eventually surpasses the cost of implementing successfully designed programs for your employees.</p>
+              <p className="mb-6 text-lg hidden">A lot of people left their jobs these past two years due to a lack of career advancement. Encouraging career development and letting your internal employees change positions within your company even if it is bilaterally might be easier said than done. But employee programs are a long-term investment. The cost of replacing employees once they leave eventually surpasses the cost of implementing successfully designed programs for your employees.</p>
               
-              <p className="mb-6 text-lg">When you weigh the costs of losing employees and hiring new ones, versus a well-designed learning program with an overarching theme of critical thinking and continuous self-learning, student accountability, collaboration, and mentorship. It's easy to see the second choice pays off in the long term.</p>
+              <p className="mb-6 text-lg hidden">When you weigh the costs of losing employees and hiring new ones, versus a well-designed learning program with an overarching theme of critical thinking and continuous self-learning, student accountability, collaboration, and mentorship. It's easy to see the second choice pays off in the long term.</p>
             </div>
           </div>
         </motion.article>
