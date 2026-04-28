@@ -13,48 +13,48 @@ import {
 
 export default function B6() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-950">
       {/* Header */}
-      <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-50">
+      <section className="pt-32 pb-16 px-6 lg:px-12 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center gap-6 mb-12">
-            <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
+            <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
             </Link>
-            <Link to={createPageUrl("FluidUI")} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black transition-colors">
+            <Link to={createPageUrl("FluidUI")} className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-white transition-colors">
               Designing VUI <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
           
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="flex flex-wrap gap-3 mb-6">
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold tracking-wider rounded-full">PRODUCT DESIGN</span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold tracking-wider rounded-full">AI MED TECH</span>
-              <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold tracking-wider rounded-full">MENTAL HEALTH</span>
+              <span className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs font-semibold tracking-wider rounded-full">PRODUCT DESIGN</span>
+              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs font-semibold tracking-wider rounded-full">AI MED TECH</span>
+              <span className="px-3 py-1 bg-emerald-900/50 text-emerald-300 text-xs font-semibold tracking-wider rounded-full">MENTAL HEALTH</span>
             </div>
-            <h1 className="text-slate-900 mb-6 text-4xl font-normal tracking-tight md:text-6xl">Breakthrough 6: AI-Driven Care in Mental Health
+            <h1 className="text-white mb-6 text-4xl font-normal tracking-tight md:text-6xl">Breakthrough 6: AI-Driven Care in Mental Health
 
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed mb-12">
+            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl leading-relaxed mb-12">
               Designing an intelligent, empathetic patient experience for a nationwide network of BRAIN Centers offering FDA-approved, drug-free neurotherapy treatments.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-slate-800">
               <div>
-                <p className="text-sm text-gray-500 font-medium mb-1">Role</p>
-                <p className="font-medium text-slate-900">Lead Product Designer</p>
+                <p className="text-sm text-slate-400 font-medium mb-1">Role</p>
+                <p className="font-medium text-white">Lead Product Designer</p>
               </div>
               <div>
-                <p className="text-sm text-gray-500 font-medium mb-1">Timeline</p>
-                <p className="font-medium text-slate-900">2024</p>
+                <p className="text-sm text-slate-400 font-medium mb-1">Timeline</p>
+                <p className="font-medium text-white">2024</p>
               </div>
               <div>
-                <p className="text-sm text-gray-500 font-medium mb-1">Platform</p>
-                <p className="font-medium text-slate-900">Web & Mobile App</p>
+                <p className="text-sm text-slate-400 font-medium mb-1">Platform</p>
+                <p className="font-medium text-white">Web & Mobile App</p>
               </div>
               <div>
-                <p className="text-sm text-gray-500 font-medium mb-1">Client</p>
-                <p className="font-medium text-slate-900">Breakthrough 6</p>
+                <p className="text-sm text-slate-400 font-medium mb-1">Client</p>
+                <p className="font-medium text-white">Breakthrough 6</p>
               </div>
             </div>
           </motion.div>
@@ -74,15 +74,15 @@ export default function B6() {
       </section>
 
       {/* Live Prototype */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
+      <section className="py-24 px-6 lg:px-12 bg-slate-950">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-slate-900">Live Prototype</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-white">Live Prototype</h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Experience the patient journey through our interactive Impact Neuro Flow prototype.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export default function B6() {
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2d9bb8294_1.png"
             alt="What if Mental Health Treatment Worked"
-            className="w-full h-auto object-contain rounded-2xl shadow-xl" />
+            className="w-full h-auto object-contain rounded-2xl shadow-2xl shadow-black/50" />
           
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function B6() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full h-[1000px] rounded-[9px] overflow-hidden shadow-2xl border border-gray-200">
+          className="w-full h-[1000px] rounded-[9px] overflow-hidden shadow-2xl shadow-black/50 border border-slate-800">
           <iframe
             src="https://impact-neuro-flow.base44.app"
             className="w-full h-full border-0"
@@ -124,13 +124,13 @@ export default function B6() {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h2 className="text-3xl font-medium text-slate-900 sticky top-24">The Challenge</h2>
+            <h2 className="text-3xl font-medium text-white sticky top-24">The Challenge</h2>
           </div>
           <div className="md:col-span-8">
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+            <p className="text-xl text-slate-300 leading-relaxed mb-6">
               What if mental health treatment actually worked? That's the question Breakthrough 6 (B6) asked when creating their nationwide network of BRAIN (Breakthroughs in Rapid Acting Interventional Neurotherapy) Centers. They offer drug-free, FDA-approved treatments for depression, PTSD, OCD, and ADHD.
             </p>
-            <p className="text-xl text-gray-700 leading-relaxed mb-12">
+            <p className="text-xl text-slate-300 leading-relaxed mb-12">
               The challenge was designing a digital patient experience that felt as revolutionary as their treatments. We needed an AI-driven intake and monitoring system that didn't feel cold or robotic, but deeply empathetic and secure—guiding patients from their first inquiry to post-treatment recovery.
             </p>
             
@@ -227,14 +227,14 @@ export default function B6() {
                     <img
                     src={src}
                     alt={`Audience Segment ${index + 1}`}
-                    className="w-full h-auto object-contain rounded-2xl shadow-md border border-gray-200" />
+                    className="w-full h-auto object-contain rounded-2xl shadow-lg border border-slate-800" />
                   
                   </div>
                 </CarouselItem>
               )}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="text-slate-900" />
+            <CarouselNext className="text-slate-900" />
           </Carousel>
         </motion.div>
       </section>
@@ -249,7 +249,7 @@ export default function B6() {
           className="max-w-7xl mx-auto flex justify-center w-full">
           <iframe 
             src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/5cd5a7ed6_Impact-TMS-Clinical-Dashboard.pdf" 
-            className="w-full h-[700px] rounded-2xl border border-slate-200 shadow-sm bg-white"
+            className="w-full h-[700px] rounded-2xl border border-slate-800 shadow-2xl shadow-black/50 bg-white"
             title="Impact TMS Clinical Dashboard PDF"
           ></iframe>
         </motion.div>
@@ -324,7 +324,7 @@ export default function B6() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl lg:text-4xl font-medium mb-16 text-slate-900">The Impact</motion.h2>
+            className="text-3xl lg:text-4xl font-medium mb-16 text-white">The Impact</motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
@@ -332,39 +332,39 @@ export default function B6() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <div className="text-5xl font-light text-blue-600 mb-4">40%</div>
-              <p className="text-xl font-medium text-slate-900 mb-2">Increase in Intake Completion</p>
-              <p className="text-gray-600">Compared to the previous static PDF forms.</p>
+              className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+              <div className="text-5xl font-light text-blue-400 mb-4">40%</div>
+              <p className="text-xl font-medium text-white mb-2">Increase in Intake Completion</p>
+              <p className="text-slate-400">Compared to the previous static PDF forms.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <div className="text-5xl font-light text-emerald-600 mb-4">85%</div>
-              <p className="text-xl font-medium text-slate-900 mb-2">Daily Check-in Rate</p>
-              <p className="text-gray-600">High engagement with the AI symptom tracker.</p>
+              className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+              <div className="text-5xl font-light text-emerald-400 mb-4">85%</div>
+              <p className="text-xl font-medium text-white mb-2">Daily Check-in Rate</p>
+              <p className="text-slate-400">High engagement with the AI symptom tracker.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <div className="text-5xl font-light text-purple-600 mb-4">3x</div>
-              <p className="text-xl font-medium text-slate-900 mb-2">Faster Triage</p>
-              <p className="text-gray-600">Clinicians received prioritized insights before sessions.</p>
+              className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+              <div className="text-5xl font-light text-purple-400 mb-4">3x</div>
+              <p className="text-xl font-medium text-white mb-2">Faster Triage</p>
+              <p className="text-slate-400">Clinicians received prioritized insights before sessions.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 lg:px-12 border-t border-gray-200">
+      <footer className="py-8 px-6 lg:px-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">© 2024 Alfie Martin. Case study for Breakthrough 6.</p>
+          <p className="text-sm text-slate-500">© 2024 Alfie Martin. Case study for Breakthrough 6.</p>
         </div>
       </footer>
     </div>);
