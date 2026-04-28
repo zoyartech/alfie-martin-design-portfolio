@@ -355,7 +355,7 @@ export default function DesignStrategyAI() {
           <div className="w-full flex justify-center mb-12">
             <img
               loading="lazy"
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f4b23b31b_Screenshot2026-03-22at40100PM.png"
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b3fed7822_chatinttent.png"
               alt="System architecture diagram"
               className="max-w-full md:max-w-3xl h-auto object-contain rounded-md" />
             
