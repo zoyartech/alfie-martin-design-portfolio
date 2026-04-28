@@ -28,7 +28,7 @@ export default function BlogPost() {
           
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight">
-              Types of Social Capital that cant be Purchased
+              {post.title}
             </h1>
             
 
