@@ -65,6 +65,7 @@ import SplashScreen from './components/SplashScreen';
 import ConversationCraft from './pages/ConversationCraft';
 import DesignSystemPlayground from './pages/DesignSystemPlayground';
 import ComponentShowcase from './pages/ComponentShowcase';
+import CaseStudyWrapper from './components/caseStudies/CaseStudyWrapper';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -139,49 +140,49 @@ const AuthenticatedApp = () => {
       <Route path="/CaseStudies" element={<CaseStudies />} />
       <Route path="/Writing" element={<Writing />} />
       <Route path="/Contact" element={<Contact />} />
-      <Route path="/TCSMarathon" element={<TCSMarathon />} />
-      <Route path="/DesignStrategyAI" element={<DesignStrategyAI />} />
-      <Route path="/WorkflowOptimizationHVAC" element={<WorkflowOptimizationHVAC />} />
-      <Route path="/GrammarlyProject" element={<GrammarlyProject />} />
-      <Route path="/CaseStudyDetail" element={<CaseStudyDetail />} />
-      <Route path="/DesignMarathon" element={<DesignMarathon />} />
-      <Route path="/PolaroidProject" element={<PolaroidProject />} />
-      <Route path="/ArbolCaseStudy" element={<ArbolCaseStudy />} />
+      <Route path="/TCSMarathon" element={<CaseStudyWrapper pageName="TCSMarathon"><TCSMarathon /></CaseStudyWrapper>} />
+      <Route path="/DesignStrategyAI" element={<CaseStudyWrapper pageName="DesignStrategyAI"><DesignStrategyAI /></CaseStudyWrapper>} />
+      <Route path="/WorkflowOptimizationHVAC" element={<CaseStudyWrapper pageName="WorkflowOptimizationHVAC"><WorkflowOptimizationHVAC /></CaseStudyWrapper>} />
+      <Route path="/GrammarlyProject" element={<CaseStudyWrapper pageName="GrammarlyProject"><GrammarlyProject /></CaseStudyWrapper>} />
+      <Route path="/CaseStudyDetail" element={<CaseStudyWrapper pageName="CaseStudyDetail"><CaseStudyDetail /></CaseStudyWrapper>} />
+      <Route path="/DesignMarathon" element={<CaseStudyWrapper pageName="DesignMarathon"><DesignMarathon /></CaseStudyWrapper>} />
+      <Route path="/PolaroidProject" element={<CaseStudyWrapper pageName="PolaroidProject"><PolaroidProject /></CaseStudyWrapper>} />
+      <Route path="/ArbolCaseStudy" element={<CaseStudyWrapper pageName="ArbolCaseStudy"><ArbolCaseStudy /></CaseStudyWrapper>} />
       <Route path="/Blog" element={<Blog />} />
-      <Route path="/GlossierStrategy" element={<GlossierStrategy />} />
+      <Route path="/GlossierStrategy" element={<CaseStudyWrapper pageName="GlossierStrategy"><GlossierStrategy /></CaseStudyWrapper>} />
       <Route path="/BlogPost" element={<BlogPost />} />
       <Route path="/SideQuests" element={<SideQuests />} />
       <Route path="/Insights" element={<Insights />} />
       <Route path="/InsightDetail" element={<InsightDetail />} />
-      <Route path="/AdinaProject" element={<AdinaProject />} />
-      <Route path="/TCSAttrition" element={<TCSAttrition />} />
+      <Route path="/AdinaProject" element={<CaseStudyWrapper pageName="AdinaProject"><AdinaProject /></CaseStudyWrapper>} />
+      <Route path="/TCSAttrition" element={<CaseStudyWrapper pageName="TCSAttrition"><TCSAttrition /></CaseStudyWrapper>} />
       <Route path="/SystemsThinkingPoem" element={<SystemsThinkingPoem />} />
       <Route path="/BrandGallery" element={<BrandGallery />} />
-      <Route path="/BrandConcepts" element={<BrandConcepts />} />
-      <Route path="/ConfidenceLab" element={<ConfidenceLab />} />
-      <Route path="/RockefellerCapital" element={<RockefellerCapital />} />
-      <Route path="/BillingUsabilityStudy" element={<BillingUsabilityStudy />} />
+      <Route path="/BrandConcepts" element={<CaseStudyWrapper pageName="BrandConcepts"><BrandConcepts /></CaseStudyWrapper>} />
+      <Route path="/ConfidenceLab" element={<CaseStudyWrapper pageName="ConfidenceLab"><ConfidenceLab /></CaseStudyWrapper>} />
+      <Route path="/RockefellerCapital" element={<CaseStudyWrapper pageName="RockefellerCapital"><RockefellerCapital /></CaseStudyWrapper>} />
+      <Route path="/BillingUsabilityStudy" element={<CaseStudyWrapper pageName="BillingUsabilityStudy"><BillingUsabilityStudy /></CaseStudyWrapper>} />
       <Route path="/IntroToDesigningExperiments" element={<IntroToDesigningExperiments />} />
       <Route path="/ExamplesOfGrowthDesignExperiments" element={<ExamplesOfGrowthDesignExperiments />} />
       <Route path="/EnterpriseContentStrategy" element={<EnterpriseContentStrategy />} />
-      <Route path="/ActivationGrammarly" element={<ActivationGrammarly />} />
+      <Route path="/ActivationGrammarly" element={<CaseStudyWrapper pageName="ActivationGrammarly"><ActivationGrammarly /></CaseStudyWrapper>} />
       <Route path="/Analytics" element={<Analytics />} />
-      <Route path="/PrincipalFinancial" element={<PrincipalFinancial />} />
-      <Route path="/RCM2" element={<RCM2 />} />
+      <Route path="/PrincipalFinancial" element={<CaseStudyWrapper pageName="PrincipalFinancial"><PrincipalFinancial /></CaseStudyWrapper>} />
+      <Route path="/RCM2" element={<CaseStudyWrapper pageName="RCM2"><RCM2 /></CaseStudyWrapper>} />
       <Route path="/UXResearchStudies" element={<UXResearchStudies />} />
-      <Route path="/ExelonUXR" element={<ExelonUXR />} />
-      <Route path="/RCMUXR" element={<RCMUXR />} />
+      <Route path="/ExelonUXR" element={<CaseStudyWrapper pageName="ExelonUXR"><ExelonUXR /></CaseStudyWrapper>} />
+      <Route path="/RCMUXR" element={<CaseStudyWrapper pageName="RCMUXR"><RCMUXR /></CaseStudyWrapper>} />
       <Route path="/AdminInsights" element={<AdminInsights />} />
-      <Route path="/CodeFlow" element={<CodeFlow />} />
-      <Route path="/DescriptExperiment" element={<DescriptExperiment />} />
-      <Route path="/b6" element={<B6 />} />
-      <Route path="/VoiceUserInterface" element={<VoiceUserInterface />} />
-      <Route path="/VoiceSimulation" element={<VoiceSimulation />} />
-      <Route path="/SAO" element={<SAO />} />
-      <Route path="/Veil" element={<Veil />} />
-      <Route path="/FluidUI" element={<FluidUI />} />
+      <Route path="/CodeFlow" element={<CaseStudyWrapper pageName="CodeFlow"><CodeFlow /></CaseStudyWrapper>} />
+      <Route path="/DescriptExperiment" element={<CaseStudyWrapper pageName="DescriptExperiment"><DescriptExperiment /></CaseStudyWrapper>} />
+      <Route path="/b6" element={<CaseStudyWrapper pageName="b6"><B6 /></CaseStudyWrapper>} />
+      <Route path="/VoiceUserInterface" element={<CaseStudyWrapper pageName="VoiceUserInterface"><VoiceUserInterface /></CaseStudyWrapper>} />
+      <Route path="/VoiceSimulation" element={<CaseStudyWrapper pageName="VoiceSimulation"><VoiceSimulation /></CaseStudyWrapper>} />
+      <Route path="/SAO" element={<CaseStudyWrapper pageName="SAO"><SAO /></CaseStudyWrapper>} />
+      <Route path="/Veil" element={<CaseStudyWrapper pageName="Veil"><Veil /></CaseStudyWrapper>} />
+      <Route path="/FluidUI" element={<CaseStudyWrapper pageName="FluidUI"><FluidUI /></CaseStudyWrapper>} />
       <Route path="/DesignSystem" element={<DesignSystem />} />
-      <Route path="/ConversationCraft" element={<ConversationCraft />} />
+      <Route path="/ConversationCraft" element={<CaseStudyWrapper pageName="ConversationCraft"><ConversationCraft /></CaseStudyWrapper>} />
       <Route path="/DesignSystemPlayground" element={<DesignSystemPlayground />} />
       <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="*" element={<PageNotFound />} />
