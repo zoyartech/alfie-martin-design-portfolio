@@ -42,11 +42,6 @@ export default function GlobalNav() {
               CONTACT
               <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'Contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
-            <Link
-              to={createPageUrl("Blog")} className="text-foreground text-xs font-bold tracking-[0.15em] relative transition-colors group hover:text-slate-500">
-              BLOG
-              <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'Blog' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </Link>
           </div>
           <div className="flex items-center gap-4">
             <MobileNav activePage={path} />
