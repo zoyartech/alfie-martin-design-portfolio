@@ -10,8 +10,7 @@ const projects = [
   title: "Voice User Interface in AI-Med Tech",
   category: "Product Design",
   industry: "Med Tech",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cb3e8f497_Screenshot2026-04-27at75059PM.png",
-  imageFit: "object-contain bg-[#031024]",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3fa06b270_Screenshot2026-04-17at102942PM.png",
   year: "2024",
   link: "VoiceUserInterface",
   summary: "Designing a voice user interface for AI-powered clinical tech.",
@@ -19,7 +18,18 @@ const projects = [
   tags: ["VUI", "Voice UI", "Med Tech"]
 },
 {
-  title: "AI driven Med Tech",
+  title: "Search Agent Optimization",
+  category: "Product Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bbc07ee3b_Screenshot2026-04-17at101522PM.png",
+  year: "2024",
+  link: "SAO",
+  summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
+  stats: [],
+  tags: ["SAO", "Semantic Search", "AI Agents"]
+},
+{
+  title: "Breakthrough 6",
   category: "AI Design",
   industry: "Med Tech",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
@@ -32,6 +42,90 @@ const projects = [
     { label: "Engagement", value: "85%" }
   ],
   tags: ["AI in Healthcare", "Product Design", "Mental Health"]
+},
+{
+  title: "Principal Financial",
+  category: "Product Design",
+  industry: "Finance",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png",
+  year: "2024",
+  link: "PrincipalFinancial",
+  summary: "Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners.",
+  stats: [],
+  tags: ["Enterprise UX", "Advisory Tools", "Product Design"]
+},
+{
+  title: "The User Experience of AI Products",
+  category: "AI Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
+  year: "2024",
+  link: "DesignStrategyAI",
+  summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
+  stats: [
+  { label: "User Trust Score", value: "88%" },
+  { label: "Faster Onboarding", value: "3×" },
+  { label: "Support Reduction", value: "60%" }],
+
+  tags: ["UX Research", "AI Systems", "Conversation Design"]
+},
+{
+  title: "Rockefeller Capital Management",
+  category: "Product Design",
+  industry: "Finance",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5b2be1488_Screenshot2026-03-25at92734PM.png",
+  year: "2023",
+  link: "RockefellerCapital",
+  summary: "Practical Solutions To Improving The User Experience Of Digital Products for High Net Worth Individuals.",
+  stats: [
+  { label: "Adoption", value: "Increased" },
+  { label: "MAU / DAU", value: "Lifted" },
+  { label: "Usability", value: "Enhanced" }],
+  tags: ["UX End To End", "Finance", "Mobile App"]
+},
+
+{
+  title: "TCS NYC Marathon App",
+  category: "Product Design",
+  industry: "Sports & Events",
+  image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=1200&q=80",
+  year: "2023",
+  link: "TCSMarathon",
+  summary: "Redesigned the official TCS NYC Marathon tracking app, improving the real-time runner tracking experience for over 1M spectators and participants.",
+  stats: [
+  { label: "App Downloads", value: "1M+" },
+  { label: "Rating Increase", value: "+0.8★" },
+  { label: "Engagement Lift", value: "42%" }],
+
+  tags: ["Mobile Design", "Real-Time Data", "Sports"]
+},
+{
+  title: "Rebrand & Growth : Polaroid Makes a comeback",
+  category: "Brand Identity",
+  industry: "Consumer",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
+  year: "2023",
+  link: "PolaroidProject",
+  summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
+  stats: [
+  { label: "Brand Recall", value: "+47%" },
+  { label: "Campaign Reach", value: "2.4M" },
+  { label: "Social Growth", value: "+120%" }],
+
+  tags: ["Brand Identity", "Visual Direction", "Consumer"]
+},
+
+{
+  title: "Activation at Grammarly",
+  category: "Product Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0e719488f_growthlever.png",
+  year: "2024",
+  link: "ActivationGrammarly",
+  summary: "Improve user activation and time-to-value while maintaining the quality writing experience users expect.",
+  stats: [],
+  tags: ["Growth Design", "Activation", "UX Strategy"],
+  imageFit: "object-cover"
 },
 {
   title: "Designing trust into automated climate risk",
@@ -47,21 +141,6 @@ const projects = [
   { label: "User Trust", value: "100%" }],
 
   tags: ["AI", "Smart Contracts", "Product Design"]
-},
-{
-  title: "Confidence Scores in Artifical Intelligence",
-  category: "AI Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
-  year: "2024",
-  link: "DesignStrategyAI",
-  summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
-  stats: [
-  { label: "User Trust Score", value: "88%" },
-  { label: "Faster Onboarding", value: "3×" },
-  { label: "Support Reduction", value: "60%" }],
-
-  tags: ["UX Research", "AI Systems", "Conversation Design"]
 }];
 
 
