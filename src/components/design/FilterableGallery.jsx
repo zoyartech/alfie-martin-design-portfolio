@@ -129,7 +129,7 @@ export default function FilterableGallery() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <h2 className="text-3xl font-semibold md:text-4xl">Product Design Case Studies </h2>
+            <h2 className="text-3xl font-semibold md:text-4xl">AI Native Product Design</h2>
           </div>
         </div>
 
