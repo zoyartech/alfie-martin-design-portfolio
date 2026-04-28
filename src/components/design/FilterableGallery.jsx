@@ -247,7 +247,7 @@ function StickyCard({ project, index, total }) {
               </div>
             }
             
-            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium group-hover:text-blue-600 transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' ? 'text-white' : 'text-black'}`}>
+            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium group-hover:text-[#97dc90] transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' ? 'text-white' : 'text-black'}`}>
               Read Case Study <ArrowUpRight className="w-5 h-5" />
             </div>
           </div>
