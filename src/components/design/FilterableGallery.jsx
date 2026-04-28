@@ -28,7 +28,8 @@ const projects = [
   link: "ConversationCraft",
   summary: "In depth look into designing for trust into conversational design",
   stats: [],
-  tags: ["AI Design"]
+  tags: ["AI Design"],
+  bgColor: "#ddf8f7"
 },
 {
   title: "Voice User Interface in AI-Med Tech",
@@ -208,8 +209,8 @@ function StickyCard({ project, index, total }) {
         style={{ scale, opacity, borderRadius }}
         className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative">
-          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
             <img
               src={project.image}
               alt={project.title}
@@ -222,7 +223,7 @@ function StickyCard({ project, index, total }) {
             
           </div>
 
-          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
               {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
