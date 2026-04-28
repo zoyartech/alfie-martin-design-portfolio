@@ -22,7 +22,7 @@ const projects = [
   title: "Creating Trust With AI",
   category: "AI Design",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e50c8abf_Screenshot2026-04-28at122856AM.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc9a88d70_Screenshot2026-04-28at23312AM.png",
   imageFit: "object-cover",
   year: "2024",
   link: "ConversationCraft",
