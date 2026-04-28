@@ -408,7 +408,7 @@ export default function DesignStrategyAI() {
           <div className="w-full flex justify-center mb-12">
             <img
               loading="lazy"
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/16785e22c_Screenshot2026-03-22at40742PM.png"
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0a62b6870_confidence.png"
               alt="Ranked confidence answers interface"
               className="max-w-full md:max-w-3xl h-auto object-contain rounded-md border border-gray-200" />
             
