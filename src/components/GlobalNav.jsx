@@ -46,7 +46,7 @@ export default function GlobalNav() {
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4 mr-4">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
+              <a href="https://www.linkedin.com/in/alfieisbored/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
