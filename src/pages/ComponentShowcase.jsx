@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Layout, MousePointerClick, GripVertical, Trash2 } from "lucide-react";
+import { ArrowLeft, Layout, MousePointerClick, GripVertical, Trash2, BookOpen, CheckCircle, Accessibility, FileText } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
@@ -103,8 +103,146 @@ const FooterMock = () => (
   </div>
 );
 
+const COMPONENT_DOCS = [
+  {
+    id: "button",
+    name: "Button",
+    description: "Triggers an action or event, such as submitting a form or displaying a dialog.",
+    usage: <div className="flex flex-wrap gap-4"><Button>Primary</Button><Button variant="outline">Secondary</Button><Button variant="ghost">Ghost</Button></div>,
+    accessibility: [
+      "Uses standard <button> element.",
+      "Focus state is clearly visible.",
+      "Supports aria-disabled when disabled instead of just disabled attribute for better screen reader support."
+    ],
+    props: [
+      { name: "variant", type: "string", default: '"default"', desc: 'Visual style: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"' },
+      { name: "size", type: "string", default: '"default"', desc: 'Size: "default" | "sm" | "lg" | "icon"' },
+      { name: "asChild", type: "boolean", default: "false", desc: "If true, merges props onto the child element" }
+    ]
+  },
+  {
+    id: "input",
+    name: "Input",
+    description: "A standard text input field for user data entry.",
+    usage: <div className="w-full max-w-sm space-y-4"><input type="text" placeholder="Default input" className="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" /></div>,
+    accessibility: [
+      "Must be associated with a visible <label> or aria-label.",
+      "Has clear focus indicators.",
+      "Supports disabled and required ARIA states."
+    ],
+    props: [
+      { name: "type", type: "string", default: '"text"', desc: "Standard HTML input types (email, password, etc.)" },
+      { name: "placeholder", type: "string", default: "-", desc: "Placeholder text" },
+      { name: "disabled", type: "boolean", default: "false", desc: "Disables the input" }
+    ]
+  },
+  {
+    id: "card",
+    name: "Card",
+    description: "A container for grouping related content and actions.",
+    usage: <div className="w-full max-w-sm rounded-xl border border-slate-200 bg-white text-slate-950 shadow-sm p-6"><h3 className="font-semibold leading-none tracking-tight mb-2">Card Title</h3><p className="text-sm text-slate-500 mb-4">Card description goes here. It provides context.</p><Button className="w-full">Action</Button></div>,
+    accessibility: [
+      "Semantic grouping of content.",
+      "If interactive, should use appropriate roles (e.g., article or region)."
+    ],
+    props: [
+      { name: "className", type: "string", default: "-", desc: "Additional CSS classes" },
+      { name: "children", type: "ReactNode", default: "-", desc: "Card content (CardHeader, CardContent, CardFooter)" }
+    ]
+  }
+];
+
+const DocumentationViewer = () => {
+  const [selectedDoc, setSelectedDoc] = useState(COMPONENT_DOCS[0]);
+
+  return (
+    <div className="grid lg:grid-cols-12 gap-8 min-h-[600px]">
+      <div className="lg:col-span-3">
+        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm sticky top-24">
+          <h2 className="font-semibold text-slate-800 flex items-center gap-2 mb-4">
+            <BookOpen className="w-4 h-4 text-indigo-600" /> Components
+          </h2>
+          <div className="space-y-1">
+            {COMPONENT_DOCS.map(doc => (
+              <button
+                key={doc.id}
+                onClick={() => setSelectedDoc(doc)}
+                className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${selectedDoc.id === doc.id ? 'bg-indigo-50 text-indigo-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+              >
+                {doc.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="lg:col-span-9">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="p-8 border-b border-slate-100">
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">{selectedDoc.name}</h2>
+            <p className="text-lg text-slate-500">{selectedDoc.description}</p>
+          </div>
+          
+          <div className="p-8 space-y-10">
+            <section>
+              <h3 className="text-lg font-semibold text-slate-800 flex items-center gap-2 mb-4">
+                <Layout className="w-5 h-5 text-slate-400" /> Example
+              </h3>
+              <div className="p-8 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center">
+                {selectedDoc.usage}
+              </div>
+            </section>
+
+            <section>
+              <h3 className="text-lg font-semibold text-slate-800 flex items-center gap-2 mb-4">
+                <Accessibility className="w-5 h-5 text-slate-400" /> Accessibility
+              </h3>
+              <ul className="space-y-3">
+                {selectedDoc.accessibility.map((note, i) => (
+                  <li key={i} className="flex gap-3 text-slate-600 text-sm">
+                    <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
+                    <span className="leading-relaxed">{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h3 className="text-lg font-semibold text-slate-800 flex items-center gap-2 mb-4">
+                <FileText className="w-5 h-5 text-slate-400" /> Props
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-slate-200 text-sm">
+                      <th className="py-3 px-4 font-semibold text-slate-700">Prop</th>
+                      <th className="py-3 px-4 font-semibold text-slate-700">Type</th>
+                      <th className="py-3 px-4 font-semibold text-slate-700">Default</th>
+                      <th className="py-3 px-4 font-semibold text-slate-700">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selectedDoc.props.map((prop, i) => (
+                      <tr key={i} className="border-b border-slate-100 last:border-0 text-sm">
+                        <td className="py-3 px-4 font-mono text-indigo-600">{prop.name}</td>
+                        <td className="py-3 px-4 font-mono text-slate-500 text-xs">{prop.type}</td>
+                        <td className="py-3 px-4 font-mono text-slate-500 text-xs">{prop.default}</td>
+                        <td className="py-3 px-4 text-slate-600">{prop.desc}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function ComponentShowcase() {
   const [workspaceItems, setWorkspaceItems] = useState([]);
+  const [activeTab, setActiveTab] = useState("builder");
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
@@ -161,17 +299,40 @@ export default function ComponentShowcase() {
             </Link>
           </div>
           
-          <h1 className="text-4xl font-light mb-4 text-slate-900 flex items-center gap-3">
-            <Layout className="w-8 h-8 text-blue-600" /> Component Showcase
-          </h1>
-          <p className="text-lg text-slate-600 max-w-3xl">
-            Drag and drop components to build layouts and preview themes in context. 
-            Reorder items in the workspace by dragging them.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <h1 className="text-4xl font-light mb-4 text-slate-900 flex items-center gap-3">
+                <Layout className="w-8 h-8 text-blue-600" /> Component Showcase
+              </h1>
+              <p className="text-lg text-slate-600 max-w-3xl">
+                Drag and drop components to build layouts and preview themes in context. 
+                Reorder items in the workspace by dragging them.
+              </p>
+            </div>
+            <div className="flex bg-slate-100 p-1 rounded-lg border border-slate-200 shadow-sm shrink-0">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className={`h-9 px-4 rounded-md transition-all ${activeTab === 'builder' ? 'bg-white shadow-sm text-blue-600 font-medium' : 'text-slate-500 hover:text-slate-700'}`}
+                onClick={() => setActiveTab("builder")}
+              >
+                Builder
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className={`h-9 px-4 rounded-md transition-all ${activeTab === 'docs' ? 'bg-white shadow-sm text-blue-600 font-medium' : 'text-slate-500 hover:text-slate-700'}`}
+                onClick={() => setActiveTab("docs")}
+              >
+                Documentation
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-[90rem] mx-auto px-6 lg:px-12 py-12">
+        {activeTab === "builder" ? (
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="grid lg:grid-cols-12 gap-8">
             
@@ -298,6 +459,9 @@ export default function ComponentShowcase() {
             
           </div>
         </DragDropContext>
+        ) : (
+          <DocumentationViewer />
+        )}
       </div>
     </div>
   );
