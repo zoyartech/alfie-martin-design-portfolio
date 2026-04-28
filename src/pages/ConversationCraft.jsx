@@ -78,6 +78,18 @@ export default function ConversationCraft() {
             <ShowcaseConversation />
           </div>
         </div>
+
+        <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed text-sm mt-24">
+          <p>
+            The "only when communicates something useful" clause on confidence badges is doing a lot of work — it stops the model from slapping a percentage on every message, which is what most generic chatbot UI demos look like. You can swap in your own thresholds if you have a POV.
+          </p>
+          <p>
+            The conversation content section is the most-skipped part of UI prompts and the most important one for a portfolio piece. If you don't constrain the dialogue, you get "Hi! How can I help you today?" "I'd love to learn Python!" and the whole artifact reads as filler. Specifying the kinds of moments to show forces the model to demonstrate actual conversational design thinking.
+          </p>
+          <p>
+            The "avoid" list in the aesthetic section is more powerful than the positive direction. AI tools have strong default aesthetics (purple gradients, sparkle icons, drop-shadowed bubbles) and naming them explicitly is the only reliable way to suppress them.
+          </p>
+        </div>
       </div>
     </div>
   );
