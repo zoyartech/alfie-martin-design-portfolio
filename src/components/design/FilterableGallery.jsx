@@ -28,7 +28,8 @@ const projects = [
   link: "ConversationCraft",
   summary: "In depth look into designing for trust into conversational design",
   stats: [],
-  tags: ["AI Design"]
+  tags: ["AI Design"],
+  bgColor: "#ddf8f7"
 },
 {
   title: "Voice User Interface in AI-Med Tech",
@@ -40,7 +41,8 @@ const projects = [
   link: "VoiceUserInterface",
   summary: "Designing a voice user interface for AI-powered clinical tech.",
   stats: [],
-  tags: ["VUI", "Voice UI", "Med Tech"]
+  tags: ["VUI", "Voice UI", "Med Tech"],
+  bgColor: "#97bbf1"
 },
 {
   title: "Search Agent Optimization",
@@ -52,7 +54,8 @@ const projects = [
   link: "SAO",
   summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
   stats: [],
-  tags: ["SAO", "Semantic Search", "AI Agents"]
+  tags: ["SAO", "Semantic Search", "AI Agents"],
+  bgColor: "#a8a9ab"
 },
 {
   title: "Multimodal Design for AI systems In mental health",
@@ -67,7 +70,8 @@ const projects = [
   { label: "Intake Completion", value: "+40%" },
   { label: "Engagement", value: "85%" }],
 
-  tags: ["AI in Healthcare", "Product Design", "Mental Health"]
+  tags: ["AI in Healthcare", "Product Design", "Mental Health"],
+  bgColor: "#c5dfb1"
 },
 
 {
@@ -208,16 +212,21 @@ function StickyCard({ project, index, total }) {
         style={{ scale, opacity, borderRadius }}
         className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative">
-          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
             <img
               src={project.image}
               alt={project.title}
-              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} />
+              style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
+              className={`group-hover:scale-105 transition-transform duration-700 ${
+                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-')
+                  ? 'max-w-full max-h-full w-auto h-auto object-contain'
+                  : `w-full h-full ${project.imageFit || 'object-cover'}`
+              }`} />
             
           </div>
 
-          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
               {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
