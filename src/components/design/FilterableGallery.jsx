@@ -70,7 +70,8 @@ const projects = [
   { label: "Intake Completion", value: "+40%" },
   { label: "Engagement", value: "85%" }],
 
-  tags: ["AI in Healthcare", "Product Design", "Mental Health"]
+  tags: ["AI in Healthcare", "Product Design", "Mental Health"],
+  bgColor: "#c5dfb1"
 },
 
 {
