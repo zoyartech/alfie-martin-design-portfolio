@@ -28,6 +28,10 @@ export default function SAO() {
             />
           </div>
 
+          <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mb-12">
+            "Search agent optimization" (sometimes called Agentic Search Optimization, or grouped with Generative Engine Optimization / Answer Engine Optimization) is the practice of making your content discoverable, citable, and actionable by AI agents, ChatGPT, Perplexity, Claude, Gemini, Google's AI Mode; instead of just ranking blue links in Google. It's a distinct layer on top of classic SEO, not a replacement.
+          </p>
+
           <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
             <AISeoDashboard />
           </div>
