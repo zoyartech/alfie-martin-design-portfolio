@@ -10,7 +10,7 @@ const projects = [
   title: "Design System Playground",
   category: "Design Systems",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33874fdf8_22ndtime.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cadd09246_skdghjlsdgh.png",
   imageFit: "object-contain",
   year: "2024",
   link: "DesignSystemPlayground",
