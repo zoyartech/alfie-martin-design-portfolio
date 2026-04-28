@@ -60,9 +60,11 @@ export default function BlogPost() {
             
             <div className="space-y-6">
               
-              <h3 className="text-2xl font-light mb-4 text-gray-900">Designing Learning Programs</h3>
+              <h3 className="text-2xl font-light mb-4 text-gray-900 hidden">Designing Learning Programs</h3>
               
-              <p className="mb-6 text-lg">Traditional education was created for one type of learning in classrooms led by the same types of exhausted and underpaid staff. High schools in America for the most part do not prepare students for the educational journeys they choose next.</p>
+              <p className="mb-6 text-xl">Wittgenstein is oddly relevant. His claim that “meaning” is use, that we don't grasp meaning by pointing to referents but by mastering language games. This is basically what a transformer does. Imagine learning all the moves without ever touching the worl?. The fact that LLMs work at all is partial vindication of his view; the fact that they “hallucinate” is am excellentt defemse on the part where he mentions language games are embedded in forms of life, that is a huge thing however that LLMs lack.
+Walter Benjamin would have said that generative AI is "The Work of Art in the Age of Mechanical Reproduction" basically wrote the viral post thirty years before the technology existed. Pair him with Baudrillard on simulacra: AI output is the limit case of his fourth-order simulation, where signs refer to nothing but other signs. Things like deepfakes, synthetic media, training data eating its own tail like the weird ouraboras symbol.
+</p>
               
               <p className="mb-6 text-lg">This can lead to failure time and time again. with how they allocate the funds they get from overpriced tuition to vague use of endowment funds and overpaid administrative roles. most classes end up being taught by adjunct professors making little per semester thus leading to exhaustion & little emotional investment.</p>
               
@@ -99,6 +101,4 @@ export default function BlogPost() {
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
         </div>
       </footer>
-    </div>);
-
-}
+    </div>);}
