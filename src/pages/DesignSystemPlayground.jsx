@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,7 @@ export default function DesignSystemPlayground() {
   const [fontFamily, setFontFamily] = useState("system-ui, sans-serif");
   const [baseFontSize, setBaseFontSize] = useState(16);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [viewport, setViewport] = useState("desktop");
 
   const resetTokens = () => {
     setPrimaryColor("#0f172a");
@@ -195,9 +196,42 @@ export default function DesignSystemPlayground() {
           </div>
           
           {/* Preview Panel */}
-          <div className="lg:col-span-8 space-y-8">
+          <div className="lg:col-span-8 space-y-4">
+            <div className="flex justify-between items-end mb-4">
+              <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
+                Preview
+              </h2>
+              <div className="flex bg-slate-100 p-1 rounded-lg border border-slate-200 shadow-sm">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`h-8 px-3 rounded-md transition-all ${viewport === 'mobile' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
+                  onClick={() => setViewport("mobile")}
+                >
+                  <Smartphone className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Mobile</span>
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`h-8 px-3 rounded-md transition-all ${viewport === 'tablet' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
+                  onClick={() => setViewport("tablet")}
+                >
+                  <Tablet className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Tablet</span>
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`h-8 px-3 rounded-md transition-all ${viewport === 'desktop' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
+                  onClick={() => setViewport("desktop")}
+                >
+                  <Monitor className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Desktop</span>
+                </Button>
+              </div>
+            </div>
+
+            <div className={`transition-all duration-500 mx-auto ${viewport === 'mobile' ? 'w-[375px] max-w-full' : viewport === 'tablet' ? 'w-[768px] max-w-full' : 'w-full'}`}>
             <div 
-              className="p-8 rounded-xl shadow-md border transition-all duration-200"
+              className="p-8 rounded-xl shadow-md border transition-all duration-200 overflow-hidden"
               style={{...previewStyles, borderColor: "var(--theme-border)"}}
             >
               <style dangerouslySetInnerHTML={{__html: `
@@ -318,6 +352,7 @@ export default function DesignSystemPlayground() {
                 </div>
               </div>
               
+            </div>
             </div>
           </div>
           
