@@ -36,59 +36,5 @@ export const blogPosts = [
         text: "Start there."
       }
     ]
-  },
-  {
-    id: "brand-systems-at-scale",
-    title: "Lets talk about experiment design",
-    subtitle: "From startup identity to enterprise design language.",
-    category: "Brand Strategy",
-    date: "December 3, 2024",
-    readTime: "8 min read",
-    metaDescription: "A practical guide to creating flexible brand systems that maintain coherence as companies grow from startup to enterprise scale.",
-    tags: ["Branding", "Design Systems", "Strategy", "Identity"],
-    image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/953a039a3_53.png",
-    excerpt: "A brand identity that works at Series A looks completely different from one built for enterprise. Here's how to design systems that grow with your company.",
-    content: [
-      {
-        type: "paragraph",
-        text: "A brand identity built for a 10-person startup will break at 1,000 people. Not because it was badly designed — but because it wasn't designed to scale. The best brand systems anticipate growth and build flexibility in from the start."
-      },
-      {
-        type: "heading",
-        text: "What scale actually means for brand"
-      },
-      {
-        type: "paragraph",
-        text: "Scale isn't just more people using a product. It's more contexts, more channels, more teams making decisions independently. A brand that only works when the founder is in the room isn't a brand system — it's a personal aesthetic."
-      },
-      {
-        type: "paragraph",
-        text: "True brand systems give teams the tools to make good decisions without asking for permission. That means documented principles, not just logos. It means token-based design languages, not static style guides."
-      },
-      {
-        type: "heading",
-        text: "The three layers of a scalable brand"
-      },
-      {
-        type: "paragraph",
-        text: "The foundation layer covers core identity: the logo, the primary palette, the core typeface. This changes rarely, if ever. It's the north star."
-      },
-      {
-        type: "paragraph",
-        text: "The expression layer covers how the brand is applied: photography style, illustration system, motion principles, tone of voice. This evolves with the company, campaign by campaign."
-      },
-      {
-        type: "paragraph",
-        text: "The execution layer is where teams live: UI components, template libraries, content guidelines. This is where most brand breakdowns happen — and where the real design systems work lives."
-      },
-      {
-        type: "heading",
-        text: "Building for the future"
-      },
-      {
-        type: "paragraph",
-        text: "The best thing you can do for a brand system is document the 'why,' not just the 'what.' When teams understand the intention behind a decision, they can extend the system intelligently rather than just copying the surface."
-      }
-    ]
   }
 ];
