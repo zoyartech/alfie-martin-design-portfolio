@@ -341,22 +341,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="py-8 px-6 lg:px-12 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            
-
-            
-          </div>
-        </div>
-      </motion.footer>
     </div>);
 
 }

@@ -257,12 +257,6 @@ export default function SideQuests() {
         </div>
       </div>
       
-      {/* Footer */}
-      <footer className="py-12 px-6 lg:px-12 border-t border-gray-200 bg-white mt-auto">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-sans">
-          <p className="text-sm text-gray-500">© 2024 Alfie Martin. All rights reserved.</p>
-        </div>
-      </footer>
     </div>);
 
 }

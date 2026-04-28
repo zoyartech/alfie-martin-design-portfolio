@@ -49,6 +49,7 @@ import ExelonUXR from './pages/ExelonUXR';
 import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
 import ScrollProgress from './components/ScrollProgress';
+import GlobalFooter from './components/GlobalFooter';
 import AdminInsights from './pages/AdminInsights';
 import CodeFlow from './pages/CodeFlow';
 import DescriptExperiment from './pages/DescriptExperiment';
@@ -94,6 +95,7 @@ const AuthenticatedApp = () => {
     <div className="flex flex-col min-h-screen">
       <ScrollProgress />
       <GlobalNav />
+      
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
@@ -184,6 +186,7 @@ const AuthenticatedApp = () => {
       <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
+          <GlobalFooter />
         </motion.div>
       </AnimatePresence>
     </div>
