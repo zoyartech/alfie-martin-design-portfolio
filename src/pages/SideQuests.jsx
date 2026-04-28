@@ -37,6 +37,26 @@ export default function SideQuests() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 min-h-[50vh]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to={createPageUrl("PolaroidProject")} className="group block">
+                <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png" alt="Polaroid" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Polaroid Makes a comeback</h3>
+                    <p className="text-slate-600 font-sans">Rebrand and growth strategy</p>
+                </div>
+            </Link>
+
+            <Link to={createPageUrl("PrincipalFinancial")} className="group block">
+                <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png" alt="Principal Financial" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Principal Financial</h3>
+                    <p className="text-slate-600 font-sans">Advisory platform for small business owners</p>
+                </div>
+            </Link>
+
             <Link to={createPageUrl("AdinaProject")} className="group block">
                 <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
                     <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acd037aeb_Screenshot2026-03-21at124006PM.png" alt="Adina" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />

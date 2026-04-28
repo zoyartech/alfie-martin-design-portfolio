@@ -62,35 +62,6 @@ const projects = [
   { label: "Support Reduction", value: "60%" }],
 
   tags: ["UX Research", "AI Systems", "Conversation Design"]
-},
-
-{
-  title: "Rebrand & Growth : Polaroid Makes a comeback",
-  category: "Brand Identity",
-  industry: "Consumer",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e3c8706f_ooookaroid.png",
-  year: "2023",
-  link: "PolaroidProject",
-  summary: "Repositioned Polaroid's digital brand identity for a new generation — balancing nostalgia with modern visual language across web, packaging, and campaign materials.",
-  stats: [
-  { label: "Brand Recall", value: "+47%" },
-  { label: "Campaign Reach", value: "2.4M" },
-  { label: "Social Growth", value: "+120%" }],
-
-  tags: ["Brand Identity", "Visual Direction", "Consumer"]
-},
-
-
-{
-  title: "Principal Financial",
-  category: "Product Design",
-  industry: "Finance",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/586e4fb43_Screenshot2026-03-28at13454PM.png",
-  year: "2024",
-  link: "PrincipalFinancial",
-  summary: "Lead product designer on Principal's SBO Advisory platform — a suite of web and mobile tools helping financial advisors guide small business owners.",
-  stats: [],
-  tags: ["Enterprise UX", "Advisory Tools", "Product Design"]
 }];
 
 
