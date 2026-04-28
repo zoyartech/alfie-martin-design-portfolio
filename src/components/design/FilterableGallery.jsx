@@ -219,7 +219,7 @@ function StickyCard({ project, index, total }) {
 
           <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
-              {project.category && <span className="bg-green-100 text-gray-600 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full hidden">{project.category}</span>}
+              
               {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
             </div>
             <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-4 md:mb-6">{project.title}</h3>
