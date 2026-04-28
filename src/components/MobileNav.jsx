@@ -9,6 +9,7 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
 
   const links = [
     { label: "HOME", page: "Home" },
+    { label: "ABOUT", page: "About" },
     { label: "CASE STUDIES", page: "CaseStudies" },
     { label: "CONTACT", page: "Contact" }
   ];

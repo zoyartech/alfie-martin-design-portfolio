@@ -28,6 +28,11 @@ export default function GlobalNav() {
               <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'Home' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
             <Link
+              to={createPageUrl("About")} className="text-foreground text-xs font-bold tracking-[0.15em] relative transition-colors group hover:text-slate-500">
+              ABOUT
+              <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'About' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
+            <Link
               to={createPageUrl("CaseStudies")} className="text-foreground text-xs font-bold tracking-[0.15em] relative transition-colors group hover:text-slate-500">
               CASE STUDIES
               <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'CaseStudies' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
