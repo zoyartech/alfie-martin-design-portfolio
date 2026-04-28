@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -158,22 +158,13 @@ export default function FilterableGallery() {
           </div>
         </div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="relative w-full mt-16 pb-24">
           <AnimatePresence>
-            {filtered.map((project, i) =>
-            <motion.div
-              key={project.title}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group">
-                <ProjectCard project={project} />
-              </motion.div>
-            )}
+            {filtered.map((project, i) => (
+              <StickyCard key={project.title} project={project} index={i} total={filtered.length} />
+            ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -190,29 +181,67 @@ export default function FilterableGallery() {
 
 }
 
-function ProjectCard({ project }) {
-  const content =
-  <div className="cursor-pointer group">
-      <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
-        <img
-        loading="lazy"
-        src={project.image}
-        alt={project.title}
-        className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} />
-      
-      </div>
-      <div className="pt-4">
-        <div className="flex items-center justify-between mb-1">
-          
-        </div>
-        <h3 className="text-base font-medium group-hover:text-gray-600 transition-colors">{project.title}</h3>
-      </div>
-    </div>;
+function StickyCard({ project, index, total }) {
+  const ref = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
 
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["16px", "24px"]);
 
-  if (project.link) {
-    return <Link to={createPageUrl(project.link)}>{content}</Link>;
-  }
+  return (
+    <motion.div 
+      ref={ref} 
+      layout
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.5 }}
+      className="sticky top-0 h-[100vh] w-full flex flex-col items-center justify-center py-6 md:py-12"
+      style={{ zIndex: index }}
+    >
+      <motion.div 
+        style={{ scale, opacity, borderRadius }}
+        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group"
+      >
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative">
+          <div className="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden bg-gray-50 flex items-center justify-center p-8">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} 
+            />
+          </div>
 
-  return content;
+          <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 md:p-16 flex flex-col bg-white">
+            <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
+              {project.category && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.category}</span>}
+              {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
+            </div>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-4 md:mb-6">{project.title}</h3>
+            <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">{project.summary}</p>
+            
+            {project.stats && project.stats.length > 0 && (
+              <div className="grid grid-cols-2 gap-6 mt-auto pb-8 border-b border-gray-100 mb-8 hidden md:grid">
+                {project.stats.map(stat => (
+                  <div key={stat.label}>
+                    <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">{stat.value}</p>
+                    <p className="text-sm text-gray-500 font-medium">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium text-black group-hover:text-blue-600 transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0">
+              Read Case Study <ArrowUpRight className="w-5 h-5" />
+            </div>
+          </div>
+        </Link>
+      </motion.div>
+    </motion.div>
+  );
 }
