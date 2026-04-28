@@ -49,7 +49,7 @@ export default function GlobalNav() {
               <a href="https://www.linkedin.com/in/alfieisbored/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
+              <a href="https://www.instagram.com/wexleyhouse" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
