@@ -8,16 +8,10 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
   const [open, setOpen] = useState(false);
 
   const links = [
-  { label: "HOME", page: "Home" },
-  { label: "ABOUT", page: "About" },
-  { label: "CASE STUDIES", type: "dropdown", items: [
-      { label: "DESIGN", page: "CaseStudies" },
-      { label: "UX RESEARCH", page: "UXResearchStudies" },
-      { label: "PRODUCTS I'VE BUILT", page: "SideQuests" },
-      { label: "CONTENT STRATEGY", page: "Writing" }
-    ]
-  },
-  { label: "CONTACT", page: "Contact" }];
+    { label: "HOME", page: "Home" },
+    { label: "CASE STUDIES", page: "CaseStudies" },
+    { label: "CONTACT", page: "Contact" }
+  ];
 
 
   return (
