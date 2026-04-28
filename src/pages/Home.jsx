@@ -201,10 +201,19 @@ export default function Home() {
               }}
             >
               {[
-                "“The dumbest mistake is viewing design as something",
-                "you do at the end of the process to ‘tidy up’ the mess,",
-                "as opposed to understanding it’s a ‘day one’ issue",
-                "and part of everything.”"
+                "“I refuse to inherit your assumptions. ...When everyone else is busy",
+                "rearranging the furniture Me? well... I'm in the basement asking",
+                "whether we need a house at all & then immediately wondering what",
+                "happens to Ikea if nobody builds houses anymore, and then what",
+                "happens to the suburbs, and then what kind of person I become when",
+                "I've thought myself so far down this rabbit hole that I'm standing",
+                "in amazon, (the rain forest) arguing with a theoretical lumber baron",
+                "about the ontological status of a chair. That's just a Tuesday for me.",
+                "First principles throws a pebble. Second-order thinking watches the",
+                "ripple hit the other side of the pond. Systems thinking realizes the",
+                "pond is inside a bigger pond & something upstream changed the pH",
+                "three months ago and that's why the fish are weird now. I am probably",
+                "annoying at dinner parties BUT I am rarely, surprised.”"
               ].map((line, i) => (
                 <motion.span
                   key={i}
@@ -226,7 +235,7 @@ export default function Home() {
               transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               className="block mt-6 text-xl text-gray-500"
             >
-              ― Tom Peterson
+              ― Alfie Martin
             </motion.span>
           </blockquote>
         </div>
