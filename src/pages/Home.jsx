@@ -194,10 +194,10 @@ export default function Home() {
             className="bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm"
           >
             <blockquote className="text-gray-800 text-lg font-light leading-relaxed">
-              "I refuse to inherit your assumptions. ...When everyone else is busy rearranging the furniture Me? well... I'm in the basement asking whether we need a house at all & then immediately wondering what happens to Ikea if nobody builds houses anymore, and then what happens to the suburbs, and then what kind of person I become when I've thought myself so far down this rabbit hole that I'm standing in amazon, (the rain forest) arguing with a theoretical lumber baron about the ontological status of a chair. That's just a Tuesday for me. First principles throws a pebble. Second-order thinking watches the ripple hit the other side of the pond. Systems thinking realizes the pond is inside a bigger pond & something upstream changed the pH three months ago and that's why the fish are weird now. I am probably annoying at dinner parties BUT I am rarely, surprised."
+              I refuse to inherit your assumptions. ...When everyone else is busy rearranging the furniture Me? well... I'm in the basement asking whether we need a house at all & then immediately wondering what happens to Ikea if nobody builds houses anymore, and then what happens to the suburbs, and then what kind of person I become when I've thought myself so far down this rabbit hole that I'm standing in amazon, (the rain forest) arguing with a theoretical lumber baron about the ontological status of a chair. That's just a Tuesday for me. First principles throws a pebble. Second-order thinking watches the ripple hit the other side of the pond. Systems thinking realizes the pond is inside a bigger pond & something upstream changed the pH three months ago and that's why the fish are weird now. I am probably annoying at dinner parties BUT I am rarely, surprised.
               
               <span className="block mt-6 text-base text-gray-500 font-normal">
-                ― a poem on first principles and system thinking
+                ― thoughts in my head : subject matter first princples and systems thinking
               </span>
             </blockquote>
           </motion.div>
