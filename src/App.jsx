@@ -62,6 +62,7 @@ import FluidUI from './pages/FluidUI';
 import DesignSystem from './pages/DesignSystem';
 import SplashScreen from './components/SplashScreen';
 import ConversationCraft from './pages/ConversationCraft';
+import DesignSystemPlayground from './pages/DesignSystemPlayground';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -178,6 +179,7 @@ const AuthenticatedApp = () => {
       <Route path="/FluidUI" element={<FluidUI />} />
       <Route path="/DesignSystem" element={<DesignSystem />} />
       <Route path="/ConversationCraft" element={<ConversationCraft />} />
+      <Route path="/DesignSystemPlayground" element={<DesignSystemPlayground />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>
