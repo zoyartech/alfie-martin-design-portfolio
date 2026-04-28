@@ -28,7 +28,7 @@ export default function BlogPost() {
           
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight">
-              {post.title}
+              we don't grasp meaning by pointing to referents but by mastering language games
             </h1>
             
 
