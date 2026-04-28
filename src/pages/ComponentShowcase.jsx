@@ -360,6 +360,7 @@ export default function ComponentShowcase() {
                                 ref={provided.innerRef}
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
+                                title="drag components to the workspace to view"
                                 className={`p-3 bg-white border rounded-lg flex items-center gap-3 shadow-sm transition-all ${
                                   snapshot.isDragging ? 'border-blue-500 ring-2 ring-blue-200 z-50' : 'border-slate-200 hover:border-slate-300 hover:shadow-md'
                                 }`}
