@@ -48,6 +48,7 @@ import UXResearchStudies from './pages/UXResearchStudies';
 import ExelonUXR from './pages/ExelonUXR';
 import RCMUXR from './pages/RCMUXR';
 import GlobalNav from './components/GlobalNav';
+import ScrollProgress from './components/ScrollProgress';
 import AdminInsights from './pages/AdminInsights';
 import CodeFlow from './pages/CodeFlow';
 import DescriptExperiment from './pages/DescriptExperiment';
@@ -88,6 +89,7 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollProgress />
       <GlobalNav />
       <AnimatePresence mode="wait">
         <motion.div
