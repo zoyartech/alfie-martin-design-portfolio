@@ -31,7 +31,7 @@ const projects = [
   tags: ["SAO", "Semantic Search", "AI Agents"]
 },
 {
-  title: "Breakthrough 6",
+  title: "Multimodal Design for AI systems In mental health",
   category: "AI Design",
   industry: "Med Tech",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
