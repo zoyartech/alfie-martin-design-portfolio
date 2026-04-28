@@ -10,11 +10,11 @@ const projects = [
   title: "Design System Playground",
   category: "Design Systems",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cadd09246_skdghjlsdgh.png",
-  imageFit: "object-contain",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c9dd051f_Screenshot2026-04-28at11839AM.png",
+  imageFit: "object-contain bg-[#f4f4f4]",
   year: "2024",
   link: "DesignSystemPlayground",
-  summary: "Interactive design system playground and component library. Engage with interactive components, preview them in their states by drop and drag, and preview in dark mode.",
+  summary: "Interactive design system playground and component library.",
   stats: [],
   tags: ["Design Systems"]
 },
@@ -28,8 +28,7 @@ const projects = [
   link: "ConversationCraft",
   summary: "In depth look into designing for trust into conversational design",
   stats: [],
-  tags: ["AI Design"],
-  bgColor: "#ddf8f7"
+  tags: ["AI Design"]
 },
 {
   title: "Voice User Interface in AI-Med Tech",
@@ -41,8 +40,7 @@ const projects = [
   link: "VoiceUserInterface",
   summary: "Designing a voice user interface for AI-powered clinical tech.",
   stats: [],
-  tags: ["VUI", "Voice UI", "Med Tech"],
-  bgColor: "#97bbf1"
+  tags: ["VUI", "Voice UI", "Med Tech"]
 },
 {
   title: "Search Agent Optimization",
@@ -54,8 +52,7 @@ const projects = [
   link: "SAO",
   summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
   stats: [],
-  tags: ["SAO", "Semantic Search", "AI Agents"],
-  bgColor: "#a8a9ab"
+  tags: ["SAO", "Semantic Search", "AI Agents"]
 },
 {
   title: "Multimodal Design for AI systems In mental health",
@@ -70,8 +67,7 @@ const projects = [
   { label: "Intake Completion", value: "+40%" },
   { label: "Engagement", value: "85%" }],
 
-  tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1"
+  tags: ["AI in Healthcare", "Product Design", "Mental Health"]
 },
 
 {
@@ -212,21 +208,16 @@ function StickyCard({ project, index, total }) {
         style={{ scale, opacity, borderRadius }}
         className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative">
+          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
             <img
               src={project.image}
               alt={project.title}
-              style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
-              className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-')
-                  ? 'max-w-full max-h-full w-auto h-auto object-contain'
-                  : `w-full h-full ${project.imageFit || 'object-cover'}`
-              }`} />
+              className={`w-full h-full ${project.imageFit || 'object-cover'} group-hover:scale-105 transition-transform duration-700`} />
             
           </div>
 
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
+          <div className="bg-red-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
               {project.industry && <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider rounded-full">{project.industry}</span>}
@@ -245,7 +236,7 @@ function StickyCard({ project, index, total }) {
               </div>
             }
             
-            <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium text-black group-hover:text-black transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0">
+            <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium text-black group-hover:text-blue-600 transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0">
               Read Case Study <ArrowUpRight className="w-5 h-5" />
             </div>
           </div>
