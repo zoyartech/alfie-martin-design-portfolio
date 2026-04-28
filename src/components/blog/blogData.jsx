@@ -36,5 +36,31 @@ export const blogPosts = [
         text: "Start there."
       }
     ]
+  },
+  {
+    id: "future-of-interfaces",
+    title: "The Future of Interface Design in the Age of AI Agents",
+    subtitle: "When the system does the work for you, what is left for the interface?",
+    category: "AI Design",
+    date: "April 28, 2026",
+    readTime: "4 min read",
+    metaDescription: "Exploring how UI design is shifting from explicit control to intent-based orchestration.",
+    tags: ["AI", "UI/UX", "Agents"],
+    image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
+    excerpt: "For the past two decades, we've designed interfaces that act as a direct mapping between user intent and system action. But as AI agents become capable of orchestrating complex workflows independently, the nature of the interface must change.",
+    content: [
+      {
+        type: "paragraph",
+        text: "For the past two decades, we've designed interfaces that act as a direct mapping between user intent and system action. Every click, every drag, every form submission was a micro-decision. But as AI agents become capable of orchestrating complex workflows independently, the nature of the interface must change."
+      },
+      {
+        type: "paragraph",
+        text: "We are moving from direct manipulation to intent-based orchestration. Instead of telling the computer how to do something step-by-step, we tell it what we want to achieve. The interface then becomes a space for negotiation, refinement, and trust-building."
+      },
+      {
+        type: "paragraph",
+        text: "This doesn't mean UI is dead. It means the UI of the future will look less like a dashboard of controls and more like a collaborative workspace. A place where you and the agent can review work, adjust constraints, and build a shared understanding of the task at hand."
+      }
+    ]
   }
 ];
