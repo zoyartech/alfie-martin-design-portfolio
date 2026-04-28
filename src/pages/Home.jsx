@@ -186,16 +186,49 @@ export default function Home() {
       {/* Quote Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-left">
-          <motion.blockquote
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }} className="text-gray-800 text-lg font-light leading-relaxed md:text-3xl">
-            
-
-            “The dumbest mistake is viewing design as something you do at the end of the process to ‘tidy up’ the mess, as opposed to understanding it’s a ‘day one’ issue and part of everything.” 
-            <span className="block mt-4 text-xl text-gray-500">― Tom Peterson</span>
-          </motion.blockquote>
+          <blockquote className="text-gray-800 text-lg font-light leading-relaxed md:text-3xl">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.06
+                  }
+                }
+              }}
+            >
+              {[
+                "“The dumbest mistake is viewing design as something",
+                "you do at the end of the process to ‘tidy up’ the mess,",
+                "as opposed to understanding it’s a ‘day one’ issue",
+                "and part of everything.”"
+              ].map((line, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 12, filter: "blur(8px)" },
+                    visible: { opacity: 1, y: 0, filter: "blur(0px)" }
+                  }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="block"
+                >
+                  {line}
+                </motion.span>
+              ))}
+            </motion.div>
+            <motion.span 
+              initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+              className="block mt-6 text-xl text-gray-500"
+            >
+              ― Tom Peterson
+            </motion.span>
+          </blockquote>
         </div>
       </section>
 
