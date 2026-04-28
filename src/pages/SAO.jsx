@@ -1,11 +1,13 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, X } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import AISeoDashboard from "@/components/AISeoDashboard";
 
 export default function SAO() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
       <div className="max-w-5xl mx-auto">
@@ -24,7 +26,8 @@ export default function SAO() {
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png" 
               alt="SAO Hero" 
-              className="w-full h-auto object-cover max-h-[500px]" 
+              className="w-full h-auto object-cover max-h-[500px] cursor-pointer hover:opacity-95 transition-opacity" 
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png")}
             />
           </div>
 
@@ -36,7 +39,8 @@ export default function SAO() {
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png" 
               alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era" 
-              className="w-[48%] h-auto object-contain" 
+              className="w-[48%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png")}
             />
           </div>
 
@@ -52,11 +56,40 @@ export default function SAO() {
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png" 
               alt="Brand reputation radar chart" 
-              className="w-full max-w-2xl h-auto" 
+              className="w-full max-w-2xl h-auto cursor-pointer hover:opacity-90 transition-opacity" 
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png")}
             />
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button 
+              onClick={() => setSelectedImage(null)} 
+              className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              src={selectedImage}
+              alt="Full size"
+              className="max-w-full max-h-[90vh] object-contain cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
