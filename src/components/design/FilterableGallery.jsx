@@ -7,6 +7,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
+  title: "Design System Playground",
+  category: "Design Systems",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c9dd051f_Screenshot2026-04-28at11839AM.png",
+  imageFit: "object-contain bg-[#f4f4f4]",
+  year: "2024",
+  link: "DesignSystemPlayground",
+  summary: "Interactive design system playground and component library.",
+  stats: [],
+  tags: ["Design Systems"]
+},
+{
   title: "Creating Trust With AI",
   category: "AI Design",
   industry: "Technology",
