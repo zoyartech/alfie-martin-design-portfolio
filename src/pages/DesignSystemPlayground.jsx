@@ -82,9 +82,18 @@ export default function DesignSystemPlayground() {
                 </TooltipProvider>
               </div>
               <Link to={createPageUrl("ComponentShowcase")}>
-                <Button className="gap-2" variant="outline">
-                  <Layout className="w-4 h-4" /> Component Showcase
-                </Button>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button className="gap-2" variant="outline">
+                        <Layout className="w-4 h-4" /> Component Showcase
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>View component showcase</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </Link>
             </div>
             <p className="text-lg text-slate-600 max-w-3xl">
