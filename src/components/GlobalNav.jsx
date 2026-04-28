@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import MobileNav from "@/components/MobileNav";
+import { Linkedin, Instagram } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,6 +45,14 @@ export default function GlobalNav() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-4 mr-4">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-slate-500 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
             <MobileNav activePage={path} />
           </div>
         </div>
