@@ -63,6 +63,7 @@ import DesignSystem from './pages/DesignSystem';
 import SplashScreen from './components/SplashScreen';
 import ConversationCraft from './pages/ConversationCraft';
 import DesignSystemPlayground from './pages/DesignSystemPlayground';
+import ComponentShowcase from './pages/ComponentShowcase';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -180,6 +181,7 @@ const AuthenticatedApp = () => {
       <Route path="/DesignSystem" element={<DesignSystem />} />
       <Route path="/ConversationCraft" element={<ConversationCraft />} />
       <Route path="/DesignSystemPlayground" element={<DesignSystemPlayground />} />
+      <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
         </motion.div>

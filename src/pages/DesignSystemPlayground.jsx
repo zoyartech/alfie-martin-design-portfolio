@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,18 +56,25 @@ export default function DesignSystemPlayground() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-4">
-              <h1 className="text-4xl font-light text-slate-900">
-                Design System Playground
-              </h1>
-              <Button 
-                variant="outline" 
-                size="icon" 
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className="rounded-full"
-              >
-                {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </Button>
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <h1 className="text-4xl font-light text-slate-900">
+                  Design System Playground
+                </h1>
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  onClick={() => setIsDarkMode(!isDarkMode)}
+                  className="rounded-full"
+                >
+                  {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </Button>
+              </div>
+              <Link to={createPageUrl("ComponentShowcase")}>
+                <Button className="gap-2" variant="outline">
+                  <Layout className="w-4 h-4" /> Component Showcase
+                </Button>
+              </Link>
             </div>
             <p className="text-lg text-slate-600 max-w-3xl">
               Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.
