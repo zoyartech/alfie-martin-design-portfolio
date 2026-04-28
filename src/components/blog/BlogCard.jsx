@@ -11,8 +11,19 @@ export default function BlogCard({ post }) {
           src={post.image}
           alt={post.title}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-        
       </div>
+      
+      <div className="flex flex-col gap-2 mt-2">
+        <h3 className="text-2xl font-medium text-gray-900">
+          {post.title}
+        </h3>
+        {post.excerpt && (
+          <p className="text-gray-600 text-sm line-clamp-2">
+            {post.excerpt}
+          </p>
+        )}
+      </div>
+
       <Link
         to={`${createPageUrl('BlogPost')}?id=${post.id}`}
         className="inline-flex text-sm tracking-[0.15em] border-b border-black w-fit pb-1 text-black hover:text-gray-600 hover:border-gray-600 transition-colors mt-2">
