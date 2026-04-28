@@ -7,6 +7,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
+  title: "establishing trust with AI",
+  category: "AI Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e50c8abf_Screenshot2026-04-28at122856AM.png",
+  imageFit: "object-cover",
+  year: "2024",
+  link: "ConversationCraft",
+  summary: "In depth look into designing for trust into conversational design",
+  stats: [],
+  tags: ["AI Design"]
+},
+{
   title: "Voice User Interface in AI-Med Tech",
   category: "Product Design",
   industry: "Med Tech",
