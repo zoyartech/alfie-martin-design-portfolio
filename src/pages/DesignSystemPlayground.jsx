@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,7 @@ export default function DesignSystemPlayground() {
   const [borderRadius, setBorderRadius] = useState(6);
   const [fontFamily, setFontFamily] = useState("system-ui, sans-serif");
   const [baseFontSize, setBaseFontSize] = useState(16);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const resetTokens = () => {
     setPrimaryColor("#0f172a");
@@ -29,9 +30,16 @@ export default function DesignSystemPlayground() {
   const previewStyles = {
     "--theme-primary": primaryColor,
     "--theme-secondary": secondaryColor,
+    "--theme-bg": isDarkMode ? "#020617" : "#ffffff",
+    "--theme-card-bg": isDarkMode ? "#0f172a" : "#ffffff",
+    "--theme-text": isDarkMode ? "#f8fafc" : "#0f172a",
+    "--theme-text-muted": isDarkMode ? "#94a3b8" : "#475569",
+    "--theme-border": isDarkMode ? "#1e293b" : "#e2e8f0",
     "--theme-radius": `${borderRadius}px`,
     fontFamily: fontFamily,
     fontSize: `${baseFontSize}px`,
+    backgroundColor: "var(--theme-bg)",
+    color: "var(--theme-text)",
   };
 
   return (
@@ -48,9 +56,19 @@ export default function DesignSystemPlayground() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-light mb-4 text-slate-900">
-              Design System Playground
-            </h1>
+            <div className="flex items-center gap-4 mb-4">
+              <h1 className="text-4xl font-light text-slate-900">
+                Design System Playground
+              </h1>
+              <Button 
+                variant="outline" 
+                size="icon" 
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="rounded-full"
+              >
+                {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </Button>
+            </div>
             <p className="text-lg text-slate-600 max-w-3xl">
               Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.
             </p>
@@ -172,8 +190,8 @@ export default function DesignSystemPlayground() {
           {/* Preview Panel */}
           <div className="lg:col-span-8 space-y-8">
             <div 
-              className="bg-white p-8 rounded-xl shadow-md border border-slate-200 transition-all duration-200"
-              style={previewStyles}
+              className="p-8 rounded-xl shadow-md border transition-all duration-200"
+              style={{...previewStyles, borderColor: "var(--theme-border)"}}
             >
               <style dangerouslySetInnerHTML={{__html: `
                 .playground-preview-btn {
@@ -196,14 +214,16 @@ export default function DesignSystemPlayground() {
                 }
                 .playground-preview-card {
                   border-radius: calc(var(--theme-radius) + 4px);
-                  background-color: #fff;
-                  border: 1px solid #e2e8f0;
+                  background-color: var(--theme-card-bg);
+                  border: 1px solid var(--theme-border);
                   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
                   overflow: hidden;
                 }
                 .playground-preview-input {
+                  background-color: var(--theme-bg);
+                  color: var(--theme-text);
                   border-radius: var(--theme-radius);
-                  border: 1px solid #cbd5e1;
+                  border: 1px solid var(--theme-border);
                   padding: 0.5rem 0.75rem;
                   width: 100%;
                   outline: none;
@@ -225,14 +245,14 @@ export default function DesignSystemPlayground() {
               <div className="space-y-12">
                 <div className="space-y-4">
                   <h1 className="text-3xl font-bold" style={{ color: primaryColor }}>Typography & Hierarchy</h1>
-                  <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
+                  <p className="text-base leading-relaxed max-w-2xl" style={{ color: "var(--theme-text-muted)" }}>
                     This is a preview of the base typography scale. The font family is currently set to {fontFamily}. 
                     Notice how the reading experience changes as you adjust the base font size and typeface.
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2">Interactive Elements</h2>
+                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Interactive Elements</h2>
                   <div className="flex flex-wrap gap-4">
                     <button className="playground-preview-btn px-4 py-2 font-medium">
                       Primary Action
@@ -240,35 +260,35 @@ export default function DesignSystemPlayground() {
                     <button className="playground-preview-btn-outline px-4 py-2 font-medium">
                       Secondary Action
                     </button>
-                    <button className="px-4 py-2 font-medium text-slate-600 hover:text-slate-900 transition-colors" style={{ borderRadius: borderRadius }}>
+                    <button className="px-4 py-2 font-medium hover:opacity-80 transition-colors" style={{ borderRadius: borderRadius, color: "var(--theme-text-muted)" }}>
                       Ghost Button
                     </button>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2">Forms & Inputs</h2>
+                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Forms & Inputs</h2>
                   <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
                     <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Email Address</label>
+                      <label className="text-sm font-medium">Email Address</label>
                       <input type="email" placeholder="you@example.com" className="playground-preview-input" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Password</label>
+                      <label className="text-sm font-medium">Password</label>
                       <input type="password" placeholder="••••••••" className="playground-preview-input" />
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2">Cards & Surfaces</h2>
+                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Cards & Surfaces</h2>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="playground-preview-card p-6">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-lg font-bold" style={{ color: primaryColor }}>Project Alpha</h3>
                         <span className="playground-preview-badge">Active</span>
                       </div>
-                      <p className="text-sm text-slate-600 mb-6">
+                      <p className="text-sm mb-6" style={{ color: "var(--theme-text-muted)" }}>
                         A showcase of how surface treatments, borders, and rounded corners compound to create a distinct visual identity.
                       </p>
                       <div className="flex justify-end">
@@ -278,13 +298,13 @@ export default function DesignSystemPlayground() {
                       </div>
                     </div>
                     
-                    <div className="playground-preview-card bg-slate-50 border-dashed border-2">
+                    <div className="playground-preview-card border-dashed border-2" style={{ backgroundColor: "var(--theme-bg)" }}>
                       <div className="h-full flex flex-col items-center justify-center p-8 text-center">
                         <div className="w-12 h-12 mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: secondaryColor, color: primaryColor }}>
                           <span className="text-xl">+</span>
                         </div>
-                        <h3 className="font-medium text-slate-900">Create New Asset</h3>
-                        <p className="text-xs text-slate-500 mt-1">Start from a blank canvas</p>
+                        <h3 className="font-medium" style={{ color: "var(--theme-text)" }}>Create New Asset</h3>
+                        <p className="text-xs mt-1" style={{ color: "var(--theme-text-muted)" }}>Start from a blank canvas</p>
                       </div>
                     </div>
                   </div>
