@@ -9,6 +9,7 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function DesignSystemPlayground() {
   const [primaryColor, setPrimaryColor] = useState("#0f172a");
@@ -62,14 +63,23 @@ export default function DesignSystemPlayground() {
                 <h1 className="text-4xl font-light text-slate-900">
                   Design System Playground
                 </h1>
-                <Button 
-                  variant="outline" 
-                  size="icon" 
-                  onClick={() => setIsDarkMode(!isDarkMode)}
-                  className="rounded-full"
-                >
-                  {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                </Button>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        onClick={() => setIsDarkMode(!isDarkMode)}
+                        className="rounded-full"
+                      >
+                        {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>dark mode</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
               <Link to={createPageUrl("ComponentShowcase")}>
                 <Button className="gap-2" variant="outline">
