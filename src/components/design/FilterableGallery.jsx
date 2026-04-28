@@ -235,7 +235,7 @@ function StickyCard({ project, index, total }) {
             <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className="grid grid-cols-2 gap-6 mt-auto pb-8 border-b border-gray-100 mb-8 hidden md:grid">
+            <div className="grid grid-cols-2 gap-6 mt-auto pb-8 border-b border-gray-100 mb-8 hidden md:grid bg-[#c5dfb1]">
                 {project.stats.map((stat) =>
               <div key={stat.label}>
                     <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">{stat.value}</p>
