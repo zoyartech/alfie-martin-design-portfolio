@@ -82,13 +82,13 @@ They were both trying to name what gets lost when you strip a practice from its 
               
               <p className="mb-6 text-lg hidden">Cohort-based programs help build accountability and support for each member of the cohort leading to higher rates of course completion and student engagement.</p>
               
-              <p className="mb-6 text-lg">In a cohort-based program, the instructor becomes a facilitator and mentor rather than just a lecturer.</p>
+              <p className="mb-6 text-lg hidden">In a cohort-based program, the instructor becomes a facilitator and mentor rather than just a lecturer.</p>
               
               <p className="mb-6 text-lg">This is an important distinction because it allows the instructor to help each student have more insight into their learning process and identify areas where they need improvement.</p>
               
-              <p className="mb-6 text-lg">It also creates a better environment for learning by fostering active participation and collaboration between students.</p>
+              <p className="mb-6 text-lg hidden">It also creates a better environment for learning by fostering active participation and collaboration between students.</p>
               
-              <p className="mb-6 text-lg">Cohort-based programs are often more successful even though they may be less flexible. Being part of a cohort provides a sense of community, accountability, and support.</p>
+              <p className="mb-6 text-lg hidden">Cohort-based programs are often more successful even though they may be less flexible. Being part of a cohort provides a sense of community, accountability, and support.</p>
               
               <p className="mb-6 text-lg">In the job market today, high rates of involuntary attrition and low employee retention can be avoided if employers want to keep their best employees, The answers aren't as simple as throwing them a bonus or raise.</p>
               
