@@ -5,7 +5,7 @@ import { createPageUrl } from '@/utils';
 export default function BlogCard({ post }) {
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="text-2xl font-light text-gray-900 hidden">{post.title}</h3>
+      
       <div className="aspect-[16/9] w-full overflow-hidden bg-gray-100 rounded-sm">
         <img
           src={post.image}
