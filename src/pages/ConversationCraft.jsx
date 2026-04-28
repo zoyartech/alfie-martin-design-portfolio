@@ -127,6 +127,7 @@ export default function ConversationCraft() {
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed text-sm mt-32 pt-20 border-t border-slate-100">
+          <h2 className="text-3xl font-light font-serif text-slate-900 pb-2">Concluding Thoughts</h2>
           <p>
             The "only when communicates something useful" clause on confidence badges is doing a lot of work — it stops the model from slapping a percentage on every message, which is what most generic chatbot UI demos look like. You can swap in your own thresholds if you have a POV.
           </p>
