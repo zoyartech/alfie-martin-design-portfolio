@@ -46,7 +46,8 @@ const projects = [
   { label: "Engagement", value: "85%" }],
 
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1"
+  bgColor: "#c5dfb1",
+  textColor: "black"
 },
 {
   title: "Confidence Scoring in AI outputs",
