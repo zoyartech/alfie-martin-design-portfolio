@@ -54,16 +54,34 @@ export default function About() {
 
             <p className="text-lg leading-relaxed text-gray-700">HI im a Product designer specializing in growth and AI and I live in NYC. 8+ years making things people use, want, and come back to. Chronic class-taker. Aggressively curious. Forever a work in progress and not even a little sorry about it.
             </p>
-            
 
-
-
-            
-            <p className="text-lg leading-relaxed text-gray-700">
-
-
-
-            </p>
+            <motion.div 
+              className="flex flex-wrap gap-3 pt-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.04
+                  }
+                }
+              }}
+            >
+              {["Product Design", "Growth Strategy", "AI Integration", "User Research", "Prototyping", "Design Systems", "Visual Identity"].map((tag, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9, y: 8 },
+                    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                  }}
+                  whileHover={{ y: -2, transition: { duration: 0.2, ease: "easeOut" } }}
+                  className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full cursor-default inline-flex"
+                >
+                  {tag}
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </section>
