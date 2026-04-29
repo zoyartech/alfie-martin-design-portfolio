@@ -7,33 +7,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
-  title: "Design System Playground",
-  category: "Design Systems",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c9dd051f_Screenshot2026-04-28at11839AM.png",
-  imageFit: "object-contain bg-[#f4f4f4]",
-  year: "2024",
-  link: "DesignSystemPlayground",
-  summary: "Interactive design system playground and component library.",
-  stats: [],
-  tags: ["Design Systems"],
-  titleColor: "text-black"
-},
-{
-  title: "Creating Trust With AI",
-  category: "AI Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc9a88d70_Screenshot2026-04-28at23312AM.png",
-  imageFit: "object-cover",
-  year: "2024",
-  link: "ConversationCraft",
-  summary: "In depth look into designing for trust into conversational design",
-  stats: [],
-  tags: ["AI Design"],
-  bgColor: "#ddf8f7",
-  titleColor: "text-black"
-},
-{
   title: "Voice User Interface in AI-Med Tech",
   category: "Product Design",
   industry: "Med Tech",
@@ -44,8 +17,7 @@ const projects = [
   summary: "Designing a voice user interface for AI-powered clinical tech.",
   stats: [],
   tags: ["VUI", "Voice UI", "Med Tech"],
-  bgColor: "#97bbf1",
-  titleColor: "text-black"
+  bgColor: "#97bbf1"
 },
 {
   title: "Search Agent Optimization",
@@ -58,8 +30,7 @@ const projects = [
   summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
   stats: [],
   tags: ["SAO", "Semantic Search", "AI Agents"],
-  bgColor: "#a8a9ab",
-  titleColor: "text-black"
+  bgColor: "#a8a9ab"
 },
 {
   title: "Multimodal Design for AI systems In mental health",
@@ -71,14 +42,12 @@ const projects = [
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
   stats: [
-  { label: "Intake Completion", value: "+40%" },
-  { label: "Engagement", value: "85%" }],
-
+    { label: "Intake Completion", value: "+40%" },
+    { label: "Engagement", value: "85%" }
+  ],
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1",
-  titleColor: "text-black"
+  bgColor: "#c5dfb1"
 },
-
 {
   title: "Confidence Scoring in AI outputs",
   category: "AI Design",
@@ -88,15 +57,14 @@ const projects = [
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
   stats: [
-  { label: "User Trust Score", value: "88%" },
-  { label: "Faster Onboarding", value: "3×" },
-  { label: "Support Reduction", value: "60%" }],
-
+    { label: "User Trust Score", value: "88%" },
+    { label: "Faster Onboarding", value: "3×" },
+    { label: "Support Reduction", value: "60%" }
+  ],
   tags: ["UX Research", "AI Systems", "Conversation Design"],
   bgColor: "#2b5769",
   theme: "dark"
 },
-
 {
   title: "Designing trust into automated climate risk",
   category: "Product Design",
@@ -106,10 +74,10 @@ const projects = [
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
   stats: [
-  { label: "Broker Support Tickets", value: "↓ 60%" },
-  { label: "Contracts Bound", value: "↑ 3×" },
-  { label: "User Trust", value: "100%" }],
-
+    { label: "Broker Support Tickets", value: "↓ 60%" },
+    { label: "Contracts Bound", value: "↑ 3×" },
+    { label: "User Trust", value: "100%" }
+  ],
   tags: ["AI", "Smart Contracts", "Product Design"]
 }];
 
