@@ -1,38 +1,11 @@
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const projects = [
-{
-  title: "Design System Playground",
-  category: "Design Systems",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c9dd051f_Screenshot2026-04-28at11839AM.png",
-  imageFit: "object-contain bg-[#f4f4f4]",
-  year: "2024",
-  link: "DesignSystemPlayground",
-  summary: "Interactive design system playground and component library.",
-  stats: [],
-  tags: ["Design Systems"],
-  titleColor: "text-black"
-},
-{
-  title: "Creating Trust With AI",
-  category: "AI Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc9a88d70_Screenshot2026-04-28at23312AM.png",
-  imageFit: "object-cover",
-  year: "2024",
-  link: "ConversationCraft",
-  summary: "In depth look into designing for trust into conversational design",
-  stats: [],
-  tags: ["AI Design"],
-  bgColor: "#ddf8f7",
-  titleColor: "text-black"
-},
 {
   title: "Voice User Interface in AI-Med Tech",
   category: "Product Design",
@@ -43,9 +16,7 @@ const projects = [
   link: "VoiceUserInterface",
   summary: "Designing a voice user interface for AI-powered clinical tech.",
   stats: [],
-  tags: ["VUI", "Voice UI", "Med Tech"],
-  bgColor: "#97bbf1",
-  titleColor: "text-black"
+  tags: ["VUI", "Voice UI", "Med Tech"]
 },
 {
   title: "Search Agent Optimization",
@@ -57,9 +28,7 @@ const projects = [
   link: "SAO",
   summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
   stats: [],
-  tags: ["SAO", "Semantic Search", "AI Agents"],
-  bgColor: "#a8a9ab",
-  titleColor: "text-black"
+  tags: ["SAO", "Semantic Search", "AI Agents"]
 },
 {
   title: "Multimodal Design for AI systems In mental health",
@@ -71,12 +40,10 @@ const projects = [
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
   stats: [
-  { label: "Intake Completion", value: "+40%" },
-  { label: "Engagement", value: "85%" }],
-
-  tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1",
-  titleColor: "text-black"
+    { label: "Intake Completion", value: "+40%" },
+    { label: "Engagement", value: "85%" }
+  ],
+  tags: ["AI in Healthcare", "Product Design", "Mental Health"]
 },
 
 {
@@ -92,9 +59,7 @@ const projects = [
   { label: "Faster Onboarding", value: "3×" },
   { label: "Support Reduction", value: "60%" }],
 
-  tags: ["UX Research", "AI Systems", "Conversation Design"],
-  bgColor: "#2b5769",
-  theme: "dark"
+  tags: ["UX Research", "AI Systems", "Conversation Design"]
 },
 
 {
@@ -169,13 +134,22 @@ export default function FilterableGallery() {
           </div>
         </div>
 
-        <div className="relative w-full mt-16 pb-24">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filtered.map((project, i) =>
-            <StickyCard key={project.title} project={project} index={i} total={filtered.length} />
+            <motion.div
+              key={project.title}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="group">
+                <ProjectCard project={project} />
+              </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -192,72 +166,29 @@ export default function FilterableGallery() {
 
 }
 
-function StickyCard({ project, index, total }) {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["16px", "24px"]);
-
-  return (
-    <motion.div
-      ref={ref}
-      layout
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.5 }}
-      className="sticky top-0 h-[100vh] w-full flex flex-col items-center justify-center py-6 md:py-12"
-      style={{ zIndex: index }}>
+function ProjectCard({ project }) {
+  const content =
+  <div className="cursor-pointer group">
+      <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-lg">
+        <img
+        loading="lazy"
+        src={project.image}
+        alt={project.title}
+        className={`w-full h-full group-hover:scale-110 transition-transform duration-700 ${project.imageFit || "object-cover"}`} />
       
-      <motion.div
-        style={{ scale, opacity, borderRadius }}
-        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
-        
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
-            <img
-              src={project.image}
-              alt={project.title}
-              style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
-              className={`group-hover:scale-105 transition-transform duration-700 ${
-              (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
-              'max-w-full max-h-full w-auto h-auto object-contain' :
-              `w-full h-full ${project.imageFit || 'object-cover'}`}`
-              } />
-            
-          </div>
+      </div>
+      <div className="pt-4">
+        <div className="flex items-center justify-between mb-1">
+          
+        </div>
+        <h3 className="text-base font-medium group-hover:text-gray-600 transition-colors">{project.title}</h3>
+      </div>
+    </div>;
 
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
-            <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
-              
-              {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
-            </div>
-            <h3 className={`text-3xl md:text-5xl font-light mb-4 md:mb-6 ${project.titleColor || 'text-[#97dc90]'}`}>{project.title}</h3>
-            <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
-            
-            {project.stats && project.stats.length > 0 &&
-            <div className={`grid grid-cols-2 gap-6 mt-auto pb-8 border-b mb-8 hidden md:grid bg-[#2b5769] text-white ${project.theme === 'dark' ? 'border-gray-600/50' : 'border-gray-100'}`}>
-                {project.stats.map((stat) =>
-              <div key={stat.label}>
-                    <p className="text-2xl md:text-3xl font-light mb-1 text-white">{stat.value}</p>
-                    <p className="text-slate-950 mb-1 text-2xl font-light md:text-3xl">{stat.label}</p>
-                  </div>
-              )}
-              </div>
-            }
-            
-            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium group-hover:text-[#97dc90] transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' ? 'text-white' : 'text-black'}`}>
-              Read Case Study <ArrowUpRight className="w-5 h-5" />
-            </div>
-          </div>
-        </Link>
-      </motion.div>
-    </motion.div>);
 
+  if (project.link) {
+    return <Link to={createPageUrl(project.link)}>{content}</Link>;
+  }
+
+  return content;
 }
