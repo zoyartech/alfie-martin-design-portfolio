@@ -174,23 +174,6 @@ export default function About() {
               </motion.div>
             )}
           </div>
-
-          <div className="mt-32">
-            <p className="text-xs tracking-[0.3em] text-gray-400 mb-12">TOOLS</p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-3xl"
-            >
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f494d2ace_tools.png" 
-                alt="Tools I use" 
-                className="w-full h-auto object-contain" 
-              />
-            </motion.div>
-          </div>
         </div>
       </section>
 
