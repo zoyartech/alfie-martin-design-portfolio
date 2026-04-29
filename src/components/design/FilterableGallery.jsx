@@ -46,7 +46,8 @@ const projects = [
   { label: "Engagement", value: "85%" }],
 
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1"
+  bgColor: "#c5dfb1",
+  textColor: "black"
 },
 {
   title: "Confidence Scoring in AI outputs",
@@ -198,17 +199,17 @@ function StickyCard({ project, index, total }) {
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
-              {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
+              {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : project.textColor === 'black' ? 'bg-black/10 text-black' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
             </div>
-            <h3 className="text-slate-950 mb-4 text-3xl font-light md:text-5xl md:mb-6">{project.title}</h3>
-            <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
+            <h3 className={`mb-4 text-3xl font-light md:text-5xl md:mb-6 ${project.textColor === 'black' ? 'text-black' : 'text-slate-950'}`}>{project.title}</h3>
+            <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : project.textColor === 'black' ? 'text-black' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className="text-white mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-white/20">
+            <div className={`mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid ${project.theme === 'dark' ? 'text-white border-white/20' : project.textColor === 'black' ? 'text-black border-black/20' : 'text-white border-white/20'}`}>
                 {project.stats.map((stat) =>
               <div key={stat.label}>
-                    <p className="text-white mb-1 text-2xl font-light md:text-3xl">{stat.value}</p>
-                    <p className="text-white/80 text-sm font-medium">{stat.label}</p>
+                    <p className={`mb-1 text-2xl font-light md:text-3xl ${project.theme === 'dark' ? 'text-white' : project.textColor === 'black' ? 'text-black' : 'text-white'}`}>{stat.value}</p>
+                    <p className={`text-sm font-medium ${project.theme === 'dark' ? 'text-white/80' : project.textColor === 'black' ? 'text-black/80' : 'text-white/80'}`}>{stat.label}</p>
                   </div>
               )}
               </div>
