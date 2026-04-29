@@ -42,9 +42,9 @@ const projects = [
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
   stats: [
-    { label: "Intake Completion", value: "+40%" },
-    { label: "Engagement", value: "85%" }
-  ],
+  { label: "Intake Completion", value: "+40%" },
+  { label: "Engagement", value: "85%" }],
+
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
   bgColor: "#c5dfb1"
 },
@@ -57,10 +57,10 @@ const projects = [
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
   stats: [
-    { label: "User Trust Score", value: "88%" },
-    { label: "Faster Onboarding", value: "3×" },
-    { label: "Support Reduction", value: "60%" }
-  ],
+  { label: "User Trust Score", value: "88%" },
+  { label: "Faster Onboarding", value: "3×" },
+  { label: "Support Reduction", value: "60%" }],
+
   tags: ["UX Research", "AI Systems", "Conversation Design"],
   bgColor: "#2b5769",
   theme: "dark"
@@ -74,10 +74,10 @@ const projects = [
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
   stats: [
-    { label: "Broker Support Tickets", value: "↓ 60%" },
-    { label: "Contracts Bound", value: "↑ 3×" },
-    { label: "User Trust", value: "100%" }
-  ],
+  { label: "Broker Support Tickets", value: "↓ 60%" },
+  { label: "Contracts Bound", value: "↑ 3×" },
+  { label: "User Trust", value: "100%" }],
+
   tags: ["AI", "Smart Contracts", "Product Design"]
 }];
 
@@ -188,10 +188,10 @@ function StickyCard({ project, index, total }) {
               alt={project.title}
               style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
               className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-')
-                  ? 'max-w-full max-h-full w-auto h-auto object-contain'
-                  : `w-full h-full ${project.imageFit || 'object-cover'}`
-              }`} />
+              (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
+              'max-w-full max-h-full w-auto h-auto object-contain' :
+              `w-full h-full ${project.imageFit || 'object-cover'}`}`
+              } />
             
           </div>
 
@@ -204,11 +204,11 @@ function StickyCard({ project, index, total }) {
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className={`grid grid-cols-2 gap-6 mt-auto pb-8 border-b mb-8 hidden md:grid bg-[#2b5769] text-white ${project.theme === 'dark' ? 'border-gray-600/50' : 'border-gray-100'}`}>
+            <div className="bg-red-100 text-white mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-gray-100">
                 {project.stats.map((stat) =>
               <div key={stat.label}>
-                    <p className="text-2xl md:text-3xl font-light mb-1 text-white">{stat.value}</p>
-                    <p className="text-sm font-medium text-white/80">{stat.label}</p>
+                    <p className="text-slate-950 mb-1 text-2xl font-light md:text-3xl">{stat.value}</p>
+                    <p className="text-slate-950 text-sm font-medium">{stat.label}</p>
                   </div>
               )}
               </div>
