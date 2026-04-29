@@ -44,7 +44,8 @@ const projects = [
   summary: "Designing a voice user interface for AI-powered clinical tech.",
   stats: [],
   tags: ["VUI", "Voice UI", "Med Tech"],
-  bgColor: "#97bbf1"
+  bgColor: "#97bbf1",
+  titleColor: "text-black"
 },
 {
   title: "Search Agent Optimization",
