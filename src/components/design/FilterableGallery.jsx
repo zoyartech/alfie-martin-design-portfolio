@@ -110,8 +110,7 @@ const projects = [
   { label: "Contracts Bound", value: "↑ 3×" },
   { label: "User Trust", value: "100%" }],
 
-  tags: ["AI", "Smart Contracts", "Product Design"],
-  titleColor: "text-black"
+  tags: ["AI", "Smart Contracts", "Product Design"]
 }];
 
 
@@ -227,10 +226,10 @@ function StickyCard({ project, index, total }) {
               alt={project.title}
               style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
               className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-')
-                  ? 'max-w-full max-h-full w-auto h-auto object-contain'
-                  : `w-full h-full ${project.imageFit || 'object-cover'}`
-              }`} />
+              (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
+              'max-w-full max-h-full w-auto h-auto object-contain' :
+              `w-full h-full ${project.imageFit || 'object-cover'}`}`
+              } />
             
           </div>
 
@@ -247,7 +246,7 @@ function StickyCard({ project, index, total }) {
                 {project.stats.map((stat) =>
               <div key={stat.label}>
                     <p className="text-2xl md:text-3xl font-light mb-1 text-white">{stat.value}</p>
-                    <p className="text-sm font-medium text-white/80">{stat.label}</p>
+                    <p className="text-slate-950 mb-1 text-2xl font-light md:text-3xl">{stat.label}</p>
                   </div>
               )}
               </div>
