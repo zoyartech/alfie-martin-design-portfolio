@@ -200,11 +200,11 @@ function StickyCard({ project, index, total }) {
               
               {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
             </div>
-            <h3 className={`text-3xl md:text-5xl font-light mb-4 md:mb-6 ${project.titleColor || 'text-[#97dc90]'}`}>{project.title}</h3>
+            <h3 className="text-slate-950 mb-4 text-3xl font-light md:text-5xl md:mb-6">{project.title}</h3>
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className="bg-[#135d72] text-slate-950 mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-gray-100">
+            <div className="bg-emerald-100 text-slate-950 mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-gray-100">
                 {project.stats.map((stat) =>
               <div key={stat.label}>
                     <p className="text-slate-950 mb-1 text-2xl font-light md:text-3xl">{stat.value}</p>
