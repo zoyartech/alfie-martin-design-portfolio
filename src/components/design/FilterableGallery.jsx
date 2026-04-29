@@ -79,7 +79,8 @@ const projects = [
   { label: "Contracts Bound", value: "↑ 3×" },
   { label: "User Trust", value: "100%" }],
 
-  tags: ["AI", "Smart Contracts", "Product Design"]
+  tags: ["AI", "Smart Contracts", "Product Design"],
+  textColor: "black"
 }];
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
