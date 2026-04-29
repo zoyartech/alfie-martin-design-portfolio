@@ -16,7 +16,8 @@ const projects = [
   link: "DesignSystemPlayground",
   summary: "Interactive design system playground and component library.",
   stats: [],
-  tags: ["Design Systems"]
+  tags: ["Design Systems"],
+  titleColor: "text-black"
 },
 {
   title: "Creating Trust With AI",
@@ -233,7 +234,7 @@ function StickyCard({ project, index, total }) {
               
               {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
             </div>
-            <h3 className="text-3xl md:text-5xl font-light mb-4 md:mb-6 text-[#97dc90]">{project.title}</h3>
+            <h3 className={`text-3xl md:text-5xl font-light mb-4 md:mb-6 ${project.titleColor || 'text-[#97dc90]'}`}>{project.title}</h3>
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
