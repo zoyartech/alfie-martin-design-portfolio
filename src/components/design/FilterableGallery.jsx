@@ -20,19 +20,6 @@ const projects = [
   bgColor: "#97bbf1"
 },
 {
-  title: "Search Agent Optimization",
-  category: "Product Design",
-  industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
-  imageFit: "object-contain bg-[#f6f6f6]",
-  year: "2024",
-  link: "SAO",
-  summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
-  stats: [],
-  tags: ["SAO", "Semantic Search", "AI Agents"],
-  bgColor: "#a8a9ab"
-},
-{
   title: "Multimodal Design for AI systems In mental health",
   category: "AI Design",
   industry: "Med Tech",
