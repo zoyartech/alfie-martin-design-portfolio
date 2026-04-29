@@ -68,7 +68,7 @@ const projects = [
   summary: "An interactive playground for exploring and testing design system components.",
   stats: [],
   tags: ["Design Systems", "UI Components"],
-  bgColor: "#292929",
+  bgColor: "black",
   textColor: "white"
 }];
 
