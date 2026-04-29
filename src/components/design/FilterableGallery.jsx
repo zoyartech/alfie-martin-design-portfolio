@@ -7,19 +7,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const projects = [
 {
-  title: "Voice User Interface in AI-Med Tech",
-  category: "Product Design",
-  industry: "Med Tech",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1e0590e7_Screenshot2026-04-27at75059PM.png",
-  imageFit: "object-contain bg-[#020b18]",
-  year: "2024",
-  link: "VoiceUserInterface",
-  summary: "Designing a voice user interface for AI-powered clinical tech.",
-  stats: [],
-  tags: ["VUI", "Voice UI", "Med Tech"],
-  bgColor: "#97bbf1"
-},
-{
   title: "Multimodal Design for AI systems In mental health",
   category: "AI Design",
   industry: "Med Tech",
