@@ -82,6 +82,20 @@ const projects = [
   tags: ["AI", "Smart Contracts", "Product Design"],
   textColor: "black",
   bgColor: "#a0c283"
+},
+{
+  title: "Design System Playground",
+  category: "Design Systems",
+  industry: "Design",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f40868490_deeesignsystem.png",
+  imageFit: "object-cover",
+  year: "2024",
+  link: "DesignSystemPlayground",
+  summary: "An interactive playground for exploring and testing design system components.",
+  stats: [],
+  tags: ["Design Systems", "UI Components"],
+  bgColor: "#f3f4f6",
+  textColor: "black"
 }];
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
