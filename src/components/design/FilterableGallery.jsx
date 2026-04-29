@@ -80,7 +80,7 @@ const projects = [
 
   tags: ["AI", "Smart Contracts", "Product Design"],
   textColor: "black",
-  bgColor: "#bef264"
+  bgColor: "#a0c283"
 }];
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
