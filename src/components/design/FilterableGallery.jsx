@@ -141,7 +141,7 @@ export default function FilterableGallery() {
 
         <div className="relative w-full mt-16 pb-24">
           <AnimatePresence>
-            {[...filtered].reverse().map((project, i) =>
+            {filtered.map((project, i) =>
             <StickyCard key={project.title} project={project} index={i} total={filtered.length} />
             )}
           </AnimatePresence>
