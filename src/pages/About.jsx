@@ -68,7 +68,7 @@ export default function About() {
                 }
               }}
             >
-              {["Product Design", "Growth Strategy", "AI Integration", "User Research", "Prototyping", "Design Systems", "Visual Identity"].map((tag, index) => (
+              {["Product Design", "Growth Strategy", "AI Integration", "User Research", "Prototyping", "Design Systems", "Visual Identity", "Conversational Design"].map((tag, index) => (
                 <motion.div
                   key={index}
                   variants={{
