@@ -58,7 +58,8 @@ const projects = [
   summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
   stats: [],
   tags: ["SAO", "Semantic Search", "AI Agents"],
-  bgColor: "#a8a9ab"
+  bgColor: "#a8a9ab",
+  titleColor: "text-black"
 },
 {
   title: "Multimodal Design for AI systems In mental health",
