@@ -182,7 +182,7 @@ function StickyCard({ project, index, total }) {
         className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
         
         <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
-          <div className="bg-lime-100 p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
             <img
               src={project.image}
               alt={project.title}
@@ -195,7 +195,7 @@ function StickyCard({ project, index, total }) {
             
           </div>
 
-          <div className="bg-lime-100 p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
               {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
@@ -204,17 +204,17 @@ function StickyCard({ project, index, total }) {
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' ? 'text-gray-200' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className="text-slate-950 mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-white/20">
+            <div className="text-white mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid border-white/20">
                 {project.stats.map((stat) =>
               <div key={stat.label}>
-                    <p className="text-slate-950 mb-1 text-2xl font-light md:text-3xl">{stat.value}</p>
-                    <p className="text-slate-950 text-sm font-medium">{stat.label}</p>
+                    <p className="text-white mb-1 text-2xl font-light md:text-3xl">{stat.value}</p>
+                    <p className="text-white/80 text-sm font-medium">{stat.label}</p>
                   </div>
               )}
               </div>
             }
             
-            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium group-hover:text-[#97dc90] transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' ? 'text-white' : 'text-black'}`}>
+            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' ? 'text-white group-hover:text-black' : 'text-black group-hover:text-white'}`}>
               Read Case Study <ArrowUpRight className="w-5 h-5" />
             </div>
           </div>
