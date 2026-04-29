@@ -30,7 +30,8 @@ const projects = [
   summary: "In depth look into designing for trust into conversational design",
   stats: [],
   tags: ["AI Design"],
-  bgColor: "#ddf8f7"
+  bgColor: "#ddf8f7",
+  titleColor: "text-black"
 },
 {
   title: "Voice User Interface in AI-Med Tech",
