@@ -15,7 +15,8 @@ export default function ArtDirection() {
         </div>
         
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-5xl font-light tracking-tight mb-6">Art Direction</h1>
+          <h1 className="text-5xl font-light tracking-tight mb-2">Art Direction</h1>
+          <p className="text-slate-500 text-lg mb-6">Click to enlarge</p>
           
           <div className="w-full mt-12 flex justify-center h-[80vh]">
             <iframe 
