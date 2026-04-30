@@ -66,8 +66,8 @@ export default function SAO() {
 
           <div className="w-full mb-12">
             <iframe 
-              src="https://gamma.app/embed/sxw2gwubjkzs9ke" 
-              style={{ width: '700px', maxWidth: '100%', height: '450px' }} 
+              src="https://search-agent-case-study-r2z63fc.gamma.site" 
+              style={{ width: '100%', height: '600px' }} 
               allow="fullscreen" 
               title="Search Agent Experience Optimization"
               className="border border-slate-200 shadow-xl"
