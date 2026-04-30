@@ -184,20 +184,20 @@ function StickyCard({ project, index, total }) {
       
       <motion.div
         style={{ scale, opacity, borderRadius }}
-        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-gray-200 group">
+        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-slate-900 group">
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center">
-            <img
-              src={project.image}
-              alt={project.title}
-              style={{ clipPath: 'inset(2px 0 0 0 round 10px)' }}
-              className={`group-hover:scale-105 transition-transform duration-700 ${
-              (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
-              'max-w-full max-h-full w-auto h-auto object-contain' :
-              `w-full h-full ${project.imageFit || 'object-cover'}`}`
-              } />
-            
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
+            <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
+              <img
+                src={project.image}
+                alt={project.title}
+                className={`group-hover:scale-105 transition-transform duration-700 ${
+                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
+                'max-w-full max-h-full w-auto h-auto object-contain' :
+                `w-full h-full ${project.imageFit || 'object-cover'}`}`
+                } />
+            </div>
           </div>
 
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
