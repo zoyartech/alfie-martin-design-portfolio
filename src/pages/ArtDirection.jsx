@@ -6,7 +6,7 @@ import { createPageUrl } from "@/utils";
 
 export default function ArtDirection() {
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
+    <div className="min-h-screen bg-white text-slate-900 pt-32 pb-24 px-6 lg:px-12 font-sans">
       <div className="w-full max-w-[1600px] mx-auto">
         <div className="flex justify-between items-center mb-12">
           <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
@@ -24,15 +24,14 @@ export default function ArtDirection() {
               src="https://embed.figma.com/proto/vNCIoHjPhuEFvQVgWBJEtJ/donuts?page-id=0%3A1&node-id=40-29&p=f&viewport=1092%2C686%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share" 
               allowFullScreen
               title="Figma Prototype"
-              className="rounded-xl shadow-lg bg-[#faf9f6]"
+              className="rounded-xl shadow-lg bg-white"
             ></iframe>
           </div>
 
           <div className="w-full mt-16 flex justify-center">
             <iframe 
               src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/8787c7343_AlfieMartin-food-designpdfpdf.pdf" 
-              style={{ backgroundColor: "white", border: "none" }}
-              className="w-full aspect-[4/3] rounded-xl shadow-lg"
+              className="w-full aspect-[4/3] rounded-xl shadow-lg bg-white"
               title="Art Direction Design Illustration PDF"
             ></iframe>
           </div>
