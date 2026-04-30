@@ -70,6 +70,20 @@ const projects = [
   tags: ["Design Systems", "UI Components"],
   bgColor: "black",
   textColor: "white"
+},
+{
+  title: "Search Agent Optimization",
+  category: "AI Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
+  imageFit: "object-contain bg-[#f6f6f6]",
+  year: "2024",
+  link: "SAO",
+  summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
+  stats: [],
+  tags: ["AI", "Search", "Product Design"],
+  bgColor: "#f6f6f6",
+  textColor: "black"
 }];
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
