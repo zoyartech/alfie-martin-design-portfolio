@@ -102,7 +102,7 @@ export default function FilterableGallery() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
+                    <Link to={createPageUrl("UXResearchStudies")} className="inline-flex items-center px-5 py-2.5 rounded-[5px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
                       UX Research Studies
                     </Link>
                   </TooltipTrigger>
@@ -114,7 +114,7 @@ export default function FilterableGallery() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
+                    <Link to={createPageUrl("SideQuests")} className="inline-flex items-center px-5 py-2.5 rounded-[5px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
                       Product Design
                     </Link>
                   </TooltipTrigger>
@@ -126,7 +126,7 @@ export default function FilterableGallery() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[10px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
+                    <Link to={createPageUrl("Writing")} className="inline-flex items-center px-5 py-2.5 rounded-[5px] border-[0.5px] border-gray-600 bg-[#d0fbff] hover:bg-white hover:shadow-md text-sm font-medium text-black transition-all">
                       Content Strategy
                     </Link>
                   </TooltipTrigger>
