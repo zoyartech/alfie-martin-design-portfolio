@@ -12,7 +12,7 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
     { label: "ABOUT", page: "About" },
     { label: "CASE STUDIES", page: "CaseStudies" },
     { label: "CONTACT", page: "Contact" },
-    { label: "BLOG", url: "https://medium.com/@deadinsidenyc" }
+    { label: "BLOG", url: "https://medium.com/@alfieaiproductdesign" }
   ];
 
 
