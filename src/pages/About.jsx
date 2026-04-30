@@ -89,6 +89,19 @@ export default function About() {
       {/* Experience Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-24 max-w-4xl"
+          >
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png" 
+              alt="Client Logos" 
+              className="w-full h-auto object-contain mix-blend-multiply" 
+            />
+          </motion.div>
           <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
           
           <div className="space-y-12">
