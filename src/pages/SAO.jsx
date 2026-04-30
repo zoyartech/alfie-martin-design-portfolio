@@ -74,14 +74,14 @@ export default function SAO() {
             
           </div>
 
-          <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8 hidden">
-            <img
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png"
-              alt="Brand reputation radar chart"
-              className="w-full max-w-2xl h-auto cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png")} />
-            
-          </div>
+          
+
+
+
+
+
+
+          
         </motion.div>
       </div>
 
