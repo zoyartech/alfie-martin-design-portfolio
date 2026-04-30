@@ -23,14 +23,14 @@ export default function ArtDirection() {
               src="https://embed.figma.com/proto/vNCIoHjPhuEFvQVgWBJEtJ/donuts?page-id=0%3A1&node-id=40-29&p=f&viewport=1092%2C686%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share" 
               allowFullScreen
               title="Figma Prototype"
-              className="rounded-xl shadow-lg bg-white"
+              className="rounded-xl shadow-lg bg-[#faf9f6]"
             ></iframe>
           </div>
 
           <div className="w-full mt-16 flex justify-center">
             <iframe 
               src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/8787c7343_AlfieMartin-food-designpdfpdf.pdf" 
-              className="w-full aspect-[4/3] rounded-xl shadow-lg bg-white"
+              className="w-full aspect-[4/3] rounded-xl shadow-lg bg-[#faf9f6]"
               title="Art Direction Design Illustration PDF"
             ></iframe>
           </div>
