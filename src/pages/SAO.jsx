@@ -64,6 +64,16 @@ export default function SAO() {
             The shift matters because the retrieval flow itself is different. When a user queries an AI agent, the agent interprets intent, decomposes the goal into sub-tasks, performs iterative queries across multiple sources, then synthesizes the result. So instead of "rank #1 for keyword X," you're trying to be the source the model picks up, trusts, and cites often without the user ever clicking through. That's the "zero-click" problem people in this space worry about.
           </p>
 
+          <div className="w-full mb-12">
+            <iframe 
+              src="https://search-agent-case-study-r2z63fc.gamma.site" 
+              style={{ width: '100%', minHeight: '600px' }} 
+              allow="fullscreen" 
+              title="Search Agent Experience Optimization"
+              className="border border-slate-200 shadow-xl rounded-none"
+            />
+          </div>
+
           <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8">
             <img 
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png" 
