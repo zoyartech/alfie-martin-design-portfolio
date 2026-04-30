@@ -31,7 +31,7 @@ export default function ArtDirection() {
           <div className="w-full mt-16 flex justify-center">
             <iframe 
               src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/8787c7343_AlfieMartin-food-designpdfpdf.pdf" 
-              style={{ backgroundColor: "#faf9f6", border: "none" }}
+              style={{ backgroundColor: "white", border: "none" }}
               className="w-full aspect-[4/3] rounded-xl shadow-lg"
               title="Art Direction Design Illustration PDF"
             ></iframe>
