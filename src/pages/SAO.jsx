@@ -20,8 +20,8 @@ export default function SAO() {
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-500"
-            aria-label="Toggle dark mode"
-          >
+            aria-label="Toggle dark mode">
+            
             <Sun className="h-5 w-5 hidden dark:block" />
             <Moon className="h-5 w-5 block dark:hidden" />
           </button>
@@ -35,12 +35,12 @@ export default function SAO() {
           </p>
 
           <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png" 
-              alt="SAO Hero" 
-              className="w-full h-auto object-cover max-h-[500px] cursor-pointer hover:opacity-95 transition-opacity" 
-              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png")}
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png"
+              alt="SAO Hero"
+              className="w-full h-auto object-cover max-h-[500px] cursor-pointer hover:opacity-95 transition-opacity"
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d26180e28_painting.png")} />
+            
           </div>
 
           <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mb-12">
@@ -48,12 +48,12 @@ export default function SAO() {
           </p>
 
           <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100 bg-white p-4 md:p-8 flex justify-center">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png" 
-              alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era" 
-              className="w-[48%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png")}
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png"
+              alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era"
+              className="w-[48%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png")} />
+            
           </div>
 
           <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
@@ -65,53 +65,53 @@ export default function SAO() {
           </p>
 
           <div className="w-full mb-12">
-            <iframe 
-              src="https://search-agent-case-study-r2z63fc.gamma.site" 
-              style={{ width: '100%', minHeight: '600px' }} 
-              allow="fullscreen" 
+            <iframe
+              src="https://search-agent-case-study-r2z63fc.gamma.site"
+              style={{ width: '100%', minHeight: '600px' }}
+              allow="fullscreen"
               title="Search Agent Experience Optimization"
-              className="border border-slate-200 shadow-xl rounded-none"
-            />
+              className="border border-slate-200 shadow-xl rounded-none" />
+            
           </div>
 
-          <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png" 
-              alt="Brand reputation radar chart" 
-              className="w-full max-w-2xl h-auto cursor-pointer hover:opacity-90 transition-opacity" 
-              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png")}
-            />
+          <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8 flex justify-center p-8 hidden">
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png"
+              alt="Brand reputation radar chart"
+              className="w-full max-w-2xl h-auto cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b52b1c830_Screenshot2026-04-18at35633PM.png")} />
+            
           </div>
         </motion.div>
       </div>
 
       <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+        {selectedImage &&
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          onClick={() => setSelectedImage(null)}>
+          
+            <button
             onClick={() => setSelectedImage(null)}
-          >
-            <button 
-              onClick={() => setSelectedImage(null)} 
-              className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
-            >
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors">
+            
               <X className="w-8 h-8" />
             </button>
             <motion.img
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              src={selectedImage}
-              alt="Full size"
-              className="max-w-full max-h-[90vh] object-contain cursor-default"
-              onClick={(e) => e.stopPropagation()}
-            />
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.95 }}
+            src={selectedImage}
+            alt="Full size"
+            className="max-w-full max-h-[90vh] object-contain cursor-default"
+            onClick={(e) => e.stopPropagation()} />
+          
           </motion.div>
-        )}
+        }
       </AnimatePresence>
-    </div>
-  );
+    </div>);
+
 }
