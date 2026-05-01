@@ -102,7 +102,7 @@ export default function About() {
               className="w-full h-auto object-contain mix-blend-multiply" />
             
           </motion.div>
-          
+          <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
           
           <div className="space-y-12">
             {[
@@ -130,8 +130,8 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="border-t border-gray-200 pt-8">
+              transition={{ duration: 0.6, delay: i * 0.1 }} className="border-t border-gray-200 pt-8 hidden">
+              
 
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
