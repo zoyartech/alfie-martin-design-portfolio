@@ -90,13 +90,13 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png",
-  imageFit: "object-contain bg-[#faf9f6]",
+  imageFit: "object-contain bg-[#56FF50]",
   year: "2024",
   link: "FluidUI",
   summary: "Exploring fluid interfaces and designing the conversational dance between human and machine.",
   stats: [],
   tags: ["VUI", "AI Design", "Multimodal"],
-  bgColor: "#faf9f6",
+  bgColor: "#56FF50",
   textColor: "black"
 }];
 
