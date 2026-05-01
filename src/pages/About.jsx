@@ -86,7 +86,68 @@ export default function About() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-24 max-w-4xl"
+          >
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png" 
+              alt="Client Logos" 
+              className="w-full h-auto object-contain mix-blend-multiply" 
+            />
+          </motion.div>
+          <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
+          
+          <div className="space-y-12">
+            {[
+            {
+              role: "Product Growth Designer",
+              company: "Grammarly",
+              period: "2022 - 2024",
+              description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
+            },
+            {
+              role: "Brand Identity & Growth Strategist",
+              company: "Polaroid",
+              period: "2020 - Present",
+              description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
+            },
+            {
+              role: "Product Designer CRO",
+              company: "Microsoft",
+              period: "2018 - 2020",
+              description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
+            }].
+            map((job, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="border-t border-gray-200 pt-8">
 
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-light mb-2">{job.role}</h3>
+                    <p className="text-gray-500">{job.company}</p>
+                  </div>
+                  
+                </div>
+                <p className="text-gray-600 leading-relaxed max-w-2xl">
+                  {job.description}
+                </p>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Skills Section */}
       <section className="py-16 md:py-32 px-6 lg:px-12">
