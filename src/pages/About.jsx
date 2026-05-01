@@ -102,7 +102,7 @@ export default function About() {
               className="w-full h-auto object-contain mix-blend-multiply" />
             
           </motion.div>
-          <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
+          
           
           <div className="space-y-12">
             {[
@@ -124,26 +124,26 @@ export default function About() {
               period: "2018 - 2020",
               description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
             }].
-            map((job, i) =>
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }} className="border-t border-gray-200 pt-8 hidden">
-              
+            map((job, i) => null
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-light mb-2">{job.role}</h3>
-                    <p className="text-gray-500">{job.company}</p>
-                  </div>
-                  
-                </div>
-                <p className="text-gray-600 leading-relaxed max-w-2xl">
-                  {job.description}
-                </p>
-              </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             )}
           </div>
         </div>
