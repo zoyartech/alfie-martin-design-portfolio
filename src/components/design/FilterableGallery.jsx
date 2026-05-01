@@ -84,6 +84,20 @@ const projects = [
   tags: ["AI", "Search", "Product Design"],
   bgColor: "#f6f6f6",
   textColor: "black"
+},
+{
+  title: "Voice User Interface",
+  category: "AI Design",
+  industry: "Technology",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png",
+  imageFit: "object-contain bg-[#faf9f6]",
+  year: "2024",
+  link: "FluidUI",
+  summary: "Exploring fluid interfaces and designing the conversational dance between human and machine.",
+  stats: [],
+  tags: ["VUI", "AI Design", "Multimodal"],
+  bgColor: "#faf9f6",
+  textColor: "black"
 }];
 
 const filters = ["All", "AI Design", "Product Design", "Brand Identity", "Design Systems", "UX Strategy", "Art Direction"];
