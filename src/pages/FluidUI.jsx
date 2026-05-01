@@ -181,7 +181,7 @@ export default function FluidUI() {
 
           <h2 className="text-slate-900 mb-6 text-3xl font-medium">AI Conversational Design</h2>
           <a href="https://beam-pear-41561282.figma.site/" target="_blank" rel="noopener noreferrer" className="block w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-[#0F172A] hover:opacity-90 transition-opacity">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b50c5c55e_Screenshot2026-04-20at104552AM.png" alt="View Interactive Prototype" className="w-full h-auto object-contain" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2a71239f_Screenshot2026-05-01at75025AM.png" alt="View Interactive Prototype" className="w-full h-auto object-cover" />
           </a>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
