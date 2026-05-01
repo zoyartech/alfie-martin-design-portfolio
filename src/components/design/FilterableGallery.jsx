@@ -206,11 +206,7 @@ function StickyCard({ project, index, total }) {
               <img
                 src={project.image}
                 alt={project.title}
-                className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
-                'max-w-full max-h-full w-auto h-auto object-contain' :
-                `w-full h-full ${project.imageFit || 'object-cover'}`}`
-                } />
+                className={`group-hover:scale-105 transition-transform duration-700 w-full h-full object-contain ${(project.imageFit || '').replace('object-contain', '').replace('object-cover', '')}`} />
             </div>
           </div>
 
