@@ -72,9 +72,11 @@ export default function FlowDiagram({ defaultNodes = [], defaultEdges = [] }) {
     }
   }, []);
 
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+
   return (
     <TooltipProvider>
-      <Tooltip>
+      <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
         <TooltipTrigger asChild>
           <div className="w-full h-full bg-slate-50/50" ref={reactFlowWrapper}>
             <ReactFlow
@@ -85,6 +87,12 @@ export default function FlowDiagram({ defaultNodes = [], defaultEdges = [] }) {
               onConnect={onConnect}
               onNodeDoubleClick={onNodeDoubleClick}
               onEdgeDoubleClick={onEdgeDoubleClick}
+              onPaneMouseEnter={() => setTooltipOpen(true)}
+              onPaneMouseLeave={() => setTooltipOpen(false)}
+              onNodeMouseEnter={() => setTooltipOpen(true)}
+              onNodeMouseLeave={() => setTooltipOpen(false)}
+              onEdgeMouseEnter={() => setTooltipOpen(true)}
+              onEdgeMouseLeave={() => setTooltipOpen(false)}
               fitView
             >
               <Controls />
