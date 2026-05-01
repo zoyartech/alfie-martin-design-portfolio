@@ -55,7 +55,7 @@ export default function About() {
             <p className="text-lg leading-relaxed text-gray-700">HI im a Product designer specializing in growth and AI and I live in NYC. 8+ years making things people use, want, and come back to. Chronic class-taker. Aggressively curious. Forever a work in progress and not even a little sorry about it.
             </p>
 
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-3 pt-6"
               initial="hidden"
               whileInView="visible"
@@ -66,41 +66,41 @@ export default function About() {
                     staggerChildren: 0.04
                   }
                 }
-              }}
-            >
-              {["Product Design", "Growth Strategy", "AI Integration", "User Research", "Prototyping", "Design Systems", "Visual Identity", "Conversational Design"].map((tag, index) => (
-                <motion.div
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.9, y: 8 },
-                    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-                  }}
-                  whileHover={{ y: -2, transition: { duration: 0.2, ease: "easeOut" } }}
-                  className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full cursor-default inline-flex"
-                >
+              }}>
+              
+              {["Product Design", "Growth Strategy", "AI Integration", "User Research", "Prototyping", "Design Systems", "Visual Identity", "Conversational Design"].map((tag, index) =>
+              <motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.9, y: 8 },
+                  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
+                whileHover={{ y: -2, transition: { duration: 0.2, ease: "easeOut" } }}
+                className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full cursor-default inline-flex">
+                
                   {tag}
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50 hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-24 max-w-4xl"
-          >
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png" 
-              alt="Client Logos" 
-              className="w-full h-auto object-contain mix-blend-multiply" 
-            />
+            className="mb-24 max-w-4xl">
+            
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png"
+              alt="Client Logos"
+              className="w-full h-auto object-contain mix-blend-multiply" />
+            
           </motion.div>
           <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em]">EXPERIENCE</p>
           
@@ -195,13 +195,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl"
-            >
-              <img 
-                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f494d2ace_tools.png" 
-                alt="Tools I use" 
-                className="w-full h-auto object-contain" 
-              />
+              className="max-w-3xl">
+              
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f494d2ace_tools.png"
+                alt="Tools I use"
+                className="w-full h-auto object-contain" />
+              
             </motion.div>
           </div>
         </div>
