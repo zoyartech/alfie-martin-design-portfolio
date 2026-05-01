@@ -56,6 +56,16 @@ export default function SAO() {
             
           </div>
 
+          <div className="w-full mb-12">
+            <iframe 
+              src="https://gamma.app/embed/xb1t0fhvd3jf81x" 
+              style={{ width: '100%', minHeight: '600px' }} 
+              allow="fullscreen" 
+              title="How to Set Up Your Business for AI Search"
+              className="border border-slate-200 shadow-xl rounded-none"
+            ></iframe>
+          </div>
+
           <div className="w-full rounded-none overflow-hidden border border-slate-200 shadow-xl bg-white mb-8">
             <AISeoDashboard />
           </div>
