@@ -102,7 +102,7 @@ export default function About() {
               className="w-full h-auto object-contain mix-blend-multiply" />
             
           </motion.div>
-          <p className="text-slate-950 mb-12 text-lg font-extrabold tracking-[0.3em] hidden">EXPERIENCE</p>
+          
           
           <div className="space-y-12">
             {[
