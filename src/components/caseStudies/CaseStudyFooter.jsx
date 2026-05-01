@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Voice User Interface in AI-Med Tech",
-    image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1e0590e7_Screenshot2026-04-27at75059PM.png",
+    image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c676ec4e0_Screenshot2026-05-01at75025AM.png",
     link: "VoiceUserInterface",
     category: "Product Design"
   },
