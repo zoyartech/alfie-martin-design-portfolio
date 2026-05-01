@@ -94,7 +94,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-24 max-w-4xl">
+            className="mb-24 max-w-4xl mx-auto flex justify-center">
             
             <img
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png"
