@@ -5,6 +5,7 @@ import { ArrowLeft, X, Moon, Sun } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { useTheme } from "next-themes";
 import AISeoDashboard from "@/components/AISeoDashboard";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function SAO() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -48,12 +49,20 @@ export default function SAO() {
           </p>
 
           <div className="w-full mb-12 rounded-none overflow-hidden shadow-xl border border-slate-100 bg-white p-4 md:p-8 flex justify-center">
-            <img
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png"
-              alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era"
-              className="w-[48%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png")} />
-            
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <img
+                    src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png"
+                    alt="SEO to AEO to ASO: The Three-Layer Model for the AI Search Era"
+                    className="w-[48%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => setSelectedImage("https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d911d00aa_Screenshot2026-04-27at83140PM.png")} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Click to enlarge</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
 
           <div className="w-full mb-12">
