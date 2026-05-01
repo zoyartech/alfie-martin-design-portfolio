@@ -358,6 +358,16 @@ export default function FluidUI() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
             className="space-y-16">
+              <div className="w-full mb-16 flex justify-center">
+                <iframe 
+                  src="https://gamma.app/embed/4fuqicfqd1n2k9o" 
+                  style={{ width: '700px', maxWidth: '100%', height: '450px' }} 
+                  allow="fullscreen" 
+                  title="Designing the Voice Layer for a Clinical TMS Platform"
+                  className="border border-slate-200 shadow-xl rounded-2xl bg-white"
+                ></iframe>
+              </div>
+
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
