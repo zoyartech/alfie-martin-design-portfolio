@@ -27,7 +27,6 @@ export default function About() {
 
             <p className="text-xs tracking-[0.3em] text-gray-400 mb-8">ABOUT ME</p>
             <h1 className="text-4xl md:text-6xl font-light mb-12 max-w-4xl">Multi-disciplinary professional  focused on creating meaningful experiences
-
             </h1>
             
             <div className="w-full mt-12 mb-8 overflow-hidden rounded-sm">
@@ -36,7 +35,6 @@ export default function About() {
                 src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f75e609c1_IMG_3538.png"
                 alt="Alfie Martin Portrait"
                 className="w-full h-auto object-cover" />
-              
             </div>
           </motion.div>
         </div>
@@ -77,7 +75,6 @@ export default function About() {
                 }}
                 whileHover={{ y: -2, transition: { duration: 0.2, ease: "easeOut" } }}
                 className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full cursor-default inline-flex">
-                
                   {tag}
                 </motion.div>
               )}
@@ -86,66 +83,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      {/* Client Logos Section */}
+      <section className="py-16 md:py-32 px-6 lg:px-12 bg-gray-50 flex justify-center">
+        <div className="max-w-7xl mx-auto w-full flex justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-24 max-w-4xl">
+            className="mb-24 max-w-4xl w-full flex justify-center">
             
             <img
               src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1b76f0523_logoss.png"
               alt="Client Logos"
-              className="w-full h-auto object-contain mix-blend-multiply" />
+              className="w-auto max-w-full h-auto object-contain mix-blend-multiply mx-auto block" />
             
           </motion.div>
-          
-          
-          <div className="space-y-12">
-            {[
-            {
-              role: "Product Growth Designer",
-              company: "Grammarly",
-              period: "2022 - 2024",
-              description: "Led growth design initiatives for DTC mobile and web applications, focusing on user activation and retention strategies."
-            },
-            {
-              role: "Brand Identity & Growth Strategist",
-              company: "Polaroid",
-              period: "2020 - Present",
-              description: "Providing brand strategy, visual identity, and digital design services for startups and established brands."
-            },
-            {
-              role: "Product Designer CRO",
-              company: "Microsoft",
-              period: "2018 - 2020",
-              description: "Developed comprehensive brand identities and marketing materials for diverse clients across industries."
-            }].
-            map((job, i) => null
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            )}
-          </div>
         </div>
       </section>
 
@@ -189,7 +142,7 @@ export default function About() {
           </div>
 
           <div className="mt-32">
-            
+            <p className="text-xs tracking-[0.3em] text-gray-400 mb-12 hidden">TOOLS</p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -197,10 +150,9 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="max-w-3xl">
               
-              
-
-              
-              
+              <img
+                src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f494d2ace_tools.png"
+                alt="Tools I use" className="w-full h-auto object-contain hidden" />
               
             </motion.div>
           </div>
@@ -225,12 +177,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">© 2024 Alfie Martin. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            
-            
-            
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
