@@ -9,6 +9,7 @@ import ReactFlow, {
   Panel
 } from 'reactflow';
 import 'reactflow/dist/style.css';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function FlowDiagram({ defaultNodes = [], defaultEdges = [] }) {
   const [nodes, setNodes] = useState(defaultNodes);
@@ -72,36 +73,45 @@ export default function FlowDiagram({ defaultNodes = [], defaultEdges = [] }) {
   }, []);
 
   return (
-    <div className="w-full h-full bg-slate-50/50" ref={reactFlowWrapper}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        onNodeDoubleClick={onNodeDoubleClick}
-        onEdgeDoubleClick={onEdgeDoubleClick}
-        fitView
-      >
-        <Controls />
-        <MiniMap />
-        <Background variant="dots" gap={12} size={1} />
-        <Panel position="top-right" className="bg-white/90 p-3 rounded-lg shadow-sm border border-slate-200">
-          <button 
-            onClick={addNode}
-            className="w-full bg-slate-900 text-white px-3 py-2 rounded-md text-sm font-medium shadow-sm hover:bg-slate-800 transition"
-          >
-            + Add Node
-          </button>
-          <div className="text-[10px] text-slate-500 mt-3 text-center uppercase tracking-wider font-semibold">
-            Editing Shortcuts
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <div className="w-full h-full bg-slate-50/50" ref={reactFlowWrapper}>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              onNodeDoubleClick={onNodeDoubleClick}
+              onEdgeDoubleClick={onEdgeDoubleClick}
+              fitView
+            >
+              <Controls />
+              <MiniMap />
+              <Background variant="dots" gap={12} size={1} />
+              <Panel position="top-right" className="bg-white/90 p-3 rounded-lg shadow-sm border border-slate-200">
+                <button 
+                  onClick={addNode}
+                  className="w-full bg-slate-900 text-white px-3 py-2 rounded-md text-sm font-medium shadow-sm hover:bg-slate-800 transition"
+                >
+                  + Add Node
+                </button>
+                <div className="text-[10px] text-slate-500 mt-3 text-center uppercase tracking-wider font-semibold">
+                  Editing Shortcuts
+                </div>
+                <div className="text-xs text-slate-600 mt-1">
+                  <span className="font-medium text-slate-900">Double-click</span> to rename<br/>
+                  <span className="font-medium text-slate-900">Backspace</span> to delete
+                </div>
+              </Panel>
+            </ReactFlow>
           </div>
-          <div className="text-xs text-slate-600 mt-1">
-            <span className="font-medium text-slate-900">Double-click</span> to rename<br/>
-            <span className="font-medium text-slate-900">Backspace</span> to delete
-          </div>
-        </Panel>
-      </ReactFlow>
-    </div>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>click blue circles to read details</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
