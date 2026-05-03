@@ -36,6 +36,7 @@ export default function VUIPrototype() {
   );
   const [showHistory, setShowHistory] = useState(false);
   const [suggestion, setSuggestion] = useState('Ready for motor threshold check?');
+  const [showCriticalModal, setShowCriticalModal] = useState(false);
 
   const simulateCommand = (type) => {
     setMicState('listening');
@@ -50,6 +51,7 @@ export default function VUIPrototype() {
         setMicState('idle');
         let newCmd = '';
         let newStatus = '';
+        let isCritical = false;
 
         if (type === 'tier1') {
           newCmd = 'Log patient reported mild headache';
@@ -60,12 +62,14 @@ export default function VUIPrototype() {
         } else if (type === 'tier3') {
           newCmd = 'Update stimulation intensity to 120%';
           newStatus = 'screen_confirm';
+          isCritical = true;
         } else if (type === 'noisy') {
           newCmd = 'Update protocol... [Audio Degraded]';
           newStatus = 'screen_confirm';
         } else if (type === 'treatment') {
           newCmd = 'Begin stimulation treatment';
           newStatus = 'screen_confirm';
+          isCritical = true;
         } else if (type === 'error') {
           newCmd = 'Set motor threshold to 200%';
           newStatus = 'error';
@@ -73,6 +77,10 @@ export default function VUIPrototype() {
 
         setLastCommand(newCmd);
         setCommandStatus(newStatus);
+        
+        if (isCritical) {
+          setShowCriticalModal(true);
+        }
 
         setHistory((prev) => [{
           id: Date.now(),
@@ -92,6 +100,51 @@ export default function VUIPrototype() {
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/4"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[80px] pointer-events-none translate-y-1/2 -translate-x-1/4"></div>
+        
+        <AnimatePresence>
+          {showCriticalModal && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 z-50 flex items-center justify-center p-6 bg-slate-950/80 backdrop-blur-sm"
+            >
+              <motion.div 
+                initial={{ scale: 0.95, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.95, y: 20 }}
+                className="w-full max-w-md bg-slate-900 border-2 border-red-500/50 rounded-2xl shadow-[0_0_50px_rgba(239,68,68,0.2)] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden"
+              >
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6">
+                  <AlertCircle className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-white text-xl font-medium mb-2">Critical Action Requested</h3>
+                <p className="text-slate-300 text-sm mb-6 leading-relaxed">
+                  You are about to execute a high-risk action: <br/>
+                  <span className="text-white font-semibold block mt-2 text-base">"{lastCommand}"</span>
+                </p>
+                <div className="flex gap-4 w-full relative z-10">
+                  <button 
+                    onClick={() => setShowCriticalModal(false)} 
+                    className="flex-1 px-4 py-3 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 font-medium transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setShowCriticalModal(false);
+                      setCommandStatus('confirmed');
+                      setHistory((h) => {const newH = [...h];newH[0].status = 'confirmed';return newH;});
+                    }} 
+                    className="flex-1 px-4 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium transition-colors shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                  >
+                    Confirm Action
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-8 border-b border-slate-800/60 pb-6">
