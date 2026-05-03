@@ -5,6 +5,7 @@ import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import FlowDiagram from "@/components/FlowDiagram";
 import ChatbotSimulator from "@/components/ChatbotSimulator";
+import ConversationCraft from "./ConversationCraft";
 
 const annotationsData = {
   multimodal: [
@@ -432,6 +433,10 @@ export default function FluidUI() {
             </motion.div>
             }
           </AnimatePresence>
+
+          <div className="mt-24 pt-16 border-t border-slate-200">
+            <ConversationCraft isEmbedded={true} />
+          </div>
 
         </div>
       </div>
