@@ -204,12 +204,12 @@ export default function MultiMedia() {
         <img
           src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1c960fb7_15.png"
           alt="Fashion runway hero"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-contain"
         />
         <div className="absolute inset-0 bg-white/33" />
         <div className="absolute bottom-12 left-6 lg:left-12">
-          <p className="text-xs tracking-[0.3em] text-white/70 mb-3 font-sans uppercase">MEDIA</p>
-          <h1 className="text-4xl md:text-6xl font-light font-serif text-white">Multi Media</h1>
+          <p className="text-xs tracking-[0.3em] text-slate-900/70 mb-3 font-sans uppercase">MEDIA</p>
+          <h1 className="text-4xl md:text-6xl font-light font-serif text-slate-900">Multi Media</h1>
         </div>
       </div>
 
