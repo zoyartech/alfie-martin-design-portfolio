@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ShowcaseConversation from "@/components/design/ShowcaseConversation";
 import { ProbabilityBar, HedgedTooltip, SourceCitationChip, LowConfidenceBanner, NumericalScorePopover } from "@/components/design/ConfidenceLibrary";
+import VUIPrototype from "@/components/VUIPrototype";
 
 export default function ConversationCraft({ isEmbedded = false }) {
   return (
@@ -128,6 +129,17 @@ export default function ConversationCraft({ isEmbedded = false }) {
               <LowConfidenceBanner />
             </div>
           </div>
+        </div>
+
+        {/* VUI Mobile Simulation Section */}
+        <div className="max-w-5xl mx-auto mt-32 pt-20 border-t border-slate-100">
+          <div className="mb-16">
+            <h2 className="text-3xl font-light mb-4 font-serif text-slate-900">VUI Mobile Simulation</h2>
+            <p className="text-slate-600 text-sm max-w-2xl leading-relaxed">
+              Interactive voice user interface dashboard simulating command processing, status tracking, and user feedback in a clinical setting.
+            </p>
+          </div>
+          <VUIPrototype />
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed text-sm mt-32 pt-20 border-t border-slate-100">
