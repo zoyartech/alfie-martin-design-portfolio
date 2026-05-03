@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Loader2, Square } from 'lucide-react';
+import { Play, Loader2, Square, Maximize } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
@@ -21,6 +21,17 @@ function GalleryVideoCard({ project, index }) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
       setIsPlaying(false);
+    }
+  };
+
+  const handleFullscreen = (e) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      if (videoRef.current.requestFullscreen) {
+        videoRef.current.requestFullscreen();
+      } else if (videoRef.current.webkitRequestFullscreen) {
+        videoRef.current.webkitRequestFullscreen();
+      }
     }
   };
 
@@ -67,7 +78,14 @@ function GalleryVideoCard({ project, index }) {
         )}
         
         {isPlaying && (
-          <div className="absolute bottom-4 right-4 flex items-center justify-center z-10">
+          <div className="absolute bottom-4 right-4 flex items-center gap-2 z-10">
+            <button 
+              onClick={handleFullscreen}
+              className="bg-white/90 rounded-full w-9 h-9 flex items-center justify-center backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-slate-900"
+              title="Fullscreen"
+            >
+              <Maximize className="w-4 h-4" />
+            </button>
             <button 
               onClick={handleStop}
               className="bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-sm font-medium text-slate-900"
@@ -251,6 +269,21 @@ export default function MultiMedia() {
                 aria-label="Pause video"
               />
             )}
+            <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (videoRef.current) {
+                    if (videoRef.current.requestFullscreen) videoRef.current.requestFullscreen();
+                    else if (videoRef.current.webkitRequestFullscreen) videoRef.current.webkitRequestFullscreen();
+                  }
+                }}
+                className="bg-white/90 rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-slate-900"
+                title="Fullscreen"
+              >
+                <Maximize className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
 
