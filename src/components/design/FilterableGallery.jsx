@@ -62,7 +62,7 @@ const projects = [
   category: "Design Systems",
   industry: "Design",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f40868490_deeesignsystem.png",
-  imageFit: "object-cover",
+  imageFit: "object-contain bg-[#e8f4b0]",
   year: "2024",
   link: "DesignSystemPlayground",
   summary: "An interactive playground for exploring and testing design system components.",
