@@ -5,6 +5,18 @@ import { Play } from 'lucide-react';
 export default function MultiMedia() {
   const videoRef = useRef(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    ['/downloads/CFNetworkDownload_9HS79a.tmp.MP4', 
+     '/Downloads/CFNetworkDownload_9HS79a.tmp.MP4', 
+     '/downloads/CFNetworkDownload_9HS79a.tmp.mp4', 
+     '/CFNetworkDownload_9HS79a.tmp.MP4'].forEach(p => {
+      fetch(p, { method: 'HEAD' })
+        .then(r => console.log('Check', p, r.status))
+        .catch(e => console.log('Check error', p, e));
+    });
+  }, []);
   const [isPlaying, setIsPlaying] = useState(false);
   useEffect(() => {
     // Check for prefers-reduced-motion
@@ -20,6 +32,18 @@ export default function MultiMedia() {
   useEffect(() => {
     if (prefersReducedMotion || !videoRef.current) return;
 
+    const video = videoRef.current;
+    // Ensure muted is explicitly set for programmatic autoplay to work in some browsers
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const handleError = () => {
+      setHasError(true);
+    };
+    video.addEventListener('error', handleError, true);
+
+    let isPlayPending = false;
+
     const options = {
       root: null,
       rootMargin: '0px',
@@ -29,30 +53,40 @@ export default function MultiMedia() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         // Play when 25% or more is visible
-        if (entry.intersectionRatio >= 0.25) {
-          const playPromise = videoRef.current.play();
-          if (playPromise !== undefined) {
-            playPromise
-              .then(() => setIsPlaying(true))
-              .catch(e => console.log("Autoplay prevented or failed:", e));
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+          if (video.paused && !isPlayPending) {
+            isPlayPending = true;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  setIsPlaying(true);
+                  isPlayPending = false;
+                })
+                .catch(e => {
+                  console.log("Autoplay prevented or failed:", e);
+                  isPlayPending = false;
+                });
+            } else {
+              isPlayPending = false;
+            }
           }
         } 
         // Pause when less than 10% is visible
         else if (entry.intersectionRatio <= 0.1) {
-          if (videoRef.current) {
-            videoRef.current.pause();
+          if (!video.paused && !isPlayPending) {
+            video.pause();
+            setIsPlaying(false);
           }
-          setIsPlaying(false);
         }
       });
     }, options);
 
-    observer.observe(videoRef.current);
+    observer.observe(video);
 
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
+      observer.unobserve(video);
+      video.removeEventListener('error', handleError, true);
     };
   }, [prefersReducedMotion]);
 
@@ -81,34 +115,33 @@ export default function MultiMedia() {
             Multi Media
           </h1>
 
-          <div className="relative w-full max-w-full rounded-[12px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] bg-slate-900 group aspect-video">
+          <div className="relative w-full max-w-full rounded-[12px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] bg-slate-900 group">
             <video
               ref={videoRef}
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
               muted
               loop
               playsInline
               preload="metadata"
               poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
               aria-label="Multi media video presentation"
+              onClick={handleManualPlay}
             >
               <source src="/downloads/CFNetworkDownload_9HS79a.tmp.MP4" type="video/mp4" />
               <source src="/downloads/CFNetworkDownload_9HS79a.tmp.webm" type="video/webm" />
-              
-              <div className="w-full h-full bg-slate-200 flex flex-col items-center justify-center p-8 text-center relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
-                  alt="Video poster fallback" 
-                  className="w-full h-full object-cover absolute inset-0 opacity-40"
-                />
-                <div className="relative z-10 max-w-md bg-white/90 p-6 rounded-xl backdrop-blur-sm shadow-sm border border-white/20">
-                  <p className="text-slate-800 font-medium mb-2">The video could not load.</p>
-                  <p className="text-slate-600 text-sm">Please make sure the video file is placed in the correct downloads folder or update the source URL.</p>
-                </div>
-              </div>
+              <p>Your browser does not support the video tag.</p>
             </video>
 
-            {prefersReducedMotion && !isPlaying && (
+            {hasError && (
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4">
+                <div className="bg-white/90 p-4 md:p-6 rounded-xl backdrop-blur-sm shadow-lg text-center max-w-sm">
+                  <p className="text-slate-900 font-semibold mb-1">Video could not load</p>
+                  <p className="text-slate-600 text-sm">Please check that the file is in the downloads folder.</p>
+                </div>
+              </div>
+            )}
+
+            {prefersReducedMotion && !isPlaying && !hasError && (
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
                 <button 
                   onClick={handleManualPlay}
