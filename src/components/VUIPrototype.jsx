@@ -37,6 +37,12 @@ export default function VUIPrototype() {
         } else if (type === 'tier3') {
           newCmd = 'Update stimulation intensity to 120%';
           newStatus = 'screen_confirm';
+        } else if (type === 'noisy') {
+          newCmd = 'Update protocol... [Audio Degraded]';
+          newStatus = 'screen_confirm';
+        } else if (type === 'treatment') {
+          newCmd = 'Begin stimulation treatment';
+          newStatus = 'screen_confirm';
         } else if (type === 'error') {
           newCmd = 'Set motor threshold to 200%';
           newStatus = 'error';
@@ -93,10 +99,10 @@ export default function VUIPrototype() {
               <Mic className="w-4 h-4 mr-2 text-blue-400" /> Simulate Voice Input
             </h4>
             <TooltipProvider delayDuration={200}>
-              <div className="space-y-2.5">
+              <div className="space-y-1.5">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button onClick={() => simulateCommand('tier1')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
+                    <button onClick={() => simulateCommand('tier1')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
                       <span>"Log mild headache"</span> <span className="text-[10px] text-slate-400 uppercase tracking-wider group-hover:text-slate-300">Tier 1</span>
                     </button>
                   </TooltipTrigger>
@@ -107,7 +113,7 @@ export default function VUIPrototype() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button onClick={() => simulateCommand('tier2')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
+                    <button onClick={() => simulateCommand('tier2')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
                       <span>"Set motor threshold to 62"</span> <span className="text-[10px] text-slate-400 uppercase tracking-wider group-hover:text-slate-300">Tier 2</span>
                     </button>
                   </TooltipTrigger>
@@ -118,7 +124,7 @@ export default function VUIPrototype() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button onClick={() => simulateCommand('tier3')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
+                    <button onClick={() => simulateCommand('tier3')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
                       <span>"Update intensity to 120%"</span> <span className="text-[10px] text-slate-400 uppercase tracking-wider group-hover:text-slate-300">Tier 3</span>
                     </button>
                   </TooltipTrigger>
@@ -129,7 +135,29 @@ export default function VUIPrototype() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button onClick={() => simulateCommand('error')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2.5 bg-red-900/20 hover:bg-red-900/40 text-red-200 border border-red-800/30 rounded-lg text-sm transition-colors disabled:opacity-50 flex items-center justify-between group">
+                    <button onClick={() => simulateCommand('noisy')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
+                      <span>"Update protocol..." (Noisy)</span> <span className="text-[10px] text-amber-400/70 uppercase tracking-wider group-hover:text-amber-300">Degraded</span>
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="left" className="bg-slate-800 text-slate-200 border-slate-700">
+                    <p className="max-w-[200px] text-center">Simulates noisy environment. Low confidence forces screen confirmation.</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button onClick={() => simulateCommand('treatment')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-sm text-slate-200 transition-colors disabled:opacity-50 flex items-center justify-between group">
+                      <span>"Begin treatment"</span> <span className="text-[10px] text-blue-400/70 uppercase tracking-wider group-hover:text-blue-300">Critical</span>
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="left" className="bg-slate-800 text-slate-200 border-slate-700">
+                    <p className="max-w-[200px] text-center">High-risk action. System mandates explicit confirmation before starting.</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button onClick={() => simulateCommand('error')} disabled={micState !== 'idle'} className="w-full text-left px-4 py-2 bg-red-900/20 hover:bg-red-900/40 text-red-200 border border-red-800/30 rounded-lg text-sm transition-colors disabled:opacity-50 flex items-center justify-between group">
                       <span>"Set threshold to 200%"</span> <span className="text-[10px] text-red-400/70 uppercase tracking-wider group-hover:text-red-300">Error</span>
                     </button>
                   </TooltipTrigger>
