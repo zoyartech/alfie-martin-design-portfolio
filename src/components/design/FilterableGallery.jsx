@@ -11,7 +11,7 @@ const projects = [
   category: "AI Design",
   industry: "Med Tech",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
-  imageFit: "object-contain bg-[#111823]",
+  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2024",
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
@@ -20,7 +20,7 @@ const projects = [
   { label: "Engagement", value: "85%" }],
 
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "#c5dfb1",
+  bgColor: "white",
   textColor: "black"
 },
 {
@@ -28,6 +28,7 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
+  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
@@ -37,14 +38,15 @@ const projects = [
   { label: "Support Reduction", value: "60%" }],
 
   tags: ["UX Research", "AI Systems", "Conversation Design"],
-  bgColor: "#2b5769",
-  theme: "dark"
+  bgColor: "white",
+  textColor: "black"
 },
 {
   title: "Designing trust into automated climate risk",
   category: "Product Design",
   industry: "Climate Risk",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
+  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2023",
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
@@ -55,7 +57,7 @@ const projects = [
 
   tags: ["AI", "Smart Contracts", "Product Design"],
   textColor: "black",
-  bgColor: "#a0c283"
+  bgColor: "white"
 },
 {
   title: "Design System Playground",
@@ -68,7 +70,7 @@ const projects = [
   summary: "An interactive playground for exploring and testing design system components.",
   stats: [],
   tags: ["Design Systems", "UI Components"],
-  bgColor: "#e8f4b0",
+  bgColor: "white",
   textColor: "black"
 },
 {
@@ -76,13 +78,13 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
-  imageFit: "object-contain bg-[#f4bfbf]",
+  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2024",
   link: "FluidUI",
   summary: "Interactive documentation component for conversational Voice User Interface (VUI) design, illustrating multimodal system architectures.",
   stats: [],
   tags: ["VUI", "Architecture", "Product Design"],
-  bgColor: "#f4bfbf",
+  bgColor: "white",
   textColor: "black"
 }];
 
