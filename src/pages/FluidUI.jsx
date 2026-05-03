@@ -181,7 +181,7 @@ export default function FluidUI() {
 
           <h2 className="text-slate-900 mb-6 text-3xl font-medium">AI Conversational Design</h2>
           <a href="https://beam-pear-41561282.figma.site/" target="_blank" rel="noopener noreferrer" className="block w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-[#0F172A] hover:opacity-90 transition-opacity">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2a71239f_Screenshot2026-05-01at75025AM.png" alt="View Interactive Prototype" className="w-full h-auto object-cover" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2a71239f_Screenshot2026-05-01at75025AM.png" alt="View Interactive Prototype" className="w-full h-auto object-cover hidden" />
           </a>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
@@ -192,13 +192,13 @@ export default function FluidUI() {
 
           <AnimatePresence mode="wait">
           {activeTab === "core" &&
-          <motion.div 
-            key="core"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-16">
+            <motion.div
+              key="core"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="space-y-16">
               <div className="flex justify-center w-full">
                 <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" style={{ width: "100%", height: "700px" }} title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
               </div>
@@ -212,19 +212,19 @@ export default function FluidUI() {
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'Voice Input' }, position: { x: 150, y: 50 } },
-                  { id: '2', type: 'input', data: { label: 'Text/GUI Input' }, position: { x: 450, y: 50 } },
-                  { id: '3', data: { label: 'Input Processing' }, position: { x: 300, y: 150 } },
-                  { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 250 } },
-                  { id: '5', type: 'output', data: { label: 'System Action' }, position: { x: 300, y: 350 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-3', source: '1', target: '3', animated: true },
-                  { id: 'e2-3', source: '2', target: '3' },
-                  { id: 'e3-4', source: '3', target: '4' },
-                  { id: 'e4-5', source: '4', target: '5' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'Voice Input' }, position: { x: 150, y: 50 } },
+                    { id: '2', type: 'input', data: { label: 'Text/GUI Input' }, position: { x: 450, y: 50 } },
+                    { id: '3', data: { label: 'Input Processing' }, position: { x: 300, y: 150 } },
+                    { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 250 } },
+                    { id: '5', type: 'output', data: { label: 'System Action' }, position: { x: 300, y: 350 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-3', source: '1', target: '3', animated: true },
+                    { id: 'e2-3', source: '2', target: '3' },
+                    { id: 'e3-4', source: '3', target: '4' },
+                    { id: 'e4-5', source: '4', target: '5' }]
+                    } />
                 
                   <AnnotationOverlay annotations={annotationsData.multimodal} />
                 </div>
@@ -234,54 +234,54 @@ export default function FluidUI() {
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[600px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'Raw Input String' }, position: { x: 300, y: 50 } },
-                  { id: '2', data: { label: 'NLP Parsing' }, position: { x: 300, y: 150 } },
-                  { id: '3', data: { label: 'Entity Extraction' }, position: { x: 150, y: 250 } },
-                  { id: '4', data: { label: 'Intent Classification' }, position: { x: 450, y: 250 } },
-                  { id: '5', type: 'output', data: { label: 'Structured Payload' }, position: { x: 300, y: 350 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-2', source: '1', target: '2' },
-                  { id: 'e2-3', source: '2', target: '3' },
-                  { id: 'e2-4', source: '2', target: '4' },
-                  { id: 'e3-5', source: '3', target: '5' },
-                  { id: 'e4-5', source: '4', target: '5' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'Raw Input String' }, position: { x: 300, y: 50 } },
+                    { id: '2', data: { label: 'NLP Parsing' }, position: { x: 300, y: 150 } },
+                    { id: '3', data: { label: 'Entity Extraction' }, position: { x: 150, y: 250 } },
+                    { id: '4', data: { label: 'Intent Classification' }, position: { x: 450, y: 250 } },
+                    { id: '5', type: 'output', data: { label: 'Structured Payload' }, position: { x: 300, y: 350 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-2', source: '1', target: '2' },
+                    { id: 'e2-3', source: '2', target: '3' },
+                    { id: 'e2-4', source: '2', target: '4' },
+                    { id: 'e3-5', source: '3', target: '5' },
+                    { id: 'e4-5', source: '4', target: '5' }]
+                    } />
                 
                 </div>
               </div>
             </motion.div>
-          }
+            }
 
           {activeTab === "state" &&
-          <motion.div 
-            key="state"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-16">
+            <motion.div
+              key="state"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'Idle / Standby' }, position: { x: 300, y: 50 } },
-                  { id: '2', data: { label: 'Listening (Voice Wake)' }, position: { x: 300, y: 150 } },
-                  { id: '3', data: { label: 'Processing (ASR & NLU)' }, position: { x: 300, y: 250 } },
-                  { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 350 } },
-                  { id: '5', type: 'output', data: { label: 'Execute Command' }, position: { x: 100, y: 450 } },
-                  { id: '6', type: 'output', data: { label: 'Clarification Prompt' }, position: { x: 500, y: 450 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-2', source: '1', target: '2' },
-                  { id: 'e2-3', source: '2', target: '3', animated: true },
-                  { id: 'e3-4', source: '3', target: '4' },
-                  { id: 'e4-5', source: '4', target: '5', label: 'Confidence > 90%' },
-                  { id: 'e4-6', source: '4', target: '6', label: 'Confidence < 90%' },
-                  { id: 'e6-2', source: '6', target: '2' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'Idle / Standby' }, position: { x: 300, y: 50 } },
+                    { id: '2', data: { label: 'Listening (Voice Wake)' }, position: { x: 300, y: 150 } },
+                    { id: '3', data: { label: 'Processing (ASR & NLU)' }, position: { x: 300, y: 250 } },
+                    { id: '4', data: { label: 'Action Router' }, position: { x: 300, y: 350 } },
+                    { id: '5', type: 'output', data: { label: 'Execute Command' }, position: { x: 100, y: 450 } },
+                    { id: '6', type: 'output', data: { label: 'Clarification Prompt' }, position: { x: 500, y: 450 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-2', source: '1', target: '2' },
+                    { id: 'e2-3', source: '2', target: '3', animated: true },
+                    { id: 'e3-4', source: '3', target: '4' },
+                    { id: 'e4-5', source: '4', target: '5', label: 'Confidence > 90%' },
+                    { id: 'e4-6', source: '4', target: '6', label: 'Confidence < 90%' },
+                    { id: 'e6-2', source: '6', target: '2' }]
+                    } />
                 
                   <AnnotationOverlay annotations={annotationsData.stateMachine} />
                 </div>
@@ -312,79 +312,79 @@ export default function FluidUI() {
                   <div className="mt-6 pt-6 border-t border-slate-200">
                     <h4 className="text-sm font-semibold text-slate-900 mb-2">Active Degradation State:</h4>
                     {simEnv === 'quiet' && simAttention === 'looking' &&
-                  <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-green-500"></span> Optimal Flow: Voice input with visual confirmation.</p>
-                  }
+                    <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-green-500"></span> Optimal Flow: Voice input with visual confirmation.</p>
+                    }
                     {simEnv === 'noisy' && simAttention === 'looking' &&
-                  <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Voice Degraded: Switching to tap-to-select GUI inputs.</p>
-                  }
+                    <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Voice Degraded: Switching to tap-to-select GUI inputs.</p>
+                    }
                     {simEnv === 'quiet' && simAttention === 'distracted' &&
-                  <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Screen Degraded: Forcing vocal read-back of actions for confirmation.</p>
-                  }
+                    <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-yellow-500"></span> Screen Degraded: Forcing vocal read-back of actions for confirmation.</p>
+                    }
                     {simEnv === 'noisy' && simAttention === 'distracted' &&
-                  <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-red-500"></span> Full Degradation: Pausing execution. Asking user to look at screen or move to a quiet area.</p>
-                  }
+                    <p className="text-slate-600 text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-red-500"></span> Full Degradation: Pausing execution. Asking user to look at screen or move to a quiet area.</p>
+                    }
                   </div>
                 </div>
 
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'Input Detected' }, position: { x: 300, y: 50 } },
-                  { id: '2', data: { label: 'Environmental SNR Check' }, position: { x: 300, y: 150 } },
-                  { id: '3', data: { label: 'Attention Tracker' }, position: { x: 300, y: 250 } },
-                  { id: '4', type: 'output', data: { label: 'Standard Voice/Visual Flow' }, position: { x: 100, y: 350 } },
-                  { id: '5', type: 'output', data: { label: 'Visual Fallback (No Voice)' }, position: { x: 300, y: 350 } },
-                  { id: '6', type: 'output', data: { label: 'Voice Fallback (No Screen)' }, position: { x: 500, y: 350 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-2', source: '1', target: '2' },
-                  { id: 'e2-3', source: '2', target: '3' },
-                  { id: 'e3-4', source: '3', target: '4', label: 'Good SNR & Attn' },
-                  { id: 'e3-5', source: '3', target: '5', label: 'Poor SNR' },
-                  { id: 'e3-6', source: '3', target: '6', label: 'No Attention' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'Input Detected' }, position: { x: 300, y: 50 } },
+                    { id: '2', data: { label: 'Environmental SNR Check' }, position: { x: 300, y: 150 } },
+                    { id: '3', data: { label: 'Attention Tracker' }, position: { x: 300, y: 250 } },
+                    { id: '4', type: 'output', data: { label: 'Standard Voice/Visual Flow' }, position: { x: 100, y: 350 } },
+                    { id: '5', type: 'output', data: { label: 'Visual Fallback (No Voice)' }, position: { x: 300, y: 350 } },
+                    { id: '6', type: 'output', data: { label: 'Voice Fallback (No Screen)' }, position: { x: 500, y: 350 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-2', source: '1', target: '2' },
+                    { id: 'e2-3', source: '2', target: '3' },
+                    { id: 'e3-4', source: '3', target: '4', label: 'Good SNR & Attn' },
+                    { id: 'e3-5', source: '3', target: '5', label: 'Poor SNR' },
+                    { id: 'e3-6', source: '3', target: '6', label: 'No Attention' }]
+                    } />
                 
                   <AnnotationOverlay annotations={dynamicDegradationAnnotations} />
                 </div>
               </div>
             </motion.div>
-          }
+            }
 
           {activeTab === "logic" &&
-          <motion.div 
-            key="logic"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-16">
+            <motion.div
+              key="logic"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="space-y-16">
               <div className="w-full mb-16 flex justify-center">
-                <iframe 
-                  src="https://gamma.app/embed/4fuqicfqd1n2k9o" 
-                  style={{ width: '700px', maxWidth: '100%', height: '450px' }} 
-                  allow="fullscreen" 
+                <iframe
+                  src="https://gamma.app/embed/4fuqicfqd1n2k9o"
+                  style={{ width: '700px', maxWidth: '100%', height: '450px' }}
+                  allow="fullscreen"
                   title="Designing the Voice Layer for a Clinical TMS Platform"
-                  className="border border-slate-200 shadow-xl rounded-2xl bg-white"
-                ></iframe>
+                  className="border border-slate-200 shadow-xl rounded-2xl bg-white">
+                </iframe>
               </div>
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'Intent Parsed' }, position: { x: 300, y: 50 } },
-                  { id: '2', data: { label: 'Threshold Check' }, position: { x: 300, y: 150 } },
-                  { id: '3', type: 'output', data: { label: 'Direct Execution' }, position: { x: 100, y: 250 } },
-                  { id: '4', data: { label: 'Confirmation Required' }, position: { x: 300, y: 250 } },
-                  { id: '5', type: 'output', data: { label: 'Manual Fallback' }, position: { x: 500, y: 250 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-2', source: '1', target: '2' },
-                  { id: 'e2-3', source: '2', target: '3', label: '> 0.95' },
-                  { id: 'e2-4', source: '2', target: '4', label: '0.80 - 0.95' },
-                  { id: 'e2-5', source: '2', target: '5', label: '< 0.80' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'Intent Parsed' }, position: { x: 300, y: 50 } },
+                    { id: '2', data: { label: 'Threshold Check' }, position: { x: 300, y: 150 } },
+                    { id: '3', type: 'output', data: { label: 'Direct Execution' }, position: { x: 100, y: 250 } },
+                    { id: '4', data: { label: 'Confirmation Required' }, position: { x: 300, y: 250 } },
+                    { id: '5', type: 'output', data: { label: 'Manual Fallback' }, position: { x: 500, y: 250 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-2', source: '1', target: '2' },
+                    { id: 'e2-3', source: '2', target: '3', label: '> 0.95' },
+                    { id: 'e2-4', source: '2', target: '4', label: '0.80 - 0.95' },
+                    { id: 'e2-5', source: '2', target: '5', label: '< 0.80' }]
+                    } />
                 
                   <AnnotationOverlay annotations={annotationsData.confidence} />
                 </div>
@@ -401,23 +401,23 @@ export default function FluidUI() {
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Interaction model for voice commands</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
                   <FlowDiagram
-                  defaultNodes={[
-                  { id: '1', type: 'input', data: { label: 'User Command' }, position: { x: 300, y: 50 } },
-                  { id: '2', data: { label: 'System Listener' }, position: { x: 300, y: 150 } },
-                  { id: '3', data: { label: 'TTS Generator' }, position: { x: 150, y: 250 } },
-                  { id: '4', data: { label: 'GUI Updater' }, position: { x: 450, y: 250 } }]
-                  }
-                  defaultEdges={[
-                  { id: 'e1-2', source: '1', target: '2' },
-                  { id: 'e2-3', source: '2', target: '3' },
-                  { id: 'e2-4', source: '2', target: '4' }]
-                  } />
+                    defaultNodes={[
+                    { id: '1', type: 'input', data: { label: 'User Command' }, position: { x: 300, y: 50 } },
+                    { id: '2', data: { label: 'System Listener' }, position: { x: 300, y: 150 } },
+                    { id: '3', data: { label: 'TTS Generator' }, position: { x: 150, y: 250 } },
+                    { id: '4', data: { label: 'GUI Updater' }, position: { x: 450, y: 250 } }]
+                    }
+                    defaultEdges={[
+                    { id: 'e1-2', source: '1', target: '2' },
+                    { id: 'e2-3', source: '2', target: '3' },
+                    { id: 'e2-4', source: '2', target: '4' }]
+                    } />
                 
                   <AnnotationOverlay annotations={annotationsData.interaction} />
                 </div>
               </div>
             </motion.div>
-          }
+            }
           </AnimatePresence>
 
         </div>
