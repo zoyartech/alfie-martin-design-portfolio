@@ -31,7 +31,7 @@ const projects = [
   imageFit: "object-cover",
   imagePosition: "left",
   year: "2024",
-  link: "DesignStrategyAI",
+  link: "ConversationCraft",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
   stats: [
   { label: "User Trust Score", value: "88%" },
