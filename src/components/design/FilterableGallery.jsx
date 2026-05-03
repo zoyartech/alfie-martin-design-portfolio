@@ -61,15 +61,15 @@ const projects = [
   title: "Design System Playground",
   category: "Design Systems",
   industry: "Design",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f40868490_deeesignsystem.png",
-  imageFit: "object-cover",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/217d54717_Screenshot2026-05-02at105516PM.png",
+  imageFit: "object-contain bg-white",
   year: "2024",
   link: "DesignSystemPlayground",
   summary: "An interactive playground for exploring and testing design system components.",
   stats: [],
   tags: ["Design Systems", "UI Components"],
-  bgColor: "black",
-  textColor: "white"
+  bgColor: "white",
+  textColor: "black"
 },
 {
   title: "FluidUI",
