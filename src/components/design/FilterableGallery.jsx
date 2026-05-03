@@ -68,8 +68,8 @@ const projects = [
   summary: "An interactive playground for exploring and testing design system components.",
   stats: [],
   tags: ["Design Systems", "UI Components"],
-  bgColor: "black",
-  textColor: "white"
+  bgColor: "#e8f4b0",
+  textColor: "black"
 },
 {
   title: "FluidUI",
