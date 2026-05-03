@@ -91,7 +91,7 @@ export default function VoiceSimulation() {
             <div className="lg:col-span-8 space-y-6">
               
               {/* Controls */}
-              <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center justify-between shadow-lg">
+              <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg">
                 <div className="flex items-center gap-4">
                   <button 
                     onClick={runSimulation}
@@ -228,7 +228,7 @@ export default function VoiceSimulation() {
 
             {/* Right Column: Status Log */}
             <div className="lg:col-span-4">
-              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sticky top-24 h-[600px] flex flex-col">
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sticky top-24 h-[400px] md:h-[600px] flex flex-col">
                 <div className="flex items-center gap-2 mb-6 pb-4 border-b border-slate-800">
                   <SquareTerminal className="w-5 h-5 text-slate-400" />
                   <h3 className="font-semibold text-slate-200">System State</h3>

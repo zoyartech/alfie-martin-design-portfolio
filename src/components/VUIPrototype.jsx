@@ -140,7 +140,7 @@ export default function VUIPrototype() {
       </AnimatePresence>
 
       {/* VUI Feedback Strip */}
-      <div className="bg-slate-950 border-t border-slate-800 p-4 md:px-6 flex items-center gap-4 md:gap-6 shrink-0">
+      <div className="bg-slate-950 border-t border-slate-800 p-4 md:px-6 flex items-center gap-3 md:gap-6 shrink-0 overflow-x-auto">
         <button
           onClick={() => setShowHistory(!showHistory)}
           className="p-2 -ml-2 text-slate-500 hover:text-white hover:bg-slate-800 rounded-full transition-all">
@@ -171,7 +171,7 @@ export default function VUIPrototype() {
           }
         </div>
 
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-2 md:gap-3 shrink-0">
           {commandStatus === 'confirmed' &&
           <div className="px-3 py-1.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center">
               <Check className="w-3.5 h-3.5 mr-1.5" /> <span className="hidden md:inline">CONFIRMED</span>

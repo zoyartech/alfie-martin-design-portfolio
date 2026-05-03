@@ -54,7 +54,7 @@ const AnnotationOverlay = ({ annotations }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-12 left-1/2 -translate-x-1/2 w-80 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-slate-200 p-5 pointer-events-auto z-30 text-left">
+            className="absolute top-12 left-1/2 -translate-x-1/2 w-72 md:w-80 max-w-[90vw] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-slate-200 p-5 pointer-events-auto z-30 text-left">
             
                 <div className="flex justify-between items-start mb-4 border-b border-slate-100 pb-3">
                   <h4 className="font-semibold text-slate-900 text-lg leading-tight">{ann.title}</h4>
@@ -150,9 +150,9 @@ export default function FluidUI() {
         </div>
 
         <div>
-          <div className="grid grid-cols-2 gap-8 mb-12">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c5bd2baed_handbphone.png" alt="Hand holding phone" className="w-full h-auto object-contain max-h-[600px] object-center" />
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png" alt="Hand interacting with VUI" className="w-full h-auto object-contain max-h-[600px] object-center" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c5bd2baed_handbphone.png" alt="Hand holding phone" className="w-full h-auto object-contain max-h-[400px] md:h-[600px] object-center" />
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png" alt="Hand interacting with VUI" className="w-full h-auto object-contain max-h-[400px] md:h-[600px] object-center" />
           </div>
 
           <h1 className="text-5xl font-light tracking-tight mb-6 font-serif text-slate-900">Designing VUI</h1>
@@ -200,17 +200,17 @@ export default function FluidUI() {
               transition={{ duration: 0.4 }}
               className="space-y-16">
               <div className="flex justify-center w-full">
-                <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" style={{ width: "100%", height: "700px" }} title="AI conversational design" className="rounded-2xl border border-gray-100 shadow-sm"></iframe>
+                <iframe src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/6339793b4_AI-conversational-design.pdf" className="w-full h-[400px] md:h-[700px] rounded-2xl border border-gray-100 shadow-sm" title="AI conversational design"></iframe>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 my-12">
                 <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/52f3df93e_Screenshot2026-04-20at50320AM.png" alt="Session View Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
                 <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9d347bfd1_Screenshot2026-04-20at51059AM.png" alt="System Actions Table" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
               </div>
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'Voice Input' }, position: { x: 150, y: 50 } },
@@ -232,7 +232,7 @@ export default function FluidUI() {
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Intent mapping diagram.</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[600px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[400px] md:h-[600px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'Raw Input String' }, position: { x: 300, y: 50 } },
@@ -264,7 +264,7 @@ export default function FluidUI() {
               className="space-y-16">
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">VUI state machine diagram</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'Idle / Standby' }, position: { x: 300, y: 50 } },
@@ -326,7 +326,7 @@ export default function FluidUI() {
                   </div>
                 </div>
 
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'Input Detected' }, position: { x: 300, y: 50 } },
@@ -361,16 +361,15 @@ export default function FluidUI() {
               <div className="w-full mb-16 flex justify-center">
                 <iframe
                   src="https://gamma.app/embed/4fuqicfqd1n2k9o"
-                  style={{ width: '700px', maxWidth: '100%', height: '450px' }}
                   allow="fullscreen"
                   title="Designing the Voice Layer for a Clinical TMS Platform"
-                  className="border border-slate-200 shadow-xl rounded-2xl bg-white">
+                  className="w-full max-w-[700px] h-[300px] md:h-[450px] border border-slate-200 shadow-xl rounded-2xl bg-white">
                 </iframe>
               </div>
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">confidence threshold decision tree.</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'Intent Parsed' }, position: { x: 300, y: 50 } },
@@ -391,15 +390,15 @@ export default function FluidUI() {
                 <div className="mt-8">
                   <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6eae4871b_Screenshot2026-04-20at50320AM.png" alt="Confidence Threshold Dashboard" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
                 </div>
-                <div className="grid grid-cols-2 gap-8 mt-12">
-                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5375f828d_hand3.png" alt="Hand holding phone 1" className="w-full h-auto object-contain max-h-[600px] object-center" />
-                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/02a1fb40b_hand5.png" alt="Hand holding phone 2" className="w-full h-auto object-contain max-h-[600px] object-center" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12">
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5375f828d_hand3.png" alt="Hand holding phone 1" className="w-full h-auto object-contain max-h-[400px] md:h-[600px] object-center" />
+                  <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/02a1fb40b_hand5.png" alt="Hand holding phone 2" className="w-full h-auto object-contain max-h-[400px] md:h-[600px] object-center" />
                 </div>
               </div>
 
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Interaction model for voice commands</h2>
-                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[800px]">
+                <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
                   <FlowDiagram
                     defaultNodes={[
                     { id: '1', type: 'input', data: { label: 'User Command' }, position: { x: 300, y: 50 } },

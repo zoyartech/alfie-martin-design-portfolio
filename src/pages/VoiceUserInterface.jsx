@@ -120,8 +120,8 @@ export default function VoiceUserInterface() {
 
       {/* Decision Tree & Architecture Diagrams */}
       <section className="py-24 px-6 lg:px-12 bg-slate-900 border-t border-slate-800">
-        <div className="max-w-5xl mx-auto flex flex-col items-center gap-12">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400">DECISION TREE & CAPABILITIES</h2>
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-8 md:gap-12">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 text-center">DECISION TREE & CAPABILITIES</h2>
           <img
             src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/98a2cc323_Screenshot2026-04-17at53925PM.png"
             alt="NLU Decision Tree" className="w-full max-w-4xl h-auto rounded-2xl shadow-xl border border-slate-700 bg-white" />
