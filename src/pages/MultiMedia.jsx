@@ -96,9 +96,6 @@ function GalleryVideoCard({ project, index }) {
           </div>
         )}
       </div>
-      <div className="mt-5">
-        <h3 className="text-xl font-medium text-slate-900">{project.title}</h3>
-      </div>
     </motion.div>
   );
 }
