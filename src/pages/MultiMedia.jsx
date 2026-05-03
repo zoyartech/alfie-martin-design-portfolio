@@ -6,8 +6,6 @@ export default function MultiMedia() {
   const videoRef = useRef(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
   useEffect(() => {
     // Check for prefers-reduced-motion
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -20,7 +18,7 @@ export default function MultiMedia() {
   }, []);
 
   useEffect(() => {
-    if (prefersReducedMotion || hasError || !videoRef.current) return;
+    if (prefersReducedMotion || !videoRef.current) return;
 
     const options = {
       root: null,
@@ -56,7 +54,7 @@ export default function MultiMedia() {
         observer.unobserve(videoRef.current);
       }
     };
-  }, [prefersReducedMotion, hasError]);
+  }, [prefersReducedMotion]);
 
   const handleManualPlay = () => {
     if (videoRef.current) {
@@ -84,7 +82,19 @@ export default function MultiMedia() {
           </h1>
 
           <div className="relative w-full max-w-full rounded-[12px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] bg-slate-900 group aspect-video">
-            {hasError ? (
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+              aria-label="Multi media video presentation"
+            >
+              <source src="/downloads/CFNetworkDownload_9HS79a.tmp.MP4" type="video/mp4" />
+              <source src="/downloads/CFNetworkDownload_9HS79a.tmp.webm" type="video/webm" />
+              
               <div className="w-full h-full bg-slate-200 flex flex-col items-center justify-center p-8 text-center relative">
                 <img 
                   src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
@@ -96,45 +106,26 @@ export default function MultiMedia() {
                   <p className="text-slate-600 text-sm">Please make sure the video file is placed in the correct downloads folder or update the source URL.</p>
                 </div>
               </div>
-            ) : (
-              <>
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-                  aria-label="Multi media video presentation"
-                  onError={() => setHasError(true)}
-                >
-                  <source src="/downloads/CFNetworkDownload_9HS79a.tmp.MP4" type="video/mp4" />
-                  <source src="/downloads/CFNetworkDownload_9HS79a.tmp.webm" type="video/webm" />
-                  
-                  <p>Your browser does not support the video tag.</p>
-                </video>
+            </video>
 
-                {prefersReducedMotion && !isPlaying && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
-                    <button 
-                      onClick={handleManualPlay}
-                      className="bg-white/90 hover:bg-white text-slate-900 rounded-full p-5 transition-transform hover:scale-105 shadow-lg"
-                      aria-label="Play video"
-                    >
-                      <Play className="w-8 h-8 ml-1" />
-                    </button>
-                  </div>
-                )}
-                
-                {prefersReducedMotion && isPlaying && (
-                  <div 
-                    className="absolute inset-0 cursor-pointer"
-                    onClick={handleManualPlay}
-                    aria-label="Pause video"
-                  />
-                )}
-              </>
+            {prefersReducedMotion && !isPlaying && (
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
+                <button 
+                  onClick={handleManualPlay}
+                  className="bg-white/90 hover:bg-white text-slate-900 rounded-full p-5 transition-transform hover:scale-105 shadow-lg"
+                  aria-label="Play video"
+                >
+                  <Play className="w-8 h-8 ml-1" />
+                </button>
+              </div>
+            )}
+            
+            {prefersReducedMotion && isPlaying && (
+              <div 
+                className="absolute inset-0 cursor-pointer"
+                onClick={handleManualPlay}
+                aria-label="Pause video"
+              />
             )}
           </div>
         </motion.div>
