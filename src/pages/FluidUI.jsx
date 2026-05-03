@@ -210,6 +210,18 @@ export default function FluidUI() {
                 <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9d347bfd1_Screenshot2026-04-20at51059AM.png" alt="System Actions Table" className="w-full h-auto rounded-2xl shadow-sm border border-gray-100" />
               </div>
 
+              <div className="flex justify-center w-full mb-16">
+                <iframe 
+                  style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
+                  width="100%" 
+                  height="600" 
+                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FwQkFIvRh8OTrxiA5fzsKF4%2FTMS-b6%3Ffullscreen%3D1%26t%3DYfLzU8WmY92DQQbf-1%26preview-route%3D%252Fmonitor" 
+                  allowFullScreen
+                  className="rounded-2xl shadow-sm bg-white"
+                  title="Figma Prototype Embed"
+                ></iframe>
+              </div>
+
               <div>
                 <h2 className="text-slate-900 mb-6 text-3xl font-medium">Multimodal channel architecture.</h2>
                 <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-[500px] md:h-[800px]">
