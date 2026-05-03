@@ -1,0 +1,29 @@
+{
+  "name": "VideoProject",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "hero",
+        "gallery"
+      ],
+      "default": "gallery",
+      "description": "Where to display this video"
+    },
+    "poster_url": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "role",
+    "video_url"
+  ]
+}

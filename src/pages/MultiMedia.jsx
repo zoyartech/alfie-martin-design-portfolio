@@ -1,48 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
-
-const additionalProjects = [
-  {
-    id: 1,
-    title: "Campaign Shoot 01",
-    poster: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
-    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-  },
-  {
-    id: 2,
-    title: "Backstage Documentation",
-    poster: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1000&auto=format&fit=crop",
-    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-  },
-  {
-    id: 3,
-    title: "Runway Highlights",
-    poster: "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=1000&auto=format&fit=crop",
-    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
-  },
-  {
-    id: 4,
-    title: "Editorial Feature",
-    poster: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop",
-    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-  }
-];
+import { Play, Loader2 } from 'lucide-react';
+import { useQuery } from '@tanstack/react-query';
+import { base44 } from '@/api/base44Client';
+import { Button } from '@/components/ui/button';
 
 export default function MultiMedia() {
   const videoRef = useRef(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    ['/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov', 
-     '/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov'].forEach(p => {
-      fetch(p, { method: 'HEAD' })
-        .then(r => console.log('Check', p, r.status))
-        .catch(e => console.log('Check error', p, e));
-    });
-  }, []);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const { data: videos = [], isLoading } = useQuery({
+    queryKey: ['videoProjects'],
+    queryFn: () => base44.entities.VideoProject.list('-created_date')
+  });
+
+  const heroVideo = videos.find(v => v.role === 'hero');
+  const galleryVideos = videos.filter(v => v.role === 'gallery');
   useEffect(() => {
     // Check for prefers-reduced-motion
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -153,18 +128,25 @@ export default function MultiMedia() {
 
           <div className="relative w-full max-w-full rounded-[12px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] bg-slate-900 group">
             <video
+              key={heroVideo?.video_url || 'default'}
               ref={videoRef}
-              className="block w-full h-auto"
+              className="block w-full h-auto bg-slate-900"
               muted
               loop
               playsInline
               preload="metadata"
-              poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+              poster={heroVideo?.poster_url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"}
               aria-label="Multi media video presentation"
               onClick={handleManualPlay}
             >
-              <source src="/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
-              <source src="/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
+              {heroVideo ? (
+                <source src={heroVideo.video_url} />
+              ) : (
+                <>
+                  <source src="/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
+                  <source src="/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
+                </>
+              )}
               <p>Your browser does not support the video tag.</p>
             </video>
 
@@ -201,11 +183,19 @@ export default function MultiMedia() {
 
         {/* Gallery Grid */}
         <div className="mt-24">
-          <h2 className="text-3xl font-serif text-slate-900 mb-10">Additional Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {additionalProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="text-3xl font-serif text-slate-900">Additional Projects</h2>
+            <Button variant="outline" onClick={() => window.open('/AdminVideos', '_blank')}>Manage Videos</Button>
+          </div>
+          {isLoading ? (
+            <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div>
+          ) : galleryVideos.length === 0 ? (
+            <p className="text-slate-500">No gallery videos added yet. Click Manage Videos to add some.</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {galleryVideos.map((project, index) => (
+                <motion.div
+                  key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -213,13 +203,17 @@ export default function MultiMedia() {
                 className="group relative cursor-pointer"
               >
                 <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
-                  <img 
-                    src={project.poster} 
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0"
-                  />
+                  {project.poster_url ? (
+                    <img 
+                      src={project.poster_url} 
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 w-full h-full bg-slate-200 transition-opacity duration-700 group-hover:opacity-0" />
+                  )}
                   <video
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${project.poster_url ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}
                     muted
                     loop
                     playsInline
@@ -234,7 +228,7 @@ export default function MultiMedia() {
                       e.target.currentTime = 0; 
                     }}
                   >
-                    <source src={project.video} type="video/mp4" />
+                    <source src={project.video_url} />
                   </video>
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
@@ -247,8 +241,9 @@ export default function MultiMedia() {
                   <h3 className="text-xl font-medium text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                 </div>
               </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
 
         </div>
