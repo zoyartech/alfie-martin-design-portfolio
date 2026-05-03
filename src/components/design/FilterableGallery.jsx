@@ -44,7 +44,7 @@ const projects = [
   title: "Designing trust into automated climate risk",
   category: "Product Design",
   industry: "Climate Risk",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/adba493e9_Screenshot2026-05-02at105544PM.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/959cc8ffa_Screenshot2026-05-02at105637PM.png",
   imageFit: "object-contain bg-white",
   year: "2023",
   link: "ArbolCaseStudy",
