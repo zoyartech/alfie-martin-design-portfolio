@@ -65,36 +65,68 @@ export default function VUIPrototype() {
   return (
     <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col h-[500px] md:h-[600px] w-full font-sans">
       {/* Mock Clinical Dashboard area */}
-      <div className="flex-1 p-6 md:p-10 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent pointer-events-none"></div>
+      <div className="flex-1 p-6 md:p-10 relative overflow-hidden bg-slate-950">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[80px] pointer-events-none translate-y-1/2 -translate-x-1/4"></div>
+        
         <div className="relative z-10 flex flex-col h-full">
-          <div className="flex justify-between items-start mb-8">
-            <div>
-              <h3 className="text-white text-2xl font-medium mb-1 tracking-tight">Impact TMS</h3>
-              <p className="text-slate-400">Patient Session: Active</p>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-8 border-b border-slate-800/60 pb-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 font-semibold shadow-inner">
+                JS
+              </div>
+              <div>
+                <h3 className="text-white text-xl font-medium tracking-tight mb-1">John Smith</h3>
+                <div className="flex items-center text-slate-400 text-xs font-medium gap-2">
+                  <span className="bg-slate-800 px-2 py-0.5 rounded text-slate-300">ID: #84920</span>
+                  <span>DOB: 05/12/1980</span>
+                </div>
+              </div>
             </div>
-            <div className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium border border-emerald-500/30 flex items-center">
-              <Activity className="w-4 h-4 mr-2" /> Stimulation Ready
+            <div className="flex items-center gap-3">
+              <div className="bg-slate-800/80 backdrop-blur-sm text-slate-300 px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700">
+                Session 12 of 36
+              </div>
+              <div className="bg-emerald-500/10 backdrop-blur-sm text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-medium border border-emerald-500/20 flex items-center shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+                <Activity className="w-3.5 h-3.5 mr-1.5 animate-pulse" /> Stimulation Ready
+              </div>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
-            <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 shadow-inner">
-              <div className="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Motor Threshold</div>
-              <div className="text-white text-3xl font-light">62%</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-3xl mb-8">
+            <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:bg-slate-800/80 transition-all duration-300 shadow-sm">
+              <div className="absolute top-0 left-0 w-1 h-full bg-blue-500/50 group-hover:bg-blue-500 transition-colors"></div>
+              <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Motor Threshold</div>
+              <div className="flex items-baseline gap-1.5">
+                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">62</div>
+                <div className="text-slate-500 text-sm font-medium">%</div>
+              </div>
             </div>
-            <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 shadow-inner">
-              <div className="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Intensity</div>
-              <div className="text-white text-3xl font-light">120%</div>
+            <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-md relative overflow-hidden group hover:bg-slate-800/80 transition-all duration-300 shadow-sm">
+              <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500/50 group-hover:bg-emerald-500 transition-colors"></div>
+              <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Intensity</div>
+              <div className="flex items-baseline gap-1.5">
+                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">120</div>
+                <div className="text-slate-500 text-sm font-medium">%</div>
+              </div>
             </div>
-            <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 shadow-inner col-span-2">
-              <div className="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Current Protocol</div>
-              <div className="text-white text-lg font-medium truncate">Standard Depression (Left DLPFC)</div>
+            <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-md relative overflow-hidden col-span-2 group hover:bg-slate-800/80 transition-all duration-300 shadow-sm flex flex-col justify-center">
+               <div className="absolute top-0 left-0 w-1 h-full bg-purple-500/50 group-hover:bg-purple-500 transition-colors"></div>
+              <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Current Protocol</div>
+              <div className="text-white text-lg md:text-xl font-medium truncate">Standard Depression</div>
+              <div className="text-slate-400 text-xs md:text-sm mt-1.5 flex items-center gap-2">
+                <span className="text-slate-300">Left DLPFC</span>
+                <span className="w-1 h-1 rounded-full bg-slate-600"></span>
+                <span>10Hz</span>
+                <span className="w-1 h-1 rounded-full bg-slate-600"></span>
+                <span>3000 pulses</span>
+              </div>
             </div>
           </div>
 
           {/* Simulation Controls */}
-          <div className="mt-auto self-end w-full max-w-sm bg-slate-800/90 backdrop-blur p-5 rounded-xl border border-slate-600 shadow-xl">
+          <div className="mt-auto self-end w-full max-w-sm bg-slate-900/90 backdrop-blur-xl p-5 rounded-2xl border border-slate-700/80 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
             <h4 className="text-slate-300 text-xs uppercase font-bold tracking-widest mb-4 flex items-center">
               <Mic className="w-4 h-4 mr-2 text-blue-400" /> Simulate Voice Input
             </h4>
