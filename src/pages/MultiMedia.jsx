@@ -189,14 +189,11 @@ export default function MultiMedia() {
               {galleryVideos.map((project, index) => (
                 <motion.div
                   key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative cursor-pointer"
-              >
-                <div 
-                  className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative cursor-pointer"
                   onMouseEnter={(e) => {
                     const video = e.currentTarget.querySelector('video');
                     if (video) {
@@ -212,7 +209,8 @@ export default function MultiMedia() {
                     }
                   }}
                 >
-                  {project.poster_url ? (
+                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
+                    {project.poster_url ? (
                     <img 
                       src={project.poster_url} 
                       alt={project.title}
@@ -228,14 +226,14 @@ export default function MultiMedia() {
                     playsInline
                     src={project.video_url}
                   />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
+                  <div className="absolute inset-0 bg-black/20 opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-300 transform scale-100 group-hover:scale-90 pointer-events-none">
                     <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl">
                       <Play className="w-6 h-6 text-slate-900 ml-1" />
                     </div>
                   </div>
-                </div>
-                <div className="mt-5">
+                  </div>
+                  <div className="mt-5">
                   <h3 className="text-xl font-medium text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                 </div>
               </motion.div>
