@@ -62,7 +62,7 @@ const projects = [
   category: "Design Systems",
   industry: "Design",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f40868490_deeesignsystem.png",
-  imageFit: "object-contain bg-[#e8f4b0]",
+  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2024",
   link: "DesignSystemPlayground",
   summary: "An interactive playground for exploring and testing design system components.",
@@ -183,10 +183,10 @@ function StickyCard({ project, index, total }) {
       style={{ zIndex: index }}>
       
       <motion.div
-        style={{ scale, opacity, borderRadius }}
-        className="w-full h-full max-h-[85vh] overflow-hidden relative bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-slate-900 group">
+        style={{ scale, opacity, borderRadius, backgroundColor: project.bgColor || '#fee2e2' }}
+        className="w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-slate-900 group">
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10" style={{ backgroundColor: project.bgColor || '#fee2e2' }}>
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10">
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
               <img
