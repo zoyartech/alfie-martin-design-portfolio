@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, History } from "lucide-react";
+import { Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, History, Users, X } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { LineChart, Line, ResponsiveContainer, YAxis } from "recharts";
 
@@ -37,6 +37,15 @@ export default function VUIPrototype() {
   const [showHistory, setShowHistory] = useState(false);
   const [suggestion, setSuggestion] = useState('Ready for motor threshold check?');
   const [showCriticalModal, setShowCriticalModal] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
+  
+  const patientsList = [
+    { id: '#84920', name: 'John Smith', initials: 'JS', dob: '05/12/1980', session: '12 of 36', protocol: 'Standard Depression', location: 'Left DLPFC', mt: 62, intensity: 120, hz: 10, pulses: 3000 },
+    { id: '#84921', name: 'Sarah Connor', initials: 'SC', dob: '11/04/1992', session: '4 of 36', protocol: 'Anxiety Protocol', location: 'Right DLPFC', mt: 58, intensity: 110, hz: 1, pulses: 1200 },
+    { id: '#84922', name: 'Marcus Vance', initials: 'MV', dob: '02/18/1975', session: '30 of 36', protocol: 'Standard Depression', location: 'Left DLPFC', mt: 65, intensity: 120, hz: 10, pulses: 3000 }
+  ];
+  
+  const [activePatient, setActivePatient] = useState(patientsList[0]);
 
   const simulateCommand = (type) => {
     setMicState('listening');
@@ -94,7 +103,60 @@ export default function VUIPrototype() {
   };
 
   return (
-    <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col h-[600px] md:h-[700px] w-full font-sans">
+    <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col h-[600px] md:h-[700px] w-full font-sans relative">
+      {/* Patient Sidebar */}
+      <AnimatePresence>
+        {showSidebar && (
+          <motion.div 
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+            className="absolute inset-y-0 left-0 w-80 bg-slate-900 border-r border-slate-800 z-40 shadow-2xl flex flex-col"
+          >
+            <div className="p-6 border-b border-slate-800 flex justify-between items-center">
+              <h2 className="text-white font-medium text-lg">Patients</h2>
+              <button 
+                onClick={() => setShowSidebar(false)}
+                className="text-slate-400 hover:text-white transition-colors p-1"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4 space-y-2">
+              {patientsList.map(patient => (
+                <button
+                  key={patient.id}
+                  onClick={() => {
+                    setActivePatient(patient);
+                    setShowSidebar(false);
+                    setHistory([]);
+                    setLastCommand('');
+                    setCommandStatus(null);
+                    setSuggestion('Ready for motor threshold check?');
+                  }}
+                  className={`w-full text-left p-4 rounded-xl border transition-all ${activePatient.id === patient.id ? 'bg-blue-600/20 border-blue-500/50' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800'}`}
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${activePatient.id === patient.id ? 'bg-blue-600 text-white' : 'bg-slate-700 text-slate-300'}`}>
+                      {patient.initials}
+                    </div>
+                    <div>
+                      <div className="text-white font-medium text-sm">{patient.name}</div>
+                      <div className="text-slate-400 text-xs">{patient.id}</div>
+                    </div>
+                  </div>
+                  <div className="text-xs text-slate-400 flex items-center justify-between">
+                    <span>{patient.protocol}</span>
+                    <span className="text-slate-500">{patient.session}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Mock Clinical Dashboard area */}
       <div className="flex-1 p-6 md:p-10 relative overflow-hidden bg-slate-950">
         {/* Decorative background elements */}
@@ -149,20 +211,26 @@ export default function VUIPrototype() {
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-8 border-b border-slate-800/60 pb-6">
             <div className="flex items-center gap-4">
+              <button 
+                onClick={() => setShowSidebar(true)}
+                className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 transition-colors border border-slate-700 flex items-center justify-center text-slate-300"
+              >
+                <Users className="w-5 h-5" />
+              </button>
               <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 font-semibold shadow-inner">
-                JS
+                {activePatient.initials}
               </div>
               <div>
-                <h3 className="text-white text-xl font-medium tracking-tight mb-1">John Smith</h3>
+                <h3 className="text-white text-xl font-medium tracking-tight mb-1">{activePatient.name}</h3>
                 <div className="flex items-center text-slate-400 text-xs font-medium gap-2">
-                  <span className="bg-slate-800 px-2 py-0.5 rounded text-slate-300">ID: #84920</span>
-                  <span>DOB: 05/12/1980</span>
+                  <span className="bg-slate-800 px-2 py-0.5 rounded text-slate-300">ID: {activePatient.id}</span>
+                  <span>DOB: {activePatient.dob}</span>
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-slate-800/80 backdrop-blur-sm text-slate-300 px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700">
-                Session 12 of 36
+                Session {activePatient.session}
               </div>
               <div className="bg-emerald-500/10 backdrop-blur-sm text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-medium border border-emerald-500/20 flex items-center shadow-[0_0_15px_rgba(16,185,129,0.1)]">
                 <Activity className="w-3.5 h-3.5 mr-1.5 animate-pulse" /> Stimulation Ready
@@ -175,7 +243,7 @@ export default function VUIPrototype() {
               <div className="absolute top-0 left-0 w-1 h-full bg-blue-500/50 group-hover:bg-blue-500 transition-colors"></div>
               <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Motor Threshold</div>
               <div className="flex items-baseline gap-1.5">
-                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">62</div>
+                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">{activePatient.mt}</div>
                 <div className="text-slate-500 text-sm font-medium">%</div>
               </div>
             </div>
@@ -183,20 +251,20 @@ export default function VUIPrototype() {
               <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500/50 group-hover:bg-emerald-500 transition-colors"></div>
               <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Intensity</div>
               <div className="flex items-baseline gap-1.5">
-                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">120</div>
+                <div className="text-white text-3xl md:text-4xl font-light tracking-tight">{activePatient.intensity}</div>
                 <div className="text-slate-500 text-sm font-medium">%</div>
               </div>
             </div>
             <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-md relative overflow-hidden col-span-2 group hover:bg-slate-800/80 transition-all duration-300 shadow-sm flex flex-col justify-center">
                <div className="absolute top-0 left-0 w-1 h-full bg-purple-500/50 group-hover:bg-purple-500 transition-colors"></div>
               <div className="text-slate-400 text-[10px] md:text-xs mb-2 font-bold uppercase tracking-widest">Current Protocol</div>
-              <div className="text-white text-lg md:text-xl font-medium truncate">Standard Depression</div>
+              <div className="text-white text-lg md:text-xl font-medium truncate">{activePatient.protocol}</div>
               <div className="text-slate-400 text-xs md:text-sm mt-1.5 flex items-center gap-2">
-                <span className="text-slate-300">Left DLPFC</span>
+                <span className="text-slate-300">{activePatient.location}</span>
                 <span className="w-1 h-1 rounded-full bg-slate-600"></span>
-                <span>10Hz</span>
+                <span>{activePatient.hz}Hz</span>
                 <span className="w-1 h-1 rounded-full bg-slate-600"></span>
-                <span>3000 pulses</span>
+                <span>{activePatient.pulses} pulses</span>
               </div>
             </div>
 
