@@ -11,7 +11,7 @@ const projects = [
   category: "AI Design",
   industry: "Med Tech",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
-  imageFit: "object-contain mix-blend-multiply bg-transparent",
+  imageFit: "object-contain bg-[#111823]",
   year: "2024",
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
@@ -20,7 +20,7 @@ const projects = [
   { label: "Engagement", value: "85%" }],
 
   tags: ["AI in Healthcare", "Product Design", "Mental Health"],
-  bgColor: "white",
+  bgColor: "#c5dfb1",
   textColor: "black"
 },
 {
@@ -28,7 +28,6 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
-  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
@@ -38,15 +37,14 @@ const projects = [
   { label: "Support Reduction", value: "60%" }],
 
   tags: ["UX Research", "AI Systems", "Conversation Design"],
-  bgColor: "white",
-  textColor: "black"
+  bgColor: "#2b5769",
+  theme: "dark"
 },
 {
   title: "Designing trust into automated climate risk",
   category: "Product Design",
   industry: "Climate Risk",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
-  imageFit: "object-contain mix-blend-multiply bg-transparent",
   year: "2023",
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
@@ -57,7 +55,7 @@ const projects = [
 
   tags: ["AI", "Smart Contracts", "Product Design"],
   textColor: "black",
-  bgColor: "white"
+  bgColor: "#a0c283"
 },
 {
   title: "Design System Playground",
@@ -70,7 +68,7 @@ const projects = [
   summary: "An interactive playground for exploring and testing design system components.",
   stats: [],
   tags: ["Design Systems", "UI Components"],
-  bgColor: "white",
+  bgColor: "#e8f4b0",
   textColor: "black"
 },
 {
@@ -78,13 +76,13 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
-  imageFit: "object-contain mix-blend-multiply bg-transparent",
+  imageFit: "object-contain bg-[#f4bfbf]",
   year: "2024",
   link: "FluidUI",
   summary: "Interactive documentation component for conversational Voice User Interface (VUI) design, illustrating multimodal system architectures.",
   stats: [],
   tags: ["VUI", "Architecture", "Product Design"],
-  bgColor: "white",
+  bgColor: "#f4bfbf",
   textColor: "black"
 }];
 
@@ -185,43 +183,43 @@ function StickyCard({ project, index, total }) {
       style={{ zIndex: index }}>
       
       <motion.div
-        style={{ scale, opacity, borderRadius, backgroundColor: 'white' }}
+        style={{ scale, opacity, borderRadius, backgroundColor: project.bgColor || '#fee2e2' }}
         className="w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-slate-900 group">
         
         <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10">
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center bg-white">
-            <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg bg-white">
-              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d8842d2d7_Screenshot2026-05-02at105615PM.png"
-
-              alt={project.title} className="group-hover:scale-105 transition-transform duration-700 w-full h-full object-contain mix-blend-multiply bg-transparent" />
-
-
-
-
-              
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
+            <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
+              <img
+                src={project.image}
+                alt={project.title}
+                className={`group-hover:scale-105 transition-transform duration-700 ${
+                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
+                'max-w-full max-h-full w-auto h-auto object-contain' :
+                `w-full h-full ${project.imageFit || 'object-cover'}`}`
+                } />
             </div>
           </div>
 
-          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col bg-white">
+          <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
               
-              {project.industry && <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-black/10 text-black">{project.industry}</span>}
+              {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' || project.textColor === 'white' ? 'bg-white/20 text-white' : project.textColor === 'black' ? 'bg-black/10 text-black' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
             </div>
-            <h3 className="mb-4 text-3xl font-light md:text-5xl md:mb-6 text-black">{project.title}</h3>
-            <p className="text-base md:text-lg mb-8 leading-relaxed max-w-xl text-black">{project.summary}</p>
+            <h3 className={`mb-4 text-3xl font-light md:text-5xl md:mb-6 ${project.textColor === 'black' ? 'text-black' : project.theme === 'dark' || project.textColor === 'white' ? 'text-white' : 'text-slate-950'}`}>{project.title}</h3>
+            <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' || project.textColor === 'white' ? 'text-gray-200' : project.textColor === 'black' ? 'text-black' : 'text-gray-600'}`}>{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className="mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid text-black border-black/20">
+            <div className={`mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white border-white/20' : project.textColor === 'black' ? 'text-black border-black/20' : 'text-white border-white/20'}`}>
                 {project.stats.map((stat) =>
               <div key={stat.label}>
-                    <p className="mb-1 text-2xl font-light md:text-3xl text-black">{stat.value}</p>
-                    <p className="text-sm font-medium text-black/80">{stat.label}</p>
+                    <p className={`mb-1 text-2xl font-light md:text-3xl ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white' : project.textColor === 'black' ? 'text-black' : 'text-white'}`}>{stat.value}</p>
+                    <p className={`text-sm font-medium ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white/80' : project.textColor === 'black' ? 'text-black/80' : 'text-white/80'}`}>{stat.label}</p>
                   </div>
               )}
               </div>
             }
             
-            <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 text-black group-hover:text-black/70">
+            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white group-hover:text-white/70' : project.textColor === 'black' ? 'text-black group-hover:text-black/70' : 'text-black group-hover:text-white'}`}>
               Read Case Study <ArrowUpRight className="w-5 h-5" />
             </div>
           </div>
