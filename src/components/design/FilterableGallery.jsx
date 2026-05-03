@@ -72,16 +72,16 @@ const projects = [
   textColor: "white"
 },
 {
-  title: "Search Agent Optimization",
+  title: "FluidUI",
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
   imageFit: "object-contain bg-[#f6f6f6]",
   year: "2024",
-  link: "SAO",
-  summary: "Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.",
+  link: "FluidUI",
+  summary: "Interactive documentation component for conversational Voice User Interface (VUI) design, illustrating multimodal system architectures.",
   stats: [],
-  tags: ["AI", "Search", "Product Design"],
+  tags: ["VUI", "Architecture", "Product Design"],
   bgColor: "#f6f6f6",
   textColor: "black"
 }];
