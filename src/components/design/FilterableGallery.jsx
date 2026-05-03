@@ -208,24 +208,23 @@ function StickyCard({ project, index, total }) {
 
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col">
             <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
-              
-              {project.industry && <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.theme === 'dark' || project.textColor === 'white' ? 'bg-white/20 text-white' : project.textColor === 'black' ? 'bg-black/10 text-black' : 'bg-gray-100 text-gray-600'}`}>{project.industry}</span>}
+              {project.industry && <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-black/10 text-black">{project.industry}</span>}
             </div>
-            <h3 className={`mb-4 text-3xl font-light md:text-5xl md:mb-6 ${project.textColor === 'black' ? 'text-black' : project.theme === 'dark' || project.textColor === 'white' ? 'text-white' : 'text-slate-950'}`}>{project.title}</h3>
-            <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl ${project.theme === 'dark' || project.textColor === 'white' ? 'text-gray-200' : project.textColor === 'black' ? 'text-black' : 'text-gray-600'}`}>{project.summary}</p>
+            <h3 className="mb-4 text-3xl font-light md:text-5xl md:mb-6 text-black">{project.title}</h3>
+            <p className="text-base md:text-lg mb-8 leading-relaxed max-w-xl text-black">{project.summary}</p>
             
             {project.stats && project.stats.length > 0 &&
-            <div className={`mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white border-white/20' : project.textColor === 'black' ? 'text-black border-black/20' : 'text-white border-white/20'}`}>
+            <div className="mt-auto mb-8 pb-8 grid grid-cols-2 gap-6 border-b hidden md:grid text-black border-black/20">
                 {project.stats.map((stat) =>
               <div key={stat.label}>
-                    <p className={`mb-1 text-2xl font-light md:text-3xl ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white' : project.textColor === 'black' ? 'text-black' : 'text-white'}`}>{stat.value}</p>
-                    <p className={`text-sm font-medium ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white/80' : project.textColor === 'black' ? 'text-black/80' : 'text-white/80'}`}>{stat.label}</p>
+                    <p className="mb-1 text-2xl font-light md:text-3xl text-black">{stat.value}</p>
+                    <p className="text-sm font-medium text-black/80">{stat.label}</p>
                   </div>
               )}
               </div>
             }
             
-            <div className={`mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 ${project.theme === 'dark' || project.textColor === 'white' ? 'text-white group-hover:text-white/70' : project.textColor === 'black' ? 'text-black group-hover:text-black/70' : 'text-black group-hover:text-white'}`}>
+            <div className="mt-auto md:mt-0 inline-flex items-center justify-center md:justify-start gap-2 font-medium transition-colors w-full md:w-auto px-6 py-3 md:px-0 md:py-0 text-black group-hover:text-black/70">
               Read Case Study <ArrowUpRight className="w-5 h-5" />
             </div>
           </div>
