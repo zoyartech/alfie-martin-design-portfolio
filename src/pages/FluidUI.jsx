@@ -156,7 +156,7 @@ export default function FluidUI() {
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/871318030_handsvui.png" alt="Hand interacting with VUI" className="w-full h-auto object-contain max-h-[400px] md:h-[600px] object-center" />
           </div>
 
-          <h1 className="text-5xl font-light tracking-tight mb-6 font-serif text-slate-900">Designing VUI</h1>
+          <h1 className="text-5xl font-light tracking-tight mb-6 font-serif text-slate-900 hidden">Designing VUI</h1>
           
           <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-4xl mb-12">
             Exploring fluid interfaces.
@@ -211,15 +211,15 @@ export default function FluidUI() {
               </div>
 
               <div className="flex justify-center w-full mb-16">
-                <iframe 
-                  style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
-                  width="100%" 
-                  height="600" 
-                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FwQkFIvRh8OTrxiA5fzsKF4%2FTMS-b6%3Ffullscreen%3D1%26t%3DYfLzU8WmY92DQQbf-1%26preview-route%3D%252Fmonitor" 
+                <iframe
+                  style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                  width="100%"
+                  height="600"
+                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FwQkFIvRh8OTrxiA5fzsKF4%2FTMS-b6%3Ffullscreen%3D1%26t%3DYfLzU8WmY92DQQbf-1%26preview-route%3D%252Fmonitor"
                   allowFullScreen
                   className="rounded-2xl shadow-sm bg-white"
-                  title="Figma Prototype Embed"
-                ></iframe>
+                  title="Figma Prototype Embed">
+                </iframe>
               </div>
 
               <div>
