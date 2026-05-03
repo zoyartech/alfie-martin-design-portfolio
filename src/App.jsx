@@ -57,7 +57,6 @@ import ChatWidget from './components/chat/ChatWidget';
 import B6 from './pages/b6';
 import VoiceUserInterface from './pages/VoiceUserInterface';
 import VoiceSimulation from './pages/VoiceSimulation';
-import SAO from './pages/SAO';
 import Veil from './pages/Veil';
 import FluidUI from './pages/FluidUI';
 import DesignSystem from './pages/DesignSystem';
@@ -179,7 +178,6 @@ const AuthenticatedApp = () => {
       <Route path="/b6" element={<CaseStudyWrapper pageName="b6"><B6 /></CaseStudyWrapper>} />
       <Route path="/VoiceUserInterface" element={<CaseStudyWrapper pageName="VoiceUserInterface"><VoiceUserInterface /></CaseStudyWrapper>} />
       <Route path="/VoiceSimulation" element={<CaseStudyWrapper pageName="VoiceSimulation"><VoiceSimulation /></CaseStudyWrapper>} />
-      <Route path="/SAO" element={<CaseStudyWrapper pageName="SAO"><SAO /></CaseStudyWrapper>} />
       <Route path="/Veil" element={<CaseStudyWrapper pageName="Veil"><Veil /></CaseStudyWrapper>} />
       <Route path="/FluidUI" element={<CaseStudyWrapper pageName="FluidUI"><FluidUI /></CaseStudyWrapper>} />
       <Route path="/DesignSystem" element={<DesignSystem />} />

@@ -47,15 +47,7 @@ export default function SideQuests() {
                 </div>
             </Link>
 
-            <Link to={createPageUrl("SAO")} className="group block">
-                <div className="aspect-[4/3] bg-[#f6f6f6] rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
-                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png" alt="Search Agent Optimization" className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" />
-                </div>
-                <div>
-                    <h3 className="text-2xl font-serif font-bold text-slate-900 mb-2 group-hover:text-[#E15A85] transition-colors">Search Agent Optimization</h3>
-                    <p className="text-slate-600 font-sans">Designing the end-to-end experience and retrieval architecture for an AI-powered search agent.</p>
-                </div>
-            </Link>
+
 
             <Link to={createPageUrl("PolaroidProject")} className="group block">
                 <div className="aspect-[4/3] bg-white rounded-xl border border-gray-100 overflow-hidden mb-6 flex items-center justify-center p-8 transition-all duration-300 group-hover:shadow-lg group-hover:border-gray-200">
