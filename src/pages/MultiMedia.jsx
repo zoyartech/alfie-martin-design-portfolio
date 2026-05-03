@@ -103,17 +103,28 @@ export default function MultiMedia() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] pt-32 pb-16 px-6 lg:px-12">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-[#faf9f6]">
+      {/* Hero */}
+      <div className="relative w-full h-[70vh] overflow-hidden">
+        <img
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/4b6065297_ChanelRickOwens.png"
+          alt="Fashion runway hero"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute bottom-12 left-6 lg:left-12">
+          <p className="text-xs tracking-[0.3em] text-white/70 mb-3 font-sans uppercase">MEDIA</p>
+          <h1 className="text-4xl md:text-6xl font-light font-serif text-white">Multi Media</h1>
+        </div>
+      </div>
+
+      <div className="pt-16 pb-16 px-6 lg:px-12">
+        <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs tracking-[0.3em] text-gray-400 mb-6 font-sans uppercase">MEDIA</p>
-          <h1 className="text-4xl md:text-6xl font-light mb-12 font-serif text-slate-900">
-            Multi Media
-          </h1>
 
           <div className="relative w-full max-w-full rounded-[12px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] bg-slate-900 group">
             <video
@@ -162,6 +173,7 @@ export default function MultiMedia() {
             )}
           </div>
         </motion.div>
+        </div>
       </div>
     </div>
   );
