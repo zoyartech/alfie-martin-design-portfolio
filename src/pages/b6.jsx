@@ -81,7 +81,16 @@ export default function B6() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-white">Live Prototype</h2>
+          <h2 className="text-3xl lg:text-4xl font-medium mb-4 text-white">
+            <a 
+              href="https://www.figma.com/make/wQkFIvRh8OTrxiA5fzsKF4/TMS-b6?t=8JopPxiywOlxV7RD-1&preview-route=%2Fmonitor" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:underline transition-all"
+            >
+              Live Prototype
+            </a>
+          </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Experience the patient journey through our interactive Impact Neuro Flow prototype.
           </p>
