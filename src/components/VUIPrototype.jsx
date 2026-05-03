@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, AlertCircle, Volume2, ChevronUp, ChevronDown, Sparkles, Mic, Activity, History } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { LineChart, Line, ResponsiveContainer, YAxis } from "recharts";
 
 export default function VUIPrototype() {
+  const [telemetryData, setTelemetryData] = useState(
+    Array.from({ length: 30 }, (_, i) => ({ time: i, value: 70 + Math.random() * 5 }))
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTelemetryData(prev => {
+        const newData = [...prev.slice(1)];
+        const lastVal = prev[prev.length - 1].value;
+        let nextVal = lastVal + (Math.random() - 0.5) * 4;
+        if (nextVal > 100) nextVal = 100;
+        if (nextVal < 60) nextVal = 60;
+        
+        newData.push({
+          time: prev[prev.length - 1].time + 1,
+          value: nextVal
+        });
+        return newData;
+      });
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
   const [micState, setMicState] = useState('idle'); // idle, listening, processing
   const [lastCommand, setLastCommand] = useState('');
   const [commandStatus, setCommandStatus] = useState(null); // 'confirmed', 'awaiting_voice', 'screen_confirm', 'error'
@@ -63,7 +86,7 @@ export default function VUIPrototype() {
   };
 
   return (
-    <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col h-[500px] md:h-[600px] w-full font-sans">
+    <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col h-[600px] md:h-[700px] w-full font-sans">
       {/* Mock Clinical Dashboard area */}
       <div className="flex-1 p-6 md:p-10 relative overflow-hidden bg-slate-950">
         {/* Decorative background elements */}
@@ -122,6 +145,23 @@ export default function VUIPrototype() {
                 <span className="w-1 h-1 rounded-full bg-slate-600"></span>
                 <span>3000 pulses</span>
               </div>
+            </div>
+
+            {/* Real-time Telemetry Visualization */}
+            <div className="bg-slate-900/80 p-4 md:p-5 rounded-2xl border border-slate-800/80 backdrop-blur-md relative overflow-hidden col-span-2 md:col-span-4 group hover:bg-slate-800/80 transition-all duration-300 shadow-sm flex flex-col h-24 md:h-32">
+               <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500/50 group-hover:bg-cyan-500 transition-colors z-10"></div>
+               <div className="flex justify-between items-end mb-2 relative z-10">
+                 <div className="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Real-time Pulse Rate (BPM)</div>
+                 <div className="text-cyan-400 text-[10px] md:text-xs font-medium animate-pulse flex items-center"><Activity className="w-3 h-3 mr-1"/> LIVE</div>
+               </div>
+               <div className="flex-1 w-full -ml-4 -mb-4">
+                 <ResponsiveContainer width="105%" height="100%">
+                   <LineChart data={telemetryData}>
+                     <YAxis domain={['dataMin - 5', 'dataMax + 5']} hide />
+                     <Line type="monotone" dataKey="value" stroke="#06b6d4" strokeWidth={2} dot={false} isAnimationActive={false} />
+                   </LineChart>
+                 </ResponsiveContainer>
+               </div>
             </div>
           </div>
 
