@@ -195,7 +195,23 @@ export default function MultiMedia() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative cursor-pointer"
               >
-                <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
+                <div 
+                  className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200"
+                  onMouseEnter={(e) => {
+                    const video = e.currentTarget.querySelector('video');
+                    if (video) {
+                      const playPromise = video.play();
+                      if (playPromise !== undefined) playPromise.catch(() => {});
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    const video = e.currentTarget.querySelector('video');
+                    if (video) {
+                      video.pause();
+                      video.currentTime = 0;
+                    }
+                  }}
+                >
                   {project.poster_url ? (
                     <img 
                       src={project.poster_url} 
@@ -210,16 +226,6 @@ export default function MultiMedia() {
                     muted
                     loop
                     playsInline
-                    onMouseOver={(e) => {
-                      const playPromise = e.target.play();
-                      if (playPromise !== undefined) {
-                        playPromise.catch(() => {});
-                      }
-                    }}
-                    onMouseOut={(e) => { 
-                      e.target.pause(); 
-                      e.target.currentTime = 0; 
-                    }}
                     src={project.video_url}
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
