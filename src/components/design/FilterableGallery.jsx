@@ -10,8 +10,8 @@ const projects = [
   title: "Multimodal Design for AI systems In mental health",
   category: "AI Design",
   industry: "Med Tech",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ec1acd843_ai-medtech.png",
-  imageFit: "object-contain bg-[#111823]",
+  image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
+  imageFit: "object-cover",
   year: "2024",
   link: "b6",
   summary: "Designing an intelligent, empathetic AI-driven patient experience for a nationwide network of neurotherapy clinics.",
@@ -27,7 +27,8 @@ const projects = [
   title: "Confidence Scoring in AI outputs",
   category: "AI Design",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/42aefcea5_handy.png",
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+  imageFit: "object-cover",
   year: "2024",
   link: "DesignStrategyAI",
   summary: "Designing AI-powered interfaces that feel human, trustworthy, and intuitive. Built a conversational design framework grounded in cooperative dialogue theory and AI transparency research.",
@@ -44,7 +45,8 @@ const projects = [
   title: "Designing trust into automated climate risk",
   category: "Product Design",
   industry: "Climate Risk",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ad407e43e_Screenshot2026-03-19at120315AM.png",
+  image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+  imageFit: "object-cover",
   year: "2023",
   link: "ArbolCaseStudy",
   summary: "Designed an explainable AI underwriting and smart contract UX for an automated parametric climate risk platform.",
@@ -61,8 +63,8 @@ const projects = [
   title: "Design System Playground",
   category: "Design Systems",
   industry: "Design",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f40868490_deeesignsystem.png",
-  imageFit: "object-contain mix-blend-multiply bg-transparent",
+  image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
+  imageFit: "object-cover",
   year: "2024",
   link: "DesignSystemPlayground",
   summary: "An interactive playground for exploring and testing design system components.",
@@ -75,8 +77,8 @@ const projects = [
   title: "FluidUI",
   category: "AI Design",
   industry: "Technology",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
-  imageFit: "object-contain bg-[#f4bfbf]",
+  image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
+  imageFit: "object-cover",
   year: "2024",
   link: "FluidUI",
   summary: "Interactive documentation component for conversational Voice User Interface (VUI) design, illustrating multimodal system architectures.",
@@ -184,9 +186,9 @@ function StickyCard({ project, index, total }) {
       
       <motion.div
         style={{ scale, opacity, borderRadius, backgroundColor: project.bgColor || '#fee2e2' }}
-        className="w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row origin-top border border-slate-900 group">
+        className={`w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row${index % 2 !== 0 ? '-reverse' : ''} origin-top border border-slate-900 group`}>
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10">
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className={`flex flex-col md:flex-row${index % 2 !== 0 ? '-reverse' : ''} w-full h-full relative ring-1 ring-inset ring-slate-900/10`}>
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
               <img
