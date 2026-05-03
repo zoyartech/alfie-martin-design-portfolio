@@ -10,7 +10,7 @@ const projects = [
   title: "Multimodal Design for AI systems In mental health",
   category: "AI Design",
   industry: "Med Tech",
-  image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9861804d6_1.png",
   imageFit: "object-cover",
   year: "2024",
   link: "b6",
