@@ -4,6 +4,7 @@ import { ArrowLeft, X, Info } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import FlowDiagram from "@/components/FlowDiagram";
+import VUIPrototype from "@/components/VUIPrototype";
 
 const annotationsData = {
   multimodal: [
@@ -160,6 +161,10 @@ export default function FluidUI() {
           <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-4xl mb-12">
             Exploring fluid interfaces.
           </p>
+
+          <div className="mb-16 border border-slate-100 rounded-2xl shadow-lg p-2 bg-white">
+            <VUIPrototype />
+          </div>
 
           <div className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light space-y-6">
             <p>
