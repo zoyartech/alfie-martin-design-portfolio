@@ -67,7 +67,7 @@ const projects = [
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/da053ce9d_BlueandBeigeSimpleMinimalistFashionPosterzip-9.png",
   imageFit: "object-cover",
   year: "2024",
-  link: "link",
+  link: "DesignSystemPlayground",
   summary: "body text",
   stats: [],
   tags: ["tag"],
