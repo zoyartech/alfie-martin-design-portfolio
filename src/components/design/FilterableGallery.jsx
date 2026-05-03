@@ -40,7 +40,7 @@ const projects = [
 
   tags: ["UX Research", "AI Systems", "Conversation Design"],
   bgColor: "#2b5769",
-  theme: "dark"
+  textColor: "black"
 },
 {
   title: "Designing trust into automated climate risk",
