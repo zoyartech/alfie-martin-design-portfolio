@@ -3,14 +3,46 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
-const defaultScript = [
-  { role: "user", content: "I need to reset my password", delay: 600 },
-  { role: "assistant", content: "I can help with that. What's the email on your account?", delay: 400, typingDuration: 1200 },
-  { role: "user", content: "alex@company.com", delay: 1800 },
-  { role: "assistant", content: "Got it. I just sent a reset link to alex@company.com. It should arrive within a minute.", delay: 400, typingDuration: 1600 }
-];
+const predefinedScenarios = {
+  support: {
+    id: "support",
+    title: "Support",
+    script: [
+      { role: "user", content: "I need to reset my password", delay: 600 },
+      { role: "assistant", content: "I can help with that. What's the email on your account?", delay: 400, typingDuration: 1200 },
+      { role: "user", content: "alex@company.com", delay: 1800 },
+      { role: "assistant", content: "Got it. I just sent a reset link to alex@company.com. It should arrive within a minute.", delay: 400, typingDuration: 1600 }
+    ]
+  },
+  sales: {
+    id: "sales",
+    title: "Sales",
+    script: [
+      { role: "user", content: "Hi, do you offer enterprise pricing?", delay: 600 },
+      { role: "assistant", content: "Hello! Yes, we have custom enterprise plans tailored to your team's size.", delay: 400, typingDuration: 1500 },
+      { role: "assistant", content: "How many users are you looking to onboard?", delay: 800, typingDuration: 1000 },
+      { role: "user", content: "Around 150 people.", delay: 2000 },
+      { role: "assistant", content: "Perfect. I can connect you with an account executive who can build a custom quote. Should I schedule a brief call?", delay: 400, typingDuration: 1800 }
+    ]
+  },
+  onboarding: {
+    id: "onboarding",
+    title: "Onboarding",
+    script: [
+      { role: "user", content: "I just signed up. Where do I start?", delay: 600 },
+      { role: "assistant", content: "Welcome aboard! 🎉", delay: 400, typingDuration: 800 },
+      { role: "assistant", content: "The best place to start is by setting up your profile and inviting a few team members.", delay: 600, typingDuration: 1400 },
+      { role: "user", content: "How do I invite team members?", delay: 2500 },
+      { role: "assistant", content: "Head over to Settings > Workspace > Team, and click 'Invite Users'. Let me know if you need help finding it!", delay: 400, typingDuration: 1600 }
+    ]
+  }
+};
 
-export default function ChatbotSimulator({ script = defaultScript, title = "AI Assistant" }) {
+export default function ChatbotSimulator({ title = "AI Assistant" }) {
+  const [activeScenarioId, setActiveScenarioId] = useState("support");
+  const activeScenario = predefinedScenarios[activeScenarioId];
+  const script = activeScenario.script;
+  
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
@@ -116,6 +148,26 @@ export default function ChatbotSimulator({ script = defaultScript, title = "AI A
     }
   };
 
+  const handleScenarioChange = (scenarioId) => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setActiveScenarioId(scenarioId);
+    setMessages([]);
+    setIsTyping(false);
+    setIsComplete(false);
+    setStepIndex(0);
+    setHasStarted(false);
+    
+    if (prefersReducedMotion) {
+      setMessages(predefinedScenarios[scenarioId].script);
+      setIsComplete(true);
+      setHasStarted(true);
+    } else {
+      // Small delay to allow the intersection observer to trigger organically again if needed,
+      // or we can just force start it since the user explicitly clicked it.
+      setTimeout(() => setHasStarted(true), 100);
+    }
+  };
+
   const bubbleVariants = {
     hidden: { opacity: 0, y: 8, scale: 0.96 },
     visible: { 
@@ -127,11 +179,30 @@ export default function ChatbotSimulator({ script = defaultScript, title = "AI A
   };
 
   return (
-    <div 
-      ref={containerRef}
-      className="w-full max-w-[480px] bg-white rounded-[16px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col overflow-hidden relative mx-auto"
-    >
-      {/* Header */}
+    <div className="flex flex-col gap-4 w-full max-w-[480px] mx-auto">
+      {/* Tabs */}
+      <div className="flex bg-slate-100/50 p-1 rounded-xl border border-slate-200 overflow-x-auto w-full">
+        {Object.values(predefinedScenarios).map(scenario => (
+          <button
+            key={scenario.id}
+            onClick={() => handleScenarioChange(scenario.id)}
+            className={cn(
+              "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap flex-1",
+              activeScenarioId === scenario.id 
+                ? "bg-white text-slate-900 shadow-sm" 
+                : "text-slate-500 hover:text-slate-900"
+            )}
+          >
+            {scenario.title}
+          </button>
+        ))}
+      </div>
+
+      <div 
+        ref={containerRef}
+        className="w-full bg-white rounded-[16px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col overflow-hidden relative"
+      >
+        {/* Header */}
       <div className="px-4 py-3 border-b border-slate-100 flex items-center gap-2 bg-white/80 backdrop-blur-sm z-10">
         <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
         <span className="font-medium text-sm text-slate-800">{title}</span>
@@ -218,6 +289,7 @@ export default function ChatbotSimulator({ script = defaultScript, title = "AI A
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
