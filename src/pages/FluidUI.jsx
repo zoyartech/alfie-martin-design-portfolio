@@ -4,7 +4,6 @@ import { ArrowLeft, X, Info } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import FlowDiagram from "@/components/FlowDiagram";
-import ConversationCraft from "./ConversationCraft";
 
 const annotationsData = {
   multimodal: [
@@ -146,16 +145,6 @@ export default function FluidUI() {
               }>
               
               Decision Logic
-            </button>
-            <button
-              onClick={() => setActiveTab("craft")}
-              className={`px-6 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
-              activeTab === "craft" ?
-              "bg-white text-slate-900 shadow-sm" :
-              "text-slate-500 hover:text-slate-900"}`
-              }>
-              
-              Conversation Craft
             </button>
           </div>
         </div>
@@ -358,18 +347,6 @@ export default function FluidUI() {
                   <AnnotationOverlay annotations={dynamicDegradationAnnotations} />
                 </div>
               </div>
-            </motion.div>
-          }
-
-          {activeTab === "craft" &&
-          <motion.div 
-            key="craft"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="mt-8 rounded-3xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-              <ConversationCraft isEmbedded={true} />
             </motion.div>
           }
 
