@@ -4,6 +4,7 @@ import { ArrowLeft, X, Info } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import FlowDiagram from "@/components/FlowDiagram";
+import ChatbotSimulator from "@/components/ChatbotSimulator";
 
 const annotationsData = {
   multimodal: [
@@ -180,9 +181,10 @@ export default function FluidUI() {
           </div>
 
           <h2 className="text-slate-900 mb-6 text-3xl font-medium">AI Conversational Design</h2>
-          <a href="https://beam-pear-41561282.figma.site/" target="_blank" rel="noopener noreferrer" className="block w-full mb-12 rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-[#0F172A] hover:opacity-90 transition-opacity">
-            
-          </a>
+          
+          <div className="mb-12 w-full max-w-2xl">
+            <ChatbotSimulator />
+          </div>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mb-12 font-light">
             My approach is to design for error states first. In conversation, misunderstanding is the norm. Around 30-40% of conversational turns involve some form of repair, clarification, or renegotiation. Designing "The happy path" dialogue is roughly a third of the work. The rest, and most important, is figuring out what happens when the system doesn't understand, when the user changes their mind mid-task, when context shifts, or when confidence is low.
