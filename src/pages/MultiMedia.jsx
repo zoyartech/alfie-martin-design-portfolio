@@ -8,10 +8,8 @@ export default function MultiMedia() {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    ['/downloads/CFNetworkDownload_9HS79a.tmp.MP4', 
-     '/Downloads/CFNetworkDownload_9HS79a.tmp.MP4', 
-     '/downloads/CFNetworkDownload_9HS79a.tmp.mp4', 
-     '/CFNetworkDownload_9HS79a.tmp.MP4'].forEach(p => {
+    ['/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov', 
+     '/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov'].forEach(p => {
       fetch(p, { method: 'HEAD' })
         .then(r => console.log('Check', p, r.status))
         .catch(e => console.log('Check error', p, e));
@@ -138,8 +136,8 @@ export default function MultiMedia() {
               aria-label="Multi media video presentation"
               onClick={handleManualPlay}
             >
-              {/* Placeholder video - please upload your video using the media manager and replace this URL */}
-              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+              <source src="/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
+              <source src="/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
               <p>Your browser does not support the video tag.</p>
             </video>
 
