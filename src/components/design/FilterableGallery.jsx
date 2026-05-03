@@ -63,14 +63,14 @@ const projects = [
 {
   title: "Design System Playground",
   category: "Design Systems",
-  industry: "tag",
+  industry: "",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/da053ce9d_BlueandBeigeSimpleMinimalistFashionPosterzip-9.png",
   imageFit: "object-cover",
   year: "2024",
   link: "DesignSystemPlayground",
   summary: "drag and drop early stage design system",
   stats: [],
-  tags: ["tag"],
+  tags: [],
   bgColor: "#e8f4b0",
   textColor: "black"
 },
