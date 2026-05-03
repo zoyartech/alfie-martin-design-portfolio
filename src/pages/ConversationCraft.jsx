@@ -6,9 +6,9 @@ import { createPageUrl } from "@/utils";
 import ShowcaseConversation from "@/components/design/ShowcaseConversation";
 import { ProbabilityBar, HedgedTooltip, SourceCitationChip, LowConfidenceBanner, NumericalScorePopover } from "@/components/design/ConfidenceLibrary";
 
-export default function ConversationCraft() {
+export default function ConversationCraft({ isEmbedded = false }) {
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-slate-900 font-sans pb-24">
+    <div className={`${isEmbedded ? 'pb-12 bg-white' : 'min-h-screen bg-[#faf9f6] pb-24'} text-slate-900 font-sans`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
         
@@ -24,11 +24,13 @@ export default function ConversationCraft() {
       `}</style>
 
       {/* Header */}
-      <div className="pt-32 pb-16 px-6 lg:px-12 bg-white border-b border-slate-100">
+      <div className={`${isEmbedded ? 'pt-12 pb-12' : 'pt-32 pb-16'} px-6 lg:px-12 bg-white border-b border-slate-100`}>
         <div className="max-w-5xl mx-auto">
+          {!isEmbedded && (
           <Link to={createPageUrl("Home")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-12">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
+          )}
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
