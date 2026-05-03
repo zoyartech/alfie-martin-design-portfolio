@@ -88,7 +88,7 @@ export default function MultiMedia() {
       observer.unobserve(video);
       video.removeEventListener('error', handleError, true);
     };
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, heroVideo?.video_url]);
 
   const handleManualPlay = () => {
     if (videoRef.current) {
@@ -138,15 +138,8 @@ export default function MultiMedia() {
               poster={heroVideo?.poster_url || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"}
               aria-label="Multi media video presentation"
               onClick={handleManualPlay}
+              src={heroVideo?.video_url || "/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov"}
             >
-              {heroVideo ? (
-                <source src={heroVideo.video_url} />
-              ) : (
-                <>
-                  <source src="/downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
-                  <source src="/Downloads/7f072b66-b84c-4fc6-8929-60353a9ca0f0_U5ZXq2aNZ.mov" type="video/quicktime" />
-                </>
-              )}
               <p>Your browser does not support the video tag.</p>
             </video>
 
@@ -227,9 +220,8 @@ export default function MultiMedia() {
                       e.target.pause(); 
                       e.target.currentTime = 0; 
                     }}
-                  >
-                    <source src={project.video_url} />
-                  </video>
+                    src={project.video_url}
+                  />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
                     <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl">
