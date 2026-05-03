@@ -27,7 +27,7 @@ const projects = [
   title: "Confidence Scoring in AI outputs",
   category: "AI Design",
   industry: "Technology",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9ef5c205c_2.png",
   imageFit: "object-cover",
   imagePosition: "left",
   year: "2024",
