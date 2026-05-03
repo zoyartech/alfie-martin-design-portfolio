@@ -111,7 +111,7 @@ export default function MultiMedia() {
           alt="Fashion runway hero"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-white/33" />
         <div className="absolute bottom-12 left-6 lg:left-12">
           <p className="text-xs tracking-[0.3em] text-white/70 mb-3 font-sans uppercase">MEDIA</p>
           <h1 className="text-4xl md:text-6xl font-light font-serif text-white">Multi Media</h1>
