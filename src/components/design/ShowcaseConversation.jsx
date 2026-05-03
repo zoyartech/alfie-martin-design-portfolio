@@ -60,6 +60,37 @@ const MESSAGES = [
       latency: '450ms',
       action: 'message_sent'
     }
+  },
+  {
+    id: 8,
+    role: 'user',
+    content: "Also, what about my fasting glucose?"
+  },
+  {
+    id: 9,
+    role: 'ai',
+    content: "Your fasting glucose is 92 mg/dL, which is perfectly normal. It's well below the prediabetes threshold of 100 mg/dL.",
+    metadata: {
+      confidence: 0.99,
+      model: 'clinical-v4.2',
+      latency: '310ms',
+      sources: ['labs/03-12']
+    }
+  },
+  {
+    id: 10,
+    role: 'user',
+    content: "Okay, that's a relief. Thanks."
+  },
+  {
+    id: 11,
+    role: 'ai',
+    content: "You're very welcome. I'll let you know as soon as Dr. Chen replies about the statins. Have a great rest of your day.",
+    metadata: {
+      confidence: 0.96,
+      model: 'clinical-v4.2',
+      latency: '420ms'
+    }
   }
 ];
 
