@@ -77,7 +77,7 @@ const projects = [
   title: "FluidUI",
   category: "AI Design",
   industry: "Technology",
-  image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/845fdabe3_BlueandBeigeSimpleMinimalistFashionPosterzip-8.png",
   imageFit: "object-cover",
   year: "2024",
   link: "FluidUI",
