@@ -175,7 +175,7 @@ function StickyCard({ project, index, total }) {
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["16px", "24px"]);
 
   const isImageRight = project.imagePosition === 'right' || (project.imagePosition === undefined && index % 2 !== 0);
-  const rowDirection = isImageRight ? '-reverse' : '';
+  const directionClass = isImageRight ? 'md:flex-row-reverse' : 'md:flex-row';
 
   return (
     <motion.div
@@ -190,9 +190,9 @@ function StickyCard({ project, index, total }) {
       
       <motion.div
         style={{ scale, opacity, borderRadius, backgroundColor: project.bgColor || '#fee2e2' }}
-        className={`w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col md:flex-row${rowDirection} origin-top border border-slate-900 group`}>
+        className={`w-full h-full max-h-[85vh] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col ${directionClass} origin-top border border-slate-900 group`}>
         
-        <Link to={project.link ? createPageUrl(project.link) : '#'} className={`flex flex-col md:flex-row${rowDirection} w-full h-full relative ring-1 ring-inset ring-slate-900/10`}>
+        <Link to={project.link ? createPageUrl(project.link) : '#'} className={`flex flex-col ${directionClass} w-full h-full relative ring-1 ring-inset ring-slate-900/10`}>
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
               <img
