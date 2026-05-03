@@ -2,6 +2,33 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 
+const additionalProjects = [
+  {
+    id: 1,
+    title: "Campaign Shoot 01",
+    poster: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+  },
+  {
+    id: 2,
+    title: "Backstage Documentation",
+    poster: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1000&auto=format&fit=crop",
+    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+  },
+  {
+    id: 3,
+    title: "Runway Highlights",
+    poster: "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=1000&auto=format&fit=crop",
+    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+  },
+  {
+    id: 4,
+    title: "Editorial Feature",
+    poster: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop",
+    video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+  }
+];
+
 export default function MultiMedia() {
   const videoRef = useRef(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -171,6 +198,59 @@ export default function MultiMedia() {
             )}
           </div>
         </motion.div>
+
+        {/* Gallery Grid */}
+        <div className="mt-24">
+          <h2 className="text-3xl font-serif text-slate-900 mb-10">Additional Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {additionalProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative cursor-pointer"
+              >
+                <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
+                  <img 
+                    src={project.poster} 
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0"
+                  />
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    muted
+                    loop
+                    playsInline
+                    onMouseOver={(e) => {
+                      const playPromise = e.target.play();
+                      if (playPromise !== undefined) {
+                        playPromise.catch(() => {});
+                      }
+                    }}
+                    onMouseOut={(e) => { 
+                      e.target.pause(); 
+                      e.target.currentTime = 0; 
+                    }}
+                  >
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl">
+                      <Play className="w-6 h-6 text-slate-900 ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-5">
+                  <h3 className="text-xl font-medium text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
