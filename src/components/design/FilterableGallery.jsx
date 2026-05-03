@@ -76,13 +76,13 @@ const projects = [
   category: "AI Design",
   industry: "Technology",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a61e9832d_Screenshot2026-04-27at83736PM.png",
-  imageFit: "object-contain bg-[#f6f6f6]",
+  imageFit: "object-contain bg-[#f4bfbf]",
   year: "2024",
   link: "FluidUI",
   summary: "Interactive documentation component for conversational Voice User Interface (VUI) design, illustrating multimodal system architectures.",
   stats: [],
   tags: ["VUI", "Architecture", "Product Design"],
-  bgColor: "#f6f6f6",
+  bgColor: "#f4bfbf",
   textColor: "black"
 }];
 
