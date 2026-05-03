@@ -41,7 +41,9 @@ export default function MultiMedia() {
         } 
         // Pause when less than 10% is visible
         else if (entry.intersectionRatio <= 0.1) {
-          videoRef.current.pause();
+          if (videoRef.current) {
+            videoRef.current.pause();
+          }
           setIsPlaying(false);
         }
       });
