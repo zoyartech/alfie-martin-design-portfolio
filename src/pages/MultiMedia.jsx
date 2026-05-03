@@ -1,9 +1,89 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Loader2 } from 'lucide-react';
+import { Play, Loader2, Square } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
+
+function GalleryVideoCard({ project, index }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+      setIsPlaying(true);
+    }
+  };
+
+  const handleStop = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="relative"
+    >
+      <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
+        {project.poster_url && !isPlaying ? (
+          <img 
+            src={project.poster_url} 
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+          />
+        ) : !isPlaying ? (
+          <div className="absolute inset-0 w-full h-full bg-slate-200 transition-opacity duration-300" />
+        ) : null}
+        
+        <video
+          ref={videoRef}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}
+          muted
+          loop
+          playsInline
+          src={project.video_url}
+        />
+        
+        {!isPlaying && (
+          <>
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button 
+                onClick={handlePlay}
+                className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl hover:scale-105 transition-transform"
+              >
+                <Play className="w-6 h-6 text-slate-900 ml-1" />
+              </button>
+            </div>
+          </>
+        )}
+        
+        {isPlaying && (
+          <div className="absolute bottom-4 right-4 flex items-center justify-center z-10">
+            <button 
+              onClick={handleStop}
+              className="bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-sm font-medium text-slate-900"
+            >
+              <Square className="w-4 h-4 fill-current" />
+              Stop
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="mt-5">
+        <h3 className="text-xl font-medium text-slate-900">{project.title}</h3>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function MultiMedia() {
   const videoRef = useRef(null);
@@ -187,56 +267,7 @@ export default function MultiMedia() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {galleryVideos.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative cursor-pointer"
-                  onMouseEnter={(e) => {
-                    const video = e.currentTarget.querySelector('video');
-                    if (video) {
-                      const playPromise = video.play();
-                      if (playPromise !== undefined) playPromise.catch(() => {});
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    const video = e.currentTarget.querySelector('video');
-                    if (video) {
-                      video.pause();
-                      video.currentTime = 0;
-                    }
-                  }}
-                >
-                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
-                    {project.poster_url ? (
-                    <img 
-                      src={project.poster_url} 
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 w-full h-full bg-slate-200 transition-opacity duration-700 group-hover:opacity-0" />
-                  )}
-                  <video
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${project.poster_url ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}
-                    muted
-                    loop
-                    playsInline
-                    src={project.video_url}
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-300 transform scale-100 group-hover:scale-90 pointer-events-none">
-                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl">
-                      <Play className="w-6 h-6 text-slate-900 ml-1" />
-                    </div>
-                  </div>
-                  </div>
-                  <div className="mt-5">
-                  <h3 className="text-xl font-medium text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h3>
-                </div>
-              </motion.div>
+                <GalleryVideoCard key={project.id} project={project} index={index} />
               ))}
             </div>
           )}
