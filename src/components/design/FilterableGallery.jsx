@@ -60,19 +60,16 @@ const projects = [
   bgColor: "#a0c283"
 },
 {
-  title: "Botanical Identity System",
+  title: "title",
   category: "Design Systems",
-  industry: "Design",
+  industry: "tag",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/da053ce9d_BlueandBeigeSimpleMinimalistFashionPosterzip-9.png",
   imageFit: "object-cover",
   year: "2024",
-  link: "DesignSystemPlayground",
-  summary: "A scalable design system built around organic floral patterns, deep blue ink illustrations, and minimalist typography.",
-  stats: [
-    { label: "Components", value: "150+" },
-    { label: "Teams using it", value: "12" }
-  ],
-  tags: ["Design Systems", "Brand Identity", "Illustration"],
+  link: "link",
+  summary: "body text",
+  stats: [],
+  tags: ["tag"],
   bgColor: "#e8f4b0",
   textColor: "black"
 },
