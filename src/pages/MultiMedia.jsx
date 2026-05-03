@@ -127,8 +127,8 @@ export default function MultiMedia() {
               aria-label="Multi media video presentation"
               onClick={handleManualPlay}
             >
-              <source src="/downloads/CFNetworkDownload_9HS79a.tmp.MP4" type="video/mp4" />
-              <source src="/downloads/CFNetworkDownload_9HS79a.tmp.webm" type="video/webm" />
+              {/* Placeholder video - please upload your video using the media manager and replace this URL */}
+              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
               <p>Your browser does not support the video tag.</p>
             </video>
 
