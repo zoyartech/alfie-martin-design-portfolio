@@ -65,6 +65,7 @@ import ConversationCraft from './pages/ConversationCraft';
 import DesignSystemPlayground from './pages/DesignSystemPlayground';
 import ComponentShowcase from './pages/ComponentShowcase';
 import ArtDirection from './pages/ArtDirection';
+import MultiMedia from './pages/MultiMedia';
 import CaseStudyWrapper from './components/caseStudies/CaseStudyWrapper';
 
 const AuthenticatedApp = () => {
@@ -185,6 +186,7 @@ const AuthenticatedApp = () => {
       <Route path="/DesignSystemPlayground" element={<DesignSystemPlayground />} />
       <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="/ArtDirection" element={<CaseStudyWrapper pageName="ArtDirection"><ArtDirection /></CaseStudyWrapper>} />
+      <Route path="/MultiMedia" element={<MultiMedia />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
           <GlobalFooter />
