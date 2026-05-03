@@ -202,7 +202,7 @@ export default function MultiMedia() {
       {/* Hero */}
       <div className="relative w-full h-[70vh] overflow-hidden">
         <img
-          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1c960fb7_15.png"
+          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"
           alt="Fashion runway hero"
           className="w-full h-full object-contain"
         />
