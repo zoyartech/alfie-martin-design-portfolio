@@ -191,14 +191,14 @@ function StickyCard({ project, index, total }) {
         <Link to={project.link ? createPageUrl(project.link) : '#'} className="flex flex-col md:flex-row w-full h-full relative ring-1 ring-inset ring-slate-900/10">
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center bg-white">
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg bg-white">
-              <img
-                src={project.image}
-                alt={project.title}
-                className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
-                'max-w-full max-h-full w-auto h-auto object-contain' :
-                `w-full h-full ${project.imageFit || 'object-cover'}`}`
-                } />
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d8842d2d7_Screenshot2026-05-02at105615PM.png"
+
+              alt={project.title} className="group-hover:scale-105 transition-transform duration-700 w-full h-full object-contain mix-blend-multiply bg-transparent" />
+
+
+
+
+              
             </div>
           </div>
 
