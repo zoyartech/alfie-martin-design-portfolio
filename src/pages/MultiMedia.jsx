@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Play, Loader2, Square, Maximize } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, Loader2, Square, Maximize, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
@@ -105,6 +105,53 @@ export default function MultiMedia() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const galleryImages = [
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a162ec94b_shapes.png", caption: "Abstract Shapes" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/dae16c46b_illustration.png", caption: "Office Characters" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44266cad4_flowers-illustration.png", caption: "Botanical Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93192b950_aaaaaaa111111.png", caption: "Grammarly Viral Acquisition Loop" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9eb72bd8_IMG_7230.JPG", caption: "3D Abstract Composition" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/088fbd338_IMG_30362.jpg", caption: "Digital Illustration: Mask" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6fa478f50_IMG_3035.jpg", caption: "Digital Illustration: Portrait" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/273a4f491_IMG_0068.png", caption: "Mixed Media: Painted Hands" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/27cf6047e_IMG_0068.png", caption: "Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e67bd1e01_IMG_5941.jpg", caption: "Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a9be4d8e4_IMG_6368.png", caption: "Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/053f35cc5_IMG_6377.png", caption: "Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7c57caf1_IMG_7391.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cdd59cbf0_IMG_9682.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b47cab45b_IMG_8274.png", caption: "Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7fd5ca4eb_Press.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/404f587ff_1.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b99904fe1_IMG_1078.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f84aedc1b_IMG_3235.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/741047eb9_IMG_4340.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e497d297_IMG_5998.JPG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/571e0efd5_IMG_6149.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1340188fd_IMG_3574.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/052990856_IMG_9346.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/297c8305b_interior-wooden-poster-frame-on-the-table-mockup-template-65f9b6afcdeb4752da6fcd74-2x.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87bcdef28_outdoor-sidewalk-street-billboard-poster-mockup-template-65f9b64a492bc9abac15d4e8-2x.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bc38fc16d_Untitled620x1024px-1.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f42b6529_Untitled620x1024px-2.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d3ea16a1f_Untitled-October820250855.jpg", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6c4a05b60_Untitled620x1024px-16.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e0350ed7_Untitled620x1024px-19.PNG", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0b4739b3_Untitleddesign-1-2.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fca4f6bf5_unnamed-3.png", caption: "Experiment Lifecycle Visualization" }
+  ];
+
+  const openModal = (i) => setSelectedImage(i);
+  const closeModal = () => setSelectedImage(null);
+  const prev = () => setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
+  const next = () => setSelectedImage((selectedImage + 1) % galleryImages.length);
 
   const { data: videos = [], isLoading } = useQuery({
     queryKey: ['videoProjects'],
@@ -242,6 +289,84 @@ export default function MultiMedia() {
             </div>
           )}
         </div>
+
+        {/* Brand Visuals */}
+        <div className="mt-32">
+          <div className="mb-10">
+            <h2 className="text-3xl font-serif text-slate-900">Brand Visuals</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {galleryImages.map((item, i) =>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (i % 6) * 0.05 }}
+                className="aspect-square overflow-hidden cursor-pointer group relative bg-white rounded-xl shadow-sm border border-gray-100"
+                onClick={() => openModal(i)}>
+                <img
+                  loading="lazy"
+                  src={item.src}
+                  alt={item.caption}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
+                />
+              </motion.div>
+            )}
+          </div>
+        </div>
+
+        {/* Modal */}
+        <AnimatePresence>
+          {selectedImage !== null &&
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-sm flex items-center justify-center p-4"
+              onClick={closeModal}>
+              
+              <button
+                onClick={closeModal}
+                className="absolute top-6 right-6 text-slate-800 hover:text-slate-500 transition-colors bg-white/50 rounded-full p-2">
+                <X className="w-6 h-6" />
+              </button>
+              
+              <button
+                onClick={(e) => {e.stopPropagation();prev();}}
+                className="absolute left-4 md:left-8 text-slate-800 hover:text-slate-500 transition-colors p-3 bg-white/80 rounded-full shadow-sm">
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              
+              <motion.div
+                key={selectedImage}
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="max-w-5xl w-full flex flex-col items-center"
+                onClick={(e) => e.stopPropagation()}>
+                
+                <img
+                  loading="lazy"
+                  src={galleryImages[selectedImage].src}
+                  alt={galleryImages[selectedImage].caption}
+                  className="w-full max-h-[80vh] object-contain rounded-sm shadow-md" />
+                
+                <div className="mt-6 text-center">
+                  <p className="text-slate-900 font-medium font-sans text-lg">{galleryImages[selectedImage].caption}</p>
+                  <p className="text-slate-500 text-sm mt-1 font-sans">{selectedImage + 1} / {galleryImages.length}</p>
+                </div>
+              </motion.div>
+              
+              <button
+                onClick={(e) => {e.stopPropagation();next();}}
+                className="absolute right-4 md:right-8 text-slate-800 hover:text-slate-500 transition-colors p-3 bg-white/80 rounded-full shadow-sm">
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </motion.div>
+          }
+        </AnimatePresence>
 
         </div>
       </div>
