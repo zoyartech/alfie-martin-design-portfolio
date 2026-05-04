@@ -220,10 +220,6 @@ export default function MultiMedia() {
           />
         )}
         <div className="absolute inset-0 bg-white/33 pointer-events-none" />
-        <div className="absolute bottom-12 left-6 lg:left-12 pointer-events-none">
-          <p className="text-xs tracking-[0.3em] text-slate-900/70 mb-3 font-sans uppercase">MEDIA</p>
-          <h1 className="text-4xl md:text-6xl font-light font-serif text-slate-900">Multi Media</h1>
-        </div>
       </div>
 
       <div className="pt-16 pb-16 px-6 lg:px-12">
