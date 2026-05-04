@@ -111,7 +111,7 @@ export default function MultiMedia() {
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a162ec94b_shapes.png", caption: "Abstract Shapes" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/dae16c46b_illustration.png", caption: "Office Characters" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44266cad4_flowers-illustration.png", caption: "Botanical Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/93192b950_aaaaaaa111111.png", caption: "Grammarly Viral Acquisition Loop" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9eb72bd8_IMG_7230.JPG", caption: "3D Abstract Composition" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/088fbd338_IMG_30362.jpg", caption: "Digital Illustration: Mask" },
