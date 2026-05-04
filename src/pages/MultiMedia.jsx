@@ -200,14 +200,27 @@ export default function MultiMedia() {
   return (
     <div className="min-h-screen bg-[#faf9f6]">
       {/* Hero */}
-      <div className="relative w-full h-[70vh] overflow-hidden">
-        <img
-          src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"
-          alt="Fashion runway hero"
-          className="w-full h-full object-contain"
-        />
-        <div className="absolute inset-0 bg-white/33" />
-        <div className="absolute bottom-12 left-6 lg:left-12">
+      <div className="relative w-full h-[70vh] overflow-hidden bg-black/5">
+        {heroVideo ? (
+          <video
+            ref={videoRef}
+            src={heroVideo.video_url}
+            poster={heroVideo.poster_url || "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"}
+            className="w-full h-full object-cover"
+            muted
+            loop
+            playsInline
+            autoPlay
+          />
+        ) : (
+          <img
+            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"
+            alt="Fashion runway hero"
+            className="w-full h-full object-cover object-top"
+          />
+        )}
+        <div className="absolute inset-0 bg-white/33 pointer-events-none" />
+        <div className="absolute bottom-12 left-6 lg:left-12 pointer-events-none">
           <p className="text-xs tracking-[0.3em] text-slate-900/70 mb-3 font-sans uppercase">MEDIA</p>
           <h1 className="text-4xl md:text-6xl font-light font-serif text-slate-900">Multi Media</h1>
         </div>
