@@ -11,6 +11,7 @@ export default function MobileNav({ activePage = "", isTransparent = false }) {
     { label: "HOME", page: "Home" },
     { label: "ABOUT", page: "About" },
     { label: "CASE STUDIES", page: "CaseStudies" },
+    { label: "MULTIMEDIA", page: "MultiMedia" },
     { label: "CONTACT", page: "Contact" },
     { label: "BLOG", url: "https://medium.com/@alfieaiproductdesign" }
   ];
