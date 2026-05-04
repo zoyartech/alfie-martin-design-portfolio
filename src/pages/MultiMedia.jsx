@@ -369,6 +369,22 @@ export default function MultiMedia() {
           }
         </AnimatePresence>
 
+        {/* Art Direction Prototype */}
+        <div className="mt-32">
+          <div className="mb-10">
+            <h2 className="text-3xl font-serif text-slate-900">Art Direction Prototype</h2>
+          </div>
+          <div className="w-full flex justify-center h-[80vh]">
+            <iframe 
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }} 
+              src="https://embed.figma.com/proto/vNCIoHjPhuEFvQVgWBJEtJ/donuts?page-id=0%3A1&node-id=40-29&p=f&viewport=1092%2C686%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share" 
+              allowFullScreen
+              title="Figma Prototype"
+              className="rounded-xl shadow-sm bg-white"
+            ></iframe>
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
