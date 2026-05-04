@@ -372,7 +372,7 @@ export default function MultiMedia() {
         {/* Art Direction Prototype */}
         <div className="mt-32">
           <div className="mb-10">
-            <h2 className="text-3xl font-serif text-slate-900">Art Direction Prototype</h2>
+            <h2 className="text-3xl font-serif text-slate-900">Art Direction</h2>
           </div>
           <div className="w-full flex justify-center h-[80vh]">
             <iframe 
