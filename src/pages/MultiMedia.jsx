@@ -4,6 +4,24 @@ import { Play, Loader2, Square, Maximize, X, ChevronLeft, ChevronRight } from 'l
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const carouselImages = [
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/40d2a300f_Screenshot2026-05-05at93151AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d169afcbc_Screenshot2026-05-05at93201AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7346c47f3_Screenshot2026-05-05at93210AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2b4daa26f_Screenshot2026-05-05at93221AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a0436b74e_Screenshot2026-05-05at93235AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c06aa5de_Screenshot2026-05-05at93247AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/81d6f78d7_Screenshot2026-05-05at93259AM.png",
+  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5584c3ba9_Screenshot2026-05-05at93307AM.png"
+];
 
 function GalleryVideoCard({ project, index }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -368,6 +386,24 @@ export default function MultiMedia() {
             </motion.div>
           }
         </AnimatePresence>
+
+        {/* Brand Presentation Carousel */}
+        <div className="mt-32">
+          <div className="mb-10">
+            <h2 className="text-3xl font-serif text-slate-900">Brand Presentation</h2>
+          </div>
+          <Carousel className="w-full relative shadow-sm border border-slate-100 rounded-xl overflow-hidden bg-white">
+            <CarouselContent>
+              {carouselImages.map((src, index) => (
+                <CarouselItem key={index}>
+                  <img src={src} alt={`Presentation slide ${index + 1}`} className="w-full h-auto object-contain" />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4" />
+            <CarouselNext className="absolute right-4" />
+          </Carousel>
+        </div>
 
         {/* Art Direction Prototype */}
         <div className="mt-32">
