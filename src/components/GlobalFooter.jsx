@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram, Mail } from "lucide-react";
 
 const EMAIL = "alfie@alfiealfie.com";
 
@@ -37,13 +37,9 @@ function WobblyEmail() {
 
 export default function GlobalFooter() {
   return (
-    <footer className="bg-white border-t border-gray-100 py-20 px-6 lg:px-12">
+    <footer className="bg-white border-t border-gray-100 py-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <p className="text-xs tracking-[0.3em] text-gray-400 uppercase mb-6">Get in touch</p>
-        <div className="mb-16">
-          <WobblyEmail />
-        </div>
-        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 border-t border-gray-100 pt-8">
+        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6">
           <p className="text-xs text-gray-400 shrink-0">© {new Date().getFullYear()} Alfie Martin. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs font-bold tracking-[0.15em] text-slate-400 uppercase">
             <Link to={createPageUrl("Home")} className="hover:text-slate-900 transition-colors">Home</Link>
@@ -59,6 +55,9 @@ export default function GlobalFooter() {
               </a>
               <a href="https://www.instagram.com/wexleyhouse" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
                 <Instagram className="w-4 h-4" />
+              </a>
+              <a href="mailto:alfie@alfiealfie.com" className="hover:text-slate-900 transition-colors">
+                <Mail className="w-4 h-4" />
               </a>
             </div>
           </div>
