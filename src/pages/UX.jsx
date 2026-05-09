@@ -21,7 +21,7 @@ export default function UX() {
             transition={{ duration: 0.6 }}>
             
             <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em]">DISCIPLINE</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6">Why is </h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Why is designing of  </h1>
             <p className="text-slate-600 max-w-2xl text-lg leading-relaxed hidden">Why is designing for no ex[eroIn revent y 
 
 
