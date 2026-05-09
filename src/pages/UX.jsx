@@ -22,7 +22,7 @@ export default function UX() {
             
             <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em]">DISCIPLINE</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">UX Design</h1>
-            <p className="text-slate-600 max-w-2xl text-lg leading-relaxed">Designing 
+            <p className="text-slate-600 max-w-2xl text-lg leading-relaxed">In  
 
 
             </p>
