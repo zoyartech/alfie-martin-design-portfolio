@@ -67,6 +67,7 @@ import ComponentShowcase from './pages/ComponentShowcase';
 import ArtDirection from './pages/ArtDirection';
 import MultiMedia from './pages/MultiMedia';
 import AdminVideos from './pages/AdminVideos';
+import UX from './pages/UX';
 import CaseStudyWrapper from './components/caseStudies/CaseStudyWrapper';
 
 const AuthenticatedApp = () => {
@@ -189,6 +190,7 @@ const AuthenticatedApp = () => {
       <Route path="/ArtDirection" element={<CaseStudyWrapper pageName="ArtDirection"><ArtDirection /></CaseStudyWrapper>} />
       <Route path="/MultiMedia" element={<MultiMedia />} />
       <Route path="/AdminVideos" element={<AdminVideos />} />
+      <Route path="/UX" element={<UX />} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
           <GlobalFooter />
