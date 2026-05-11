@@ -19,7 +19,7 @@ export default function DesignSystemPlayground() {
   const [baseFontSize, setBaseFontSize] = useState(16);
   const [spacing, setSpacing] = useState(1);
   const [shadows, setShadows] = useState(1);
-  const [motion, setMotion] = useState(0.2);
+  const [motionSpeed, setMotionSpeed] = useState(0.2);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("desktop");
 
@@ -31,7 +31,7 @@ export default function DesignSystemPlayground() {
     setBaseFontSize(16);
     setSpacing(1);
     setShadows(1);
-    setMotion(0.2);
+    setMotionSpeed(0.2);
   };
 
   // The dynamic styles applied to the preview container
@@ -51,7 +51,7 @@ export default function DesignSystemPlayground() {
     padding: `${spacing * 2}rem`,
     gap: `${spacing}rem`,
     boxShadow: isDarkMode ? 'none' : `0 ${shadows * 10}px ${shadows * 15}px -3px rgb(0 0 0 / 0.1), 0 ${shadows * 4}px ${shadows * 6}px -4px rgb(0 0 0 / 0.1)`,
-    transition: `all ${motion}s ease-in-out`
+    transition: `all ${motionSpeed}s ease-in-out`
   };
 
   return (
@@ -245,12 +245,12 @@ export default function DesignSystemPlayground() {
 
                 <div className="space-y-4 pt-2">
                   <div className="flex justify-between items-center">
-                    <label className="text-xs font-medium">Motion Speed ({motion}s)</label>
+                    <label className="text-xs font-medium">Motion Speed ({motionSpeed}s)</label>
                   </div>
                   <Slider 
-                    value={[motion]} 
+                    value={[motionSpeed]} 
                     min={0} max={1} step={0.05}
-                    onValueChange={(val) => setMotion(val[0])}
+                    onValueChange={(val) => setMotionSpeed(val[0])}
                   />
                 </div>
               </div>
