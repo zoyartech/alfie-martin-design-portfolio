@@ -63,6 +63,7 @@ import DesignSystem from './pages/DesignSystem';
 import SplashScreen from './components/SplashScreen';
 import ConversationCraft from './pages/ConversationCraft';
 import DesignSystemPlayground from './pages/DesignSystemPlayground';
+import DeveloperHandoff from './pages/DeveloperHandoff';
 import ComponentShowcase from './pages/ComponentShowcase';
 import ArtDirection from './pages/ArtDirection';
 import MultiMedia from './pages/MultiMedia';
@@ -187,6 +188,7 @@ const AuthenticatedApp = () => {
       <Route path="/DesignSystem" element={<DesignSystem />} />
       <Route path="/ConversationCraft" element={<CaseStudyWrapper pageName="ConversationCraft"><ConversationCraft /></CaseStudyWrapper>} />
       <Route path="/DesignSystemPlayground" element={<DesignSystemPlayground />} />
+      <Route path="/DeveloperHandoff" element={<DeveloperHandoff />} />
       <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="/ArtDirection" element={<CaseStudyWrapper pageName="ArtDirection"><ArtDirection /></CaseStudyWrapper>} />
       <Route path="/MultiMedia" element={<MultiMedia />} />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet, GripVertical } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet, GripVertical, Code } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ComponentShowcase from "./ComponentShowcase";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
@@ -94,7 +94,7 @@ export default function DesignSystemPlayground() {
                         size="icon"
                         onClick={() => setIsDarkMode(!isDarkMode)}
                         className="rounded-full">
-                        
+
                         {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                       </Button>
                     </TooltipTrigger>
@@ -104,13 +104,20 @@ export default function DesignSystemPlayground() {
                   </Tooltip>
                 </TooltipProvider>
               </div>
-              <Button
-                className="gap-2"
-                variant="outline"
-                onClick={() => document.getElementById('component-library')?.scrollIntoView({ behavior: 'smooth' })}>
-                
-                <Layout className="w-4 h-4" /> View Library
-              </Button>
+              <div className="flex items-center gap-3">
+                <Button
+                  className="gap-2"
+                  variant="outline"
+                  onClick={() => document.getElementById('component-library')?.scrollIntoView({ behavior: 'smooth' })}>
+
+                  <Layout className="w-4 h-4" /> View Library
+                </Button>
+                <Button asChild className="gap-2 bg-slate-900 text-white hover:bg-slate-800">
+                  <Link to="/DeveloperHandoff">
+                    <Code className="w-4 h-4" /> Developer Handoff
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div className="text-lg text-slate-600 max-w-3xl space-y-6 mt-4">
               <p>
