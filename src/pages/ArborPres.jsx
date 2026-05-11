@@ -28,14 +28,25 @@ export default function ArborPres() {
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full flex-1 flex shadow-2xl rounded-xl overflow-hidden border border-[#eaeaea]"
+            className="w-full flex flex-col gap-16"
           >
-            <iframe 
-              src="https://gamma.app/embed/fsva8k1j945yy79" 
-              style={{ width: "100%", height: "100%", minHeight: "650px", border: "none" }} 
-              allow="fullscreen" 
-              title="Arbol"
-            ></iframe>
+            <div className="w-full h-[85vh] shadow-2xl rounded-xl overflow-hidden border border-[#eaeaea]">
+              <iframe 
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FUvcMiG9PATVg0LHrn1f76L%2FClimate-Risk-Dashboard-Application%3Ft%3DvMVdc59Qn7cFLCpy-1" 
+                style={{ width: "100%", height: "100%", border: "none" }} 
+                allowFullScreen 
+                title="Figma Prototype"
+              ></iframe>
+            </div>
+
+            <div className="w-full h-[85vh] shadow-2xl rounded-xl overflow-hidden border border-[#eaeaea]">
+              <iframe 
+                src="https://gamma.app/embed/fsva8k1j945yy79" 
+                style={{ width: "100%", height: "100%", border: "none" }} 
+                allowFullScreen 
+                title="Arbol"
+              ></iframe>
+            </div>
           </motion.div>
         </div>
       </section>
