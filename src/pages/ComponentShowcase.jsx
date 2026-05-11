@@ -84,7 +84,7 @@ const pieData = [
 ];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28"];
 
-export default function ComponentShowcase() {
+export default function ComponentShowcase({ isEmbedded = false }) {
   const [activeTab, setActiveTab] = useState("buttons");
   const [date, setDate] = useState(new Date());
 
@@ -104,21 +104,23 @@ export default function ComponentShowcase() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 pb-24 font-sans">
-      <div className="sticky top-0 z-50 pt-8 pb-4 px-6 lg:px-12 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-[90rem] mx-auto flex items-center justify-between">
-           <div>
-             <Link to={createPageUrl("DesignSystemPlayground")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-2">
-               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Design System
-             </Link>
-             <h1 className="text-2xl font-bold">Component Library & Showcase</h1>
-             <p className="text-slate-500 text-sm">Extensive collection of all UI components, tokens, and blocks.</p>
-           </div>
+    <div className={isEmbedded ? "pb-24 font-sans w-full" : "min-h-screen bg-slate-50 text-slate-900 pb-24 font-sans"}>
+      {!isEmbedded && (
+        <div className="sticky top-0 z-50 pt-8 pb-4 px-6 lg:px-12 bg-white/80 backdrop-blur-md border-b border-slate-200">
+          <div className="max-w-[90rem] mx-auto flex items-center justify-between">
+             <div>
+               <Link to={createPageUrl("DesignSystemPlayground")} className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-2">
+                 <ArrowLeft className="w-4 h-4 mr-2" /> Back to Design System
+               </Link>
+               <h1 className="text-2xl font-bold">Component Library & Showcase</h1>
+               <p className="text-slate-500 text-sm">Extensive collection of all UI components, tokens, and blocks.</p>
+             </div>
+          </div>
         </div>
-      </div>
+      )}
       
-      <div className="max-w-[90rem] mx-auto px-6 lg:px-12 py-12 flex gap-12 items-start relative">
-         <div className="w-64 shrink-0 sticky top-40 hidden lg:block space-y-1 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+      <div className={isEmbedded ? "w-full py-12 flex flex-col lg:flex-row gap-12 items-start relative" : "max-w-[90rem] mx-auto px-6 lg:px-12 py-12 flex gap-12 items-start relative"}>
+         <div className={`w-64 shrink-0 sticky hidden lg:block space-y-1 bg-white p-4 rounded-xl border border-slate-200 shadow-sm ${isEmbedded ? "top-24" : "top-40"}`}>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-4">Categories</h4>
             {navItems.map(item => (
               <button 

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet, GripVertical } from "lucide-react";
 import { createPageUrl } from "@/utils";
+import ComponentShowcase from "./ComponentShowcase";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -22,6 +24,17 @@ export default function DesignSystemPlayground() {
   const [motionSpeed, setMotionSpeed] = useState(0.2);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("desktop");
+  const [previewSections, setPreviewSections] = useState([
+    "typography", "interactive", "forms", "cards"
+  ]);
+
+  const handleDragEnd = (result) => {
+    if (!result.destination) return;
+    const items = Array.from(previewSections);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+    setPreviewSections(items);
+  };
 
   const resetTokens = () => {
     setPrimaryColor("#0f172a");
@@ -91,20 +104,13 @@ export default function DesignSystemPlayground() {
                   </Tooltip>
                 </TooltipProvider>
               </div>
-              <Link to={createPageUrl("ComponentShowcase")}>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button className="gap-2" variant="outline">
-                        <Layout className="w-4 h-4" /> Component Showcase
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>View component showcase</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </Link>
+              <Button 
+                className="gap-2" 
+                variant="outline"
+                onClick={() => document.getElementById('component-library')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <Layout className="w-4 h-4" /> View Library
+              </Button>
             </div>
             <p className="text-lg text-slate-600 max-w-3xl">
               Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.
@@ -345,79 +351,119 @@ export default function DesignSystemPlayground() {
                 }
               `}} />
 
-              <div className="space-y-12">
-                <div className="space-y-4">
-                  <h1 className="text-3xl font-bold" style={{ color: primaryColor }}>Typography & Hierarchy</h1>
-                  <p className="text-base leading-relaxed max-w-2xl" style={{ color: "var(--theme-text-muted)" }}>
-                    This is a preview of the base typography scale. The font family is currently set to {fontFamily}. 
-                    Notice how the reading experience changes as you adjust the base font size and typeface.
-                  </p>
-                </div>
+              <DragDropContext onDragEnd={handleDragEnd}>
+                <Droppable droppableId="preview-sections">
+                  {(provided) => (
+                    <div className="space-y-12" {...provided.droppableProps} ref={provided.innerRef}>
+                      {previewSections.map((sectionId, index) => (
+                        <Draggable key={sectionId} draggableId={sectionId} index={index}>
+                          {(provided) => (
+                            <div
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              className="relative group bg-white/5 p-4 rounded-xl -m-4 hover:bg-slate-100/50 transition-colors"
+                            >
+                              <div
+                                {...provided.dragHandleProps}
+                                className="absolute -left-2 top-6 opacity-0 group-hover:opacity-100 p-1 cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 transition-opacity"
+                              >
+                                <GripVertical className="w-5 h-5" />
+                              </div>
+                              
+                              {sectionId === "typography" && (
+                                <div className="space-y-4">
+                                  <h1 className="text-3xl font-bold" style={{ color: primaryColor }}>Typography & Hierarchy</h1>
+                                  <p className="text-base leading-relaxed max-w-2xl" style={{ color: "var(--theme-text-muted)" }}>
+                                    This is a preview of the base typography scale. The font family is currently set to {fontFamily}. 
+                                    Notice how the reading experience changes as you adjust the base font size and typeface.
+                                  </p>
+                                </div>
+                              )}
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Interactive Elements</h2>
-                  <div className="flex flex-wrap gap-4">
-                    <button className="playground-preview-btn px-4 py-2 font-medium">
-                      Primary Action
-                    </button>
-                    <button className="playground-preview-btn-outline px-4 py-2 font-medium">
-                      Secondary Action
-                    </button>
-                    <button className="px-4 py-2 font-medium hover:opacity-80 transition-colors" style={{ borderRadius: borderRadius, color: "var(--theme-text-muted)" }}>
-                      Ghost Button
-                    </button>
-                  </div>
-                </div>
+                              {sectionId === "interactive" && (
+                                <div className="space-y-4">
+                                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Interactive Elements</h2>
+                                  <div className="flex flex-wrap gap-4">
+                                    <button className="playground-preview-btn px-4 py-2 font-medium">
+                                      Primary Action
+                                    </button>
+                                    <button className="playground-preview-btn-outline px-4 py-2 font-medium">
+                                      Secondary Action
+                                    </button>
+                                    <button className="px-4 py-2 font-medium hover:opacity-80 transition-colors" style={{ borderRadius: borderRadius, color: "var(--theme-text-muted)" }}>
+                                      Ghost Button
+                                    </button>
+                                  </div>
+                                </div>
+                              )}
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Forms & Inputs</h2>
-                  <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Email Address</label>
-                      <input type="email" placeholder="you@example.com" className="playground-preview-input" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Password</label>
-                      <input type="password" placeholder="••••••••" className="playground-preview-input" />
-                    </div>
-                  </div>
-                </div>
+                              {sectionId === "forms" && (
+                                <div className="space-y-4">
+                                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Forms & Inputs</h2>
+                                  <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
+                                    <div className="space-y-2">
+                                      <label className="text-sm font-medium">Email Address</label>
+                                      <input type="email" placeholder="you@example.com" className="playground-preview-input" />
+                                    </div>
+                                    <div className="space-y-2">
+                                      <label className="text-sm font-medium">Password</label>
+                                      <input type="password" placeholder="••••••••" className="playground-preview-input" />
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Cards & Surfaces</h2>
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div className="playground-preview-card p-6">
-                      <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold" style={{ color: primaryColor }}>Project Alpha</h3>
-                        <span className="playground-preview-badge">Active</span>
-                      </div>
-                      <p className="text-sm mb-6" style={{ color: "var(--theme-text-muted)" }}>
-                        A showcase of how surface treatments, borders, and rounded corners compound to create a distinct visual identity.
-                      </p>
-                      <div className="flex justify-end">
-                        <button className="playground-preview-btn px-4 py-2 text-sm font-medium">
-                          View Details
-                        </button>
-                      </div>
+                              {sectionId === "cards" && (
+                                <div className="space-y-4">
+                                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Cards & Surfaces</h2>
+                                  <div className="grid sm:grid-cols-2 gap-6">
+                                    <div className="playground-preview-card p-6">
+                                      <div className="flex justify-between items-start mb-4">
+                                        <h3 className="text-lg font-bold" style={{ color: primaryColor }}>Project Alpha</h3>
+                                        <span className="playground-preview-badge">Active</span>
+                                      </div>
+                                      <p className="text-sm mb-6" style={{ color: "var(--theme-text-muted)" }}>
+                                        A showcase of how surface treatments, borders, and rounded corners compound to create a distinct visual identity.
+                                      </p>
+                                      <div className="flex justify-end">
+                                        <button className="playground-preview-btn px-4 py-2 text-sm font-medium">
+                                          View Details
+                                        </button>
+                                      </div>
+                                    </div>
+                                    
+                                    <div className="playground-preview-card border-dashed border-2" style={{ backgroundColor: "var(--theme-bg)" }}>
+                                      <div className="h-full flex flex-col items-center justify-center p-8 text-center">
+                                        <div className="w-12 h-12 mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: secondaryColor, color: primaryColor }}>
+                                          <span className="text-xl">+</span>
+                                        </div>
+                                        <h3 className="font-medium" style={{ color: "var(--theme-text)" }}>Create New Asset</h3>
+                                        <p className="text-xs mt-1" style={{ color: "var(--theme-text-muted)" }}>Start from a blank canvas</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </Draggable>
+                      ))}
+                      {provided.placeholder}
                     </div>
-                    
-                    <div className="playground-preview-card border-dashed border-2" style={{ backgroundColor: "var(--theme-bg)" }}>
-                      <div className="h-full flex flex-col items-center justify-center p-8 text-center">
-                        <div className="w-12 h-12 mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: secondaryColor, color: primaryColor }}>
-                          <span className="text-xl">+</span>
-                        </div>
-                        <h3 className="font-medium" style={{ color: "var(--theme-text)" }}>Create New Asset</h3>
-                        <p className="text-xs mt-1" style={{ color: "var(--theme-text-muted)" }}>Start from a blank canvas</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  )}
+                </Droppable>
+              </DragDropContext>
               
             </div>
             </div>
           </div>
           
+        </div>
+      </div>
+
+      <div id="component-library" className="border-t border-slate-200 bg-slate-50 py-16">
+        <div className="max-w-[90rem] mx-auto">
+          <ComponentShowcase isEmbedded={true} />
         </div>
       </div>
     </div>
