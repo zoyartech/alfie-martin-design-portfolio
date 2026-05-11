@@ -36,7 +36,7 @@ export default function ArborPres() {
             className="w-full flex justify-center"
           >
             <iframe 
-              src="https://gamma.app/embed/fsva8k1j945yy79" 
+              src="https://media.base44.com/files/public/6974e154f708f4918a2b8d02/4484ba3b1_Arbol.pdf" 
               style={{ width: "100%", maxWidth: "1000px", height: "700px", borderRadius: "12px", border: "1px solid #eaeaea", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)" }} 
               allow="fullscreen" 
               title="Arbol"
