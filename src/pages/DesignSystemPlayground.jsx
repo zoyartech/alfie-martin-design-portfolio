@@ -25,8 +25,8 @@ export default function DesignSystemPlayground() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("desktop");
   const [previewSections, setPreviewSections] = useState([
-    "typography", "interactive", "forms", "cards"
-  ]);
+  "typography", "interactive", "forms", "cards"]
+  );
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -79,8 +79,8 @@ export default function DesignSystemPlayground() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+            
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
                 <h1 className="text-4xl font-light text-slate-900">
@@ -89,12 +89,12 @@ export default function DesignSystemPlayground() {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button 
-                        variant="outline" 
-                        size="icon" 
+                      <Button
+                        variant="outline"
+                        size="icon"
                         onClick={() => setIsDarkMode(!isDarkMode)}
-                        className="rounded-full"
-                      >
+                        className="rounded-full">
+                        
                         {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                       </Button>
                     </TooltipTrigger>
@@ -104,16 +104,16 @@ export default function DesignSystemPlayground() {
                   </Tooltip>
                 </TooltipProvider>
               </div>
-              <Button 
-                className="gap-2" 
+              <Button
+                className="gap-2"
                 variant="outline"
-                onClick={() => document.getElementById('component-library')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+                onClick={() => document.getElementById('component-library')?.scrollIntoView({ behavior: 'smooth' })}>
+                
                 <Layout className="w-4 h-4" /> View Library
               </Button>
             </div>
-            <p className="text-lg text-slate-600 max-w-3xl">
-              Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.
+            <p className="text-lg text-slate-600 max-w-3xl">Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.Why this existsI built this system because I was rebuilding the same five things on every project. Buttons that almost matched. Spacing that drifted by 2px between screens. Form fields with three different focus states depending on which file I copied from. The playground is where I keep the canonical versions. This document is how I keep track of what they are and how they should behave.It is also a portfolio piece. I want anyone who lands here to see how I think about systems: tokens before components, behavior before decoration, accessibility before everything
+
             </p>
           </motion.div>
         </div>
@@ -142,36 +142,36 @@ export default function DesignSystemPlayground() {
                   <div className="space-y-2">
                     <label className="text-xs font-medium">Primary</label>
                     <div className="flex gap-2">
-                      <Input 
-                        type="color" 
-                        value={primaryColor} 
+                      <Input
+                        type="color"
+                        value={primaryColor}
                         onChange={(e) => setPrimaryColor(e.target.value)}
-                        className="w-12 h-10 p-1 cursor-pointer"
-                      />
-                      <Input 
-                        type="text" 
-                        value={primaryColor} 
+                        className="w-12 h-10 p-1 cursor-pointer" />
+                      
+                      <Input
+                        type="text"
+                        value={primaryColor}
                         onChange={(e) => setPrimaryColor(e.target.value)}
-                        className="font-mono text-xs uppercase"
-                      />
+                        className="font-mono text-xs uppercase" />
+                      
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <label className="text-xs font-medium">Secondary Base</label>
                     <div className="flex gap-2">
-                      <Input 
-                        type="color" 
-                        value={secondaryColor} 
+                      <Input
+                        type="color"
+                        value={secondaryColor}
                         onChange={(e) => setSecondaryColor(e.target.value)}
-                        className="w-12 h-10 p-1 cursor-pointer"
-                      />
-                      <Input 
-                        type="text" 
-                        value={secondaryColor} 
+                        className="w-12 h-10 p-1 cursor-pointer" />
+                      
+                      <Input
+                        type="text"
+                        value={secondaryColor}
                         onChange={(e) => setSecondaryColor(e.target.value)}
-                        className="font-mono text-xs uppercase"
-                      />
+                        className="font-mono text-xs uppercase" />
+                      
                     </div>
                   </div>
                 </div>
@@ -202,11 +202,11 @@ export default function DesignSystemPlayground() {
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-medium">Base Size ({baseFontSize}px)</label>
                   </div>
-                  <Slider 
-                    value={[baseFontSize]} 
+                  <Slider
+                    value={[baseFontSize]}
                     min={12} max={24} step={1}
-                    onValueChange={(val) => setBaseFontSize(val[0])}
-                  />
+                    onValueChange={(val) => setBaseFontSize(val[0])} />
+                  
                 </div>
               </div>
 
@@ -220,44 +220,44 @@ export default function DesignSystemPlayground() {
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-medium">Border Radius ({borderRadius}px)</label>
                   </div>
-                  <Slider 
-                    value={[borderRadius]} 
+                  <Slider
+                    value={[borderRadius]}
                     min={0} max={32} step={1}
-                    onValueChange={(val) => setBorderRadius(val[0])}
-                  />
+                    onValueChange={(val) => setBorderRadius(val[0])} />
+                  
                 </div>
                 
                 <div className="space-y-4 pt-2">
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-medium">Spacing Multiplier ({spacing}x)</label>
                   </div>
-                  <Slider 
-                    value={[spacing]} 
+                  <Slider
+                    value={[spacing]}
                     min={0.5} max={3} step={0.1}
-                    onValueChange={(val) => setSpacing(val[0])}
-                  />
+                    onValueChange={(val) => setSpacing(val[0])} />
+                  
                 </div>
 
                 <div className="space-y-4 pt-2">
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-medium">Shadow Intensity ({shadows}x)</label>
                   </div>
-                  <Slider 
-                    value={[shadows]} 
+                  <Slider
+                    value={[shadows]}
                     min={0} max={3} step={0.1}
-                    onValueChange={(val) => setShadows(val[0])}
-                  />
+                    onValueChange={(val) => setShadows(val[0])} />
+                  
                 </div>
 
                 <div className="space-y-4 pt-2">
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-medium">Motion Speed ({motionSpeed}s)</label>
                   </div>
-                  <Slider 
-                    value={[motionSpeed]} 
+                  <Slider
+                    value={[motionSpeed]}
                     min={0} max={1} step={0.05}
-                    onValueChange={(val) => setMotionSpeed(val[0])}
-                  />
+                    onValueChange={(val) => setMotionSpeed(val[0])} />
+                  
                 </div>
               </div>
             </div>
@@ -270,39 +270,39 @@ export default function DesignSystemPlayground() {
                 Preview
               </h2>
               <div className="flex bg-slate-100 p-1 rounded-lg border border-slate-200 shadow-sm">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className={`h-8 px-3 rounded-md transition-all ${viewport === 'mobile' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                  onClick={() => setViewport("mobile")}
-                >
+                  onClick={() => setViewport("mobile")}>
+                  
                   <Smartphone className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Mobile</span>
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className={`h-8 px-3 rounded-md transition-all ${viewport === 'tablet' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                  onClick={() => setViewport("tablet")}
-                >
+                  onClick={() => setViewport("tablet")}>
+                  
                   <Tablet className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Tablet</span>
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className={`h-8 px-3 rounded-md transition-all ${viewport === 'desktop' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                  onClick={() => setViewport("desktop")}
-                >
+                  onClick={() => setViewport("desktop")}>
+                  
                   <Monitor className="w-4 h-4 sm:mr-2" /> <span className="hidden sm:inline">Desktop</span>
                 </Button>
               </div>
             </div>
 
             <div className={`transition-all duration-500 mx-auto ${viewport === 'mobile' ? 'w-[375px] max-w-full' : viewport === 'tablet' ? 'w-[768px] max-w-full' : 'w-full'}`}>
-            <div 
-              className="p-8 rounded-xl shadow-md border transition-all duration-200 overflow-hidden"
-              style={{...previewStyles, borderColor: "var(--theme-border)"}}
-            >
-              <style dangerouslySetInnerHTML={{__html: `
+            <div
+                className="p-8 rounded-xl shadow-md border transition-all duration-200 overflow-hidden"
+                style={{ ...previewStyles, borderColor: "var(--theme-border)" }}>
+                
+              <style dangerouslySetInnerHTML={{ __html: `
                 .playground-preview-btn {
                   background-color: var(--theme-primary);
                   border-radius: var(--theme-radius);
@@ -349,39 +349,39 @@ export default function DesignSystemPlayground() {
                   font-size: 0.75em;
                   font-weight: 500;
                 }
-              `}} />
+              ` }} />
 
               <DragDropContext onDragEnd={handleDragEnd}>
                 <Droppable droppableId="preview-sections">
-                  {(provided) => (
+                  {(provided) =>
                     <div className="space-y-12" {...provided.droppableProps} ref={provided.innerRef}>
-                      {previewSections.map((sectionId, index) => (
-                        <Draggable key={sectionId} draggableId={sectionId} index={index}>
-                          {(provided) => (
-                            <div
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              className="relative group bg-white/5 p-4 rounded-xl -m-4 hover:bg-slate-100/50 transition-colors"
-                            >
+                      {previewSections.map((sectionId, index) =>
+                      <Draggable key={sectionId} draggableId={sectionId} index={index}>
+                          {(provided) =>
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          className="relative group bg-white/5 p-4 rounded-xl -m-4 hover:bg-slate-100/50 transition-colors">
+                          
                               <div
-                                {...provided.dragHandleProps}
-                                className="absolute -left-2 top-6 opacity-0 group-hover:opacity-100 p-1 cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 transition-opacity"
-                              >
+                            {...provided.dragHandleProps}
+                            className="absolute -left-2 top-6 opacity-0 group-hover:opacity-100 p-1 cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 transition-opacity">
+                            
                                 <GripVertical className="w-5 h-5" />
                               </div>
                               
-                              {sectionId === "typography" && (
-                                <div className="space-y-4">
+                              {sectionId === "typography" &&
+                          <div className="space-y-4">
                                   <h1 className="text-3xl font-bold" style={{ color: primaryColor }}>Typography & Hierarchy</h1>
                                   <p className="text-base leading-relaxed max-w-2xl" style={{ color: "var(--theme-text-muted)" }}>
                                     This is a preview of the base typography scale. The font family is currently set to {fontFamily}. 
                                     Notice how the reading experience changes as you adjust the base font size and typeface.
                                   </p>
                                 </div>
-                              )}
+                          }
 
-                              {sectionId === "interactive" && (
-                                <div className="space-y-4">
+                              {sectionId === "interactive" &&
+                          <div className="space-y-4">
                                   <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Interactive Elements</h2>
                                   <div className="flex flex-wrap gap-4">
                                     <button className="playground-preview-btn px-4 py-2 font-medium">
@@ -395,10 +395,10 @@ export default function DesignSystemPlayground() {
                                     </button>
                                   </div>
                                 </div>
-                              )}
+                          }
 
-                              {sectionId === "forms" && (
-                                <div className="space-y-4">
+                              {sectionId === "forms" &&
+                          <div className="space-y-4">
                                   <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Forms & Inputs</h2>
                                   <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
                                     <div className="space-y-2">
@@ -411,10 +411,10 @@ export default function DesignSystemPlayground() {
                                     </div>
                                   </div>
                                 </div>
-                              )}
+                          }
 
-                              {sectionId === "cards" && (
-                                <div className="space-y-4">
+                              {sectionId === "cards" &&
+                          <div className="space-y-4">
                                   <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Cards & Surfaces</h2>
                                   <div className="grid sm:grid-cols-2 gap-6">
                                     <div className="playground-preview-card p-6">
@@ -443,14 +443,14 @@ export default function DesignSystemPlayground() {
                                     </div>
                                   </div>
                                 </div>
-                              )}
+                          }
                             </div>
-                          )}
+                        }
                         </Draggable>
-                      ))}
+                      )}
                       {provided.placeholder}
                     </div>
-                  )}
+                    }
                 </Droppable>
               </DragDropContext>
               
@@ -466,6 +466,6 @@ export default function DesignSystemPlayground() {
           <ComponentShowcase isEmbedded={true} />
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
