@@ -160,6 +160,76 @@ export default function ComponentShowcase({ isEmbedded = false }) {
               </div>
             </div>
 
+            <div className="mb-16 border-b border-slate-200 pb-16">
+              <h2 className="text-3xl font-semibold text-slate-900 tracking-tight mb-4">Components</h2>
+              <div className="text-lg text-slate-600 max-w-3xl space-y-8">
+                <p>
+                  The system is organized into seven categories. Each maps to a section in the playground sidebar.
+                </p>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">1. Buttons & Actions</h3>
+                  <p>Interactive triggers and commands for users to take action.</p>
+                  <ul className="space-y-2 text-base">
+                    <li><strong>Standard buttons:</strong> Default, Secondary, Outline, Ghost, Link, Destructive, Disabled. Default is the filled primary. Secondary is a neutral fill. Outline carries the same weight as default but lighter visually. Ghost has no background until hover. Link reads as inline text. Destructive uses the semantic danger color.</li>
+                    <li><strong>Icon and floating action buttons:</strong> Icon-only buttons for compact toolbars, "with icon" variants that pair an icon with a label, and a circular floating action button for primary actions on mobile.</li>
+                    <li><strong>Button groups and toggles:</strong> Segmented controls for mutually exclusive selections (Left, Middle, Right) and view-mode toggles (Map, List, Grid). The italic toggle is the single-button variant.</li>
+                  </ul>
+                  <p className="text-base italic text-slate-500 mt-2">Loading buttons keep their width to prevent layout shift. Disabled buttons get aria-disabled rather than the disabled attribute when they need to remain focusable for screen reader discovery.</p>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">2. Inputs & Forms</h3>
+                  <p>Data entry, selection controls, and form patterns.</p>
+                  <ul className="space-y-2 text-base">
+                    <li><strong>Text inputs:</strong> Standard, Password (with reveal toggle), Search (with leading icon), Number (with stepper), Text area.</li>
+                    <li><strong>Selection controls:</strong> Checkboxes, Radio groups, Switches/Toggles. Switches are for immediate-effect state changes. Checkboxes are for multi-select that requires a submit. Radio groups are for mutually exclusive selections inside a form.</li>
+                    <li><strong>Advanced inputs:</strong> Select/Dropdown, Combobox/Autocomplete, Slider/Range slider, Date picker, OTP/Pin input, File uploader (drag and drop), Color picker, Tags/Chips/Pill inputs, Rich text editor.</li>
+                  </ul>
+                  <p className="text-base italic text-slate-500 mt-2">Rule for select vs. combobox: short fixed list, use select. Anything over seven items or anything filterable, use combobox. I never rely on color alone to communicate error state. Errors get an icon, a message, and a border color change together.</p>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">3. Navigation</h3>
+                  <p>Wayfinding components. Top bars, side navigation, breadcrumbs, tabs (horizontal and vertical), pagination, menu primitives, and the command palette.</p>
+                  <p className="text-base italic text-slate-500">Two rules I do not break: the active state is unambiguous, and every navigation element is keyboard-reachable in a sensible tab order.</p>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">4. Data Display</h3>
+                  <p>Cards, lists, data tables, avatars, badges, tags, dividers, tooltips.</p>
+                  <p className="text-base italic text-slate-500">Cards have four variants: default, interactive (whole card is clickable), bordered, elevated. When a card is interactive, the entire surface is the hit target. I do not nest interactive elements inside interactive cards. Data tables use the radius-none token. Tables read better with sharp corners.</p>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">5. Feedback & Overlays</h3>
+                  <p>Modals, toasts, alerts, and state indicators.</p>
+                  <ul className="space-y-2 text-base">
+                    <li><strong>Overlays and dialogs:</strong> Modal (Open Modal), Destructive confirmation (Delete Item), Drawer/Sheet (Open Drawer/Sheet). All trap focus, close on escape, and return focus to the trigger element on close.</li>
+                    <li><strong>Contextual feedback:</strong> Inline info icons, mentions (@user pattern), Popovers, Toasts/Snackbars. Toasts auto-dismiss after 5 seconds for success, 8 seconds for warnings. Errors do not auto-dismiss.</li>
+                    <li><strong>Alerts and status:</strong> Info banners ("Heads up!") and error banners. Banners persist until dismissed or resolved. I use them for system status, account-level alerts, and anything the user needs to act on.</li>
+                    <li><strong>Loading and progress:</strong> Progress bars for tasks over 3 seconds. Skeletons for content the user is waiting to read. Spinners for actions the user just took.</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">6. Charts & Metrics</h3>
+                  <p>KPI/stat tiles, bar charts, line charts, area charts, donut charts.</p>
+                  <p className="text-base italic text-slate-500">Stat tiles follow a strict three-element structure: label, value, delta-versus-prior-period. The delta uses semantic color (green for positive, red for negative) and includes the comparison window in the helper text. Charts use a sequential token palette by default. For diverging or categorical data, I use the dedicated chart color tokens, not the brand palette. Brand colors are for action and emphasis, not data.</p>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">7. Complex Patterns</h3>
+                  <p>Commonly used combinations of components.</p>
+                  <ul className="space-y-2 text-base">
+                    <li><strong>Authentication forms:</strong> Login and signup composed from input, button, and link primitives. I keep them in a single column, with the submit button as the last tab stop and "Forgot password?" as a link above it.</li>
+                    <li><strong>Payment method:</strong> Card / PayPal / Apple selector built from segmented buttons, with conditional form rendering below based on the selection.</li>
+                    <li><strong>Chat and comments:</strong> Threaded message view with avatar, message bubble, timestamp, read receipt, and composer. The composer follows the AI prompt input rules: submit on enter, newline on shift-enter.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <Section id="buttons" title="Buttons & Actions" description="Interactive triggers and commands for users to take action.">
               <Block title="Standard Buttons">
                 <Button>Default</Button>
