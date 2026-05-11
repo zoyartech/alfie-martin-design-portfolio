@@ -17,6 +17,9 @@ export default function DesignSystemPlayground() {
   const [borderRadius, setBorderRadius] = useState(6);
   const [fontFamily, setFontFamily] = useState("system-ui, sans-serif");
   const [baseFontSize, setBaseFontSize] = useState(16);
+  const [spacing, setSpacing] = useState(1);
+  const [shadows, setShadows] = useState(1);
+  const [motion, setMotion] = useState(0.2);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("desktop");
 
@@ -26,6 +29,9 @@ export default function DesignSystemPlayground() {
     setBorderRadius(6);
     setFontFamily("system-ui, sans-serif");
     setBaseFontSize(16);
+    setSpacing(1);
+    setShadows(1);
+    setMotion(0.2);
   };
 
   // The dynamic styles applied to the preview container
@@ -42,6 +48,10 @@ export default function DesignSystemPlayground() {
     fontSize: `${baseFontSize}px`,
     backgroundColor: "var(--theme-bg)",
     color: "var(--theme-text)",
+    padding: `${spacing * 2}rem`,
+    gap: `${spacing}rem`,
+    boxShadow: isDarkMode ? 'none' : `0 ${shadows * 10}px ${shadows * 15}px -3px rgb(0 0 0 / 0.1), 0 ${shadows * 4}px ${shadows * 6}px -4px rgb(0 0 0 / 0.1)`,
+    transition: `all ${motion}s ease-in-out`
   };
 
   return (
@@ -194,10 +204,10 @@ export default function DesignSystemPlayground() {
                 </div>
               </div>
 
-              {/* Shape */}
+              {/* Shape, Space & Motion */}
               <div className="space-y-4 pt-4 border-t border-slate-100">
                 <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider flex items-center gap-2">
-                  <Square className="w-4 h-4" /> Shape
+                  <Square className="w-4 h-4" /> Layout & Effects
                 </h3>
                 
                 <div className="space-y-4 pt-2">
@@ -208,6 +218,39 @@ export default function DesignSystemPlayground() {
                     value={[borderRadius]} 
                     min={0} max={32} step={1}
                     onValueChange={(val) => setBorderRadius(val[0])}
+                  />
+                </div>
+                
+                <div className="space-y-4 pt-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-xs font-medium">Spacing Multiplier ({spacing}x)</label>
+                  </div>
+                  <Slider 
+                    value={[spacing]} 
+                    min={0.5} max={3} step={0.1}
+                    onValueChange={(val) => setSpacing(val[0])}
+                  />
+                </div>
+
+                <div className="space-y-4 pt-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-xs font-medium">Shadow Intensity ({shadows}x)</label>
+                  </div>
+                  <Slider 
+                    value={[shadows]} 
+                    min={0} max={3} step={0.1}
+                    onValueChange={(val) => setShadows(val[0])}
+                  />
+                </div>
+
+                <div className="space-y-4 pt-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-xs font-medium">Motion Speed ({motion}s)</label>
+                  </div>
+                  <Slider 
+                    value={[motion]} 
+                    min={0} max={1} step={0.05}
+                    onValueChange={(val) => setMotion(val[0])}
                   />
                 </div>
               </div>
