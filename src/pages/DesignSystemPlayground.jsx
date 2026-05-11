@@ -112,9 +112,29 @@ export default function DesignSystemPlayground() {
                 <Layout className="w-4 h-4" /> View Library
               </Button>
             </div>
-            <p className="text-lg text-slate-600 max-w-3xl">Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.Why this exists: I built this system because I was rebuilding the same five things on every project. Buttons that almost matched. Spacing that drifted by 2px between screens. Form fields with three different focus states depending on which file I copied from. The playground is where I keep the canonical versions. This document is how I keep track of what they are and how they should behave.It is also a portfolio piece. I want anyone who lands here to see how I think about systems: tokens before components, behavior before decoration, accessibility before everything
-
-            </p>
+            <div className="text-lg text-slate-600 max-w-3xl space-y-6 mt-4">
+              <p>
+                Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.
+              </p>
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 mb-2">Why this exists</h2>
+                <p>
+                  I built this system because I was rebuilding the same five things on every project. Buttons that almost matched. Spacing that drifted by 2px between screens. Form fields with three different focus states depending on which file I copied from. The playground is where I keep the canonical versions. This document is how I keep track of what they are and how they should behave.
+                </p>
+                <p className="mt-2">
+                  It is also a portfolio piece. I want anyone who lands here to see how I think about systems: tokens before components, behavior before decoration, accessibility before everything.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 mb-2">Principles</h2>
+                <ul className="space-y-3">
+                  <li><strong>Clarity over cleverness.</strong> If a component needs a tooltip to be understood, the component is wrong. I rewrite before I document.</li>
+                  <li><strong>Tokens before components.</strong> Every color, space, radius, and shadow is a named token. Components reference tokens. Screens reference components. I never hard-code a value at the screen level.</li>
+                  <li><strong>Predictability is a feature.</strong> A button should look and behave the same whether it lives in a marketing page, an onboarding flow, or an admin panel. Surprise is friction.</li>
+                  <li><strong>Accessibility is the baseline, not the polish pass.</strong> WCAG 2.1 AA is the floor. Focus states, contrast ratios, keyboard paths, and screen reader behavior get specified at the same time as visual design, not after.</li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
