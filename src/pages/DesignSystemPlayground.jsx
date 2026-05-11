@@ -112,7 +112,7 @@ export default function DesignSystemPlayground() {
                 <Layout className="w-4 h-4" /> View Library
               </Button>
             </div>
-            <p className="text-lg text-slate-600 max-w-3xl">Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.Why this existsI built this system because I was rebuilding the same five things on every project. Buttons that almost matched. Spacing that drifted by 2px between screens. Form fields with three different focus states depending on which file I copied from. The playground is where I keep the canonical versions. This document is how I keep track of what they are and how they should behave.It is also a portfolio piece. I want anyone who lands here to see how I think about systems: tokens before components, behavior before decoration, accessibility before everything
+            <p className="text-lg text-slate-600 max-w-3xl">Live-edit component variants and styling tokens to see changes reflected in real-time across UI patterns.Why this exists: I built this system because I was rebuilding the same five things on every project. Buttons that almost matched. Spacing that drifted by 2px between screens. Form fields with three different focus states depending on which file I copied from. The playground is where I keep the canonical versions. This document is how I keep track of what they are and how they should behave.It is also a portfolio piece. I want anyone who lands here to see how I think about systems: tokens before components, behavior before decoration, accessibility before everything
 
             </p>
           </motion.div>
