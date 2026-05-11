@@ -134,6 +134,32 @@ export default function ComponentShowcase({ isEmbedded = false }) {
          </div>
 
          <div className="flex-1 min-w-0">
+            <div className="mb-16 border-b border-slate-200 pb-16">
+              <h2 className="text-3xl font-semibold text-slate-900 tracking-tight mb-4">Theme Editor</h2>
+              <div className="text-lg text-slate-600 max-w-3xl space-y-4">
+                <p>
+                  The playground opens on a live theme editor. That was deliberate. Most design systems publish a static spec and assume the consumer will respect it. I wanted to expose the underlying parameters and let anyone feel what happens when they move them.
+                </p>
+                <p>The editor controls eight dimensions:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Primary color (default #0F172A)</li>
+                  <li>Secondary base (default #F1F5F9)</li>
+                  <li>Font family (default System Sans)</li>
+                  <li>Base size (default 16px)</li>
+                  <li>Border radius (default 6px)</li>
+                  <li>Spacing multiplier (default 1x)</li>
+                  <li>Shadow intensity (default 1x)</li>
+                  <li>Motion speed (default 0.2s)</li>
+                </ul>
+                <p>
+                  Every component in the preview pane re-renders against the current values. The device toggle (Mobile, Tablet, Desktop) sits at the top so you can see how the same tokens behave at different breakpoints.
+                </p>
+                <p>
+                  This is the most important part of the system to understand. The components are not fixed visual artifacts. They are functions of the tokens. If you change a token, every component that references it changes.
+                </p>
+              </div>
+            </div>
+
             <Section id="buttons" title="Buttons & Actions" description="Interactive triggers and commands for users to take action.">
               <Block title="Standard Buttons">
                 <Button>Default</Button>
