@@ -262,6 +262,46 @@ export default function ComponentShowcase({ isEmbedded = false }) {
               </Block>
             </Section>
 
+            <div className="mb-16 border-b border-slate-200 pb-16">
+              <h2 className="text-3xl font-semibold text-slate-900 tracking-tight mb-4">AI Patterns</h2>
+              <div className="text-lg text-slate-600 max-w-3xl space-y-6">
+                <p>
+                  Half my work depends on AI patterns, and most design systems do not have a dedicated section for them yet. 
+                </p>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">Confidence indicator</h3>
+                  <p>When the AI surfaces a recommendation, I show how confident it is. Three levels: high, medium, low. Each maps to a visual treatment and a default user affordance.</p>
+                  <ul className="list-disc pl-6 space-y-1 text-base">
+                    <li><strong>High confidence:</strong> subtle treatment, recommendation presented as the default path</li>
+                    <li><strong>Medium confidence:</strong> explicit label, recommendation presented alongside alternatives</li>
+                    <li><strong>Low confidence:</strong> prominent label, recommendation presented as one of several options with clear opt-out</li>
+                  </ul>
+                  <p className="text-base italic text-slate-500 mt-2">I never show a numeric confidence score in the UI without context. The qualitative band plus a one-line explanation does more work.</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">Source citation</h3>
+                  <p>When the AI references external information, I cite it inline. The citation is interactive: hover or tap reveals the source title and a link to the original. Sources are never hidden behind a separate "show sources" button. Trust drops when users have to dig.</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">Streaming output</h3>
+                  <p>Long AI responses stream token by token. I show a typing indicator at the leading edge. I lock the scroll only if the user has not scrolled up. If they have, I show a "jump to latest" affordance instead of pulling them down.</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">Human-in-the-loop handoff</h3>
+                  <p>When the AI hands a task to a human, the transition needs three things: a clear reason for the handoff, the user's full context preserved, and an estimated time to human response.</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">Prompt input</h3>
+                  <p>A composer optimized for AI input. Larger than a standard text input. Auto-resizes up to a maximum height, then scrolls. Submit on enter, newline on shift-enter. Always includes a visible "stop generation" affordance once the AI starts responding.</p>
+                </div>
+              </div>
+            </div>
+
             <Section id="inputs" title="Inputs & Forms" description="Data entry, selection controls, and form patterns.">
               <Block title="Text Inputs" fullWidth>
                 <div className="grid md:grid-cols-2 gap-8">
