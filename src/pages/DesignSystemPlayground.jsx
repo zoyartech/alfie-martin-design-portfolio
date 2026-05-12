@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet, GripVertical, Code } from "lucide-react";
+import { ArrowLeft, RefreshCw, Palette, Type, Square, Moon, Sun, Layout, Monitor, Smartphone, Tablet, GripVertical, Code, Download } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ComponentShowcase from "./ComponentShowcase";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function DesignSystemPlayground() {
   const [primaryColor, setPrimaryColor] = useState("#0f172a");
@@ -45,6 +46,45 @@ export default function DesignSystemPlayground() {
     setSpacing(1);
     setShadows(1);
     setMotionSpeed(0.2);
+  };
+
+  const exportTokens = (format) => {
+    let content = "";
+    let filename = "";
+    let mimeType = "text/plain";
+
+    if (format === "json") {
+      content = JSON.stringify({
+        primaryColor,
+        secondaryColor,
+        borderRadius,
+        fontFamily,
+        baseFontSize,
+        spacing,
+        shadows,
+        motionSpeed
+      }, null, 2);
+      filename = "tokens.json";
+      mimeType = "application/json";
+    } else if (format === "css") {
+      content = ":root {\\n  --theme-primary: " + primaryColor + ";\\n  --theme-secondary: " + secondaryColor + ";\\n  --theme-radius: " + borderRadius + "px;\\n  --theme-font-family: " + fontFamily + ";\\n  --theme-font-size: " + baseFontSize + "px;\\n  --theme-spacing: " + spacing + ";\\n  --theme-shadow-intensity: " + shadows + ";\\n  --theme-motion-speed: " + motionSpeed + "s;\\n}";
+      filename = "tokens.css";
+      mimeType = "text/css";
+    } else if (format === "tailwind") {
+      content = "module.exports = {\\n  theme: {\\n    extend: {\\n      colors: {\\n        primary: '" + primaryColor + "',\\n        secondary: '" + secondaryColor + "',\\n      },\\n      borderRadius: {\\n        DEFAULT: '" + borderRadius + "px',\\n      },\\n      fontFamily: {\\n        sans: '" + fontFamily + "',\\n      },\\n    }\\n  }\\n}";
+      filename = "tailwind.theme.js";
+      mimeType = "text/javascript";
+    }
+
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   // The dynamic styles applied to the preview container
@@ -155,9 +195,23 @@ export default function DesignSystemPlayground() {
               <h2 className="text-lg font-semibold flex items-center gap-2">
                 <Palette className="w-4 h-4" /> Theme Editor
               </h2>
-              <Button variant="ghost" size="sm" onClick={resetTokens} className="h-8 text-xs px-2 text-slate-500">
-                <RefreshCw className="w-3 h-3 mr-2" /> Reset
-              </Button>
+              <div className="flex items-center gap-1">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="h-8 text-xs px-2 text-slate-500">
+                      <Download className="w-3 h-3 mr-2" /> Export
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => exportTokens("json")}>Export as JSON</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => exportTokens("css")}>Export CSS Variables</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => exportTokens("tailwind")}>Export Tailwind Config</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <Button variant="ghost" size="sm" onClick={resetTokens} className="h-8 text-xs px-2 text-slate-500">
+                  <RefreshCw className="w-3 h-3 mr-2" /> Reset
+                </Button>
+              </div>
             </div>
 
             <div className="space-y-6">
