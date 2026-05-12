@@ -77,6 +77,38 @@ import { Button } from "@/components/ui/button";
  * asChild: boolean (renders as child element, e.g., for routing Links)
  */
 `,
+  "Icon & Floating Action Buttons": `// Consumes: var(--theme-primary), var(--theme-radius), var(--theme-secondary)
+import { Button } from "@/components/ui/button";
+import { Settings, Mail, Plus } from "lucide-react";
+
+<Button size="icon"><Settings className="w-4 h-4" /></Button>
+<Button className="gap-2"><Mail className="w-4 h-4" /> With Icon</Button>
+<Button className="rounded-full w-14 h-14 shadow-lg shadow-blue-500/20 bg-blue-600 hover:bg-blue-700 text-white" size="icon">
+  <Plus className="w-6 h-6" />
+</Button>
+`,
+  "Button Groups & Toggles": `// Consumes: var(--theme-primary), var(--theme-radius), var(--theme-border)
+import { Button } from "@/components/ui/button";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Toggle } from "@/components/ui/toggle";
+import { Italic } from "lucide-react";
+
+<div className="flex rounded-md shadow-sm">
+  <Button variant="outline" className="rounded-r-none">Left</Button>
+  <Button variant="outline" className="rounded-none border-x-0">Middle</Button>
+  <Button variant="outline" className="rounded-l-none">Right</Button>
+</div>
+
+<ToggleGroup type="single" defaultValue="a">
+  <ToggleGroupItem value="a">Map</ToggleGroupItem>
+  <ToggleGroupItem value="b">List</ToggleGroupItem>
+  <ToggleGroupItem value="c">Grid</ToggleGroupItem>
+</ToggleGroup>
+
+<Toggle aria-label="Toggle italic">
+  <Italic className="h-4 w-4" />
+</Toggle>
+`,
   "Text Inputs": `// Consumes: var(--theme-border), var(--theme-bg), var(--theme-text), var(--theme-radius), var(--theme-primary) [for focus ring]
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -125,6 +157,81 @@ import { Switch } from "@/components/ui/switch";
  * RadioGroup: value, onValueChange, defaultValue
  */
 `,
+  "Advanced Inputs": `// Consumes: var(--theme-primary), var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-radius)
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@/components/ui/input-otp";
+
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Select Theme" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectContent>
+</Select>
+
+<Slider defaultValue={[50]} max={100} step={1} />
+
+<InputOTP maxLength={6}>
+  <InputOTPGroup>
+    <InputOTPSlot index={0} />
+  </InputOTPGroup>
+  <InputOTPSeparator />
+</InputOTP>
+`,
+  "Breadcrumbs & Pagination": `// Consumes: var(--theme-text), var(--theme-primary)
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem><BreadcrumbLink href="/">Home</BreadcrumbLink></BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem><BreadcrumbPage>Breadcrumb</BreadcrumbPage></BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+
+<Pagination>
+  <PaginationContent>
+    <PaginationItem><PaginationPrevious href="#" /></PaginationItem>
+    <PaginationItem><PaginationLink href="#">1</PaginationLink></PaginationItem>
+    <PaginationItem><PaginationNext href="#" /></PaginationItem>
+  </PaginationContent>
+</Pagination>
+`,
+  "Tabs & Menus": `// Consumes: var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-primary), var(--theme-radius)
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuTrigger } from "@/components/ui/context-menu";
+
+<Tabs defaultValue="account">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">...</TabsContent>
+</Tabs>
+
+<DropdownMenu>
+  <DropdownMenuTrigger asChild><Button variant="outline">Open</Button></DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+
+<ContextMenu>
+  <ContextMenuTrigger>Right click here</ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Back</ContextMenuItem>
+  </ContextMenuContent>
+</ContextMenu>
+`,
   "Cards, Tiles & Layouts": `// Consumes: var(--theme-card-bg), var(--theme-border), var(--theme-radius), box-shadow from Theme Editor
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -142,6 +249,28 @@ import { Button } from "@/components/ui/button";
     <Button>Deploy</Button>
   </CardFooter>
 </Card>
+`,
+  "Tables & Lists": `// Consumes: var(--theme-border), var(--theme-bg), var(--theme-text)
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+
+<Table>
+  <TableCaption>A list of your recent invoices.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Invoice</TableHead>
+      <TableHead>Status</TableHead>
+      <TableHead>Amount</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>INV001</TableCell>
+      <TableCell><Badge variant="secondary">Paid</Badge></TableCell>
+      <TableCell>$250.00</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
 `,
   "Indicators, Avatars & Badges": `// Consumes: var(--theme-primary), var(--theme-secondary), var(--theme-radius)
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -183,6 +312,147 @@ import { Button } from "@/components/ui/button";
  * DialogTrigger: asChild (to avoid wrapping button in another button)
  */
 `,
+  "Contextual Feedback": `// Consumes: var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-radius)
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { toast } from "sonner";
+
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger asChild><Button variant="outline" size="icon"><Info /></Button></TooltipTrigger>
+    <TooltipContent><p>Add to library</p></TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+
+<HoverCard>
+  <HoverCardTrigger asChild><Button variant="link">@nextjs</Button></HoverCardTrigger>
+  <HoverCardContent>...</HoverCardContent>
+</HoverCard>
+
+<Button onClick={() => toast("Event has been created")}>
+  Show Toast
+</Button>
+`,
+  "Alerts & Status": `// Consumes: var(--theme-border), var(--theme-radius), var(--theme-text), semantic danger tokens
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Info, AlertCircle } from "lucide-react";
+
+<Alert>
+  <Info className="h-4 w-4" />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>You can add components to your app using the cli.</AlertDescription>
+</Alert>
+
+<Alert variant="destructive">
+  <AlertCircle className="h-4 w-4" />
+  <AlertTitle>Error</AlertTitle>
+  <AlertDescription>Your session has expired.</AlertDescription>
+</Alert>
+`,
+  "Loading & Progress": `// Consumes: var(--theme-primary), var(--theme-secondary), var(--theme-radius)
+import { Progress } from "@/components/ui/progress";
+import { Skeleton } from "@/components/ui/skeleton";
+
+<Progress value={60} className="w-full" />
+
+<div className="flex items-center space-x-4">
+  <Skeleton className="h-12 w-12 rounded-full" />
+  <div className="space-y-2">
+    <Skeleton className="h-4 w-[200px]" />
+    <Skeleton className="h-4 w-[150px]" />
+  </div>
+</div>
+`,
+  "KPI / Stat Tiles": `// Consumes: var(--theme-card-bg), var(--theme-border), var(--theme-text), var(--theme-radius)
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CreditCard } from "lucide-react";
+
+<Card>
+  <CardHeader className="flex flex-row items-center justify-between pb-2">
+    <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+    <CreditCard className="h-4 w-4 text-slate-500" />
+  </CardHeader>
+  <CardContent>
+    <div className="text-2xl font-bold">$45,231.89</div>
+    <p className="text-xs text-slate-500">+20.1% from last month</p>
+  </CardContent>
+</Card>
+`,
+  "Bar & Line Charts": `// Consumes: recharts primitives, var(--theme-text), var(--theme-primary)
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, LineChart, Line, Tooltip } from "recharts";
+
+<ResponsiveContainer width="100%" height="100%">
+  <BarChart data={data}>
+    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+    <XAxis dataKey="name" axisLine={false} tickLine={false} />
+    <YAxis axisLine={false} tickLine={false} />
+    <Tooltip />
+    <Bar dataKey="total" fill="#0f172a" radius={[4, 4, 0, 0]} />
+  </BarChart>
+</ResponsiveContainer>
+`,
+  "Area & Donut Charts": `// Consumes: recharts primitives, var(--theme-text), var(--theme-primary)
+import { AreaChart, Area, PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+
+<ResponsiveContainer width="100%" height="100%">
+  <AreaChart data={data}>
+    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+    <XAxis dataKey="name" axisLine={false} tickLine={false} />
+    <YAxis axisLine={false} tickLine={false} />
+    <Tooltip />
+    <Area type="monotone" dataKey="total" stroke="#10b981" fill="#10b981" fillOpacity={0.2} />
+  </AreaChart>
+</ResponsiveContainer>
+`,
+  "Authentication Forms": `// Consumes: var(--theme-card-bg), var(--theme-text), var(--theme-primary), var(--theme-border)
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+<Card>
+  <CardHeader>
+    <CardTitle>Login</CardTitle>
+    <CardDescription>Enter your email below to login.</CardDescription>
+  </CardHeader>
+  <CardContent className="space-y-4">
+    <div className="space-y-2">
+      <Label htmlFor="email">Email</Label>
+      <Input id="email" type="email" placeholder="m@example.com" />
+    </div>
+    <div className="space-y-2">
+      <Label htmlFor="password">Password</Label>
+      <Input id="password" type="password" />
+    </div>
+  </CardContent>
+  <CardFooter>
+    <Button className="w-full">Sign in</Button>
+  </CardFooter>
+</Card>
+`,
+  "Chat & Comments": `// Consumes: var(--theme-bg), var(--theme-text), var(--theme-primary), var(--theme-border), var(--theme-radius)
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Send } from "lucide-react";
+
+<div className="space-y-4 max-w-lg mx-auto bg-white p-4 rounded-lg shadow-sm border">
+  <div className="flex gap-4">
+    <Avatar><AvatarFallback>JD</AvatarFallback></Avatar>
+    <div className="flex-1 space-y-1">
+      <div className="bg-slate-100 p-3 rounded-2xl rounded-tl-sm text-sm text-slate-800">
+        Message content here
+      </div>
+    </div>
+  </div>
+  
+  <div className="mt-4 pt-4 border-t flex gap-2">
+    <Input placeholder="Type a message..." className="rounded-full" />
+    <Button size="icon" className="rounded-full"><Send className="w-4 h-4" /></Button>
+  </div>
+</div>
+`,
   "Dashboard Layout": `// Consumes: var(--theme-bg), var(--theme-card-bg), var(--theme-border), var(--theme-radius), var(--theme-primary)
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -205,6 +475,58 @@ import { Home, Activity, Settings } from "lucide-react";
     <header className="h-12 border-b px-4 flex items-center justify-between">...</header>
     <main className="p-4 overflow-auto">...</main>
   </div>
+</div>
+`,
+  "Settings Layout": `// Consumes: var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-primary), var(--theme-radius)
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+
+<div className="border rounded-xl bg-white p-6 flex gap-8">
+  <div className="w-48 shrink-0">
+    <h3 className="font-semibold mb-4">Settings</h3>
+    <div className="space-y-1">
+      <div className="px-3 py-1.5 bg-slate-100 rounded-md">Profile</div>
+      <div className="px-3 py-1.5 text-slate-600 hover:bg-slate-50 rounded-md">Account</div>
+    </div>
+  </div>
+  <div className="flex-1 space-y-6">
+    <div>
+      <h4 className="text-lg font-medium">Profile</h4>
+    </div>
+    <Separator />
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label>Username</Label>
+        <Input defaultValue="johndoe" />
+      </div>
+      <Button>Update profile</Button>
+    </div>
+  </div>
+</div>
+`,
+  "Pricing Table Layout": `// Consumes: var(--theme-bg), var(--theme-card-bg), var(--theme-text), var(--theme-border), var(--theme-primary)
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
+
+<div className="grid grid-cols-2 gap-6 w-full max-w-3xl">
+  <Card>
+    <CardHeader>
+      <CardTitle>Basic</CardTitle>
+      <CardDescription>For individuals getting started</CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-4">
+      <div className="text-4xl font-bold">$9<span className="text-lg text-slate-500">/mo</span></div>
+      <ul className="space-y-2 text-sm text-slate-600">
+        <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Up to 5 projects</li>
+      </ul>
+    </CardContent>
+    <CardFooter>
+      <Button variant="outline" className="w-full">Get Started</Button>
+    </CardFooter>
+  </Card>
 </div>
 `
 };
