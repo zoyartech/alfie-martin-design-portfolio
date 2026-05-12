@@ -6,7 +6,8 @@ import {
   CreditCard, ChevronDown, Plus, Trash2, Heart, Share2, MessageCircle,
   MoreVertical, Home, Star, Download, LogOut, CheckCircle2, AlertCircle, Info,
   Command, Palette, Layout, Type, Upload, Paperclip, Send,
-  Bold, Italic, Underline, List, ListOrdered, ChevronLeft, Copy, Code
+  Bold, Italic, Underline, List, ListOrdered, ChevronLeft, Copy, Code,
+  Sparkles, ArrowRight, Bot, AlertTriangle, Clock
 } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ReactQuill from "react-quill";
@@ -756,6 +757,7 @@ export default function ComponentShowcase({ isEmbedded = false }) {
     { id: "feedback", label: "Feedback & Overlays" },
     { id: "charts", label: "Charts & Metrics" },
     { id: "patterns", label: "Complex Patterns" },
+    { id: "ai-patterns", label: "AI Patterns" },
     { id: "templates", label: "Templates" }
   ];
 
@@ -928,45 +930,99 @@ export default function ComponentShowcase({ isEmbedded = false }) {
               </Block>
             </Section>
 
-            <div className="mb-16 border-b border-slate-200 pb-16">
-              <h2 className="text-3xl font-semibold text-slate-900 tracking-tight mb-4">AI Patterns</h2>
-              <div className="text-lg text-slate-600 max-w-3xl space-y-6">
-                <p>
-                  Half my work depends on AI patterns, and most design systems do not have a dedicated section for them yet. 
-                </p>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">Confidence indicator</h3>
-                  <p>When the AI surfaces a recommendation, I show how confident it is. Three levels: high, medium, low. Each maps to a visual treatment and a default user affordance.</p>
-                  <ul className="list-disc pl-6 space-y-1 text-base">
-                    <li><strong>High confidence:</strong> subtle treatment, recommendation presented as the default path</li>
-                    <li><strong>Medium confidence:</strong> explicit label, recommendation presented alongside alternatives</li>
-                    <li><strong>Low confidence:</strong> prominent label, recommendation presented as one of several options with clear opt-out</li>
-                  </ul>
-                  <p className="text-base italic text-slate-500 mt-2">I never show a numeric confidence score in the UI without context. The qualitative band plus a one-line explanation does more work.</p>
+            <Section id="ai-patterns" title="AI Patterns" description="Half my work depends on AI patterns, and most design systems do not have a dedicated section for them yet.">
+              <Block title="Confidence Indicator" fullWidth>
+                <div className="flex flex-col gap-4 w-full max-w-md">
+                   {/* High confidence */}
+                   <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                     <CheckCircle2 className="w-4 h-4 text-green-600" />
+                     <span>High confidence recommendation</span>
+                   </div>
+                   {/* Medium confidence */}
+                   <div className="flex items-center gap-2 p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
+                     <Info className="w-4 h-4 text-blue-600" />
+                     <span>Medium confidence. Showing alternatives.</span>
+                   </div>
+                   {/* Low confidence */}
+                   <div className="flex items-center gap-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-800 text-sm">
+                     <AlertTriangle className="w-4 h-4 text-amber-600" />
+                     <span>Low confidence. Please verify this information.</span>
+                   </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">Source citation</h3>
-                  <p>When the AI references external information, I cite it inline. The citation is interactive: hover or tap reveals the source title and a link to the original. Sources are never hidden behind a separate "show sources" button. Trust drops when users have to dig.</p>
+              </Block>
+              
+              <Block title="Source Citation" fullWidth>
+                <div className="text-sm text-slate-700 max-w-2xl leading-relaxed">
+                  The model generates text and cites its sources inline. For example, Base44 is an AI platform
+                  <HoverCard>
+                    <HoverCardTrigger asChild>
+                      <sup className="text-blue-600 cursor-pointer hover:underline mx-0.5">[1]</sup>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="w-80">
+                      <div className="space-y-2 text-sm">
+                        <h4 className="font-semibold">Base44 Platform Docs</h4>
+                        <p className="text-slate-500">Base44 is an integrated AI development platform...</p>
+                        <a href="#" className="text-blue-600 hover:underline inline-flex items-center">Read more <ArrowRight className="w-3 h-3 ml-1"/></a>
+                      </div>
+                    </HoverCardContent>
+                  </HoverCard>
+                  that makes building apps faster.
                 </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">Streaming output</h3>
-                  <p>Long AI responses stream token by token. I show a typing indicator at the leading edge. I lock the scroll only if the user has not scrolled up. If they have, I show a "jump to latest" affordance instead of pulling them down.</p>
+              </Block>
+
+              <Block title="Streaming Output" fullWidth>
+                 <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 max-w-lg space-y-4">
+                   <div className="flex gap-3">
+                     <Avatar className="w-8 h-8"><AvatarFallback className="bg-blue-100 text-blue-700"><Sparkles className="w-4 h-4"/></AvatarFallback></Avatar>
+                     <div className="flex-1 space-y-2">
+                       <div className="text-sm text-slate-800">
+                         Generating response... <span className="inline-block w-1.5 h-4 ml-1 bg-blue-600 animate-pulse align-middle"></span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+              </Block>
+
+              <Block title="Human-in-the-loop Handoff" fullWidth>
+                <div className="border border-slate-200 rounded-xl overflow-hidden max-w-md shadow-sm">
+                   <div className="bg-slate-50 p-4 border-b border-slate-200">
+                     <div className="flex items-center gap-3 mb-2">
+                       <Bot className="w-5 h-5 text-slate-500" />
+                       <span className="text-sm font-medium text-slate-700">AI Assistant</span>
+                     </div>
+                     <p className="text-sm text-slate-600">I don't have access to your billing details to process a refund. Let me transfer you to a human agent.</p>
+                   </div>
+                   <div className="bg-white p-4">
+                     <div className="flex items-center gap-3 mb-4 text-sm text-amber-600 bg-amber-50 p-3 rounded-lg border border-amber-100">
+                       <Clock className="w-4 h-4" />
+                       <span>Transferring to support team... (est. 2 min)</span>
+                     </div>
+                     <Button className="w-full" variant="outline">Cancel Transfer</Button>
+                   </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">Human-in-the-loop handoff</h3>
-                  <p>When the AI hands a task to a human, the transition needs three things: a clear reason for the handoff, the user's full context preserved, and an estimated time to human response.</p>
+              </Block>
+              
+              <Block title="Prompt Input" fullWidth>
+                <div className="relative border border-slate-200 rounded-xl shadow-sm bg-white focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition-all max-w-2xl">
+                  <Textarea 
+                    placeholder="Ask AI to generate a report, analyze data, or write code..." 
+                    className="min-h-[100px] border-0 focus-visible:ring-0 resize-none rounded-xl p-4 bg-transparent shadow-none"
+                  />
+                  <div className="flex items-center justify-between p-3 border-t border-slate-100 bg-slate-50 rounded-b-xl">
+                    <div className="flex gap-2">
+                      <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500"><Paperclip className="w-4 h-4"/></Button>
+                      <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500"><Layout className="w-4 h-4"/></Button>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-slate-400">
+                      <span><kbd className="font-sans px-1.5 py-0.5 rounded border border-slate-200 bg-white shadow-sm">Enter</kbd> to newline</span>
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white gap-2 h-8">
+                        <Sparkles className="w-3 h-3" /> Generate
+                      </Button>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">Prompt input</h3>
-                  <p>A composer optimized for AI input. Larger than a standard text input. Auto-resizes up to a maximum height, then scrolls. Submit on enter, newline on shift-enter. Always includes a visible "stop generation" affordance once the AI starts responding.</p>
-                </div>
-              </div>
-            </div>
+              </Block>
+            </Section>
 
             <Section id="inputs" title="Inputs & Forms" description="Data entry, selection controls, and form patterns.">
               <Block title="Text Inputs" fullWidth>
