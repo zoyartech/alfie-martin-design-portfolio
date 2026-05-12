@@ -531,6 +531,63 @@ import { Check } from "lucide-react";
 `
 };
 
+const interactivePlaygrounds = {
+  "Standard Buttons": {
+    defaultProps: { variant: "default", size: "default", disabled: false, text: "Button Text" },
+    controls: [
+      { name: "variant", type: "select", options: ["default", "secondary", "outline", "ghost", "link", "destructive"] },
+      { name: "size", type: "select", options: ["default", "sm", "lg", "icon"] },
+      { name: "disabled", type: "boolean" },
+      { name: "text", type: "string" }
+    ],
+    renderCode: (props) => `import { Button } from "@/components/ui/button";\n\n<Button \n  variant="${props.variant}" \n  size="${props.size}"${props.disabled ? '\n  disabled' : ''}\n>\n  ${props.size === 'icon' ? '<Settings className="w-4 h-4"/>' : props.text}\n</Button>`,
+    renderComponent: (props) => <Button variant={props.variant} size={props.size} disabled={props.disabled}>{props.size === 'icon' ? <Settings className="w-4 h-4"/> : props.text}</Button>
+  },
+  "Indicators, Avatars & Badges": {
+    defaultProps: { variant: "default", text: "Badge" },
+    controls: [
+      { name: "variant", type: "select", options: ["default", "secondary", "destructive", "outline"] },
+      { name: "text", type: "string" }
+    ],
+    renderCode: (props) => `import { Badge } from "@/components/ui/badge";\n\n<Badge variant="${props.variant}">${props.text}</Badge>`,
+    renderComponent: (props) => <Badge variant={props.variant}>{props.text}</Badge>
+  },
+  "Alerts & Status": {
+    defaultProps: { variant: "default", title: "Heads up!", description: "This is an alert." },
+    controls: [
+      { name: "variant", type: "select", options: ["default", "destructive"] },
+      { name: "title", type: "string" },
+      { name: "description", type: "string" }
+    ],
+    renderCode: (props) => `import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";\nimport { Info } from "lucide-react";\n\n<Alert${props.variant !== 'default' ? ` variant="${props.variant}"` : ''}>\n  <Info className="h-4 w-4" />\n  <AlertTitle>${props.title}</AlertTitle>\n  <AlertDescription>${props.description}</AlertDescription>\n</Alert>`,
+    renderComponent: (props) => (
+      <Alert variant={props.variant !== 'default' ? props.variant : undefined} className="w-full max-w-md">
+        <Info className="h-4 w-4" />
+        <AlertTitle>{props.title}</AlertTitle>
+        <AlertDescription>{props.description}</AlertDescription>
+      </Alert>
+    )
+  },
+  "Text Inputs": {
+    defaultProps: { type: "text", placeholder: "Enter value...", disabled: false },
+    controls: [
+      { name: "type", type: "select", options: ["text", "password", "email", "number"] },
+      { name: "placeholder", type: "string" },
+      { name: "disabled", type: "boolean" }
+    ],
+    renderCode: (props) => `import { Input } from "@/components/ui/input";\n\n<Input \n  type="${props.type}" \n  placeholder="${props.placeholder}"${props.disabled ? '\n  disabled' : ''}\n/>`,
+    renderComponent: (props) => <Input type={props.type} placeholder={props.placeholder} disabled={props.disabled} className="max-w-sm w-full" />
+  },
+  "Loading & Progress": {
+    defaultProps: { value: 60 },
+    controls: [
+      { name: "value", type: "number", min: 0, max: 100 }
+    ],
+    renderCode: (props) => `import { Progress } from "@/components/ui/progress";\n\n<Progress value={${props.value}} />`,
+    renderComponent: (props) => <Progress value={props.value} className="w-[300px]" />
+  }
+};
+
 const Block = ({ title, children, fullWidth }) => {
   const defaultSnippet = `// Implementation for ${title}
 // Consumes: var(--theme-primary), var(--theme-secondary), var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-radius)
@@ -541,6 +598,12 @@ const Block = ({ title, children, fullWidth }) => {
 // See full source code in the repository.
 `;
   const snippet = codeSnippets[title] || defaultSnippet;
+  const playground = interactivePlaygrounds[title];
+  const [propsState, setPropsState] = useState(playground ? playground.defaultProps : {});
+
+  const handlePropChange = (key, value) => {
+    setPropsState(prev => ({ ...prev, [key]: value }));
+  };
 
   return (
     <div className="space-y-4">
@@ -552,22 +615,104 @@ const Block = ({ title, children, fullWidth }) => {
               <Code className="w-3 h-3 mr-2" /> Code View
             </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-3xl max-h-[80vh] flex flex-col">
+          <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
             <DialogHeader>
               <DialogTitle>{title} - Implementation</DialogTitle>
-              <DialogDescription>Component source, API, and token consumption.</DialogDescription>
+              <DialogDescription>Component source, API, and {playground ? 'live playground' : 'token consumption'}.</DialogDescription>
             </DialogHeader>
-            <div className="flex-1 overflow-auto bg-slate-950 p-4 rounded-md mt-4 relative group">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="absolute top-2 right-2 h-6 w-6 text-slate-400 hover:text-white"
-                onClick={() => { navigator.clipboard.writeText(snippet); toast.success("Copied to clipboard!"); }}
-              >
-                <Copy className="w-3 h-3" />
-              </Button>
-              <pre className="text-sm text-slate-50 font-mono whitespace-pre-wrap">{snippet}</pre>
-            </div>
+            
+            {playground ? (
+              <Tabs defaultValue="playground" className="flex-1 flex flex-col mt-4 min-h-0">
+                <TabsList className="grid w-[400px] grid-cols-2 mb-4">
+                  <TabsTrigger value="playground">Interactive Playground</TabsTrigger>
+                  <TabsTrigger value="source">Full Source & API</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="playground" className="flex-1 flex gap-6 min-h-0 outline-none">
+                  {/* Left: Controls */}
+                  <div className="w-64 shrink-0 space-y-4 overflow-auto pr-2 pb-4">
+                    <h4 className="text-sm font-semibold mb-4 text-slate-900">Props</h4>
+                    {playground.controls.map((control) => (
+                      <div key={control.name} className="space-y-2">
+                        <Label className="text-xs uppercase text-slate-500">{control.name}</Label>
+                        {control.type === 'select' && (
+                          <Select value={propsState[control.name]} onValueChange={(val) => handlePropChange(control.name, val)}>
+                            <SelectTrigger className="h-8 text-sm">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {control.options.map(opt => (
+                                <SelectItem key={opt} value={opt} className="text-sm">{opt}</SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                        )}
+                        {control.type === 'string' && (
+                          <Input className="h-8 text-sm" value={propsState[control.name]} onChange={(e) => handlePropChange(control.name, e.target.value)} />
+                        )}
+                        {control.type === 'boolean' && (
+                          <div className="flex items-center justify-between border border-slate-200 p-2 rounded-md bg-white">
+                            <span className="text-sm text-slate-700">{propsState[control.name] ? 'True' : 'False'}</span>
+                            <Switch checked={propsState[control.name]} onCheckedChange={(val) => handlePropChange(control.name, val)} />
+                          </div>
+                        )}
+                        {control.type === 'number' && (
+                          <div className="space-y-3 pt-2">
+                            <Slider value={[propsState[control.name]]} max={control.max} min={control.min} step={1} onValueChange={(val) => handlePropChange(control.name, val[0])} />
+                            <div className="text-xs text-slate-500 text-right">{propsState[control.name]}</div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Right: Preview & Code */}
+                  <div className="flex-1 flex flex-col min-w-0 bg-slate-50 rounded-lg border overflow-hidden">
+                    <div className="h-48 flex items-center justify-center p-8 bg-white border-b relative">
+                      <div className="absolute top-2 left-2 text-xs font-medium text-slate-400 bg-white px-2 rounded">Live Preview</div>
+                      {playground.renderComponent(propsState)}
+                    </div>
+                    <div className="flex-1 overflow-auto bg-slate-950 p-4 relative group">
+                      <div className="absolute top-2 left-4 text-xs font-medium text-slate-400">Generated Code</div>
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="absolute top-2 right-2 h-6 w-6 text-slate-400 hover:text-white"
+                        onClick={() => { navigator.clipboard.writeText(playground.renderCode(propsState)); toast.success("Copied to clipboard!"); }}
+                      >
+                        <Copy className="w-3 h-3" />
+                      </Button>
+                      <pre className="text-sm text-slate-50 font-mono whitespace-pre-wrap mt-6">{playground.renderCode(propsState)}</pre>
+                    </div>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="source" className="flex-1 overflow-auto bg-slate-950 p-4 rounded-md relative group outline-none mt-0">
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="absolute top-2 right-2 h-6 w-6 text-slate-400 hover:text-white"
+                    onClick={() => { navigator.clipboard.writeText(snippet); toast.success("Copied to clipboard!"); }}
+                  >
+                    <Copy className="w-3 h-3" />
+                  </Button>
+                  <pre className="text-sm text-slate-50 font-mono whitespace-pre-wrap">{snippet}</pre>
+                </TabsContent>
+              </Tabs>
+            ) : (
+              <div className="flex-1 overflow-auto bg-slate-950 p-4 rounded-md mt-4 relative group">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="absolute top-2 right-2 h-6 w-6 text-slate-400 hover:text-white"
+                  onClick={() => { navigator.clipboard.writeText(snippet); toast.success("Copied to clipboard!"); }}
+                >
+                  <Copy className="w-3 h-3" />
+                </Button>
+                <pre className="text-sm text-slate-50 font-mono whitespace-pre-wrap">{snippet}</pre>
+              </div>
+            )}
+            
           </DialogContent>
         </Dialog>
       </div>
