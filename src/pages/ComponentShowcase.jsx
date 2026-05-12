@@ -6,7 +6,7 @@ import {
   CreditCard, ChevronDown, Plus, Trash2, Heart, Share2, MessageCircle,
   MoreVertical, Home, Star, Download, LogOut, CheckCircle2, AlertCircle, Info,
   Command, Palette, Layout, Type, Upload, Paperclip, Send,
-  Bold, Italic, Underline, List, ListOrdered, ChevronLeft
+  Bold, Italic, Underline, List, ListOrdered, ChevronLeft, Copy, Code
 } from "lucide-react";
 import { createPageUrl } from "@/utils";
 import ReactQuill from "react-quill";
@@ -59,14 +59,202 @@ const Section = ({ title, description, children, id }) => (
   </section>
 );
 
-const Block = ({ title, children, fullWidth }) => (
-  <div className="space-y-4">
-    <h3 className="text-lg font-medium text-slate-900">{title}</h3>
-    <div className={`p-6 bg-white border border-slate-200 rounded-xl flex ${fullWidth ? 'flex-col' : 'flex-wrap items-center'} gap-6 overflow-hidden`}>
-      {children}
-    </div>
+const codeSnippets = {
+  "Standard Buttons": `// Consumes: var(--theme-primary), var(--theme-radius), var(--theme-secondary)
+import { Button } from "@/components/ui/button";
+
+<Button>Default</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="link">Link</Button>
+<Button variant="destructive">Destructive</Button>
+<Button disabled>Disabled</Button>
+
+/* Prop Definitions:
+ * variant: 'default' | 'secondary' | 'outline' | 'ghost' | 'link' | 'destructive'
+ * size: 'default' | 'sm' | 'lg' | 'icon'
+ * asChild: boolean (renders as child element, e.g., for routing Links)
+ */
+`,
+  "Text Inputs": `// Consumes: var(--theme-border), var(--theme-bg), var(--theme-text), var(--theme-radius), var(--theme-primary) [for focus ring]
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+<div className="space-y-2">
+  <Label>Standard Input</Label>
+  <Input placeholder="Enter your name" />
+</div>
+<div className="space-y-2">
+  <Label>Text Area</Label>
+  <Textarea placeholder="Type your message here." />
+</div>
+
+/* Prop Definitions (Input/Textarea):
+ * type: string (Input only)
+ * value/defaultValue: string
+ * onChange: (e: React.ChangeEvent) => void
+ * disabled: boolean
+ */
+`,
+  "Selection Controls": `// Consumes: var(--theme-primary), var(--theme-border), var(--theme-radius)
+import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
+
+<div className="flex items-center space-x-2">
+  <Checkbox id="terms" />
+  <Label htmlFor="terms">Accept terms and conditions</Label>
+</div>
+
+<RadioGroup defaultValue="comfortable">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="default" id="r1" />
+    <Label htmlFor="r1">Default</Label>
   </div>
-);
+</RadioGroup>
+
+<div className="flex items-center space-x-2">
+  <Switch id="airplane-mode" />
+  <Label htmlFor="airplane-mode">Airplane Mode</Label>
+</div>
+
+/* Prop Definitions:
+ * Checkbox/Switch: checked, onCheckedChange, disabled
+ * RadioGroup: value, onValueChange, defaultValue
+ */
+`,
+  "Cards, Tiles & Layouts": `// Consumes: var(--theme-card-bg), var(--theme-border), var(--theme-radius), box-shadow from Theme Editor
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+<Card>
+  <CardHeader>
+    <CardTitle>Create project</CardTitle>
+    <CardDescription>Deploy your new project in one-click.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div>Content Area</div>
+  </CardContent>
+  <CardFooter className="flex justify-between">
+    <Button variant="outline">Cancel</Button>
+    <Button>Deploy</Button>
+  </CardFooter>
+</Card>
+`,
+  "Indicators, Avatars & Badges": `// Consumes: var(--theme-primary), var(--theme-secondary), var(--theme-radius)
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+
+<Badge>New</Badge>
+<Badge variant="secondary">In Progress</Badge>
+<Badge variant="destructive">Error</Badge>
+<Badge variant="outline">Draft</Badge>
+
+/* Prop Definitions:
+ * AvatarImage: src, alt
+ * Badge variant: 'default' | 'secondary' | 'destructive' | 'outline'
+ */
+`,
+  "Overlays & Dialogs": `// Consumes: var(--theme-bg), var(--theme-text), var(--theme-radius), var(--theme-border)
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+
+<Dialog>
+  <DialogTrigger asChild><Button variant="outline">Open Modal</Button></DialogTrigger>
+  <DialogContent className="sm:max-w-[425px]">
+    <DialogHeader>
+      <DialogTitle>Edit profile</DialogTitle>
+      <DialogDescription>Make changes to your profile here.</DialogDescription>
+    </DialogHeader>
+    <div className="py-4">Form content goes here...</div>
+    <DialogFooter><Button type="submit">Save changes</Button></DialogFooter>
+  </DialogContent>
+</Dialog>
+
+/* Prop Definitions:
+ * Dialog: open, onOpenChange
+ * DialogTrigger: asChild (to avoid wrapping button in another button)
+ */
+`,
+  "Dashboard Layout": `// Consumes: var(--theme-bg), var(--theme-card-bg), var(--theme-border), var(--theme-radius), var(--theme-primary)
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Home, Activity, Settings } from "lucide-react";
+
+// Structure:
+// 1. Sidebar Container (w-48, border-r, flex-col)
+//    - Logo/Brand Area
+//    - Navigation Links (hover:bg-slate-50, rounded-md)
+//    - User Profile Area (mt-auto, pt-4)
+// 2. Main Content Container (flex-1, flex-col)
+//    - Header (h-12, border-b, flex justify-between)
+//    - Content Area (p-4, overflow-auto, grid for KPI cards)
+
+<div className="flex h-[400px]">
+  {/* Sidebar */}
+  <div className="w-48 border-r p-4 flex flex-col">...</div>
+  {/* Main */}
+  <div className="flex-1 flex flex-col">
+    <header className="h-12 border-b px-4 flex items-center justify-between">...</header>
+    <main className="p-4 overflow-auto">...</main>
+  </div>
+</div>
+`
+};
+
+const Block = ({ title, children, fullWidth }) => {
+  const defaultSnippet = `// Implementation for ${title}
+// Consumes: var(--theme-primary), var(--theme-secondary), var(--theme-bg), var(--theme-text), var(--theme-border), var(--theme-radius)
+
+// To use this component, import it from the library:
+// import { ComponentName } from "@/components/ui/...";
+
+// See full source code in the repository.
+`;
+  const snippet = codeSnippets[title] || defaultSnippet;
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-medium text-slate-900">{title}</h3>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="h-8 text-xs text-slate-500">
+              <Code className="w-3 h-3 mr-2" /> Code View
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="max-w-3xl max-h-[80vh] flex flex-col">
+            <DialogHeader>
+              <DialogTitle>{title} - Implementation</DialogTitle>
+              <DialogDescription>Component source, API, and token consumption.</DialogDescription>
+            </DialogHeader>
+            <div className="flex-1 overflow-auto bg-slate-950 p-4 rounded-md mt-4 relative group">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="absolute top-2 right-2 h-6 w-6 text-slate-400 hover:text-white"
+                onClick={() => { navigator.clipboard.writeText(snippet); toast.success("Copied to clipboard!"); }}
+              >
+                <Copy className="w-3 h-3" />
+              </Button>
+              <pre className="text-sm text-slate-50 font-mono whitespace-pre-wrap">{snippet}</pre>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </div>
+      <div className={`p-6 bg-white border border-slate-200 rounded-xl flex ${fullWidth ? 'flex-col' : 'flex-wrap items-center'} gap-6 overflow-hidden`}>
+        {children}
+      </div>
+    </div>
+  );
+};
 
 const chartData = [
   { name: "Jan", total: Math.floor(Math.random() * 5000) + 1000 },
