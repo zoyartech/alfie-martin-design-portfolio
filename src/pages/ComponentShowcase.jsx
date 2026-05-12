@@ -100,7 +100,8 @@ export default function ComponentShowcase({ isEmbedded = false }) {
     { id: "data", label: "Data Display" },
     { id: "feedback", label: "Feedback & Overlays" },
     { id: "charts", label: "Charts & Metrics" },
-    { id: "patterns", label: "Complex Patterns" }
+    { id: "patterns", label: "Complex Patterns" },
+    { id: "templates", label: "Templates" }
   ];
 
   return (
@@ -225,6 +226,16 @@ export default function ComponentShowcase({ isEmbedded = false }) {
                     <li><strong>Authentication forms:</strong> Login and signup composed from input, button, and link primitives. I keep them in a single column, with the submit button as the last tab stop and "Forgot password?" as a link above it.</li>
                     <li><strong>Payment method:</strong> Card / PayPal / Apple selector built from segmented buttons, with conditional form rendering below based on the selection.</li>
                     <li><strong>Chat and comments:</strong> Threaded message view with avatar, message bubble, timestamp, read receipt, and composer. The composer follows the AI prompt input rules: submit on enter, newline on shift-enter.</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">8. Templates</h3>
+                  <p>Full-page and structural layouts built from system primitives.</p>
+                  <ul className="space-y-2 text-base">
+                    <li><strong>Dashboard:</strong> Standard sidebar + header layout with content area.</li>
+                    <li><strong>Landing Page:</strong> Hero section, feature grids, and call-to-action blocks.</li>
+                    <li><strong>Settings:</strong> Two-column layout with vertical navigation and form sections.</li>
                   </ul>
                 </div>
               </div>
@@ -919,6 +930,144 @@ export default function ComponentShowcase({ isEmbedded = false }) {
                       <Input placeholder="Type a message..." className="rounded-full" />
                       <Button size="icon" className="rounded-full shrink-0"><Send className="w-4 h-4" /></Button>
                     </div>
+                  </div>
+                </div>
+              </Block>
+            </Section>
+
+            <Section id="templates" title="Templates" description="Full-page and structural layouts built from system primitives.">
+              <Block title="Dashboard Layout" fullWidth>
+                <div className="border border-slate-200 rounded-xl overflow-hidden bg-slate-50 flex h-[400px]">
+                  {/* Sidebar */}
+                  <div className="w-48 bg-white border-r border-slate-200 p-4 flex flex-col">
+                    <div className="flex items-center gap-2 font-semibold mb-6 px-2">
+                      <div className="w-6 h-6 bg-blue-600 rounded-md"></div>
+                      AppName
+                    </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2 px-2 py-1.5 bg-slate-100 text-slate-900 rounded-md text-sm font-medium">
+                        <Home className="w-4 h-4" /> Overview
+                      </div>
+                      <div className="flex items-center gap-2 px-2 py-1.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md text-sm font-medium">
+                        <Activity className="w-4 h-4" /> Analytics
+                      </div>
+                      <div className="flex items-center gap-2 px-2 py-1.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md text-sm font-medium">
+                        <Settings className="w-4 h-4" /> Settings
+                      </div>
+                    </div>
+                    <div className="mt-auto pt-4 border-t border-slate-200 flex items-center gap-2 px-2">
+                      <Avatar className="w-6 h-6"><AvatarFallback className="text-[10px]">JD</AvatarFallback></Avatar>
+                      <span className="text-xs font-medium">John Doe</span>
+                    </div>
+                  </div>
+                  {/* Main Content */}
+                  <div className="flex-1 flex flex-col min-w-0">
+                    <div className="h-12 border-b border-slate-200 bg-white flex items-center px-4 justify-between">
+                      <div className="text-sm font-medium">Overview</div>
+                      <Button size="sm" variant="outline">Export</Button>
+                    </div>
+                    <div className="p-4 flex-1 overflow-auto space-y-4">
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm h-24 flex flex-col justify-center">
+                          <div className="text-xs text-slate-500 font-medium">Total Users</div>
+                          <div className="text-xl font-bold">10,482</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm h-24 flex flex-col justify-center">
+                          <div className="text-xs text-slate-500 font-medium">Active Now</div>
+                          <div className="text-xl font-bold">342</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm h-24 flex flex-col justify-center">
+                          <div className="text-xs text-slate-500 font-medium">Revenue</div>
+                          <div className="text-xl font-bold">$12,400</div>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm h-48 flex items-center justify-center text-slate-400 text-sm">
+                        Chart Area
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Block>
+
+              <Block title="Settings Layout" fullWidth>
+                <div className="border border-slate-200 rounded-xl overflow-hidden bg-white p-6 h-[400px] flex gap-8">
+                  <div className="w-48 shrink-0">
+                    <h3 className="font-semibold mb-4">Settings</h3>
+                    <div className="space-y-1">
+                      <div className="px-3 py-1.5 bg-slate-100 text-slate-900 rounded-md text-sm font-medium">Profile</div>
+                      <div className="px-3 py-1.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md text-sm font-medium">Account</div>
+                      <div className="px-3 py-1.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md text-sm font-medium">Appearance</div>
+                      <div className="px-3 py-1.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md text-sm font-medium">Notifications</div>
+                    </div>
+                  </div>
+                  <div className="flex-1 max-w-xl space-y-6">
+                    <div>
+                      <h4 className="text-lg font-medium">Profile</h4>
+                      <p className="text-sm text-slate-500">This is how others will see you on the site.</p>
+                    </div>
+                    <Separator />
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <Label>Username</Label>
+                        <Input defaultValue="johndoe" />
+                        <p className="text-xs text-slate-500">This is your public display name.</p>
+                      </div>
+                      <div className="space-y-2">
+                        <Label>Email</Label>
+                        <Input defaultValue="john@example.com" />
+                      </div>
+                      <Button>Update profile</Button>
+                    </div>
+                  </div>
+                </div>
+              </Block>
+
+              <Block title="Pricing Table Layout" fullWidth>
+                <div className="p-8 border border-slate-200 rounded-xl bg-slate-50 flex flex-col items-center">
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold">Simple, transparent pricing</h3>
+                    <p className="text-slate-500 mt-2">Choose the plan that's right for you</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-6 w-full max-w-3xl">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Basic</CardTitle>
+                        <CardDescription>For individuals getting started</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="text-4xl font-bold">$9<span className="text-lg font-normal text-slate-500">/mo</span></div>
+                        <ul className="space-y-2 text-sm text-slate-600">
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Up to 5 projects</li>
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Basic analytics</li>
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 24-hour support response</li>
+                        </ul>
+                      </CardContent>
+                      <CardFooter>
+                        <Button variant="outline" className="w-full">Get Started</Button>
+                      </CardFooter>
+                    </Card>
+                    <Card className="border-blue-600 shadow-md">
+                      <CardHeader>
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <CardTitle>Pro</CardTitle>
+                            <CardDescription>For growing teams</CardDescription>
+                          </div>
+                          <Badge className="bg-blue-600">Popular</Badge>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="text-4xl font-bold">$29<span className="text-lg font-normal text-slate-500">/mo</span></div>
+                        <ul className="space-y-2 text-sm text-slate-600">
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Unlimited projects</li>
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Advanced analytics</li>
+                          <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 1-hour support response</li>
+                        </ul>
+                      </CardContent>
+                      <CardFooter>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700">Get Started</Button>
+                      </CardFooter>
+                    </Card>
                   </div>
                 </div>
               </Block>

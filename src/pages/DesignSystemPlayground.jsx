@@ -25,7 +25,7 @@ export default function DesignSystemPlayground() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("desktop");
   const [previewSections, setPreviewSections] = useState([
-  "typography", "interactive", "forms", "cards"]
+  "typography", "interactive", "forms", "cards", "templates"]
   );
 
   const handleDragEnd = (result) => {
@@ -466,6 +466,35 @@ export default function DesignSystemPlayground() {
                                         </div>
                                         <h3 className="font-medium" style={{ color: "var(--theme-text)" }}>Create New Asset</h3>
                                         <p className="text-xs mt-1" style={{ color: "var(--theme-text-muted)" }}>Start from a blank canvas</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          }
+
+                              {sectionId === "templates" &&
+                          <div className="space-y-4">
+                                  <h2 className="text-xl font-semibold border-b pb-2" style={{ borderColor: "var(--theme-border)" }}>Layout Templates</h2>
+                                  <div className="playground-preview-card flex flex-col overflow-hidden" style={{ height: "200px" }}>
+                                    <div className="h-10 flex items-center px-4 shrink-0" style={{ borderBottom: "1px solid var(--theme-border)", backgroundColor: "var(--theme-bg)" }}>
+                                      <div className="flex gap-2">
+                                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--theme-border)" }}></div>
+                                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--theme-border)" }}></div>
+                                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--theme-border)" }}></div>
+                                      </div>
+                                    </div>
+                                    <div className="flex flex-1 min-h-0">
+                                      <div className="w-32 shrink-0 p-3 flex flex-col gap-2" style={{ borderRight: "1px solid var(--theme-border)", backgroundColor: "var(--theme-secondary)" }}>
+                                        <div className="h-4 rounded" style={{ backgroundColor: "var(--theme-border)", width: "80%" }}></div>
+                                        <div className="h-4 rounded" style={{ backgroundColor: "var(--theme-border)", width: "60%" }}></div>
+                                        <div className="h-4 rounded" style={{ backgroundColor: "var(--theme-border)", width: "90%" }}></div>
+                                      </div>
+                                      <div className="flex-1 p-4 flex flex-col gap-4" style={{ backgroundColor: "var(--theme-bg)" }}>
+                                        <div className="h-6 rounded" style={{ backgroundColor: primaryColor, width: "40%" }}></div>
+                                        <div className="flex gap-3">
+                                          <div className="flex-1 h-20 rounded" style={{ border: "1px solid var(--theme-border)" }}></div>
+                                          <div className="flex-1 h-20 rounded" style={{ border: "1px solid var(--theme-border)" }}></div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
