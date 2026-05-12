@@ -1173,12 +1173,7 @@ export default function ComponentShowcase({ isEmbedded = false }) {
                       <input className="outline-none text-sm flex-1 min-w-[100px]" placeholder="Add tag..." />
                     </div>
                   </div>
-                  <div className="space-y-2 md:col-span-2">
-                    <Label>Rich Text Editor</Label>
-                    <div className="border border-slate-200 rounded-md overflow-hidden bg-white">
-                      <ReactQuill theme="snow" value="<p>Write your <strong>rich</strong> text <em>here</em>.</p>" />
-                    </div>
-                  </div>
+                  {/* Rich Text Editor removed */}
                   <div className="space-y-2 md:col-span-2">
                     <div className="space-y-1">
                       <Label className="text-red-500">Validation & Error States</Label>

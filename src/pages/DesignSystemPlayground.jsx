@@ -48,6 +48,39 @@ export default function DesignSystemPlayground() {
     setMotionSpeed(0.2);
   };
 
+  const getLuminance = (hex) => {
+    let rgb = hex.replace(/^#/, '');
+    if (rgb.length === 3) rgb = rgb[0] + rgb[0] + rgb[1] + rgb[1] + rgb[2] + rgb[2];
+    const r = parseInt(rgb.slice(0, 2), 16) / 255;
+    const g = parseInt(rgb.slice(2, 4), 16) / 255;
+    const b = parseInt(rgb.slice(4, 6), 16) / 255;
+    const a = [r, g, b].map((v) => {
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+  };
+
+  const getContrastRatio = (color1, color2) => {
+    const l1 = getLuminance(color1);
+    const l2 = getLuminance(color2);
+    const brightest = Math.max(l1, l2);
+    const darkest = Math.min(l1, l2);
+    return (brightest + 0.05) / (darkest + 0.05);
+  };
+
+  const getContrastSuggestion = (ratio) => {
+    if (ratio >= 7) return { text: "AAA Pass", icon: "check", color: "text-green-600", bg: "bg-green-100", tip: "Excellent contrast." };
+    if (ratio >= 4.5) return { text: "AA Pass", icon: "check", color: "text-green-600", bg: "bg-green-100", tip: "Good contrast for all text." };
+    if (ratio >= 3) return { text: "AA Large", icon: "alert", color: "text-amber-600", bg: "bg-amber-100", tip: "Passes for large text (18pt+) only. Consider darkening the primary color or lightening the background." };
+    return { text: "Fail", icon: "x", color: "text-red-600", bg: "bg-red-100", tip: "Insufficient contrast. Adjust the colors significantly to meet WCAG standards." };
+  };
+
+  const bgHex = isDarkMode ? "#020617" : "#ffffff";
+  const primaryContrast = getContrastRatio(primaryColor, bgHex);
+  const secondaryContrast = getContrastRatio(secondaryColor, bgHex);
+  const primaryStatus = getContrastSuggestion(primaryContrast);
+  const secondaryStatus = getContrastSuggestion(secondaryContrast);
+
   const exportTokens = (format) => {
     let content = "";
     let filename = "";
@@ -253,6 +286,44 @@ export default function DesignSystemPlayground() {
                         onChange={(e) => setSecondaryColor(e.target.value)}
                         className="font-mono text-xs uppercase" />
                       
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Accessibility Analyzer */}
+              <div className="space-y-3 pt-4 border-t border-slate-100">
+                <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider">WCAG Contrast</h3>
+                <div className="space-y-3">
+                  <div className="flex flex-col gap-1.5 p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs font-semibold text-slate-700">Primary on Background</span>
+                      <div className={`flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${primaryStatus.bg} ${primaryStatus.color}`}>
+                        {primaryStatus.text} ({primaryContrast.toFixed(2)}:1)
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-slate-500 leading-tight">{primaryStatus.tip}</p>
+                    <div 
+                      className="mt-1 w-full h-8 rounded border flex items-center justify-center text-xs font-medium" 
+                      style={{ backgroundColor: bgHex, color: primaryColor, borderColor: isDarkMode ? '#1e293b' : '#e2e8f0' }}
+                    >
+                      Sample Text
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col gap-1.5 p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs font-semibold text-slate-700">Secondary on Background</span>
+                      <div className={`flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${secondaryStatus.bg} ${secondaryStatus.color}`}>
+                        {secondaryStatus.text} ({secondaryContrast.toFixed(2)}:1)
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-slate-500 leading-tight">{secondaryStatus.tip}</p>
+                    <div 
+                      className="mt-1 w-full h-8 rounded border flex items-center justify-center text-xs font-medium" 
+                      style={{ backgroundColor: bgHex, color: secondaryColor, borderColor: isDarkMode ? '#1e293b' : '#e2e8f0' }}
+                    >
+                      Sample Text
                     </div>
                   </div>
                 </div>
