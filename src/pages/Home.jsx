@@ -144,7 +144,7 @@ export default function Home() {
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1
               className="text-white font-light tracking-tighter drop-shadow-lg"
-              style={{ fontSize: 'clamp(4rem, 15vw, 24rem)', lineHeight: 0.8 }}>
+              style={{ fontSize: 'clamp(3rem, 10vw, 15rem)', lineHeight: 0.8 }}>
               
                Alfie Martin
              </h1>
