@@ -29,7 +29,7 @@ const galleryImages = [
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e60aead83_flowerrrr.png", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7972ab4c8_IMG_61212.jpg", caption: "Illustration" },
 { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d1bec498d_IMG_6117.jpg", caption: "Illustration" },
-{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/82a00e2de_Screenshot2026-04-10at52913AM.png", caption: "Editorial" }];
+{ src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a2a9f9627_baddy.png", caption: "Typography" }];
 
 
 const GalleryItem = ({ item, index, openModal }) => {
