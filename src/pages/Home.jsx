@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
 import { ArrowDownRight, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import MobileNav from "@/components/MobileNav";
 
@@ -59,18 +59,36 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = React.useState(null);
 
   const heroRef = React.useRef(null);
-  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
+  const mouseX = useMotionValue(-1000);
+  const mouseY = useMotionValue(-1000);
+  const smoothX = useSpring(mouseX, { damping: 40, stiffness: 300, mass: 0.5 });
+  const smoothY = useSpring(mouseY, { damping: 40, stiffness: 300, mass: 0.5 });
+  const maskSize = useSpring(0, { damping: 40, stiffness: 300 });
   const [isMouseIn, setIsMouseIn] = React.useState(false);
+  const [isHovering, setIsHovering] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isMouseIn) {
+      maskSize.set(isHovering ? 100 : 180);
+    } else {
+      maskSize.set(0);
+    }
+  }, [isMouseIn, isHovering, maskSize]);
 
   const handleMouseMove = (e) => {
     if (heroRef.current) {
       const rect = heroRef.current.getBoundingClientRect();
-      setMousePos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
+      mouseX.set(e.clientX - rect.left);
+      mouseY.set(e.clientY - rect.top);
     }
   };
+
+  const clipPath = useMotionTemplate`polygon(
+    calc(${smoothX}px - ${maskSize}px) calc(${smoothY}px - ${maskSize}px),
+    calc(${smoothX}px + ${maskSize}px) calc(${smoothY}px - ${maskSize}px),
+    calc(${smoothX}px + ${maskSize}px) calc(${smoothY}px + ${maskSize}px),
+    calc(${smoothX}px - ${maskSize}px) calc(${smoothY}px + ${maskSize}px)
+  )`;
 
   const openModal = (i) => setSelectedImage(i);
   const closeModal = () => setSelectedImage(null);
@@ -97,7 +115,7 @@ export default function Home() {
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setIsMouseIn(false)}
         onMouseEnter={() => setIsMouseIn(true)}
-        className="min-h-screen w-full relative overflow-hidden bg-black flex flex-col justify-between">
+        className="min-h-screen w-full relative overflow-hidden bg-black flex flex-col justify-between cursor-crosshair">
         
         {/* Blurred background layer */}
         <div
@@ -106,36 +124,36 @@ export default function Home() {
         
 
         {/* Unblurred square layer (Masked) */}
-        <div
+        <motion.div
           className="absolute inset-0 bg-cover bg-center scale-110 opacity-100 transition-opacity duration-300"
           style={{
             backgroundImage: `url('https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ef48a5e97_uuidF718ABC3-FB11-4E3A-B13F-479A507CD62Bcode001library1type1mode1loctruecaptrue.jpeg')`,
-            clipPath: isMouseIn ? `polygon(
-              ${mousePos.x - 180}px ${mousePos.y - 180}px, 
-              ${mousePos.x + 180}px ${mousePos.y - 180}px, 
-              ${mousePos.x + 180}px ${mousePos.y + 180}px, 
-              ${mousePos.x - 180}px ${mousePos.y + 180}px
-            )` : 'polygon(0 0, 0 0, 0 0, 0 0)'
+            clipPath: clipPath
           }} />
         
 
         {/* Square outline tracking cursor */}
-        <div
-          className="hidden md:block absolute pointer-events-none border border-white/50 transition-opacity duration-300 z-10"
+        <motion.div
+          className="hidden md:flex absolute pointer-events-none border border-white/50 transition-colors duration-300 z-10 items-center justify-center"
           style={{
-            left: mousePos.x - 180,
-            top: mousePos.y - 180,
-            width: 360,
-            height: 360,
-            opacity: isMouseIn ? 1 : 0
+            x: smoothX,
+            y: smoothY,
+            translateX: "-50%",
+            translateY: "-50%",
+            width: useMotionTemplate`calc(${maskSize}px * 2)`,
+            height: useMotionTemplate`calc(${maskSize}px * 2)`,
+            borderRadius: isHovering ? "50%" : "0%",
+            opacity: isMouseIn ? 1 : 0,
+            backgroundColor: isHovering ? "rgba(255, 255, 255, 0.1)" : "transparent",
+            backdropFilter: isHovering ? "invert(0.2)" : "none"
           }}>
           
           {/* Center crosshair */}
-          <div className="absolute top-1/2 left-1/2 w-3 h-3 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-80">
+          <div className={`transition-all duration-300 ${isHovering ? "opacity-0 scale-50" : "opacity-80 scale-100"} w-3 h-3 flex items-center justify-center relative`}>
             <div className="w-[1px] h-full bg-white"></div>
             <div className="h-[1px] w-full bg-white absolute"></div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Content Layer */}
         <div className="relative z-20 flex-1 flex flex-col justify-end pt-32 pointer-events-none">
@@ -143,8 +161,10 @@ export default function Home() {
           {/* Bottom text */}
           <div className="w-full flex justify-center pb-0 overflow-hidden translate-y-[20%]">
              <h1
-              className="text-white font-light tracking-tighter drop-shadow-lg"
-              style={{ fontSize: 'clamp(3rem, 10vw, 15rem)', lineHeight: 0.8 }}>
+              className="text-white font-light tracking-tighter drop-shadow-lg pointer-events-auto cursor-crosshair transition-all duration-300 hover:text-white/80"
+              style={{ fontSize: 'clamp(3rem, 10vw, 15rem)', lineHeight: 0.8 }}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}>
               
                Alfie Martin
              </h1>
