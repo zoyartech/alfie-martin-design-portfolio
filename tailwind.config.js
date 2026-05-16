@@ -4,6 +4,9 @@ module.exports = {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+  		fontFamily: {
+  			wexley: ['var(--font-wexley)', 'cursive'],
+  		},
   		borderRadius: {
   			lg: '0px',
   			md: '0px',
