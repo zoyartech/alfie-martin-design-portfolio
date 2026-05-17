@@ -128,7 +128,7 @@ export default function MultiMedia() {
   const galleryImages = [
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/921d260f7_7.png", caption: "Editorial Collage" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/601307b26_newarc_ai_out_qrNragmaYIfgi5ateg59rMzREwcGaf47.jpg", caption: "Fashion Design" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44266cad4_flowers-illustration.png", caption: "Botanical Illustration" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/76b593657_4.png", caption: "Fashion Collage" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9eb72bd8_IMG_7230.JPG", caption: "3D Abstract Composition" },
