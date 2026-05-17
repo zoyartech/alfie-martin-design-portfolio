@@ -131,7 +131,7 @@ export default function MultiMedia() {
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/76b593657_4.png", caption: "Fashion Collage" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9eb72bd8_IMG_7230.JPG", caption: "3D Abstract Composition" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2987e7690_8.png", caption: "Editorial Identity" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/088fbd338_IMG_30362.jpg", caption: "Digital Illustration: Mask" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6fa478f50_IMG_3035.jpg", caption: "Digital Illustration: Portrait" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/273a4f491_IMG_0068.png", caption: "Mixed Media: Painted Hands" },
