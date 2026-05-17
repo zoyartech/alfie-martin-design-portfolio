@@ -249,7 +249,7 @@ export default function MultiMedia() {
       observer.unobserve(video);
       video.removeEventListener('error', handleError, true);
     };
-  }, [prefersReducedMotion, heroVideo?.video_url]);
+  }, [prefersReducedMotion]);
 
   const handleManualPlay = () => {
     if (videoRef.current) {
@@ -267,24 +267,15 @@ export default function MultiMedia() {
     <div className="min-h-screen bg-[#faf9f6]">
       {/* Hero */}
       <div className="relative w-full h-[70vh] overflow-hidden bg-black/5">
-        {heroVideo ? (
-          <video
-            ref={videoRef}
-            src={heroVideo.video_url}
-            poster={heroVideo.poster_url || "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"}
-            className="w-full h-full object-cover"
-            muted
-            loop
-            playsInline
-            autoPlay
-          />
-        ) : (
-          <img
-            src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d9c3febed_herooo00.png"
-            alt="Fashion runway hero"
-            className="w-full h-full object-cover object-top"
-          />
-        )}
+        <video
+          ref={videoRef}
+          src="https://media.base44.com/videos/public/6974e154f708f4918a2b8d02/254eda050_ShapeShifter3.MP4"
+          className="w-full h-full object-cover"
+          muted
+          loop
+          playsInline
+          autoPlay
+        />
         <div className="absolute inset-0 bg-white/33 pointer-events-none" />
       </div>
 
