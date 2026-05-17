@@ -126,7 +126,7 @@ export default function MultiMedia() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a162ec94b_shapes.png", caption: "Abstract Shapes" },
+    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/921d260f7_7.png", caption: "Editorial Collage" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/601307b26_newarc_ai_out_qrNragmaYIfgi5ateg59rMzREwcGaf47.jpg", caption: "Fashion Design" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44266cad4_flowers-illustration.png", caption: "Botanical Illustration" },
     { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
