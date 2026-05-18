@@ -28,8 +28,16 @@ export default function CaseStudies() {
             <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em]">PORTFOLIO</p>
             <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
             
-
-            
+            <div className="mt-12 rounded-xl overflow-hidden shadow-sm border border-slate-100 w-full aspect-video">
+              <video 
+                src="https://media.base44.com/videos/public/6974e154f708f4918a2b8d02/976f1d1fd_herovideo.mp4"
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
           </motion.div>
 
 
