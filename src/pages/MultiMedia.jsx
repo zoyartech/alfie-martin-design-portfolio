@@ -315,10 +315,11 @@ export default function MultiMedia() {
                 className="aspect-square overflow-hidden cursor-pointer group relative bg-white rounded-xl shadow-sm border border-gray-100"
                 onClick={() => openModal(i)}>
                 <img
-                  loading="lazy" src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9c83178bb_IMG_0906.jpg"
-
+                  loading="lazy"
+                  src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
+                />
                 
               </motion.div>
               )}
