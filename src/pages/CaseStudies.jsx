@@ -25,10 +25,7 @@ export default function CaseStudies() {
       <section className="pt-32 pb-0 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em]">PORTFOLIO</p>
-            <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
-            
-            <div className="mt-12 rounded-xl overflow-hidden shadow-sm border border-slate-100 w-full aspect-video">
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-100 w-full aspect-video">
               <video 
                 src="https://media.base44.com/videos/public/6974e154f708f4918a2b8d02/976f1d1fd_herovideo.mp4"
                 className="w-full h-full object-cover"
@@ -38,6 +35,8 @@ export default function CaseStudies() {
                 playsInline
               />
             </div>
+            <p className="text-slate-500 mt-8 mb-4 text-xs font-bold tracking-[0.3em]">PORTFOLIO</p>
+            <h1 className="text-4xl md:text-6xl font-light mb-6">Case Studies</h1>
           </motion.div>
 
 
