@@ -9,19 +9,19 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CarouselPrevious } from
+"@/components/ui/carousel";
 
 const carouselImages = [
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/40d2a300f_Screenshot2026-05-05at93151AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d169afcbc_Screenshot2026-05-05at93201AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7346c47f3_Screenshot2026-05-05at93210AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2b4daa26f_Screenshot2026-05-05at93221AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a0436b74e_Screenshot2026-05-05at93235AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c06aa5de_Screenshot2026-05-05at93247AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/81d6f78d7_Screenshot2026-05-05at93259AM.png",
-  "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5584c3ba9_Screenshot2026-05-05at93307AM.png"
-];
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/40d2a300f_Screenshot2026-05-05at93151AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d169afcbc_Screenshot2026-05-05at93201AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7346c47f3_Screenshot2026-05-05at93210AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2b4daa26f_Screenshot2026-05-05at93221AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a0436b74e_Screenshot2026-05-05at93235AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5c06aa5de_Screenshot2026-05-05at93247AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/81d6f78d7_Screenshot2026-05-05at93259AM.png",
+"https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5584c3ba9_Screenshot2026-05-05at93307AM.png"];
+
 
 function GalleryVideoCard({ project, index }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -59,18 +59,18 @@ function GalleryVideoCard({ project, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative"
-    >
+      className="relative">
+      
       <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
-        {project.poster_url && !isPlaying ? (
-          <img 
-            src={project.poster_url} 
-            alt={project.title}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-          />
-        ) : !isPlaying ? (
-          <div className="absolute inset-0 w-full h-full bg-slate-200 transition-opacity duration-300" />
-        ) : null}
+        {project.poster_url && !isPlaying ?
+        <img
+          src={project.poster_url}
+          alt={project.title}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" /> :
+
+        !isPlaying ?
+        <div className="absolute inset-0 w-full h-full bg-slate-200 transition-opacity duration-300" /> :
+        null}
         
         <video
           ref={videoRef}
@@ -78,44 +78,44 @@ function GalleryVideoCard({ project, index }) {
           muted
           loop
           playsInline
-          src={project.video_url}
-        />
+          src={project.video_url} />
         
-        {!isPlaying && (
-          <>
+        
+        {!isPlaying &&
+        <>
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <button 
-                onClick={handlePlay}
-                className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl hover:scale-105 transition-transform"
-              >
+              <button
+              onClick={handlePlay}
+              className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl hover:scale-105 transition-transform">
+              
                 <Play className="w-6 h-6 text-slate-900 ml-1" />
               </button>
             </div>
           </>
-        )}
+        }
         
-        {isPlaying && (
-          <div className="absolute bottom-4 right-4 flex items-center gap-2 z-10">
-            <button 
-              onClick={handleFullscreen}
-              className="bg-white/90 rounded-full w-9 h-9 flex items-center justify-center backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-slate-900"
-              title="Fullscreen"
-            >
+        {isPlaying &&
+        <div className="absolute bottom-4 right-4 flex items-center gap-2 z-10">
+            <button
+            onClick={handleFullscreen}
+            className="bg-white/90 rounded-full w-9 h-9 flex items-center justify-center backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-slate-900"
+            title="Fullscreen">
+            
               <Maximize className="w-4 h-4" />
             </button>
-            <button 
-              onClick={handleStop}
-              className="bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-sm font-medium text-slate-900"
-            >
+            <button
+            onClick={handleStop}
+            className="bg-white/90 rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-sm font-medium text-slate-900">
+            
               <Square className="w-4 h-4 fill-current" />
               Stop
             </button>
           </div>
-        )}
+        }
       </div>
-    </motion.div>
-  );
+    </motion.div>);
+
 }
 
 export default function MultiMedia() {
@@ -126,46 +126,46 @@ export default function MultiMedia() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/921d260f7_7.png", caption: "Editorial Collage" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/601307b26_newarc_ai_out_qrNragmaYIfgi5ateg59rMzREwcGaf47.jpg", caption: "Fashion Design" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/76b593657_4.png", caption: "Fashion Collage" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2987e7690_8.png", caption: "Editorial Identity" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5fb38f12f_nerdglasses.jpg", caption: "Illustration: Glasses" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6fa478f50_IMG_3035.jpg", caption: "Digital Illustration: Portrait" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/273a4f491_IMG_0068.png", caption: "Mixed Media: Painted Hands" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/27cf6047e_IMG_0068.png", caption: "Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e67bd1e01_IMG_5941.jpg", caption: "Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a9be4d8e4_IMG_6368.png", caption: "Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/053f35cc5_IMG_6377.png", caption: "Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7c57caf1_IMG_7391.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cdd59cbf0_IMG_9682.PNG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b47cab45b_IMG_8274.png", caption: "Illustration" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7fd5ca4eb_Press.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/404f587ff_1.JPG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b99904fe1_IMG_1078.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f84aedc1b_IMG_3235.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/741047eb9_IMG_4340.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e497d297_IMG_5998.JPG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/571e0efd5_IMG_6149.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1340188fd_IMG_3574.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/052990856_IMG_9346.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/297c8305b_interior-wooden-poster-frame-on-the-table-mockup-template-65f9b6afcdeb4752da6fcd74-2x.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87bcdef28_outdoor-sidewalk-street-billboard-poster-mockup-template-65f9b64a492bc9abac15d4e8-2x.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bc38fc16d_Untitled620x1024px-1.PNG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f42b6529_Untitled620x1024px-2.PNG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d3ea16a1f_Untitled-October820250855.jpg", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6c4a05b60_Untitled620x1024px-16.PNG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e0350ed7_Untitled620x1024px-19.PNG", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0b4739b3_Untitleddesign-1-2.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acf9005d1_fc60ee56-cd94-4472-b179-4cfb74829b6f_kCJHkDGiU.png", caption: "Floral Bodysuit" },
-    { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Cocktail Illustration" }
-  ];
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/921d260f7_7.png", caption: "Editorial Collage" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/601307b26_newarc_ai_out_qrNragmaYIfgi5ateg59rMzREwcGaf47.jpg", caption: "Fashion Design" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/76b593657_4.png", caption: "Fashion Collage" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/44a771c35_bnn.png", caption: "Bad Nymph Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a71fe480f_IMG_7391.png", caption: "After Hours Packaging Design" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2987e7690_8.png", caption: "Editorial Identity" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/5fb38f12f_nerdglasses.jpg", caption: "Illustration: Glasses" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6fa478f50_IMG_3035.jpg", caption: "Digital Illustration: Portrait" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/273a4f491_IMG_0068.png", caption: "Mixed Media: Painted Hands" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/27cf6047e_IMG_0068.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e67bd1e01_IMG_5941.jpg", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a9be4d8e4_IMG_6368.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/053f35cc5_IMG_6377.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e7c57caf1_IMG_7391.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cdd59cbf0_IMG_9682.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b47cab45b_IMG_8274.png", caption: "Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7fd5ca4eb_Press.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/404f587ff_1.JPG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/35b1bfef1_2.JPG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cc3a1207e_3.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b99904fe1_IMG_1078.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f84aedc1b_IMG_3235.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/741047eb9_IMG_4340.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7e497d297_IMG_5998.JPG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/571e0efd5_IMG_6149.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1340188fd_IMG_3574.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/052990856_IMG_9346.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/297c8305b_interior-wooden-poster-frame-on-the-table-mockup-template-65f9b6afcdeb4752da6fcd74-2x.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87bcdef28_outdoor-sidewalk-street-billboard-poster-mockup-template-65f9b64a492bc9abac15d4e8-2x.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bc38fc16d_Untitled620x1024px-1.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f42b6529_Untitled620x1024px-2.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d3ea16a1f_Untitled-October820250855.jpg", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6c4a05b60_Untitled620x1024px-16.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e0350ed7_Untitled620x1024px-19.PNG", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0b4739b3_Untitleddesign-1-2.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acf9005d1_fc60ee56-cd94-4472-b179-4cfb74829b6f_kCJHkDGiU.png", caption: "Floral Bodysuit" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Cocktail Illustration" }];
+
 
   const openModal = (i) => setSelectedImage(i);
   const closeModal = () => setSelectedImage(null);
@@ -177,8 +177,8 @@ export default function MultiMedia() {
     queryFn: () => base44.entities.VideoProject.list('-created_date')
   });
 
-  const heroVideo = videos.find(v => v.role === 'hero');
-  const galleryVideos = videos.filter(v => v.role === 'gallery');
+  const heroVideo = videos.find((v) => v.role === 'hero');
+  const galleryVideos = videos.filter((v) => v.role === 'gallery');
   useEffect(() => {
     // Check for prefers-reduced-motion
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -186,7 +186,7 @@ export default function MultiMedia() {
 
     const handleChange = (e) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener('change', handleChange);
-    
+
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
@@ -219,20 +219,20 @@ export default function MultiMedia() {
             isPlayPending = true;
             const playPromise = video.play();
             if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  setIsPlaying(true);
-                  isPlayPending = false;
-                })
-                .catch(e => {
-                  console.log("Autoplay prevented or failed:", e);
-                  isPlayPending = false;
-                });
+              playPromise.
+              then(() => {
+                setIsPlaying(true);
+                isPlayPending = false;
+              }).
+              catch((e) => {
+                console.log("Autoplay prevented or failed:", e);
+                isPlayPending = false;
+              });
             } else {
               isPlayPending = false;
             }
           }
-        } 
+        }
         // Pause when less than 10% is visible
         else if (entry.intersectionRatio <= 0.1) {
           if (!video.paused && !isPlayPending) {
@@ -274,8 +274,8 @@ export default function MultiMedia() {
           muted
           loop
           playsInline
-          autoPlay
-        />
+          autoPlay />
+        
         <div className="absolute inset-0 bg-white/33 pointer-events-none" />
       </div>
 
@@ -287,17 +287,17 @@ export default function MultiMedia() {
             <h2 className="text-3xl font-serif text-slate-900">Video Projects & Animations</h2>
             <Button variant="outline" onClick={() => window.open('/AdminVideos', '_blank')}>Manage Videos</Button>
           </div>
-          {isLoading ? (
-            <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div>
-          ) : galleryVideos.length === 0 ? (
-            <p className="text-slate-500">No gallery videos added yet. Click Manage Videos to add some.</p>
-          ) : (
+          {isLoading ?
+            <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div> :
+            galleryVideos.length === 0 ?
+            <p className="text-slate-500">No gallery videos added yet. Click Manage Videos to add some.</p> :
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {galleryVideos.map((project, index) => (
-                <GalleryVideoCard key={project.id} project={project} index={index} />
-              ))}
+              {galleryVideos.map((project, index) =>
+              <GalleryVideoCard key={project.id} project={project} index={index} />
+              )}
             </div>
-          )}
+            }
         </div>
 
         {/* Brand Visuals */}
@@ -312,17 +312,17 @@ export default function MultiMedia() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (i % 6) * 0.05 }}
+                transition={{ duration: 0.5, delay: i % 6 * 0.05 }}
                 className="aspect-square overflow-hidden cursor-pointer group relative bg-white rounded-xl shadow-sm border border-gray-100"
                 onClick={() => openModal(i)}>
                 <img
                   loading="lazy"
                   src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                
               </motion.div>
-            )}
+              )}
           </div>
         </div>
 
@@ -375,21 +375,21 @@ export default function MultiMedia() {
                 <ChevronRight className="w-6 h-6" />
               </button>
             </motion.div>
-          }
+            }
         </AnimatePresence>
 
         {/* Brand Presentation Carousel */}
         <div className="mt-32">
           <div className="mb-10">
-            <h2 className="text-3xl font-serif text-slate-900">Brand Presentation</h2>
+            <h2 className="text-3xl font-serif text-slate-900">Art Direction </h2>
           </div>
           <Carousel className="w-full relative shadow-sm border border-slate-100 rounded-xl overflow-hidden bg-white">
             <CarouselContent>
-              {carouselImages.map((src, index) => (
+              {carouselImages.map((src, index) =>
                 <CarouselItem key={index}>
                   <img src={src} alt={`Presentation slide ${index + 1}`} className="w-full h-auto object-contain" />
                 </CarouselItem>
-              ))}
+                )}
             </CarouselContent>
             <CarouselPrevious className="absolute left-4" />
             <CarouselNext className="absolute right-4" />
@@ -402,18 +402,18 @@ export default function MultiMedia() {
             <h2 className="text-3xl font-serif text-slate-900">Art Direction</h2>
           </div>
           <div className="w-full flex justify-center h-[80vh]">
-            <iframe 
-              style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }} 
-              src="https://embed.figma.com/proto/vNCIoHjPhuEFvQVgWBJEtJ/donuts?page-id=0%3A1&node-id=40-29&p=f&viewport=1092%2C686%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share" 
-              allowFullScreen
-              title="Figma Prototype"
-              className="rounded-xl shadow-sm bg-white"
-            ></iframe>
+            <iframe
+                style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}
+                src="https://embed.figma.com/proto/vNCIoHjPhuEFvQVgWBJEtJ/donuts?page-id=0%3A1&node-id=40-29&p=f&viewport=1092%2C686%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+                allowFullScreen
+                title="Figma Prototype"
+                className="rounded-xl shadow-sm bg-white">
+              </iframe>
           </div>
         </div>
 
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
