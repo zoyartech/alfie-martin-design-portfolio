@@ -45,8 +45,13 @@ export default function AIDrivenEnterpriseCRM() {
           Enterprise sales teams were spending hours manually logging data and trying to prioritize leads. The existing CRM was clunky, overwhelming, and lacked predictive capabilities. The goal was to reduce friction and introduce AI-driven automation without losing human oversight.
         </p>
 
-        <div className="w-full aspect-[21/9] bg-slate-100 rounded-xl mb-12 flex items-center justify-center border border-slate-200">
-          <p className="text-slate-400 text-sm tracking-widest uppercase">Hero Image / Video Placeholder</p>
+        <div className="w-full h-[80vh] bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200">
+          <iframe
+            style={{ width: "100%", height: "100%" }}
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2Ffc9RIIS9TiWIew5XzdM627%2Fsalesai-high-fidelity%3Ffullscreen%3D1%26t%3D8hOUjISaTIUlYGKd-1%26code-node-id%3D0-9"
+            allowFullScreen
+            title="Figma Embed"
+          ></iframe>
         </div>
 
         <h2 className="text-3xl font-wexley text-slate-900 mb-6">The Solution</h2>
