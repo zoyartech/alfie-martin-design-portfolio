@@ -48,7 +48,7 @@ export default function AIDrivenEnterpriseCRM() {
         <div className="w-full h-[80vh] bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200">
           <iframe
             style={{ width: "100%", height: "100%" }}
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2Ffc9RIIS9TiWIew5XzdM627%2Fsalesai-high-fidelity%3Ffullscreen%3D1%26t%3D8hOUjISaTIUlYGKd-1%26code-node-id%3D0-9"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FrosuOkYKAQY1HmMI5jQV2S%2Fsalesai-high-fidelity--Copy-%3Ffullscreen%3D1%26t%3DlLReT3JopPzoLF97-1%26code-node-id%3D0-9"
             allowFullScreen
             title="Figma Embed"
           ></iframe>
