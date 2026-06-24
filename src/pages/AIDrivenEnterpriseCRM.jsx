@@ -10,6 +10,15 @@ export default function AIDrivenEnterpriseCRM() {
         <p className="text-xl text-slate-600 mb-12 max-w-3xl leading-relaxed">
           Designing an intelligent customer relationship management system that leverages machine learning to predict user needs and automate routine tasks.
         </p>
+
+        <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto">
+          <iframe
+            style={{ width: "100%", height: "100%" }}
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FrosuOkYKAQY1HmMI5jQV2S%2Fsalesai-high-fidelity--Copy-%3Ffullscreen%3D1%26t%3DlLReT3JopPzoLF97-1%26code-node-id%3D0-9"
+            allowFullScreen
+            title="Figma Embed"
+          ></iframe>
+        </div>
       </motion.div>
 
       <motion.div 
@@ -44,15 +53,6 @@ export default function AIDrivenEnterpriseCRM() {
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
           Enterprise sales teams were spending hours manually logging data and trying to prioritize leads. The existing CRM was clunky, overwhelming, and lacked predictive capabilities. The goal was to reduce friction and introduce AI-driven automation without losing human oversight.
         </p>
-
-        <div className="w-full h-[80vh] bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200">
-          <iframe
-            style={{ width: "100%", height: "100%" }}
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FrosuOkYKAQY1HmMI5jQV2S%2Fsalesai-high-fidelity--Copy-%3Ffullscreen%3D1%26t%3DlLReT3JopPzoLF97-1%26code-node-id%3D0-9"
-            allowFullScreen
-            title="Figma Embed"
-          ></iframe>
-        </div>
 
         <h2 className="text-3xl font-wexley text-slate-900 mb-6">The Solution</h2>
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
