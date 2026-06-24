@@ -70,6 +70,7 @@ import MultiMedia from './pages/MultiMedia';
 import AdminVideos from './pages/AdminVideos';
 import UX from './pages/UX';
 import ArborPres from './pages/ArborPres';
+import AIDrivenEnterpriseCRM from './pages/AIDrivenEnterpriseCRM';
 import CaseStudyWrapper from './components/caseStudies/CaseStudyWrapper';
 
 const AuthenticatedApp = () => {
@@ -195,6 +196,7 @@ const AuthenticatedApp = () => {
       <Route path="/AdminVideos" element={<AdminVideos />} />
       <Route path="/UX" element={<UX />} />
       <Route path="/arbor-pres" element={<CaseStudyWrapper pageName="ArborPres"><ArborPres /></CaseStudyWrapper>} />
+      <Route path="/AIDrivenEnterpriseCRM" element={<CaseStudyWrapper pageName="AIDrivenEnterpriseCRM"><AIDrivenEnterpriseCRM /></CaseStudyWrapper>} />
       <Route path="*" element={<PageNotFound />} />
           </Routes>
           <GlobalFooter />
