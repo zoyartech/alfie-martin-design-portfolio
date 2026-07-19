@@ -36,6 +36,33 @@ export default function DesignSystemsAIGovernance() {
             />
           </div>
         </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-wexley text-slate-900 mb-8">World Building</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-4">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/e3ffa39f5_aalogo11.png" alt="AetherOS Logo 1" className="w-full h-auto object-contain rounded-lg" />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-4">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/462d6b687_aa111111circular.png" alt="AetherOS Logo Circular" className="w-full h-auto object-contain rounded-lg" />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white md:col-span-2 flex items-center justify-center p-4">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/03895dc3a_CIRCLES.png" alt="AetherOS Circles" className="w-full h-auto object-contain rounded-lg" />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-4">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/16a7ab272_COOOLERS.png" alt="AetherOS Colors" className="w-full h-auto object-contain rounded-lg" />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-4">
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7c34d84ef_TypeSpecimens.png" alt="AetherOS Type Specimens" className="w-full h-auto object-contain rounded-lg" />
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
