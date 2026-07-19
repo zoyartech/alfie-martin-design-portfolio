@@ -13,7 +13,7 @@ export default function DesignSystemsAIGovernance() {
 
         <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto">
           <iframe
-            style={{ width: "100%", height: "100%", border: "none" }}
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}
             src="https://embed.figma.com/design/oCrfClV8tlTJWCiyhy3hNd/AetherOS-Design-System?embed-host=share"
             allowFullScreen
             title="AetherOS Design System"
