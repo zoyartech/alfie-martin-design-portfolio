@@ -19,6 +19,23 @@ export default function DesignSystemsAIGovernance() {
             title="AetherOS Design System"
           ></iframe>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-wexley text-slate-900 mb-8">Designing Brand visuals</h2>
+          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white">
+            <img 
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0f806d22e_aetheros-brand-identity.png" 
+              alt="AetherOS Brand Identity" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
