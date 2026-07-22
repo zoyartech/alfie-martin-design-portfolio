@@ -6,7 +6,7 @@ export default function DesignSystemsAIGovernance() {
     <div className="pt-24 pb-16 px-6 lg:px-12 max-w-5xl mx-auto min-h-screen">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em] uppercase">Case Study</p>
-        <h1 className="text-4xl md:text-6xl font-light mb-6 font-wexley text-slate-900">Design Systems for AI Governance</h1>
+        <h1 className="mb-6 text-slate-900 [font-family:'Playfair_Display',_serif] font-normal text-3xl md:text-3xl">Design Systems for AI Governance</h1>
         <p className="text-xl text-slate-600 mb-12 max-w-3xl leading-relaxed">
           Establishing a structured approach and component library to ensure AI products remain ethical, transparent, and user-friendly.
         </p>
@@ -16,34 +16,34 @@ export default function DesignSystemsAIGovernance() {
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}
             src="https://embed.figma.com/design/LuiwuEm6copfLQMcSSmayr/EtherOS-Design-System?embed-host=share"
             allowFullScreen
-            title="EtherOS Design System"
-          ></iframe>
+            title="EtherOS Design System">
+          </iframe>
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }} 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16"
-        >
+          className="mt-16">
+          
           <h2 className="text-3xl font-wexley text-slate-900 mb-8">Designing Brand visuals</h2>
           <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex justify-center">
-            <img 
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ecd4391cf_aetheros-brand-identity.png" 
-              alt="AetherOS Brand Identity" 
-              className="max-w-full h-auto object-contain"
-            />
+            <img
+              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ecd4391cf_aetheros-brand-identity.png"
+              alt="AetherOS Brand Identity"
+              className="max-w-full h-auto object-contain" />
+            
           </div>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }} 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16"
-        >
+          className="mt-16">
+          
           <h2 className="text-3xl font-wexley text-slate-900 mb-8">World Building</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-4">
@@ -64,6 +64,6 @@ export default function DesignSystemsAIGovernance() {
           </div>
         </motion.div>
       </motion.div>
-    </div>
-  );
+    </div>);
+
 }
