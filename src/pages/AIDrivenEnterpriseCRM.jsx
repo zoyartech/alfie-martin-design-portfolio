@@ -93,6 +93,13 @@ export default function AIDrivenEnterpriseCRM() {
         <div className="rounded-xl overflow-hidden border border-slate-200 bg-white mb-12">
           <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bbbf205f_Screenshot2026-07-23at34201AM.png" alt="AI tools comparison table" className="w-full h-auto object-contain" />
         </div>
+
+        <p className="text-slate-600 mb-12 text-lg leading-relaxed">
+          <strong>The three mechanisms:</strong><br/>
+          Topics / conversational flows (Virtual Agent): the rule-based, deterministic part. Triggered by an intent, follows a scripted branch. This is authoring exactly how the bot responds.<br/>
+          AI Search / RAG over the KB: content comes from articles; phrasing comes from Now LLM summarizing them. You author what is in the KB, not the reply.<br/>
+          Now Assist generative actions: generative, bounded by prompts and guardrails.
+        </p>
       </motion.div>
     </div>);
 
