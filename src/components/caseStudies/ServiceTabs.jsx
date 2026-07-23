@@ -97,12 +97,12 @@ export default function ServiceTabs() {
                 </AnimatePresence>
               </div>
 
-              <Link
-                to={tabs[active].href}
-                className="inline-flex flex-shrink-0 items-center justify-center px-5 py-3 text-xs font-wexley uppercase tracking-wider border border-white text-white no-underline whitespace-nowrap transition-colors duration-200 hover:bg-white/10 hidden">
-                
-                Read more
-              </Link>
+              
+
+
+
+
+              
             </div>
           </div>
 
