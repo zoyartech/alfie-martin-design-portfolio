@@ -7,8 +7,8 @@ const tabs = [
   label: '01',
   heading: 'Intent\nRouting',
   body: 'Every conversation begins with detecting what the user actually needs. The system classifies intent across hundreds of trained categories, then routes each one to the mechanism best suited to resolve it — deterministic flow, knowledge search, or generative response.',
-  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/174bc42c8_generated_image.png',
-  alt: 'Abstract intent routing visualization with branching paths',
+  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d839dcced_chatchat.png',
+  alt: 'Abstract conversational flow diagram with speech bubbles, arrows, and nodes',
   href: '/ConversationCraft'
 },
 {
