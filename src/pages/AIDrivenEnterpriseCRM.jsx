@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ThreeTests from '@/components/caseStudies/ThreeTests';
 import OrchestrationAccordion from '@/components/caseStudies/OrchestrationAccordion';
+import ServiceTabs from '@/components/caseStudies/ServiceTabs';
 
 export default function AIDrivenEnterpriseCRM() {
   return (
@@ -59,6 +60,8 @@ export default function AIDrivenEnterpriseCRM() {
             title="DealDesk Components">
           </iframe>
         </div>
+
+        <ServiceTabs />
 
         <h2 className="text-3xl font-wexley text-slate-900 mb-6">The Challenge</h2>
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
