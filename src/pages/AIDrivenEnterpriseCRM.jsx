@@ -7,7 +7,7 @@ export default function AIDrivenEnterpriseCRM() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <p className="text-slate-500 mb-4 text-xs font-bold tracking-[0.3em] uppercase">Case Study</p>
         <h1 className="text-4xl md:text-6xl font-light mb-6 font-wexley text-slate-900">Chatbot Design for Enterprise CRM</h1>
-        <p className="text-xl text-slate-600 mb-12 max-w-3xl leading-relaxed">Designing an intelligent customer relationship management system integrating it with 
+        <p className="text-xl text-slate-600 mb-12 max-w-3xl leading-relaxed">Designing an intelligent customer relationship management system integrating it with conversational AI that routes intent, governs responses, and escalates with human oversight. 
 
         </p>
 
