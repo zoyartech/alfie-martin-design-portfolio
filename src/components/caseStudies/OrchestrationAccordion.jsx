@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const rows = [
 {
   title: 'CONVERSATIONAL FLOWS',
-  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/042b92071_generated_image.png',
+  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f2c06a35f_chatchat.png',
   alt: 'Interconnected dialogue nodes and flowchart paths',
   body: 'The rule-based, deterministic layer. Triggered by an intent, the virtual agent follows a scripted branch — you author exactly how the bot responds. No ambiguity, no improvisation. Every reply is mapped, reviewed, and version-controlled before it reaches a customer.'
 },
@@ -82,11 +82,11 @@ export default function OrchestrationAccordion() {
                 role="region">
                 
                   <div className="flex flex-wrap items-start gap-2.5 pt-2.5 pb-2.5">
-                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f2c06a35f_chatchat.png"
+                    <img src={row.image}
 
                   alt={row.alt}
                   loading="lazy"
-                  className="block flex-shrink-0 w-full max-w-[140px] aspect-square object-cover object-center" />
+                  className="block flex-shrink-0 w-full max-w-[225px] aspect-square object-cover" />
                   
                     <div className="flex-1 min-w-[12rem] overflow-hidden">
                       <p className="m-0 text-sm leading-5 break-words text-[#000000]">
