@@ -86,7 +86,7 @@ export default function OrchestrationAccordion() {
 
                   alt={row.alt}
                   loading="lazy"
-                  className="block flex-shrink-0 w-full max-w-[225px] aspect-square object-cover" />
+                  className="block flex-shrink-0 w-full max-w-[140px] aspect-square object-cover object-center" />
                   
                     <div className="flex-1 min-w-[12rem] overflow-hidden">
                       <p className="m-0 text-sm leading-5 break-words text-[#000000]">
