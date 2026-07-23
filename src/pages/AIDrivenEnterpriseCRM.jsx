@@ -11,12 +11,12 @@ export default function AIDrivenEnterpriseCRM() {
           Designing an intelligent customer relationship management system that leverages machine learning to predict user needs and automate routine tasks.
         </p>
 
-        <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto">
+        <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto hidden">
           <iframe
             style={{ width: "100%", height: "100%" }}
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FrosuOkYKAQY1HmMI5jQV2S%2Fsalesai-high-fidelity--Copy-%3Ffullscreen%3D1%26t%3DlLReT3JopPzoLF97-1%26code-node-id%3D0-9"
             allowFullScreen
-            title="Figma Embed">
+            title="Figma Embed" className="hidden">
           </iframe>
         </div>
       </motion.div>
