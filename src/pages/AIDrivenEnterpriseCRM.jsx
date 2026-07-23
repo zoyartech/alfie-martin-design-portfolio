@@ -67,6 +67,11 @@ export default function AIDrivenEnterpriseCRM() {
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
           We redesigned the core CRM experience from the ground up, integrating AI agents that automatically summarize meeting notes, score leads based on historical conversion data, and suggest the next best actions for sales representatives. This streamlined the workflow and allowed teams to focus on relationship building rather than data entry.
         </p>
+
+        <h3 className="text-2xl font-wexley text-slate-900 mb-4">Conversational Design working Notes</h3>
+        <p className="text-slate-600 mb-12 text-lg italic leading-relaxed">
+          From governance clarification through fallback routing, evaluation, and calibration.
+        </p>
       </motion.div>
     </div>);
 
