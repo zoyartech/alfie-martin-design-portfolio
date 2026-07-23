@@ -107,11 +107,11 @@ export default function AIDrivenEnterpriseCRM() {
         <OrchestrationAccordion />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/435d176d4_bub.png" alt="Orchestration bubble 1" className="w-full h-auto object-contain" />
+          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl hidden">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/435d176d4_bub.png" alt="Orchestration bubble 1" className="w-full h-auto object-contain hidden" />
           </div>
-          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl">
-            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/af548c08a_bub2.png" alt="Orchestration bubble 2" className="w-full h-auto object-contain" />
+          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl hidden">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/af548c08a_bub2.png" alt="Orchestration bubble 2" className="w-full h-auto object-contain hidden" />
           </div>
         </div>
 
