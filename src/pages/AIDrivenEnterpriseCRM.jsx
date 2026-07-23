@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ThreeTests from '@/components/caseStudies/ThreeTests';
+import OrchestrationAccordion from '@/components/caseStudies/OrchestrationAccordion';
 
 export default function AIDrivenEnterpriseCRM() {
   return (
@@ -102,6 +103,8 @@ export default function AIDrivenEnterpriseCRM() {
           AI Search / RAG over the KB: content comes from articles; phrasing comes from Now LLM summarizing them. You author what is in the KB, not the reply.<br />
           Now Assist generative actions: generative, bounded by prompts and guardrails.
         </p>
+
+        <OrchestrationAccordion />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div className="rounded-xl overflow-hidden border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-xl">
