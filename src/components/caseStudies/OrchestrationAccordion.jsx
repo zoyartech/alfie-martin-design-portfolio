@@ -82,11 +82,11 @@ export default function OrchestrationAccordion() {
                 role="region">
                 
                   <div className="flex flex-wrap items-start gap-2.5 pt-2.5 pb-2.5">
-                    <img
-                    src={row.image}
-                    alt={row.alt}
-                    loading="lazy"
-                    className="block flex-shrink-0 w-full max-w-[225px] aspect-square object-cover" />
+                    <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f2c06a35f_chatchat.png"
+
+                  alt={row.alt}
+                  loading="lazy"
+                  className="block flex-shrink-0 w-full max-w-[225px] aspect-square object-cover" />
                   
                     <div className="flex-1 min-w-[12rem] overflow-hidden">
                       <p className="m-0 text-sm leading-5 break-words text-[#000000]">
