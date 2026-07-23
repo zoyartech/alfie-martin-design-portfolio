@@ -72,6 +72,13 @@ export default function AIDrivenEnterpriseCRM() {
         <p className="text-slate-600 mb-12 text-lg italic leading-relaxed">
           From governance clarification through fallback routing, evaluation, and calibration.
         </p>
+
+        <p className="text-slate-600 mb-6 text-lg leading-relaxed">
+          <strong>1. What the underlying question was</strong>
+        </p>
+        <p className="text-slate-600 mb-12 text-lg leading-relaxed">
+          The work started from a governance question: who knows how the AI tools we use are trained, and who controls the guardrails? The confusion turned out to come from collapsing two genuinely different questions into one.
+        </p>
       </motion.div>
     </div>);
 
