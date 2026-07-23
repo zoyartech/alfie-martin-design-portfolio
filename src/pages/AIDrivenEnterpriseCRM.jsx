@@ -89,6 +89,10 @@ export default function AIDrivenEnterpriseCRM() {
             <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7f9fbae0c_q2.png" alt="Question 2: Who trained the underlying model" className="w-full h-auto object-contain" />
           </div>
         </div>
+
+        <div className="rounded-xl overflow-hidden border border-slate-200 bg-white mb-12">
+          <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bbbf205f_Screenshot2026-07-23at34201AM.png" alt="AI tools comparison table" className="w-full h-auto object-contain" />
+        </div>
       </motion.div>
     </div>);
 
