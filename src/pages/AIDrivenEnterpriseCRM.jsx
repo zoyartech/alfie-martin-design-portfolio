@@ -16,18 +16,18 @@ export default function AIDrivenEnterpriseCRM() {
             style={{ width: "100%", height: "100%" }}
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fmake%2FrosuOkYKAQY1HmMI5jQV2S%2Fsalesai-high-fidelity--Copy-%3Ffullscreen%3D1%26t%3DlLReT3JopPzoLF97-1%26code-node-id%3D0-9"
             allowFullScreen
-            title="Figma Embed"
-          ></iframe>
+            title="Figma Embed">
+          </iframe>
         </div>
       </motion.div>
 
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
-        viewport={{ once: true }} 
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 mb-24 border-y border-slate-200 py-12"
-      >
+        className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 mb-24 border-y border-slate-200 py-12">
+        
         <div className="col-span-1">
           <h3 className="font-bold text-sm tracking-wider uppercase text-slate-400 mb-4">Role</h3>
           <p className="text-slate-800">Lead Product Designer</p>
@@ -38,24 +38,24 @@ export default function AIDrivenEnterpriseCRM() {
         </div>
         <div className="col-span-1">
           <h3 className="font-bold text-sm tracking-wider uppercase text-slate-400 mb-4">Focus</h3>
-          <p className="text-slate-800">UX/UI Design, AI Integration, Systems Thinking</p>
+          <p className="text-slate-800"> AI Conversational design Systems </p>
         </div>
       </motion.div>
 
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
-        viewport={{ once: true }} 
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="prose prose-slate max-w-none"
-      >
+        className="prose prose-slate max-w-none">
+        
         <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto">
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}
             src="https://embed.figma.com/design/IJSWYyOj2a9BGUxVApooaO/DealDesk-%E2%80%94coponents?node-id=5003-2&embed-host=share"
             allowFullScreen
-            title="DealDesk Components"
-          ></iframe>
+            title="DealDesk Components">
+          </iframe>
         </div>
 
         <h2 className="text-3xl font-wexley text-slate-900 mb-6">The Challenge</h2>
@@ -68,6 +68,6 @@ export default function AIDrivenEnterpriseCRM() {
           We redesigned the core CRM experience from the ground up, integrating AI agents that automatically summarize meeting notes, score leads based on historical conversion data, and suggest the next best actions for sales representatives. This streamlined the workflow and allowed teams to focus on relationship building rather than data entry.
         </p>
       </motion.div>
-    </div>
-  );
+    </div>);
+
 }
