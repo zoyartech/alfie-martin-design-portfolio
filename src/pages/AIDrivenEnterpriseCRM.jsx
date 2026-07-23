@@ -96,7 +96,7 @@ export default function AIDrivenEnterpriseCRM() {
           <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/1bbbf205f_Screenshot2026-07-23at34201AM.png" alt="AI tools comparison table" className="w-full h-auto object-contain" />
         </div>
 
-        <h3 className="text-2xl font-wexley text-slate-900 mb-6">The Orchestration Layer</h3>
+        <h3 className="text-2xl font-wexley text-slate-900 mb-6 text-center">The Orchestration Layer</h3>
         
 
 
