@@ -23,8 +23,8 @@ const tabs = [
   label: '03',
   heading: 'Human\nEscalation',
   body: 'When confidence drops or the request exceeds the bot\u2019s scope, the conversation routes to a human agent with full context. The handoff is seamless — transcript, attempted resolution, and escalation reason all travel with it.',
-  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/074136977_generated_image.png',
-  alt: 'Abstract human escalation visualization with handoff transition',
+  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/983f1b509_botarm.png',
+  alt: 'Human hand and robotic hand nearly touching in a Creation of Adam style composition',
   href: '/DesignStrategyAI'
 }];
 
