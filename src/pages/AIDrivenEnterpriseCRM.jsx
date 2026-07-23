@@ -79,6 +79,16 @@ export default function AIDrivenEnterpriseCRM() {
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
           The work started from a governance question: who knows how the AI tools we use are trained, and who controls the guardrails? The confusion turned out to come from collapsing two genuinely different questions into one.
         </p>
+
+        <h3 className="text-2xl font-wexley text-slate-900 mb-6">The other questions that needed answers</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b22db7e2e_q1.png" alt="Question 1: Who controls guardrails" className="w-full h-auto object-contain" />
+          </div>
+          <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/7f9fbae0c_q2.png" alt="Question 2: Who trained the underlying model" className="w-full h-auto object-contain" />
+          </div>
+        </div>
       </motion.div>
     </div>);
 
