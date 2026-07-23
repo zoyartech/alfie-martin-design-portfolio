@@ -49,6 +49,15 @@ export default function AIDrivenEnterpriseCRM() {
         transition={{ duration: 0.6 }}
         className="prose prose-slate max-w-none"
       >
+        <div className="w-full aspect-[9/16] md:aspect-video bg-slate-100 rounded-xl mb-12 overflow-hidden border border-slate-200 mx-auto">
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}
+            src="https://embed.figma.com/design/IJSWYyOj2a9BGUxVApooaO/DealDesk-%E2%80%94coponents?node-id=5003-2&embed-host=share"
+            allowFullScreen
+            title="DealDesk Components"
+          ></iframe>
+        </div>
+
         <h2 className="text-3xl font-wexley text-slate-900 mb-6">The Challenge</h2>
         <p className="text-slate-600 mb-12 text-lg leading-relaxed">
           Enterprise sales teams were spending hours manually logging data and trying to prioritize leads. The existing CRM was clunky, overwhelming, and lacked predictive capabilities. The goal was to reduce friction and introduce AI-driven automation without losing human oversight.
