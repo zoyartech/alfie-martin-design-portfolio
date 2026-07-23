@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ThreeTests from '@/components/caseStudies/ThreeTests';
 
 export default function AIDrivenEnterpriseCRM() {
   return (
@@ -114,6 +115,8 @@ export default function AIDrivenEnterpriseCRM() {
         <div className="rounded-xl overflow-hidden border border-slate-200 bg-white mb-12 transition-shadow duration-300 hover:shadow-xl">
           <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6aebc9864_Screenshot2026-07-23at40210AM.png" alt="Four-outcome intent routing table" className="w-full h-auto object-contain" />
         </div>
+
+        <ThreeTests />
       </motion.div>
     </div>);
 
