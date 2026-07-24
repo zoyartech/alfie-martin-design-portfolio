@@ -47,6 +47,7 @@ import RCM2 from './pages/RCM2';
 import UXResearchStudies from './pages/UXResearchStudies';
 import ExelonUXR from './pages/ExelonUXR';
 import RCMUXR from './pages/RCMUXR';
+import ProtectedRoute from './components/ProtectedRoute';
 import GlobalNav from './components/GlobalNav';
 import ScrollProgress from './components/ScrollProgress';
 import GlobalFooter from './components/GlobalFooter';
@@ -179,7 +180,9 @@ const AuthenticatedApp = () => {
       <Route path="/UXResearchStudies" element={<UXResearchStudies />} />
       <Route path="/ExelonUXR" element={<CaseStudyWrapper pageName="ExelonUXR"><ExelonUXR /></CaseStudyWrapper>} />
       <Route path="/RCMUXR" element={<CaseStudyWrapper pageName="RCMUXR"><RCMUXR /></CaseStudyWrapper>} />
-      <Route path="/AdminInsights" element={<AdminInsights />} />
+      <Route path="/AdminInsights" element={<ProtectedRoute requireAdmin unauthenticatedElement={<Navigate to="/Home" replace />} />} >
+        <Route path="/AdminInsights" element={<AdminInsights />} />
+      </Route>
       <Route path="/CodeFlow" element={<CaseStudyWrapper pageName="CodeFlow"><CodeFlow /></CaseStudyWrapper>} />
       <Route path="/DescriptExperiment" element={<CaseStudyWrapper pageName="DescriptExperiment"><DescriptExperiment /></CaseStudyWrapper>} />
       <Route path="/b6" element={<CaseStudyWrapper pageName="b6"><B6 /></CaseStudyWrapper>} />
@@ -194,7 +197,9 @@ const AuthenticatedApp = () => {
       <Route path="/ComponentShowcase" element={<ComponentShowcase />} />
       <Route path="/ArtDirection" element={<CaseStudyWrapper pageName="ArtDirection"><ArtDirection /></CaseStudyWrapper>} />
       <Route path="/MultiMedia" element={<MultiMedia />} />
-      <Route path="/AdminVideos" element={<AdminVideos />} />
+      <Route path="/AdminVideos" element={<ProtectedRoute requireAdmin unauthenticatedElement={<Navigate to="/Home" replace />} />} >
+        <Route path="/AdminVideos" element={<AdminVideos />} />
+      </Route>
       <Route path="/UX" element={<UX />} />
       <Route path="/arbor-pres" element={<CaseStudyWrapper pageName="ArborPres"><ArborPres /></CaseStudyWrapper>} />
       <Route path="/AIDrivenEnterpriseCRM" element={<CaseStudyWrapper pageName="AIDrivenEnterpriseCRM"><AIDrivenEnterpriseCRM /></CaseStudyWrapper>} />
