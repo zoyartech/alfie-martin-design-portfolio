@@ -11,7 +11,7 @@ const projects = [
   category: "AI Design",
   industry: "Enterprise",
   image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/81e547dd5_Screenshot2026-07-24at15115AM.png",
-  imageFit: "object-cover",
+  imageFit: "object-contain",
   year: "2026",
   link: "AIDrivenEnterpriseCRM",
   summary: "Designing an intelligent customer relationship management system that leverages machine learning to predict user needs and automate routine tasks.",
