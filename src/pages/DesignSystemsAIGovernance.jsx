@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import AetherOSCarousel from '@/components/caseStudies/AetherOSCarousel';
 
 export default function DesignSystemsAIGovernance() {
   return (
@@ -28,13 +29,7 @@ export default function DesignSystemsAIGovernance() {
           className="mt-16">
           
           <h2 className="text-3xl font-wexley text-slate-900 mb-8">Designing Brand visuals</h2>
-          <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex justify-center">
-            <img
-              src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ecd4391cf_aetheros-brand-identity.png"
-              alt="AetherOS Brand Identity"
-              className="max-w-full h-auto object-contain" />
-            
-          </div>
+          <AetherOSCarousel />
         </motion.div>
 
         <motion.div
