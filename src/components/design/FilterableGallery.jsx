@@ -10,7 +10,7 @@ const projects = [
   title: "AI-Driven Enterprise CRM",
   category: "AI Design",
   industry: "Enterprise",
-  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9861804d6_1.png",
+  image: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/81e547dd5_Screenshot2026-07-24at15115AM.png",
   imageFit: "object-cover",
   year: "2026",
   link: "AIDrivenEnterpriseCRM",
