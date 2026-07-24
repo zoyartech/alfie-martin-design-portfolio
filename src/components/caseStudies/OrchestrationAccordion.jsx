@@ -16,8 +16,8 @@ const rows = [
 },
 {
   title: 'GENERATIVE ACTIONS',
-  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/96ab577d2_generated_image.png',
-  alt: 'Typographic elements emerging from a central source',
+  image: 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d5ba21d31_Screenshot2026-07-23at92000PM.png',
+  alt: '3D isometric data grid with floating circles and hexagonal border',
   body: 'Generative responses bounded by prompts and guardrails. The model composes within constraints — tone, length, approved topics — never freewheeling. Guardrails are authored alongside the prompt, so every generative path has a defined edge it cannot cross.'
 },
 {
