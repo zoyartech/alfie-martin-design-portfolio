@@ -3,7 +3,13 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.23';
 Deno.serve(async (req) => {
     try {
         const base44 = createClientFromRequest(req);
-        
+
+        // Require an authenticated admin — prevents anonymous abuse of SendEmail.
+        const user = await base44.auth.me();
+        if (!user || user.role !== 'admin') {
+            return Response.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
         // Find the admin user to send the summary to
         const admins = await base44.asServiceRole.entities.User.filter({ role: 'admin' });
         const adminEmail = admins.length > 0 ? admins[0].email : null;
