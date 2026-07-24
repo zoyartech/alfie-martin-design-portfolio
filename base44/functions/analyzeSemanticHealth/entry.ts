@@ -1,4 +1,5 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
+import { assertSafeUrl } from '../../shared/ssrfGuard.ts';
 
 Deno.serve(async (req) => {
     try {
@@ -14,6 +15,8 @@ Deno.serve(async (req) => {
         if (!url) {
             return Response.json({ error: 'URL is required' }, { status: 400 });
         }
+
+        await assertSafeUrl(url);
 
         const response = await fetch(url, {
             headers: {

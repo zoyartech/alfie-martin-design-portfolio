@@ -1,4 +1,5 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
+import { assertSafeUrl } from '../../shared/ssrfGuard.ts';
 
 Deno.serve(async (req) => {
     try {
@@ -19,6 +20,7 @@ Deno.serve(async (req) => {
         const urlData = [];
         for (const url of urls.slice(0, 10)) {
             try {
+                await assertSafeUrl(url);
                 const response = await fetch(url, {
                     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Base44Bot/1.0;)' }
                 });
