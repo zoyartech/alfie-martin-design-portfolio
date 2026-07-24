@@ -82,7 +82,7 @@ export default function OrchestrationAccordion() {
                 role="region">
                 
                   <div className="flex flex-wrap items-start gap-2.5 pt-2.5 pb-2.5">
-                    <img src={row.title === 'CONVERSATIONAL FLOWS' ? 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0f0d594a4_Screenshot2026-07-24at12827AM.png' : 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3746b3ade_Screenshot2026-07-23at60050PM.png'}
+                    <img src={row.title === 'CONVERSATIONAL FLOWS' ? 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/0f0d594a4_Screenshot2026-07-24at12827AM.png' : row.title === 'AI SEARCH & RAG' ? 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a07075804_Screenshot2026-07-24at13225AM.png' : 'https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3746b3ade_Screenshot2026-07-23at60050PM.png'}
 
                   alt={row.alt}
                   loading="lazy"
