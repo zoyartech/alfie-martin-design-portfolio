@@ -281,23 +281,23 @@ export default function MultiMedia() {
       <div className="pt-16 pb-16 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
         {/* Gallery Grid */}
-        <div className="mt-24 hidden">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-3xl font-serif text-slate-900">Video Projects & Animations</h2>
-            <Button variant="outline" onClick={() => window.open('/AdminVideos', '_blank')}>Manage Videos</Button>
-          </div>
-          {isLoading ?
-            <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div> :
-            galleryVideos.length === 0 ?
-            <p className="text-slate-500">No gallery videos added yet. Click Manage Videos to add some.</p> :
+        
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {galleryVideos.map((project, index) =>
-              <GalleryVideoCard key={project.id} project={project} index={index} />
-              )}
-            </div>
-            }
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
 
         {/* Brand Visuals */}
         <div className="mt-32">
