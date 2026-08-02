@@ -302,7 +302,7 @@ export default function MultiMedia() {
         {/* Brand Visuals */}
         <div className="mt-32">
           <div className="mb-10">
-            <h2 className="text-3xl font-serif text-slate-900">Brand Identity, Fashion, Creative/   </h2>
+            <h2 className="text-3xl font-serif text-slate-900">Brand Identity, Fashion, Illustration</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {galleryImages.map((item, i) =>
