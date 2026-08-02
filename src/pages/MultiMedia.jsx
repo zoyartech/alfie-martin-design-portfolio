@@ -163,7 +163,18 @@ export default function MultiMedia() {
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acf9005d1_fc60ee56-cd94-4472-b179-4cfb74829b6f_kCJHkDGiU.png", caption: "Fashion Design" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Hand Drawn Illustration" }];
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Hand Drawn Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/607d39496_cef9c934-1a3a-4506-a22c-a35b3d4801e8.png", caption: "After Hours — Skin Care Flat-Lay" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b5eab4cd0_afterhours.png", caption: "After Hours — Surrealist Editorial" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/ebaa27b7f_after-nailpolish2.png", caption: "After Hours — Nail Polish Packaging" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/b26277e3d_1.png", caption: "Creation — Illustration" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/fa591bc19_FLORA-generation-544282c7.png", caption: "EGO — Brand Identity System" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/c6ee0b77e_Screenshot2026-07-19at101418PM.png", caption: "After Hours — Picnic Campaign" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3b0bd6baa_Screenshot2026-07-22at92033PM.png", caption: "After Hours — Business Card" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/20c0d0d03_Screenshot2026-07-22at91737PM.png", caption: "After Hours — Streetwear" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a1ae8021d_Screenshot2026-07-22at92938PM.png", caption: "After Hours — Signet Ring" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cae740cef_Screenshot2026-07-22at93756PM.png", caption: "After Hours — Boombox Portrait" },
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9b245430f_stk.png", caption: "EGO — Sticker System" }];
 
 
   const openModal = (i) => setSelectedImage(i);
@@ -304,7 +315,7 @@ export default function MultiMedia() {
           <div className="mb-10">
             <h2 className="text-3xl font-serif text-slate-900">Brand Identity, Fashion, Illustration</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-6 [column-fill:_balance]">
             {galleryImages.map((item, i) =>
               <motion.div
                 key={i}
@@ -312,13 +323,13 @@ export default function MultiMedia() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i % 6 * 0.05 }}
-                className="aspect-square overflow-hidden cursor-pointer group relative bg-white rounded-xl shadow-sm border border-gray-100"
+                className="break-inside-avoid mb-6 overflow-hidden cursor-pointer group relative bg-white rounded-xl shadow-sm border border-gray-100"
                 onClick={() => openModal(i)}>
                 <img
                   loading="lazy"
                   src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                  className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500" />
                 
                 
               </motion.div>
