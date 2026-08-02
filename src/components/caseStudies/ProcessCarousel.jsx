@@ -54,7 +54,7 @@ export default function ProcessCarousel() {
                 key={step.id}
                 className="flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_31%] min-w-0 pl-3"
               >
-                <div className="h-full bg-[#F7F8F9] border border-slate-200 rounded-lg p-6 flex flex-col transition-shadow duration-300 hover:shadow-md">
+                <div className="h-full bg-[#F7F8F9] border border-slate-200 rounded-lg p-6 flex flex-col transition-shadow duration-300 hover:shadow-xl hover:-translate-y-1">
                   <div className="w-10 h-10 bg-[#4A7BD4] rounded flex items-center justify-center mb-5">
                     <span className="text-white font-bold text-lg">{step.id}</span>
                   </div>
