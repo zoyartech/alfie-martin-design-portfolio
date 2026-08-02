@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ThreeTests from '@/components/caseStudies/ThreeTests';
 import OrchestrationAccordion from '@/components/caseStudies/OrchestrationAccordion';
 import ServiceTabs from '@/components/caseStudies/ServiceTabs';
+import ProcessCarousel from '@/components/caseStudies/ProcessCarousel';
 
 export default function AIDrivenEnterpriseCRM() {
   return (
@@ -44,6 +45,8 @@ export default function AIDrivenEnterpriseCRM() {
           <p className="text-slate-800"> AI Conversational design Systems </p>
         </div>
       </motion.div>
+
+      <ProcessCarousel />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
