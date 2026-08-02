@@ -173,8 +173,7 @@ export default function MultiMedia() {
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/3b0bd6baa_Screenshot2026-07-22at92033PM.png", caption: "After Hours — Business Card" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/20c0d0d03_Screenshot2026-07-22at91737PM.png", caption: "After Hours — Streetwear" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a1ae8021d_Screenshot2026-07-22at92938PM.png", caption: "After Hours — Signet Ring" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cae740cef_Screenshot2026-07-22at93756PM.png", caption: "After Hours — Boombox Portrait" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9b245430f_stk.png", caption: "EGO — Sticker System" }];
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/cae740cef_Screenshot2026-07-22at93756PM.png", caption: "After Hours — Boombox Portrait" }];
 
 
   const openModal = (i) => setSelectedImage(i);
