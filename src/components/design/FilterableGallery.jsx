@@ -188,7 +188,7 @@ function StickyCard({ project, index, total }) {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["16px", "24px"]);
 
-  const isImageRight = project.imagePosition === 'right' || (project.imagePosition === undefined && index % 2 !== 0);
+  const isImageRight = project.imagePosition === 'right' || project.imagePosition === undefined && index % 2 !== 0;
   const directionClass = isImageRight ? 'md:flex-row-reverse' : 'md:flex-row';
 
   return (
@@ -209,23 +209,23 @@ function StickyCard({ project, index, total }) {
         <Link to={project.link ? createPageUrl(project.link) : '#'} className={`flex flex-col ${directionClass} w-full h-full relative ring-1 ring-inset ring-slate-900/10`}>
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center">
             <div className="w-full h-full relative flex items-center justify-center overflow-hidden rounded-xl border border-slate-900/10 shadow-lg">
-              <img
-                src={project.image}
-                alt={project.title}
-                className={`group-hover:scale-105 transition-transform duration-700 ${
-                (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
-                'max-w-full max-h-full w-auto h-auto object-contain' :
-                `w-full h-full ${project.imageFit || 'object-cover'}`}`
-                } />
+              <img src="https://media.base44.com/images/public/6974e154f708f4918a2b8d02/01d745af2_Screenshot2026-08-02at95949AM.png"
+
+              alt={project.title}
+              className={`group-hover:scale-105 transition-transform duration-700 ${
+              (project.imageFit || '').includes('object-contain') && !(project.imageFit || '').includes('bg-') ?
+              'max-w-full max-h-full w-auto h-auto object-contain' :
+              `w-full h-full ${project.imageFit || 'object-cover'}`}`
+              } />
             </div>
           </div>
 
           <div className="p-8 w-full md:w-1/2 h-1/2 md:h-full md:p-16 flex flex-col relative z-20">
-            {project.industry ? (
-              <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
+            {project.industry ?
+            <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
                 <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${project.textColor === 'white' ? 'bg-white/20 text-white' : 'bg-black/10 text-slate-900'}`}>{project.industry}</span>
-              </div>
-            ) : <div className="mb-4 md:mb-8"></div>}
+              </div> :
+            <div className="mb-4 md:mb-8"></div>}
             <h3 className={`mb-4 text-3xl font-bold md:text-5xl md:mb-6 break-words ${project.textColor === 'white' ? 'text-white' : 'text-slate-900'}`}>{project.title}</h3>
             <p className={`text-base md:text-lg mb-8 leading-relaxed max-w-xl break-words ${project.textColor === 'white' ? 'text-white/90' : 'text-slate-800'}`}>{project.summary}</p>
             
