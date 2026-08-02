@@ -163,7 +163,7 @@ export default function MultiMedia() {
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/a3132b5ba_Yourparagraphtext-4.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/acf9005d1_fc60ee56-cd94-4472-b179-4cfb74829b6f_kCJHkDGiU.png", caption: "Floral Bodysuit" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Cocktail Illustration" }];
+  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/031e6786e_Screenshot2026-05-02at105637PM.png", caption: "Hand Drawn Illustration" }];
 
 
   const openModal = (i) => setSelectedImage(i);
