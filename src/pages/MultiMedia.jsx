@@ -281,7 +281,7 @@ export default function MultiMedia() {
       <div className="pt-16 pb-16 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
         {/* Gallery Grid */}
-        <div className="mt-24">
+        <div className="mt-24 hidden">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-3xl font-serif text-slate-900">Video Projects & Animations</h2>
             <Button variant="outline" onClick={() => window.open('/AdminVideos', '_blank')}>Manage Videos</Button>
@@ -318,8 +318,8 @@ export default function MultiMedia() {
                   loading="lazy"
                   src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                
                 
               </motion.div>
               )}
