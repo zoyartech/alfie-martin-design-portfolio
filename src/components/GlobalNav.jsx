@@ -40,7 +40,7 @@ export default function GlobalNav() {
             </Link>
             <Link
               to={createPageUrl("MultiMedia")} className="text-foreground text-xs font-bold tracking-[0.15em] relative transition-colors group hover:text-slate-500">
-              MULTIMEDIA
+              VISUALS
               <span className={`absolute -bottom-2 left-0 h-[2px] transition-all duration-300 bg-foreground ${path === 'MultiMedia' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
             <Link
