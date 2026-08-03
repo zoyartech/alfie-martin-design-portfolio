@@ -353,6 +353,16 @@ export default function MultiMedia() {
                 className="absolute left-4 md:left-8 text-slate-800 hover:text-slate-500 transition-colors p-3 bg-white/80 rounded-full shadow-sm">
                 <ChevronLeft className="w-6 h-6" />
               </button>
+
+              <div className="max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+                <img
+                  src={galleryImages[selectedImage].src}
+                  alt={galleryImages[selectedImage].caption}
+                  className="max-h-[80vh] w-auto object-contain rounded-xl" />
+                {galleryImages[selectedImage].caption &&
+                  <p className="text-slate-900 font-medium text-lg mt-4 text-center">{galleryImages[selectedImage].caption}</p>
+                }
+              </div>
               
               
 
