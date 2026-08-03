@@ -155,8 +155,6 @@ export default function MultiMedia() {
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/87bcdef28_outdoor-sidewalk-street-billboard-poster-mockup-template-65f9b64a492bc9abac15d4e8-2x.jpg", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/bc38fc16d_Untitled620x1024px-1.PNG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/9f42b6529_Untitled620x1024px-2.PNG", caption: "Brand Visual" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/d3ea16a1f_Untitled-October820250855.jpg", caption: "Brand Visual" },
-  { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/6c4a05b60_Untitled620x1024px-16.PNG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/2e0350ed7_Untitled620x1024px-19.PNG", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/f0b4739b3_Untitleddesign-1-2.png", caption: "Brand Visual" },
   { src: "https://media.base44.com/images/public/6974e154f708f4918a2b8d02/33b7abacd_Untitleddesign-6.png", caption: "Brand Visual" },
