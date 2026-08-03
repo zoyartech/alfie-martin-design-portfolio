@@ -358,26 +358,26 @@ export default function MultiMedia() {
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
-              <motion.div
-                key={selectedImage}
-                initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className="max-w-5xl w-full flex flex-col items-center hidden"
-                onClick={(e) => e.stopPropagation()}>
-                
-                <img
-                  loading="lazy"
-                  src={galleryImages[selectedImage].src}
-                  alt={galleryImages[selectedImage].caption}
-                  className="w-full max-h-[80vh] object-contain rounded-sm shadow-md hidden" />
-                
-                <div className="mt-6 text-center">
-                  <p className="text-slate-900 font-medium font-sans text-lg">{galleryImages[selectedImage].caption}</p>
-                  <p className="text-slate-500 text-sm mt-1 font-sans">{selectedImage + 1} / {galleryImages.length}</p>
-                </div>
-              </motion.div>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
               
               <button
                 onClick={(e) => {e.stopPropagation();next();}}
