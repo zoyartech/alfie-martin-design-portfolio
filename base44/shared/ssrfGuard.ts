@@ -33,6 +33,12 @@ function isPrivateIp(ip: string): boolean {
   if (lower === '::1' || lower === '::' || lower === '0:0:0:0:0:0:0:1') return true;
   if (lower.startsWith('fc') || lower.startsWith('fd')) return true;  // IPv6 ULA
   if (lower.startsWith('fe80')) return true;                            // IPv6 link-local
+  // IPv4-mapped IPv6 (e.g. ::ffff:169.254.169.254) — extract the embedded IPv4
+  // and re-check it against the private IPv4 ranges.
+  const mapped = lower.match(/::ffff:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/);
+  if (mapped) {
+    return isPrivateIp(mapped[1]);
+  }
   return false;
 }
 
@@ -60,11 +66,24 @@ export async function assertSafeUrl(rawUrl: string): Promise<URL> {
     throw new Error(`Blocked internal IP address: ${hostname}`);
   }
 
-  // For non-IP hostnames, resolve DNS and reject if any A record is internal.
+  // For non-IP hostnames, resolve DNS and reject if ANY resolved record (A or AAAA)
+  // is internal. Checking both IPv4 (A) and IPv6 (AAAA) prevents attackers from
+  // bypassing validation via private IPv6 records. Validation happens here,
+  // immediately before the caller's fetch, to minimize the DNS-rebinding window.
   // This prevents DNS-based SSRF bypasses (e.g. a public domain pointing to 169.254.169.254).
-  if (hostname.includes('.') && !/^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
+  if (hostname.includes('.') && !/^\d+\.\d+\.\d+\.\d+$/.test(hostname) && !hostname.includes(':')) {
     try {
-      const records = await Deno.resolveDns(hostname, 'A');
+      // Resolve both record types in parallel. A domain may only have one type,
+      // so a failure on one is acceptable as long as the other yields records.
+      const [v4Result, v6Result] = await Promise.allSettled([
+        Deno.resolveDns(hostname, 'A'),
+        Deno.resolveDns(hostname, 'AAAA'),
+      ]);
+
+      const v4Records = v4Result.status === 'fulfilled' ? v4Result.value : [];
+      const v6Records = v6Result.status === 'fulfilled' ? v6Result.value : [];
+      const records = [...v4Records, ...v6Records];
+
       if (records.length === 0) {
         throw new Error(`Could not resolve hostname: ${hostname}`);
       }
@@ -74,7 +93,7 @@ export async function assertSafeUrl(rawUrl: string): Promise<URL> {
         }
       }
     } catch (e) {
-      // If DNS resolution itself fails (not our own throw), treat as unsafe
+      // Re-throw our own validation errors verbatim; treat all other failures as unsafe.
       if (e instanceof Error && e.message.startsWith('Blocked')) throw e;
       if (e instanceof Error && e.message.startsWith('Hostname')) throw e;
       if (e instanceof Error && e.message.startsWith('Could not')) throw e;
