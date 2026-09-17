@@ -30,3 +30,4 @@ dist-ssr
 .env
 base44/.app.jsonc
 am-favicon.jpeg
+large-favicon-*.jpeg
