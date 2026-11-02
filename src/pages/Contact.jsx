@@ -64,10 +64,10 @@ export default function Contact() {
                     <div>
                       <p className="text-xs tracking-[0.2em] text-gray-400 mb-1">EMAIL</p>
                       <a 
-                        href="mailto:alfie@alfiealfie.com" 
+                        href="mailto:alfie@imalfie.com" 
                         className="text-lg hover:text-[#8B7355] transition-colors"
                       >
-                        alfie@alfiealfie.com
+                        alfie@imalfie.com
                       </a>
                     </div>
                   </div>

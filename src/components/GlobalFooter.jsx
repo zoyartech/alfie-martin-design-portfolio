@@ -26,7 +26,7 @@ export default function GlobalFooter() {
               <a href="https://www.instagram.com/wexleyhouse" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="mailto:alfie@alfiealfie.com" className="hover:text-slate-900 transition-colors">
+              <a href="mailto:alfie@imalfie.com" className="hover:text-slate-900 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
